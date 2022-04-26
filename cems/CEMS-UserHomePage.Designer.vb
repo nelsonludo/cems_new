@@ -27,7 +27,6 @@ Partial Class UserHomePage
         Me.userHeader = New System.Windows.Forms.Panel()
         Me.userLogout = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.uName = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -36,14 +35,11 @@ Partial Class UserHomePage
         Me.dropdown = New System.Windows.Forms.Panel()
         Me.CPUsBtn = New System.Windows.Forms.Button()
         Me.IPsBtn = New System.Windows.Forms.Button()
-        Me.equipmentsBtn = New System.Windows.Forms.Button()
         Me.monitorsBtn = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CPUsBtn2 = New System.Windows.Forms.Button()
-        Me.IPsBtn2 = New System.Windows.Forms.Button()
-        Me.monitorsBtn2 = New System.Windows.Forms.Button()
         Me.activeCPUNumber = New System.Windows.Forms.Label()
         Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
         Me.activeIPNumber = New System.Windows.Forms.Label()
@@ -98,8 +94,11 @@ Partial Class UserHomePage
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.equipmentsBtn = New System.Windows.Forms.Button()
+        Me.monitorsBtn2 = New System.Windows.Forms.Button()
+        Me.IPsBtn2 = New System.Windows.Forms.Button()
         Me.userHeader.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.dropdown.SuspendLayout()
         Me.userPostPanel.SuspendLayout()
@@ -110,6 +109,7 @@ Partial Class UserHomePage
         Me.userHomePagePanel.SuspendLayout()
         Me.userEquipmentPanel.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'userHeader
@@ -151,16 +151,6 @@ Partial Class UserHomePage
         Me.Label2.Size = New System.Drawing.Size(50, 20)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "User"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
-        Me.PictureBox1.Location = New System.Drawing.Point(174, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(42, 37)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
         '
         'uName
         '
@@ -270,25 +260,6 @@ Partial Class UserHomePage
         Me.IPsBtn.Text = "IP Phones"
         Me.IPsBtn.UseVisualStyleBackColor = False
         '
-        'equipmentsBtn
-        '
-        Me.equipmentsBtn.BackColor = System.Drawing.Color.LightSlateGray
-        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.equipmentsBtn.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
-        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
-        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(156, 50)
-        Me.equipmentsBtn.Name = "equipmentsBtn"
-        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.equipmentsBtn.Size = New System.Drawing.Size(156, 47)
-        Me.equipmentsBtn.TabIndex = 6
-        Me.equipmentsBtn.Text = "Equipments"
-        Me.equipmentsBtn.UseVisualStyleBackColor = False
-        '
         'monitorsBtn
         '
         Me.monitorsBtn.BackColor = System.Drawing.SystemColors.ScrollBar
@@ -323,6 +294,7 @@ Partial Class UserHomePage
         '
         'CPUsBtn2
         '
+        Me.CPUsBtn2.Image = Global.cems.My.Resources.Resources.computer
         Me.CPUsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.CPUsBtn2.Location = New System.Drawing.Point(117, 93)
         Me.CPUsBtn2.Name = "CPUsBtn2"
@@ -332,32 +304,6 @@ Partial Class UserHomePage
         Me.CPUsBtn2.Text = "CPUs"
         Me.CPUsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CPUsBtn2.UseVisualStyleBackColor = True
-        '
-        'IPsBtn2
-        '
-        Me.IPsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IPsBtn2.Location = New System.Drawing.Point(303, 93)
-        Me.IPsBtn2.Name = "IPsBtn2"
-        Me.IPsBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.IPsBtn2.Size = New System.Drawing.Size(161, 103)
-        Me.IPsBtn2.TabIndex = 25
-        Me.IPsBtn2.Text = "IP Phones"
-        Me.IPsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IPsBtn2.UseVisualStyleBackColor = True
-        '
-        'monitorsBtn2
-        '
-        Me.monitorsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.monitorsBtn2.Image = Global.cems.My.Resources.Resources.menu
-        Me.monitorsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.monitorsBtn2.Location = New System.Drawing.Point(483, 93)
-        Me.monitorsBtn2.Name = "monitorsBtn2"
-        Me.monitorsBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.monitorsBtn2.Size = New System.Drawing.Size(170, 103)
-        Me.monitorsBtn2.TabIndex = 26
-        Me.monitorsBtn2.Text = "Monitors"
-        Me.monitorsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.monitorsBtn2.UseVisualStyleBackColor = True
         '
         'activeCPUNumber
         '
@@ -922,6 +868,62 @@ Partial Class UserHomePage
         'PrintDocument1
         '
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
+        Me.PictureBox1.Location = New System.Drawing.Point(174, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(42, 37)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
+        'equipmentsBtn
+        '
+        Me.equipmentsBtn.BackColor = System.Drawing.Color.LightSlateGray
+        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
+        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.equipmentsBtn.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
+        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
+        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(156, 50)
+        Me.equipmentsBtn.Name = "equipmentsBtn"
+        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.equipmentsBtn.Size = New System.Drawing.Size(156, 47)
+        Me.equipmentsBtn.TabIndex = 6
+        Me.equipmentsBtn.Text = "Equipments"
+        Me.equipmentsBtn.UseVisualStyleBackColor = False
+        '
+        'monitorsBtn2
+        '
+        Me.monitorsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.monitorsBtn2.Image = Global.cems.My.Resources.Resources.unit
+        Me.monitorsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.monitorsBtn2.Location = New System.Drawing.Point(483, 93)
+        Me.monitorsBtn2.Name = "monitorsBtn2"
+        Me.monitorsBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.monitorsBtn2.Size = New System.Drawing.Size(170, 103)
+        Me.monitorsBtn2.TabIndex = 26
+        Me.monitorsBtn2.Text = "Monitors"
+        Me.monitorsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.monitorsBtn2.UseVisualStyleBackColor = True
+        '
+        'IPsBtn2
+        '
+        Me.IPsBtn2.Image = Global.cems.My.Resources.Resources.landline
+        Me.IPsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IPsBtn2.Location = New System.Drawing.Point(303, 93)
+        Me.IPsBtn2.Name = "IPsBtn2"
+        Me.IPsBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.IPsBtn2.Size = New System.Drawing.Size(161, 103)
+        Me.IPsBtn2.TabIndex = 25
+        Me.IPsBtn2.Text = "IP Phones"
+        Me.IPsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IPsBtn2.UseVisualStyleBackColor = True
+        '
         'UserHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -941,7 +943,6 @@ Partial Class UserHomePage
         Me.Text = "Home Page"
         Me.userHeader.ResumeLayout(False)
         Me.userHeader.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.dropdown.ResumeLayout(False)
         Me.userPostPanel.ResumeLayout(False)
@@ -958,6 +959,7 @@ Partial Class UserHomePage
         Me.userEquipmentPanel.ResumeLayout(False)
         Me.userEquipmentPanel.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

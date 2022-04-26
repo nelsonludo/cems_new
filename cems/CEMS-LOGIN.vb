@@ -3,6 +3,7 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Imports Microsoft.Win32
 Imports cems.users
 Imports cems.admin
+Imports cems.Simple3Des
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -21,25 +22,42 @@ Public Class Form1
     Dim admin As New admin
 
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
-        Dim FILE_NAME As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+
+        Dim wrapper As New Simple3Des("")
+
+        Dim serverEncr As String = wrapper.EncryptData(connexionStringServer.Text)
+        Dim userNameEncr As String = wrapper.EncryptData(connexionStringUserName.Text)
+        Dim pwdEncr As String = wrapper.EncryptData(connexionStringPwd.Text)
+        Dim databaseEncr As String = wrapper.EncryptData(connexionStringDatabase.Text)
+
+        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+
+        Dim FILE_NAME As String = "connectionString.txt"
+
+        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+
+        Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
+
+        Dim uriPath As String = connexionStringDirectory
+        Dim localPath As String = New Uri(uriPath).LocalPath
 
 
-        FileOpen(1, FILE_NAME, OpenMode.Append)
+        FileOpen(1, FILE_PATH, OpenMode.Append) 'localPath, OpenMode.Append)
 
-        PrintLine(1, connexionStringServer.Text)
-        PrintLine(1, connexionStringUserName.Text)
-        PrintLine(1, connexionStringPwd.Text)
-        PrintLine(1, connexionStringDatabase.Text)
+        PrintLine(1, serverEncr)
+        PrintLine(1, userNameEncr)
+        PrintLine(1, pwdEncr)
+        PrintLine(1, databaseEncr)
 
         FileClose(1)
 
-        FileOpen(1, FILE_NAME, OpenMode.Input)
+        FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
 
         While Not EOF(1)
-            server = LineInput(1)
-            username = LineInput(1)
-            password = LineInput(1)
-            database = LineInput(1)
+            server = wrapper.DecryptData(LineInput(1))
+            username = wrapper.DecryptData(LineInput(1))
+            password = wrapper.DecryptData(LineInput(1))
+            database = wrapper.DecryptData(LineInput(1))
         End While
 
         FileClose(1)
@@ -49,17 +67,28 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim FILE_NAME As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
 
-        If System.IO.File.Exists(FILE_NAME) = True Then
+        Dim FILE_NAME As String = "connectionString.txt"
 
-            FileOpen(1, FILE_NAME, OpenMode.Input)
+        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+
+        Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
+
+        Dim uriPath As String = connexionStringDirectory
+        Dim localPath As String = New Uri(uriPath).LocalPath
+
+        Dim wrapper As New Simple3Des("")
+
+        If System.IO.File.Exists(FILE_PATH) = True Then 'localPath) = True Then
+
+            FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
 
             While Not EOF(1)
-                server = LineInput(1)
-                username = LineInput(1)
-                password = LineInput(1)
-                database = LineInput(1)
+                server = wrapper.DecryptData(LineInput(1))
+                username = wrapper.DecryptData(LineInput(1))
+                password = wrapper.DecryptData(LineInput(1))
+                database = wrapper.DecryptData(LineInput(1))
             End While
 
             FileClose(1)
@@ -67,7 +96,8 @@ Public Class Form1
                 connexionStringPanel.Visible = False
             End If
         Else
-            System.IO.File.Create(FILE_NAME)
+            System.IO.File.Create(FILE_PATH)
+            System.IO.File.SetAttributes(FILE_PATH, System.IO.FileAttributes.Hidden) 'localPath, System.IO.FileAttributes.Hidden)
         End If
     End Sub
 
