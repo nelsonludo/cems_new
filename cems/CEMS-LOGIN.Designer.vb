@@ -46,10 +46,30 @@ Partial Class Form1
         Me.emailtxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.userAddPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.addUserErrorMsg = New System.Windows.Forms.Label()
+        Me.userUserAddTitleInput = New System.Windows.Forms.ComboBox()
+        Me.userUserAddConfirmPwdInput = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.userUserAddPwdInput = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.userUserAddPhoneInput = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.userUserAddEmailInput = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.userUserAddNameInput = New System.Windows.Forms.TextBox()
+        Me.userAddvalidationBtn = New System.Windows.Forms.Button()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.userAddPanel.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -263,12 +283,189 @@ Partial Class Form1
         'Timer1
         '
         '
+        'userAddPanel
+        '
+        Me.userAddPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.userAddPanel.Controls.Add(Me.PictureBox3)
+        Me.userAddPanel.Controls.Add(Me.Label8)
+        Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
+        Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
+        Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
+        Me.userAddPanel.Controls.Add(Me.Label2)
+        Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
+        Me.userAddPanel.Controls.Add(Me.Label14)
+        Me.userAddPanel.Controls.Add(Me.Label15)
+        Me.userAddPanel.Controls.Add(Me.userUserAddPhoneInput)
+        Me.userAddPanel.Controls.Add(Me.Label16)
+        Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
+        Me.userAddPanel.Controls.Add(Me.Label17)
+        Me.userAddPanel.Controls.Add(Me.userUserAddNameInput)
+        Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
+        Me.userAddPanel.Controls.Add(Me.Label18)
+        Me.userAddPanel.Location = New System.Drawing.Point(109, 50)
+        Me.userAddPanel.Name = "userAddPanel"
+        Me.userAddPanel.Size = New System.Drawing.Size(488, 313)
+        Me.userAddPanel.TabIndex = 59
+        Me.userAddPanel.Visible = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.cems.My.Resources.Resources.logo_light
+        Me.PictureBox3.Location = New System.Drawing.Point(30, 21)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(39, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 60
+        Me.PictureBox3.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(96, 27)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(199, 20)
+        Me.Label8.TabIndex = 59
+        Me.Label8.Text = "Create your admin account"
+        '
+        'addUserErrorMsg
+        '
+        Me.addUserErrorMsg.AutoSize = True
+        Me.addUserErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addUserErrorMsg.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addUserErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.addUserErrorMsg.Location = New System.Drawing.Point(49, 277)
+        Me.addUserErrorMsg.Name = "addUserErrorMsg"
+        Me.addUserErrorMsg.Size = New System.Drawing.Size(0, 16)
+        Me.addUserErrorMsg.TabIndex = 58
+        Me.addUserErrorMsg.Visible = False
+        '
+        'userUserAddTitleInput
+        '
+        Me.userUserAddTitleInput.FormattingEnabled = True
+        Me.userUserAddTitleInput.Location = New System.Drawing.Point(262, 156)
+        Me.userUserAddTitleInput.Name = "userUserAddTitleInput"
+        Me.userUserAddTitleInput.Size = New System.Drawing.Size(180, 21)
+        Me.userUserAddTitleInput.TabIndex = 47
+        '
+        'userUserAddConfirmPwdInput
+        '
+        Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(262, 224)
+        Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
+        Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(180, 20)
+        Me.userUserAddConfirmPwdInput.TabIndex = 57
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(46, 223)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(176, 20)
+        Me.Label2.TabIndex = 56
+        Me.Label2.Text = "confirm password:"
+        '
+        'userUserAddPwdInput
+        '
+        Me.userUserAddPwdInput.Location = New System.Drawing.Point(262, 198)
+        Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
+        Me.userUserAddPwdInput.Size = New System.Drawing.Size(180, 20)
+        Me.userUserAddPwdInput.TabIndex = 55
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(46, 197)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(155, 20)
+        Me.Label14.TabIndex = 54
+        Me.Label14.Text = "user password :"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(46, 156)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(109, 20)
+        Me.Label15.TabIndex = 52
+        Me.Label15.Text = "user title :"
+        '
+        'userUserAddPhoneInput
+        '
+        Me.userUserAddPhoneInput.Location = New System.Drawing.Point(262, 129)
+        Me.userUserAddPhoneInput.Name = "userUserAddPhoneInput"
+        Me.userUserAddPhoneInput.Size = New System.Drawing.Size(180, 20)
+        Me.userUserAddPhoneInput.TabIndex = 51
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(46, 128)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(199, 20)
+        Me.Label16.TabIndex = 50
+        Me.Label16.Text = "user phone number :"
+        '
+        'userUserAddEmailInput
+        '
+        Me.userUserAddEmailInput.Location = New System.Drawing.Point(262, 100)
+        Me.userUserAddEmailInput.Name = "userUserAddEmailInput"
+        Me.userUserAddEmailInput.Size = New System.Drawing.Size(180, 20)
+        Me.userUserAddEmailInput.TabIndex = 49
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(46, 99)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(120, 20)
+        Me.Label17.TabIndex = 48
+        Me.Label17.Text = "user email :"
+        '
+        'userUserAddNameInput
+        '
+        Me.userUserAddNameInput.Location = New System.Drawing.Point(262, 71)
+        Me.userUserAddNameInput.Name = "userUserAddNameInput"
+        Me.userUserAddNameInput.Size = New System.Drawing.Size(180, 20)
+        Me.userUserAddNameInput.TabIndex = 19
+        '
+        'userAddvalidationBtn
+        '
+        Me.userAddvalidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.userAddvalidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.userAddvalidationBtn.FlatAppearance.BorderSize = 0
+        Me.userAddvalidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.userAddvalidationBtn.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userAddvalidationBtn.Location = New System.Drawing.Point(359, 266)
+        Me.userAddvalidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.userAddvalidationBtn.MaximumSize = New System.Drawing.Size(156, 50)
+        Me.userAddvalidationBtn.Name = "userAddvalidationBtn"
+        Me.userAddvalidationBtn.Size = New System.Drawing.Size(82, 32)
+        Me.userAddvalidationBtn.TabIndex = 13
+        Me.userAddvalidationBtn.Text = "Add"
+        Me.userAddvalidationBtn.UseVisualStyleBackColor = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(46, 70)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(119, 20)
+        Me.Label18.TabIndex = 11
+        Me.Label18.Text = "user name :"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(713, 391)
+        Me.Controls.Add(Me.userAddPanel)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
@@ -280,6 +477,9 @@ Partial Class Form1
         Me.connexionStringPanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.userAddPanel.ResumeLayout(False)
+        Me.userAddPanel.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -306,4 +506,22 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents userAddPanel As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents addUserErrorMsg As Label
+    Friend WithEvents userUserAddTitleInput As ComboBox
+    Friend WithEvents userUserAddConfirmPwdInput As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents userUserAddPwdInput As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents userUserAddPhoneInput As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents userUserAddEmailInput As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents userUserAddNameInput As TextBox
+    Friend WithEvents userAddvalidationBtn As Button
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Timer2 As Timer
 End Class

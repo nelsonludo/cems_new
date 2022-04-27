@@ -21,6 +21,44 @@ Public Class Form1
     Dim User As New users
     Dim admin As New admin
 
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+
+        Dim FILE_NAME As String = "connectionString.txt"
+
+        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+
+        Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
+
+        Dim uriPath As String = connexionStringDirectory
+        Dim localPath As String = New Uri(uriPath).LocalPath
+
+        Dim wrapper As New Simple3Des("")
+
+        If System.IO.File.Exists(FILE_PATH) = True Then 'localPath) = True Then
+
+            FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
+
+            While Not EOF(1)
+                server = wrapper.DecryptData(LineInput(1))
+                username = wrapper.DecryptData(LineInput(1))
+                password = wrapper.DecryptData(LineInput(1))
+                database = wrapper.DecryptData(LineInput(1))
+            End While
+
+            FileClose(1)
+            If server <> "" Or username <> "" Or database <> "" Then
+                connexionStringPanel.Visible = False
+            End If
+        Else
+            System.IO.File.Create(FILE_PATH)
+            System.IO.File.SetAttributes(FILE_PATH, System.IO.FileAttributes.Hidden) 'localPath, System.IO.FileAttributes.Hidden)
+        End If
+    End Sub
+
+
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
 
         Dim wrapper As New Simple3Des("")
@@ -64,47 +102,129 @@ Public Class Form1
 
         connexionStringPanel.Visible = False
 
-    End Sub
+        'creating first admin
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+        userAddPanel.Visible = True
 
-        Dim FILE_NAME As String = "connectionString.txt"
+        userUserAddTitleInput.Items.Clear()
 
-        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
 
-        Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
+        Try
+            sqlConn.Open()
 
-        Dim uriPath As String = connexionStringDirectory
-        Dim localPath As String = New Uri(uriPath).LocalPath
+            sqlQuery = "select * from  cems.cems_titles"
 
-        Dim wrapper As New Simple3Des("")
 
-        If System.IO.File.Exists(FILE_PATH) = True Then 'localPath) = True Then
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            While (sqlReader.Read())
+                userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
 
-            FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
-
-            While Not EOF(1)
-                server = wrapper.DecryptData(LineInput(1))
-                username = wrapper.DecryptData(LineInput(1))
-                password = wrapper.DecryptData(LineInput(1))
-                database = wrapper.DecryptData(LineInput(1))
             End While
+            sqlConn.Close()
 
-            FileClose(1)
-            If server <> "" Or username <> "" Or database <> "" Then
-                connexionStringPanel.Visible = False
-            End If
-        Else
-            System.IO.File.Create(FILE_PATH)
-            System.IO.File.SetAttributes(FILE_PATH, System.IO.FileAttributes.Hidden) 'localPath, System.IO.FileAttributes.Hidden)
-        End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
     End Sub
+
 
     Public Sub connect_db()
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
            + "password=" + password + ";" + "database =" + database
     End Sub
+
+
+    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddvalidationBtn.Click 'validate add
+
+        connect_db()
+
+        If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Or userUserAddTitleInput.Text = "" Then
+            addUserErrorMsg.Text = "please fill all the fields !"
+            addUserErrorMsg.Visible = True
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
+
+            Dim title_id As Integer
+            'SQL Connection'
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    title_id = sqlReader.Item("title_id")
+                End While
+
+                sqlConn.Close()
+                MessageBox.Show(title_id)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+
+            If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
+                addUserErrorMsg.Visible = True
+                addUserErrorMsg.Text = "The password does not correspond"
+                Timer2.Interval = 3000
+                Timer2.Start()
+            Else
+
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
+
+                    'this changes the content of confirmMsg
+                    forgotPasswordMessage.ForeColor = Color.Green
+
+                    forgotPasswordMessage.Text = "Item successfully added ✔"
+
+
+                    'this makes the confirm message appear for 3secs
+                    forgotPasswordMessage.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the add panel to disappear
+                    userAddPanel.Visible = False
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+            End If
+
+        End If
+    End Sub
+
+
+    Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick 'this stops the timer and make the messages disappear
+
+        addUserErrorMsg.Visible = False
+
+        Timer2.Stop()
+    End Sub
+
+
+
 
     'password placeholder
     Private Sub passwordtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.GotFocus
