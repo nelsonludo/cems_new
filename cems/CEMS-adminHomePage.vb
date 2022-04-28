@@ -1529,8 +1529,8 @@ Public Class adminhomePage
         Try
             Dim height As Integer = DataGridView2.Height
             DataGridView2.Height = DataGridView2.RowCount * DataGridView2.RowTemplate.Height
-            Bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
-            DataGridView2.DrawToBitmap(Bitmap, New Rectangle(0, 0, Me.DataGridView2.Width, Me.DataGridView2.Height))
+            bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
+            DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView2.Width, Me.DataGridView2.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
@@ -1550,8 +1550,8 @@ Public Class adminhomePage
         Try
             Dim height As Integer = DataGridView1.Height
             DataGridView1.Height = DataGridView1.RowCount * DataGridView1.RowTemplate.Height
-            Bitmap = New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
-            DataGridView1.DrawToBitmap(Bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
+            bitmap = New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
+            DataGridView1.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
