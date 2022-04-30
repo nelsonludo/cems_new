@@ -759,6 +759,48 @@ Public Class users
         grid.Height = DGVOriginalHeight
     End Sub
 
+    Public Sub activeCount(countLabel As Label, table As String, column As String, state As String)
+
+        Dim count As Integer
+
+        connect_db()
+
+
+        Try
+            sqlConn.Open()
+            'count the number of good
+            sqlQuery = "select count(*) from cems_" & table & " where " & column & "_state = '" & state & "'" 'Form1.emailtxt.Text'
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            If (sqlReader.Read()) Then
+                count = sqlReader.Item("count(*)")
+
+            End If
+
+            sqlConn.Close()
+
+            If count < 10 Then
+                countLabel.Text = "000" & count & ""
+
+            ElseIf count < 100 Then
+
+                countLabel.Text = "00" & count & ""
+            ElseIf count < 1000 Then
+
+                countLabel.Text = "0" & count & ""
+            Else
+                countLabel.Text = count
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+
+
 
 
 End Class

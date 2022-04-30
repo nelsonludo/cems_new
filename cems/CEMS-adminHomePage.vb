@@ -62,7 +62,14 @@ Public Class adminhomePage
 
         dropdown.Size = dropdown.MinimumSize
 
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good")
 
+
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad")
 
     End Sub
 
