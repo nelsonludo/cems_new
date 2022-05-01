@@ -755,7 +755,12 @@ Public Class adminhomePage
     End Sub
 
     Private Sub userdeleteBtn_Click(sender As Object, e As EventArgs) Handles userDeleteBtn.Click 'delete
-        admin.deleteRecord(DataGridView4, "users", "user")
+
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this user ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If confirm = DialogResult.Yes Then
+            admin.deleteRecord(DataGridView4, "users", "user")
+        End If
 
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
@@ -898,7 +903,12 @@ Public Class adminhomePage
     End Sub
 
     Private Sub equipmentdeleteBtn_Click(sender As Object, e As EventArgs) Handles equipmentDeleteBtn.Click 'delete
-        admin.deleteRecord(DataGridView1, "equipments", "equipment")
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this equipment ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If confirm = DialogResult.Yes Then
+
+            admin.deleteRecord(DataGridView1, "equipments", "equipment")
+        End If
 
         statePanel.Visible = False
 
@@ -959,7 +969,12 @@ Public Class adminhomePage
     End Sub
 
     Private Sub postdeleteBtn_Click(sender As Object, e As EventArgs) Handles postDeleteBtn.Click 'delete
-        admin.deletePost(DataGridView2, "posts", "post")
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this post ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If confirm = DialogResult.Yes Then
+
+            admin.deletePost(DataGridView2, "posts", "post")
+        End If
 
         postChangeStatePanel.Visible = True
 
@@ -973,8 +988,13 @@ Public Class adminhomePage
     End Sub
 
     Private Sub roledeleteBtn_Click(sender As Object, e As EventArgs)  'delete
-        admin.deleteRecord(DataGridView5, "titles", "title")
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this role ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
+        If confirm = DialogResult.Yes Then
+
+            admin.deleteRecord(DataGridView5, "titles", "title")
+
+        End If
 
         roleUpdateBtn.Visible = False
         User.displayTable("titles", DataGridView5, sqlDataTableR)
@@ -1041,7 +1061,13 @@ Public Class adminhomePage
     End Sub
 
     Private Sub HalldeleteBtn_Click(sender As Object, e As EventArgs) Handles HallDeleteBtn.Click 'delete
-        admin.deleteRecord(DataGridView3, "halls", "hall")
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this hall ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If confirm = DialogResult.Yes Then
+
+            admin.deleteRecord(DataGridView3, "halls", "hall")
+
+        End If
 
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
@@ -1465,7 +1491,6 @@ Public Class adminhomePage
                 End While
 
                 sqlConn.Close()
-                MessageBox.Show(title_id)
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -1481,35 +1506,56 @@ Public Class adminhomePage
                 Timer2.Start()
             Else
 
-                Try
-                    sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
-                    'Read through the response'
-                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                    sqlReader = sqlCmd.ExecuteReader
-                    sqlConn.Close()
-
-                    'this updates the datagridview
-                    User.displayTableU("users", DataGridView4, sqlDataTableU)
-
-                    'this changes the content of confirmMsg
-                    confirmMsgU.Text = "Item successfully added ✔"
-
-                    'this makes the confirm message appear for 3secs
-                    confirmMsgU.Visible = True
-                    Timer2.Interval = 3000
-                    Timer2.Start()
+                If title_id = 1 Or title_id = 3 Then
+                    Try
+                        sqlConn.Open()
+                        sqlQuery = "insert into cems.cems_admin(admin_name, admin_email, admin_phone_number, admin_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                        'Read through the response'
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        sqlConn.Close()
 
 
-                    'this makes the add panel to disappear
-                    userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
-                    userAddPanel.Visible = False
 
-                Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Finally
-                    sqlConn.Dispose()
-                End Try
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Finally
+                        sqlConn.Dispose()
+                    End Try
+
+                Else
+                    Try
+                        sqlConn.Open()
+                        'Read through the response'
+                        sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        sqlConn.Close()
+
+
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Finally
+                        sqlConn.Dispose()
+                    End Try
+                End If
+                'this updates the datagridview
+                User.displayTableU("users", DataGridView4, sqlDataTableU)
+
+                'this changes the content of confirmMsg
+                confirmMsgU.Text = "Item successfully added ✔"
+
+                'this makes the confirm message appear for 3secs
+                confirmMsgU.Visible = True
+                Timer2.Interval = 3000
+                Timer2.Start()
+
+
+                'this makes the add panel to disappear
+                userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
+                userAddPanel.Visible = False
+
             End If
 
         End If
