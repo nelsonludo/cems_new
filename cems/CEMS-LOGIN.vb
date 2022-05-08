@@ -37,9 +37,9 @@ Public Class Form1
 
         Dim wrapper As New Simple3Des("")
 
-        If System.IO.File.Exists(FILE_PATH) = True Then 'localPath) = True Then
+        If System.IO.File.Exists(localPath) = True Then 'FILE_PATH) = True Then
 
-            FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
+            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input) 
 
             While Not EOF(1)
                 server = wrapper.DecryptData(LineInput(1))
@@ -53,8 +53,8 @@ Public Class Form1
                 connexionStringPanel.Visible = False
             End If
         Else
-            System.IO.File.Create(FILE_PATH)
-            System.IO.File.SetAttributes(FILE_PATH, System.IO.FileAttributes.Hidden) 'localPath, System.IO.FileAttributes.Hidden)
+            System.IO.File.Create(localPath)
+            System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
         End If
     End Sub
 
@@ -80,7 +80,7 @@ Public Class Form1
         Dim localPath As String = New Uri(uriPath).LocalPath
 
 
-        FileOpen(1, FILE_PATH, OpenMode.Append) 'localPath, OpenMode.Append)
+        FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
 
         PrintLine(1, serverEncr)
         PrintLine(1, userNameEncr)
@@ -89,7 +89,7 @@ Public Class Form1
 
         FileClose(1)
 
-        FileOpen(1, FILE_PATH, OpenMode.Input) 'localPath, OpenMode.Input)
+        FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)
 
         While Not EOF(1)
             server = wrapper.DecryptData(LineInput(1))
@@ -133,7 +133,7 @@ Public Class Form1
             connexionStringPanel.Visible = False
             userAddPanel.Visible = False
 
-        Else
+        ElseIf checkTables = 0 Then
             'create all tables
 
             Try
@@ -376,7 +376,7 @@ Public Class Form1
 
             userAddPanel.Visible = True
         End If
-
+        connexionStringPanel.Visible = False
     End Sub
 
 

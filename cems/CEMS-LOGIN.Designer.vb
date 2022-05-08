@@ -258,6 +258,7 @@ Partial Class Form1
         '
         Me.passwordtxt.Location = New System.Drawing.Point(114, 206)
         Me.passwordtxt.Name = "passwordtxt"
+        Me.passwordtxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passwordtxt.Size = New System.Drawing.Size(266, 20)
         Me.passwordtxt.TabIndex = 3
         Me.passwordtxt.Text = "password"
@@ -458,6 +459,9 @@ Partial Class Form1
         Me.Label18.Size = New System.Drawing.Size(119, 20)
         Me.Label18.TabIndex = 11
         Me.Label18.Text = "user name :"
+        '
+        'Timer2
+        '
         '
         'Form1
         '
