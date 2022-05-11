@@ -93,7 +93,7 @@ Public Class Form1
 
             FileClose(1)
 
-            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)
+            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)snake
 
             While Not EOF(1)
                 server = wrapper.DecryptData(LineInput(1))
