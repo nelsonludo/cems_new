@@ -60,86 +60,90 @@ Public Class Form1
 
 
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
+        If connexionStringServer.Text = "" Or connexionStringUserName.Text = "" Or connexionStringDatabase.Text = "" Then
+            connexionErrorMsg.Text = "Please fill all the fields"
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
+            Dim wrapper As New Simple3Des("")
 
-        Dim wrapper As New Simple3Des("")
+            Dim serverEncr As String = wrapper.EncryptData(connexionStringServer.Text)
+            Dim userNameEncr As String = wrapper.EncryptData(connexionStringUserName.Text)
+            Dim pwdEncr As String = wrapper.EncryptData(connexionStringPwd.Text)
+            Dim databaseEncr As String = wrapper.EncryptData(connexionStringDatabase.Text)
 
-        Dim serverEncr As String = wrapper.EncryptData(connexionStringServer.Text)
-        Dim userNameEncr As String = wrapper.EncryptData(connexionStringUserName.Text)
-        Dim pwdEncr As String = wrapper.EncryptData(connexionStringPwd.Text)
-        Dim databaseEncr As String = wrapper.EncryptData(connexionStringDatabase.Text)
+            Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
 
-        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+            Dim FILE_NAME As String = "connectionString.txt"
 
-        Dim FILE_NAME As String = "connectionString.txt"
+            Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
 
-        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+            Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
 
-        Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
-
-        Dim uriPath As String = connexionStringDirectory
-        Dim localPath As String = New Uri(uriPath).LocalPath
-
-
-        FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
-
-        PrintLine(1, serverEncr)
-        PrintLine(1, userNameEncr)
-        PrintLine(1, pwdEncr)
-        PrintLine(1, databaseEncr)
-
-        FileClose(1)
-
-        FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)
-
-        While Not EOF(1)
-            server = wrapper.DecryptData(LineInput(1))
-            username = wrapper.DecryptData(LineInput(1))
-            password = wrapper.DecryptData(LineInput(1))
-            database = wrapper.DecryptData(LineInput(1))
-        End While
-
-        FileClose(1)
+            Dim uriPath As String = connexionStringDirectory
+            Dim localPath As String = New Uri(uriPath).LocalPath
 
 
-        'creating first admin
-        connect_db()
+            FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
 
-        Dim checkTables As Integer = 0
+            PrintLine(1, serverEncr)
+            PrintLine(1, userNameEncr)
+            PrintLine(1, pwdEncr)
+            PrintLine(1, databaseEncr)
 
-        Try
-            sqlConn.Open()
+            FileClose(1)
 
-            sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_admin'"
+            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)
 
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            While (sqlReader.Read())
-                While (sqlReader.Read())
-                    checkTables = sqlReader.Item("count(*)")
-                End While
-
+            While Not EOF(1)
+                server = wrapper.DecryptData(LineInput(1))
+                username = wrapper.DecryptData(LineInput(1))
+                password = wrapper.DecryptData(LineInput(1))
+                database = wrapper.DecryptData(LineInput(1))
             End While
-            sqlConn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+            FileClose(1)
 
-        End Try
 
-        If checkTables <> 0 Then
-            connexionStringPanel.Visible = False
-            userAddPanel.Visible = False
 
-        ElseIf checkTables = 0 Then
-            'create all tables
+            'creating first admin
+            connect_db()
+
+            Dim checkTables As Integer
 
             Try
                 sqlConn.Open()
 
-                sqlQuery = "CREATE TABLE `cems_admin` (
+                sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_admin'"
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+                While (sqlReader.Read())
+                    checkTables = sqlReader.Item("count(*)")
+                End While
+
+                sqlConn.Close()
+
+                MsgBox(checkTables)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            If checkTables > 0 Then
+                connexionStringPanel.Visible = False
+                userAddPanel.Visible = False
+
+            ElseIf checkTables = 0 Then
+                'create all tables
+
+                Try
+                    sqlConn.Open()
+
+                    sqlQuery = "CREATE TABLE `cems_admin` (
                                   `admin_id` int(11) NOT NULL,
                                   `admin_name` varchar(100) NOT NULL,
                                   `admin_phone_number` varchar(9) NOT NULL,
@@ -336,47 +340,53 @@ Public Class Form1
                             COMMIT;
                             "
 
-                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                sqlReader = sqlCmd.ExecuteReader
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
 
-                sqlConn.Close()
+                    sqlConn.Close()
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Finally
-                sqlConn.Dispose()
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
 
-            End Try
+                End Try
 
-            'populating the title combobox
+                'populating the title combobox
 
-            userUserAddTitleInput.Items.Clear()
-
-
-            Try
-                sqlConn.Open()
-
-                sqlQuery = "select * from  cems.cems_titles"
+                userUserAddTitleInput.Items.Clear()
 
 
-                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                sqlReader = sqlCmd.ExecuteReader
-                While (sqlReader.Read())
-                    userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
+                Try
+                    sqlConn.Open()
 
-                End While
-                sqlConn.Close()
+                    sqlQuery = "select * from  cems.cems_titles"
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Finally
-                sqlConn.Dispose()
 
-            End Try
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    While (sqlReader.Read())
+                        userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
 
-            userAddPanel.Visible = True
+                    End While
+                    sqlConn.Close()
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+
+                End Try
+
+                userAddPanel.Visible = True
+            End If
+
+            connexionStringPanel.Visible = False
+
         End If
-        connexionStringPanel.Visible = False
+
+
+
     End Sub
 
 
@@ -467,7 +477,7 @@ Public Class Form1
     Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick 'this stops the timer and make the messages disappear
 
         addUserErrorMsg.Visible = False
-
+        connexionErrorMsg.Visible = False
         Timer2.Stop()
     End Sub
 

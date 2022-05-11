@@ -64,6 +64,8 @@ Partial Class Form1
         Me.userAddvalidationBtn = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +85,8 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.passwordtxt)
         Me.Panel1.Controls.Add(Me.emailtxt)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Location = New System.Drawing.Point(109, 50)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(488, 313)
@@ -238,7 +242,7 @@ Partial Class Form1
         '
         Me.forgotPasswordBtn.BackColor = System.Drawing.Color.Transparent
         Me.forgotPasswordBtn.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.forgotPasswordBtn.Location = New System.Drawing.Point(114, 238)
+        Me.forgotPasswordBtn.Location = New System.Drawing.Point(114, 249)
         Me.forgotPasswordBtn.Name = "forgotPasswordBtn"
         Me.forgotPasswordBtn.Size = New System.Drawing.Size(103, 23)
         Me.forgotPasswordBtn.TabIndex = 6
@@ -247,7 +251,7 @@ Partial Class Form1
         '
         'login
         '
-        Me.login.Location = New System.Drawing.Point(305, 238)
+        Me.login.Location = New System.Drawing.Point(305, 249)
         Me.login.Name = "login"
         Me.login.Size = New System.Drawing.Size(75, 23)
         Me.login.TabIndex = 5
@@ -256,7 +260,7 @@ Partial Class Form1
         '
         'passwordtxt
         '
-        Me.passwordtxt.Location = New System.Drawing.Point(114, 206)
+        Me.passwordtxt.Location = New System.Drawing.Point(114, 217)
         Me.passwordtxt.Name = "passwordtxt"
         Me.passwordtxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passwordtxt.Size = New System.Drawing.Size(266, 20)
@@ -265,7 +269,7 @@ Partial Class Form1
         '
         'emailtxt
         '
-        Me.emailtxt.Location = New System.Drawing.Point(114, 169)
+        Me.emailtxt.Location = New System.Drawing.Point(114, 175)
         Me.emailtxt.Name = "emailtxt"
         Me.emailtxt.Size = New System.Drawing.Size(266, 20)
         Me.emailtxt.TabIndex = 2
@@ -463,6 +467,24 @@ Partial Class Form1
         'Timer2
         '
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(111, 159)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(124, 13)
+        Me.Label9.TabIndex = 14
+        Me.Label9.Text = "Enter your email account"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(111, 203)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(103, 13)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Enter your password"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -528,4 +550,6 @@ Partial Class Form1
     Friend WithEvents userAddvalidationBtn As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
 End Class
