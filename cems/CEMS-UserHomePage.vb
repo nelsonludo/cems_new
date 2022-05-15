@@ -188,7 +188,7 @@ Public Class UserHomePage
     'equipment subbuttons
     Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
@@ -203,7 +203,7 @@ Public Class UserHomePage
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
@@ -219,7 +219,7 @@ Public Class UserHomePage
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
@@ -234,7 +234,7 @@ Public Class UserHomePage
     End Sub
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
@@ -250,7 +250,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
@@ -267,7 +267,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
 
         userEquipmentPanel.Visible = True
 

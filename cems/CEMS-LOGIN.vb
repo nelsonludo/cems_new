@@ -60,7 +60,14 @@ Public Class Form1
 
 
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
+        If connexionStringServer.Text = "" Or connexionStringUserName.Text = "" Or connexionStringDatabase.Text = "" Then
+            connexionErrorMsg.Text = "Please fill all the fields"
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
+            Dim wrapper As New Simple3Des("")
 
+<<<<<<< HEAD
         Dim servercb As String = connexionStringServer.Text
         Dim usernamecb As String = connexionStringUserName.Text
         Dim passwordcb As String = connexionStringPwd.Text
@@ -246,15 +253,65 @@ Public Class Form1
 
             Dim title_id As Integer
             'SQL Connection'
+=======
+            Dim serverEncr As String = wrapper.EncryptData(connexionStringServer.Text)
+            Dim userNameEncr As String = wrapper.EncryptData(connexionStringUserName.Text)
+            Dim pwdEncr As String = wrapper.EncryptData(connexionStringPwd.Text)
+            Dim databaseEncr As String = wrapper.EncryptData(connexionStringDatabase.Text)
+
+            Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+
+            Dim FILE_NAME As String = "connectionString.txt"
+
+            Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+
+            Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
+
+            Dim uriPath As String = connexionStringDirectory
+            Dim localPath As String = New Uri(uriPath).LocalPath
+
+
+            FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
+
+            PrintLine(1, serverEncr)
+            PrintLine(1, userNameEncr)
+            PrintLine(1, pwdEncr)
+            PrintLine(1, databaseEncr)
+
+            FileClose(1)
+
+            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input)snake
+
+            While Not EOF(1)
+                server = wrapper.DecryptData(LineInput(1))
+                username = wrapper.DecryptData(LineInput(1))
+                password = wrapper.DecryptData(LineInput(1))
+                database = wrapper.DecryptData(LineInput(1))
+            End While
+
+            FileClose(1)
+
+
+
+            'creating first admin
+            connect_db()
+
+            Dim checkTables As Integer
+>>>>>>> 6cc17e01643d1c6e2ba74af3c4e2fd5118745a7b
 
             Try
                 sqlConn.Open()
 
+<<<<<<< HEAD
                 sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
+=======
+                sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_admin'"
+>>>>>>> 6cc17e01643d1c6e2ba74af3c4e2fd5118745a7b
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
+<<<<<<< HEAD
 
                 While (sqlReader.Read())
                     title_id = sqlReader.Item("title_id")
@@ -262,6 +319,15 @@ Public Class Form1
 
                 sqlConn.Close()
                 MessageBox.Show(title_id)
+=======
+                While (sqlReader.Read())
+                    checkTables = sqlReader.Item("count(*)")
+                End While
+
+                sqlConn.Close()
+
+                MsgBox(checkTables)
+>>>>>>> 6cc17e01643d1c6e2ba74af3c4e2fd5118745a7b
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -269,6 +335,7 @@ Public Class Form1
 
             End Try
 
+<<<<<<< HEAD
 
             If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
                 addUserErrorMsg.Visible = True
@@ -403,6 +470,19 @@ Public Class Form1
     Public Sub longestQuery()
 
         sqlQuery = "CREATE TABLE `cems_admin` (
+=======
+            If checkTables > 0 Then
+                connexionStringPanel.Visible = False
+                userAddPanel.Visible = False
+
+            ElseIf checkTables = 0 Then
+                'create all tables
+
+                Try
+                    sqlConn.Open()
+
+                    sqlQuery = "CREATE TABLE `cems_admin` (
+>>>>>>> 6cc17e01643d1c6e2ba74af3c4e2fd5118745a7b
                                   `admin_id` int(11) NOT NULL,
                                   `admin_name` varchar(100) NOT NULL,
                                   `admin_phone_number` varchar(9) NOT NULL,
@@ -598,6 +678,229 @@ Public Class Form1
                               ADD CONSTRAINT `cems_users_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`) ON DELETE CASCADE ON UPDATE CASCADE;
                             COMMIT;
                             "
+<<<<<<< HEAD
     End Sub
 
+=======
+
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+
+                    sqlConn.Close()
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+
+                End Try
+
+                'populating the title combobox
+
+                userUserAddTitleInput.Items.Clear()
+
+
+                Try
+                    sqlConn.Open()
+
+                    sqlQuery = "select * from  cems.cems_titles"
+
+
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    While (sqlReader.Read())
+                        userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
+
+                    End While
+                    sqlConn.Close()
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+
+                End Try
+
+                userAddPanel.Visible = True
+            End If
+
+            connexionStringPanel.Visible = False
+
+        End If
+
+
+
+    End Sub
+
+
+    Public Sub connect_db()
+        sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+           + "password=" + password + ";" + "database =" + database
+    End Sub
+
+
+    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddvalidationBtn.Click 'validate add
+
+        connect_db()
+
+        If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Or userUserAddTitleInput.Text = "" Then
+            addUserErrorMsg.Text = "please fill all the fields !"
+            addUserErrorMsg.Visible = True
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
+
+            Dim title_id As Integer
+            'SQL Connection'
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    title_id = sqlReader.Item("title_id")
+                End While
+
+                sqlConn.Close()
+                MessageBox.Show(title_id)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+
+            If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
+                addUserErrorMsg.Visible = True
+                addUserErrorMsg.Text = "The password does not correspond"
+                Timer2.Interval = 3000
+                Timer2.Start()
+            Else
+
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_admin(admin_name, admin_email, admin_phone_number, admin_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
+
+                    'this changes the content of confirmMsg
+                    forgotPasswordMessage.ForeColor = Color.Green
+
+                    forgotPasswordMessage.Text = "login with the admin account information ✔"
+
+
+                    'this makes the confirm message appear for 3secs
+                    forgotPasswordMessage.Visible = True
+                    Timer2.Interval = 5000
+                    Timer2.Start()
+
+
+                    'this makes the add panel to disappear
+                    userAddPanel.Visible = False
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+            End If
+
+        End If
+    End Sub
+
+
+    Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick 'this stops the timer and make the messages disappear
+
+        addUserErrorMsg.Visible = False
+        connexionErrorMsg.Visible = False
+        Timer2.Stop()
+    End Sub
+
+    'password placeholder
+    Private Sub passwordtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.GotFocus
+        If passwordtxt.Text = "password" Then
+            passwordtxt.Text = ""
+        End If
+    End Sub
+    Private Sub passwordtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.LostFocus
+        If passwordtxt.Text = "" Then
+            passwordtxt.Text = "password"
+        End If
+    End Sub
+
+    'password placeholder
+    Private Sub emailtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.GotFocus
+        If emailtxt.Text = "email" Then
+            emailtxt.Text = ""
+        End If
+    End Sub
+    Private Sub emailtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.LostFocus
+        If emailtxt.Text = "" Then
+            emailtxt.Text = "email"
+        End If
+    End Sub
+
+
+    Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
+
+
+        Dim userLogin As Boolean
+
+        userLogin = User.login(passwordtxt.Text, emailtxt.Text, forgotPasswordMessage, Timer1)
+
+        If (Not userLogin) Then
+            admin.login(passwordtxt.Text, emailtxt.Text, forgotPasswordMessage, Timer1)
+        End If
+    End Sub
+
+    Private Sub passwordtxt_TextChanged(sender As Object, e As EventArgs) Handles passwordtxt.TextChanged
+
+    End Sub
+
+    Private Sub forgotPasswordBtn_Click(sender As Object, e As EventArgs) Handles forgotPasswordBtn.Click
+        Dim admin_email As String
+        Dim admin_phone_number As String
+
+        connect_db()
+        Try
+            sqlConn.Open()
+            'check user info
+            sqlQuery = "select admin_phone_number, admin_email from cems.cems_admin where title_id = '3'"
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            If (sqlReader.Read()) Then
+                admin_email = sqlReader.Item("admin_email")
+                admin_phone_number = sqlReader.Item("admin_phone_number")
+                forgotPasswordMessage.Text = "Veuillez contacter l'administrateur à travers ces contacts " & admin_email & " et " & admin_phone_number & " "
+                Timer1.Interval = 3000
+                Timer1.Start()
+            End If
+            sqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer1.Tick 'this stops the timer and make the messages disappear
+        forgotPasswordMessage.Visible = False
+        connexionErrorMsg.Visible = False
+        Timer1.Stop()
+
+
+    End Sub
+
+
+>>>>>>> 6cc17e01643d1c6e2ba74af3c4e2fd5118745a7b
 End Class

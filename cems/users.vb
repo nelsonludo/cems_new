@@ -80,14 +80,14 @@ Public Class users
         tableLabel.Text = tableName
     End Sub
 
-    Public Sub displayEquipmentTable(table As String, grid As DataGridView) 'changes tabs on the window
+    Public Sub displayEquipmentTable(choicetable As String, table As String, grid As DataGridView) 'changes tabs on the window
         connect_db()
         Try
 
             sqlConn.Open()
             sqlDataTable.Rows.Clear()
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "select * from cems.cems_equipments where equipment_type = '" & table & "' "
+            sqlCmd.CommandText = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where equipment_type = '" & choicetable & "' "
 
             sqlReader = sqlCmd.ExecuteReader
             sqlDataTable.Load(sqlReader)
