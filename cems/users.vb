@@ -267,7 +267,7 @@ Public Class users
 
             grid.DataSource = datatable
 
-            If datatable.Rows.Count < 2 And searchValue <> "" Then
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
                 grid.Visible = False 'datagridview disappear
                 searchErrorLabel.Visible = True 'error message appear
             Else
@@ -304,7 +304,7 @@ Public Class users
 
             grid.DataSource = datatable
 
-            If datatable.Rows.Count < 2 And searchValue <> "" Then
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
                 grid.Visible = False 'datagridview disappear
                 searchErrorLabel.Visible = True 'error message appear
             Else

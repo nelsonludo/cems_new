@@ -64,6 +64,7 @@ Partial Class Form1
         Me.userAddvalidationBtn = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -528,4 +529,5 @@ Partial Class Form1
     Friend WithEvents userAddvalidationBtn As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents Timer3 As Timer
 End Class

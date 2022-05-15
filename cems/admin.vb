@@ -17,6 +17,8 @@ Public Class admin
 
             Else
                 errorMsg.Text = "email or password invalid"
+
+                errorMsg.visible = True
                 timer.Interval = 3000
                 timer.Start()
             End If
@@ -43,7 +45,7 @@ Public Class admin
 
             grid.DataSource = datatable
 
-            If datatable.Rows.Count < 2 And searchValue <> "" Then
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
                 grid.Visible = False 'datagridview disappear
                 searchErrorLabel.Visible = True 'error message appear
             Else

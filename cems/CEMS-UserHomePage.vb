@@ -103,7 +103,36 @@ Public Class UserHomePage
         End If
     End Sub
 
+
+    Private Sub fillHalls(search As ComboBox)
+
+        search.Items.Clear()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select * from  cems.cems_halls"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            While (sqlReader.Read())
+                search.Items.Add(sqlReader.Item("hall_name"))
+
+            End While
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+    End Sub
+
     'tab buttons section
+
+
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
         userEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
@@ -116,26 +145,7 @@ Public Class UserHomePage
 
         User.displayTableP("posts", DataGridView2, sqlDataTableP)
 
-        Try
-            sqlConn.Open()
-
-            sqlQuery = "select * from  cems.cems_halls"
-
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            While (sqlReader.Read())
-                hallSearchBoxP.Items.Add(sqlReader.Item("hall_name"))
-
-            End While
-            sqlConn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-
-        End Try
+        fillHalls(hallSearchBoxP)
 
     End Sub
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
@@ -152,28 +162,7 @@ Public Class UserHomePage
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
     End Sub
-    Private Sub fillHalls()
-        Try
-            sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_halls"
-
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            While (sqlReader.Read())
-                hallSearchBoxE.Items.Add(sqlReader.Item("hall_name"))
-
-            End While
-            sqlConn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-
-        End Try
-    End Sub
 
     Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
         Timer1.Start()
@@ -193,7 +182,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
     End Sub
 
     'equipment subbuttons
@@ -208,7 +197,7 @@ Public Class UserHomePage
         userProfilePanel.Visible = False
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
@@ -224,7 +213,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
@@ -240,7 +229,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
@@ -255,7 +244,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
@@ -271,7 +260,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
@@ -288,7 +277,7 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
-        fillHalls()
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
