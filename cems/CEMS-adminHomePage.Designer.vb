@@ -184,8 +184,7 @@ Partial Class adminhomePage
         Me.Label13 = New System.Windows.Forms.Label()
         Me.equipmentState = New System.Windows.Forms.ComboBox()
         Me.addEquipmentBtn = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.userNumber = New System.Windows.Forms.Label()
         Me.usersBtn2 = New System.Windows.Forms.Button()
         Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
         Me.activeMonitorNumber = New System.Windows.Forms.Label()
@@ -255,8 +254,7 @@ Partial Class adminhomePage
         '
         Me.adminHomePagePanel.BackColor = System.Drawing.Color.CornflowerBlue
         Me.adminHomePagePanel.Controls.Add(Me.adminEquipmentPanel)
-        Me.adminHomePagePanel.Controls.Add(Me.Label3)
-        Me.adminHomePagePanel.Controls.Add(Me.Label4)
+        Me.adminHomePagePanel.Controls.Add(Me.userNumber)
         Me.adminHomePagePanel.Controls.Add(Me.usersBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.nonActiveMonitorNumber)
         Me.adminHomePagePanel.Controls.Add(Me.activeMonitorNumber)
@@ -268,9 +266,9 @@ Partial Class adminhomePage
         Me.adminHomePagePanel.Controls.Add(Me.IPsBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.CPUsBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.Label1)
-        Me.adminHomePagePanel.Location = New System.Drawing.Point(158, 70)
+        Me.adminHomePagePanel.Location = New System.Drawing.Point(158, 72)
         Me.adminHomePagePanel.Name = "adminHomePagePanel"
-        Me.adminHomePagePanel.Size = New System.Drawing.Size(725, 423)
+        Me.adminHomePagePanel.Size = New System.Drawing.Size(725, 421)
         Me.adminHomePagePanel.TabIndex = 7
         '
         'adminEquipmentPanel
@@ -661,10 +659,10 @@ Partial Class adminhomePage
         Me.adminRolePanel.Controls.Add(Me.exportBtnR)
         Me.adminRolePanel.Controls.Add(Me.DataGridView5)
         Me.adminRolePanel.Controls.Add(Me.Roles)
-        Me.adminRolePanel.Location = New System.Drawing.Point(0, -2)
+        Me.adminRolePanel.Location = New System.Drawing.Point(0, 0)
         Me.adminRolePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminRolePanel.Name = "adminRolePanel"
-        Me.adminRolePanel.Size = New System.Drawing.Size(726, 425)
+        Me.adminRolePanel.Size = New System.Drawing.Size(726, 423)
         Me.adminRolePanel.TabIndex = 60
         Me.adminRolePanel.Visible = False
         '
@@ -2101,23 +2099,14 @@ Partial Class adminhomePage
         Me.addEquipmentBtn.Text = "Add"
         Me.addEquipmentBtn.UseVisualStyleBackColor = True
         '
-        'Label3
+        'userNumber
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(664, 163)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
-        Me.Label3.TabIndex = 35
-        Me.Label3.Text = "0000"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(619, 163)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 13)
-        Me.Label4.TabIndex = 34
-        Me.Label4.Text = "0000"
+        Me.userNumber.AutoSize = True
+        Me.userNumber.Location = New System.Drawing.Point(664, 163)
+        Me.userNumber.Name = "userNumber"
+        Me.userNumber.Size = New System.Drawing.Size(31, 13)
+        Me.userNumber.TabIndex = 35
+        Me.userNumber.Text = "0000"
         '
         'usersBtn2
         '
@@ -2623,8 +2612,7 @@ Partial Class adminhomePage
     Friend WithEvents adminHeader As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents userNumber As Label
     Friend WithEvents usersBtn2 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents rolesBtn As Button

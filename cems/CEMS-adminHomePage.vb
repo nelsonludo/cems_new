@@ -62,14 +62,15 @@ Public Class adminhomePage
 
         dropdown.Size = dropdown.MinimumSize
 
-        User.activeCount(activeCPUNumber, "equipments", "equipment", "good")
-        User.activeCount(activeIPNumber, "equipments", "equipment", "good")
-        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good")
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good", "CPU")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good", "IP_phone")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good", "monitor")
 
 
-        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad")
-        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad")
-        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad")
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
+        admin.activeCount(userNumber, "users")
 
     End Sub
 
@@ -361,7 +362,7 @@ Public Class adminhomePage
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
 
         adminEquipmentPanel.Visible = True
 
@@ -386,7 +387,7 @@ Public Class adminhomePage
     End Sub
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
 
         adminEquipmentPanel.Visible = True
 
@@ -412,7 +413,7 @@ Public Class adminhomePage
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
         adminEquipmentPanel.Visible = True
 
@@ -439,7 +440,7 @@ Public Class adminhomePage
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
         adminEquipmentPanel.Visible = True
 
@@ -506,7 +507,7 @@ Public Class adminhomePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
 
-        User.updateUser("admin", "admin", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2)
+        User.updateUser("admin", "admin", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         showUserName()
@@ -1574,6 +1575,8 @@ Public Class adminhomePage
         addHallErrorMsg.Visible = False
         addPostErrorMsg.Visible = False
         addUserErrorMsg.Visible = False
+        updateProfileErrorMsg.Visible = False
+
         Timer2.Stop()
     End Sub
 

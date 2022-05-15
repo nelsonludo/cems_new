@@ -62,14 +62,14 @@ Public Class UserHomePage
 
         dropdown.Size = dropdown.MinimumSize
 
-        User.activeCount(activeCPUNumber, "equipments", "equipment", "good")
-        User.activeCount(activeIPNumber, "equipments", "equipment", "good")
-        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good")
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good", "CPU")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good", "IP_phone")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good", "monitor")
 
 
-        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad")
-        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad")
-        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad")
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
 
 
 
@@ -314,7 +314,7 @@ Public Class UserHomePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
 
-        User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2)
+        User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
         showUserName()
@@ -440,6 +440,7 @@ Public Class UserHomePage
     Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick
         confirmMsgP.Visible = False
         confirmMsgE.Visible = False
+        updateProfileErrorMsg.Visible = False
         Timer2.Stop()
     End Sub
     Private Sub printBtnP_Click(sender As Object, e As EventArgs) Handles printBtnP.Click

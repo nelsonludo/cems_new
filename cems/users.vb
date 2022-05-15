@@ -80,14 +80,14 @@ Public Class users
         tableLabel.Text = tableName
     End Sub
 
-    Public Sub displayEquipmentTable(choicetable As String, table As String, grid As DataGridView) 'changes tabs on the window
+    Public Sub displayEquipmentTable(table As String, type As String, grid As DataGridView) 'changes tabs on the window
         connect_db()
         Try
 
             sqlConn.Open()
             sqlDataTable.Rows.Clear()
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where equipment_type = '" & choicetable & "' "
+            sqlCmd.CommandText = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where equipment_type = '" & type & "' "
 
             sqlReader = sqlCmd.ExecuteReader
             sqlDataTable.Load(sqlReader)
@@ -400,7 +400,7 @@ Public Class users
     End Sub
 
 
-    Public Sub updateUser(table As String, column As String, name As String, phone As String, email As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control)
+    Public Sub updateUser(table As String, column As String, name As String, phone As String, email As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
 
         connect_db()
 
@@ -410,10 +410,16 @@ Public Class users
             If name = "" And email = "" And phone = "" And pwd = "" Then
                 errorMsg.Visible = True
                 errorMsg.Text = "Please fill the fields"
+
+                timer.Interval = 3000
+                timer.Start()
             Else
                 If pwd <> confirmPwd Then
                     errorMsg.Visible = True
                     errorMsg.Text = "The password does not correspond"
+
+                    timer.Interval = 3000
+                    timer.Start()
 
                 ElseIf name = "" And phone = "" And pwd = "" Then
 
@@ -759,7 +765,7 @@ Public Class users
         grid.Height = DGVOriginalHeight
     End Sub
 
-    Public Sub activeCount(countLabel As Label, table As String, column As String, state As String)
+    Public Sub activeCount(countLabel As Label, table As String, column As String, state As String, Cname As String)
 
         Dim count As Integer
 
@@ -769,7 +775,7 @@ Public Class users
         Try
             sqlConn.Open()
             'count the number of good
-            sqlQuery = "select count(*) from cems_" & table & " where " & column & "_state = '" & state & "'" 'Form1.emailtxt.Text'
+            sqlQuery = "select count(*) from cems_" & table & " where " & column & "_state = '" & state & "' and " & column & "_type = '" & Cname & "'" 'Form1.emailtxt.Text'
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
