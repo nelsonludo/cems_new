@@ -173,6 +173,8 @@ Public Class adminhomePage
 
         addEquipmentPanel.Visible = False
 
+        postChangeStatePanel.Visible = False
+
         User.displayTableP("posts", DataGridView2, sqlDataTableP)
 
         fillHalls(hallSearchBoxP)
@@ -197,6 +199,10 @@ Public Class adminhomePage
         addPostPanel.Visible = False
 
         addEquipmentPanel.Visible = False
+
+        If profileSubPanel2.Visible = True Then
+            profileSubPanel2.Visible = False
+        End If
 
         connect_db()
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
@@ -255,6 +261,10 @@ Public Class adminhomePage
 
         addEquipmentPanel.Visible = False
 
+        HallUpdateBtn.Visible = False
+        HallDeleteBtn.Visible = False
+        hallUpdatePanel.Visible = False
+
         fillHalls(hallSearchBoxH)
     End Sub
 
@@ -279,6 +289,11 @@ Public Class adminhomePage
 
         addEquipmentPanel.Visible = False
 
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+
+
     End Sub
 
     Private Sub rolesBtn_Click(sender As Object, e As EventArgs) Handles rolesBtn.Click
@@ -299,6 +314,8 @@ Public Class adminhomePage
         addPostPanel.Visible = False
 
         addEquipmentPanel.Visible = False
+
+        roleUpdateBtn.Visible = False
 
         User.displayTable("titles", DataGridView5, sqlDataTableR)
 
@@ -498,6 +515,12 @@ Public Class adminhomePage
         userNameProfileInput.Text = adminNameProfile.Text
         userPhoneNumberProfileInput.Text = adminPhoneNumberProfile.Text
         userEmailProfileInput.Text = adminEmailProfile.Text
+
+
+        userPwdProfileInput.Text = ""
+        userConfirmPwdProfileInput.Text = ""
+
+
     End Sub
 
     Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
@@ -877,7 +900,7 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub stateChangeBtn_Click(sender As Object, e As EventArgs)
+    Private Sub stateChangeBtn_Click(sender As Object, e As EventArgs) Handles stateChangeBtn.Click
         Dim equipment_id As Integer = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
 
         connect_db()
