@@ -1110,7 +1110,7 @@ Public Class adminhomePage
 
         With sqlCmd
 
-            .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "'"
+            .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
 
             .CommandType = CommandType.Text
 
@@ -1530,7 +1530,7 @@ Public Class adminhomePage
                 Timer2.Start()
             Else
 
-                If title_id = 1 Or title_id = 3 Then
+                If title_id = 1 Or title_id = 2 Then
                     Try
                         sqlConn.Open()
                         sqlQuery = "insert into cems.cems_admin(admin_name, admin_email, admin_phone_number, admin_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
