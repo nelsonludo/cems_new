@@ -175,7 +175,7 @@ Public Class adminhomePage
 
         postChangeStatePanel.Visible = False
 
-        User.displayTableP("posts", DataGridView2, sqlDataTableP)
+        User.displayTableP("posts", DataGridView2, sqlDataTableP)  'this is a useless comment
 
         fillHalls(hallSearchBoxP)
 
