@@ -296,6 +296,35 @@ Public Class adminhomePage
 
     End Sub
 
+
+    Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the hallpanel is inside the equipmentpanel
+
+        adminHallsPanel.Visible = True
+
+        adminPostPanel.Visible = True
+
+        adminProfilePanel.Visible = True
+
+        adminUsersPanel.Visible = True
+
+        adminRolePanel.Visible = False
+
+        statePanel.Visible = False
+
+        User.displayTableU("users", DataGridView4, sqlDataTableU)
+
+        addPostPanel.Visible = False
+
+        addEquipmentPanel.Visible = False
+
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+
+
+    End Sub
+
     Private Sub rolesBtn_Click(sender As Object, e As EventArgs) Handles rolesBtn.Click
         adminEquipmentPanel.Visible = True 'this is set to true because somehow the hallpanel is inside the equipmentpanel
 
@@ -480,6 +509,8 @@ Public Class adminhomePage
         fillHalls(hallSearchBoxE)
 
     End Sub
+
+
 
     Private Sub adminLogout_Click(sender As Object, e As EventArgs) Handles adminLogout.Click
         Form1.Show()
@@ -1727,4 +1758,5 @@ Public Class adminhomePage
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
 
     End Sub
+
 End Class
