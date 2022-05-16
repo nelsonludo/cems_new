@@ -813,13 +813,16 @@ Public Class adminhomePage
             End While
 
             sqlConn.Close()
-            MessageBox.Show(title_id)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             sqlConn.Dispose()
 
         End Try
+
+
+        Dim user_id As String = DataGridView4.SelectedRows(0).Cells(0).Value.ToString
+
 
         sqlConn.Open()
 
@@ -828,7 +831,7 @@ Public Class adminhomePage
 
         With sqlCmd
 
-            .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
+            .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
 
             .CommandType = CommandType.Text
 
@@ -1026,6 +1029,9 @@ Public Class adminhomePage
     End Sub
 
     Private Sub roleUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateValidationBtn.Click 'validate update 
+
+        Dim role_id As String = DataGridView5.SelectedRows(0).Cells(0).Value.ToString
+
         connect_db()
 
         sqlConn.Open()
@@ -1035,7 +1041,7 @@ Public Class adminhomePage
 
         With sqlCmd
 
-            .CommandText = "Update cems.cems_titles Set title_name ='" & titleNameInput.Text & "'"
+            .CommandText = "Update cems.cems_titles Set title_name ='" & titleNameInput.Text & "' where title_id = '" & role_id & "' "
 
             .CommandType = CommandType.Text
 
@@ -1101,6 +1107,9 @@ Public Class adminhomePage
     End Sub
 
     Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidateBtn.Click 'validate update 
+
+        Dim hall_id As String = DataGridView3.SelectedRows(0).Cells(0).Value.ToString
+
         connect_db()
 
         sqlConn.Open()
@@ -1110,7 +1119,7 @@ Public Class adminhomePage
 
         With sqlCmd
 
-            .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
+            .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
 
             .CommandType = CommandType.Text
 
