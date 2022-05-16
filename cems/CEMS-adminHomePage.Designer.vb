@@ -1597,6 +1597,7 @@ Partial Class adminhomePage
         '
         Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(299, 182)
         Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
+        Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(180, 20)
         Me.userConfirmPwdProfileInput.TabIndex = 22
         '
@@ -1642,6 +1643,7 @@ Partial Class adminhomePage
         '
         Me.userPwdProfileInput.Location = New System.Drawing.Point(299, 150)
         Me.userPwdProfileInput.Name = "userPwdProfileInput"
+        Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userPwdProfileInput.Size = New System.Drawing.Size(180, 20)
         Me.userPwdProfileInput.TabIndex = 18
         '
