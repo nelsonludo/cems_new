@@ -2104,6 +2104,7 @@ Partial Class adminhomePage
         'userNumber
         '
         Me.userNumber.AutoSize = True
+        Me.userNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.userNumber.Location = New System.Drawing.Point(664, 163)
         Me.userNumber.Name = "userNumber"
         Me.userNumber.Size = New System.Drawing.Size(31, 13)
@@ -2127,6 +2128,7 @@ Partial Class adminhomePage
         'nonActiveMonitorNumber
         '
         Me.nonActiveMonitorNumber.AutoSize = True
+        Me.nonActiveMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.nonActiveMonitorNumber.Location = New System.Drawing.Point(488, 163)
         Me.nonActiveMonitorNumber.Name = "nonActiveMonitorNumber"
         Me.nonActiveMonitorNumber.Size = New System.Drawing.Size(31, 13)
@@ -2136,6 +2138,7 @@ Partial Class adminhomePage
         'activeMonitorNumber
         '
         Me.activeMonitorNumber.AutoSize = True
+        Me.activeMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.activeMonitorNumber.Location = New System.Drawing.Point(443, 163)
         Me.activeMonitorNumber.Name = "activeMonitorNumber"
         Me.activeMonitorNumber.Size = New System.Drawing.Size(31, 13)
@@ -2145,6 +2148,7 @@ Partial Class adminhomePage
         'nonActiveIPNumber
         '
         Me.nonActiveIPNumber.AutoSize = True
+        Me.nonActiveIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.nonActiveIPNumber.Location = New System.Drawing.Point(304, 163)
         Me.nonActiveIPNumber.Name = "nonActiveIPNumber"
         Me.nonActiveIPNumber.Size = New System.Drawing.Size(31, 13)
@@ -2154,7 +2158,8 @@ Partial Class adminhomePage
         'activeIPNumber
         '
         Me.activeIPNumber.AutoSize = True
-        Me.activeIPNumber.Location = New System.Drawing.Point(259, 163)
+        Me.activeIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.activeIPNumber.Location = New System.Drawing.Point(267, 163)
         Me.activeIPNumber.Name = "activeIPNumber"
         Me.activeIPNumber.Size = New System.Drawing.Size(31, 13)
         Me.activeIPNumber.TabIndex = 29
@@ -2163,6 +2168,7 @@ Partial Class adminhomePage
         'nonActiveCPUNumber
         '
         Me.nonActiveCPUNumber.AutoSize = True
+        Me.nonActiveCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.nonActiveCPUNumber.Location = New System.Drawing.Point(135, 163)
         Me.nonActiveCPUNumber.Name = "nonActiveCPUNumber"
         Me.nonActiveCPUNumber.Size = New System.Drawing.Size(31, 13)
@@ -2172,6 +2178,7 @@ Partial Class adminhomePage
         'activeCPUNumber
         '
         Me.activeCPUNumber.AutoSize = True
+        Me.activeCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.activeCPUNumber.Location = New System.Drawing.Point(90, 163)
         Me.activeCPUNumber.Name = "activeCPUNumber"
         Me.activeCPUNumber.Size = New System.Drawing.Size(31, 13)
