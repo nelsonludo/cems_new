@@ -2432,12 +2432,13 @@ Partial Class adminhomePage
         '
         Me.aName.AutoSize = True
         Me.aName.Font = New System.Drawing.Font("MS Reference Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.aName.Location = New System.Drawing.Point(714, 30)
+        Me.aName.Location = New System.Drawing.Point(162, 49)
         Me.aName.Name = "aName"
+        Me.aName.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.aName.Size = New System.Drawing.Size(75, 19)
         Me.aName.TabIndex = 5
         Me.aName.Text = "******"
-        Me.aName.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.aName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FlowLayoutPanel1
         '
@@ -2489,7 +2490,7 @@ Partial Class adminhomePage
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
-        Me.PictureBox1.Location = New System.Drawing.Point(174, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(171, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(42, 37)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

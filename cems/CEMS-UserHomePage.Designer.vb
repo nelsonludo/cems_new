@@ -155,7 +155,7 @@ Partial Class UserHomePage
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
-        Me.PictureBox1.Location = New System.Drawing.Point(174, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(176, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(42, 37)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -166,7 +166,7 @@ Partial Class UserHomePage
         '
         Me.uName.AutoSize = True
         Me.uName.Font = New System.Drawing.Font("MS Reference Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.uName.Location = New System.Drawing.Point(721, 30)
+        Me.uName.Location = New System.Drawing.Point(162, 49)
         Me.uName.Name = "uName"
         Me.uName.Size = New System.Drawing.Size(75, 19)
         Me.uName.TabIndex = 5
