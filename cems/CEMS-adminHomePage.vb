@@ -178,6 +178,7 @@ Public Class adminhomePage
         User.displayTableP("posts", DataGridView2, sqlDataTableP)  'this is a useless comment
 
         fillHalls(hallSearchBoxP)
+        fillcombo(stateSearchBoxP, "posts", "post_state")
 
     End Sub
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
@@ -236,6 +237,7 @@ Public Class adminhomePage
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
 
         fillHalls(hallSearchBoxE)
+        fillcombo(userSearchBoxE, "equipments", "equipment_state")
 
     End Sub
 
@@ -576,6 +578,41 @@ Public Class adminhomePage
 
     End Sub
 
+    'equipment search by state
+    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.TextChanged
+
+        Dim hall_id As Integer
+        'SQL Connection'
+        connect_db()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+        User.searchHallAndState("equipments", DataGridView1, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
+
+    End Sub
+
+    'equipment search by hall
     Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
         'SQL Connection'
@@ -603,7 +640,8 @@ Public Class adminhomePage
 
         End Try
 
-        User.searchHall("equipments", DataGridView1, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+        User.searchHall("equipments", DataGridView1, "hall_id", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
     End Sub
 
     'post searches
@@ -614,8 +652,42 @@ Public Class adminhomePage
 
     End Sub
 
+    'post search by state
+    Private Sub statesearchboxp_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
+
+        Dim hall_id As Integer
+        'SQL Connection'
+        connect_db()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+
+        User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+
+    End Sub
+
     'post hall search
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged, stateSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
         'SQL Connection'
         connect_db()

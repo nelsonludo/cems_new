@@ -251,6 +251,8 @@ Public Class users
         End Try
     End Sub
 
+
+
     'equipment hall search function
     Public Sub searchHall(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
         connect_db()
@@ -260,6 +262,43 @@ Public Class users
             datatable.Rows.Clear()
 
             sqlQuery = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where cems_halls." & searchColumn & " like '" & searchValue & "'"
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+
+            sqlReader = sqlCmd.ExecuteReader
+            datatable.Load(sqlReader)
+
+            grid.DataSource = datatable
+
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
+                grid.Visible = False 'datagridview disappear
+                searchErrorLabel.Visible = True 'error message appear
+            Else
+                grid.Visible = True
+                searchErrorLabel.Visible = False 'error message disappear
+
+            End If
+
+
+            sqlReader.Close()
+            sqlConn.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+    End Sub
+
+    'equipment hall and state search function
+    Public Sub searchHallAndState(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchColumn2 As String, searchValue2 As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+        connect_db()
+        Try
+
+            sqlConn.Open()
+            datatable.Rows.Clear()
+
+            sqlQuery = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where cems_halls." & searchColumn & " like '" & searchValue & "' and  cems_" & table & "." & searchColumn2 & " like '" & searchValue2 & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
 
             sqlReader = sqlCmd.ExecuteReader
@@ -325,6 +364,43 @@ Public Class users
         End Try
     End Sub
 
+    'post hall and state search function
+    Public Sub searchHallAndStateP(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchColumn2 As String, searchValue2 As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+        connect_db()
+        Try
+
+            sqlConn.Open()
+            datatable.Rows.Clear()
+
+            sqlQuery = "select cems_" & table & " .post_id, cems_" & table & " .post_state, cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_" & table & ".hall_id = cems_halls.hall_id where cems_" & table & "." & searchColumn2 & " like '" & searchValue2 & "' and cems_halls." & searchColumn & " like '" & searchValue & "'"
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+
+            sqlReader = sqlCmd.ExecuteReader
+            datatable.Load(sqlReader)
+
+            grid.DataSource = datatable
+
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
+                grid.Visible = False 'datagridview disappear
+                searchErrorLabel.Visible = True 'error message appear
+            Else
+                grid.Visible = True
+                searchErrorLabel.Visible = False 'error message disappear
+
+            End If
+
+
+            sqlReader.Close()
+            sqlConn.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+    End Sub
+
     'post search function
     Public Sub searchP(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
         connect_db()
@@ -362,7 +438,7 @@ Public Class users
         End Try
     End Sub
 
-    'post search function
+    'user search function
     Public Sub searchU(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
         connect_db()
         Try
