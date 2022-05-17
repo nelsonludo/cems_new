@@ -104,6 +104,17 @@ Public Class UserHomePage
     End Sub
 
 
+    Private Sub fillcomboState(search As ComboBox, table As String, fillvalue As String)
+
+        search.Items.Clear()
+
+
+        search.Items.Add("Good")
+        search.Items.Add("Bad")
+        search.Items.Add("In reparation")
+
+    End Sub
+
     Private Sub fillHalls(search As ComboBox)
 
         search.Items.Clear()
@@ -142,6 +153,7 @@ Public Class UserHomePage
         userProfilePanel.Visible = False
 
 
+        fillcomboState(stateSearchBoxP, "posts", "post_state")
 
         User.displayTableP("posts", DataGridView2, sqlDataTableP)
 
@@ -179,6 +191,8 @@ Public Class UserHomePage
         User.display(userEquipmentPanel, EquipmentTitle, "Equipments")
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
 
+
+        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
         exportBtnE.Visible = False
 
@@ -396,6 +410,70 @@ Public Class UserHomePage
         User.searchHall("equipments", DataGridView1, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
     End Sub
 
+    'equipment search by state
+    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.TextChanged
+
+        Dim hall_id As Integer
+        'SQL Connection'
+        connect_db()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+        User.searchHallAndState("equipments", DataGridView1, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+    End Sub
+
+    'post search by state
+    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
+
+        Dim hall_id As Integer
+        'SQL Connection'
+        connect_db()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+
+        User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+    End Sub
 
     'export buttons 
     Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
