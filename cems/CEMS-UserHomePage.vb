@@ -473,6 +473,8 @@ Public Class UserHomePage
 
 
         User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+
+
     End Sub
 
     'export buttons 

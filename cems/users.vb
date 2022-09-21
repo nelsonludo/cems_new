@@ -376,9 +376,12 @@ Public Class users
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
 
             sqlReader = sqlCmd.ExecuteReader
+
             datatable.Load(sqlReader)
 
             grid.DataSource = datatable
+
+
 
             If datatable.Rows.Count < 1 And searchValue <> "" Then
                 grid.Visible = False 'datagridview disappear
@@ -389,6 +392,7 @@ Public Class users
 
             End If
 
+            MessageBox.Show(datatable.Rows.Count)
 
             sqlReader.Close()
             sqlConn.Close()
@@ -399,6 +403,7 @@ Public Class users
         Finally
             sqlConn.Dispose()
         End Try
+
     End Sub
 
     'post search function

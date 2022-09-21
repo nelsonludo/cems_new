@@ -693,11 +693,14 @@ Public Class adminhomePage
         End Try
 
 
+
         User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+
+
     End Sub
 
     'post hall search
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged, stateSearchBoxP.SelectedIndexChanged
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
         'SQL Connection'
         connect_db()
