@@ -91,7 +91,55 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addEquipmentPanelUserControl.Designer.vb">
+      <DependentUpon>addEquipmentPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addEquipmentPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addPostPanelUserControl.Designer.vb">
+      <DependentUpon>addPostPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addPostPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="admin.vb" />
+    <Compile Include="adminEquipmentPanelUserControl.Designer.vb">
+      <DependentUpon>adminEquipmentPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminEquipmentPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminHallsPanelUserControl.Designer.vb">
+      <DependentUpon>adminHallsPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminHallsPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminHomePagePanelUserControl.Designer.vb">
+      <DependentUpon>adminHomePagePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminHomePagePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminRolePanelUserControl.Designer.vb">
+      <DependentUpon>adminRolePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminRolePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserPanelUserControl.Designer.vb">
+      <DependentUpon>adminUserPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminPostPanelUserControl.Designer.vb">
+      <DependentUpon>adminPostPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminPostPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CEMS-adminHomePage.Designer.vb">
       <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
     </Compile>
@@ -111,7 +159,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="equipments.vb" />
+    <Compile Include="hallAddPanelUserControl.Designer.vb">
+      <DependentUpon>hallAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hallAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="halls.vb" />
+    <Compile Include="hallUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>hallUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hallUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="posts.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -129,11 +189,71 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="adminProfilePanelUserControl.Designer.vb">
+      <DependentUpon>adminProfilePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminProfilePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="profileupdatepanelusercontrol.Designer.vb">
+      <DependentUpon>profileupdatepanelusercontrol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="profileupdatepanelusercontrol.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="roleAddPanelUserControl.Designer.vb">
+      <DependentUpon>roleAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="roleAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="roleUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>roleUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="roleUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Simple3Des.vb" />
     <Compile Include="titles.vb" />
+    <Compile Include="userAddPanelUserControl.Designer.vb">
+      <DependentUpon>userAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="users.vb" />
+    <Compile Include="userUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>userUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addEquipmentPanelUserControl.resx">
+      <DependentUpon>addEquipmentPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPostPanelUserControl.resx">
+      <DependentUpon>addPostPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminEquipmentPanelUserControl.resx">
+      <DependentUpon>adminEquipmentPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminHallsPanelUserControl.resx">
+      <DependentUpon>adminHallsPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminHomePagePanelUserControl.resx">
+      <DependentUpon>adminHomePagePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminRolePanelUserControl.resx">
+      <DependentUpon>adminRolePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserPanelUserControl.resx">
+      <DependentUpon>adminUserPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPostPanelUserControl.resx">
+      <DependentUpon>adminPostPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CEMS-adminHomePage.resx">
       <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,11 +263,35 @@
     <EmbeddedResource Include="CEMS-UserHomePage.resx">
       <DependentUpon>CEMS-UserHomePage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hallAddPanelUserControl.resx">
+      <DependentUpon>hallAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hallUpdatePanelUserControl.resx">
+      <DependentUpon>hallUpdatePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminProfilePanelUserControl.resx">
+      <DependentUpon>adminProfilePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profileupdatepanelusercontrol.resx">
+      <DependentUpon>profileupdatepanelusercontrol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roleAddPanelUserControl.resx">
+      <DependentUpon>roleAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roleUpdatePanelUserControl.resx">
+      <DependentUpon>roleUpdatePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userAddPanelUserControl.resx">
+      <DependentUpon>userAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userUpdatePanelUserControl.resx">
+      <DependentUpon>userUpdatePanelUserControl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

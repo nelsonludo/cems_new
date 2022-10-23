@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1AC9BA2-AA14-48E4-B6E6-69CFE0DEE301}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>cems.My.MyApplication</StartupObject>
+    <RootNamespace>cems</RootNamespace>
+    <AssemblyName>cems</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>cems.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>cems.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net40\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addEquipmentPanelUserControl.Designer.vb">
+      <DependentUpon>addEquipmentPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addEquipmentPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addPostPanelUserControl.Designer.vb">
+      <DependentUpon>addPostPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addPostPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin.vb" />
+    <Compile Include="adminEquipmentPanelUserControl.Designer.vb">
+      <DependentUpon>adminEquipmentPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminEquipmentPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminHallsPanelUserControl.Designer.vb">
+      <DependentUpon>adminHallsPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminHallsPanelUserControl.vb" />
+    <Compile Include="adminHomePagePanelUserControl.Designer.vb">
+      <DependentUpon>adminHomePagePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminHomePagePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminRolePanelUserControl.Designer.vb">
+      <DependentUpon>adminRolePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminRolePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserPanelUserControl.Designer.vb">
+      <DependentUpon>adminUserPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminPostPanelUserControl.Designer.vb">
+      <DependentUpon>adminPostPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminPostPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CEMS-adminHomePage.Designer.vb">
+      <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CEMS-adminHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEMS-LOGIN.Designer.vb">
+      <DependentUpon>CEMS-LOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CEMS-LOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEMS-UserHomePage.Designer.vb">
+      <DependentUpon>CEMS-UserHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CEMS-UserHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipments.vb" />
+    <Compile Include="hallAddPanelUserControl.Designer.vb">
+      <DependentUpon>hallAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hallAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="halls.vb" />
+    <Compile Include="hallUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>hallUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hallUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="posts.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="adminProfilePanelUserControl.Designer.vb">
+      <DependentUpon>adminProfilePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminProfilePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="roleAddPanelUserControl.Designer.vb">
+      <DependentUpon>roleAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="roleAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="roleUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>roleUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="roleUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Simple3Des.vb" />
+    <Compile Include="titles.vb" />
+    <Compile Include="userAddPanelUserControl.Designer.vb">
+      <DependentUpon>userAddPanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userAddPanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="users.vb" />
+    <Compile Include="userUpdatePanelUserControl.Designer.vb">
+      <DependentUpon>userUpdatePanelUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userUpdatePanelUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="addEquipmentPanelUserControl.resx">
+      <DependentUpon>addEquipmentPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPostPanelUserControl.resx">
+      <DependentUpon>addPostPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminEquipmentPanelUserControl.resx">
+      <DependentUpon>adminEquipmentPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminHallsPanelUserControl.resx">
+      <DependentUpon>adminHallsPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminHomePagePanelUserControl.resx">
+      <DependentUpon>adminHomePagePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminRolePanelUserControl.resx">
+      <DependentUpon>adminRolePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserPanelUserControl.resx">
+      <DependentUpon>adminUserPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPostPanelUserControl.resx">
+      <DependentUpon>adminPostPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEMS-adminHomePage.resx">
+      <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEMS-LOGIN.resx">
+      <DependentUpon>CEMS-LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEMS-UserHomePage.resx">
+      <DependentUpon>CEMS-UserHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hallAddPanelUserControl.resx">
+      <DependentUpon>hallAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hallUpdatePanelUserControl.resx">
+      <DependentUpon>hallUpdatePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminProfilePanelUserControl.resx">
+      <DependentUpon>adminProfilePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roleAddPanelUserControl.resx">
+      <DependentUpon>roleAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roleUpdatePanelUserControl.resx">
+      <DependentUpon>roleUpdatePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userAddPanelUserControl.resx">
+      <DependentUpon>userAddPanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userUpdatePanelUserControl.resx">
+      <DependentUpon>userUpdatePanelUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\9e0d35b8-f324-421d-8c8c-6f814adab4cf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop-left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop-down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop-left-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\landline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
