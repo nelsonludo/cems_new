@@ -2,6 +2,7 @@
 Imports cems.adminEquipmentPanelUserControl
 
 Public Class addEquipmentPanelUserControl
+
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
     Dim sqlReader As MySqlDataReader

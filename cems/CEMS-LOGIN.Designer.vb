@@ -76,7 +76,6 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightSlateGray
-        Me.Panel1.Controls.Add(Me.connexionStringPanel)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.forgotPasswordMessage)
         Me.Panel1.Controls.Add(Me.forgotPasswordBtn)
@@ -104,7 +103,7 @@ Partial Class Form1
         Me.connexionStringPanel.Controls.Add(Me.connexionStringPwd)
         Me.connexionStringPanel.Controls.Add(Me.connexionStringUserName)
         Me.connexionStringPanel.Controls.Add(Me.Label3)
-        Me.connexionStringPanel.Location = New System.Drawing.Point(0, 0)
+        Me.connexionStringPanel.Location = New System.Drawing.Point(109, 50)
         Me.connexionStringPanel.Name = "connexionStringPanel"
         Me.connexionStringPanel.Size = New System.Drawing.Size(488, 313)
         Me.connexionStringPanel.TabIndex = 8
@@ -116,7 +115,7 @@ Partial Class Form1
         Me.Label7.Location = New System.Drawing.Point(73, 144)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(85, 20)
-        Me.Label7.TabIndex = 13
+        Me.Label7.TabIndex = 3
         Me.Label7.Text = "password: "
         '
         'Label6
@@ -126,7 +125,7 @@ Partial Class Form1
         Me.Label6.Location = New System.Drawing.Point(73, 72)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(60, 20)
-        Me.Label6.TabIndex = 12
+        Me.Label6.TabIndex = 1
         Me.Label6.Text = "server: "
         '
         'Label5
@@ -136,7 +135,7 @@ Partial Class Form1
         Me.Label5.Location = New System.Drawing.Point(73, 180)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(84, 20)
-        Me.Label5.TabIndex = 11
+        Me.Label5.TabIndex = 4
         Me.Label5.Text = "database: "
         '
         'Label4
@@ -146,7 +145,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(73, 107)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 20)
-        Me.Label4.TabIndex = 10
+        Me.Label4.TabIndex = 2
         Me.Label4.Text = "user name: "
         '
         'connexionStringDatabase
@@ -154,14 +153,14 @@ Partial Class Form1
         Me.connexionStringDatabase.Location = New System.Drawing.Point(196, 180)
         Me.connexionStringDatabase.Name = "connexionStringDatabase"
         Me.connexionStringDatabase.Size = New System.Drawing.Size(170, 20)
-        Me.connexionStringDatabase.TabIndex = 9
+        Me.connexionStringDatabase.TabIndex = 8
         '
         'connexionStringServer
         '
         Me.connexionStringServer.Location = New System.Drawing.Point(196, 72)
         Me.connexionStringServer.Name = "connexionStringServer"
         Me.connexionStringServer.Size = New System.Drawing.Size(170, 20)
-        Me.connexionStringServer.TabIndex = 8
+        Me.connexionStringServer.TabIndex = 5
         '
         'PictureBox1
         '
@@ -179,7 +178,7 @@ Partial Class Form1
         Me.connexionErrorMsg.Location = New System.Drawing.Point(27, 278)
         Me.connexionErrorMsg.Name = "connexionErrorMsg"
         Me.connexionErrorMsg.Size = New System.Drawing.Size(13, 13)
-        Me.connexionErrorMsg.TabIndex = 1
+        Me.connexionErrorMsg.TabIndex = 10
         Me.connexionErrorMsg.Text = "  "
         '
         'connectBtn
@@ -187,7 +186,7 @@ Partial Class Form1
         Me.connectBtn.Location = New System.Drawing.Point(305, 238)
         Me.connectBtn.Name = "connectBtn"
         Me.connectBtn.Size = New System.Drawing.Size(75, 23)
-        Me.connectBtn.TabIndex = 5
+        Me.connectBtn.TabIndex = 9
         Me.connectBtn.Text = "Connect"
         Me.connectBtn.UseVisualStyleBackColor = True
         '
@@ -196,14 +195,14 @@ Partial Class Form1
         Me.connexionStringPwd.Location = New System.Drawing.Point(196, 144)
         Me.connexionStringPwd.Name = "connexionStringPwd"
         Me.connexionStringPwd.Size = New System.Drawing.Size(170, 20)
-        Me.connexionStringPwd.TabIndex = 3
+        Me.connexionStringPwd.TabIndex = 7
         '
         'connexionStringUserName
         '
         Me.connexionStringUserName.Location = New System.Drawing.Point(196, 107)
         Me.connexionStringUserName.Name = "connexionStringUserName"
         Me.connexionStringUserName.Size = New System.Drawing.Size(170, 20)
-        Me.connexionStringUserName.TabIndex = 2
+        Me.connexionStringUserName.TabIndex = 6
         '
         'Label3
         '
@@ -212,7 +211,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(96, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(201, 20)
-        Me.Label3.TabIndex = 1
+        Me.Label3.TabIndex = 0
         Me.Label3.Text = "Enter your connexion string"
         '
         'PictureBox2
@@ -307,7 +306,7 @@ Partial Class Form1
         Me.userAddPanel.Location = New System.Drawing.Point(109, 50)
         Me.userAddPanel.Name = "userAddPanel"
         Me.userAddPanel.Size = New System.Drawing.Size(488, 313)
-        Me.userAddPanel.TabIndex = 59
+        Me.userAddPanel.TabIndex = 11
         Me.userAddPanel.Visible = False
         '
         'PictureBox3
@@ -324,7 +323,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(96, 27)
+        Me.Label8.Location = New System.Drawing.Point(141, 27)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(199, 20)
         Me.Label8.TabIndex = 59
@@ -348,14 +347,14 @@ Partial Class Form1
         Me.userUserAddTitleInput.Location = New System.Drawing.Point(262, 156)
         Me.userUserAddTitleInput.Name = "userUserAddTitleInput"
         Me.userUserAddTitleInput.Size = New System.Drawing.Size(180, 21)
-        Me.userUserAddTitleInput.TabIndex = 47
+        Me.userUserAddTitleInput.TabIndex = 3
         '
         'userUserAddConfirmPwdInput
         '
         Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(262, 224)
         Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
         Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(180, 20)
-        Me.userUserAddConfirmPwdInput.TabIndex = 57
+        Me.userUserAddConfirmPwdInput.TabIndex = 5
         '
         'Label2
         '
@@ -372,7 +371,7 @@ Partial Class Form1
         Me.userUserAddPwdInput.Location = New System.Drawing.Point(262, 198)
         Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
         Me.userUserAddPwdInput.Size = New System.Drawing.Size(180, 20)
-        Me.userUserAddPwdInput.TabIndex = 55
+        Me.userUserAddPwdInput.TabIndex = 4
         '
         'Label14
         '
@@ -399,7 +398,7 @@ Partial Class Form1
         Me.userUserAddPhoneInput.Location = New System.Drawing.Point(262, 129)
         Me.userUserAddPhoneInput.Name = "userUserAddPhoneInput"
         Me.userUserAddPhoneInput.Size = New System.Drawing.Size(180, 20)
-        Me.userUserAddPhoneInput.TabIndex = 51
+        Me.userUserAddPhoneInput.TabIndex = 2
         '
         'Label16
         '
@@ -416,7 +415,7 @@ Partial Class Form1
         Me.userUserAddEmailInput.Location = New System.Drawing.Point(262, 100)
         Me.userUserAddEmailInput.Name = "userUserAddEmailInput"
         Me.userUserAddEmailInput.Size = New System.Drawing.Size(180, 20)
-        Me.userUserAddEmailInput.TabIndex = 49
+        Me.userUserAddEmailInput.TabIndex = 1
         '
         'Label17
         '
@@ -433,7 +432,7 @@ Partial Class Form1
         Me.userUserAddNameInput.Location = New System.Drawing.Point(262, 71)
         Me.userUserAddNameInput.Name = "userUserAddNameInput"
         Me.userUserAddNameInput.Size = New System.Drawing.Size(180, 20)
-        Me.userUserAddNameInput.TabIndex = 19
+        Me.userUserAddNameInput.TabIndex = 0
         '
         'userAddvalidationBtn
         '
@@ -447,7 +446,7 @@ Partial Class Form1
         Me.userAddvalidationBtn.MaximumSize = New System.Drawing.Size(156, 50)
         Me.userAddvalidationBtn.Name = "userAddvalidationBtn"
         Me.userAddvalidationBtn.Size = New System.Drawing.Size(82, 32)
-        Me.userAddvalidationBtn.TabIndex = 13
+        Me.userAddvalidationBtn.TabIndex = 6
         Me.userAddvalidationBtn.Text = "Add"
         Me.userAddvalidationBtn.UseVisualStyleBackColor = False
         '
@@ -471,6 +470,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(713, 391)
         Me.Controls.Add(Me.userAddPanel)
+        Me.Controls.Add(Me.connexionStringPanel)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"

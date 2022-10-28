@@ -41,7 +41,6 @@ Public Class adminEquipmentPanelUserControl
     Dim User As New users
     Dim admin As New admin
 
-    Dim addEquipmentPanelUserControl As New addEquipmentPanelUserControl
     Dim addPostPanelUserControl As New addPostPanelUserControl
     Dim adminHallsPanelUserControl As New adminHallsPanelUserControl
     Dim adminHomePagePanelUserControl As New adminHomePagePanelUserControl
@@ -81,9 +80,9 @@ Public Class adminEquipmentPanelUserControl
 
     'Equipment add section
     Private Sub addEquipmentBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentBtn.Click
-        addEquipmentPanelUserControl.addEquipmentPanel.Visible = True
-        adminhomePage.fillcombo(addEquipmentPanelUserControl.postIdInput, "posts", "post_id")
-        adminhomePage.fillHalls(addEquipmentPanelUserControl.hallInput)
+        AddEquipmentPanelUserControl1.Visible = True
+        adminhomePage.fillcombo(AddEquipmentPanelUserControl1.postIdInput, "posts", "post_id")
+        adminhomePage.fillHalls(AddEquipmentPanelUserControl1.hallInput)
     End Sub
 
     'EQUIPMENT SECTION
