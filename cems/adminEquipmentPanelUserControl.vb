@@ -21,7 +21,6 @@ Imports cems.userUpdatePanelUserControl
 
 
 
-
 Public Class adminEquipmentPanelUserControl
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -54,6 +53,8 @@ Public Class adminEquipmentPanelUserControl
     Dim userAddPanelUserControl As New userAddPanelUserControl
     Dim userUpdatePanelUserControl As New userUpdatePanelUserControl
     Dim adminPostPanelUserControl As New adminPostPanelUserControl
+
+
 
 
     Dim bitmap As Bitmap
@@ -231,6 +232,17 @@ Public Class adminEquipmentPanelUserControl
 
         User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
+    End Sub
+
+
+    'this is the danger zone 
+
+    Private Sub AddVisibleChangedEventHandler(myLabel As Control)
+        AddHandler myLabel.VisibleChanged, AddressOf Label_VisibleChanged
+    End Sub
+
+    Private Sub Label_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
+        MessageBox.Show("Visible change event raised!!!")
     End Sub
 
 End Class
