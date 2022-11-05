@@ -235,14 +235,33 @@ Public Class adminEquipmentPanelUserControl
     End Sub
 
 
-    'this is the danger zone 
+    'this is the danger zone //Public Custom Event VisibleChanged As EventHandler
 
-    Private Sub AddVisibleChangedEventHandler(myLabel As Control)
-        AddHandler myLabel.VisibleChanged, AddressOf Label_VisibleChanged
+    Private Sub AddVisibleChangedEventHandler()
+        AddHandler AddEquipmentPanelUserControl1.addEquipmentPanel.VisibleChanged, AddressOf Label_VisibleChanged
+        AddHandler AddEquipmentPanelUserControl1.addEquipmentErrorMsg.VisibleChanged, AddressOf Label1_VisibleChanged
+
     End Sub
 
     Private Sub Label_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
         MessageBox.Show("Visible change event raised!!!")
+        statePanel.Visible = False
+    End Sub
+
+    Private Sub Label1_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
+        MessageBox.Show("Visible change event raised!!!")
+        'this updates the datagridview
+        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+
+        confirmMsgE.Visible = True
+
+        'this changes the content of confirmMsg
+        confirmMsgE.Text = "Item successfully added ✔"
+
+
+        statePanel.Visible = False  'play it safe and make both panels visible false 
+
+
     End Sub
 
 End Class
