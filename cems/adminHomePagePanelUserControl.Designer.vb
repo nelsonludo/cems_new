@@ -24,17 +24,17 @@ Partial Class adminHomePagePanelUserControl
     Private Sub InitializeComponent()
         Me.adminHomePagePanel = New System.Windows.Forms.Panel()
         Me.userNumber = New System.Windows.Forms.Label()
+        Me.usersBtn2 = New System.Windows.Forms.Button()
         Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
         Me.activeMonitorNumber = New System.Windows.Forms.Label()
         Me.nonActiveIPNumber = New System.Windows.Forms.Label()
         Me.activeIPNumber = New System.Windows.Forms.Label()
         Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
         Me.activeCPUNumber = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.usersBtn2 = New System.Windows.Forms.Button()
         Me.monitorsBtn2 = New System.Windows.Forms.Button()
         Me.IPsBtn2 = New System.Windows.Forms.Button()
         Me.CPUsBtn2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.adminHomePagePanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,6 +67,20 @@ Partial Class adminHomePagePanelUserControl
         Me.userNumber.Size = New System.Drawing.Size(31, 13)
         Me.userNumber.TabIndex = 35
         Me.userNumber.Text = "0000"
+        '
+        'usersBtn2
+        '
+        Me.usersBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.usersBtn2.Image = Global.cems.My.Resources.Resources.user1
+        Me.usersBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.usersBtn2.Location = New System.Drawing.Point(538, 95)
+        Me.usersBtn2.Name = "usersBtn2"
+        Me.usersBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.usersBtn2.Size = New System.Drawing.Size(170, 103)
+        Me.usersBtn2.TabIndex = 33
+        Me.usersBtn2.Text = "Users"
+        Me.usersBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.usersBtn2.UseVisualStyleBackColor = True
         '
         'nonActiveMonitorNumber
         '
@@ -128,30 +142,6 @@ Partial Class adminHomePagePanelUserControl
         Me.activeCPUNumber.TabIndex = 27
         Me.activeCPUNumber.Text = "0000"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(56, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 24)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Admin Home Page"
-        '
-        'usersBtn2
-        '
-        Me.usersBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.usersBtn2.Image = Global.cems.My.Resources.Resources.user1
-        Me.usersBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.usersBtn2.Location = New System.Drawing.Point(538, 95)
-        Me.usersBtn2.Name = "usersBtn2"
-        Me.usersBtn2.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.usersBtn2.Size = New System.Drawing.Size(170, 103)
-        Me.usersBtn2.TabIndex = 33
-        Me.usersBtn2.Text = "Users"
-        Me.usersBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.usersBtn2.UseVisualStyleBackColor = True
-        '
         'monitorsBtn2
         '
         Me.monitorsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -191,6 +181,16 @@ Partial Class adminHomePagePanelUserControl
         Me.CPUsBtn2.Text = "CPUs"
         Me.CPUsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CPUsBtn2.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(56, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(200, 24)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Admin Home Page"
         '
         'adminHomePagePanelUserControl
         '

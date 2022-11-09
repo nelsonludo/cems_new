@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports cems.adminEquipmentPanelUserControl
 
 Public Class addEquipmentPanelUserControl
 
@@ -7,12 +8,14 @@ Public Class addEquipmentPanelUserControl
     Dim sqlReader As MySqlDataReader
     Dim sqlDataTableE As New DataTable
     Dim sqlQuery As String
+    'Dim User As New users
 
+    'Dim adminEquipmentPanelUserControl2 As New adminEquipmentPanelUserControl
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
         addEquipmentPanel.Visible = False
 
-
+        'adminEquipmentPanelUserControl2.statePanel.Visible = False
     End Sub
 
     Private Sub addEquipmentValidationBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentValidationBtn.Click
@@ -58,15 +61,20 @@ Public Class addEquipmentPanelUserControl
                 sqlReader = sqlCmd.ExecuteReader
                 sqlConn.Close()
 
+                'this updates the datagridview
+                'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
+
+                'this changes the content of confirmMsg
+                'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
 
                 'this makes the confirm message appear for 3secs
-
+                'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
                 adminhomePage.Timer2.Interval = 3000
                 adminhomePage.Timer2.Start()
 
 
                 'this makes the add panel to disappear
-
+                'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
                 addEquipmentPanel.Visible = False
 
             Catch ex As Exception
