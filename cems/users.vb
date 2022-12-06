@@ -3,7 +3,9 @@ Imports MySql.Data.MySqlClient
 Imports cems.adminhomePage
 Imports cems.admin
 Imports cems.UserHomePage
+Imports OfficeOpenXml
 Imports System.IO
+
 
 Public Class users
     Protected sqlConn As New MySqlConnection
@@ -833,17 +835,88 @@ Public Class users
         End Try
     End Sub
 
-    Public Sub export(grid As DataGridView, columnName As String)
-        Dim DGVOriginalHeight As Integer = grid.Height
-        grid.Height = (grid.RowCount * grid.RowTemplate.Height) + grid.ColumnHeadersHeight
+    Public Sub export(grid As DataGridView, columnName As String, datatable1 As DataTable)
+        'Dim DGVOriginalHeight As Integer = grid.Height
+        'grid.Height = (grid.RowCount * grid.RowTemplate.Height) + grid.ColumnHeadersHeight
 
-        Using bitmap As Bitmap = New Bitmap(grid.Width, grid.Height)
-            grid.DrawToBitmap(bitmap, New Rectangle(Point.Empty, grid.Size))
-            Dim DesktopFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-            bitmap.Save(Path.Combine(DesktopFolder, "" & columnName & ".png"), Imaging.ImageFormat.Png)
-        End Using
+        '        Using bitmap As Bitmap = New Bitmap(grid.Width, grid.Height)
+        '       grid.DrawToBitmap(bitmap, New Rectangle(Point.Empty, grid.Size))
+        '      Dim DesktopFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        '    Bitmap.Save(Path.Combine(DesktopFolder, "" & columnName & ".png"), Imaging.ImageFormat.Png)
+        '   End Using
 
-        grid.Height = DGVOriginalHeight
+        '   grid.Height = DGVOriginalHeight
+
+        ' Using sfd As SaveFileDialog = New SaveFileDialog() With {.Filter = "Excel Workbook|*.xlsx"}
+        ' Try
+        'If sfd.ShowDialog() = DialogResult.OK Then
+        'Dim fileInfo = New FileInfo(sfd.FileName)
+        'Using excelPackage As ExcelPackage = New ExcelPackage(fileInfo)
+        'Dim worksheet As ExcelWorksheet = excelPackage.Workbook.Worksheets.Add("Suppliers")
+        'worksheet.Cells.LoadFromCollection(Of DataTable1)(TryCast(grid.DataSource, List(Of DataTable1)), True)
+        'ExcelPackage.Save()
+        'MessageBox.Show("You have successfully exported your data to an excel file.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'End Using
+        'End If
+        'tch ex As Exception
+        ' MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '  End Try
+
+        ' End Using
+
+        Try
+            Dim xlApp As Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+            Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+            Dim misValue As Object = System.Reflection.Missing.Value
+            Dim i As Integer
+            Dim j As Integer
+            xlApp = New Microsoft.Office.Interop.Excel.Application
+            xlWorkBook = xlApp.Workbooks.Add(misValue)
+            xlWorkSheet = xlWorkBook.Sheets(1)
+            xlWorkSheet.Columns.AutoFit()
+            For i = 0 To grid.RowCount - 2
+                For j = 0 To grid.ColumnCount - 1
+                    For k As Integer = 1 To grid.Columns.Count
+                        xlWorkSheet.Cells(1, k) = grid.Columns(k - 1).HeaderText
+                        xlWorkSheet.Cells(i + 2, j + 1) = grid(j, i).Value.ToString()
+                    Next
+                Next
+            Next
+            Dim fName As String = "Table"
+            Using sfd As New SaveFileDialog
+                sfd.Title = "Save As"
+                sfd.OverwritePrompt = True
+                sfd.FileName = fName
+                sfd.DefaultExt = ".xlsx"
+                sfd.Filter = "Excel Workbook(*.xlsx)|"
+                sfd.AddExtension = True
+                If sfd.ShowDialog() = DialogResult.OK Then
+                    xlWorkSheet.SaveAs(sfd.FileName)
+                    xlWorkBook.Close()
+                    xlApp.Quit()
+                    releaseObject(xlApp)
+                    releaseObject(xlWorkBook)
+                    releaseObject(xlWorkSheet)
+                    MessageBox.Show("You have successfully exported your data to an excel file.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
+        Catch ex As Exception
+            sqlConn.Close()
+            MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+    End Sub
+
+    Private Sub ReleaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
     End Sub
 
     Public Sub activeCount(countLabel As Label, table As String, column As String, state As String, Cname As String)
