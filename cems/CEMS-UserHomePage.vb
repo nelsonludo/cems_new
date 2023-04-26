@@ -4,10 +4,13 @@ Imports Microsoft.Win32
 Imports cems.users
 Imports cems.admin
 Imports System.IO
+Imports System.Data.SqlClient
 
 Public Class UserHomePage
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
+
+
     Dim sqlReader As MySqlDataReader
     Dim sqlDataTableE As New DataTable
     Dim sqlDataTableP As New DataTable

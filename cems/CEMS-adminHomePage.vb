@@ -3,21 +3,6 @@ Imports Microsoft.VisualBasic.ApplicationServices
     Imports Microsoft.Win32
     Imports cems.users
 Imports cems.admin
-Imports cems.adminPostPanelUserControl
-Imports cems.addEquipmentPanelUserControl
-Imports cems.addPostPanelUserControl
-Imports cems.adminEquipmentPanelUserControl
-Imports cems.adminHallsPanelUserControl
-Imports cems.adminHomePagePanelUserControl
-Imports cems.adminProfilePanelUserControl
-Imports cems.adminRolePanelUserControl
-Imports cems.adminUserPanelUserControl
-Imports cems.hallAddPanelUserControl
-Imports cems.hallUpdatePanelUserControl
-Imports cems.roleAddPanelUserControl
-Imports cems.roleUpdatePanelUserControl
-Imports cems.userAddPanelUserControl
-Imports cems.userUpdatePanelUserControl
 Public Class adminhomePage
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -41,22 +26,6 @@ Public Class adminhomePage
     Dim User As New users
     Dim admin As New admin
 
-    Dim addEquipmentPanelUserControl As New addEquipmentPanelUserControl
-    Dim addPostPanelUserControl As New addPostPanelUserControl
-    Dim adminEquipmentPanelUserControl As New adminEquipmentPanelUserControl
-    Dim adminHallsPanelUserControl As New adminHallsPanelUserControl
-    Dim adminHomePagePanelUserControl2 As New adminHomePagePanelUserControl
-    Dim adminProfilePanelUserControl As New adminProfilePanelUserControl
-    Dim adminRolePanelUserControl As New adminRolePanelUserControl
-    Dim adminUserPanelUserControl As New adminUserPanelUserControl
-    Dim hallUpdatePanelUserControl As New hallUpdatePanelUserControl
-    Dim roleAddPanelUserControl As New roleAddPanelUserControl
-    Dim hallAddPanelUserControl As New hallAddPanelUserControl
-    Dim roleUpdatePanelUserControl As New roleUpdatePanelUserControl
-    Dim userAddPanelUserControl As New userAddPanelUserControl
-    Dim userUpdatePanelUserControl As New userUpdatePanelUserControl
-    Dim adminPostPanelUserControl As New adminPostPanelUserControl
-    Dim profileupdatepanelusercontrol As New profileupdatepanelusercontrol
 
     Dim bitmap As Bitmap
 
@@ -94,24 +63,24 @@ Public Class adminhomePage
 
         dropdown.Size = dropdown.MinimumSize
 
-        AdminEquipmentPanelUserControl1.Visible = False
-        AdminPostPanelUserControl1.Visible = False
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False
+        adminPostPanel.Visible = False
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        AdminHomePagePanelUserControl1.Visible = True
+        adminHomePagePanel.Visible = True
 
-        User.activeCount(AdminHomePagePanelUserControl1.activeCPUNumber, "equipments", "equipment", "good", "CPU")
-        User.activeCount(AdminHomePagePanelUserControl1.activeIPNumber, "equipments", "equipment", "good", "IP_phone")
-        User.activeCount(AdminHomePagePanelUserControl1.activeMonitorNumber, "equipments", "equipment", "good", "monitor")
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good", "CPU")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good", "IP_phone")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good", "monitor")
 
 
-        User.activeCount(AdminHomePagePanelUserControl1.nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
-        User.activeCount(AdminHomePagePanelUserControl1.nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
-        User.activeCount(AdminHomePagePanelUserControl1.nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
-        admin.activeCount(AdminHomePagePanelUserControl1.userNumber, "users")
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
+        admin.activeCount(userNumber, "users")
 
     End Sub
 
@@ -208,34 +177,34 @@ Public Class adminhomePage
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
 
-        AdminEquipmentPanelUserControl1.Visible = False
-        AdminPostPanelUserControl1.Visible = True
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False
+        adminPostPanel.Visible = True
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        User.displayTableP("posts", adminPostPanelUserControl.DataGridView2, sqlDataTableP)  'this is a useless comment
+        User.displayTableP("posts", DataGridView2, sqlDataTableP)  'this is a useless comment
 
-        fillHalls(adminPostPanelUserControl.hallSearchBoxP)
-        fillcomboState(adminPostPanelUserControl.stateSearchBoxP, "posts", "post_state")
+        fillHalls(hallSearchBoxP)
+        fillcomboState(stateSearchBoxP, "posts", "post_state")
 
     End Sub
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
-        AdminEquipmentPanelUserControl1.Visible = False
-        AdminPostPanelUserControl1.Visible = False
-        AdminProfilePanelUserControl1.Visible = True
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False
+        adminPostPanel.Visible = False
+        adminProfilePanel.Visible = True
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        If profileupdatepanelusercontrol.Visible = True Then
-            profileupdatepanelusercontrol.profileSubPanel2.Visible = False
+        If profileUpdatepanel.Visible = True Then
+            profileSubPanel2.Visible = False
         End If
 
         connect_db()
-        User.updateUserInformation("admin", "admin", Form1.emailtxt, adminProfilePanelUserControl.adminNameProfile, adminProfilePanelUserControl.adminEmailProfile, adminProfilePanelUserControl.adminPhoneNumberProfile, adminProfilePanelUserControl.adminTitleProfile)
+        User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
     End Sub
 
 
@@ -244,70 +213,70 @@ Public Class adminhomePage
         Timer1.Start()
 
 
-        AdminEquipmentPanelUserControl1.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        User.display(adminEquipmentPanelUserControl.adminEquipmentPanel, adminEquipmentPanelUserControl.EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", adminEquipmentPanelUserControl.DataGridView1, sqlDataTableE)
+        User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
+        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
 
-        fillHalls(adminEquipmentPanelUserControl.hallSearchBoxE)
-        fillcomboState(adminEquipmentPanelUserControl.userSearchBoxE, "equipments", "equipment_state")
+        fillHalls(hallSearchBoxE)
+        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
     End Sub
 
 
     Private Sub hallsBtn_Click(sender As Object, e As EventArgs) Handles hallsBtn.Click
-        AdminEquipmentPanelUserControl1.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = True
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = True
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        User.displayTable("halls", adminHallsPanelUserControl.DataGridView3, sqlDataTableH)
+        User.displayTable("halls", DataGridView3, sqlDataTableH)
 
 
-        adminHallsPanelUserControl.HallUpdateBtn.Visible = False
-        adminHallsPanelUserControl.HallDeleteBtn.Visible = False
-        hallUpdatePanelUserControl.hallUpdatePanel.Visible = False
+        HallUpdateBtn.Visible = False
+        HallDeleteBtn.Visible = False
+        hallUpdatePanel.Visible = False
 
-        fillHalls(adminHallsPanelUserControl.hallSearchBoxH)
+        fillHalls(hallSearchBoxH)
     End Sub
 
     Private Sub userBtn_Click(sender As Object, e As EventArgs) Handles userBtn.Click
-        AdminEquipmentPanelUserControl1.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = True
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = True
+        adminRolePanel.Visible = False
 
-        User.displayTableU("users", adminuserPanelUserControl.DataGridView4, sqlDataTableU)
+        User.displayTableU("users", DataGridView4, sqlDataTableU)
 
 
-        userUpdatePanelUserControl.userUpdatePanel.Visible = False
-        adminUserPanelUserControl.userUpdateBtn.Visible = False
-        adminUserPanelUserControl.userDeleteBtn.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
 
 
     End Sub
 
 
     Private Sub rolesBtn_Click(sender As Object, e As EventArgs) Handles rolesBtn.Click
-        AdminEquipmentPanelUserControl1.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = True
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = True
+        adminRolePanel.Visible = False
 
-        adminRolePanelUserControl.roleUpdateBtn.Visible = False
+        roleUpdateBtn.Visible = False
 
-        User.displayTable("titles", adminRolePanelUserControl.DataGridView5, sqlDataTableR)
+        User.displayTable("titles", DataGridView5, sqlDataTableR)
 
 
     End Sub
@@ -315,63 +284,63 @@ Public Class adminhomePage
 
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
-        User.display(adminEquipmentPanelUserControl.adminEquipmentPanel, adminEquipmentPanelUserControl.EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", adminEquipmentPanelUserControl.DataGridView1)
+        User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
+        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
-        AdminEquipmentPanelUserControl1.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        fillHalls(adminEquipmentPanelUserControl.hallSearchBoxE)
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
-        User.display(adminEquipmentPanelUserControl.adminEquipmentPanel, adminEquipmentPanelUserControl.EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_phone", adminEquipmentPanelUserControl.DataGridView1)
+        User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
+        User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
 
-        AdminEquipmentPanelUserControl1.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        fillHalls(adminEquipmentPanelUserControl.hallSearchBoxE)
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs)
-        User.display(adminEquipmentPanelUserControl.adminEquipmentPanel, adminEquipmentPanelUserControl.EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "monitor", adminEquipmentPanelUserControl.DataGridView1)
+        User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
-        AdminEquipmentPanelUserControl1.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        fillHalls(adminEquipmentPanelUserControl.hallSearchBoxE)
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
-        User.display(adminEquipmentPanelUserControl.adminEquipmentPanel, adminEquipmentPanelUserControl.EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "monitor", adminEquipmentPanelUserControl.DataGridView1)
+        User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
-        AdminEquipmentPanelUserControl1.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
-        fillHalls(adminEquipmentPanelUserControl.hallSearchBoxE)
+        fillHalls(hallSearchBoxE)
 
     End Sub
 
@@ -383,12 +352,12 @@ Public Class adminhomePage
         Form1.emailtxt.Text = ""
         Form1.passwordtxt.Text = ""
 
-        AdminEquipmentPanelUserControl1.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        AdminPostPanelUserControl1.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
-        AdminProfilePanelUserControl1.Visible = False
-        AdminHallsPanelUserControl1.Visible = False
-        AdminUserPanelUserControl1.Visible = False
-        AdminRolePanelUserControl1.Visible = False
+        adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
 
     End Sub
 
@@ -397,18 +366,18 @@ Public Class adminhomePage
     'this is the second timer function which is used to make the timer stop
 
     Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick 'this stops the timer and make the messages disappear
-        adminPostPanelUserControl.confirmMsgP.Visible = False
-        adminEquipmentPanelUserControl.confirmMsgE.Visible = False
-        adminHallsPanelUserControl.confirmMsgH.Visible = False
-        adminUserPanelUserControl.confirmMsgU.Visible = False
-        adminRolePanelUserControl.confirmMsgR.Visible = False
-        userAddPanelUserControl.addUserErrorMsg.Visible = False
-        addEquipmentPanelUserControl.addEquipmentErrorMsg.Visible = False
-        roleAddPanelUserControl.addRoleErrorMsg.Visible = False
-        hallAddPanelUserControl.addHallErrorMsg.Visible = False
-        addPostPanelUserControl.addPostErrorMsg.Visible = False
-        userAddPanelUserControl.addUserErrorMsg.Visible = False
-        profileupdatepanelusercontrol.updateProfileErrorMsg.Visible = False
+        confirmMsgP.Visible = False
+        confirmMsgE.Visible = False
+        confirmMsgH.Visible = False
+        confirmMsgU.Visible = False
+        confirmMsgR.Visible = False
+        addUserErrorMsg.Visible = False
+        addEquipmentErrorMsg.Visible = False
+        addRoleErrorMsg.Visible = False
+        addHallErrorMsg.Visible = False
+        addPostErrorMsg.Visible = False
+        addUserErrorMsg.Visible = False
+        updateProfileErrorMsg.Visible = False
 
         Timer2.Stop()
     End Sub
@@ -417,11 +386,8 @@ Public Class adminhomePage
         e.Graphics.DrawImage(bitmap, 0, 0)
         Dim recp As RectangleF = e.PageSettings.PrintableArea
 
-        If adminPostPanelUserControl.DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
+        If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
 
-    Private Sub AdminProfilePanelUserControl1_Load(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
