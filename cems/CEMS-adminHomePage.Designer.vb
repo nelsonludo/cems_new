@@ -49,36 +49,19 @@ Partial Class adminhomePage
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.adminHomePagePanel = New System.Windows.Forms.Panel()
+        Me.userNumber = New System.Windows.Forms.Label()
+        Me.usersBtn2 = New System.Windows.Forms.Button()
+        Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
+        Me.activeMonitorNumber = New System.Windows.Forms.Label()
+        Me.nonActiveIPNumber = New System.Windows.Forms.Label()
+        Me.activeIPNumber = New System.Windows.Forms.Label()
+        Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
+        Me.activeCPUNumber = New System.Windows.Forms.Label()
+        Me.monitorsBtn2 = New System.Windows.Forms.Button()
+        Me.IPsBtn2 = New System.Windows.Forms.Button()
+        Me.CPUsBtn2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.adminEquipmentPanel = New System.Windows.Forms.Panel()
-        Me.adminPostPanel = New System.Windows.Forms.Panel()
-        Me.addPostPanel = New System.Windows.Forms.Panel()
-        Me.postPostIdInput = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.postStateInput = New System.Windows.Forms.ComboBox()
-        Me.addPostErrorMsg = New System.Windows.Forms.Label()
-        Me.postHallInput = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.addPostCancelBtn = New System.Windows.Forms.Button()
-        Me.addPostValidationBtn = New System.Windows.Forms.Button()
-        Me.confirmMsgP = New System.Windows.Forms.Label()
-        Me.hallSearchBoxP = New System.Windows.Forms.ComboBox()
-        Me.searchErrorP = New System.Windows.Forms.Label()
-        Me.printBtnP = New System.Windows.Forms.Button()
-        Me.exportBtnP = New System.Windows.Forms.Button()
-        Me.postSearchBox = New System.Windows.Forms.TextBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.postTitle = New System.Windows.Forms.Label()
-        Me.postChangeStatePanel = New System.Windows.Forms.Panel()
-        Me.postDeleteBtn = New System.Windows.Forms.Button()
-        Me.postChangeBtn = New System.Windows.Forms.Button()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.postChangeStateInput = New System.Windows.Forms.ComboBox()
-        Me.addPostBtn = New System.Windows.Forms.Button()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.addEquipmentPanel = New System.Windows.Forms.Panel()
         Me.postIdInput = New System.Windows.Forms.ComboBox()
         Me.equipmentStateInput = New System.Windows.Forms.ComboBox()
@@ -109,44 +92,85 @@ Partial Class adminhomePage
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
-        Me.userNumber = New System.Windows.Forms.Label()
-        Me.usersBtn2 = New System.Windows.Forms.Button()
-        Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
-        Me.activeMonitorNumber = New System.Windows.Forms.Label()
-        Me.nonActiveIPNumber = New System.Windows.Forms.Label()
-        Me.activeIPNumber = New System.Windows.Forms.Label()
-        Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
-        Me.activeCPUNumber = New System.Windows.Forms.Label()
-        Me.monitorsBtn2 = New System.Windows.Forms.Button()
-        Me.IPsBtn2 = New System.Windows.Forms.Button()
-        Me.CPUsBtn2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.adminPostPanel = New System.Windows.Forms.Panel()
+        Me.addPostPanel = New System.Windows.Forms.Panel()
+        Me.postPostIdInput = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.postStateInput = New System.Windows.Forms.ComboBox()
+        Me.addPostErrorMsg = New System.Windows.Forms.Label()
+        Me.postHallInput = New System.Windows.Forms.ComboBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.addPostCancelBtn = New System.Windows.Forms.Button()
+        Me.addPostValidationBtn = New System.Windows.Forms.Button()
+        Me.confirmMsgP = New System.Windows.Forms.Label()
+        Me.hallSearchBoxP = New System.Windows.Forms.ComboBox()
+        Me.searchErrorP = New System.Windows.Forms.Label()
+        Me.printBtnP = New System.Windows.Forms.Button()
+        Me.exportBtnP = New System.Windows.Forms.Button()
+        Me.postSearchBox = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.postTitle = New System.Windows.Forms.Label()
+        Me.postChangeStatePanel = New System.Windows.Forms.Panel()
+        Me.postDeleteBtn = New System.Windows.Forms.Button()
+        Me.postChangeBtn = New System.Windows.Forms.Button()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.postChangeStateInput = New System.Windows.Forms.ComboBox()
+        Me.addPostBtn = New System.Windows.Forms.Button()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.adminProfilePanel = New System.Windows.Forms.Panel()
+        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
+        Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
+        Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.updateProfileCancelBtn = New System.Windows.Forms.Button()
+        Me.updateProfileErrorMsg = New System.Windows.Forms.Label()
+        Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
+        Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
+        Me.userEmailProfileInput = New System.Windows.Forms.TextBox()
+        Me.userNameProfileInput = New System.Windows.Forms.TextBox()
+        Me.updateProfileValidateBtn = New System.Windows.Forms.Button()
+        Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
+        Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
+        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
+        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
+        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
+        Me.adminEmailProfile = New System.Windows.Forms.Label()
+        Me.adminTitleProfile = New System.Windows.Forms.Label()
+        Me.adminPhoneNumberProfile = New System.Windows.Forms.Label()
+        Me.adminNameProfile = New System.Windows.Forms.Label()
+        Me.adminEmailProfileLabel = New System.Windows.Forms.Label()
+        Me.adminPhoneNumberProfileLabel = New System.Windows.Forms.Label()
+        Me.adminTitleProfileLabel = New System.Windows.Forms.Label()
+        Me.adminNameProfileLabel = New System.Windows.Forms.Label()
+        Me.profileTitle = New System.Windows.Forms.Label()
         Me.adminHallsPanel = New System.Windows.Forms.Panel()
+        Me.hallUpdatePanel = New System.Windows.Forms.Panel()
+        Me.hallUpdateCancelBtn = New System.Windows.Forms.Button()
+        Me.adminUpdateHallNameInput = New System.Windows.Forms.TextBox()
+        Me.hallUpdateValidateBtn = New System.Windows.Forms.Button()
+        Me.adminUpdateHallNameLabel = New System.Windows.Forms.Label()
+        Me.hallAddpanel = New System.Windows.Forms.Panel()
+        Me.addHallErrorMsg = New System.Windows.Forms.Label()
+        Me.HallAddCancelBtn = New System.Windows.Forms.Button()
+        Me.adminAddHallNameInput = New System.Windows.Forms.TextBox()
+        Me.HallAddValidateBtn = New System.Windows.Forms.Button()
+        Me.adminAddHallNameLabel = New System.Windows.Forms.Label()
+        Me.hallAddBtn = New System.Windows.Forms.Button()
+        Me.confirmMsgH = New System.Windows.Forms.Label()
+        Me.HallUpdateBtn = New System.Windows.Forms.Button()
+        Me.hallSearchBoxH = New System.Windows.Forms.ComboBox()
+        Me.searchErrorH = New System.Windows.Forms.Label()
+        Me.PrintBtnH = New System.Windows.Forms.Button()
+        Me.exportBtnH = New System.Windows.Forms.Button()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.HallDeleteBtn = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.adminUsersPanel = New System.Windows.Forms.Panel()
-        Me.adminRolePanel = New System.Windows.Forms.Panel()
-        Me.roleAddPanel = New System.Windows.Forms.Panel()
-        Me.roleUpdatePanel = New System.Windows.Forms.Panel()
-        Me.roleUpdateCancelBtn = New System.Windows.Forms.Button()
-        Me.titleNameInput = New System.Windows.Forms.TextBox()
-        Me.roleUpdateValidationBtn = New System.Windows.Forms.Button()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.addRoleErrorMsg = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.roleAddCancelBtn = New System.Windows.Forms.Button()
-        Me.titleAddNameInput = New System.Windows.Forms.TextBox()
-        Me.roleAddValidationBtn = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.roleDeleteBtn = New System.Windows.Forms.Button()
-        Me.roleAddBtn = New System.Windows.Forms.Button()
-        Me.confirmMsgR = New System.Windows.Forms.Label()
-        Me.roleUpdateBtn = New System.Windows.Forms.Button()
-        Me.searchErrorR = New System.Windows.Forms.Label()
-        Me.PrintBtnR = New System.Windows.Forms.Button()
-        Me.exportBtnR = New System.Windows.Forms.Button()
-        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
-        Me.Roles = New System.Windows.Forms.Label()
-        Me.userAddPanel = New System.Windows.Forms.Panel()
         Me.userUpdatePanel = New System.Windows.Forms.Panel()
         Me.userUserTitleInput = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -158,6 +182,7 @@ Partial Class adminhomePage
         Me.userUserNameInput = New System.Windows.Forms.TextBox()
         Me.userUpdateValidationBtn = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.userAddPanel = New System.Windows.Forms.Panel()
         Me.addUserErrorMsg = New System.Windows.Forms.Label()
         Me.userUserAddTitleInput = New System.Windows.Forms.ComboBox()
         Me.userUserAddConfirmPwdInput = New System.Windows.Forms.TextBox()
@@ -184,81 +209,56 @@ Partial Class adminhomePage
         Me.Label10 = New System.Windows.Forms.Label()
         Me.userDeleteBtn = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.hallAddpanel = New System.Windows.Forms.Panel()
-        Me.hallUpdatePanel = New System.Windows.Forms.Panel()
-        Me.hallUpdateCancelBtn = New System.Windows.Forms.Button()
-        Me.adminUpdateHallNameInput = New System.Windows.Forms.TextBox()
-        Me.hallUpdateValidateBtn = New System.Windows.Forms.Button()
-        Me.adminUpdateHallNameLabel = New System.Windows.Forms.Label()
-        Me.addHallErrorMsg = New System.Windows.Forms.Label()
-        Me.HallAddCancelBtn = New System.Windows.Forms.Button()
-        Me.adminAddHallNameInput = New System.Windows.Forms.TextBox()
-        Me.HallAddValidateBtn = New System.Windows.Forms.Button()
-        Me.adminAddHallNameLabel = New System.Windows.Forms.Label()
-        Me.hallAddBtn = New System.Windows.Forms.Button()
-        Me.confirmMsgH = New System.Windows.Forms.Label()
-        Me.HallUpdateBtn = New System.Windows.Forms.Button()
-        Me.hallSearchBoxH = New System.Windows.Forms.ComboBox()
-        Me.searchErrorH = New System.Windows.Forms.Label()
-        Me.PrintBtnH = New System.Windows.Forms.Button()
-        Me.exportBtnH = New System.Windows.Forms.Button()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.HallDeleteBtn = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
-        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
-        Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
-        Me.updateProfileCancelBtn = New System.Windows.Forms.Button()
-        Me.updateProfileErrorMsg = New System.Windows.Forms.Label()
-        Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
-        Me.userEmailProfileInput = New System.Windows.Forms.TextBox()
-        Me.userNameProfileInput = New System.Windows.Forms.TextBox()
-        Me.updateProfileValidateBtn = New System.Windows.Forms.Button()
-        Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
-        Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
-        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
-        Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
-        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
-        Me.adminEmailProfile = New System.Windows.Forms.Label()
-        Me.adminTitleProfile = New System.Windows.Forms.Label()
-        Me.adminPhoneNumberProfile = New System.Windows.Forms.Label()
-        Me.adminNameProfile = New System.Windows.Forms.Label()
-        Me.adminEmailProfileLabel = New System.Windows.Forms.Label()
-        Me.adminPhoneNumberProfileLabel = New System.Windows.Forms.Label()
-        Me.adminTitleProfileLabel = New System.Windows.Forms.Label()
-        Me.adminNameProfileLabel = New System.Windows.Forms.Label()
-        Me.profileTitle = New System.Windows.Forms.Label()
+        Me.adminRolePanel = New System.Windows.Forms.Panel()
+        Me.roleUpdatePanel = New System.Windows.Forms.Panel()
+        Me.roleUpdateCancelBtn = New System.Windows.Forms.Button()
+        Me.titleNameInput = New System.Windows.Forms.TextBox()
+        Me.roleUpdateValidationBtn = New System.Windows.Forms.Button()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.roleAddPanel = New System.Windows.Forms.Panel()
+        Me.addRoleErrorMsg = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.roleAddCancelBtn = New System.Windows.Forms.Button()
+        Me.titleAddNameInput = New System.Windows.Forms.TextBox()
+        Me.roleAddValidationBtn = New System.Windows.Forms.Button()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.roleDeleteBtn = New System.Windows.Forms.Button()
+        Me.roleAddBtn = New System.Windows.Forms.Button()
+        Me.confirmMsgR = New System.Windows.Forms.Label()
+        Me.roleUpdateBtn = New System.Windows.Forms.Button()
+        Me.searchErrorR = New System.Windows.Forms.Label()
+        Me.PrintBtnR = New System.Windows.Forms.Button()
+        Me.exportBtnR = New System.Windows.Forms.Button()
+        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.Roles = New System.Windows.Forms.Label()
         Me.dropdown.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.adminHeader.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.adminHomePagePanel.SuspendLayout()
         Me.adminEquipmentPanel.SuspendLayout()
+        Me.addEquipmentPanel.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.statePanel.SuspendLayout()
         Me.adminPostPanel.SuspendLayout()
         Me.addPostPanel.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.postChangeStatePanel.SuspendLayout()
-        Me.addEquipmentPanel.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.statePanel.SuspendLayout()
         Me.adminProfilePanel.SuspendLayout()
-        Me.adminHallsPanel.SuspendLayout()
-        Me.adminUsersPanel.SuspendLayout()
-        Me.adminRolePanel.SuspendLayout()
-        Me.roleAddPanel.SuspendLayout()
-        Me.roleUpdatePanel.SuspendLayout()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.userAddPanel.SuspendLayout()
-        Me.userUpdatePanel.SuspendLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.hallAddpanel.SuspendLayout()
-        Me.hallUpdatePanel.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.profileSubPanel1.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
+        Me.profileSubPanel1.SuspendLayout()
+        Me.adminHallsPanel.SuspendLayout()
+        Me.hallUpdatePanel.SuspendLayout()
+        Me.hallAddpanel.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.adminUsersPanel.SuspendLayout()
+        Me.userUpdatePanel.SuspendLayout()
+        Me.userAddPanel.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.adminRolePanel.SuspendLayout()
+        Me.roleUpdatePanel.SuspendLayout()
+        Me.roleAddPanel.SuspendLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IPsBtn
@@ -564,7 +564,6 @@ Partial Class adminhomePage
         'adminHomePagePanel
         '
         Me.adminHomePagePanel.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.adminHomePagePanel.Controls.Add(Me.adminEquipmentPanel)
         Me.adminHomePagePanel.Controls.Add(Me.userNumber)
         Me.adminHomePagePanel.Controls.Add(Me.usersBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.nonActiveMonitorNumber)
@@ -583,10 +582,155 @@ Partial Class adminhomePage
         Me.adminHomePagePanel.Size = New System.Drawing.Size(967, 518)
         Me.adminHomePagePanel.TabIndex = 9
         '
+        'userNumber
+        '
+        Me.userNumber.AutoSize = True
+        Me.userNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.userNumber.Location = New System.Drawing.Point(885, 201)
+        Me.userNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userNumber.Name = "userNumber"
+        Me.userNumber.Size = New System.Drawing.Size(35, 16)
+        Me.userNumber.TabIndex = 35
+        Me.userNumber.Text = "0000"
+        '
+        'usersBtn2
+        '
+        Me.usersBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.usersBtn2.Image = Global.cems.My.Resources.Resources.user1
+        Me.usersBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.usersBtn2.Location = New System.Drawing.Point(717, 117)
+        Me.usersBtn2.Margin = New System.Windows.Forms.Padding(4)
+        Me.usersBtn2.Name = "usersBtn2"
+        Me.usersBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.usersBtn2.Size = New System.Drawing.Size(227, 127)
+        Me.usersBtn2.TabIndex = 33
+        Me.usersBtn2.Text = "Users"
+        Me.usersBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.usersBtn2.UseVisualStyleBackColor = True
+        '
+        'nonActiveMonitorNumber
+        '
+        Me.nonActiveMonitorNumber.AutoSize = True
+        Me.nonActiveMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.nonActiveMonitorNumber.Location = New System.Drawing.Point(651, 201)
+        Me.nonActiveMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.nonActiveMonitorNumber.Name = "nonActiveMonitorNumber"
+        Me.nonActiveMonitorNumber.Size = New System.Drawing.Size(35, 16)
+        Me.nonActiveMonitorNumber.TabIndex = 32
+        Me.nonActiveMonitorNumber.Text = "0000"
+        '
+        'activeMonitorNumber
+        '
+        Me.activeMonitorNumber.AutoSize = True
+        Me.activeMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.activeMonitorNumber.Location = New System.Drawing.Point(591, 201)
+        Me.activeMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.activeMonitorNumber.Name = "activeMonitorNumber"
+        Me.activeMonitorNumber.Size = New System.Drawing.Size(35, 16)
+        Me.activeMonitorNumber.TabIndex = 31
+        Me.activeMonitorNumber.Text = "0000"
+        '
+        'nonActiveIPNumber
+        '
+        Me.nonActiveIPNumber.AutoSize = True
+        Me.nonActiveIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.nonActiveIPNumber.Location = New System.Drawing.Point(405, 201)
+        Me.nonActiveIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.nonActiveIPNumber.Name = "nonActiveIPNumber"
+        Me.nonActiveIPNumber.Size = New System.Drawing.Size(35, 16)
+        Me.nonActiveIPNumber.TabIndex = 30
+        Me.nonActiveIPNumber.Text = "0000"
+        '
+        'activeIPNumber
+        '
+        Me.activeIPNumber.AutoSize = True
+        Me.activeIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.activeIPNumber.Location = New System.Drawing.Point(356, 201)
+        Me.activeIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.activeIPNumber.Name = "activeIPNumber"
+        Me.activeIPNumber.Size = New System.Drawing.Size(35, 16)
+        Me.activeIPNumber.TabIndex = 29
+        Me.activeIPNumber.Text = "0000"
+        '
+        'nonActiveCPUNumber
+        '
+        Me.nonActiveCPUNumber.AutoSize = True
+        Me.nonActiveCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.nonActiveCPUNumber.Location = New System.Drawing.Point(180, 201)
+        Me.nonActiveCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.nonActiveCPUNumber.Name = "nonActiveCPUNumber"
+        Me.nonActiveCPUNumber.Size = New System.Drawing.Size(35, 16)
+        Me.nonActiveCPUNumber.TabIndex = 28
+        Me.nonActiveCPUNumber.Text = "0000"
+        '
+        'activeCPUNumber
+        '
+        Me.activeCPUNumber.AutoSize = True
+        Me.activeCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.activeCPUNumber.Location = New System.Drawing.Point(120, 201)
+        Me.activeCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.activeCPUNumber.Name = "activeCPUNumber"
+        Me.activeCPUNumber.Size = New System.Drawing.Size(35, 16)
+        Me.activeCPUNumber.TabIndex = 27
+        Me.activeCPUNumber.Text = "0000"
+        '
+        'monitorsBtn2
+        '
+        Me.monitorsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.monitorsBtn2.Image = Global.cems.My.Resources.Resources.computer
+        Me.monitorsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.monitorsBtn2.Location = New System.Drawing.Point(483, 117)
+        Me.monitorsBtn2.Margin = New System.Windows.Forms.Padding(4)
+        Me.monitorsBtn2.Name = "monitorsBtn2"
+        Me.monitorsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.monitorsBtn2.Size = New System.Drawing.Size(227, 127)
+        Me.monitorsBtn2.TabIndex = 26
+        Me.monitorsBtn2.Text = "Monitors"
+        Me.monitorsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.monitorsBtn2.UseVisualStyleBackColor = True
+        '
+        'IPsBtn2
+        '
+        Me.IPsBtn2.Image = Global.cems.My.Resources.Resources.landline
+        Me.IPsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IPsBtn2.Location = New System.Drawing.Point(248, 117)
+        Me.IPsBtn2.Margin = New System.Windows.Forms.Padding(4)
+        Me.IPsBtn2.Name = "IPsBtn2"
+        Me.IPsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.IPsBtn2.Size = New System.Drawing.Size(215, 127)
+        Me.IPsBtn2.TabIndex = 25
+        Me.IPsBtn2.Text = "IP Phones"
+        Me.IPsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IPsBtn2.UseVisualStyleBackColor = True
+        '
+        'CPUsBtn2
+        '
+        Me.CPUsBtn2.Image = Global.cems.My.Resources.Resources.unit
+        Me.CPUsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CPUsBtn2.Location = New System.Drawing.Point(20, 117)
+        Me.CPUsBtn2.Margin = New System.Windows.Forms.Padding(4)
+        Me.CPUsBtn2.Name = "CPUsBtn2"
+        Me.CPUsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.CPUsBtn2.Size = New System.Drawing.Size(220, 127)
+        Me.CPUsBtn2.TabIndex = 24
+        Me.CPUsBtn2.Text = "CPUs"
+        Me.CPUsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CPUsBtn2.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(75, 32)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(230, 29)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Admin Home Page"
+        '
         'adminEquipmentPanel
         '
         Me.adminEquipmentPanel.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.adminEquipmentPanel.Controls.Add(Me.adminPostPanel)
         Me.adminEquipmentPanel.Controls.Add(Me.addEquipmentPanel)
         Me.adminEquipmentPanel.Controls.Add(Me.confirmMsgE)
         Me.adminEquipmentPanel.Controls.Add(Me.hallSearchBoxE)
@@ -602,373 +746,12 @@ Partial Class adminhomePage
         Me.adminEquipmentPanel.Controls.Add(Me.Label34)
         Me.adminEquipmentPanel.Controls.Add(Me.Label35)
         Me.adminEquipmentPanel.Controls.Add(Me.userSearchBoxE)
-        Me.adminEquipmentPanel.Location = New System.Drawing.Point(0, 0)
+        Me.adminEquipmentPanel.Location = New System.Drawing.Point(208, 88)
         Me.adminEquipmentPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminEquipmentPanel.Name = "adminEquipmentPanel"
         Me.adminEquipmentPanel.Size = New System.Drawing.Size(967, 521)
         Me.adminEquipmentPanel.TabIndex = 38
         Me.adminEquipmentPanel.Visible = False
-        '
-        'adminPostPanel
-        '
-        Me.adminPostPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.adminPostPanel.Controls.Add(Me.addPostPanel)
-        Me.adminPostPanel.Controls.Add(Me.confirmMsgP)
-        Me.adminPostPanel.Controls.Add(Me.hallSearchBoxP)
-        Me.adminPostPanel.Controls.Add(Me.searchErrorP)
-        Me.adminPostPanel.Controls.Add(Me.printBtnP)
-        Me.adminPostPanel.Controls.Add(Me.exportBtnP)
-        Me.adminPostPanel.Controls.Add(Me.postSearchBox)
-        Me.adminPostPanel.Controls.Add(Me.DataGridView2)
-        Me.adminPostPanel.Controls.Add(Me.postTitle)
-        Me.adminPostPanel.Controls.Add(Me.postChangeStatePanel)
-        Me.adminPostPanel.Controls.Add(Me.addPostBtn)
-        Me.adminPostPanel.Controls.Add(Me.Label32)
-        Me.adminPostPanel.Controls.Add(Me.Label30)
-        Me.adminPostPanel.Controls.Add(Me.Label22)
-        Me.adminPostPanel.Controls.Add(Me.stateSearchBoxP)
-        Me.adminPostPanel.Location = New System.Drawing.Point(0, 0)
-        Me.adminPostPanel.Margin = New System.Windows.Forms.Padding(0)
-        Me.adminPostPanel.Name = "adminPostPanel"
-        Me.adminPostPanel.Size = New System.Drawing.Size(967, 521)
-        Me.adminPostPanel.TabIndex = 62
-        Me.adminPostPanel.Visible = False
-        '
-        'addPostPanel
-        '
-        Me.addPostPanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.addPostPanel.Controls.Add(Me.postPostIdInput)
-        Me.addPostPanel.Controls.Add(Me.Label19)
-        Me.addPostPanel.Controls.Add(Me.postStateInput)
-        Me.addPostPanel.Controls.Add(Me.addPostErrorMsg)
-        Me.addPostPanel.Controls.Add(Me.postHallInput)
-        Me.addPostPanel.Controls.Add(Me.Label20)
-        Me.addPostPanel.Controls.Add(Me.Label29)
-        Me.addPostPanel.Controls.Add(Me.addPostCancelBtn)
-        Me.addPostPanel.Controls.Add(Me.addPostValidationBtn)
-        Me.addPostPanel.Location = New System.Drawing.Point(81, 130)
-        Me.addPostPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.addPostPanel.Name = "addPostPanel"
-        Me.addPostPanel.Size = New System.Drawing.Size(832, 329)
-        Me.addPostPanel.TabIndex = 66
-        Me.addPostPanel.Visible = False
-        '
-        'postPostIdInput
-        '
-        Me.postPostIdInput.Location = New System.Drawing.Point(360, 43)
-        Me.postPostIdInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.postPostIdInput.Name = "postPostIdInput"
-        Me.postPostIdInput.Size = New System.Drawing.Size(237, 22)
-        Me.postPostIdInput.TabIndex = 62
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(72, 37)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(89, 25)
-        Me.Label19.TabIndex = 61
-        Me.Label19.Text = "Post ID:"
-        '
-        'postStateInput
-        '
-        Me.postStateInput.FormattingEnabled = True
-        Me.postStateInput.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
-        Me.postStateInput.Location = New System.Drawing.Point(360, 91)
-        Me.postStateInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.postStateInput.Name = "postStateInput"
-        Me.postStateInput.Size = New System.Drawing.Size(239, 24)
-        Me.postStateInput.TabIndex = 60
-        '
-        'addPostErrorMsg
-        '
-        Me.addPostErrorMsg.AutoSize = True
-        Me.addPostErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.addPostErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addPostErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addPostErrorMsg.Location = New System.Drawing.Point(75, 290)
-        Me.addPostErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.addPostErrorMsg.Name = "addPostErrorMsg"
-        Me.addPostErrorMsg.Size = New System.Drawing.Size(0, 18)
-        Me.addPostErrorMsg.TabIndex = 58
-        Me.addPostErrorMsg.Visible = False
-        '
-        'postHallInput
-        '
-        Me.postHallInput.FormattingEnabled = True
-        Me.postHallInput.Location = New System.Drawing.Point(360, 144)
-        Me.postHallInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.postHallInput.Name = "postHallInput"
-        Me.postHallInput.Size = New System.Drawing.Size(239, 24)
-        Me.postHallInput.TabIndex = 47
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(72, 142)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(53, 25)
-        Me.Label20.TabIndex = 52
-        Me.Label20.Text = "hall:"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(72, 89)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(115, 25)
-        Me.Label29.TabIndex = 48
-        Me.Label29.Text = "Post state:"
-        '
-        'addPostCancelBtn
-        '
-        Me.addPostCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.addPostCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.addPostCancelBtn.FlatAppearance.BorderSize = 0
-        Me.addPostCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addPostCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.addPostCancelBtn.Location = New System.Drawing.Point(493, 277)
-        Me.addPostCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.addPostCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.addPostCancelBtn.Name = "addPostCancelBtn"
-        Me.addPostCancelBtn.Size = New System.Drawing.Size(105, 39)
-        Me.addPostCancelBtn.TabIndex = 44
-        Me.addPostCancelBtn.Text = "Cancel"
-        Me.addPostCancelBtn.UseVisualStyleBackColor = False
-        '
-        'addPostValidationBtn
-        '
-        Me.addPostValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.addPostValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.addPostValidationBtn.FlatAppearance.BorderSize = 0
-        Me.addPostValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addPostValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.addPostValidationBtn.Location = New System.Drawing.Point(623, 277)
-        Me.addPostValidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.addPostValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.addPostValidationBtn.Name = "addPostValidationBtn"
-        Me.addPostValidationBtn.Size = New System.Drawing.Size(127, 39)
-        Me.addPostValidationBtn.TabIndex = 13
-        Me.addPostValidationBtn.Text = "Add"
-        Me.addPostValidationBtn.UseVisualStyleBackColor = False
-        '
-        'confirmMsgP
-        '
-        Me.confirmMsgP.AutoSize = True
-        Me.confirmMsgP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.confirmMsgP.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgP.Location = New System.Drawing.Point(693, 21)
-        Me.confirmMsgP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.confirmMsgP.Name = "confirmMsgP"
-        Me.confirmMsgP.Size = New System.Drawing.Size(177, 20)
-        Me.confirmMsgP.TabIndex = 41
-        Me.confirmMsgP.Text = "Export successfull ✔"
-        Me.confirmMsgP.Visible = False
-        '
-        'hallSearchBoxP
-        '
-        Me.hallSearchBoxP.FormattingEnabled = True
-        Me.hallSearchBoxP.Location = New System.Drawing.Point(340, 68)
-        Me.hallSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallSearchBoxP.Name = "hallSearchBoxP"
-        Me.hallSearchBoxP.Size = New System.Drawing.Size(104, 24)
-        Me.hallSearchBoxP.TabIndex = 37
-        '
-        'searchErrorP
-        '
-        Me.searchErrorP.AutoSize = True
-        Me.searchErrorP.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
-        Me.searchErrorP.Location = New System.Drawing.Point(296, 277)
-        Me.searchErrorP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.searchErrorP.Name = "searchErrorP"
-        Me.searchErrorP.Size = New System.Drawing.Size(349, 47)
-        Me.searchErrorP.TabIndex = 36
-        Me.searchErrorP.Text = "No results found "
-        Me.searchErrorP.Visible = False
-        '
-        'printBtnP
-        '
-        Me.printBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.printBtnP.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.printBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.printBtnP.Location = New System.Drawing.Point(860, 68)
-        Me.printBtnP.Margin = New System.Windows.Forms.Padding(4)
-        Me.printBtnP.Name = "printBtnP"
-        Me.printBtnP.Size = New System.Drawing.Size(100, 28)
-        Me.printBtnP.TabIndex = 33
-        Me.printBtnP.Text = "Print"
-        Me.printBtnP.UseVisualStyleBackColor = True
-        '
-        'exportBtnP
-        '
-        Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnP.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnP.Location = New System.Drawing.Point(749, 68)
-        Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnP.Name = "exportBtnP"
-        Me.exportBtnP.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnP.TabIndex = 32
-        Me.exportBtnP.Text = "Export"
-        Me.exportBtnP.UseVisualStyleBackColor = True
-        '
-        'postSearchBox
-        '
-        Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
-        Me.postSearchBox.Location = New System.Drawing.Point(225, 68)
-        Me.postSearchBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.postSearchBox.Name = "postSearchBox"
-        Me.postSearchBox.Size = New System.Drawing.Size(63, 22)
-        Me.postSearchBox.TabIndex = 31
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AllowUserToResizeColumns = False
-        Me.DataGridView2.AllowUserToResizeRows = False
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(81, 133)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(660, 290)
-        Me.DataGridView2.TabIndex = 30
-        '
-        'postTitle
-        '
-        Me.postTitle.AutoSize = True
-        Me.postTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.postTitle.Location = New System.Drawing.Point(80, 32)
-        Me.postTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.postTitle.Name = "postTitle"
-        Me.postTitle.Size = New System.Drawing.Size(78, 29)
-        Me.postTitle.TabIndex = 29
-        Me.postTitle.Text = "Posts"
-        '
-        'postChangeStatePanel
-        '
-        Me.postChangeStatePanel.Controls.Add(Me.postDeleteBtn)
-        Me.postChangeStatePanel.Controls.Add(Me.postChangeBtn)
-        Me.postChangeStatePanel.Controls.Add(Me.Label31)
-        Me.postChangeStatePanel.Controls.Add(Me.postChangeStateInput)
-        Me.postChangeStatePanel.Location = New System.Drawing.Point(763, 153)
-        Me.postChangeStatePanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.postChangeStatePanel.Name = "postChangeStatePanel"
-        Me.postChangeStatePanel.Size = New System.Drawing.Size(195, 158)
-        Me.postChangeStatePanel.TabIndex = 61
-        Me.postChangeStatePanel.Visible = False
-        '
-        'postDeleteBtn
-        '
-        Me.postDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.postDeleteBtn.Location = New System.Drawing.Point(16, 118)
-        Me.postDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.postDeleteBtn.Name = "postDeleteBtn"
-        Me.postDeleteBtn.Size = New System.Drawing.Size(161, 28)
-        Me.postDeleteBtn.TabIndex = 65
-        Me.postDeleteBtn.Text = "Delete"
-        Me.postDeleteBtn.UseVisualStyleBackColor = True
-        '
-        'postChangeBtn
-        '
-        Me.postChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.postChangeBtn.Location = New System.Drawing.Point(16, 81)
-        Me.postChangeBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.postChangeBtn.Name = "postChangeBtn"
-        Me.postChangeBtn.Size = New System.Drawing.Size(161, 28)
-        Me.postChangeBtn.TabIndex = 64
-        Me.postChangeBtn.Text = "Change"
-        Me.postChangeBtn.UseVisualStyleBackColor = True
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Label31.Location = New System.Drawing.Point(0, 34)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(59, 24)
-        Me.Label31.TabIndex = 38
-        Me.Label31.Text = "state:"
-        '
-        'postChangeStateInput
-        '
-        Me.postChangeStateInput.FormattingEnabled = True
-        Me.postChangeStateInput.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
-        Me.postChangeStateInput.Location = New System.Drawing.Point(88, 32)
-        Me.postChangeStateInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.postChangeStateInput.Name = "postChangeStateInput"
-        Me.postChangeStateInput.Size = New System.Drawing.Size(105, 24)
-        Me.postChangeStateInput.TabIndex = 42
-        '
-        'addPostBtn
-        '
-        Me.addPostBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addPostBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.addPostBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.addPostBtn.Location = New System.Drawing.Point(643, 69)
-        Me.addPostBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.addPostBtn.Name = "addPostBtn"
-        Me.addPostBtn.Size = New System.Drawing.Size(100, 28)
-        Me.addPostBtn.TabIndex = 63
-        Me.addPostBtn.Text = "Add"
-        Me.addPostBtn.UseVisualStyleBackColor = True
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(447, 70)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label32.Size = New System.Drawing.Size(53, 24)
-        Me.Label32.TabIndex = 65
-        Me.Label32.Text = "state:"
-        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(285, 69)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label30.Size = New System.Drawing.Size(44, 24)
-        Me.Label30.TabIndex = 65
-        Me.Label30.Text = "hall:"
-        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(133, 69)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label22.Size = New System.Drawing.Size(70, 24)
-        Me.Label22.TabIndex = 64
-        Me.Label22.Text = "post id:"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'stateSearchBoxP
-        '
-        Me.stateSearchBoxP.FormattingEnabled = True
-        Me.stateSearchBoxP.Location = New System.Drawing.Point(527, 69)
-        Me.stateSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
-        Me.stateSearchBoxP.Name = "stateSearchBoxP"
-        Me.stateSearchBoxP.Size = New System.Drawing.Size(104, 24)
-        Me.stateSearchBoxP.TabIndex = 37
         '
         'addEquipmentPanel
         '
@@ -1327,155 +1110,370 @@ Partial Class adminhomePage
         Me.userSearchBoxE.Size = New System.Drawing.Size(104, 24)
         Me.userSearchBoxE.TabIndex = 66
         '
-        'userNumber
+        'adminPostPanel
         '
-        Me.userNumber.AutoSize = True
-        Me.userNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.userNumber.Location = New System.Drawing.Point(885, 201)
-        Me.userNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userNumber.Name = "userNumber"
-        Me.userNumber.Size = New System.Drawing.Size(35, 16)
-        Me.userNumber.TabIndex = 35
-        Me.userNumber.Text = "0000"
+        Me.adminPostPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.adminPostPanel.Controls.Add(Me.addPostPanel)
+        Me.adminPostPanel.Controls.Add(Me.confirmMsgP)
+        Me.adminPostPanel.Controls.Add(Me.hallSearchBoxP)
+        Me.adminPostPanel.Controls.Add(Me.searchErrorP)
+        Me.adminPostPanel.Controls.Add(Me.printBtnP)
+        Me.adminPostPanel.Controls.Add(Me.exportBtnP)
+        Me.adminPostPanel.Controls.Add(Me.postSearchBox)
+        Me.adminPostPanel.Controls.Add(Me.DataGridView2)
+        Me.adminPostPanel.Controls.Add(Me.postTitle)
+        Me.adminPostPanel.Controls.Add(Me.postChangeStatePanel)
+        Me.adminPostPanel.Controls.Add(Me.addPostBtn)
+        Me.adminPostPanel.Controls.Add(Me.Label32)
+        Me.adminPostPanel.Controls.Add(Me.Label30)
+        Me.adminPostPanel.Controls.Add(Me.Label22)
+        Me.adminPostPanel.Controls.Add(Me.stateSearchBoxP)
+        Me.adminPostPanel.Location = New System.Drawing.Point(208, 88)
+        Me.adminPostPanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.adminPostPanel.Name = "adminPostPanel"
+        Me.adminPostPanel.Size = New System.Drawing.Size(967, 521)
+        Me.adminPostPanel.TabIndex = 62
+        Me.adminPostPanel.Visible = False
         '
-        'usersBtn2
+        'addPostPanel
         '
-        Me.usersBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.usersBtn2.Image = Global.cems.My.Resources.Resources.user1
-        Me.usersBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.usersBtn2.Location = New System.Drawing.Point(717, 117)
-        Me.usersBtn2.Margin = New System.Windows.Forms.Padding(4)
-        Me.usersBtn2.Name = "usersBtn2"
-        Me.usersBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.usersBtn2.Size = New System.Drawing.Size(227, 127)
-        Me.usersBtn2.TabIndex = 33
-        Me.usersBtn2.Text = "Users"
-        Me.usersBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.usersBtn2.UseVisualStyleBackColor = True
+        Me.addPostPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addPostPanel.Controls.Add(Me.postPostIdInput)
+        Me.addPostPanel.Controls.Add(Me.Label19)
+        Me.addPostPanel.Controls.Add(Me.postStateInput)
+        Me.addPostPanel.Controls.Add(Me.addPostErrorMsg)
+        Me.addPostPanel.Controls.Add(Me.postHallInput)
+        Me.addPostPanel.Controls.Add(Me.Label20)
+        Me.addPostPanel.Controls.Add(Me.Label29)
+        Me.addPostPanel.Controls.Add(Me.addPostCancelBtn)
+        Me.addPostPanel.Controls.Add(Me.addPostValidationBtn)
+        Me.addPostPanel.Location = New System.Drawing.Point(81, 130)
+        Me.addPostPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.addPostPanel.Name = "addPostPanel"
+        Me.addPostPanel.Size = New System.Drawing.Size(832, 329)
+        Me.addPostPanel.TabIndex = 66
+        Me.addPostPanel.Visible = False
         '
-        'nonActiveMonitorNumber
+        'postPostIdInput
         '
-        Me.nonActiveMonitorNumber.AutoSize = True
-        Me.nonActiveMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.nonActiveMonitorNumber.Location = New System.Drawing.Point(651, 201)
-        Me.nonActiveMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.nonActiveMonitorNumber.Name = "nonActiveMonitorNumber"
-        Me.nonActiveMonitorNumber.Size = New System.Drawing.Size(35, 16)
-        Me.nonActiveMonitorNumber.TabIndex = 32
-        Me.nonActiveMonitorNumber.Text = "0000"
+        Me.postPostIdInput.Location = New System.Drawing.Point(360, 43)
+        Me.postPostIdInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.postPostIdInput.Name = "postPostIdInput"
+        Me.postPostIdInput.Size = New System.Drawing.Size(237, 22)
+        Me.postPostIdInput.TabIndex = 62
         '
-        'activeMonitorNumber
+        'Label19
         '
-        Me.activeMonitorNumber.AutoSize = True
-        Me.activeMonitorNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.activeMonitorNumber.Location = New System.Drawing.Point(591, 201)
-        Me.activeMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.activeMonitorNumber.Name = "activeMonitorNumber"
-        Me.activeMonitorNumber.Size = New System.Drawing.Size(35, 16)
-        Me.activeMonitorNumber.TabIndex = 31
-        Me.activeMonitorNumber.Text = "0000"
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(72, 37)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(89, 25)
+        Me.Label19.TabIndex = 61
+        Me.Label19.Text = "Post ID:"
         '
-        'nonActiveIPNumber
+        'postStateInput
         '
-        Me.nonActiveIPNumber.AutoSize = True
-        Me.nonActiveIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.nonActiveIPNumber.Location = New System.Drawing.Point(405, 201)
-        Me.nonActiveIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.nonActiveIPNumber.Name = "nonActiveIPNumber"
-        Me.nonActiveIPNumber.Size = New System.Drawing.Size(35, 16)
-        Me.nonActiveIPNumber.TabIndex = 30
-        Me.nonActiveIPNumber.Text = "0000"
+        Me.postStateInput.FormattingEnabled = True
+        Me.postStateInput.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
+        Me.postStateInput.Location = New System.Drawing.Point(360, 91)
+        Me.postStateInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.postStateInput.Name = "postStateInput"
+        Me.postStateInput.Size = New System.Drawing.Size(239, 24)
+        Me.postStateInput.TabIndex = 60
         '
-        'activeIPNumber
+        'addPostErrorMsg
         '
-        Me.activeIPNumber.AutoSize = True
-        Me.activeIPNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.activeIPNumber.Location = New System.Drawing.Point(356, 201)
-        Me.activeIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.activeIPNumber.Name = "activeIPNumber"
-        Me.activeIPNumber.Size = New System.Drawing.Size(35, 16)
-        Me.activeIPNumber.TabIndex = 29
-        Me.activeIPNumber.Text = "0000"
+        Me.addPostErrorMsg.AutoSize = True
+        Me.addPostErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addPostErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addPostErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.addPostErrorMsg.Location = New System.Drawing.Point(75, 290)
+        Me.addPostErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addPostErrorMsg.Name = "addPostErrorMsg"
+        Me.addPostErrorMsg.Size = New System.Drawing.Size(0, 18)
+        Me.addPostErrorMsg.TabIndex = 58
+        Me.addPostErrorMsg.Visible = False
         '
-        'nonActiveCPUNumber
+        'postHallInput
         '
-        Me.nonActiveCPUNumber.AutoSize = True
-        Me.nonActiveCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.nonActiveCPUNumber.Location = New System.Drawing.Point(180, 201)
-        Me.nonActiveCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.nonActiveCPUNumber.Name = "nonActiveCPUNumber"
-        Me.nonActiveCPUNumber.Size = New System.Drawing.Size(35, 16)
-        Me.nonActiveCPUNumber.TabIndex = 28
-        Me.nonActiveCPUNumber.Text = "0000"
+        Me.postHallInput.FormattingEnabled = True
+        Me.postHallInput.Location = New System.Drawing.Point(360, 144)
+        Me.postHallInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.postHallInput.Name = "postHallInput"
+        Me.postHallInput.Size = New System.Drawing.Size(239, 24)
+        Me.postHallInput.TabIndex = 47
         '
-        'activeCPUNumber
+        'Label20
         '
-        Me.activeCPUNumber.AutoSize = True
-        Me.activeCPUNumber.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.activeCPUNumber.Location = New System.Drawing.Point(120, 201)
-        Me.activeCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.activeCPUNumber.Name = "activeCPUNumber"
-        Me.activeCPUNumber.Size = New System.Drawing.Size(35, 16)
-        Me.activeCPUNumber.TabIndex = 27
-        Me.activeCPUNumber.Text = "0000"
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(72, 142)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(53, 25)
+        Me.Label20.TabIndex = 52
+        Me.Label20.Text = "hall:"
         '
-        'monitorsBtn2
+        'Label29
         '
-        Me.monitorsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.monitorsBtn2.Image = Global.cems.My.Resources.Resources.computer
-        Me.monitorsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.monitorsBtn2.Location = New System.Drawing.Point(483, 117)
-        Me.monitorsBtn2.Margin = New System.Windows.Forms.Padding(4)
-        Me.monitorsBtn2.Name = "monitorsBtn2"
-        Me.monitorsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.monitorsBtn2.Size = New System.Drawing.Size(227, 127)
-        Me.monitorsBtn2.TabIndex = 26
-        Me.monitorsBtn2.Text = "Monitors"
-        Me.monitorsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.monitorsBtn2.UseVisualStyleBackColor = True
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(72, 89)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(115, 25)
+        Me.Label29.TabIndex = 48
+        Me.Label29.Text = "Post state:"
         '
-        'IPsBtn2
+        'addPostCancelBtn
         '
-        Me.IPsBtn2.Image = Global.cems.My.Resources.Resources.landline
-        Me.IPsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IPsBtn2.Location = New System.Drawing.Point(248, 117)
-        Me.IPsBtn2.Margin = New System.Windows.Forms.Padding(4)
-        Me.IPsBtn2.Name = "IPsBtn2"
-        Me.IPsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.IPsBtn2.Size = New System.Drawing.Size(215, 127)
-        Me.IPsBtn2.TabIndex = 25
-        Me.IPsBtn2.Text = "IP Phones"
-        Me.IPsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IPsBtn2.UseVisualStyleBackColor = True
+        Me.addPostCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.addPostCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.addPostCancelBtn.FlatAppearance.BorderSize = 0
+        Me.addPostCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addPostCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.addPostCancelBtn.Location = New System.Drawing.Point(493, 277)
+        Me.addPostCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.addPostCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.addPostCancelBtn.Name = "addPostCancelBtn"
+        Me.addPostCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.addPostCancelBtn.TabIndex = 44
+        Me.addPostCancelBtn.Text = "Cancel"
+        Me.addPostCancelBtn.UseVisualStyleBackColor = False
         '
-        'CPUsBtn2
+        'addPostValidationBtn
         '
-        Me.CPUsBtn2.Image = Global.cems.My.Resources.Resources.unit
-        Me.CPUsBtn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.CPUsBtn2.Location = New System.Drawing.Point(20, 117)
-        Me.CPUsBtn2.Margin = New System.Windows.Forms.Padding(4)
-        Me.CPUsBtn2.Name = "CPUsBtn2"
-        Me.CPUsBtn2.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.CPUsBtn2.Size = New System.Drawing.Size(220, 127)
-        Me.CPUsBtn2.TabIndex = 24
-        Me.CPUsBtn2.Text = "CPUs"
-        Me.CPUsBtn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CPUsBtn2.UseVisualStyleBackColor = True
+        Me.addPostValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.addPostValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.addPostValidationBtn.FlatAppearance.BorderSize = 0
+        Me.addPostValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addPostValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.addPostValidationBtn.Location = New System.Drawing.Point(623, 277)
+        Me.addPostValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.addPostValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.addPostValidationBtn.Name = "addPostValidationBtn"
+        Me.addPostValidationBtn.Size = New System.Drawing.Size(127, 39)
+        Me.addPostValidationBtn.TabIndex = 13
+        Me.addPostValidationBtn.Text = "Add"
+        Me.addPostValidationBtn.UseVisualStyleBackColor = False
         '
-        'Label1
+        'confirmMsgP
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(75, 32)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(230, 29)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Admin Home Page"
+        Me.confirmMsgP.AutoSize = True
+        Me.confirmMsgP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgP.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgP.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgP.Name = "confirmMsgP"
+        Me.confirmMsgP.Size = New System.Drawing.Size(177, 20)
+        Me.confirmMsgP.TabIndex = 41
+        Me.confirmMsgP.Text = "Export successfull ✔"
+        Me.confirmMsgP.Visible = False
+        '
+        'hallSearchBoxP
+        '
+        Me.hallSearchBoxP.FormattingEnabled = True
+        Me.hallSearchBoxP.Location = New System.Drawing.Point(340, 68)
+        Me.hallSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallSearchBoxP.Name = "hallSearchBoxP"
+        Me.hallSearchBoxP.Size = New System.Drawing.Size(104, 24)
+        Me.hallSearchBoxP.TabIndex = 37
+        '
+        'searchErrorP
+        '
+        Me.searchErrorP.AutoSize = True
+        Me.searchErrorP.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
+        Me.searchErrorP.Location = New System.Drawing.Point(296, 277)
+        Me.searchErrorP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.searchErrorP.Name = "searchErrorP"
+        Me.searchErrorP.Size = New System.Drawing.Size(349, 47)
+        Me.searchErrorP.TabIndex = 36
+        Me.searchErrorP.Text = "No results found "
+        Me.searchErrorP.Visible = False
+        '
+        'printBtnP
+        '
+        Me.printBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtnP.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.printBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.printBtnP.Location = New System.Drawing.Point(860, 68)
+        Me.printBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.printBtnP.Name = "printBtnP"
+        Me.printBtnP.Size = New System.Drawing.Size(100, 28)
+        Me.printBtnP.TabIndex = 33
+        Me.printBtnP.Text = "Print"
+        Me.printBtnP.UseVisualStyleBackColor = True
+        '
+        'exportBtnP
+        '
+        Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnP.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnP.Location = New System.Drawing.Point(749, 68)
+        Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnP.Name = "exportBtnP"
+        Me.exportBtnP.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnP.TabIndex = 32
+        Me.exportBtnP.Text = "Export"
+        Me.exportBtnP.UseVisualStyleBackColor = True
+        '
+        'postSearchBox
+        '
+        Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
+        Me.postSearchBox.Location = New System.Drawing.Point(225, 68)
+        Me.postSearchBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.postSearchBox.Name = "postSearchBox"
+        Me.postSearchBox.Size = New System.Drawing.Size(63, 22)
+        Me.postSearchBox.TabIndex = 31
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AllowUserToResizeColumns = False
+        Me.DataGridView2.AllowUserToResizeRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(81, 133)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(660, 290)
+        Me.DataGridView2.TabIndex = 30
+        '
+        'postTitle
+        '
+        Me.postTitle.AutoSize = True
+        Me.postTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.postTitle.Location = New System.Drawing.Point(80, 32)
+        Me.postTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.postTitle.Name = "postTitle"
+        Me.postTitle.Size = New System.Drawing.Size(78, 29)
+        Me.postTitle.TabIndex = 29
+        Me.postTitle.Text = "Posts"
+        '
+        'postChangeStatePanel
+        '
+        Me.postChangeStatePanel.Controls.Add(Me.postDeleteBtn)
+        Me.postChangeStatePanel.Controls.Add(Me.postChangeBtn)
+        Me.postChangeStatePanel.Controls.Add(Me.Label31)
+        Me.postChangeStatePanel.Controls.Add(Me.postChangeStateInput)
+        Me.postChangeStatePanel.Location = New System.Drawing.Point(763, 153)
+        Me.postChangeStatePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.postChangeStatePanel.Name = "postChangeStatePanel"
+        Me.postChangeStatePanel.Size = New System.Drawing.Size(195, 158)
+        Me.postChangeStatePanel.TabIndex = 61
+        Me.postChangeStatePanel.Visible = False
+        '
+        'postDeleteBtn
+        '
+        Me.postDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.postDeleteBtn.Location = New System.Drawing.Point(16, 118)
+        Me.postDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.postDeleteBtn.Name = "postDeleteBtn"
+        Me.postDeleteBtn.Size = New System.Drawing.Size(161, 28)
+        Me.postDeleteBtn.TabIndex = 65
+        Me.postDeleteBtn.Text = "Delete"
+        Me.postDeleteBtn.UseVisualStyleBackColor = True
+        '
+        'postChangeBtn
+        '
+        Me.postChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.postChangeBtn.Location = New System.Drawing.Point(16, 81)
+        Me.postChangeBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.postChangeBtn.Name = "postChangeBtn"
+        Me.postChangeBtn.Size = New System.Drawing.Size(161, 28)
+        Me.postChangeBtn.TabIndex = 64
+        Me.postChangeBtn.Text = "Change"
+        Me.postChangeBtn.UseVisualStyleBackColor = True
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Label31.Location = New System.Drawing.Point(0, 34)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(59, 24)
+        Me.Label31.TabIndex = 38
+        Me.Label31.Text = "state:"
+        '
+        'postChangeStateInput
+        '
+        Me.postChangeStateInput.FormattingEnabled = True
+        Me.postChangeStateInput.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
+        Me.postChangeStateInput.Location = New System.Drawing.Point(88, 32)
+        Me.postChangeStateInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.postChangeStateInput.Name = "postChangeStateInput"
+        Me.postChangeStateInput.Size = New System.Drawing.Size(105, 24)
+        Me.postChangeStateInput.TabIndex = 42
+        '
+        'addPostBtn
+        '
+        Me.addPostBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addPostBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.addPostBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.addPostBtn.Location = New System.Drawing.Point(643, 69)
+        Me.addPostBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.addPostBtn.Name = "addPostBtn"
+        Me.addPostBtn.Size = New System.Drawing.Size(100, 28)
+        Me.addPostBtn.TabIndex = 63
+        Me.addPostBtn.Text = "Add"
+        Me.addPostBtn.UseVisualStyleBackColor = True
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(447, 70)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label32.Size = New System.Drawing.Size(53, 24)
+        Me.Label32.TabIndex = 65
+        Me.Label32.Text = "state:"
+        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(285, 69)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label30.Size = New System.Drawing.Size(44, 24)
+        Me.Label30.TabIndex = 65
+        Me.Label30.Text = "hall:"
+        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(133, 69)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label22.Size = New System.Drawing.Size(70, 24)
+        Me.Label22.TabIndex = 64
+        Me.Label22.Text = "post id:"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'stateSearchBoxP
+        '
+        Me.stateSearchBoxP.FormattingEnabled = True
+        Me.stateSearchBoxP.Location = New System.Drawing.Point(527, 69)
+        Me.stateSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
+        Me.stateSearchBoxP.Name = "stateSearchBoxP"
+        Me.stateSearchBoxP.Size = New System.Drawing.Size(104, 24)
+        Me.stateSearchBoxP.TabIndex = 37
         '
         'adminProfilePanel
         '
-        Me.adminProfilePanel.Controls.Add(Me.adminHallsPanel)
+        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Location = New System.Drawing.Point(211, 89)
@@ -1484,10 +1482,308 @@ Partial Class adminhomePage
         Me.adminProfilePanel.Size = New System.Drawing.Size(967, 521)
         Me.adminProfilePanel.TabIndex = 63
         '
+        'profileSubPanel2
+        '
+        Me.profileSubPanel2.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileCancelBtn)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileErrorMsg)
+        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.userEmailProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.userNameProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidateBtn)
+        Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
+        Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
+        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
+        Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
+        Me.profileSubPanel2.Location = New System.Drawing.Point(83, 136)
+        Me.profileSubPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.profileSubPanel2.Name = "profileSubPanel2"
+        Me.profileSubPanel2.Size = New System.Drawing.Size(783, 310)
+        Me.profileSubPanel2.TabIndex = 35
+        Me.profileSubPanel2.Visible = False
+        '
+        'userConfirmPwdProfileInput
+        '
+        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(399, 224)
+        Me.userConfirmPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
+        Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userConfirmPwdProfileInput.TabIndex = 22
+        '
+        'userConfirmPwdProfileLabel
+        '
+        Me.userConfirmPwdProfileLabel.AutoSize = True
+        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(64, 222)
+        Me.userConfirmPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
+        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(192, 25)
+        Me.userConfirmPwdProfileLabel.TabIndex = 21
+        Me.userConfirmPwdProfileLabel.Text = "Confirm password:"
+        '
+        'updateProfileCancelBtn
+        '
+        Me.updateProfileCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.updateProfileCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.updateProfileCancelBtn.FlatAppearance.BorderSize = 0
+        Me.updateProfileCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateProfileCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileCancelBtn.Location = New System.Drawing.Point(555, 265)
+        Me.updateProfileCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.updateProfileCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileCancelBtn.Name = "updateProfileCancelBtn"
+        Me.updateProfileCancelBtn.Size = New System.Drawing.Size(89, 27)
+        Me.updateProfileCancelBtn.TabIndex = 20
+        Me.updateProfileCancelBtn.Text = "Cancel"
+        Me.updateProfileCancelBtn.UseVisualStyleBackColor = False
+        '
+        'updateProfileErrorMsg
+        '
+        Me.updateProfileErrorMsg.AutoSize = True
+        Me.updateProfileErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.updateProfileErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateProfileErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.updateProfileErrorMsg.Location = New System.Drawing.Point(200, 277)
+        Me.updateProfileErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.updateProfileErrorMsg.Name = "updateProfileErrorMsg"
+        Me.updateProfileErrorMsg.Size = New System.Drawing.Size(0, 15)
+        Me.updateProfileErrorMsg.TabIndex = 19
+        Me.updateProfileErrorMsg.Visible = False
+        '
+        'userPwdProfileInput
+        '
+        Me.userPwdProfileInput.Location = New System.Drawing.Point(399, 185)
+        Me.userPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userPwdProfileInput.Name = "userPwdProfileInput"
+        Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.userPwdProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userPwdProfileInput.TabIndex = 18
+        '
+        'userPhoneNumberProfileInput
+        '
+        Me.userPhoneNumberProfileInput.Location = New System.Drawing.Point(399, 105)
+        Me.userPhoneNumberProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userPhoneNumberProfileInput.Name = "userPhoneNumberProfileInput"
+        Me.userPhoneNumberProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userPhoneNumberProfileInput.TabIndex = 17
+        '
+        'userEmailProfileInput
+        '
+        Me.userEmailProfileInput.Location = New System.Drawing.Point(399, 63)
+        Me.userEmailProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userEmailProfileInput.Name = "userEmailProfileInput"
+        Me.userEmailProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userEmailProfileInput.TabIndex = 16
+        '
+        'userNameProfileInput
+        '
+        Me.userNameProfileInput.Location = New System.Drawing.Point(399, 20)
+        Me.userNameProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userNameProfileInput.Name = "userNameProfileInput"
+        Me.userNameProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userNameProfileInput.TabIndex = 15
+        '
+        'updateProfileValidateBtn
+        '
+        Me.updateProfileValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.updateProfileValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.updateProfileValidateBtn.FlatAppearance.BorderSize = 0
+        Me.updateProfileValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateProfileValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileValidateBtn.Location = New System.Drawing.Point(667, 265)
+        Me.updateProfileValidateBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.updateProfileValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileValidateBtn.Name = "updateProfileValidateBtn"
+        Me.updateProfileValidateBtn.Size = New System.Drawing.Size(89, 27)
+        Me.updateProfileValidateBtn.TabIndex = 13
+        Me.updateProfileValidateBtn.Text = "Done"
+        Me.updateProfileValidateBtn.UseVisualStyleBackColor = False
+        '
+        'userEmailProfileLabel2
+        '
+        Me.userEmailProfileLabel2.AutoSize = True
+        Me.userEmailProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userEmailProfileLabel2.Location = New System.Drawing.Point(65, 59)
+        Me.userEmailProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userEmailProfileLabel2.Name = "userEmailProfileLabel2"
+        Me.userEmailProfileLabel2.Size = New System.Drawing.Size(127, 25)
+        Me.userEmailProfileLabel2.TabIndex = 11
+        Me.userEmailProfileLabel2.Text = "User email :"
+        '
+        'userPhoneNumberProfileLabel2
+        '
+        Me.userPhoneNumberProfileLabel2.AutoSize = True
+        Me.userPhoneNumberProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userPhoneNumberProfileLabel2.Location = New System.Drawing.Point(65, 102)
+        Me.userPhoneNumberProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userPhoneNumberProfileLabel2.Name = "userPhoneNumberProfileLabel2"
+        Me.userPhoneNumberProfileLabel2.Size = New System.Drawing.Size(244, 25)
+        Me.userPhoneNumberProfileLabel2.TabIndex = 10
+        Me.userPhoneNumberProfileLabel2.Text = "User telephone nunber :"
+        '
+        'userPwdProfileLabel
+        '
+        Me.userPwdProfileLabel.AutoSize = True
+        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 182)
+        Me.userPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
+        Me.userPwdProfileLabel.Size = New System.Drawing.Size(213, 25)
+        Me.userPwdProfileLabel.TabIndex = 9
+        Me.userPwdProfileLabel.Text = "Enter new password:"
+        '
+        'userNameProfileLabel2
+        '
+        Me.userNameProfileLabel2.AutoSize = True
+        Me.userNameProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userNameProfileLabel2.Location = New System.Drawing.Point(65, 17)
+        Me.userNameProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userNameProfileLabel2.Name = "userNameProfileLabel2"
+        Me.userNameProfileLabel2.Size = New System.Drawing.Size(129, 25)
+        Me.userNameProfileLabel2.TabIndex = 7
+        Me.userNameProfileLabel2.Text = "User name :"
+        '
+        'profileSubPanel1
+        '
+        Me.profileSubPanel1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
+        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminNameProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.adminNameProfileLabel)
+        Me.profileSubPanel1.Location = New System.Drawing.Point(88, 114)
+        Me.profileSubPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.profileSubPanel1.Name = "profileSubPanel1"
+        Me.profileSubPanel1.Size = New System.Drawing.Size(783, 310)
+        Me.profileSubPanel1.TabIndex = 31
+        '
+        'updateProfileShowBtn
+        '
+        Me.updateProfileShowBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.updateProfileShowBtn.FlatAppearance.BorderSize = 0
+        Me.updateProfileShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateProfileShowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileShowBtn.Location = New System.Drawing.Point(629, 252)
+        Me.updateProfileShowBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.updateProfileShowBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
+        Me.updateProfileShowBtn.Size = New System.Drawing.Size(127, 39)
+        Me.updateProfileShowBtn.TabIndex = 13
+        Me.updateProfileShowBtn.Text = "Update"
+        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
+        '
+        'adminEmailProfile
+        '
+        Me.adminEmailProfile.AutoSize = True
+        Me.adminEmailProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.adminEmailProfile.Location = New System.Drawing.Point(393, 145)
+        Me.adminEmailProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminEmailProfile.Name = "adminEmailProfile"
+        Me.adminEmailProfile.Size = New System.Drawing.Size(58, 24)
+        Me.adminEmailProfile.TabIndex = 14
+        Me.adminEmailProfile.Text = "******"
+        '
+        'adminTitleProfile
+        '
+        Me.adminTitleProfile.AutoSize = True
+        Me.adminTitleProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.adminTitleProfile.Location = New System.Drawing.Point(393, 234)
+        Me.adminTitleProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminTitleProfile.Name = "adminTitleProfile"
+        Me.adminTitleProfile.Size = New System.Drawing.Size(58, 24)
+        Me.adminTitleProfile.TabIndex = 13
+        Me.adminTitleProfile.Text = "******"
+        '
+        'adminPhoneNumberProfile
+        '
+        Me.adminPhoneNumberProfile.AutoSize = True
+        Me.adminPhoneNumberProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.adminPhoneNumberProfile.Location = New System.Drawing.Point(393, 188)
+        Me.adminPhoneNumberProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminPhoneNumberProfile.Name = "adminPhoneNumberProfile"
+        Me.adminPhoneNumberProfile.Size = New System.Drawing.Size(58, 24)
+        Me.adminPhoneNumberProfile.TabIndex = 12
+        Me.adminPhoneNumberProfile.Text = "******"
+        '
+        'adminNameProfile
+        '
+        Me.adminNameProfile.AutoSize = True
+        Me.adminNameProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.adminNameProfile.Location = New System.Drawing.Point(393, 103)
+        Me.adminNameProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminNameProfile.Name = "adminNameProfile"
+        Me.adminNameProfile.Size = New System.Drawing.Size(58, 24)
+        Me.adminNameProfile.TabIndex = 7
+        Me.adminNameProfile.Text = "******"
+        '
+        'adminEmailProfileLabel
+        '
+        Me.adminEmailProfileLabel.AutoSize = True
+        Me.adminEmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminEmailProfileLabel.Location = New System.Drawing.Point(63, 144)
+        Me.adminEmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminEmailProfileLabel.Name = "adminEmailProfileLabel"
+        Me.adminEmailProfileLabel.Size = New System.Drawing.Size(127, 25)
+        Me.adminEmailProfileLabel.TabIndex = 11
+        Me.adminEmailProfileLabel.Text = "User email :"
+        '
+        'adminPhoneNumberProfileLabel
+        '
+        Me.adminPhoneNumberProfileLabel.AutoSize = True
+        Me.adminPhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminPhoneNumberProfileLabel.Location = New System.Drawing.Point(63, 187)
+        Me.adminPhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminPhoneNumberProfileLabel.Name = "adminPhoneNumberProfileLabel"
+        Me.adminPhoneNumberProfileLabel.Size = New System.Drawing.Size(244, 25)
+        Me.adminPhoneNumberProfileLabel.TabIndex = 10
+        Me.adminPhoneNumberProfileLabel.Text = "User telephone nunber :"
+        '
+        'adminTitleProfileLabel
+        '
+        Me.adminTitleProfileLabel.AutoSize = True
+        Me.adminTitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminTitleProfileLabel.Location = New System.Drawing.Point(63, 229)
+        Me.adminTitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminTitleProfileLabel.Name = "adminTitleProfileLabel"
+        Me.adminTitleProfileLabel.Size = New System.Drawing.Size(118, 25)
+        Me.adminTitleProfileLabel.TabIndex = 9
+        Me.adminTitleProfileLabel.Text = "User Title :"
+        '
+        'adminNameProfileLabel
+        '
+        Me.adminNameProfileLabel.AutoSize = True
+        Me.adminNameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminNameProfileLabel.Location = New System.Drawing.Point(63, 102)
+        Me.adminNameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminNameProfileLabel.Name = "adminNameProfileLabel"
+        Me.adminNameProfileLabel.Size = New System.Drawing.Size(129, 25)
+        Me.adminNameProfileLabel.TabIndex = 7
+        Me.adminNameProfileLabel.Text = "User name :"
+        '
+        'profileTitle
+        '
+        Me.profileTitle.AutoSize = True
+        Me.profileTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)
+        Me.profileTitle.Location = New System.Drawing.Point(81, 66)
+        Me.profileTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.profileTitle.Name = "profileTitle"
+        Me.profileTitle.Size = New System.Drawing.Size(93, 30)
+        Me.profileTitle.TabIndex = 30
+        Me.profileTitle.Text = "Profile"
+        '
         'adminHallsPanel
         '
         Me.adminHallsPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.adminHallsPanel.Controls.Add(Me.adminUsersPanel)
+        Me.adminHallsPanel.Controls.Add(Me.hallUpdatePanel)
         Me.adminHallsPanel.Controls.Add(Me.hallAddpanel)
         Me.adminHallsPanel.Controls.Add(Me.hallAddBtn)
         Me.adminHallsPanel.Controls.Add(Me.confirmMsgH)
@@ -1500,17 +1796,293 @@ Partial Class adminhomePage
         Me.adminHallsPanel.Controls.Add(Me.Label21)
         Me.adminHallsPanel.Controls.Add(Me.HallDeleteBtn)
         Me.adminHallsPanel.Controls.Add(Me.Label4)
-        Me.adminHallsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.adminHallsPanel.Location = New System.Drawing.Point(208, 88)
         Me.adminHallsPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminHallsPanel.Name = "adminHallsPanel"
         Me.adminHallsPanel.Size = New System.Drawing.Size(967, 521)
         Me.adminHallsPanel.TabIndex = 42
         Me.adminHallsPanel.Visible = False
         '
+        'hallUpdatePanel
+        '
+        Me.hallUpdatePanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateCancelBtn)
+        Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameInput)
+        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateValidateBtn)
+        Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameLabel)
+        Me.hallUpdatePanel.Location = New System.Drawing.Point(78, 137)
+        Me.hallUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallUpdatePanel.Name = "hallUpdatePanel"
+        Me.hallUpdatePanel.Size = New System.Drawing.Size(831, 290)
+        Me.hallUpdatePanel.TabIndex = 62
+        Me.hallUpdatePanel.Visible = False
+        '
+        'hallUpdateCancelBtn
+        '
+        Me.hallUpdateCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.hallUpdateCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.hallUpdateCancelBtn.FlatAppearance.BorderSize = 0
+        Me.hallUpdateCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hallUpdateCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.hallUpdateCancelBtn.Location = New System.Drawing.Point(493, 238)
+        Me.hallUpdateCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.hallUpdateCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.hallUpdateCancelBtn.Name = "hallUpdateCancelBtn"
+        Me.hallUpdateCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.hallUpdateCancelBtn.TabIndex = 44
+        Me.hallUpdateCancelBtn.Text = "Cancel"
+        Me.hallUpdateCancelBtn.UseVisualStyleBackColor = False
+        '
+        'adminUpdateHallNameInput
+        '
+        Me.adminUpdateHallNameInput.Location = New System.Drawing.Point(311, 90)
+        Me.adminUpdateHallNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.adminUpdateHallNameInput.Name = "adminUpdateHallNameInput"
+        Me.adminUpdateHallNameInput.Size = New System.Drawing.Size(239, 22)
+        Me.adminUpdateHallNameInput.TabIndex = 19
+        '
+        'hallUpdateValidateBtn
+        '
+        Me.hallUpdateValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.hallUpdateValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.hallUpdateValidateBtn.FlatAppearance.BorderSize = 0
+        Me.hallUpdateValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hallUpdateValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.hallUpdateValidateBtn.Location = New System.Drawing.Point(623, 238)
+        Me.hallUpdateValidateBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.hallUpdateValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.hallUpdateValidateBtn.Name = "hallUpdateValidateBtn"
+        Me.hallUpdateValidateBtn.Size = New System.Drawing.Size(127, 39)
+        Me.hallUpdateValidateBtn.TabIndex = 13
+        Me.hallUpdateValidateBtn.Text = "Update"
+        Me.hallUpdateValidateBtn.UseVisualStyleBackColor = False
+        '
+        'adminUpdateHallNameLabel
+        '
+        Me.adminUpdateHallNameLabel.AutoSize = True
+        Me.adminUpdateHallNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminUpdateHallNameLabel.Location = New System.Drawing.Point(71, 87)
+        Me.adminUpdateHallNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminUpdateHallNameLabel.Name = "adminUpdateHallNameLabel"
+        Me.adminUpdateHallNameLabel.Size = New System.Drawing.Size(121, 25)
+        Me.adminUpdateHallNameLabel.TabIndex = 11
+        Me.adminUpdateHallNameLabel.Text = "Hall name :"
+        '
+        'hallAddpanel
+        '
+        Me.hallAddpanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.hallAddpanel.Controls.Add(Me.addHallErrorMsg)
+        Me.hallAddpanel.Controls.Add(Me.HallAddCancelBtn)
+        Me.hallAddpanel.Controls.Add(Me.adminAddHallNameInput)
+        Me.hallAddpanel.Controls.Add(Me.HallAddValidateBtn)
+        Me.hallAddpanel.Controls.Add(Me.adminAddHallNameLabel)
+        Me.hallAddpanel.Location = New System.Drawing.Point(81, 133)
+        Me.hallAddpanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallAddpanel.Name = "hallAddpanel"
+        Me.hallAddpanel.Size = New System.Drawing.Size(831, 290)
+        Me.hallAddpanel.TabIndex = 49
+        Me.hallAddpanel.Visible = False
+        '
+        'addHallErrorMsg
+        '
+        Me.addHallErrorMsg.AutoSize = True
+        Me.addHallErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addHallErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addHallErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.addHallErrorMsg.Location = New System.Drawing.Point(72, 251)
+        Me.addHallErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addHallErrorMsg.Name = "addHallErrorMsg"
+        Me.addHallErrorMsg.Size = New System.Drawing.Size(0, 18)
+        Me.addHallErrorMsg.TabIndex = 61
+        Me.addHallErrorMsg.Visible = False
+        '
+        'HallAddCancelBtn
+        '
+        Me.HallAddCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.HallAddCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.HallAddCancelBtn.FlatAppearance.BorderSize = 0
+        Me.HallAddCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HallAddCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.HallAddCancelBtn.Location = New System.Drawing.Point(493, 238)
+        Me.HallAddCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.HallAddCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.HallAddCancelBtn.Name = "HallAddCancelBtn"
+        Me.HallAddCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.HallAddCancelBtn.TabIndex = 44
+        Me.HallAddCancelBtn.Text = "Cancel"
+        Me.HallAddCancelBtn.UseVisualStyleBackColor = False
+        '
+        'adminAddHallNameInput
+        '
+        Me.adminAddHallNameInput.Location = New System.Drawing.Point(311, 90)
+        Me.adminAddHallNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.adminAddHallNameInput.Name = "adminAddHallNameInput"
+        Me.adminAddHallNameInput.Size = New System.Drawing.Size(239, 22)
+        Me.adminAddHallNameInput.TabIndex = 19
+        '
+        'HallAddValidateBtn
+        '
+        Me.HallAddValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.HallAddValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.HallAddValidateBtn.FlatAppearance.BorderSize = 0
+        Me.HallAddValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HallAddValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.HallAddValidateBtn.Location = New System.Drawing.Point(623, 238)
+        Me.HallAddValidateBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.HallAddValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.HallAddValidateBtn.Name = "HallAddValidateBtn"
+        Me.HallAddValidateBtn.Size = New System.Drawing.Size(127, 39)
+        Me.HallAddValidateBtn.TabIndex = 13
+        Me.HallAddValidateBtn.Text = "Add"
+        Me.HallAddValidateBtn.UseVisualStyleBackColor = False
+        '
+        'adminAddHallNameLabel
+        '
+        Me.adminAddHallNameLabel.AutoSize = True
+        Me.adminAddHallNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adminAddHallNameLabel.Location = New System.Drawing.Point(71, 87)
+        Me.adminAddHallNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminAddHallNameLabel.Name = "adminAddHallNameLabel"
+        Me.adminAddHallNameLabel.Size = New System.Drawing.Size(121, 25)
+        Me.adminAddHallNameLabel.TabIndex = 11
+        Me.adminAddHallNameLabel.Text = "Hall name :"
+        '
+        'hallAddBtn
+        '
+        Me.hallAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hallAddBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.hallAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.hallAddBtn.Location = New System.Drawing.Point(596, 73)
+        Me.hallAddBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallAddBtn.Name = "hallAddBtn"
+        Me.hallAddBtn.Size = New System.Drawing.Size(100, 28)
+        Me.hallAddBtn.TabIndex = 43
+        Me.hallAddBtn.Text = "Add"
+        Me.hallAddBtn.UseVisualStyleBackColor = True
+        '
+        'confirmMsgH
+        '
+        Me.confirmMsgH.AutoSize = True
+        Me.confirmMsgH.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgH.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgH.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgH.Name = "confirmMsgH"
+        Me.confirmMsgH.Size = New System.Drawing.Size(177, 20)
+        Me.confirmMsgH.TabIndex = 41
+        Me.confirmMsgH.Text = "Export successfull ✔"
+        Me.confirmMsgH.Visible = False
+        '
+        'HallUpdateBtn
+        '
+        Me.HallUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HallUpdateBtn.Location = New System.Drawing.Point(812, 133)
+        Me.HallUpdateBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.HallUpdateBtn.Name = "HallUpdateBtn"
+        Me.HallUpdateBtn.Size = New System.Drawing.Size(100, 28)
+        Me.HallUpdateBtn.TabIndex = 38
+        Me.HallUpdateBtn.Text = "Update"
+        Me.HallUpdateBtn.UseVisualStyleBackColor = True
+        Me.HallUpdateBtn.Visible = False
+        '
+        'hallSearchBoxH
+        '
+        Me.hallSearchBoxH.FormattingEnabled = True
+        Me.hallSearchBoxH.Location = New System.Drawing.Point(481, 73)
+        Me.hallSearchBoxH.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallSearchBoxH.Name = "hallSearchBoxH"
+        Me.hallSearchBoxH.Size = New System.Drawing.Size(105, 24)
+        Me.hallSearchBoxH.TabIndex = 37
+        '
+        'searchErrorH
+        '
+        Me.searchErrorH.AutoSize = True
+        Me.searchErrorH.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
+        Me.searchErrorH.Location = New System.Drawing.Point(296, 277)
+        Me.searchErrorH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.searchErrorH.Name = "searchErrorH"
+        Me.searchErrorH.Size = New System.Drawing.Size(349, 47)
+        Me.searchErrorH.TabIndex = 36
+        Me.searchErrorH.Text = "No results found "
+        Me.searchErrorH.Visible = False
+        '
+        'PrintBtnH
+        '
+        Me.PrintBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PrintBtnH.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.PrintBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrintBtnH.Location = New System.Drawing.Point(812, 73)
+        Me.PrintBtnH.Margin = New System.Windows.Forms.Padding(4)
+        Me.PrintBtnH.Name = "PrintBtnH"
+        Me.PrintBtnH.Size = New System.Drawing.Size(100, 28)
+        Me.PrintBtnH.TabIndex = 33
+        Me.PrintBtnH.Text = "Print"
+        Me.PrintBtnH.UseVisualStyleBackColor = True
+        '
+        'exportBtnH
+        '
+        Me.exportBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnH.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnH.Location = New System.Drawing.Point(704, 73)
+        Me.exportBtnH.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnH.Name = "exportBtnH"
+        Me.exportBtnH.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnH.TabIndex = 32
+        Me.exportBtnH.Text = "Export"
+        Me.exportBtnH.UseVisualStyleBackColor = True
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Location = New System.Drawing.Point(81, 133)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersWidth = 51
+        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView3.Size = New System.Drawing.Size(697, 290)
+        Me.DataGridView3.TabIndex = 30
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(81, 52)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(72, 29)
+        Me.Label21.TabIndex = 29
+        Me.Label21.Text = "Halls"
+        '
+        'HallDeleteBtn
+        '
+        Me.HallDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HallDeleteBtn.Location = New System.Drawing.Point(812, 180)
+        Me.HallDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.HallDeleteBtn.Name = "HallDeleteBtn"
+        Me.HallDeleteBtn.Size = New System.Drawing.Size(100, 28)
+        Me.HallDeleteBtn.TabIndex = 45
+        Me.HallDeleteBtn.Text = "Delete"
+        Me.HallDeleteBtn.UseVisualStyleBackColor = True
+        Me.HallDeleteBtn.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(361, 75)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label4.Size = New System.Drawing.Size(98, 24)
+        Me.Label4.TabIndex = 48
+        Me.Label4.Text = "select hall:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'adminUsersPanel
         '
         Me.adminUsersPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.adminUsersPanel.Controls.Add(Me.adminRolePanel)
+        Me.adminUsersPanel.Controls.Add(Me.userUpdatePanel)
         Me.adminUsersPanel.Controls.Add(Me.userAddPanel)
         Me.adminUsersPanel.Controls.Add(Me.userSearchBox)
         Me.adminUsersPanel.Controls.Add(Me.userAddBtn)
@@ -1523,331 +2095,12 @@ Partial Class adminhomePage
         Me.adminUsersPanel.Controls.Add(Me.Label10)
         Me.adminUsersPanel.Controls.Add(Me.userDeleteBtn)
         Me.adminUsersPanel.Controls.Add(Me.Label3)
-        Me.adminUsersPanel.Location = New System.Drawing.Point(0, 0)
+        Me.adminUsersPanel.Location = New System.Drawing.Point(209, 88)
         Me.adminUsersPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminUsersPanel.Name = "adminUsersPanel"
         Me.adminUsersPanel.Size = New System.Drawing.Size(968, 518)
         Me.adminUsersPanel.TabIndex = 49
         Me.adminUsersPanel.Visible = False
-        '
-        'adminRolePanel
-        '
-        Me.adminRolePanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.adminRolePanel.Controls.Add(Me.roleAddPanel)
-        Me.adminRolePanel.Controls.Add(Me.roleDeleteBtn)
-        Me.adminRolePanel.Controls.Add(Me.roleAddBtn)
-        Me.adminRolePanel.Controls.Add(Me.confirmMsgR)
-        Me.adminRolePanel.Controls.Add(Me.roleUpdateBtn)
-        Me.adminRolePanel.Controls.Add(Me.searchErrorR)
-        Me.adminRolePanel.Controls.Add(Me.PrintBtnR)
-        Me.adminRolePanel.Controls.Add(Me.exportBtnR)
-        Me.adminRolePanel.Controls.Add(Me.DataGridView5)
-        Me.adminRolePanel.Controls.Add(Me.Roles)
-        Me.adminRolePanel.Location = New System.Drawing.Point(-1, 0)
-        Me.adminRolePanel.Margin = New System.Windows.Forms.Padding(0)
-        Me.adminRolePanel.Name = "adminRolePanel"
-        Me.adminRolePanel.Size = New System.Drawing.Size(968, 521)
-        Me.adminRolePanel.TabIndex = 62
-        Me.adminRolePanel.Visible = False
-        '
-        'roleAddPanel
-        '
-        Me.roleAddPanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.roleAddPanel.Controls.Add(Me.roleUpdatePanel)
-        Me.roleAddPanel.Controls.Add(Me.addRoleErrorMsg)
-        Me.roleAddPanel.Controls.Add(Me.Label12)
-        Me.roleAddPanel.Controls.Add(Me.roleAddCancelBtn)
-        Me.roleAddPanel.Controls.Add(Me.titleAddNameInput)
-        Me.roleAddPanel.Controls.Add(Me.roleAddValidationBtn)
-        Me.roleAddPanel.Controls.Add(Me.Label24)
-        Me.roleAddPanel.Location = New System.Drawing.Point(81, 133)
-        Me.roleAddPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleAddPanel.Name = "roleAddPanel"
-        Me.roleAddPanel.Size = New System.Drawing.Size(831, 330)
-        Me.roleAddPanel.TabIndex = 60
-        Me.roleAddPanel.Visible = False
-        '
-        'roleUpdatePanel
-        '
-        Me.roleUpdatePanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.roleUpdatePanel.Controls.Add(Me.roleUpdateCancelBtn)
-        Me.roleUpdatePanel.Controls.Add(Me.titleNameInput)
-        Me.roleUpdatePanel.Controls.Add(Me.roleUpdateValidationBtn)
-        Me.roleUpdatePanel.Controls.Add(Me.Label28)
-        Me.roleUpdatePanel.Location = New System.Drawing.Point(0, 0)
-        Me.roleUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleUpdatePanel.Name = "roleUpdatePanel"
-        Me.roleUpdatePanel.Size = New System.Drawing.Size(831, 329)
-        Me.roleUpdatePanel.TabIndex = 60
-        Me.roleUpdatePanel.Visible = False
-        '
-        'roleUpdateCancelBtn
-        '
-        Me.roleUpdateCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.roleUpdateCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.roleUpdateCancelBtn.FlatAppearance.BorderSize = 0
-        Me.roleUpdateCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleUpdateCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.roleUpdateCancelBtn.Location = New System.Drawing.Point(493, 277)
-        Me.roleUpdateCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.roleUpdateCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.roleUpdateCancelBtn.Name = "roleUpdateCancelBtn"
-        Me.roleUpdateCancelBtn.Size = New System.Drawing.Size(105, 39)
-        Me.roleUpdateCancelBtn.TabIndex = 44
-        Me.roleUpdateCancelBtn.Text = "Cancel"
-        Me.roleUpdateCancelBtn.UseVisualStyleBackColor = False
-        '
-        'titleNameInput
-        '
-        Me.titleNameInput.Location = New System.Drawing.Point(359, 112)
-        Me.titleNameInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.titleNameInput.Name = "titleNameInput"
-        Me.titleNameInput.Size = New System.Drawing.Size(239, 22)
-        Me.titleNameInput.TabIndex = 19
-        '
-        'roleUpdateValidationBtn
-        '
-        Me.roleUpdateValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.roleUpdateValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.roleUpdateValidationBtn.FlatAppearance.BorderSize = 0
-        Me.roleUpdateValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleUpdateValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.roleUpdateValidationBtn.Location = New System.Drawing.Point(623, 277)
-        Me.roleUpdateValidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.roleUpdateValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.roleUpdateValidationBtn.Name = "roleUpdateValidationBtn"
-        Me.roleUpdateValidationBtn.Size = New System.Drawing.Size(127, 39)
-        Me.roleUpdateValidationBtn.TabIndex = 13
-        Me.roleUpdateValidationBtn.Text = "Update"
-        Me.roleUpdateValidationBtn.UseVisualStyleBackColor = False
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(71, 111)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(127, 25)
-        Me.Label28.TabIndex = 11
-        Me.Label28.Text = "Role name :"
-        '
-        'addRoleErrorMsg
-        '
-        Me.addRoleErrorMsg.AutoSize = True
-        Me.addRoleErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.addRoleErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addRoleErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addRoleErrorMsg.Location = New System.Drawing.Point(85, 277)
-        Me.addRoleErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.addRoleErrorMsg.Name = "addRoleErrorMsg"
-        Me.addRoleErrorMsg.Size = New System.Drawing.Size(0, 18)
-        Me.addRoleErrorMsg.TabIndex = 59
-        Me.addRoleErrorMsg.Visible = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(75, 290)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(0, 15)
-        Me.Label12.TabIndex = 58
-        Me.Label12.Visible = False
-        '
-        'roleAddCancelBtn
-        '
-        Me.roleAddCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.roleAddCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.roleAddCancelBtn.FlatAppearance.BorderSize = 0
-        Me.roleAddCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleAddCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.roleAddCancelBtn.Location = New System.Drawing.Point(493, 277)
-        Me.roleAddCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.roleAddCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.roleAddCancelBtn.Name = "roleAddCancelBtn"
-        Me.roleAddCancelBtn.Size = New System.Drawing.Size(105, 39)
-        Me.roleAddCancelBtn.TabIndex = 44
-        Me.roleAddCancelBtn.Text = "Cancel"
-        Me.roleAddCancelBtn.UseVisualStyleBackColor = False
-        '
-        'titleAddNameInput
-        '
-        Me.titleAddNameInput.Location = New System.Drawing.Point(371, 112)
-        Me.titleAddNameInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.titleAddNameInput.Name = "titleAddNameInput"
-        Me.titleAddNameInput.Size = New System.Drawing.Size(239, 22)
-        Me.titleAddNameInput.TabIndex = 19
-        '
-        'roleAddValidationBtn
-        '
-        Me.roleAddValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.roleAddValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.roleAddValidationBtn.FlatAppearance.BorderSize = 0
-        Me.roleAddValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleAddValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.roleAddValidationBtn.Location = New System.Drawing.Point(623, 277)
-        Me.roleAddValidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.roleAddValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.roleAddValidationBtn.Name = "roleAddValidationBtn"
-        Me.roleAddValidationBtn.Size = New System.Drawing.Size(127, 39)
-        Me.roleAddValidationBtn.TabIndex = 13
-        Me.roleAddValidationBtn.Text = "Add"
-        Me.roleAddValidationBtn.UseVisualStyleBackColor = False
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(83, 111)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(127, 25)
-        Me.Label24.TabIndex = 11
-        Me.Label24.Text = "Role name :"
-        '
-        'roleDeleteBtn
-        '
-        Me.roleDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleDeleteBtn.Location = New System.Drawing.Point(811, 169)
-        Me.roleDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleDeleteBtn.Name = "roleDeleteBtn"
-        Me.roleDeleteBtn.Size = New System.Drawing.Size(100, 28)
-        Me.roleDeleteBtn.TabIndex = 46
-        Me.roleDeleteBtn.Text = "Delete"
-        Me.roleDeleteBtn.UseVisualStyleBackColor = True
-        Me.roleDeleteBtn.Visible = False
-        '
-        'roleAddBtn
-        '
-        Me.roleAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleAddBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.roleAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.roleAddBtn.Location = New System.Drawing.Point(596, 73)
-        Me.roleAddBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleAddBtn.Name = "roleAddBtn"
-        Me.roleAddBtn.Size = New System.Drawing.Size(100, 28)
-        Me.roleAddBtn.TabIndex = 43
-        Me.roleAddBtn.Text = "Add"
-        Me.roleAddBtn.UseVisualStyleBackColor = True
-        '
-        'confirmMsgR
-        '
-        Me.confirmMsgR.AutoSize = True
-        Me.confirmMsgR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.confirmMsgR.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgR.Location = New System.Drawing.Point(693, 21)
-        Me.confirmMsgR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.confirmMsgR.Name = "confirmMsgR"
-        Me.confirmMsgR.Size = New System.Drawing.Size(177, 20)
-        Me.confirmMsgR.TabIndex = 41
-        Me.confirmMsgR.Text = "Export successfull ✔"
-        Me.confirmMsgR.Visible = False
-        '
-        'roleUpdateBtn
-        '
-        Me.roleUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleUpdateBtn.Location = New System.Drawing.Point(812, 133)
-        Me.roleUpdateBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleUpdateBtn.Name = "roleUpdateBtn"
-        Me.roleUpdateBtn.Size = New System.Drawing.Size(100, 28)
-        Me.roleUpdateBtn.TabIndex = 38
-        Me.roleUpdateBtn.Text = "Update"
-        Me.roleUpdateBtn.UseVisualStyleBackColor = True
-        Me.roleUpdateBtn.Visible = False
-        '
-        'searchErrorR
-        '
-        Me.searchErrorR.AutoSize = True
-        Me.searchErrorR.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
-        Me.searchErrorR.Location = New System.Drawing.Point(296, 277)
-        Me.searchErrorR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.searchErrorR.Name = "searchErrorR"
-        Me.searchErrorR.Size = New System.Drawing.Size(349, 47)
-        Me.searchErrorR.TabIndex = 36
-        Me.searchErrorR.Text = "No results found "
-        Me.searchErrorR.Visible = False
-        '
-        'PrintBtnR
-        '
-        Me.PrintBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PrintBtnR.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.PrintBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnR.Location = New System.Drawing.Point(812, 73)
-        Me.PrintBtnR.Margin = New System.Windows.Forms.Padding(4)
-        Me.PrintBtnR.Name = "PrintBtnR"
-        Me.PrintBtnR.Size = New System.Drawing.Size(100, 28)
-        Me.PrintBtnR.TabIndex = 33
-        Me.PrintBtnR.Text = "Print"
-        Me.PrintBtnR.UseVisualStyleBackColor = True
-        '
-        'exportBtnR
-        '
-        Me.exportBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnR.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnR.Location = New System.Drawing.Point(704, 73)
-        Me.exportBtnR.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnR.Name = "exportBtnR"
-        Me.exportBtnR.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnR.TabIndex = 32
-        Me.exportBtnR.Text = "Export"
-        Me.exportBtnR.UseVisualStyleBackColor = True
-        '
-        'DataGridView5
-        '
-        Me.DataGridView5.AllowUserToAddRows = False
-        Me.DataGridView5.AllowUserToDeleteRows = False
-        Me.DataGridView5.AllowUserToResizeColumns = False
-        Me.DataGridView5.AllowUserToResizeRows = False
-        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView5.Location = New System.Drawing.Point(81, 133)
-        Me.DataGridView5.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView5.Name = "DataGridView5"
-        Me.DataGridView5.RowHeadersWidth = 51
-        Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView5.Size = New System.Drawing.Size(697, 290)
-        Me.DataGridView5.TabIndex = 30
-        '
-        'Roles
-        '
-        Me.Roles.AutoSize = True
-        Me.Roles.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Roles.Location = New System.Drawing.Point(81, 52)
-        Me.Roles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Roles.Name = "Roles"
-        Me.Roles.Size = New System.Drawing.Size(81, 29)
-        Me.Roles.TabIndex = 29
-        Me.Roles.Text = "Roles"
-        '
-        'userAddPanel
-        '
-        Me.userAddPanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.userAddPanel.Controls.Add(Me.userUpdatePanel)
-        Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
-        Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
-        Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
-        Me.userAddPanel.Controls.Add(Me.Label6)
-        Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
-        Me.userAddPanel.Controls.Add(Me.Label14)
-        Me.userAddPanel.Controls.Add(Me.Label15)
-        Me.userAddPanel.Controls.Add(Me.userUserAddPhoneInput)
-        Me.userAddPanel.Controls.Add(Me.Label16)
-        Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
-        Me.userAddPanel.Controls.Add(Me.Label17)
-        Me.userAddPanel.Controls.Add(Me.userAddCancelBtn)
-        Me.userAddPanel.Controls.Add(Me.userUserAddNameInput)
-        Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
-        Me.userAddPanel.Controls.Add(Me.Label18)
-        Me.userAddPanel.Location = New System.Drawing.Point(81, 132)
-        Me.userAddPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.userAddPanel.Name = "userAddPanel"
-        Me.userAddPanel.Size = New System.Drawing.Size(831, 327)
-        Me.userAddPanel.TabIndex = 60
-        Me.userAddPanel.Visible = False
         '
         'userUpdatePanel
         '
@@ -1862,7 +2115,7 @@ Partial Class adminhomePage
         Me.userUpdatePanel.Controls.Add(Me.userUserNameInput)
         Me.userUpdatePanel.Controls.Add(Me.userUpdateValidationBtn)
         Me.userUpdatePanel.Controls.Add(Me.Label7)
-        Me.userUpdatePanel.Location = New System.Drawing.Point(1, 1)
+        Me.userUpdatePanel.Location = New System.Drawing.Point(77, 131)
         Me.userUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.userUpdatePanel.Name = "userUpdatePanel"
         Me.userUpdatePanel.Size = New System.Drawing.Size(831, 327)
@@ -1977,6 +2230,31 @@ Partial Class adminhomePage
         Me.Label7.Size = New System.Drawing.Size(126, 25)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "user name :"
+        '
+        'userAddPanel
+        '
+        Me.userAddPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
+        Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
+        Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
+        Me.userAddPanel.Controls.Add(Me.Label6)
+        Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
+        Me.userAddPanel.Controls.Add(Me.Label14)
+        Me.userAddPanel.Controls.Add(Me.Label15)
+        Me.userAddPanel.Controls.Add(Me.userUserAddPhoneInput)
+        Me.userAddPanel.Controls.Add(Me.Label16)
+        Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
+        Me.userAddPanel.Controls.Add(Me.Label17)
+        Me.userAddPanel.Controls.Add(Me.userAddCancelBtn)
+        Me.userAddPanel.Controls.Add(Me.userUserAddNameInput)
+        Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
+        Me.userAddPanel.Controls.Add(Me.Label18)
+        Me.userAddPanel.Location = New System.Drawing.Point(81, 132)
+        Me.userAddPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.userAddPanel.Name = "userAddPanel"
+        Me.userAddPanel.Size = New System.Drawing.Size(831, 327)
+        Me.userAddPanel.TabIndex = 60
+        Me.userAddPanel.Visible = False
         '
         'addUserErrorMsg
         '
@@ -2267,581 +2545,298 @@ Partial Class adminhomePage
         Me.Label3.Text = "enter username:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'hallAddpanel
-        '
-        Me.hallAddpanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.hallAddpanel.Controls.Add(Me.hallUpdatePanel)
-        Me.hallAddpanel.Controls.Add(Me.addHallErrorMsg)
-        Me.hallAddpanel.Controls.Add(Me.HallAddCancelBtn)
-        Me.hallAddpanel.Controls.Add(Me.adminAddHallNameInput)
-        Me.hallAddpanel.Controls.Add(Me.HallAddValidateBtn)
-        Me.hallAddpanel.Controls.Add(Me.adminAddHallNameLabel)
-        Me.hallAddpanel.Location = New System.Drawing.Point(81, 133)
-        Me.hallAddpanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallAddpanel.Name = "hallAddpanel"
-        Me.hallAddpanel.Size = New System.Drawing.Size(831, 290)
-        Me.hallAddpanel.TabIndex = 49
-        Me.hallAddpanel.Visible = False
-        '
-        'hallUpdatePanel
-        '
-        Me.hallUpdatePanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateCancelBtn)
-        Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameInput)
-        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateValidateBtn)
-        Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameLabel)
-        Me.hallUpdatePanel.Location = New System.Drawing.Point(1, 1)
-        Me.hallUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallUpdatePanel.Name = "hallUpdatePanel"
-        Me.hallUpdatePanel.Size = New System.Drawing.Size(831, 290)
-        Me.hallUpdatePanel.TabIndex = 62
-        Me.hallUpdatePanel.Visible = False
-        '
-        'hallUpdateCancelBtn
-        '
-        Me.hallUpdateCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.hallUpdateCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.hallUpdateCancelBtn.FlatAppearance.BorderSize = 0
-        Me.hallUpdateCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.hallUpdateCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.hallUpdateCancelBtn.Location = New System.Drawing.Point(493, 238)
-        Me.hallUpdateCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.hallUpdateCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.hallUpdateCancelBtn.Name = "hallUpdateCancelBtn"
-        Me.hallUpdateCancelBtn.Size = New System.Drawing.Size(105, 39)
-        Me.hallUpdateCancelBtn.TabIndex = 44
-        Me.hallUpdateCancelBtn.Text = "Cancel"
-        Me.hallUpdateCancelBtn.UseVisualStyleBackColor = False
-        '
-        'adminUpdateHallNameInput
-        '
-        Me.adminUpdateHallNameInput.Location = New System.Drawing.Point(311, 90)
-        Me.adminUpdateHallNameInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.adminUpdateHallNameInput.Name = "adminUpdateHallNameInput"
-        Me.adminUpdateHallNameInput.Size = New System.Drawing.Size(239, 22)
-        Me.adminUpdateHallNameInput.TabIndex = 19
-        '
-        'hallUpdateValidateBtn
-        '
-        Me.hallUpdateValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.hallUpdateValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.hallUpdateValidateBtn.FlatAppearance.BorderSize = 0
-        Me.hallUpdateValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.hallUpdateValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.hallUpdateValidateBtn.Location = New System.Drawing.Point(623, 238)
-        Me.hallUpdateValidateBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.hallUpdateValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.hallUpdateValidateBtn.Name = "hallUpdateValidateBtn"
-        Me.hallUpdateValidateBtn.Size = New System.Drawing.Size(127, 39)
-        Me.hallUpdateValidateBtn.TabIndex = 13
-        Me.hallUpdateValidateBtn.Text = "Update"
-        Me.hallUpdateValidateBtn.UseVisualStyleBackColor = False
-        '
-        'adminUpdateHallNameLabel
-        '
-        Me.adminUpdateHallNameLabel.AutoSize = True
-        Me.adminUpdateHallNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminUpdateHallNameLabel.Location = New System.Drawing.Point(71, 87)
-        Me.adminUpdateHallNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminUpdateHallNameLabel.Name = "adminUpdateHallNameLabel"
-        Me.adminUpdateHallNameLabel.Size = New System.Drawing.Size(121, 25)
-        Me.adminUpdateHallNameLabel.TabIndex = 11
-        Me.adminUpdateHallNameLabel.Text = "Hall name :"
-        '
-        'addHallErrorMsg
-        '
-        Me.addHallErrorMsg.AutoSize = True
-        Me.addHallErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.addHallErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addHallErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addHallErrorMsg.Location = New System.Drawing.Point(72, 251)
-        Me.addHallErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.addHallErrorMsg.Name = "addHallErrorMsg"
-        Me.addHallErrorMsg.Size = New System.Drawing.Size(0, 18)
-        Me.addHallErrorMsg.TabIndex = 61
-        Me.addHallErrorMsg.Visible = False
-        '
-        'HallAddCancelBtn
-        '
-        Me.HallAddCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.HallAddCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.HallAddCancelBtn.FlatAppearance.BorderSize = 0
-        Me.HallAddCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HallAddCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.HallAddCancelBtn.Location = New System.Drawing.Point(493, 238)
-        Me.HallAddCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.HallAddCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.HallAddCancelBtn.Name = "HallAddCancelBtn"
-        Me.HallAddCancelBtn.Size = New System.Drawing.Size(105, 39)
-        Me.HallAddCancelBtn.TabIndex = 44
-        Me.HallAddCancelBtn.Text = "Cancel"
-        Me.HallAddCancelBtn.UseVisualStyleBackColor = False
-        '
-        'adminAddHallNameInput
-        '
-        Me.adminAddHallNameInput.Location = New System.Drawing.Point(311, 90)
-        Me.adminAddHallNameInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.adminAddHallNameInput.Name = "adminAddHallNameInput"
-        Me.adminAddHallNameInput.Size = New System.Drawing.Size(239, 22)
-        Me.adminAddHallNameInput.TabIndex = 19
-        '
-        'HallAddValidateBtn
-        '
-        Me.HallAddValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.HallAddValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.HallAddValidateBtn.FlatAppearance.BorderSize = 0
-        Me.HallAddValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HallAddValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.HallAddValidateBtn.Location = New System.Drawing.Point(623, 238)
-        Me.HallAddValidateBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.HallAddValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.HallAddValidateBtn.Name = "HallAddValidateBtn"
-        Me.HallAddValidateBtn.Size = New System.Drawing.Size(127, 39)
-        Me.HallAddValidateBtn.TabIndex = 13
-        Me.HallAddValidateBtn.Text = "Add"
-        Me.HallAddValidateBtn.UseVisualStyleBackColor = False
-        '
-        'adminAddHallNameLabel
-        '
-        Me.adminAddHallNameLabel.AutoSize = True
-        Me.adminAddHallNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminAddHallNameLabel.Location = New System.Drawing.Point(71, 87)
-        Me.adminAddHallNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminAddHallNameLabel.Name = "adminAddHallNameLabel"
-        Me.adminAddHallNameLabel.Size = New System.Drawing.Size(121, 25)
-        Me.adminAddHallNameLabel.TabIndex = 11
-        Me.adminAddHallNameLabel.Text = "Hall name :"
-        '
-        'hallAddBtn
-        '
-        Me.hallAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.hallAddBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.hallAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.hallAddBtn.Location = New System.Drawing.Point(596, 73)
-        Me.hallAddBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallAddBtn.Name = "hallAddBtn"
-        Me.hallAddBtn.Size = New System.Drawing.Size(100, 28)
-        Me.hallAddBtn.TabIndex = 43
-        Me.hallAddBtn.Text = "Add"
-        Me.hallAddBtn.UseVisualStyleBackColor = True
-        '
-        'confirmMsgH
-        '
-        Me.confirmMsgH.AutoSize = True
-        Me.confirmMsgH.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.confirmMsgH.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgH.Location = New System.Drawing.Point(693, 21)
-        Me.confirmMsgH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.confirmMsgH.Name = "confirmMsgH"
-        Me.confirmMsgH.Size = New System.Drawing.Size(177, 20)
-        Me.confirmMsgH.TabIndex = 41
-        Me.confirmMsgH.Text = "Export successfull ✔"
-        Me.confirmMsgH.Visible = False
-        '
-        'HallUpdateBtn
-        '
-        Me.HallUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HallUpdateBtn.Location = New System.Drawing.Point(812, 133)
-        Me.HallUpdateBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.HallUpdateBtn.Name = "HallUpdateBtn"
-        Me.HallUpdateBtn.Size = New System.Drawing.Size(100, 28)
-        Me.HallUpdateBtn.TabIndex = 38
-        Me.HallUpdateBtn.Text = "Update"
-        Me.HallUpdateBtn.UseVisualStyleBackColor = True
-        Me.HallUpdateBtn.Visible = False
-        '
-        'hallSearchBoxH
-        '
-        Me.hallSearchBoxH.FormattingEnabled = True
-        Me.hallSearchBoxH.Location = New System.Drawing.Point(481, 73)
-        Me.hallSearchBoxH.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallSearchBoxH.Name = "hallSearchBoxH"
-        Me.hallSearchBoxH.Size = New System.Drawing.Size(105, 24)
-        Me.hallSearchBoxH.TabIndex = 37
-        '
-        'searchErrorH
-        '
-        Me.searchErrorH.AutoSize = True
-        Me.searchErrorH.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
-        Me.searchErrorH.Location = New System.Drawing.Point(296, 277)
-        Me.searchErrorH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.searchErrorH.Name = "searchErrorH"
-        Me.searchErrorH.Size = New System.Drawing.Size(349, 47)
-        Me.searchErrorH.TabIndex = 36
-        Me.searchErrorH.Text = "No results found "
-        Me.searchErrorH.Visible = False
-        '
-        'PrintBtnH
-        '
-        Me.PrintBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PrintBtnH.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.PrintBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnH.Location = New System.Drawing.Point(812, 73)
-        Me.PrintBtnH.Margin = New System.Windows.Forms.Padding(4)
-        Me.PrintBtnH.Name = "PrintBtnH"
-        Me.PrintBtnH.Size = New System.Drawing.Size(100, 28)
-        Me.PrintBtnH.TabIndex = 33
-        Me.PrintBtnH.Text = "Print"
-        Me.PrintBtnH.UseVisualStyleBackColor = True
-        '
-        'exportBtnH
-        '
-        Me.exportBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnH.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnH.Location = New System.Drawing.Point(704, 73)
-        Me.exportBtnH.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnH.Name = "exportBtnH"
-        Me.exportBtnH.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnH.TabIndex = 32
-        Me.exportBtnH.Text = "Export"
-        Me.exportBtnH.UseVisualStyleBackColor = True
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(81, 133)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowHeadersWidth = 51
-        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView3.Size = New System.Drawing.Size(697, 290)
-        Me.DataGridView3.TabIndex = 30
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(81, 52)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(72, 29)
-        Me.Label21.TabIndex = 29
-        Me.Label21.Text = "Halls"
-        '
-        'HallDeleteBtn
-        '
-        Me.HallDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HallDeleteBtn.Location = New System.Drawing.Point(812, 180)
-        Me.HallDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.HallDeleteBtn.Name = "HallDeleteBtn"
-        Me.HallDeleteBtn.Size = New System.Drawing.Size(100, 28)
-        Me.HallDeleteBtn.TabIndex = 45
-        Me.HallDeleteBtn.Text = "Delete"
-        Me.HallDeleteBtn.UseVisualStyleBackColor = True
-        Me.HallDeleteBtn.Visible = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(361, 75)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label4.Size = New System.Drawing.Size(98, 24)
-        Me.Label4.TabIndex = 48
-        Me.Label4.Text = "select hall:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'profileSubPanel1
-        '
-        Me.profileSubPanel1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.profileSubPanel1.Controls.Add(Me.profileSubPanel2)
-        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
-        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminNameProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminNameProfileLabel)
-        Me.profileSubPanel1.Location = New System.Drawing.Point(88, 114)
-        Me.profileSubPanel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.profileSubPanel1.Name = "profileSubPanel1"
-        Me.profileSubPanel1.Size = New System.Drawing.Size(783, 310)
-        Me.profileSubPanel1.TabIndex = 31
-        '
-        'profileSubPanel2
-        '
-        Me.profileSubPanel2.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
-        Me.profileSubPanel2.Controls.Add(Me.updateProfileCancelBtn)
-        Me.profileSubPanel2.Controls.Add(Me.updateProfileErrorMsg)
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userEmailProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userNameProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidateBtn)
-        Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
-        Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
-        Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
-        Me.profileSubPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.profileSubPanel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.profileSubPanel2.Name = "profileSubPanel2"
-        Me.profileSubPanel2.Size = New System.Drawing.Size(783, 310)
-        Me.profileSubPanel2.TabIndex = 35
-        Me.profileSubPanel2.Visible = False
-        '
-        'userConfirmPwdProfileInput
-        '
-        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(399, 224)
-        Me.userConfirmPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
-        Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(239, 22)
-        Me.userConfirmPwdProfileInput.TabIndex = 22
-        '
-        'userConfirmPwdProfileLabel
-        '
-        Me.userConfirmPwdProfileLabel.AutoSize = True
-        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(64, 222)
-        Me.userConfirmPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
-        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(192, 25)
-        Me.userConfirmPwdProfileLabel.TabIndex = 21
-        Me.userConfirmPwdProfileLabel.Text = "Confirm password:"
-        '
-        'updateProfileCancelBtn
-        '
-        Me.updateProfileCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.updateProfileCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.updateProfileCancelBtn.FlatAppearance.BorderSize = 0
-        Me.updateProfileCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileCancelBtn.Location = New System.Drawing.Point(555, 265)
-        Me.updateProfileCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.updateProfileCancelBtn.Name = "updateProfileCancelBtn"
-        Me.updateProfileCancelBtn.Size = New System.Drawing.Size(89, 27)
-        Me.updateProfileCancelBtn.TabIndex = 20
-        Me.updateProfileCancelBtn.Text = "Cancel"
-        Me.updateProfileCancelBtn.UseVisualStyleBackColor = False
-        '
-        'updateProfileErrorMsg
-        '
-        Me.updateProfileErrorMsg.AutoSize = True
-        Me.updateProfileErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.updateProfileErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updateProfileErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.updateProfileErrorMsg.Location = New System.Drawing.Point(200, 277)
-        Me.updateProfileErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.updateProfileErrorMsg.Name = "updateProfileErrorMsg"
-        Me.updateProfileErrorMsg.Size = New System.Drawing.Size(0, 15)
-        Me.updateProfileErrorMsg.TabIndex = 19
-        Me.updateProfileErrorMsg.Visible = False
-        '
-        'userPwdProfileInput
-        '
-        Me.userPwdProfileInput.Location = New System.Drawing.Point(399, 185)
-        Me.userPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userPwdProfileInput.Name = "userPwdProfileInput"
-        Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userPwdProfileInput.Size = New System.Drawing.Size(239, 22)
-        Me.userPwdProfileInput.TabIndex = 18
-        '
-        'userPhoneNumberProfileInput
-        '
-        Me.userPhoneNumberProfileInput.Location = New System.Drawing.Point(399, 105)
-        Me.userPhoneNumberProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userPhoneNumberProfileInput.Name = "userPhoneNumberProfileInput"
-        Me.userPhoneNumberProfileInput.Size = New System.Drawing.Size(239, 22)
-        Me.userPhoneNumberProfileInput.TabIndex = 17
-        '
-        'userEmailProfileInput
-        '
-        Me.userEmailProfileInput.Location = New System.Drawing.Point(399, 63)
-        Me.userEmailProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userEmailProfileInput.Name = "userEmailProfileInput"
-        Me.userEmailProfileInput.Size = New System.Drawing.Size(239, 22)
-        Me.userEmailProfileInput.TabIndex = 16
-        '
-        'userNameProfileInput
-        '
-        Me.userNameProfileInput.Location = New System.Drawing.Point(399, 20)
-        Me.userNameProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userNameProfileInput.Name = "userNameProfileInput"
-        Me.userNameProfileInput.Size = New System.Drawing.Size(239, 22)
-        Me.userNameProfileInput.TabIndex = 15
-        '
-        'updateProfileValidateBtn
-        '
-        Me.updateProfileValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.updateProfileValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.updateProfileValidateBtn.FlatAppearance.BorderSize = 0
-        Me.updateProfileValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileValidateBtn.Location = New System.Drawing.Point(667, 265)
-        Me.updateProfileValidateBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.updateProfileValidateBtn.Name = "updateProfileValidateBtn"
-        Me.updateProfileValidateBtn.Size = New System.Drawing.Size(89, 27)
-        Me.updateProfileValidateBtn.TabIndex = 13
-        Me.updateProfileValidateBtn.Text = "Done"
-        Me.updateProfileValidateBtn.UseVisualStyleBackColor = False
-        '
-        'userEmailProfileLabel2
-        '
-        Me.userEmailProfileLabel2.AutoSize = True
-        Me.userEmailProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userEmailProfileLabel2.Location = New System.Drawing.Point(65, 59)
-        Me.userEmailProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userEmailProfileLabel2.Name = "userEmailProfileLabel2"
-        Me.userEmailProfileLabel2.Size = New System.Drawing.Size(127, 25)
-        Me.userEmailProfileLabel2.TabIndex = 11
-        Me.userEmailProfileLabel2.Text = "User email :"
-        '
-        'userPhoneNumberProfileLabel2
-        '
-        Me.userPhoneNumberProfileLabel2.AutoSize = True
-        Me.userPhoneNumberProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userPhoneNumberProfileLabel2.Location = New System.Drawing.Point(65, 102)
-        Me.userPhoneNumberProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userPhoneNumberProfileLabel2.Name = "userPhoneNumberProfileLabel2"
-        Me.userPhoneNumberProfileLabel2.Size = New System.Drawing.Size(244, 25)
-        Me.userPhoneNumberProfileLabel2.TabIndex = 10
-        Me.userPhoneNumberProfileLabel2.Text = "User telephone nunber :"
-        '
-        'userPwdProfileLabel
-        '
-        Me.userPwdProfileLabel.AutoSize = True
-        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 182)
-        Me.userPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
-        Me.userPwdProfileLabel.Size = New System.Drawing.Size(213, 25)
-        Me.userPwdProfileLabel.TabIndex = 9
-        Me.userPwdProfileLabel.Text = "Enter new password:"
-        '
-        'userNameProfileLabel2
-        '
-        Me.userNameProfileLabel2.AutoSize = True
-        Me.userNameProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userNameProfileLabel2.Location = New System.Drawing.Point(65, 17)
-        Me.userNameProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userNameProfileLabel2.Name = "userNameProfileLabel2"
-        Me.userNameProfileLabel2.Size = New System.Drawing.Size(129, 25)
-        Me.userNameProfileLabel2.TabIndex = 7
-        Me.userNameProfileLabel2.Text = "User name :"
-        '
-        'updateProfileShowBtn
-        '
-        Me.updateProfileShowBtn.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.updateProfileShowBtn.FlatAppearance.BorderSize = 0
-        Me.updateProfileShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileShowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileShowBtn.Location = New System.Drawing.Point(629, 252)
-        Me.updateProfileShowBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileShowBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
-        Me.updateProfileShowBtn.Size = New System.Drawing.Size(127, 39)
-        Me.updateProfileShowBtn.TabIndex = 13
-        Me.updateProfileShowBtn.Text = "Update"
-        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
-        '
-        'adminEmailProfile
-        '
-        Me.adminEmailProfile.AutoSize = True
-        Me.adminEmailProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.adminEmailProfile.Location = New System.Drawing.Point(393, 145)
-        Me.adminEmailProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminEmailProfile.Name = "adminEmailProfile"
-        Me.adminEmailProfile.Size = New System.Drawing.Size(58, 24)
-        Me.adminEmailProfile.TabIndex = 14
-        Me.adminEmailProfile.Text = "******"
-        '
-        'adminTitleProfile
-        '
-        Me.adminTitleProfile.AutoSize = True
-        Me.adminTitleProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.adminTitleProfile.Location = New System.Drawing.Point(393, 234)
-        Me.adminTitleProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminTitleProfile.Name = "adminTitleProfile"
-        Me.adminTitleProfile.Size = New System.Drawing.Size(58, 24)
-        Me.adminTitleProfile.TabIndex = 13
-        Me.adminTitleProfile.Text = "******"
-        '
-        'adminPhoneNumberProfile
-        '
-        Me.adminPhoneNumberProfile.AutoSize = True
-        Me.adminPhoneNumberProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.adminPhoneNumberProfile.Location = New System.Drawing.Point(393, 188)
-        Me.adminPhoneNumberProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminPhoneNumberProfile.Name = "adminPhoneNumberProfile"
-        Me.adminPhoneNumberProfile.Size = New System.Drawing.Size(58, 24)
-        Me.adminPhoneNumberProfile.TabIndex = 12
-        Me.adminPhoneNumberProfile.Text = "******"
-        '
-        'adminNameProfile
-        '
-        Me.adminNameProfile.AutoSize = True
-        Me.adminNameProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.adminNameProfile.Location = New System.Drawing.Point(393, 103)
-        Me.adminNameProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminNameProfile.Name = "adminNameProfile"
-        Me.adminNameProfile.Size = New System.Drawing.Size(58, 24)
-        Me.adminNameProfile.TabIndex = 7
-        Me.adminNameProfile.Text = "******"
-        '
-        'adminEmailProfileLabel
-        '
-        Me.adminEmailProfileLabel.AutoSize = True
-        Me.adminEmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminEmailProfileLabel.Location = New System.Drawing.Point(63, 144)
-        Me.adminEmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminEmailProfileLabel.Name = "adminEmailProfileLabel"
-        Me.adminEmailProfileLabel.Size = New System.Drawing.Size(127, 25)
-        Me.adminEmailProfileLabel.TabIndex = 11
-        Me.adminEmailProfileLabel.Text = "User email :"
-        '
-        'adminPhoneNumberProfileLabel
-        '
-        Me.adminPhoneNumberProfileLabel.AutoSize = True
-        Me.adminPhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminPhoneNumberProfileLabel.Location = New System.Drawing.Point(63, 187)
-        Me.adminPhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminPhoneNumberProfileLabel.Name = "adminPhoneNumberProfileLabel"
-        Me.adminPhoneNumberProfileLabel.Size = New System.Drawing.Size(244, 25)
-        Me.adminPhoneNumberProfileLabel.TabIndex = 10
-        Me.adminPhoneNumberProfileLabel.Text = "User telephone nunber :"
-        '
-        'adminTitleProfileLabel
-        '
-        Me.adminTitleProfileLabel.AutoSize = True
-        Me.adminTitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminTitleProfileLabel.Location = New System.Drawing.Point(63, 229)
-        Me.adminTitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminTitleProfileLabel.Name = "adminTitleProfileLabel"
-        Me.adminTitleProfileLabel.Size = New System.Drawing.Size(118, 25)
-        Me.adminTitleProfileLabel.TabIndex = 9
-        Me.adminTitleProfileLabel.Text = "User Title :"
-        '
-        'adminNameProfileLabel
-        '
-        Me.adminNameProfileLabel.AutoSize = True
-        Me.adminNameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adminNameProfileLabel.Location = New System.Drawing.Point(63, 102)
-        Me.adminNameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.adminNameProfileLabel.Name = "adminNameProfileLabel"
-        Me.adminNameProfileLabel.Size = New System.Drawing.Size(129, 25)
-        Me.adminNameProfileLabel.TabIndex = 7
-        Me.adminNameProfileLabel.Text = "User name :"
-        '
-        'profileTitle
-        '
-        Me.profileTitle.AutoSize = True
-        Me.profileTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, System.Drawing.FontStyle.Bold)
-        Me.profileTitle.Location = New System.Drawing.Point(81, 66)
-        Me.profileTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.profileTitle.Name = "profileTitle"
-        Me.profileTitle.Size = New System.Drawing.Size(93, 30)
-        Me.profileTitle.TabIndex = 30
-        Me.profileTitle.Text = "Profile"
+        'adminRolePanel
+        '
+        Me.adminRolePanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.adminRolePanel.Controls.Add(Me.roleUpdatePanel)
+        Me.adminRolePanel.Controls.Add(Me.roleAddPanel)
+        Me.adminRolePanel.Controls.Add(Me.roleDeleteBtn)
+        Me.adminRolePanel.Controls.Add(Me.roleAddBtn)
+        Me.adminRolePanel.Controls.Add(Me.confirmMsgR)
+        Me.adminRolePanel.Controls.Add(Me.roleUpdateBtn)
+        Me.adminRolePanel.Controls.Add(Me.searchErrorR)
+        Me.adminRolePanel.Controls.Add(Me.PrintBtnR)
+        Me.adminRolePanel.Controls.Add(Me.exportBtnR)
+        Me.adminRolePanel.Controls.Add(Me.DataGridView5)
+        Me.adminRolePanel.Controls.Add(Me.Roles)
+        Me.adminRolePanel.Location = New System.Drawing.Point(210, 88)
+        Me.adminRolePanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.adminRolePanel.Name = "adminRolePanel"
+        Me.adminRolePanel.Size = New System.Drawing.Size(968, 521)
+        Me.adminRolePanel.TabIndex = 62
+        Me.adminRolePanel.Visible = False
+        '
+        'roleUpdatePanel
+        '
+        Me.roleUpdatePanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.roleUpdatePanel.Controls.Add(Me.roleUpdateCancelBtn)
+        Me.roleUpdatePanel.Controls.Add(Me.titleNameInput)
+        Me.roleUpdatePanel.Controls.Add(Me.roleUpdateValidationBtn)
+        Me.roleUpdatePanel.Controls.Add(Me.Label28)
+        Me.roleUpdatePanel.Location = New System.Drawing.Point(80, 133)
+        Me.roleUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleUpdatePanel.Name = "roleUpdatePanel"
+        Me.roleUpdatePanel.Size = New System.Drawing.Size(831, 329)
+        Me.roleUpdatePanel.TabIndex = 60
+        Me.roleUpdatePanel.Visible = False
+        '
+        'roleUpdateCancelBtn
+        '
+        Me.roleUpdateCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.roleUpdateCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.roleUpdateCancelBtn.FlatAppearance.BorderSize = 0
+        Me.roleUpdateCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleUpdateCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.roleUpdateCancelBtn.Location = New System.Drawing.Point(493, 277)
+        Me.roleUpdateCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.roleUpdateCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.roleUpdateCancelBtn.Name = "roleUpdateCancelBtn"
+        Me.roleUpdateCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.roleUpdateCancelBtn.TabIndex = 44
+        Me.roleUpdateCancelBtn.Text = "Cancel"
+        Me.roleUpdateCancelBtn.UseVisualStyleBackColor = False
+        '
+        'titleNameInput
+        '
+        Me.titleNameInput.Location = New System.Drawing.Point(359, 112)
+        Me.titleNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.titleNameInput.Name = "titleNameInput"
+        Me.titleNameInput.Size = New System.Drawing.Size(239, 22)
+        Me.titleNameInput.TabIndex = 19
+        '
+        'roleUpdateValidationBtn
+        '
+        Me.roleUpdateValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.roleUpdateValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.roleUpdateValidationBtn.FlatAppearance.BorderSize = 0
+        Me.roleUpdateValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleUpdateValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.roleUpdateValidationBtn.Location = New System.Drawing.Point(623, 277)
+        Me.roleUpdateValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.roleUpdateValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.roleUpdateValidationBtn.Name = "roleUpdateValidationBtn"
+        Me.roleUpdateValidationBtn.Size = New System.Drawing.Size(127, 39)
+        Me.roleUpdateValidationBtn.TabIndex = 13
+        Me.roleUpdateValidationBtn.Text = "Update"
+        Me.roleUpdateValidationBtn.UseVisualStyleBackColor = False
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(71, 111)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(127, 25)
+        Me.Label28.TabIndex = 11
+        Me.Label28.Text = "Role name :"
+        '
+        'roleAddPanel
+        '
+        Me.roleAddPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.roleAddPanel.Controls.Add(Me.addRoleErrorMsg)
+        Me.roleAddPanel.Controls.Add(Me.Label12)
+        Me.roleAddPanel.Controls.Add(Me.roleAddCancelBtn)
+        Me.roleAddPanel.Controls.Add(Me.titleAddNameInput)
+        Me.roleAddPanel.Controls.Add(Me.roleAddValidationBtn)
+        Me.roleAddPanel.Controls.Add(Me.Label24)
+        Me.roleAddPanel.Location = New System.Drawing.Point(81, 133)
+        Me.roleAddPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleAddPanel.Name = "roleAddPanel"
+        Me.roleAddPanel.Size = New System.Drawing.Size(831, 330)
+        Me.roleAddPanel.TabIndex = 60
+        Me.roleAddPanel.Visible = False
+        '
+        'addRoleErrorMsg
+        '
+        Me.addRoleErrorMsg.AutoSize = True
+        Me.addRoleErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addRoleErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addRoleErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.addRoleErrorMsg.Location = New System.Drawing.Point(85, 277)
+        Me.addRoleErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addRoleErrorMsg.Name = "addRoleErrorMsg"
+        Me.addRoleErrorMsg.Size = New System.Drawing.Size(0, 18)
+        Me.addRoleErrorMsg.TabIndex = 59
+        Me.addRoleErrorMsg.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(75, 290)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(0, 15)
+        Me.Label12.TabIndex = 58
+        Me.Label12.Visible = False
+        '
+        'roleAddCancelBtn
+        '
+        Me.roleAddCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.roleAddCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.roleAddCancelBtn.FlatAppearance.BorderSize = 0
+        Me.roleAddCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleAddCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.roleAddCancelBtn.Location = New System.Drawing.Point(493, 277)
+        Me.roleAddCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.roleAddCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.roleAddCancelBtn.Name = "roleAddCancelBtn"
+        Me.roleAddCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.roleAddCancelBtn.TabIndex = 44
+        Me.roleAddCancelBtn.Text = "Cancel"
+        Me.roleAddCancelBtn.UseVisualStyleBackColor = False
+        '
+        'titleAddNameInput
+        '
+        Me.titleAddNameInput.Location = New System.Drawing.Point(371, 112)
+        Me.titleAddNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.titleAddNameInput.Name = "titleAddNameInput"
+        Me.titleAddNameInput.Size = New System.Drawing.Size(239, 22)
+        Me.titleAddNameInput.TabIndex = 19
+        '
+        'roleAddValidationBtn
+        '
+        Me.roleAddValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.roleAddValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.roleAddValidationBtn.FlatAppearance.BorderSize = 0
+        Me.roleAddValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleAddValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.roleAddValidationBtn.Location = New System.Drawing.Point(623, 277)
+        Me.roleAddValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.roleAddValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.roleAddValidationBtn.Name = "roleAddValidationBtn"
+        Me.roleAddValidationBtn.Size = New System.Drawing.Size(127, 39)
+        Me.roleAddValidationBtn.TabIndex = 13
+        Me.roleAddValidationBtn.Text = "Add"
+        Me.roleAddValidationBtn.UseVisualStyleBackColor = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(83, 111)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(127, 25)
+        Me.Label24.TabIndex = 11
+        Me.Label24.Text = "Role name :"
+        '
+        'roleDeleteBtn
+        '
+        Me.roleDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleDeleteBtn.Location = New System.Drawing.Point(811, 169)
+        Me.roleDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleDeleteBtn.Name = "roleDeleteBtn"
+        Me.roleDeleteBtn.Size = New System.Drawing.Size(100, 28)
+        Me.roleDeleteBtn.TabIndex = 46
+        Me.roleDeleteBtn.Text = "Delete"
+        Me.roleDeleteBtn.UseVisualStyleBackColor = True
+        Me.roleDeleteBtn.Visible = False
+        '
+        'roleAddBtn
+        '
+        Me.roleAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleAddBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.roleAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.roleAddBtn.Location = New System.Drawing.Point(596, 73)
+        Me.roleAddBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleAddBtn.Name = "roleAddBtn"
+        Me.roleAddBtn.Size = New System.Drawing.Size(100, 28)
+        Me.roleAddBtn.TabIndex = 43
+        Me.roleAddBtn.Text = "Add"
+        Me.roleAddBtn.UseVisualStyleBackColor = True
+        '
+        'confirmMsgR
+        '
+        Me.confirmMsgR.AutoSize = True
+        Me.confirmMsgR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgR.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgR.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgR.Name = "confirmMsgR"
+        Me.confirmMsgR.Size = New System.Drawing.Size(177, 20)
+        Me.confirmMsgR.TabIndex = 41
+        Me.confirmMsgR.Text = "Export successfull ✔"
+        Me.confirmMsgR.Visible = False
+        '
+        'roleUpdateBtn
+        '
+        Me.roleUpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleUpdateBtn.Location = New System.Drawing.Point(812, 133)
+        Me.roleUpdateBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleUpdateBtn.Name = "roleUpdateBtn"
+        Me.roleUpdateBtn.Size = New System.Drawing.Size(100, 28)
+        Me.roleUpdateBtn.TabIndex = 38
+        Me.roleUpdateBtn.Text = "Update"
+        Me.roleUpdateBtn.UseVisualStyleBackColor = True
+        Me.roleUpdateBtn.Visible = False
+        '
+        'searchErrorR
+        '
+        Me.searchErrorR.AutoSize = True
+        Me.searchErrorR.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
+        Me.searchErrorR.Location = New System.Drawing.Point(296, 277)
+        Me.searchErrorR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.searchErrorR.Name = "searchErrorR"
+        Me.searchErrorR.Size = New System.Drawing.Size(349, 47)
+        Me.searchErrorR.TabIndex = 36
+        Me.searchErrorR.Text = "No results found "
+        Me.searchErrorR.Visible = False
+        '
+        'PrintBtnR
+        '
+        Me.PrintBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PrintBtnR.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.PrintBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrintBtnR.Location = New System.Drawing.Point(812, 73)
+        Me.PrintBtnR.Margin = New System.Windows.Forms.Padding(4)
+        Me.PrintBtnR.Name = "PrintBtnR"
+        Me.PrintBtnR.Size = New System.Drawing.Size(100, 28)
+        Me.PrintBtnR.TabIndex = 33
+        Me.PrintBtnR.Text = "Print"
+        Me.PrintBtnR.UseVisualStyleBackColor = True
+        '
+        'exportBtnR
+        '
+        Me.exportBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnR.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnR.Location = New System.Drawing.Point(704, 73)
+        Me.exportBtnR.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnR.Name = "exportBtnR"
+        Me.exportBtnR.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnR.TabIndex = 32
+        Me.exportBtnR.Text = "Export"
+        Me.exportBtnR.UseVisualStyleBackColor = True
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.AllowUserToAddRows = False
+        Me.DataGridView5.AllowUserToDeleteRows = False
+        Me.DataGridView5.AllowUserToResizeColumns = False
+        Me.DataGridView5.AllowUserToResizeRows = False
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView5.Location = New System.Drawing.Point(81, 133)
+        Me.DataGridView5.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.RowHeadersWidth = 51
+        Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView5.Size = New System.Drawing.Size(697, 290)
+        Me.DataGridView5.TabIndex = 30
+        '
+        'Roles
+        '
+        Me.Roles.AutoSize = True
+        Me.Roles.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Roles.Location = New System.Drawing.Point(81, 52)
+        Me.Roles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Roles.Name = "Roles"
+        Me.Roles.Size = New System.Drawing.Size(81, 29)
+        Me.Roles.TabIndex = 29
+        Me.Roles.Text = "Roles"
         '
         'adminhomePage
         '
@@ -2849,10 +2844,15 @@ Partial Class adminhomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1176, 608)
+        Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminEquipmentPanel)
+        Me.Controls.Add(Me.adminRolePanel)
+        Me.Controls.Add(Me.adminUsersPanel)
+        Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminProfilePanel)
-        Me.Controls.Add(Me.adminHomePagePanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
+        Me.Controls.Add(Me.adminHomePagePanel)
         Me.Location = New System.Drawing.Point(300, 300)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximumSize = New System.Drawing.Size(1194, 666)
@@ -2870,6 +2870,11 @@ Partial Class adminhomePage
         Me.adminHomePagePanel.PerformLayout()
         Me.adminEquipmentPanel.ResumeLayout(False)
         Me.adminEquipmentPanel.PerformLayout()
+        Me.addEquipmentPanel.ResumeLayout(False)
+        Me.addEquipmentPanel.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.statePanel.ResumeLayout(False)
+        Me.statePanel.PerformLayout()
         Me.adminPostPanel.ResumeLayout(False)
         Me.adminPostPanel.PerformLayout()
         Me.addPostPanel.ResumeLayout(False)
@@ -2877,38 +2882,33 @@ Partial Class adminhomePage
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.postChangeStatePanel.ResumeLayout(False)
         Me.postChangeStatePanel.PerformLayout()
-        Me.addEquipmentPanel.ResumeLayout(False)
-        Me.addEquipmentPanel.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.statePanel.ResumeLayout(False)
-        Me.statePanel.PerformLayout()
         Me.adminProfilePanel.ResumeLayout(False)
         Me.adminProfilePanel.PerformLayout()
-        Me.adminHallsPanel.ResumeLayout(False)
-        Me.adminHallsPanel.PerformLayout()
-        Me.adminUsersPanel.ResumeLayout(False)
-        Me.adminUsersPanel.PerformLayout()
-        Me.adminRolePanel.ResumeLayout(False)
-        Me.adminRolePanel.PerformLayout()
-        Me.roleAddPanel.ResumeLayout(False)
-        Me.roleAddPanel.PerformLayout()
-        Me.roleUpdatePanel.ResumeLayout(False)
-        Me.roleUpdatePanel.PerformLayout()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.userAddPanel.ResumeLayout(False)
-        Me.userAddPanel.PerformLayout()
-        Me.userUpdatePanel.ResumeLayout(False)
-        Me.userUpdatePanel.PerformLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.hallAddpanel.ResumeLayout(False)
-        Me.hallAddpanel.PerformLayout()
-        Me.hallUpdatePanel.ResumeLayout(False)
-        Me.hallUpdatePanel.PerformLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.profileSubPanel1.ResumeLayout(False)
-        Me.profileSubPanel1.PerformLayout()
         Me.profileSubPanel2.ResumeLayout(False)
         Me.profileSubPanel2.PerformLayout()
+        Me.profileSubPanel1.ResumeLayout(False)
+        Me.profileSubPanel1.PerformLayout()
+        Me.adminHallsPanel.ResumeLayout(False)
+        Me.adminHallsPanel.PerformLayout()
+        Me.hallUpdatePanel.ResumeLayout(False)
+        Me.hallUpdatePanel.PerformLayout()
+        Me.hallAddpanel.ResumeLayout(False)
+        Me.hallAddpanel.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.adminUsersPanel.ResumeLayout(False)
+        Me.adminUsersPanel.PerformLayout()
+        Me.userUpdatePanel.ResumeLayout(False)
+        Me.userUpdatePanel.PerformLayout()
+        Me.userAddPanel.ResumeLayout(False)
+        Me.userAddPanel.PerformLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.adminRolePanel.ResumeLayout(False)
+        Me.adminRolePanel.PerformLayout()
+        Me.roleUpdatePanel.ResumeLayout(False)
+        Me.roleUpdatePanel.PerformLayout()
+        Me.roleAddPanel.ResumeLayout(False)
+        Me.roleAddPanel.PerformLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
