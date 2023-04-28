@@ -288,6 +288,10 @@ Public Class adminhomePage
                 postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
                 addPostPanel.Visible = False
 
+                'empty the fields after validation
+                postStateInput.Text = ""
+                postHallInput.Text = ""
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -302,6 +306,10 @@ Public Class adminhomePage
         addPostPanel.Visible = False
 
         postChangeStatePanel.Visible = False
+
+        'empty the fields after validation
+        postStateInput.Text = ""
+        postHallInput.Text = ""
     End Sub
 
     'delete post button
@@ -355,6 +363,8 @@ Public Class adminhomePage
 
         postChangeStatePanel.Visible = False
 
+
+
         User.displayTableP("posts", DataGridView2, sqlDataTableP)
     End Sub
 
@@ -375,29 +385,6 @@ Public Class adminhomePage
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
     End Sub
 
-    'equipment SECTION
-
-    Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
-        Timer1.Start()
-
-
-        adminEquipmentPanel.Visible = True
-        adminPostPanel.Visible = False
-        adminProfilePanel.Visible = False
-        adminHallsPanel.Visible = False
-        adminUsersPanel.Visible = False
-        adminRolePanel.Visible = False
-
-        addPostPanel.Visible = False
-
-
-        User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
-
-        fillHalls(hallSearchBoxE)
-        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
-
-    End Sub
 
     'halls buttons
 
@@ -869,6 +856,7 @@ Public Class adminhomePage
 
         End If
 
+        'empty the fields after validation
         userUserAddNameInput.Text = ""
         userUserAddEmailInput.Text = ""
         userUserAddPhoneInput.Text = ""
@@ -880,6 +868,14 @@ Public Class adminhomePage
     Private Sub userAddCancelBtn_Click(sender As Object, e As EventArgs) Handles userAddCancelBtn.Click 'cancel add
         userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         userAddPanel.Visible = False
+
+        'empty the fields after cancel
+        userUserAddNameInput.Text = ""
+        userUserAddEmailInput.Text = ""
+        userUserAddPhoneInput.Text = ""
+        userUserAddPwdInput.Text = ""
+        userUserAddConfirmPwdInput.Text = ""
+        userUserAddTitleInput.Text = ""
     End Sub
 
     'role buttons 
@@ -936,6 +932,8 @@ Public Class adminhomePage
         'this makes the update panel to disappear
         roleUpdatePanel.Visible = False
         roleUpdateBtn.Visible = False
+
+
     End Sub
 
     Private Sub roleUpdateCancelBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateCancelBtn.Click 'cancel
@@ -1020,12 +1018,39 @@ Public Class adminhomePage
             roleUpdatePanel.Visible = False  'play it safe and make both panels visible false 
             roleAddPanel.Visible = False
 
+            'empty aftwr validation
+            titleAddNameInput.Text = ""
+
         End If
     End Sub
 
     Private Sub roleAddCancelBtn_Click(sender As Object, e As EventArgs) Handles roleAddCancelBtn.Click 'cancel add
         roleUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         roleAddPanel.Visible = False
+    End Sub
+
+    'equipment SECTION
+
+    Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
+        Timer1.Start()
+
+
+        adminEquipmentPanel.Visible = True
+        adminPostPanel.Visible = False
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
+
+        addPostPanel.Visible = False
+
+
+        User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
+        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+
+        fillHalls(hallSearchBoxE)
+        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
+
     End Sub
 
 
@@ -1144,7 +1169,6 @@ Public Class adminhomePage
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
         addEquipmentPanel.Visible = False
 
-        'adminEquipmentPanelUserControl2.statePanel.Visible = False
     End Sub
 
     Private Sub addEquipmentValidationBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentValidationBtn.Click
@@ -1206,6 +1230,12 @@ Public Class adminhomePage
                 'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
                 addEquipmentPanel.Visible = False
 
+                equipmentTypeInput.Text = ""
+                equipmentStateInput.Text = ""
+                hallInput.Text = ""
+
+                fillHalls(hallSearchBoxE)
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -1260,6 +1290,7 @@ Public Class adminhomePage
         statePanel.Visible = False
 
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        fillHalls(hallSearchBoxE)
     End Sub
 
     'delete equipment
