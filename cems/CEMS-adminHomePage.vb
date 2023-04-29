@@ -202,6 +202,23 @@ Public Class adminhomePage
 
         postChangeStatePanel.Visible = False
         addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userUpdatePanel.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
+
+
+
+
 
         User.displayTableP("posts", DataGridView2, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
@@ -380,9 +397,53 @@ Public Class adminhomePage
 
         profileSubPanel2.Visible = False
         addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
+
+
 
         connect_db()
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+    End Sub
+
+    'update profile button
+
+    Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs) Handles updateProfileShowBtn.Click
+        profileSubPanel2.Visible = True
+
+        userNameProfileInput.Text = adminNameProfile.Text
+        userPhoneNumberProfileInput.Text = adminPhoneNumberProfile.Text
+        userEmailProfileInput.Text = adminEmailProfile.Text
+
+        userPwdProfileInput.Text = ""
+        userConfirmPwdProfileInput.Text = ""
+
+
+    End Sub
+
+    'profile cancel
+    Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
+        profileSubPanel2.Visible = False
+        updateProfileErrorMsg.Visible = False
+    End Sub
+
+    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
+
+        User.updateUser("admin", "admin", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
+        User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+
+        profileSubPanel2.Visible = False
+        showUserName()
     End Sub
 
 
@@ -410,8 +471,20 @@ Public Class adminhomePage
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
         hallUpdatePanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
         fillHalls(hallSearchBoxH)
+
     End Sub
 
     'hall add buttons
@@ -571,7 +644,16 @@ Public Class adminhomePage
         userUpdatePanel.Visible = False
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
-
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
     End Sub
 
@@ -889,6 +971,18 @@ Public Class adminhomePage
 
         addPostPanel.Visible = False
         roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False  'play it safe and make both panels visible false 
+        roleAddPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
 
         User.displayTable("titles", DataGridView5, sqlDataTableR)
 
@@ -932,6 +1026,7 @@ Public Class adminhomePage
         'this makes the update panel to disappear
         roleUpdatePanel.Visible = False
         roleUpdateBtn.Visible = False
+        roleAddPanel.Visible = False
 
 
     End Sub
@@ -975,7 +1070,7 @@ Public Class adminhomePage
     'role add buttons
 
     Private Sub roleAddBtn_Click(sender As Object, e As EventArgs) Handles roleAddBtn.Click 'add 
-        roleUpdatePanel.Visible = True 'add panel is on update panel so updatepanel has to be visible 
+        roleUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         roleAddPanel.Visible = True
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
@@ -1043,7 +1138,19 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
 
         addPostPanel.Visible = False
-
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
         User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
@@ -1067,6 +1174,19 @@ Public Class adminhomePage
 
 
         addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible =
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
         fillHalls(hallSearchBoxE)
 
@@ -1102,6 +1222,19 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
 
         addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
         fillHalls(hallSearchBoxE)
 
@@ -1154,6 +1287,19 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
 
         addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        profileSubPanel2.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
 
         fillHalls(hallSearchBoxE)
 

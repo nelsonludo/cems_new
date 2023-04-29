@@ -1,15 +1,10 @@
 list of things to do in cems
 -edit admin exports(collect from user exports)
 -make user table to also display admins and super admins (all types of users)
--role update visibility to false when add role is clicked 
--make add and update panels disappear when user leaves them or clicks on other tab buttons 
--remove the message box on search post state 
 -empty searches when you leave a tab 
--update profile not working 
 -change app logo the desktop 
 -change window logo 
 User
--remove the message box on search post state 
--fix user search by state
+-make profile update panel disappear when clicking on another tab button
 Login
 -change the forget password text

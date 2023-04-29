@@ -392,7 +392,6 @@ Public Class users
 
             End If
 
-            MessageBox.Show(datatable.Rows.Count)
 
             sqlReader.Close()
             sqlConn.Close()

@@ -385,6 +385,8 @@ Public Class Form1
 
             sqlConn.Close()
 
+            MessageBox.Show(admin_email + admin_phone_number)
+
             forgotPasswordMessage.Text = "Veuillez contacter l'administrateur à travers ces contacts " & admin_email & " et " & admin_phone_number & " "
 
             forgotPasswordMessage.Visible = True

@@ -1498,7 +1498,7 @@ Partial Class adminhomePage
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
-        Me.profileSubPanel2.Location = New System.Drawing.Point(83, 136)
+        Me.profileSubPanel2.Location = New System.Drawing.Point(89, 114)
         Me.profileSubPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.profileSubPanel2.Name = "profileSubPanel2"
         Me.profileSubPanel2.Size = New System.Drawing.Size(783, 310)
@@ -2853,6 +2853,7 @@ Partial Class adminhomePage
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
         Me.Controls.Add(Me.adminHomePagePanel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(300, 300)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximumSize = New System.Drawing.Size(1194, 666)
