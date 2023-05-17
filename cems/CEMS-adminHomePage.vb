@@ -216,7 +216,14 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
-
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
 
 
 
@@ -410,7 +417,14 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
-
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
 
         connect_db()
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
@@ -482,6 +496,15 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
 
         fillHalls(hallSearchBoxH)
 
@@ -655,10 +678,19 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
     End Sub
 
 
-    Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
+    Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles userbuttoninactive.Click
         adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
         adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
         adminProfilePanel.Visible = False
@@ -984,6 +1016,15 @@ Public Class adminhomePage
         userDeleteBtn.Visible = False
         userAddPanel.Visible = False
 
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
         User.displayTable("titles", DataGridView5, sqlDataTableR)
 
 
@@ -1152,6 +1193,15 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
         User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
 
@@ -1188,11 +1238,20 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
         fillHalls(hallSearchBoxE)
 
     End Sub
 
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUbuttoninactive.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
@@ -1236,11 +1295,21 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
 
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
         fillHalls(hallSearchBoxE)
 
     End Sub
 
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPbuttoninactive.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
         User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
 
@@ -1257,7 +1326,7 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorbuttoninactive.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
         User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
@@ -1300,6 +1369,15 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
 
         fillHalls(hallSearchBoxE)
 
@@ -1614,7 +1692,6 @@ Public Class adminhomePage
 
         admin.generalSearchH("halls", DataGridView3, "hall_id", hall_id, searchErrorH, sqlDataTableCBH)
     End Sub
-
 
 
     'equipment searches
@@ -1956,5 +2033,8 @@ Public Class adminhomePage
 
     End Sub
 
+
+
+    'styles
 
 End Class

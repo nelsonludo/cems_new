@@ -155,7 +155,14 @@ Public Class UserHomePage
 
         userProfilePanel.Visible = False
 
+        profileSubPanel2.Visible = False
 
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
         User.displayTableP("posts", DataGridView2, sqlDataTableP)
@@ -171,7 +178,14 @@ Public Class UserHomePage
 
         userProfilePanel.Visible = True
 
+        profileSubPanel2.Visible = False
 
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         connect_db()
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
@@ -190,6 +204,15 @@ Public Class UserHomePage
         userProfilePanel.Visible = False
 
         exportBtnE.Visible = True
+
+        profileSubPanel2.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         User.display(userEquipmentPanel, EquipmentTitle, "Equipments")
         User.displayTableE("equipments", DataGridView1, sqlDataTableE)
@@ -212,7 +235,16 @@ Public Class UserHomePage
         userPostPanel.Visible = False
 
         userProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
         exportBtnE.Visible = False
+
+        profileSubPanel2.Visible = False
 
         fillHalls(hallSearchBoxE)
 
@@ -228,7 +260,16 @@ Public Class UserHomePage
 
         userProfilePanel.Visible = False
 
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
         exportBtnE.Visible = False
+
+        profileSubPanel2.Visible = False
 
         fillHalls(hallSearchBoxE)
 
@@ -243,6 +284,12 @@ Public Class UserHomePage
         userPostPanel.Visible = False
 
         userProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         exportBtnE.Visible = False
 
@@ -261,6 +308,14 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
+        profileSubPanel2.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
         fillHalls(hallSearchBoxE)
 
     End Sub
@@ -274,6 +329,12 @@ Public Class UserHomePage
         userPostPanel.Visible = False
 
         userProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         exportBtnE.Visible = False
 
@@ -294,6 +355,14 @@ Public Class UserHomePage
 
         exportBtnE.Visible = False
 
+        profileSubPanel2.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
         fillHalls(hallSearchBoxE)
 
     End Sub
@@ -310,6 +379,12 @@ Public Class UserHomePage
         userPostPanel.Visible = False
 
         userProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         exportBtnE.Visible = False
 
@@ -341,6 +416,7 @@ Public Class UserHomePage
     Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
         User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
+
 
     End Sub
 
