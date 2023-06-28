@@ -497,6 +497,19 @@ Public Class adminhomePage
     Private Sub hallAddBtn_Click(sender As Object, e As EventArgs) Handles hallAddBtn.Click 'add 
         hallUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         hallAddpanel.Visible = True
+        Label21.Text = "Add halls"
+
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = False
+        exportBtnH.Visible = False
+        PrintBtnH.Visible = False
+        hallSearchBoxH.Visible = False
+        Label4.Visible = False
+        DataGridView3.Visible = False
+        HallUpdateBtn.Visible = False
+        HallDeleteBtn.Visible = False
+
     End Sub
 
     Private Sub hallsBtn_Click(sender As Object, e As EventArgs) Handles hallsBtn.Click
@@ -544,6 +557,16 @@ Public Class adminhomePage
     Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles HallAddCancelBtn.Click 'cancel add
         hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         hallAddpanel.Visible = False
+        Label21.Text = "Halls"
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = True
+        exportBtnH.Visible = True
+        PrintBtnH.Visible = True
+        hallSearchBoxH.Visible = True
+        Label4.Visible = True
+        DataGridView3.Visible = True
+
     End Sub
 
 
@@ -611,6 +634,20 @@ Public Class adminhomePage
 
     Private Sub HallUpdateBtn_Click(sender As Object, e As EventArgs) Handles HallUpdateBtn.Click 'update
         hallUpdatePanel.Visible = True
+
+        Label21.Text = "Update halls"
+
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = False
+        exportBtnH.Visible = False
+        PrintBtnH.Visible = False
+        hallSearchBoxH.Visible = False
+        Label4.Visible = False
+        DataGridView3.Visible = False
+        HallUpdateBtn.Visible = False
+        HallDeleteBtn.Visible = False
+
     End Sub
 
     Private Sub HalldeleteBtn_Click(sender As Object, e As EventArgs) Handles HallDeleteBtn.Click 'delete
@@ -635,6 +672,17 @@ Public Class adminhomePage
 
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
+
+        Label21.Text = "Halls"
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = True
+        exportBtnH.Visible = True
+        PrintBtnH.Visible = True
+        hallSearchBoxH.Visible = True
+        Label4.Visible = True
+        DataGridView3.Visible = True
+
     End Sub
 
     Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidateBtn.Click 'validate update 
@@ -2062,6 +2110,7 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
 
 
 
