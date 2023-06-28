@@ -35,7 +35,9 @@ Public Class adminhomePage
                + "password=" + password + ";" + "database =" + database
     End Sub
 
-    Public Sub showUserName()
+
+
+    Public Sub getEverything(name As String, email As String)
         connect_db()
         Try
             sqlConn.Open()
@@ -44,7 +46,8 @@ Public Class adminhomePage
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
-                aName.Text = sqlReader.Item("admin_name")
+                name = sqlReader.Item("admin_name")
+                email = sqlReader.Item("admin_email")
 
             End If
 
@@ -54,6 +57,33 @@ Public Class adminhomePage
         Finally
             sqlConn.Dispose()
         End Try
+    End Sub
+    Public Sub showUserName()
+
+        Dim userName
+        Dim userEmail
+
+        getEverything(userName, userEmail)
+
+        aName.Text = userName
+        'connect_db()
+        'Try
+        '    sqlConn.Open()
+        '    'username appear
+        '    sqlQuery = "select * from cems.cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
+        '    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+        '    sqlReader = sqlCmd.ExecuteReader
+        '    If (sqlReader.Read()) Then
+        '        aName.Text = sqlReader.Item("admin_name")
+        '
+        '    End If
+        '
+        '    sqlConn.Close()
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'Finally
+        '    sqlConn.Dispose()
+        'End Try
     End Sub
 
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -2032,6 +2062,11 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
+
+
+
+
 
 
 
