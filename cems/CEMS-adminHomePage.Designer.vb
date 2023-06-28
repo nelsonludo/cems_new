@@ -32,9 +32,9 @@ Partial Class adminhomePage
         Me.CPUs = New System.Windows.Forms.Label()
         Me.Equipments = New System.Windows.Forms.Label()
         Me.CPUsBtn = New System.Windows.Forms.Button()
-        Me.equipmentsBtn = New System.Windows.Forms.Button()
         Me.monitorsBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.Posts = New System.Windows.Forms.Label()
         Me.Halls = New System.Windows.Forms.Label()
         Me.Users = New System.Windows.Forms.Label()
@@ -50,24 +50,27 @@ Partial Class adminhomePage
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.adminHeader = New System.Windows.Forms.Panel()
         Me.adminLogout = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.adminHomePagePanel = New System.Windows.Forms.Panel()
+        Me.CPUsBtn2 = New System.Windows.Forms.Button()
+        Me.IPsBtn2 = New System.Windows.Forms.Button()
+        Me.monitorsBtn2 = New System.Windows.Forms.Button()
+        Me.usersBtn2 = New System.Windows.Forms.Button()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.userNumber = New System.Windows.Forms.Label()
-        Me.userbuttoninactive = New System.Windows.Forms.Button()
         Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
         Me.activeMonitorNumber = New System.Windows.Forms.Label()
         Me.nonActiveIPNumber = New System.Windows.Forms.Label()
         Me.activeIPNumber = New System.Windows.Forms.Label()
         Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
         Me.activeCPUNumber = New System.Windows.Forms.Label()
-        Me.monitorbuttoninactive = New System.Windows.Forms.Button()
-        Me.IPbuttoninactive = New System.Windows.Forms.Button()
-        Me.CPUbuttoninactive = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.adminEquipmentPanel = New System.Windows.Forms.Panel()
         Me.addEquipmentPanel = New System.Windows.Forms.Panel()
@@ -85,8 +88,6 @@ Partial Class adminhomePage
         Me.confirmMsgE = New System.Windows.Forms.Label()
         Me.hallSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.searchErrorE = New System.Windows.Forms.Label()
-        Me.printBtnE = New System.Windows.Forms.Button()
-        Me.exportBtnE = New System.Windows.Forms.Button()
         Me.equipmentSearchBox = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.EquipmentTitle = New System.Windows.Forms.Label()
@@ -95,7 +96,6 @@ Partial Class adminhomePage
         Me.equipmentDeleteBtn = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.equipmentState = New System.Windows.Forms.ComboBox()
-        Me.addEquipmentBtn = New System.Windows.Forms.Button()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -114,8 +114,6 @@ Partial Class adminhomePage
         Me.confirmMsgP = New System.Windows.Forms.Label()
         Me.hallSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.searchErrorP = New System.Windows.Forms.Label()
-        Me.printBtnP = New System.Windows.Forms.Button()
-        Me.exportBtnP = New System.Windows.Forms.Button()
         Me.postSearchBox = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.postTitle = New System.Windows.Forms.Label()
@@ -124,7 +122,6 @@ Partial Class adminhomePage
         Me.postChangeBtn = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.postChangeStateInput = New System.Windows.Forms.ComboBox()
-        Me.addPostBtn = New System.Windows.Forms.Button()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -167,13 +164,10 @@ Partial Class adminhomePage
         Me.adminAddHallNameInput = New System.Windows.Forms.TextBox()
         Me.HallAddValidateBtn = New System.Windows.Forms.Button()
         Me.adminAddHallNameLabel = New System.Windows.Forms.Label()
-        Me.hallAddBtn = New System.Windows.Forms.Button()
         Me.confirmMsgH = New System.Windows.Forms.Label()
         Me.HallUpdateBtn = New System.Windows.Forms.Button()
         Me.hallSearchBoxH = New System.Windows.Forms.ComboBox()
         Me.searchErrorH = New System.Windows.Forms.Label()
-        Me.PrintBtnH = New System.Windows.Forms.Button()
-        Me.exportBtnH = New System.Windows.Forms.Button()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.HallDeleteBtn = New System.Windows.Forms.Button()
@@ -211,8 +205,6 @@ Partial Class adminhomePage
         Me.confirmMsgU = New System.Windows.Forms.Label()
         Me.userUpdateBtn = New System.Windows.Forms.Button()
         Me.searchErrorU = New System.Windows.Forms.Label()
-        Me.PrintBtnU = New System.Windows.Forms.Button()
-        Me.exportBtnU = New System.Windows.Forms.Button()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.userDeleteBtn = New System.Windows.Forms.Button()
@@ -231,36 +223,43 @@ Partial Class adminhomePage
         Me.roleAddValidationBtn = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.roleDeleteBtn = New System.Windows.Forms.Button()
-        Me.roleAddBtn = New System.Windows.Forms.Button()
         Me.confirmMsgR = New System.Windows.Forms.Label()
         Me.roleUpdateBtn = New System.Windows.Forms.Button()
         Me.searchErrorR = New System.Windows.Forms.Label()
-        Me.PrintBtnR = New System.Windows.Forms.Button()
-        Me.exportBtnR = New System.Windows.Forms.Button()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
         Me.Roles = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.CPUsBtn2 = New System.Windows.Forms.Button()
-        Me.IPsBtn2 = New System.Windows.Forms.Button()
-        Me.monitorsBtn2 = New System.Windows.Forms.Button()
-        Me.usersBtn2 = New System.Windows.Forms.Button()
-        Me.Label39 = New System.Windows.Forms.Label()
+        Me.printBtnP = New System.Windows.Forms.Button()
+        Me.exportBtnP = New System.Windows.Forms.Button()
+        Me.addPostBtn = New System.Windows.Forms.Button()
+        Me.printBtnE = New System.Windows.Forms.Button()
+        Me.exportBtnE = New System.Windows.Forms.Button()
+        Me.addEquipmentBtn = New System.Windows.Forms.Button()
+        Me.roleAddBtn = New System.Windows.Forms.Button()
+        Me.PrintBtnR = New System.Windows.Forms.Button()
+        Me.exportBtnR = New System.Windows.Forms.Button()
+        Me.PrintBtnU = New System.Windows.Forms.Button()
+        Me.exportBtnU = New System.Windows.Forms.Button()
+        Me.hallAddBtn = New System.Windows.Forms.Button()
+        Me.PrintBtnH = New System.Windows.Forms.Button()
+        Me.exportBtnH = New System.Windows.Forms.Button()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
+        Me.equipmentsBtn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.userbuttoninactive = New System.Windows.Forms.Button()
+        Me.monitorbuttoninactive = New System.Windows.Forms.Button()
+        Me.IPbuttoninactive = New System.Windows.Forms.Button()
+        Me.CPUbuttoninactive = New System.Windows.Forms.Button()
         Me.dropdown.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.adminHeader.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.adminHomePagePanel.SuspendLayout()
         Me.adminEquipmentPanel.SuspendLayout()
         Me.addEquipmentPanel.SuspendLayout()
@@ -285,6 +284,7 @@ Partial Class adminhomePage
         Me.roleUpdatePanel.SuspendLayout()
         Me.roleAddPanel.SuspendLayout()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IPsBtn
@@ -412,25 +412,6 @@ Partial Class adminhomePage
         Me.CPUsBtn.TabIndex = 9
         Me.CPUsBtn.UseVisualStyleBackColor = False
         '
-        'equipmentsBtn
-        '
-        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.equipmentsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
-        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
-        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.equipmentsBtn.Name = "equipmentsBtn"
-        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 7, 0)
-        Me.equipmentsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.equipmentsBtn.TabIndex = 6
-        Me.equipmentsBtn.UseVisualStyleBackColor = False
-        '
         'monitorsBtn
         '
         Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
@@ -473,6 +454,18 @@ Partial Class adminhomePage
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(209, 607)
         Me.Panel2.TabIndex = 6
+        '
+        'Label39
+        '
+        Me.Label39.BackColor = System.Drawing.Color.MintCream
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.Yellow
+        Me.Label39.Location = New System.Drawing.Point(10, 82)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(190, 2)
+        Me.Label39.TabIndex = 49
+        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Posts
         '
@@ -683,17 +676,6 @@ Partial Class adminhomePage
         Me.adminLogout.Text = "Logout"
         Me.adminLogout.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
-        Me.PictureBox1.Location = New System.Drawing.Point(30, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(56, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
         'Timer1
         '
         Me.Timer1.Interval = 15
@@ -749,6 +731,122 @@ Partial Class adminhomePage
         Me.adminHomePagePanel.Size = New System.Drawing.Size(934, 507)
         Me.adminHomePagePanel.TabIndex = 9
         '
+        'CPUsBtn2
+        '
+        Me.CPUsBtn2.BackColor = System.Drawing.Color.Transparent
+        Me.CPUsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.CPUsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CPUsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
+        Me.CPUsBtn2.ForeColor = System.Drawing.Color.SeaGreen
+        Me.CPUsBtn2.Location = New System.Drawing.Point(126, 221)
+        Me.CPUsBtn2.Margin = New System.Windows.Forms.Padding(0)
+        Me.CPUsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.CPUsBtn2.Name = "CPUsBtn2"
+        Me.CPUsBtn2.Size = New System.Drawing.Size(76, 27)
+        Me.CPUsBtn2.TabIndex = 38
+        Me.CPUsBtn2.Text = "View"
+        Me.CPUsBtn2.UseVisualStyleBackColor = False
+        '
+        'IPsBtn2
+        '
+        Me.IPsBtn2.BackColor = System.Drawing.Color.Transparent
+        Me.IPsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.IPsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IPsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
+        Me.IPsBtn2.ForeColor = System.Drawing.Color.SeaGreen
+        Me.IPsBtn2.Location = New System.Drawing.Point(350, 221)
+        Me.IPsBtn2.Margin = New System.Windows.Forms.Padding(0)
+        Me.IPsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.IPsBtn2.Name = "IPsBtn2"
+        Me.IPsBtn2.Size = New System.Drawing.Size(76, 27)
+        Me.IPsBtn2.TabIndex = 39
+        Me.IPsBtn2.Text = "View"
+        Me.IPsBtn2.UseVisualStyleBackColor = False
+        '
+        'monitorsBtn2
+        '
+        Me.monitorsBtn2.BackColor = System.Drawing.Color.Transparent
+        Me.monitorsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.monitorsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.monitorsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
+        Me.monitorsBtn2.ForeColor = System.Drawing.Color.SeaGreen
+        Me.monitorsBtn2.Location = New System.Drawing.Point(587, 221)
+        Me.monitorsBtn2.Margin = New System.Windows.Forms.Padding(0)
+        Me.monitorsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.monitorsBtn2.Name = "monitorsBtn2"
+        Me.monitorsBtn2.Size = New System.Drawing.Size(76, 27)
+        Me.monitorsBtn2.TabIndex = 40
+        Me.monitorsBtn2.Text = "View"
+        Me.monitorsBtn2.UseVisualStyleBackColor = False
+        '
+        'usersBtn2
+        '
+        Me.usersBtn2.BackColor = System.Drawing.Color.Transparent
+        Me.usersBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.usersBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.usersBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
+        Me.usersBtn2.ForeColor = System.Drawing.Color.SeaGreen
+        Me.usersBtn2.Location = New System.Drawing.Point(819, 221)
+        Me.usersBtn2.Margin = New System.Windows.Forms.Padding(0)
+        Me.usersBtn2.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.usersBtn2.Name = "usersBtn2"
+        Me.usersBtn2.Size = New System.Drawing.Size(76, 27)
+        Me.usersBtn2.TabIndex = 41
+        Me.usersBtn2.Text = "View"
+        Me.usersBtn2.UseVisualStyleBackColor = False
+        '
+        'Label38
+        '
+        Me.Label38.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.Yellow
+        Me.Label38.Location = New System.Drawing.Point(717, 184)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(192, 25)
+        Me.Label38.TabIndex = 48
+        Me.Label38.Text = "Users"
+        Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label37
+        '
+        Me.Label37.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.Yellow
+        Me.Label37.Location = New System.Drawing.Point(483, 184)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(192, 25)
+        Me.Label37.TabIndex = 47
+        Me.Label37.Text = "Monitors"
+        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label36
+        '
+        Me.Label36.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.Color.Yellow
+        Me.Label36.Location = New System.Drawing.Point(248, 183)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(192, 25)
+        Me.Label36.TabIndex = 46
+        Me.Label36.Text = "IP Phones"
+        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Yellow
+        Me.Label2.Location = New System.Drawing.Point(22, 182)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(192, 25)
+        Me.Label2.TabIndex = 45
+        Me.Label2.Text = "CPU'S"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'userNumber
         '
         Me.userNumber.AutoSize = True
@@ -761,23 +859,6 @@ Partial Class adminhomePage
         Me.userNumber.Size = New System.Drawing.Size(31, 13)
         Me.userNumber.TabIndex = 35
         Me.userNumber.Text = "0000"
-        '
-        'userbuttoninactive
-        '
-        Me.userbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.userbuttoninactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.userbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.userbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.userbuttoninactive.Image = Global.cems.My.Resources.Resources.user1
-        Me.userbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.userbuttoninactive.Location = New System.Drawing.Point(716, 57)
-        Me.userbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
-        Me.userbuttoninactive.Name = "userbuttoninactive"
-        Me.userbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.userbuttoninactive.Size = New System.Drawing.Size(194, 201)
-        Me.userbuttoninactive.TabIndex = 33
-        Me.userbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.userbuttoninactive.UseVisualStyleBackColor = False
         '
         'nonActiveMonitorNumber
         '
@@ -856,55 +937,6 @@ Partial Class adminhomePage
         Me.activeCPUNumber.Size = New System.Drawing.Size(31, 13)
         Me.activeCPUNumber.TabIndex = 27
         Me.activeCPUNumber.Text = "0000"
-        '
-        'monitorbuttoninactive
-        '
-        Me.monitorbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.monitorbuttoninactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.monitorbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.monitorbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.monitorbuttoninactive.Image = Global.cems.My.Resources.Resources.computer
-        Me.monitorbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.monitorbuttoninactive.Location = New System.Drawing.Point(482, 57)
-        Me.monitorbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
-        Me.monitorbuttoninactive.Name = "monitorbuttoninactive"
-        Me.monitorbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.monitorbuttoninactive.Size = New System.Drawing.Size(194, 201)
-        Me.monitorbuttoninactive.TabIndex = 26
-        Me.monitorbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.monitorbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'IPbuttoninactive
-        '
-        Me.IPbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.IPbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.IPbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IPbuttoninactive.Image = Global.cems.My.Resources.Resources.landline
-        Me.IPbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.IPbuttoninactive.Location = New System.Drawing.Point(247, 57)
-        Me.IPbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
-        Me.IPbuttoninactive.Name = "IPbuttoninactive"
-        Me.IPbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.IPbuttoninactive.Size = New System.Drawing.Size(194, 201)
-        Me.IPbuttoninactive.TabIndex = 25
-        Me.IPbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IPbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'CPUbuttoninactive
-        '
-        Me.CPUbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.CPUbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.CPUbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CPUbuttoninactive.Image = Global.cems.My.Resources.Resources.unit
-        Me.CPUbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CPUbuttoninactive.Location = New System.Drawing.Point(21, 57)
-        Me.CPUbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
-        Me.CPUbuttoninactive.Name = "CPUbuttoninactive"
-        Me.CPUbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
-        Me.CPUbuttoninactive.Size = New System.Drawing.Size(194, 201)
-        Me.CPUbuttoninactive.TabIndex = 24
-        Me.CPUbuttoninactive.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.CPUbuttoninactive.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -1125,30 +1157,6 @@ Partial Class adminhomePage
         Me.searchErrorE.Text = "No results found "
         Me.searchErrorE.Visible = False
         '
-        'printBtnE
-        '
-        Me.printBtnE.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.printBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.printBtnE.Location = New System.Drawing.Point(808, 73)
-        Me.printBtnE.Margin = New System.Windows.Forms.Padding(4)
-        Me.printBtnE.Name = "printBtnE"
-        Me.printBtnE.Size = New System.Drawing.Size(100, 28)
-        Me.printBtnE.TabIndex = 34
-        Me.printBtnE.Text = "Print"
-        Me.printBtnE.UseVisualStyleBackColor = True
-        '
-        'exportBtnE
-        '
-        Me.exportBtnE.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnE.Location = New System.Drawing.Point(700, 73)
-        Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnE.Name = "exportBtnE"
-        Me.exportBtnE.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnE.TabIndex = 33
-        Me.exportBtnE.Text = "Export"
-        Me.exportBtnE.UseVisualStyleBackColor = True
-        '
         'equipmentSearchBox
         '
         Me.equipmentSearchBox.ForeColor = System.Drawing.Color.DarkGray
@@ -1239,18 +1247,6 @@ Partial Class adminhomePage
         Me.equipmentState.Name = "equipmentState"
         Me.equipmentState.Size = New System.Drawing.Size(105, 24)
         Me.equipmentState.TabIndex = 42
-        '
-        'addEquipmentBtn
-        '
-        Me.addEquipmentBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.addEquipmentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.addEquipmentBtn.Location = New System.Drawing.Point(596, 73)
-        Me.addEquipmentBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.addEquipmentBtn.Name = "addEquipmentBtn"
-        Me.addEquipmentBtn.Size = New System.Drawing.Size(100, 28)
-        Me.addEquipmentBtn.TabIndex = 60
-        Me.addEquipmentBtn.Text = "Add"
-        Me.addEquipmentBtn.UseVisualStyleBackColor = True
         '
         'Label33
         '
@@ -1483,32 +1479,6 @@ Partial Class adminhomePage
         Me.searchErrorP.Text = "No results found "
         Me.searchErrorP.Visible = False
         '
-        'printBtnP
-        '
-        Me.printBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.printBtnP.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.printBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.printBtnP.Location = New System.Drawing.Point(860, 68)
-        Me.printBtnP.Margin = New System.Windows.Forms.Padding(4)
-        Me.printBtnP.Name = "printBtnP"
-        Me.printBtnP.Size = New System.Drawing.Size(100, 28)
-        Me.printBtnP.TabIndex = 33
-        Me.printBtnP.Text = "Print"
-        Me.printBtnP.UseVisualStyleBackColor = True
-        '
-        'exportBtnP
-        '
-        Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnP.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnP.Location = New System.Drawing.Point(749, 68)
-        Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnP.Name = "exportBtnP"
-        Me.exportBtnP.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnP.TabIndex = 32
-        Me.exportBtnP.Text = "Export"
-        Me.exportBtnP.UseVisualStyleBackColor = True
-        '
         'postSearchBox
         '
         Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
@@ -1599,19 +1569,6 @@ Partial Class adminhomePage
         Me.postChangeStateInput.Name = "postChangeStateInput"
         Me.postChangeStateInput.Size = New System.Drawing.Size(105, 24)
         Me.postChangeStateInput.TabIndex = 42
-        '
-        'addPostBtn
-        '
-        Me.addPostBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addPostBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.addPostBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.addPostBtn.Location = New System.Drawing.Point(643, 69)
-        Me.addPostBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.addPostBtn.Name = "addPostBtn"
-        Me.addPostBtn.Size = New System.Drawing.Size(100, 28)
-        Me.addPostBtn.TabIndex = 63
-        Me.addPostBtn.Text = "Add"
-        Me.addPostBtn.UseVisualStyleBackColor = True
         '
         'Label32
         '
@@ -2137,19 +2094,6 @@ Partial Class adminhomePage
         Me.adminAddHallNameLabel.TabIndex = 11
         Me.adminAddHallNameLabel.Text = "Hall name :"
         '
-        'hallAddBtn
-        '
-        Me.hallAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.hallAddBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.hallAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.hallAddBtn.Location = New System.Drawing.Point(596, 73)
-        Me.hallAddBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.hallAddBtn.Name = "hallAddBtn"
-        Me.hallAddBtn.Size = New System.Drawing.Size(100, 28)
-        Me.hallAddBtn.TabIndex = 43
-        Me.hallAddBtn.Text = "Add"
-        Me.hallAddBtn.UseVisualStyleBackColor = True
-        '
         'confirmMsgH
         '
         Me.confirmMsgH.AutoSize = True
@@ -2195,32 +2139,6 @@ Partial Class adminhomePage
         Me.searchErrorH.TabIndex = 36
         Me.searchErrorH.Text = "No results found "
         Me.searchErrorH.Visible = False
-        '
-        'PrintBtnH
-        '
-        Me.PrintBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PrintBtnH.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.PrintBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnH.Location = New System.Drawing.Point(812, 73)
-        Me.PrintBtnH.Margin = New System.Windows.Forms.Padding(4)
-        Me.PrintBtnH.Name = "PrintBtnH"
-        Me.PrintBtnH.Size = New System.Drawing.Size(100, 28)
-        Me.PrintBtnH.TabIndex = 33
-        Me.PrintBtnH.Text = "Print"
-        Me.PrintBtnH.UseVisualStyleBackColor = True
-        '
-        'exportBtnH
-        '
-        Me.exportBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnH.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnH.Location = New System.Drawing.Point(704, 73)
-        Me.exportBtnH.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnH.Name = "exportBtnH"
-        Me.exportBtnH.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnH.TabIndex = 32
-        Me.exportBtnH.Text = "Export"
-        Me.exportBtnH.UseVisualStyleBackColor = True
         '
         'DataGridView3
         '
@@ -2662,32 +2580,6 @@ Partial Class adminhomePage
         Me.searchErrorU.Text = "No results found "
         Me.searchErrorU.Visible = False
         '
-        'PrintBtnU
-        '
-        Me.PrintBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PrintBtnU.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.PrintBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnU.Location = New System.Drawing.Point(812, 73)
-        Me.PrintBtnU.Margin = New System.Windows.Forms.Padding(4)
-        Me.PrintBtnU.Name = "PrintBtnU"
-        Me.PrintBtnU.Size = New System.Drawing.Size(100, 28)
-        Me.PrintBtnU.TabIndex = 33
-        Me.PrintBtnU.Text = "Print"
-        Me.PrintBtnU.UseVisualStyleBackColor = True
-        '
-        'exportBtnU
-        '
-        Me.exportBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnU.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnU.Location = New System.Drawing.Point(704, 73)
-        Me.exportBtnU.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnU.Name = "exportBtnU"
-        Me.exportBtnU.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnU.TabIndex = 32
-        Me.exportBtnU.Text = "Export"
-        Me.exportBtnU.UseVisualStyleBackColor = True
-        '
         'DataGridView4
         '
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -2926,19 +2818,6 @@ Partial Class adminhomePage
         Me.roleDeleteBtn.UseVisualStyleBackColor = True
         Me.roleDeleteBtn.Visible = False
         '
-        'roleAddBtn
-        '
-        Me.roleAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.roleAddBtn.Image = Global.cems.My.Resources.Resources.plus
-        Me.roleAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.roleAddBtn.Location = New System.Drawing.Point(596, 73)
-        Me.roleAddBtn.Margin = New System.Windows.Forms.Padding(4)
-        Me.roleAddBtn.Name = "roleAddBtn"
-        Me.roleAddBtn.Size = New System.Drawing.Size(100, 28)
-        Me.roleAddBtn.TabIndex = 43
-        Me.roleAddBtn.Text = "Add"
-        Me.roleAddBtn.UseVisualStyleBackColor = True
-        '
         'confirmMsgR
         '
         Me.confirmMsgR.AutoSize = True
@@ -2976,32 +2855,6 @@ Partial Class adminhomePage
         Me.searchErrorR.Text = "No results found "
         Me.searchErrorR.Visible = False
         '
-        'PrintBtnR
-        '
-        Me.PrintBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PrintBtnR.Image = Global.cems.My.Resources.Resources.print__1_
-        Me.PrintBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnR.Location = New System.Drawing.Point(812, 73)
-        Me.PrintBtnR.Margin = New System.Windows.Forms.Padding(4)
-        Me.PrintBtnR.Name = "PrintBtnR"
-        Me.PrintBtnR.Size = New System.Drawing.Size(100, 28)
-        Me.PrintBtnR.TabIndex = 33
-        Me.PrintBtnR.Text = "Print"
-        Me.PrintBtnR.UseVisualStyleBackColor = True
-        '
-        'exportBtnR
-        '
-        Me.exportBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.exportBtnR.Image = Global.cems.My.Resources.Resources.export
-        Me.exportBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnR.Location = New System.Drawing.Point(704, 73)
-        Me.exportBtnR.Margin = New System.Windows.Forms.Padding(4)
-        Me.exportBtnR.Name = "exportBtnR"
-        Me.exportBtnR.Size = New System.Drawing.Size(100, 28)
-        Me.exportBtnR.TabIndex = 32
-        Me.exportBtnR.Text = "Export"
-        Me.exportBtnR.UseVisualStyleBackColor = True
-        '
         'DataGridView5
         '
         Me.DataGridView5.AllowUserToAddRows = False
@@ -3028,133 +2881,236 @@ Partial Class adminhomePage
         Me.Roles.TabIndex = 29
         Me.Roles.Text = "Roles"
         '
-        'Label2
+        'printBtnP
         '
-        Me.Label2.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Yellow
-        Me.Label2.Location = New System.Drawing.Point(22, 182)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(192, 25)
-        Me.Label2.TabIndex = 45
-        Me.Label2.Text = "CPU'S"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.printBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtnP.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.printBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.printBtnP.Location = New System.Drawing.Point(860, 68)
+        Me.printBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.printBtnP.Name = "printBtnP"
+        Me.printBtnP.Size = New System.Drawing.Size(100, 28)
+        Me.printBtnP.TabIndex = 33
+        Me.printBtnP.Text = "Print"
+        Me.printBtnP.UseVisualStyleBackColor = True
         '
-        'Label36
+        'exportBtnP
         '
-        Me.Label36.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.ForeColor = System.Drawing.Color.Yellow
-        Me.Label36.Location = New System.Drawing.Point(248, 183)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(192, 25)
-        Me.Label36.TabIndex = 46
-        Me.Label36.Text = "IP Phones"
-        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnP.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnP.Location = New System.Drawing.Point(749, 68)
+        Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnP.Name = "exportBtnP"
+        Me.exportBtnP.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnP.TabIndex = 32
+        Me.exportBtnP.Text = "Export"
+        Me.exportBtnP.UseVisualStyleBackColor = True
         '
-        'Label37
+        'addPostBtn
         '
-        Me.Label37.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.Yellow
-        Me.Label37.Location = New System.Drawing.Point(483, 184)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(192, 25)
-        Me.Label37.TabIndex = 47
-        Me.Label37.Text = "Monitors"
-        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.addPostBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addPostBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.addPostBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.addPostBtn.Location = New System.Drawing.Point(643, 69)
+        Me.addPostBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.addPostBtn.Name = "addPostBtn"
+        Me.addPostBtn.Size = New System.Drawing.Size(100, 28)
+        Me.addPostBtn.TabIndex = 63
+        Me.addPostBtn.Text = "Add"
+        Me.addPostBtn.UseVisualStyleBackColor = True
         '
-        'Label38
+        'printBtnE
         '
-        Me.Label38.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.Color.Yellow
-        Me.Label38.Location = New System.Drawing.Point(717, 184)
-        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(192, 25)
-        Me.Label38.TabIndex = 48
-        Me.Label38.Text = "Users"
-        Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.printBtnE.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.printBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.printBtnE.Location = New System.Drawing.Point(808, 73)
+        Me.printBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.printBtnE.Name = "printBtnE"
+        Me.printBtnE.Size = New System.Drawing.Size(100, 28)
+        Me.printBtnE.TabIndex = 34
+        Me.printBtnE.Text = "Print"
+        Me.printBtnE.UseVisualStyleBackColor = True
         '
-        'CPUsBtn2
+        'exportBtnE
         '
-        Me.CPUsBtn2.BackColor = System.Drawing.Color.Transparent
-        Me.CPUsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.CPUsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CPUsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
-        Me.CPUsBtn2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.CPUsBtn2.Location = New System.Drawing.Point(126, 221)
-        Me.CPUsBtn2.Margin = New System.Windows.Forms.Padding(0)
-        Me.CPUsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.CPUsBtn2.Name = "CPUsBtn2"
-        Me.CPUsBtn2.Size = New System.Drawing.Size(76, 27)
-        Me.CPUsBtn2.TabIndex = 38
-        Me.CPUsBtn2.Text = "View"
-        Me.CPUsBtn2.UseVisualStyleBackColor = False
+        Me.exportBtnE.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnE.Location = New System.Drawing.Point(700, 73)
+        Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnE.Name = "exportBtnE"
+        Me.exportBtnE.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnE.TabIndex = 33
+        Me.exportBtnE.Text = "Export"
+        Me.exportBtnE.UseVisualStyleBackColor = True
         '
-        'IPsBtn2
+        'addEquipmentBtn
         '
-        Me.IPsBtn2.BackColor = System.Drawing.Color.Transparent
-        Me.IPsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.IPsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IPsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
-        Me.IPsBtn2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.IPsBtn2.Location = New System.Drawing.Point(350, 221)
-        Me.IPsBtn2.Margin = New System.Windows.Forms.Padding(0)
-        Me.IPsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.IPsBtn2.Name = "IPsBtn2"
-        Me.IPsBtn2.Size = New System.Drawing.Size(76, 27)
-        Me.IPsBtn2.TabIndex = 39
-        Me.IPsBtn2.Text = "View"
-        Me.IPsBtn2.UseVisualStyleBackColor = False
+        Me.addEquipmentBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.addEquipmentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.addEquipmentBtn.Location = New System.Drawing.Point(596, 73)
+        Me.addEquipmentBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.addEquipmentBtn.Name = "addEquipmentBtn"
+        Me.addEquipmentBtn.Size = New System.Drawing.Size(100, 28)
+        Me.addEquipmentBtn.TabIndex = 60
+        Me.addEquipmentBtn.Text = "Add"
+        Me.addEquipmentBtn.UseVisualStyleBackColor = True
         '
-        'monitorsBtn2
+        'roleAddBtn
         '
-        Me.monitorsBtn2.BackColor = System.Drawing.Color.Transparent
-        Me.monitorsBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.monitorsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.monitorsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
-        Me.monitorsBtn2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.monitorsBtn2.Location = New System.Drawing.Point(587, 221)
-        Me.monitorsBtn2.Margin = New System.Windows.Forms.Padding(0)
-        Me.monitorsBtn2.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.monitorsBtn2.Name = "monitorsBtn2"
-        Me.monitorsBtn2.Size = New System.Drawing.Size(76, 27)
-        Me.monitorsBtn2.TabIndex = 40
-        Me.monitorsBtn2.Text = "View"
-        Me.monitorsBtn2.UseVisualStyleBackColor = False
+        Me.roleAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.roleAddBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.roleAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.roleAddBtn.Location = New System.Drawing.Point(596, 73)
+        Me.roleAddBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.roleAddBtn.Name = "roleAddBtn"
+        Me.roleAddBtn.Size = New System.Drawing.Size(100, 28)
+        Me.roleAddBtn.TabIndex = 43
+        Me.roleAddBtn.Text = "Add"
+        Me.roleAddBtn.UseVisualStyleBackColor = True
         '
-        'usersBtn2
+        'PrintBtnR
         '
-        Me.usersBtn2.BackColor = System.Drawing.Color.Transparent
-        Me.usersBtn2.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.usersBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.usersBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
-        Me.usersBtn2.ForeColor = System.Drawing.Color.SeaGreen
-        Me.usersBtn2.Location = New System.Drawing.Point(819, 221)
-        Me.usersBtn2.Margin = New System.Windows.Forms.Padding(0)
-        Me.usersBtn2.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.usersBtn2.Name = "usersBtn2"
-        Me.usersBtn2.Size = New System.Drawing.Size(76, 27)
-        Me.usersBtn2.TabIndex = 41
-        Me.usersBtn2.Text = "View"
-        Me.usersBtn2.UseVisualStyleBackColor = False
+        Me.PrintBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PrintBtnR.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.PrintBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrintBtnR.Location = New System.Drawing.Point(812, 73)
+        Me.PrintBtnR.Margin = New System.Windows.Forms.Padding(4)
+        Me.PrintBtnR.Name = "PrintBtnR"
+        Me.PrintBtnR.Size = New System.Drawing.Size(100, 28)
+        Me.PrintBtnR.TabIndex = 33
+        Me.PrintBtnR.Text = "Print"
+        Me.PrintBtnR.UseVisualStyleBackColor = True
         '
-        'Label39
+        'exportBtnR
         '
-        Me.Label39.BackColor = System.Drawing.Color.MintCream
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.Color.Yellow
-        Me.Label39.Location = New System.Drawing.Point(10, 82)
-        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(190, 2)
-        Me.Label39.TabIndex = 49
-        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.exportBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnR.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnR.Location = New System.Drawing.Point(704, 73)
+        Me.exportBtnR.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnR.Name = "exportBtnR"
+        Me.exportBtnR.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnR.TabIndex = 32
+        Me.exportBtnR.Text = "Export"
+        Me.exportBtnR.UseVisualStyleBackColor = True
+        '
+        'PrintBtnU
+        '
+        Me.PrintBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PrintBtnU.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.PrintBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrintBtnU.Location = New System.Drawing.Point(812, 73)
+        Me.PrintBtnU.Margin = New System.Windows.Forms.Padding(4)
+        Me.PrintBtnU.Name = "PrintBtnU"
+        Me.PrintBtnU.Size = New System.Drawing.Size(100, 28)
+        Me.PrintBtnU.TabIndex = 33
+        Me.PrintBtnU.Text = "Print"
+        Me.PrintBtnU.UseVisualStyleBackColor = True
+        '
+        'exportBtnU
+        '
+        Me.exportBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnU.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnU.Location = New System.Drawing.Point(704, 73)
+        Me.exportBtnU.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnU.Name = "exportBtnU"
+        Me.exportBtnU.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnU.TabIndex = 32
+        Me.exportBtnU.Text = "Export"
+        Me.exportBtnU.UseVisualStyleBackColor = True
+        '
+        'hallAddBtn
+        '
+        Me.hallAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hallAddBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.hallAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.hallAddBtn.Location = New System.Drawing.Point(596, 73)
+        Me.hallAddBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallAddBtn.Name = "hallAddBtn"
+        Me.hallAddBtn.Size = New System.Drawing.Size(100, 28)
+        Me.hallAddBtn.TabIndex = 43
+        Me.hallAddBtn.Text = "Add"
+        Me.hallAddBtn.UseVisualStyleBackColor = True
+        '
+        'PrintBtnH
+        '
+        Me.PrintBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PrintBtnH.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.PrintBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PrintBtnH.Location = New System.Drawing.Point(812, 73)
+        Me.PrintBtnH.Margin = New System.Windows.Forms.Padding(4)
+        Me.PrintBtnH.Name = "PrintBtnH"
+        Me.PrintBtnH.Size = New System.Drawing.Size(100, 28)
+        Me.PrintBtnH.TabIndex = 33
+        Me.PrintBtnH.Text = "Print"
+        Me.PrintBtnH.UseVisualStyleBackColor = True
+        '
+        'exportBtnH
+        '
+        Me.exportBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnH.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnH.Location = New System.Drawing.Point(704, 73)
+        Me.exportBtnH.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnH.Name = "exportBtnH"
+        Me.exportBtnH.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnH.TabIndex = 32
+        Me.exportBtnH.Text = "Export"
+        Me.exportBtnH.UseVisualStyleBackColor = True
+        '
+        'Label48
+        '
+        Me.Label48.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.ForeColor = System.Drawing.Color.MintCream
+        Me.Label48.Image = CType(resources.GetObject("Label48.Image"), System.Drawing.Image)
+        Me.Label48.Location = New System.Drawing.Point(37, 163)
+        Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(20, 20)
+        Me.Label48.TabIndex = 58
+        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label47
+        '
+        Me.Label47.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.ForeColor = System.Drawing.Color.MintCream
+        Me.Label47.Image = CType(resources.GetObject("Label47.Image"), System.Drawing.Image)
+        Me.Label47.Location = New System.Drawing.Point(37, 221)
+        Me.Label47.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(20, 20)
+        Me.Label47.TabIndex = 57
+        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label46
+        '
+        Me.Label46.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.ForeColor = System.Drawing.Color.MintCream
+        Me.Label46.Image = CType(resources.GetObject("Label46.Image"), System.Drawing.Image)
+        Me.Label46.Location = New System.Drawing.Point(37, 279)
+        Me.Label46.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(20, 20)
+        Me.Label46.TabIndex = 56
+        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label45
+        '
+        Me.Label45.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.ForeColor = System.Drawing.Color.MintCream
+        Me.Label45.Image = CType(resources.GetObject("Label45.Image"), System.Drawing.Image)
+        Me.Label45.Location = New System.Drawing.Point(37, 337)
+        Me.Label45.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(20, 20)
+        Me.Label45.TabIndex = 55
+        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label40
         '
@@ -3221,57 +3177,101 @@ Partial Class adminhomePage
         Me.Label44.TabIndex = 54
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label45
+        'equipmentsBtn
         '
-        Me.Label45.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.ForeColor = System.Drawing.Color.MintCream
-        Me.Label45.Image = CType(resources.GetObject("Label45.Image"), System.Drawing.Image)
-        Me.Label45.Location = New System.Drawing.Point(37, 337)
-        Me.Label45.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(20, 20)
-        Me.Label45.TabIndex = 55
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
+        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.equipmentsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
+        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
+        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.equipmentsBtn.Name = "equipmentsBtn"
+        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 7, 0)
+        Me.equipmentsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.equipmentsBtn.TabIndex = 6
+        Me.equipmentsBtn.UseVisualStyleBackColor = False
         '
-        'Label46
+        'PictureBox1
         '
-        Me.Label46.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.MintCream
-        Me.Label46.Image = CType(resources.GetObject("Label46.Image"), System.Drawing.Image)
-        Me.Label46.Location = New System.Drawing.Point(37, 279)
-        Me.Label46.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(20, 20)
-        Me.Label46.TabIndex = 56
-        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(56, 46)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
-        'Label47
+        'userbuttoninactive
         '
-        Me.Label47.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.MintCream
-        Me.Label47.Image = CType(resources.GetObject("Label47.Image"), System.Drawing.Image)
-        Me.Label47.Location = New System.Drawing.Point(37, 221)
-        Me.Label47.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(20, 20)
-        Me.Label47.TabIndex = 57
-        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.userbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.userbuttoninactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.userbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.userbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.userbuttoninactive.Image = Global.cems.My.Resources.Resources.user2
+        Me.userbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.userbuttoninactive.Location = New System.Drawing.Point(716, 57)
+        Me.userbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
+        Me.userbuttoninactive.Name = "userbuttoninactive"
+        Me.userbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.userbuttoninactive.Size = New System.Drawing.Size(194, 201)
+        Me.userbuttoninactive.TabIndex = 33
+        Me.userbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.userbuttoninactive.UseVisualStyleBackColor = False
         '
-        'Label48
+        'monitorbuttoninactive
         '
-        Me.Label48.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.MintCream
-        Me.Label48.Image = CType(resources.GetObject("Label48.Image"), System.Drawing.Image)
-        Me.Label48.Location = New System.Drawing.Point(37, 163)
-        Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(20, 20)
-        Me.Label48.TabIndex = 58
-        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.monitorbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.monitorbuttoninactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.monitorbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.monitorbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.monitorbuttoninactive.Image = Global.cems.My.Resources.Resources.monitor1
+        Me.monitorbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.monitorbuttoninactive.Location = New System.Drawing.Point(482, 57)
+        Me.monitorbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
+        Me.monitorbuttoninactive.Name = "monitorbuttoninactive"
+        Me.monitorbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.monitorbuttoninactive.Size = New System.Drawing.Size(194, 201)
+        Me.monitorbuttoninactive.TabIndex = 26
+        Me.monitorbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.monitorbuttoninactive.UseVisualStyleBackColor = False
+        '
+        'IPbuttoninactive
+        '
+        Me.IPbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.IPbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.IPbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IPbuttoninactive.Image = CType(resources.GetObject("IPbuttoninactive.Image"), System.Drawing.Image)
+        Me.IPbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.IPbuttoninactive.Location = New System.Drawing.Point(247, 57)
+        Me.IPbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
+        Me.IPbuttoninactive.Name = "IPbuttoninactive"
+        Me.IPbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.IPbuttoninactive.Size = New System.Drawing.Size(194, 201)
+        Me.IPbuttoninactive.TabIndex = 25
+        Me.IPbuttoninactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IPbuttoninactive.UseVisualStyleBackColor = False
+        '
+        'CPUbuttoninactive
+        '
+        Me.CPUbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.CPUbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.CPUbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CPUbuttoninactive.Image = Global.cems.My.Resources.Resources.cpu1
+        Me.CPUbuttoninactive.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CPUbuttoninactive.Location = New System.Drawing.Point(21, 57)
+        Me.CPUbuttoninactive.Margin = New System.Windows.Forms.Padding(4)
+        Me.CPUbuttoninactive.Name = "CPUbuttoninactive"
+        Me.CPUbuttoninactive.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.CPUbuttoninactive.Size = New System.Drawing.Size(194, 201)
+        Me.CPUbuttoninactive.TabIndex = 24
+        Me.CPUbuttoninactive.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CPUbuttoninactive.UseVisualStyleBackColor = False
         '
         'adminhomePage
         '
@@ -3302,7 +3302,6 @@ Partial Class adminhomePage
         Me.Panel2.PerformLayout()
         Me.adminHeader.ResumeLayout(False)
         Me.adminHeader.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.adminHomePagePanel.ResumeLayout(False)
         Me.adminHomePagePanel.PerformLayout()
         Me.adminEquipmentPanel.ResumeLayout(False)
@@ -3346,6 +3345,7 @@ Partial Class adminhomePage
         Me.roleAddPanel.ResumeLayout(False)
         Me.roleAddPanel.PerformLayout()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
