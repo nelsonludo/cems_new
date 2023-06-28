@@ -259,6 +259,8 @@ Partial Class adminhomePage
         Me.updateProfileShowBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
         Me.dropdown.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.adminHeader.SuspendLayout()
@@ -1183,7 +1185,7 @@ Partial Class adminhomePage
         Me.adminEquipmentPanel.Controls.Add(Me.Label34)
         Me.adminEquipmentPanel.Controls.Add(Me.Label35)
         Me.adminEquipmentPanel.Controls.Add(Me.userSearchBoxE)
-        Me.adminEquipmentPanel.Location = New System.Drawing.Point(95, 30)
+        Me.adminEquipmentPanel.Location = New System.Drawing.Point(65, 478)
         Me.adminEquipmentPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminEquipmentPanel.Name = "adminEquipmentPanel"
         Me.adminEquipmentPanel.Size = New System.Drawing.Size(967, 40)
@@ -1910,8 +1912,8 @@ Partial Class adminhomePage
         '
         'adminProfilePanel
         '
-        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.adminHallsPanel)
+        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Location = New System.Drawing.Point(229, 100)
@@ -1922,7 +1924,10 @@ Partial Class adminhomePage
         '
         'profileSubPanel2
         '
-        Me.profileSubPanel2.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.profileSubPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.profileSubPanel2.Controls.Add(Me.Label52)
+        Me.profileSubPanel2.Controls.Add(Me.Label51)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileCancelBtn)
@@ -1936,45 +1941,46 @@ Partial Class adminhomePage
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
-        Me.profileSubPanel2.Location = New System.Drawing.Point(89, 115)
+        Me.profileSubPanel2.Location = New System.Drawing.Point(188, 33)
         Me.profileSubPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.profileSubPanel2.Name = "profileSubPanel2"
-        Me.profileSubPanel2.Size = New System.Drawing.Size(700, 300)
+        Me.profileSubPanel2.Size = New System.Drawing.Size(548, 466)
         Me.profileSubPanel2.TabIndex = 35
         Me.profileSubPanel2.Visible = False
         '
         'userConfirmPwdProfileInput
         '
-        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(399, 224)
+        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(70, 339)
         Me.userConfirmPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
         Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(420, 22)
         Me.userConfirmPwdProfileInput.TabIndex = 22
         '
         'userConfirmPwdProfileLabel
         '
         Me.userConfirmPwdProfileLabel.AutoSize = True
-        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(64, 222)
+        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(65, 309)
         Me.userConfirmPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
-        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(192, 25)
+        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(161, 20)
         Me.userConfirmPwdProfileLabel.TabIndex = 21
-        Me.userConfirmPwdProfileLabel.Text = "Confirm password:"
+        Me.userConfirmPwdProfileLabel.Text = "Confirm password"
         '
         'updateProfileCancelBtn
         '
-        Me.updateProfileCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.updateProfileCancelBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.updateProfileCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.updateProfileCancelBtn.FlatAppearance.BorderSize = 0
         Me.updateProfileCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileCancelBtn.Location = New System.Drawing.Point(555, 265)
+        Me.updateProfileCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.updateProfileCancelBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.updateProfileCancelBtn.Location = New System.Drawing.Point(70, 417)
         Me.updateProfileCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileCancelBtn.MaximumSize = New System.Drawing.Size(500, 62)
         Me.updateProfileCancelBtn.Name = "updateProfileCancelBtn"
-        Me.updateProfileCancelBtn.Size = New System.Drawing.Size(89, 27)
+        Me.updateProfileCancelBtn.Size = New System.Drawing.Size(420, 35)
         Me.updateProfileCancelBtn.TabIndex = 20
         Me.updateProfileCancelBtn.Text = "Cancel"
         Me.updateProfileCancelBtn.UseVisualStyleBackColor = False
@@ -1994,49 +2000,50 @@ Partial Class adminhomePage
         '
         'userPwdProfileInput
         '
-        Me.userPwdProfileInput.Location = New System.Drawing.Point(399, 185)
+        Me.userPwdProfileInput.Location = New System.Drawing.Point(70, 279)
         Me.userPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userPwdProfileInput.Name = "userPwdProfileInput"
         Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userPwdProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userPwdProfileInput.Size = New System.Drawing.Size(420, 22)
         Me.userPwdProfileInput.TabIndex = 18
         '
         'userPhoneNumberProfileInput
         '
-        Me.userPhoneNumberProfileInput.Location = New System.Drawing.Point(399, 105)
+        Me.userPhoneNumberProfileInput.Location = New System.Drawing.Point(70, 219)
         Me.userPhoneNumberProfileInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userPhoneNumberProfileInput.Name = "userPhoneNumberProfileInput"
-        Me.userPhoneNumberProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userPhoneNumberProfileInput.Size = New System.Drawing.Size(420, 22)
         Me.userPhoneNumberProfileInput.TabIndex = 17
         '
         'userEmailProfileInput
         '
-        Me.userEmailProfileInput.Location = New System.Drawing.Point(399, 63)
+        Me.userEmailProfileInput.Location = New System.Drawing.Point(70, 159)
         Me.userEmailProfileInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userEmailProfileInput.Name = "userEmailProfileInput"
-        Me.userEmailProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userEmailProfileInput.Size = New System.Drawing.Size(420, 22)
         Me.userEmailProfileInput.TabIndex = 16
         '
         'userNameProfileInput
         '
-        Me.userNameProfileInput.Location = New System.Drawing.Point(399, 20)
+        Me.userNameProfileInput.Location = New System.Drawing.Point(70, 99)
         Me.userNameProfileInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userNameProfileInput.Name = "userNameProfileInput"
-        Me.userNameProfileInput.Size = New System.Drawing.Size(239, 22)
+        Me.userNameProfileInput.Size = New System.Drawing.Size(422, 22)
         Me.userNameProfileInput.TabIndex = 15
         '
         'updateProfileValidateBtn
         '
-        Me.updateProfileValidateBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.updateProfileValidateBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.updateProfileValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.updateProfileValidateBtn.FlatAppearance.BorderSize = 0
         Me.updateProfileValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileValidateBtn.Location = New System.Drawing.Point(667, 265)
+        Me.updateProfileValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
+        Me.updateProfileValidateBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.updateProfileValidateBtn.Location = New System.Drawing.Point(70, 376)
         Me.updateProfileValidateBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileValidateBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileValidateBtn.MaximumSize = New System.Drawing.Size(500, 62)
         Me.updateProfileValidateBtn.Name = "updateProfileValidateBtn"
-        Me.updateProfileValidateBtn.Size = New System.Drawing.Size(89, 27)
+        Me.updateProfileValidateBtn.Size = New System.Drawing.Size(420, 35)
         Me.updateProfileValidateBtn.TabIndex = 13
         Me.updateProfileValidateBtn.Text = "Done"
         Me.updateProfileValidateBtn.UseVisualStyleBackColor = False
@@ -2044,51 +2051,53 @@ Partial Class adminhomePage
         'userEmailProfileLabel2
         '
         Me.userEmailProfileLabel2.AutoSize = True
-        Me.userEmailProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userEmailProfileLabel2.Location = New System.Drawing.Point(65, 59)
+        Me.userEmailProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userEmailProfileLabel2.Location = New System.Drawing.Point(65, 129)
         Me.userEmailProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userEmailProfileLabel2.Name = "userEmailProfileLabel2"
-        Me.userEmailProfileLabel2.Size = New System.Drawing.Size(127, 25)
+        Me.userEmailProfileLabel2.Size = New System.Drawing.Size(106, 20)
         Me.userEmailProfileLabel2.TabIndex = 11
-        Me.userEmailProfileLabel2.Text = "User email :"
+        Me.userEmailProfileLabel2.Text = "User email "
         '
         'userPhoneNumberProfileLabel2
         '
         Me.userPhoneNumberProfileLabel2.AutoSize = True
-        Me.userPhoneNumberProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userPhoneNumberProfileLabel2.Location = New System.Drawing.Point(65, 102)
+        Me.userPhoneNumberProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userPhoneNumberProfileLabel2.Location = New System.Drawing.Point(65, 189)
         Me.userPhoneNumberProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userPhoneNumberProfileLabel2.Name = "userPhoneNumberProfileLabel2"
-        Me.userPhoneNumberProfileLabel2.Size = New System.Drawing.Size(244, 25)
+        Me.userPhoneNumberProfileLabel2.Size = New System.Drawing.Size(205, 20)
         Me.userPhoneNumberProfileLabel2.TabIndex = 10
-        Me.userPhoneNumberProfileLabel2.Text = "User telephone nunber :"
+        Me.userPhoneNumberProfileLabel2.Text = "User telephone nunber "
         '
         'userPwdProfileLabel
         '
         Me.userPwdProfileLabel.AutoSize = True
-        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 182)
+        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 249)
         Me.userPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
-        Me.userPwdProfileLabel.Size = New System.Drawing.Size(213, 25)
+        Me.userPwdProfileLabel.Size = New System.Drawing.Size(179, 20)
         Me.userPwdProfileLabel.TabIndex = 9
-        Me.userPwdProfileLabel.Text = "Enter new password:"
+        Me.userPwdProfileLabel.Text = "Enter new password"
         '
         'userNameProfileLabel2
         '
         Me.userNameProfileLabel2.AutoSize = True
-        Me.userNameProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userNameProfileLabel2.Location = New System.Drawing.Point(65, 17)
+        Me.userNameProfileLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userNameProfileLabel2.Location = New System.Drawing.Point(65, 69)
         Me.userNameProfileLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userNameProfileLabel2.Name = "userNameProfileLabel2"
-        Me.userNameProfileLabel2.Size = New System.Drawing.Size(129, 25)
+        Me.userNameProfileLabel2.Size = New System.Drawing.Size(106, 20)
         Me.userNameProfileLabel2.TabIndex = 7
-        Me.userNameProfileLabel2.Text = "User name :"
+        Me.userNameProfileLabel2.Text = "User name "
         '
         'adminHallsPanel
         '
         Me.adminHallsPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.adminHallsPanel.Controls.Add(Me.hallUpdatePanel)
+        Me.adminHallsPanel.Controls.Add(Me.adminRolePanel)
+        Me.adminHallsPanel.Controls.Add(Me.adminEquipmentPanel)
         Me.adminHallsPanel.Controls.Add(Me.adminUsersPanel)
         Me.adminHallsPanel.Controls.Add(Me.hallAddpanel)
         Me.adminHallsPanel.Controls.Add(Me.hallAddBtn)
@@ -2102,10 +2111,10 @@ Partial Class adminhomePage
         Me.adminHallsPanel.Controls.Add(Me.Label21)
         Me.adminHallsPanel.Controls.Add(Me.HallDeleteBtn)
         Me.adminHallsPanel.Controls.Add(Me.Label4)
-        Me.adminHallsPanel.Location = New System.Drawing.Point(0, 469)
+        Me.adminHallsPanel.Location = New System.Drawing.Point(0, 0)
         Me.adminHallsPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminHallsPanel.Name = "adminHallsPanel"
-        Me.adminHallsPanel.Size = New System.Drawing.Size(967, 102)
+        Me.adminHallsPanel.Size = New System.Drawing.Size(967, 583)
         Me.adminHallsPanel.TabIndex = 42
         Me.adminHallsPanel.Visible = False
         '
@@ -2116,10 +2125,10 @@ Partial Class adminhomePage
         Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameInput)
         Me.hallUpdatePanel.Controls.Add(Me.hallUpdateValidateBtn)
         Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameLabel)
-        Me.hallUpdatePanel.Location = New System.Drawing.Point(78, 137)
+        Me.hallUpdatePanel.Location = New System.Drawing.Point(606, 437)
         Me.hallUpdatePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.hallUpdatePanel.Name = "hallUpdatePanel"
-        Me.hallUpdatePanel.Size = New System.Drawing.Size(831, 290)
+        Me.hallUpdatePanel.Size = New System.Drawing.Size(831, 196)
         Me.hallUpdatePanel.TabIndex = 62
         Me.hallUpdatePanel.Visible = False
         '
@@ -2178,7 +2187,6 @@ Partial Class adminhomePage
         '
         Me.adminUsersPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.adminUsersPanel.Controls.Add(Me.userUpdatePanel)
-        Me.adminUsersPanel.Controls.Add(Me.adminRolePanel)
         Me.adminUsersPanel.Controls.Add(Me.userAddPanel)
         Me.adminUsersPanel.Controls.Add(Me.userSearchBox)
         Me.adminUsersPanel.Controls.Add(Me.userAddBtn)
@@ -2191,7 +2199,7 @@ Partial Class adminhomePage
         Me.adminUsersPanel.Controls.Add(Me.Label10)
         Me.adminUsersPanel.Controls.Add(Me.userDeleteBtn)
         Me.adminUsersPanel.Controls.Add(Me.Label3)
-        Me.adminUsersPanel.Location = New System.Drawing.Point(12, 69)
+        Me.adminUsersPanel.Location = New System.Drawing.Point(21, 467)
         Me.adminUsersPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminUsersPanel.Name = "adminUsersPanel"
         Me.adminUsersPanel.Size = New System.Drawing.Size(968, 76)
@@ -2331,7 +2339,6 @@ Partial Class adminhomePage
         '
         Me.adminRolePanel.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.adminRolePanel.Controls.Add(Me.roleUpdatePanel)
-        Me.adminRolePanel.Controls.Add(Me.adminEquipmentPanel)
         Me.adminRolePanel.Controls.Add(Me.roleAddPanel)
         Me.adminRolePanel.Controls.Add(Me.roleDeleteBtn)
         Me.adminRolePanel.Controls.Add(Me.roleAddBtn)
@@ -2342,7 +2349,7 @@ Partial Class adminhomePage
         Me.adminRolePanel.Controls.Add(Me.exportBtnR)
         Me.adminRolePanel.Controls.Add(Me.DataGridView5)
         Me.adminRolePanel.Controls.Add(Me.Roles)
-        Me.adminRolePanel.Location = New System.Drawing.Point(20, 30)
+        Me.adminRolePanel.Location = New System.Drawing.Point(48, 482)
         Me.adminRolePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminRolePanel.Name = "adminRolePanel"
         Me.adminRolePanel.Size = New System.Drawing.Size(968, 61)
@@ -2943,10 +2950,10 @@ Partial Class adminhomePage
         Me.hallAddpanel.Controls.Add(Me.adminAddHallNameInput)
         Me.hallAddpanel.Controls.Add(Me.HallAddValidateBtn)
         Me.hallAddpanel.Controls.Add(Me.adminAddHallNameLabel)
-        Me.hallAddpanel.Location = New System.Drawing.Point(81, 133)
+        Me.hallAddpanel.Location = New System.Drawing.Point(818, 313)
         Me.hallAddpanel.Margin = New System.Windows.Forms.Padding(4)
         Me.hallAddpanel.Name = "hallAddpanel"
-        Me.hallAddpanel.Size = New System.Drawing.Size(831, 290)
+        Me.hallAddpanel.Size = New System.Drawing.Size(831, 245)
         Me.hallAddpanel.TabIndex = 49
         Me.hallAddpanel.Visible = False
         '
@@ -3327,6 +3334,31 @@ Partial Class adminhomePage
         Me.profileTitle.TabIndex = 30
         Me.profileTitle.Text = "Profile"
         '
+        'Label51
+        '
+        Me.Label51.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.ForeColor = System.Drawing.Color.Yellow
+        Me.Label51.Location = New System.Drawing.Point(0, 0)
+        Me.Label51.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(548, 45)
+        Me.Label51.TabIndex = 51
+        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label52.ForeColor = System.Drawing.Color.Yellow
+        Me.Label52.Location = New System.Drawing.Point(227, 13)
+        Me.Label52.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(114, 20)
+        Me.Label52.TabIndex = 52
+        Me.Label52.Text = "Update User"
+        '
         'adminhomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -3635,4 +3667,6 @@ Partial Class adminhomePage
     Friend WithEvents Label39 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label51 As Label
 End Class
