@@ -36,8 +36,36 @@ Public Class adminhomePage
     End Sub
 
 
+    'FAILED EXPERIMENT TO REDUCE THE NUMBER OF QUERRIES USED BY QUERRYING ONCE AND STORING IT IN VARIABLES
+    'Public Sub getEverything(name As String, email As String)
+    '    connect_db()
+    '    Try
+    '        sqlConn.Open()
+    '        'username appear
+    '        sqlQuery = "select * from cems.cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
+    '        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+    '        sqlReader = sqlCmd.ExecuteReader
+    '        If (sqlReader.Read()) Then
+    '            name = sqlReader.Item("admin_name")
+    '            email = sqlReader.Item("admin_email")
+    '
+    '        End If
+    '
+    '        sqlConn.Close()
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    Finally
+    '        sqlConn.Dispose()
+    '    End Try
+    'End Sub
+    Public Sub showUserName()
 
-    Public Sub getEverything(name As String, email As String)
+        'Dim userName
+        'Dim userEmail
+        '
+        'getEverything(userName, userEmail)
+        '
+        'aName.Text = userName
         connect_db()
         Try
             sqlConn.Open()
@@ -46,8 +74,7 @@ Public Class adminhomePage
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
-                name = sqlReader.Item("admin_name")
-                email = sqlReader.Item("admin_email")
+                aName.Text = sqlReader.Item("admin_name")
 
             End If
 
@@ -57,33 +84,6 @@ Public Class adminhomePage
         Finally
             sqlConn.Dispose()
         End Try
-    End Sub
-    Public Sub showUserName()
-
-        Dim userName
-        Dim userEmail
-
-        getEverything(userName, userEmail)
-
-        aName.Text = userName
-        'connect_db()
-        'Try
-        '    sqlConn.Open()
-        '    'username appear
-        '    sqlQuery = "select * from cems.cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
-        '    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-        '    sqlReader = sqlCmd.ExecuteReader
-        '    If (sqlReader.Read()) Then
-        '        aName.Text = sqlReader.Item("admin_name")
-        '
-        '    End If
-        '
-        '    sqlConn.Close()
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        'Finally
-        '    sqlConn.Dispose()
-        'End Try
     End Sub
 
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -551,6 +551,17 @@ Public Class adminhomePage
 
         fillHalls(hallSearchBoxH)
 
+
+        Label21.Text = "Halls"
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = True
+        exportBtnH.Visible = True
+        PrintBtnH.Visible = True
+        hallSearchBoxH.Visible = True
+        Label4.Visible = True
+        DataGridView3.Visible = True
+
     End Sub
 
     'hall add buttons
@@ -614,6 +625,20 @@ Public Class adminhomePage
 
         adminAddHallNameInput.Text = ""
         fillHalls(hallSearchBoxH)
+
+        HallUpdateBtn.Visible = False
+        HallDeleteBtn.Visible = False
+
+        Label21.Text = "Halls"
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = True
+        exportBtnH.Visible = True
+        PrintBtnH.Visible = True
+        hallSearchBoxH.Visible = True
+        Label4.Visible = True
+        DataGridView3.Visible = True
+
     End Sub
 
     'hall update buttons 
@@ -726,6 +751,18 @@ Public Class adminhomePage
 
         adminUpdateHallNameInput.Text = ""
         fillHalls(hallSearchBoxH)
+
+
+        Label21.Text = "Halls"
+
+        'things that have to disappear (this is annoying)
+        hallAddBtn.Visible = True
+        exportBtnH.Visible = True
+        PrintBtnH.Visible = True
+        hallSearchBoxH.Visible = True
+        Label4.Visible = True
+        DataGridView3.Visible = True
+
     End Sub
 
 
@@ -765,10 +802,16 @@ Public Class adminhomePage
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
 
+
+        Label10.Text = "users"
+
+
+        DataGridView4.Visible = True
+
     End Sub
 
 
-    Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles userbuttoninactive.Click
+    Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
         adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
         adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
         adminProfilePanel.Visible = False
@@ -782,6 +825,7 @@ Public Class adminhomePage
         userUpdatePanel.Visible = False
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
+
 
 
     End Sub
@@ -850,12 +894,22 @@ Public Class adminhomePage
 
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
+
+
+        Label10.Text = "users"
+
+        DataGridView4.Visible = True
     End Sub
 
     Private Sub userCancelBtn_Click(sender As Object, e As EventArgs) Handles userCancelBtn.Click 'cancel
         userUpdatePanel.Visible = False
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
+
+
+        Label10.Text = "Users"
+
+        DataGridView4.Visible = True
 
     End Sub
 
@@ -902,6 +956,12 @@ Public Class adminhomePage
 
         End Try
 
+
+        Label10.Text = "update user"
+
+        userUpdateBtn.Visible = False
+        DataGridView4.Visible = False
+
     End Sub
 
     Private Sub userdeleteBtn_Click(sender As Object, e As EventArgs) Handles userDeleteBtn.Click 'delete
@@ -916,6 +976,8 @@ Public Class adminhomePage
         userDeleteBtn.Visible = False
 
         User.displayTableU("users", DataGridView4, sqlDataTableU)
+
+
 
     End Sub
 
@@ -948,6 +1010,12 @@ Public Class adminhomePage
             sqlConn.Dispose()
 
         End Try
+
+
+        Label10.Text = "Add user"
+
+        userUpdateBtn.Visible = False
+        DataGridView4.Visible = False
     End Sub
 
 
@@ -1055,6 +1123,12 @@ Public Class adminhomePage
         userUserAddPwdInput.Text = ""
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
+
+        Label10.Text = "users"
+
+
+        DataGridView4.Visible = True
+
     End Sub
 
     Private Sub userAddCancelBtn_Click(sender As Object, e As EventArgs) Handles userAddCancelBtn.Click 'cancel add
@@ -1068,6 +1142,12 @@ Public Class adminhomePage
         userUserAddPwdInput.Text = ""
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
+
+        Label10.Text = "users"
+
+
+        DataGridView4.Visible = True
+
     End Sub
 
     'role buttons 
@@ -1329,7 +1409,7 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUbuttoninactive.Click
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
@@ -1387,7 +1467,7 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPbuttoninactive.Click
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
         User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
 
@@ -1404,7 +1484,7 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorbuttoninactive.Click
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
         User.displayEquipmentTable("equipments", "monitor", DataGridView1)
 
@@ -2110,6 +2190,7 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
 
 
 
