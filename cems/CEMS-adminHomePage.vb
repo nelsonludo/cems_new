@@ -1185,7 +1185,9 @@ Public Class adminhomePage
 
         User.displayTable("titles", DataGridView5, sqlDataTableR)
 
-
+        roleUpdateBtn.Visible = False
+        DataGridView5.Visible = True
+        Roles.Text = "Roles"
     End Sub
 
     'role update buttons
@@ -1227,12 +1229,18 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         roleAddPanel.Visible = False
 
+        DataGridView5.Visible = True
+        Roles.Text = "Roles"
+
 
     End Sub
 
     Private Sub roleUpdateCancelBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateCancelBtn.Click 'cancel
         roleUpdatePanel.Visible = False
         roleUpdateBtn.Visible = False
+
+        DataGridView5.Visible = True
+        Roles.Text = "Roles"
     End Sub
 
     Private Sub DataGridView5_CellClick() Handles DataGridView5.CellClick 'the cellclicked event
@@ -1245,11 +1253,17 @@ Public Class adminhomePage
             MessageBox.Show(ex.Message)
         End Try
 
+
+
     End Sub
 
 
     Private Sub RoleUpdateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateBtn.Click 'update
         roleUpdatePanel.Visible = True
+
+        roleUpdateBtn.Visible = False
+        DataGridView5.Visible = False
+        Roles.Text = "Update roles"
     End Sub
 
     Private Sub roleDeleteBtn_Click_1(sender As Object, e As EventArgs) Handles roleDeleteBtn.Click  'delete
@@ -1271,6 +1285,10 @@ Public Class adminhomePage
     Private Sub roleAddBtn_Click(sender As Object, e As EventArgs) Handles roleAddBtn.Click 'add 
         roleUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         roleAddPanel.Visible = True
+
+        roleUpdateBtn.Visible = False
+        DataGridView5.Visible = False
+        Roles.Text = "Add roles"
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
 
@@ -1315,12 +1333,19 @@ Public Class adminhomePage
             'empty aftwr validation
             titleAddNameInput.Text = ""
 
+            DataGridView5.Visible = True
+            Roles.Text = "Roles"
+
         End If
     End Sub
 
     Private Sub roleAddCancelBtn_Click(sender As Object, e As EventArgs) Handles roleAddCancelBtn.Click 'cancel add
         roleUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         roleAddPanel.Visible = False
+
+        DataGridView5.Visible = True
+        Roles.Text = "Roles"
+
     End Sub
 
     'equipment SECTION
@@ -2190,17 +2215,6 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
-
-
-
-
-
-
-
-
-
-
-
 
     'styles
 
