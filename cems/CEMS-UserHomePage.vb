@@ -226,7 +226,7 @@ Public Class UserHomePage
     End Sub
 
     'equipment subbuttons
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs)
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", DataGridView1)
 
@@ -275,7 +275,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs)
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
         User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
 
@@ -320,7 +320,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs)
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
         User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
 
@@ -391,7 +391,7 @@ Public Class UserHomePage
     End Sub
 
     'update buttons 
-    Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs) Handles updateProfileShowBtn.Click
+    Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs)
         profileSubPanel2.Visible = True
 
         userNameProfileInput.Text = userNameProfile.Text
@@ -399,12 +399,12 @@ Public Class UserHomePage
         userEmailProfileInput.Text = userEmailProfile.Text
     End Sub
 
-    Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
+    Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs)
         profileSubPanel2.Visible = False
         updateProfileErrorMsg.Visible = False
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
+    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs)
 
         User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
@@ -413,20 +413,20 @@ Public Class UserHomePage
     End Sub
 
     'searches section
-    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
+    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs)
 
         User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
 
     End Sub
 
-    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
+    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs)
 
         User.searchP("posts", DataGridView2, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
 
     'search by halls in posts 
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim hall_id As Integer
         'SQL Connection'
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
@@ -459,7 +459,7 @@ Public Class UserHomePage
     End Sub
 
     'search by halls in equipment
-    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
+    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim hall_id As Integer
         'SQL Connection'
         connect_db()
@@ -490,7 +490,7 @@ Public Class UserHomePage
     End Sub
 
     'equipment search by state
-    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.TextChanged
+    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs)
 
         Dim hall_id As Integer
         'SQL Connection'
@@ -522,7 +522,7 @@ Public Class UserHomePage
     End Sub
 
     'post search by state
-    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
+    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs)
 
         Dim hall_id As Integer
         'SQL Connection'
@@ -557,7 +557,7 @@ Public Class UserHomePage
     End Sub
 
     'export buttons 
-    Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
+    Private Sub exportBtnP_Click(sender As Object, e As EventArgs)
 
         Try
 
@@ -575,7 +575,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
+    Private Sub exportBtnE_Click(sender As Object, e As EventArgs)
 
         Try
 
@@ -602,7 +602,7 @@ Public Class UserHomePage
         updateProfileErrorMsg.Visible = False
         Timer2.Stop()
     End Sub
-    Private Sub printBtnP_Click(sender As Object, e As EventArgs) Handles printBtnP.Click
+    Private Sub printBtnP_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = DataGridView2.Height
@@ -623,7 +623,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
+    Private Sub printBtnE_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = DataGridView1.Height
@@ -650,6 +650,10 @@ Public Class UserHomePage
         Dim recp As RectangleF = e.PageSettings.PrintableArea
 
         If Me.DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
+
+    End Sub
+
+    Private Sub monitorsBtn2_Click_1(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
 
     End Sub
 End Class
