@@ -391,7 +391,7 @@ Public Class UserHomePage
     End Sub
 
     'update buttons 
-    Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs)
+    Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs) Handles updateProfileShowBtn.Click
         profileSubPanel2.Visible = True
 
         userNameProfileInput.Text = userNameProfile.Text
@@ -399,12 +399,12 @@ Public Class UserHomePage
         userEmailProfileInput.Text = userEmailProfile.Text
     End Sub
 
-    Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs)
+    Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
         profileSubPanel2.Visible = False
         updateProfileErrorMsg.Visible = False
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs)
+    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
 
         User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
@@ -413,7 +413,7 @@ Public Class UserHomePage
     End Sub
 
     'searches section
-    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs)
+    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.textChanged
 
         User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
