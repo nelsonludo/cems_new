@@ -346,6 +346,12 @@ Public Class adminhomePage
                 postStateInput.Text = ""
                 postHallInput.Text = ""
 
+                postTitle.Text = "Add posts"
+                DataGridView2.Visible = False
+                postSearchBox.Visible = False
+                Label22.Visible = False
+
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -364,6 +370,11 @@ Public Class adminhomePage
         'empty the fields after validation
         postStateInput.Text = ""
         postHallInput.Text = ""
+
+        postTitle.Text = "Posts"
+        DataGridView2.Visible = true
+        postSearchBox.Visible = true
+        Label22.Visible = true
     End Sub
 
     'delete post button

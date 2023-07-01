@@ -64,9 +64,9 @@ Partial Class Form1
         Me.userUserAddNameInput = New System.Windows.Forms.TextBox()
         Me.userAddvalidationBtn = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
@@ -542,9 +542,6 @@ Partial Class Form1
         Me.Label18.TabIndex = 11
         Me.Label18.Text = "User name"
         '
-        'Timer2
-        '
-        '
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.Color.SeaGreen
@@ -556,6 +553,9 @@ Partial Class Form1
         Me.Label10.Size = New System.Drawing.Size(552, 45)
         Me.Label10.TabIndex = 60
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Timer2
+        '
         '
         'Form1
         '
