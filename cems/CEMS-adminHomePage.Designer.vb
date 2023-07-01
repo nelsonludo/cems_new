@@ -140,12 +140,12 @@ Partial Class adminhomePage
         Me.equipmentTypeInput = New System.Windows.Forms.ComboBox()
         Me.addEquipmentErrorMsg = New System.Windows.Forms.Label()
         Me.hallInput = New System.Windows.Forms.ComboBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.addequipmenthalllabel = New System.Windows.Forms.Label()
+        Me.addequipmentpostidlabel = New System.Windows.Forms.Label()
+        Me.addequimentstatelabel = New System.Windows.Forms.Label()
         Me.addEquipmentCancelBtn = New System.Windows.Forms.Button()
         Me.addEquipmentValidationBtn = New System.Windows.Forms.Button()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.equipmentstatelabel = New System.Windows.Forms.Label()
         Me.confirmMsgE = New System.Windows.Forms.Label()
         Me.hallSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.searchErrorE = New System.Windows.Forms.Label()
@@ -157,15 +157,17 @@ Partial Class adminhomePage
         Me.statePanel = New System.Windows.Forms.Panel()
         Me.stateChangeBtn = New System.Windows.Forms.Button()
         Me.equipmentDeleteBtn = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.changeequipementstatelabel = New System.Windows.Forms.Label()
         Me.equipmentState = New System.Windows.Forms.ComboBox()
         Me.addEquipmentBtn = New System.Windows.Forms.Button()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
+        Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.adminPostPanel = New System.Windows.Forms.Panel()
         Me.addPostPanel = New System.Windows.Forms.Panel()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
         Me.postPostIdInput = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.postStateInput = New System.Windows.Forms.ComboBox()
@@ -188,12 +190,12 @@ Partial Class adminhomePage
         Me.Label67 = New System.Windows.Forms.Label()
         Me.postDeleteBtn = New System.Windows.Forms.Button()
         Me.postChangeBtn = New System.Windows.Forms.Button()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.changepoststatelabel = New System.Windows.Forms.Label()
         Me.postChangeStateInput = New System.Windows.Forms.ComboBox()
         Me.addPostBtn = New System.Windows.Forms.Button()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
+        Me.statesearchlabel = New System.Windows.Forms.Label()
+        Me.hallsearchlabel = New System.Windows.Forms.Label()
+        Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.adminProfilePanel = New System.Windows.Forms.Panel()
         Me.profileSubPanel1 = New System.Windows.Forms.Panel()
@@ -279,8 +281,8 @@ Partial Class adminhomePage
         Me.exportBtnR = New System.Windows.Forms.Button()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
         Me.Roles = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.dropdown.SuspendLayout()
         Me.adminUsersPanel.SuspendLayout()
         Me.userUpdatePanel.SuspendLayout()
@@ -614,13 +616,14 @@ Partial Class adminhomePage
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(70, 260)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(107, 25)
+        Me.Label11.Size = New System.Drawing.Size(87, 25)
         Me.Label11.TabIndex = 52
-        Me.Label11.Text = "user title :"
+        Me.Label11.Text = "User title"
         '
         'userUserPhoneInput
         '
@@ -633,13 +636,14 @@ Partial Class adminhomePage
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(70, 200)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(211, 25)
+        Me.Label9.Size = New System.Drawing.Size(184, 25)
         Me.Label9.TabIndex = 50
-        Me.Label9.Text = "user phone number :"
+        Me.Label9.Text = "User phone number"
         '
         'userUserEmailInput
         '
@@ -652,13 +656,14 @@ Partial Class adminhomePage
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(70, 140)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(124, 25)
+        Me.Label8.Size = New System.Drawing.Size(104, 25)
         Me.Label8.TabIndex = 48
-        Me.Label8.Text = "user email :"
+        Me.Label8.Text = "User email"
         '
         'userCancelBtn
         '
@@ -705,13 +710,14 @@ Partial Class adminhomePage
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(70, 80)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(126, 25)
+        Me.Label7.Size = New System.Drawing.Size(107, 25)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "user name :"
+        Me.Label7.Text = "User name"
         '
         'userAddPanel
         '
@@ -759,7 +765,7 @@ Partial Class adminhomePage
         Me.Label61.BackColor = System.Drawing.Color.SeaGreen
         Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label61.ForeColor = System.Drawing.Color.Yellow
-        Me.Label61.Location = New System.Drawing.Point(0, 1)
+        Me.Label61.Location = New System.Drawing.Point(0, 0)
         Me.Label61.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(548, 45)
@@ -942,10 +948,10 @@ Partial Class adminhomePage
         Me.userAddBtn.FlatAppearance.BorderSize = 0
         Me.userAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.userAddBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.userAddBtn.Location = New System.Drawing.Point(265, 145)
+        Me.userAddBtn.Location = New System.Drawing.Point(612, 6)
         Me.userAddBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.userAddBtn.Name = "userAddBtn"
-        Me.userAddBtn.Size = New System.Drawing.Size(80, 30)
+        Me.userAddBtn.Size = New System.Drawing.Size(100, 35)
         Me.userAddBtn.TabIndex = 43
         Me.userAddBtn.Text = "Add"
         Me.userAddBtn.UseVisualStyleBackColor = False
@@ -955,7 +961,7 @@ Partial Class adminhomePage
         Me.confirmMsgU.AutoSize = True
         Me.confirmMsgU.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgU.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgU.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgU.Location = New System.Drawing.Point(350, 10)
         Me.confirmMsgU.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgU.Name = "confirmMsgU"
         Me.confirmMsgU.Size = New System.Drawing.Size(177, 20)
@@ -995,12 +1001,11 @@ Partial Class adminhomePage
         Me.PrintBtnU.FlatAppearance.BorderSize = 0
         Me.PrintBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PrintBtnU.ForeColor = System.Drawing.Color.Yellow
-        Me.PrintBtnU.Image = Global.cems.My.Resources.Resources.print__1_
         Me.PrintBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnU.Location = New System.Drawing.Point(465, 145)
+        Me.PrintBtnU.Location = New System.Drawing.Point(826, 6)
         Me.PrintBtnU.Margin = New System.Windows.Forms.Padding(4)
         Me.PrintBtnU.Name = "PrintBtnU"
-        Me.PrintBtnU.Size = New System.Drawing.Size(80, 30)
+        Me.PrintBtnU.Size = New System.Drawing.Size(100, 35)
         Me.PrintBtnU.TabIndex = 33
         Me.PrintBtnU.Text = "Print"
         Me.PrintBtnU.UseVisualStyleBackColor = False
@@ -1011,12 +1016,11 @@ Partial Class adminhomePage
         Me.exportBtnU.FlatAppearance.BorderSize = 0
         Me.exportBtnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.exportBtnU.ForeColor = System.Drawing.Color.Yellow
-        Me.exportBtnU.Image = Global.cems.My.Resources.Resources.export
         Me.exportBtnU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnU.Location = New System.Drawing.Point(365, 145)
+        Me.exportBtnU.Location = New System.Drawing.Point(719, 6)
         Me.exportBtnU.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnU.Name = "exportBtnU"
-        Me.exportBtnU.Size = New System.Drawing.Size(80, 30)
+        Me.exportBtnU.Size = New System.Drawing.Size(100, 35)
         Me.exportBtnU.TabIndex = 32
         Me.exportBtnU.Text = "Export"
         Me.exportBtnU.UseVisualStyleBackColor = False
@@ -1380,10 +1384,10 @@ Partial Class adminhomePage
         Me.adminHeader.Controls.Add(Me.PictureBox1)
         Me.adminHeader.Controls.Add(Me.aName)
         Me.adminHeader.Controls.Add(Me.FlowLayoutPanel1)
-        Me.adminHeader.Location = New System.Drawing.Point(231, 13)
+        Me.adminHeader.Location = New System.Drawing.Point(229, 13)
         Me.adminHeader.Margin = New System.Windows.Forms.Padding(4)
         Me.adminHeader.Name = "adminHeader"
-        Me.adminHeader.Size = New System.Drawing.Size(932, 78)
+        Me.adminHeader.Size = New System.Drawing.Size(935, 78)
         Me.adminHeader.TabIndex = 5
         '
         'adminLogout
@@ -1760,7 +1764,8 @@ Partial Class adminhomePage
         '
         'adminEquipmentPanel
         '
-        Me.adminEquipmentPanel.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.adminEquipmentPanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminEquipmentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.adminEquipmentPanel.Controls.Add(Me.addEquipmentPanel)
         Me.adminEquipmentPanel.Controls.Add(Me.confirmMsgE)
         Me.adminEquipmentPanel.Controls.Add(Me.hallSearchBoxE)
@@ -1774,63 +1779,67 @@ Partial Class adminhomePage
         Me.adminEquipmentPanel.Controls.Add(Me.addEquipmentBtn)
         Me.adminEquipmentPanel.Controls.Add(Me.Label33)
         Me.adminEquipmentPanel.Controls.Add(Me.Label34)
-        Me.adminEquipmentPanel.Controls.Add(Me.Label35)
+        Me.adminEquipmentPanel.Controls.Add(Me.equipmentsearchpostidlabel)
         Me.adminEquipmentPanel.Controls.Add(Me.userSearchBoxE)
+        Me.adminEquipmentPanel.ForeColor = System.Drawing.Color.Black
         Me.adminEquipmentPanel.Location = New System.Drawing.Point(229, 100)
         Me.adminEquipmentPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.adminEquipmentPanel.Name = "adminEquipmentPanel"
-        Me.adminEquipmentPanel.Size = New System.Drawing.Size(935, 0)
+        Me.adminEquipmentPanel.Size = New System.Drawing.Size(935, 520)
         Me.adminEquipmentPanel.TabIndex = 38
         Me.adminEquipmentPanel.Visible = False
         '
         'addEquipmentPanel
         '
-        Me.addEquipmentPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.addEquipmentPanel.BackColor = System.Drawing.Color.MintCream
+        Me.addEquipmentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.addEquipmentPanel.Controls.Add(Me.Label13)
+        Me.addEquipmentPanel.Controls.Add(Me.Label22)
         Me.addEquipmentPanel.Controls.Add(Me.postIdInput)
         Me.addEquipmentPanel.Controls.Add(Me.equipmentStateInput)
         Me.addEquipmentPanel.Controls.Add(Me.equipmentTypeInput)
         Me.addEquipmentPanel.Controls.Add(Me.addEquipmentErrorMsg)
         Me.addEquipmentPanel.Controls.Add(Me.hallInput)
-        Me.addEquipmentPanel.Controls.Add(Me.Label23)
-        Me.addEquipmentPanel.Controls.Add(Me.Label25)
-        Me.addEquipmentPanel.Controls.Add(Me.Label26)
+        Me.addEquipmentPanel.Controls.Add(Me.addequipmenthalllabel)
+        Me.addEquipmentPanel.Controls.Add(Me.addequipmentpostidlabel)
+        Me.addEquipmentPanel.Controls.Add(Me.addequimentstatelabel)
         Me.addEquipmentPanel.Controls.Add(Me.addEquipmentCancelBtn)
         Me.addEquipmentPanel.Controls.Add(Me.addEquipmentValidationBtn)
-        Me.addEquipmentPanel.Controls.Add(Me.Label27)
-        Me.addEquipmentPanel.Location = New System.Drawing.Point(67, 133)
+        Me.addEquipmentPanel.Controls.Add(Me.equipmentstatelabel)
+        Me.addEquipmentPanel.Location = New System.Drawing.Point(188, 50)
         Me.addEquipmentPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.addEquipmentPanel.Name = "addEquipmentPanel"
-        Me.addEquipmentPanel.Size = New System.Drawing.Size(845, 346)
+        Me.addEquipmentPanel.Size = New System.Drawing.Size(548, 450)
         Me.addEquipmentPanel.TabIndex = 70
         Me.addEquipmentPanel.Visible = False
         '
         'postIdInput
         '
         Me.postIdInput.FormattingEnabled = True
-        Me.postIdInput.Location = New System.Drawing.Point(359, 110)
+        Me.postIdInput.Location = New System.Drawing.Point(70, 230)
         Me.postIdInput.Margin = New System.Windows.Forms.Padding(4)
         Me.postIdInput.Name = "postIdInput"
-        Me.postIdInput.Size = New System.Drawing.Size(239, 24)
+        Me.postIdInput.Size = New System.Drawing.Size(420, 24)
         Me.postIdInput.TabIndex = 61
         '
         'equipmentStateInput
         '
         Me.equipmentStateInput.FormattingEnabled = True
         Me.equipmentStateInput.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
-        Me.equipmentStateInput.Location = New System.Drawing.Point(359, 74)
+        Me.equipmentStateInput.Location = New System.Drawing.Point(70, 170)
         Me.equipmentStateInput.Margin = New System.Windows.Forms.Padding(4)
         Me.equipmentStateInput.Name = "equipmentStateInput"
-        Me.equipmentStateInput.Size = New System.Drawing.Size(239, 24)
+        Me.equipmentStateInput.Size = New System.Drawing.Size(420, 24)
         Me.equipmentStateInput.TabIndex = 60
         '
         'equipmentTypeInput
         '
         Me.equipmentTypeInput.FormattingEnabled = True
         Me.equipmentTypeInput.Items.AddRange(New Object() {"IP_Phone", "Monitor", "CPU"})
-        Me.equipmentTypeInput.Location = New System.Drawing.Point(359, 38)
+        Me.equipmentTypeInput.Location = New System.Drawing.Point(70, 110)
         Me.equipmentTypeInput.Margin = New System.Windows.Forms.Padding(4)
         Me.equipmentTypeInput.Name = "equipmentTypeInput"
-        Me.equipmentTypeInput.Size = New System.Drawing.Size(239, 24)
+        Me.equipmentTypeInput.Size = New System.Drawing.Size(420, 24)
         Me.equipmentTypeInput.TabIndex = 59
         '
         'addEquipmentErrorMsg
@@ -1839,7 +1848,7 @@ Partial Class adminhomePage
         Me.addEquipmentErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
         Me.addEquipmentErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addEquipmentErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addEquipmentErrorMsg.Location = New System.Drawing.Point(75, 290)
+        Me.addEquipmentErrorMsg.Location = New System.Drawing.Point(75, 415)
         Me.addEquipmentErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.addEquipmentErrorMsg.Name = "addEquipmentErrorMsg"
         Me.addEquipmentErrorMsg.Size = New System.Drawing.Size(0, 18)
@@ -1849,94 +1858,96 @@ Partial Class adminhomePage
         'hallInput
         '
         Me.hallInput.FormattingEnabled = True
-        Me.hallInput.Location = New System.Drawing.Point(359, 144)
+        Me.hallInput.Location = New System.Drawing.Point(70, 290)
         Me.hallInput.Margin = New System.Windows.Forms.Padding(4)
         Me.hallInput.Name = "hallInput"
-        Me.hallInput.Size = New System.Drawing.Size(239, 24)
+        Me.hallInput.Size = New System.Drawing.Size(420, 24)
         Me.hallInput.TabIndex = 47
         '
-        'Label23
+        'addequipmenthalllabel
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(71, 142)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(53, 25)
-        Me.Label23.TabIndex = 52
-        Me.Label23.Text = "hall:"
+        Me.addequipmenthalllabel.AutoSize = True
+        Me.addequipmenthalllabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.addequipmenthalllabel.Location = New System.Drawing.Point(70, 260)
+        Me.addequipmenthalllabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addequipmenthalllabel.Name = "addequipmenthalllabel"
+        Me.addequipmenthalllabel.Size = New System.Drawing.Size(45, 25)
+        Me.addequipmenthalllabel.TabIndex = 52
+        Me.addequipmenthalllabel.Text = "Hall"
         '
-        'Label25
+        'addequipmentpostidlabel
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(71, 107)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(83, 25)
-        Me.Label25.TabIndex = 50
-        Me.Label25.Text = "post id:"
+        Me.addequipmentpostidlabel.AutoSize = True
+        Me.addequipmentpostidlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.addequipmentpostidlabel.Location = New System.Drawing.Point(70, 200)
+        Me.addequipmentpostidlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addequipmentpostidlabel.Name = "addequipmentpostidlabel"
+        Me.addequipmentpostidlabel.Size = New System.Drawing.Size(75, 25)
+        Me.addequipmentpostidlabel.TabIndex = 50
+        Me.addequipmentpostidlabel.Text = "Post ID"
         '
-        'Label26
+        'addequimentstatelabel
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(71, 71)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(172, 25)
-        Me.Label26.TabIndex = 48
-        Me.Label26.Text = "equipment state:"
+        Me.addequimentstatelabel.AutoSize = True
+        Me.addequimentstatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.addequimentstatelabel.Location = New System.Drawing.Point(70, 140)
+        Me.addequimentstatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addequimentstatelabel.Name = "addequimentstatelabel"
+        Me.addequimentstatelabel.Size = New System.Drawing.Size(152, 25)
+        Me.addequimentstatelabel.TabIndex = 48
+        Me.addequimentstatelabel.Text = "Equipment state"
         '
         'addEquipmentCancelBtn
         '
-        Me.addEquipmentCancelBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.addEquipmentCancelBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.addEquipmentCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.addEquipmentCancelBtn.FlatAppearance.BorderSize = 0
         Me.addEquipmentCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addEquipmentCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.addEquipmentCancelBtn.Location = New System.Drawing.Point(493, 277)
+        Me.addEquipmentCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.addEquipmentCancelBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.addEquipmentCancelBtn.Location = New System.Drawing.Point(70, 375)
         Me.addEquipmentCancelBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.addEquipmentCancelBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.addEquipmentCancelBtn.MaximumSize = New System.Drawing.Size(500, 62)
         Me.addEquipmentCancelBtn.Name = "addEquipmentCancelBtn"
-        Me.addEquipmentCancelBtn.Size = New System.Drawing.Size(105, 39)
+        Me.addEquipmentCancelBtn.Size = New System.Drawing.Size(420, 35)
         Me.addEquipmentCancelBtn.TabIndex = 44
         Me.addEquipmentCancelBtn.Text = "Cancel"
         Me.addEquipmentCancelBtn.UseVisualStyleBackColor = False
         '
         'addEquipmentValidationBtn
         '
-        Me.addEquipmentValidationBtn.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.addEquipmentValidationBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.addEquipmentValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.addEquipmentValidationBtn.FlatAppearance.BorderSize = 0
         Me.addEquipmentValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addEquipmentValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.addEquipmentValidationBtn.Location = New System.Drawing.Point(623, 277)
+        Me.addEquipmentValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.addEquipmentValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.addEquipmentValidationBtn.Location = New System.Drawing.Point(70, 335)
         Me.addEquipmentValidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.addEquipmentValidationBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.addEquipmentValidationBtn.MaximumSize = New System.Drawing.Size(500, 62)
         Me.addEquipmentValidationBtn.Name = "addEquipmentValidationBtn"
-        Me.addEquipmentValidationBtn.Size = New System.Drawing.Size(127, 39)
+        Me.addEquipmentValidationBtn.Size = New System.Drawing.Size(420, 35)
         Me.addEquipmentValidationBtn.TabIndex = 13
         Me.addEquipmentValidationBtn.Text = "Add"
         Me.addEquipmentValidationBtn.UseVisualStyleBackColor = False
         '
-        'Label27
+        'equipmentstatelabel
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(71, 36)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(166, 25)
-        Me.Label27.TabIndex = 11
-        Me.Label27.Text = "equipment type:"
+        Me.equipmentstatelabel.AutoSize = True
+        Me.equipmentstatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.equipmentstatelabel.Location = New System.Drawing.Point(70, 80)
+        Me.equipmentstatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.equipmentstatelabel.Name = "equipmentstatelabel"
+        Me.equipmentstatelabel.Size = New System.Drawing.Size(147, 25)
+        Me.equipmentstatelabel.TabIndex = 11
+        Me.equipmentstatelabel.Text = "Equipment type"
         '
         'confirmMsgE
         '
         Me.confirmMsgE.AutoSize = True
         Me.confirmMsgE.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgE.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgE.Location = New System.Drawing.Point(689, 21)
+        Me.confirmMsgE.Location = New System.Drawing.Point(350, 10)
         Me.confirmMsgE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgE.Name = "confirmMsgE"
         Me.confirmMsgE.Size = New System.Drawing.Size(177, 20)
@@ -1947,10 +1958,11 @@ Partial Class adminhomePage
         'hallSearchBoxE
         '
         Me.hallSearchBoxE.FormattingEnabled = True
-        Me.hallSearchBoxE.Location = New System.Drawing.Point(296, 76)
+        Me.hallSearchBoxE.Location = New System.Drawing.Point(307, 98)
         Me.hallSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallSearchBoxE.MaximumSize = New System.Drawing.Size(300, 0)
         Me.hallSearchBoxE.Name = "hallSearchBoxE"
-        Me.hallSearchBoxE.Size = New System.Drawing.Size(105, 24)
+        Me.hallSearchBoxE.Size = New System.Drawing.Size(130, 24)
         Me.hallSearchBoxE.TabIndex = 38
         '
         'searchErrorE
@@ -1967,35 +1979,42 @@ Partial Class adminhomePage
         '
         'printBtnE
         '
-        Me.printBtnE.Image = Global.cems.My.Resources.Resources.print__1_
+        Me.printBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.printBtnE.FlatAppearance.BorderSize = 0
+        Me.printBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtnE.ForeColor = System.Drawing.Color.Yellow
         Me.printBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.printBtnE.Location = New System.Drawing.Point(808, 73)
+        Me.printBtnE.Location = New System.Drawing.Point(826, 6)
         Me.printBtnE.Margin = New System.Windows.Forms.Padding(4)
         Me.printBtnE.Name = "printBtnE"
-        Me.printBtnE.Size = New System.Drawing.Size(100, 28)
+        Me.printBtnE.Size = New System.Drawing.Size(100, 30)
         Me.printBtnE.TabIndex = 34
         Me.printBtnE.Text = "Print"
-        Me.printBtnE.UseVisualStyleBackColor = True
+        Me.printBtnE.UseVisualStyleBackColor = False
         '
         'exportBtnE
         '
-        Me.exportBtnE.Image = Global.cems.My.Resources.Resources.export
+        Me.exportBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.exportBtnE.FlatAppearance.BorderSize = 0
+        Me.exportBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnE.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnE.Location = New System.Drawing.Point(700, 73)
+        Me.exportBtnE.Location = New System.Drawing.Point(719, 6)
         Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnE.Name = "exportBtnE"
-        Me.exportBtnE.Size = New System.Drawing.Size(100, 28)
+        Me.exportBtnE.Size = New System.Drawing.Size(100, 30)
         Me.exportBtnE.TabIndex = 33
         Me.exportBtnE.Text = "Export"
-        Me.exportBtnE.UseVisualStyleBackColor = True
+        Me.exportBtnE.UseVisualStyleBackColor = False
         '
         'equipmentSearchBox
         '
         Me.equipmentSearchBox.ForeColor = System.Drawing.Color.DarkGray
-        Me.equipmentSearchBox.Location = New System.Drawing.Point(189, 76)
+        Me.equipmentSearchBox.Location = New System.Drawing.Point(115, 98)
         Me.equipmentSearchBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.equipmentSearchBox.MaximumSize = New System.Drawing.Size(300, 100)
         Me.equipmentSearchBox.Name = "equipmentSearchBox"
-        Me.equipmentSearchBox.Size = New System.Drawing.Size(49, 22)
+        Me.equipmentSearchBox.Size = New System.Drawing.Size(130, 22)
         Me.equipmentSearchBox.TabIndex = 32
         '
         'DataGridView1
@@ -2005,19 +2024,20 @@ Partial Class adminhomePage
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(67, 133)
+        Me.DataGridView1.Location = New System.Drawing.Point(41, 133)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 290)
+        Me.DataGridView1.Size = New System.Drawing.Size(660, 290)
         Me.DataGridView1.TabIndex = 31
         '
         'EquipmentTitle
         '
         Me.EquipmentTitle.AutoSize = True
         Me.EquipmentTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EquipmentTitle.Location = New System.Drawing.Point(71, 32)
+        Me.EquipmentTitle.ForeColor = System.Drawing.Color.Gray
+        Me.EquipmentTitle.Location = New System.Drawing.Point(16, 0)
         Me.EquipmentTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.EquipmentTitle.Name = "EquipmentTitle"
         Me.EquipmentTitle.Size = New System.Drawing.Size(79, 29)
@@ -2026,77 +2046,87 @@ Partial Class adminhomePage
         '
         'statePanel
         '
+        Me.statePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.statePanel.Controls.Add(Me.stateChangeBtn)
         Me.statePanel.Controls.Add(Me.equipmentDeleteBtn)
-        Me.statePanel.Controls.Add(Me.Label13)
+        Me.statePanel.Controls.Add(Me.changeequipementstatelabel)
         Me.statePanel.Controls.Add(Me.equipmentState)
-        Me.statePanel.Location = New System.Drawing.Point(749, 137)
+        Me.statePanel.Location = New System.Drawing.Point(709, 133)
         Me.statePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.statePanel.Name = "statePanel"
-        Me.statePanel.Size = New System.Drawing.Size(195, 158)
+        Me.statePanel.Size = New System.Drawing.Size(216, 290)
         Me.statePanel.TabIndex = 44
         Me.statePanel.Visible = False
         '
         'stateChangeBtn
         '
+        Me.stateChangeBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.stateChangeBtn.FlatAppearance.BorderSize = 0
         Me.stateChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.stateChangeBtn.Location = New System.Drawing.Point(19, 86)
+        Me.stateChangeBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.stateChangeBtn.Location = New System.Drawing.Point(11, 189)
         Me.stateChangeBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.stateChangeBtn.Name = "stateChangeBtn"
-        Me.stateChangeBtn.Size = New System.Drawing.Size(161, 28)
+        Me.stateChangeBtn.Size = New System.Drawing.Size(190, 35)
         Me.stateChangeBtn.TabIndex = 67
         Me.stateChangeBtn.Text = "Change"
-        Me.stateChangeBtn.UseVisualStyleBackColor = True
+        Me.stateChangeBtn.UseVisualStyleBackColor = False
         '
         'equipmentDeleteBtn
         '
+        Me.equipmentDeleteBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.equipmentDeleteBtn.FlatAppearance.BorderSize = 0
         Me.equipmentDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.equipmentDeleteBtn.Location = New System.Drawing.Point(19, 122)
+        Me.equipmentDeleteBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.equipmentDeleteBtn.Location = New System.Drawing.Point(11, 226)
         Me.equipmentDeleteBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.equipmentDeleteBtn.Name = "equipmentDeleteBtn"
-        Me.equipmentDeleteBtn.Size = New System.Drawing.Size(161, 28)
+        Me.equipmentDeleteBtn.Size = New System.Drawing.Size(190, 35)
         Me.equipmentDeleteBtn.TabIndex = 66
         Me.equipmentDeleteBtn.Text = "Delete"
-        Me.equipmentDeleteBtn.UseVisualStyleBackColor = True
+        Me.equipmentDeleteBtn.UseVisualStyleBackColor = False
         '
-        'Label13
+        'changeequipementstatelabel
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Label13.Location = New System.Drawing.Point(0, 34)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(59, 24)
-        Me.Label13.TabIndex = 38
-        Me.Label13.Text = "state:"
+        Me.changeequipementstatelabel.AutoSize = True
+        Me.changeequipementstatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.changeequipementstatelabel.Location = New System.Drawing.Point(7, 67)
+        Me.changeequipementstatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.changeequipementstatelabel.Name = "changeequipementstatelabel"
+        Me.changeequipementstatelabel.Size = New System.Drawing.Size(56, 24)
+        Me.changeequipementstatelabel.TabIndex = 38
+        Me.changeequipementstatelabel.Text = "State"
         '
         'equipmentState
         '
         Me.equipmentState.FormattingEnabled = True
         Me.equipmentState.Items.AddRange(New Object() {"Good", "Bad", "In reparation"})
-        Me.equipmentState.Location = New System.Drawing.Point(88, 32)
+        Me.equipmentState.Location = New System.Drawing.Point(11, 94)
         Me.equipmentState.Margin = New System.Windows.Forms.Padding(4)
         Me.equipmentState.Name = "equipmentState"
-        Me.equipmentState.Size = New System.Drawing.Size(105, 24)
+        Me.equipmentState.Size = New System.Drawing.Size(190, 24)
         Me.equipmentState.TabIndex = 42
         '
         'addEquipmentBtn
         '
-        Me.addEquipmentBtn.Image = Global.cems.My.Resources.Resources.plus
+        Me.addEquipmentBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.addEquipmentBtn.FlatAppearance.BorderSize = 0
+        Me.addEquipmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addEquipmentBtn.ForeColor = System.Drawing.Color.Yellow
         Me.addEquipmentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.addEquipmentBtn.Location = New System.Drawing.Point(596, 73)
+        Me.addEquipmentBtn.Location = New System.Drawing.Point(612, 6)
         Me.addEquipmentBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.addEquipmentBtn.Name = "addEquipmentBtn"
-        Me.addEquipmentBtn.Size = New System.Drawing.Size(100, 28)
+        Me.addEquipmentBtn.Size = New System.Drawing.Size(100, 30)
         Me.addEquipmentBtn.TabIndex = 60
         Me.addEquipmentBtn.Text = "Add"
-        Me.addEquipmentBtn.UseVisualStyleBackColor = True
+        Me.addEquipmentBtn.UseVisualStyleBackColor = False
         '
         'Label33
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(407, 76)
+        Me.Label33.Location = New System.Drawing.Point(458, 98)
         Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label33.Name = "Label33"
         Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2109,7 +2139,7 @@ Partial Class adminhomePage
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(243, 79)
+        Me.Label34.Location = New System.Drawing.Point(264, 98)
         Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label34.Name = "Label34"
         Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2118,31 +2148,33 @@ Partial Class adminhomePage
         Me.Label34.Text = "hall:"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label35
+        'equipmentsearchpostidlabel
         '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(93, 76)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label35.Size = New System.Drawing.Size(70, 24)
-        Me.Label35.TabIndex = 67
-        Me.Label35.Text = "post id:"
-        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.equipmentsearchpostidlabel.AutoSize = True
+        Me.equipmentsearchpostidlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.equipmentsearchpostidlabel.Location = New System.Drawing.Point(45, 98)
+        Me.equipmentsearchpostidlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.equipmentsearchpostidlabel.Name = "equipmentsearchpostidlabel"
+        Me.equipmentsearchpostidlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.equipmentsearchpostidlabel.Size = New System.Drawing.Size(71, 24)
+        Me.equipmentsearchpostidlabel.TabIndex = 67
+        Me.equipmentsearchpostidlabel.Text = "Post id:"
+        Me.equipmentsearchpostidlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'userSearchBoxE
         '
         Me.userSearchBoxE.FormattingEnabled = True
-        Me.userSearchBoxE.Location = New System.Drawing.Point(484, 75)
+        Me.userSearchBoxE.Location = New System.Drawing.Point(513, 98)
         Me.userSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
+        Me.userSearchBoxE.MaximumSize = New System.Drawing.Size(300, 0)
         Me.userSearchBoxE.Name = "userSearchBoxE"
-        Me.userSearchBoxE.Size = New System.Drawing.Size(104, 24)
+        Me.userSearchBoxE.Size = New System.Drawing.Size(130, 24)
         Me.userSearchBoxE.TabIndex = 66
         '
         'adminPostPanel
         '
         Me.adminPostPanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminPostPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.adminPostPanel.Controls.Add(Me.addPostPanel)
         Me.adminPostPanel.Controls.Add(Me.confirmMsgP)
         Me.adminPostPanel.Controls.Add(Me.hallSearchBoxP)
@@ -2154,9 +2186,9 @@ Partial Class adminhomePage
         Me.adminPostPanel.Controls.Add(Me.postTitle)
         Me.adminPostPanel.Controls.Add(Me.postChangeStatePanel)
         Me.adminPostPanel.Controls.Add(Me.addPostBtn)
-        Me.adminPostPanel.Controls.Add(Me.Label32)
-        Me.adminPostPanel.Controls.Add(Me.Label30)
-        Me.adminPostPanel.Controls.Add(Me.Label22)
+        Me.adminPostPanel.Controls.Add(Me.statesearchlabel)
+        Me.adminPostPanel.Controls.Add(Me.hallsearchlabel)
+        Me.adminPostPanel.Controls.Add(Me.postsearchlabel)
         Me.adminPostPanel.Controls.Add(Me.stateSearchBoxP)
         Me.adminPostPanel.Location = New System.Drawing.Point(229, 100)
         Me.adminPostPanel.Margin = New System.Windows.Forms.Padding(0)
@@ -2180,12 +2212,37 @@ Partial Class adminhomePage
         Me.addPostPanel.Controls.Add(Me.Label29)
         Me.addPostPanel.Controls.Add(Me.addPostCancelBtn)
         Me.addPostPanel.Controls.Add(Me.addPostValidationBtn)
-        Me.addPostPanel.Location = New System.Drawing.Point(188, 50)
+        Me.addPostPanel.Location = New System.Drawing.Point(188, 90)
         Me.addPostPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.addPostPanel.Name = "addPostPanel"
         Me.addPostPanel.Size = New System.Drawing.Size(548, 390)
         Me.addPostPanel.TabIndex = 66
         Me.addPostPanel.Visible = False
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label68.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label68.ForeColor = System.Drawing.Color.Yellow
+        Me.Label68.Location = New System.Drawing.Point(227, 13)
+        Me.Label68.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(83, 20)
+        Me.Label68.TabIndex = 64
+        Me.Label68.Text = "Add post"
+        '
+        'Label69
+        '
+        Me.Label69.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.ForeColor = System.Drawing.Color.Yellow
+        Me.Label69.Location = New System.Drawing.Point(0, 0)
+        Me.Label69.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(548, 45)
+        Me.Label69.TabIndex = 63
+        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'postPostIdInput
         '
@@ -2405,7 +2462,7 @@ Partial Class adminhomePage
         Me.postChangeStatePanel.Controls.Add(Me.Label67)
         Me.postChangeStatePanel.Controls.Add(Me.postDeleteBtn)
         Me.postChangeStatePanel.Controls.Add(Me.postChangeBtn)
-        Me.postChangeStatePanel.Controls.Add(Me.Label31)
+        Me.postChangeStatePanel.Controls.Add(Me.changepoststatelabel)
         Me.postChangeStatePanel.Controls.Add(Me.postChangeStateInput)
         Me.postChangeStatePanel.Location = New System.Drawing.Point(709, 133)
         Me.postChangeStatePanel.Margin = New System.Windows.Forms.Padding(4)
@@ -2467,17 +2524,17 @@ Partial Class adminhomePage
         Me.postChangeBtn.Text = "Change"
         Me.postChangeBtn.UseVisualStyleBackColor = False
         '
-        'Label31
+        'changepoststatelabel
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label31.Location = New System.Drawing.Point(7, 67)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(59, 24)
-        Me.Label31.TabIndex = 38
-        Me.Label31.Text = "state:"
+        Me.changepoststatelabel.AutoSize = True
+        Me.changepoststatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.changepoststatelabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.changepoststatelabel.Location = New System.Drawing.Point(7, 67)
+        Me.changepoststatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.changepoststatelabel.Name = "changepoststatelabel"
+        Me.changepoststatelabel.Size = New System.Drawing.Size(59, 24)
+        Me.changepoststatelabel.TabIndex = 38
+        Me.changepoststatelabel.Text = "state:"
         '
         'postChangeStateInput
         '
@@ -2504,50 +2561,50 @@ Partial Class adminhomePage
         Me.addPostBtn.Text = "Add"
         Me.addPostBtn.UseVisualStyleBackColor = False
         '
-        'Label32
+        'statesearchlabel
         '
-        Me.Label32.AutoSize = True
-        Me.Label32.BackColor = System.Drawing.Color.MintCream
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label32.Location = New System.Drawing.Point(453, 98)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label32.Size = New System.Drawing.Size(53, 24)
-        Me.Label32.TabIndex = 65
-        Me.Label32.Text = "state:"
-        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.statesearchlabel.AutoSize = True
+        Me.statesearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.statesearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.statesearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.statesearchlabel.Location = New System.Drawing.Point(453, 98)
+        Me.statesearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.statesearchlabel.Name = "statesearchlabel"
+        Me.statesearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.statesearchlabel.Size = New System.Drawing.Size(53, 24)
+        Me.statesearchlabel.TabIndex = 65
+        Me.statesearchlabel.Text = "state:"
+        Me.statesearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label30
+        'hallsearchlabel
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.BackColor = System.Drawing.Color.MintCream
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label30.Location = New System.Drawing.Point(264, 98)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label30.Size = New System.Drawing.Size(44, 24)
-        Me.Label30.TabIndex = 65
-        Me.Label30.Text = "hall:"
-        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.hallsearchlabel.AutoSize = True
+        Me.hallsearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.hallsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hallsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.hallsearchlabel.Location = New System.Drawing.Point(264, 98)
+        Me.hallsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.hallsearchlabel.Name = "hallsearchlabel"
+        Me.hallsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.hallsearchlabel.Size = New System.Drawing.Size(44, 24)
+        Me.hallsearchlabel.TabIndex = 65
+        Me.hallsearchlabel.Text = "hall:"
+        Me.hallsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label22
+        'postsearchlabel
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.MintCream
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label22.Location = New System.Drawing.Point(45, 98)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label22.Size = New System.Drawing.Size(70, 24)
-        Me.Label22.TabIndex = 64
-        Me.Label22.Text = "post id:"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.postsearchlabel.AutoSize = True
+        Me.postsearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.postsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.postsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.postsearchlabel.Location = New System.Drawing.Point(45, 98)
+        Me.postsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.postsearchlabel.Name = "postsearchlabel"
+        Me.postsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.postsearchlabel.Size = New System.Drawing.Size(70, 24)
+        Me.postsearchlabel.TabIndex = 64
+        Me.postsearchlabel.Text = "post id:"
+        Me.postsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'stateSearchBoxP
         '
@@ -2560,6 +2617,7 @@ Partial Class adminhomePage
         '
         'adminProfilePanel
         '
+        Me.adminProfilePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
@@ -3194,15 +3252,13 @@ Partial Class adminhomePage
         Me.hallAddBtn.FlatAppearance.BorderSize = 0
         Me.hallAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.hallAddBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.hallAddBtn.Image = Global.cems.My.Resources.Resources.plus
         Me.hallAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.hallAddBtn.Location = New System.Drawing.Point(265, 146)
+        Me.hallAddBtn.Location = New System.Drawing.Point(612, 6)
         Me.hallAddBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.hallAddBtn.Name = "hallAddBtn"
-        Me.hallAddBtn.Size = New System.Drawing.Size(80, 30)
+        Me.hallAddBtn.Size = New System.Drawing.Size(100, 35)
         Me.hallAddBtn.TabIndex = 43
         Me.hallAddBtn.Text = "Add"
-        Me.hallAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.hallAddBtn.UseVisualStyleBackColor = False
         '
         'confirmMsgH
@@ -3210,7 +3266,7 @@ Partial Class adminhomePage
         Me.confirmMsgH.AutoSize = True
         Me.confirmMsgH.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgH.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgH.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgH.Location = New System.Drawing.Point(350, 10)
         Me.confirmMsgH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgH.Name = "confirmMsgH"
         Me.confirmMsgH.Size = New System.Drawing.Size(177, 20)
@@ -3261,15 +3317,13 @@ Partial Class adminhomePage
         Me.PrintBtnH.FlatAppearance.BorderSize = 0
         Me.PrintBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PrintBtnH.ForeColor = System.Drawing.Color.Yellow
-        Me.PrintBtnH.Image = Global.cems.My.Resources.Resources.print__1_
         Me.PrintBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnH.Location = New System.Drawing.Point(465, 146)
+        Me.PrintBtnH.Location = New System.Drawing.Point(826, 6)
         Me.PrintBtnH.Margin = New System.Windows.Forms.Padding(4)
         Me.PrintBtnH.Name = "PrintBtnH"
-        Me.PrintBtnH.Size = New System.Drawing.Size(80, 30)
+        Me.PrintBtnH.Size = New System.Drawing.Size(100, 35)
         Me.PrintBtnH.TabIndex = 33
         Me.PrintBtnH.Text = "Print"
-        Me.PrintBtnH.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.PrintBtnH.UseVisualStyleBackColor = False
         '
         'exportBtnH
@@ -3278,15 +3332,13 @@ Partial Class adminhomePage
         Me.exportBtnH.FlatAppearance.BorderSize = 0
         Me.exportBtnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.exportBtnH.ForeColor = System.Drawing.Color.Yellow
-        Me.exportBtnH.Image = Global.cems.My.Resources.Resources.export
         Me.exportBtnH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnH.Location = New System.Drawing.Point(365, 146)
+        Me.exportBtnH.Location = New System.Drawing.Point(719, 6)
         Me.exportBtnH.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnH.Name = "exportBtnH"
-        Me.exportBtnH.Size = New System.Drawing.Size(80, 30)
+        Me.exportBtnH.Size = New System.Drawing.Size(100, 35)
         Me.exportBtnH.TabIndex = 32
         Me.exportBtnH.Text = "Export"
-        Me.exportBtnH.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.exportBtnH.UseVisualStyleBackColor = False
         '
         'DataGridView3
@@ -3387,6 +3439,7 @@ Partial Class adminhomePage
         'adminRolePanel
         '
         Me.adminRolePanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminRolePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.adminRolePanel.Controls.Add(Me.roleUpdatePanel)
         Me.adminRolePanel.Controls.Add(Me.roleAddPanel)
         Me.adminRolePanel.Controls.Add(Me.roleDeleteBtn)
@@ -3493,11 +3546,11 @@ Partial Class adminhomePage
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label28.Location = New System.Drawing.Point(70, 82)
         Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(98, 20)
+        Me.Label28.Size = New System.Drawing.Size(89, 20)
         Me.Label28.TabIndex = 11
         Me.Label28.Text = "Role name"
         '
@@ -3644,15 +3697,13 @@ Partial Class adminhomePage
         Me.roleAddBtn.FlatAppearance.BorderSize = 0
         Me.roleAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.roleAddBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.roleAddBtn.Image = Global.cems.My.Resources.Resources.plus
         Me.roleAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.roleAddBtn.Location = New System.Drawing.Point(265, 145)
+        Me.roleAddBtn.Location = New System.Drawing.Point(612, 6)
         Me.roleAddBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.roleAddBtn.Name = "roleAddBtn"
-        Me.roleAddBtn.Size = New System.Drawing.Size(80, 30)
+        Me.roleAddBtn.Size = New System.Drawing.Size(100, 35)
         Me.roleAddBtn.TabIndex = 43
         Me.roleAddBtn.Text = "Add"
-        Me.roleAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.roleAddBtn.UseVisualStyleBackColor = False
         '
         'confirmMsgR
@@ -3660,7 +3711,7 @@ Partial Class adminhomePage
         Me.confirmMsgR.AutoSize = True
         Me.confirmMsgR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgR.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgR.Location = New System.Drawing.Point(693, 21)
+        Me.confirmMsgR.Location = New System.Drawing.Point(350, 10)
         Me.confirmMsgR.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgR.Name = "confirmMsgR"
         Me.confirmMsgR.Size = New System.Drawing.Size(177, 20)
@@ -3700,15 +3751,13 @@ Partial Class adminhomePage
         Me.PrintBtnR.FlatAppearance.BorderSize = 0
         Me.PrintBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PrintBtnR.ForeColor = System.Drawing.Color.Yellow
-        Me.PrintBtnR.Image = Global.cems.My.Resources.Resources.print__1_
         Me.PrintBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintBtnR.Location = New System.Drawing.Point(465, 145)
+        Me.PrintBtnR.Location = New System.Drawing.Point(826, 6)
         Me.PrintBtnR.Margin = New System.Windows.Forms.Padding(4)
         Me.PrintBtnR.Name = "PrintBtnR"
-        Me.PrintBtnR.Size = New System.Drawing.Size(80, 30)
+        Me.PrintBtnR.Size = New System.Drawing.Size(100, 35)
         Me.PrintBtnR.TabIndex = 33
         Me.PrintBtnR.Text = "Print"
-        Me.PrintBtnR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.PrintBtnR.UseVisualStyleBackColor = False
         '
         'exportBtnR
@@ -3717,15 +3766,13 @@ Partial Class adminhomePage
         Me.exportBtnR.FlatAppearance.BorderSize = 0
         Me.exportBtnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.exportBtnR.ForeColor = System.Drawing.Color.Yellow
-        Me.exportBtnR.Image = Global.cems.My.Resources.Resources.export
         Me.exportBtnR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.exportBtnR.Location = New System.Drawing.Point(365, 145)
+        Me.exportBtnR.Location = New System.Drawing.Point(719, 6)
         Me.exportBtnR.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnR.Name = "exportBtnR"
-        Me.exportBtnR.Size = New System.Drawing.Size(80, 30)
+        Me.exportBtnR.Size = New System.Drawing.Size(100, 35)
         Me.exportBtnR.TabIndex = 32
         Me.exportBtnR.Text = "Export"
-        Me.exportBtnR.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.exportBtnR.UseVisualStyleBackColor = False
         '
         'DataGridView5
@@ -3755,30 +3802,30 @@ Partial Class adminhomePage
         Me.Roles.TabIndex = 29
         Me.Roles.Text = "Roles"
         '
-        'Label68
+        'Label13
         '
-        Me.Label68.AutoSize = True
-        Me.Label68.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label68.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label68.ForeColor = System.Drawing.Color.Yellow
-        Me.Label68.Location = New System.Drawing.Point(227, 13)
-        Me.Label68.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(83, 20)
-        Me.Label68.TabIndex = 64
-        Me.Label68.Text = "Add post"
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.Yellow
+        Me.Label13.Location = New System.Drawing.Point(226, 14)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(83, 20)
+        Me.Label13.TabIndex = 66
+        Me.Label13.Text = "Add post"
         '
-        'Label69
+        'Label22
         '
-        Me.Label69.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.ForeColor = System.Drawing.Color.Yellow
-        Me.Label69.Location = New System.Drawing.Point(0, 0)
-        Me.Label69.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(548, 45)
-        Me.Label69.TabIndex = 63
-        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label22.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Yellow
+        Me.Label22.Location = New System.Drawing.Point(-1, 0)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(548, 45)
+        Me.Label22.TabIndex = 65
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'adminhomePage
         '
@@ -3786,11 +3833,11 @@ Partial Class adminhomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1176, 633)
-        Me.Controls.Add(Me.adminPostPanel)
-        Me.Controls.Add(Me.adminRolePanel)
-        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminHallsPanel)
+        Me.Controls.Add(Me.adminUsersPanel)
+        Me.Controls.Add(Me.adminRolePanel)
         Me.Controls.Add(Me.adminEquipmentPanel)
+        Me.Controls.Add(Me.adminPostPanel)
         Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
@@ -3906,12 +3953,12 @@ Partial Class adminhomePage
     Friend WithEvents statePanel As Panel
     Friend WithEvents stateChangeBtn As Button
     Friend WithEvents equipmentDeleteBtn As Button
-    Friend WithEvents Label13 As Label
+    Friend WithEvents changeequipementstatelabel As Label
     Friend WithEvents equipmentState As ComboBox
     Friend WithEvents addEquipmentBtn As Button
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
+    Friend WithEvents equipmentsearchpostidlabel As Label
     Friend WithEvents userSearchBoxE As ComboBox
     Friend WithEvents addEquipmentPanel As Panel
     Friend WithEvents postIdInput As ComboBox
@@ -3919,12 +3966,12 @@ Partial Class adminhomePage
     Friend WithEvents equipmentTypeInput As ComboBox
     Friend WithEvents addEquipmentErrorMsg As Label
     Friend WithEvents hallInput As ComboBox
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
+    Friend WithEvents addequipmenthalllabel As Label
+    Friend WithEvents addequipmentpostidlabel As Label
+    Friend WithEvents addequimentstatelabel As Label
     Friend WithEvents addEquipmentCancelBtn As Button
     Friend WithEvents addEquipmentValidationBtn As Button
-    Friend WithEvents Label27 As Label
+    Friend WithEvents equipmentstatelabel As Label
     Friend WithEvents adminPostPanel As Panel
     Friend WithEvents confirmMsgP As Label
     Friend WithEvents hallSearchBoxP As ComboBox
@@ -3937,12 +3984,12 @@ Partial Class adminhomePage
     Friend WithEvents postChangeStatePanel As Panel
     Friend WithEvents postDeleteBtn As Button
     Friend WithEvents postChangeBtn As Button
-    Friend WithEvents Label31 As Label
+    Friend WithEvents changepoststatelabel As Label
     Friend WithEvents postChangeStateInput As ComboBox
     Friend WithEvents addPostBtn As Button
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label22 As Label
+    Friend WithEvents statesearchlabel As Label
+    Friend WithEvents hallsearchlabel As Label
+    Friend WithEvents postsearchlabel As Label
     Friend WithEvents stateSearchBoxP As ComboBox
     Friend WithEvents addPostPanel As Panel
     Friend WithEvents postPostIdInput As TextBox
@@ -4112,4 +4159,6 @@ Partial Class adminhomePage
     Friend WithEvents Label67 As Label
     Friend WithEvents Label68 As Label
     Friend WithEvents Label69 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label22 As Label
 End Class

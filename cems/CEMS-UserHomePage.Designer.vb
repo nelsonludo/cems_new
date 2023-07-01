@@ -103,6 +103,32 @@ Partial Class UserHomePage
         Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
+        Me.userEquipmentPanel = New System.Windows.Forms.Panel()
+        Me.confirmMsgE = New System.Windows.Forms.Label()
+        Me.hallSearchBoxE = New System.Windows.Forms.ComboBox()
+        Me.searchErrorE = New System.Windows.Forms.Label()
+        Me.printBtnE = New System.Windows.Forms.Button()
+        Me.exportBtnE = New System.Windows.Forms.Button()
+        Me.equipmentSearchBox = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.EquipmentTitle = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
+        Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
+        Me.userPostPanel = New System.Windows.Forms.Panel()
+        Me.confirmMsgP = New System.Windows.Forms.Label()
+        Me.hallSearchBoxP = New System.Windows.Forms.ComboBox()
+        Me.searchErrorP = New System.Windows.Forms.Label()
+        Me.printBtnP = New System.Windows.Forms.Button()
+        Me.exportBtnP = New System.Windows.Forms.Button()
+        Me.postSearchBox = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.postTitle = New System.Windows.Forms.Label()
+        Me.statesearchlabel = New System.Windows.Forms.Label()
+        Me.hallsearchlabel = New System.Windows.Forms.Label()
+        Me.postsearchlabel = New System.Windows.Forms.Label()
+        Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.userHeader.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -111,6 +137,10 @@ Partial Class UserHomePage
         Me.userProfilePanel.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
+        Me.userEquipmentPanel.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.userPostPanel.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'userHeader
@@ -508,9 +538,6 @@ Partial Class UserHomePage
         '
         Me.Timer1.Interval = 15
         '
-        'Timer2
-        '
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -778,9 +805,6 @@ Partial Class UserHomePage
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
-        '
-        'PrintDocument1
-        '
         '
         'userProfilePanel
         '
@@ -1169,12 +1193,368 @@ Partial Class UserHomePage
         Me.profileTitle.TabIndex = 30
         Me.profileTitle.Text = "Profile"
         '
+        'userEquipmentPanel
+        '
+        Me.userEquipmentPanel.BackColor = System.Drawing.Color.MintCream
+        Me.userEquipmentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.userEquipmentPanel.Controls.Add(Me.confirmMsgE)
+        Me.userEquipmentPanel.Controls.Add(Me.hallSearchBoxE)
+        Me.userEquipmentPanel.Controls.Add(Me.searchErrorE)
+        Me.userEquipmentPanel.Controls.Add(Me.printBtnE)
+        Me.userEquipmentPanel.Controls.Add(Me.exportBtnE)
+        Me.userEquipmentPanel.Controls.Add(Me.equipmentSearchBox)
+        Me.userEquipmentPanel.Controls.Add(Me.DataGridView1)
+        Me.userEquipmentPanel.Controls.Add(Me.EquipmentTitle)
+        Me.userEquipmentPanel.Controls.Add(Me.Label33)
+        Me.userEquipmentPanel.Controls.Add(Me.Label34)
+        Me.userEquipmentPanel.Controls.Add(Me.equipmentsearchpostidlabel)
+        Me.userEquipmentPanel.Controls.Add(Me.userSearchBoxE)
+        Me.userEquipmentPanel.ForeColor = System.Drawing.Color.Black
+        Me.userEquipmentPanel.Location = New System.Drawing.Point(229, 100)
+        Me.userEquipmentPanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.userEquipmentPanel.Name = "userEquipmentPanel"
+        Me.userEquipmentPanel.Size = New System.Drawing.Size(935, 520)
+        Me.userEquipmentPanel.TabIndex = 65
+        Me.userEquipmentPanel.Visible = False
+        '
+        'confirmMsgE
+        '
+        Me.confirmMsgE.AutoSize = True
+        Me.confirmMsgE.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgE.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgE.Location = New System.Drawing.Point(350, 10)
+        Me.confirmMsgE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgE.Name = "confirmMsgE"
+        Me.confirmMsgE.Size = New System.Drawing.Size(177, 20)
+        Me.confirmMsgE.TabIndex = 41
+        Me.confirmMsgE.Text = "Export successfull ✔"
+        Me.confirmMsgE.Visible = False
+        '
+        'hallSearchBoxE
+        '
+        Me.hallSearchBoxE.FormattingEnabled = True
+        Me.hallSearchBoxE.Location = New System.Drawing.Point(411, 98)
+        Me.hallSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallSearchBoxE.MaximumSize = New System.Drawing.Size(300, 0)
+        Me.hallSearchBoxE.Name = "hallSearchBoxE"
+        Me.hallSearchBoxE.Size = New System.Drawing.Size(130, 24)
+        Me.hallSearchBoxE.TabIndex = 38
+        '
+        'searchErrorE
+        '
+        Me.searchErrorE.AutoSize = True
+        Me.searchErrorE.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
+        Me.searchErrorE.Location = New System.Drawing.Point(272, 245)
+        Me.searchErrorE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.searchErrorE.Name = "searchErrorE"
+        Me.searchErrorE.Size = New System.Drawing.Size(349, 47)
+        Me.searchErrorE.TabIndex = 35
+        Me.searchErrorE.Text = "No results found "
+        Me.searchErrorE.Visible = False
+        '
+        'printBtnE
+        '
+        Me.printBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.printBtnE.FlatAppearance.BorderSize = 0
+        Me.printBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtnE.ForeColor = System.Drawing.Color.Yellow
+        Me.printBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.printBtnE.Location = New System.Drawing.Point(826, 6)
+        Me.printBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.printBtnE.Name = "printBtnE"
+        Me.printBtnE.Size = New System.Drawing.Size(100, 30)
+        Me.printBtnE.TabIndex = 34
+        Me.printBtnE.Text = "Print"
+        Me.printBtnE.UseVisualStyleBackColor = False
+        '
+        'exportBtnE
+        '
+        Me.exportBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.exportBtnE.FlatAppearance.BorderSize = 0
+        Me.exportBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnE.ForeColor = System.Drawing.Color.Yellow
+        Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnE.Location = New System.Drawing.Point(719, 6)
+        Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnE.Name = "exportBtnE"
+        Me.exportBtnE.Size = New System.Drawing.Size(100, 30)
+        Me.exportBtnE.TabIndex = 33
+        Me.exportBtnE.Text = "Export"
+        Me.exportBtnE.UseVisualStyleBackColor = False
+        '
+        'equipmentSearchBox
+        '
+        Me.equipmentSearchBox.ForeColor = System.Drawing.Color.DarkGray
+        Me.equipmentSearchBox.Location = New System.Drawing.Point(219, 98)
+        Me.equipmentSearchBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.equipmentSearchBox.MaximumSize = New System.Drawing.Size(300, 100)
+        Me.equipmentSearchBox.Name = "equipmentSearchBox"
+        Me.equipmentSearchBox.Size = New System.Drawing.Size(130, 22)
+        Me.equipmentSearchBox.TabIndex = 32
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(123, 133)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(660, 290)
+        Me.DataGridView1.TabIndex = 31
+        '
+        'EquipmentTitle
+        '
+        Me.EquipmentTitle.AutoSize = True
+        Me.EquipmentTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EquipmentTitle.ForeColor = System.Drawing.Color.Gray
+        Me.EquipmentTitle.Location = New System.Drawing.Point(16, 0)
+        Me.EquipmentTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.EquipmentTitle.Name = "EquipmentTitle"
+        Me.EquipmentTitle.Size = New System.Drawing.Size(79, 29)
+        Me.EquipmentTitle.TabIndex = 30
+        Me.EquipmentTitle.Text = "CPUs"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(562, 98)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label33.Size = New System.Drawing.Size(53, 24)
+        Me.Label33.TabIndex = 68
+        Me.Label33.Text = "state:"
+        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(368, 98)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label34.Name = "Label34"
+        Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label34.Size = New System.Drawing.Size(44, 24)
+        Me.Label34.TabIndex = 69
+        Me.Label34.Text = "hall:"
+        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'equipmentsearchpostidlabel
+        '
+        Me.equipmentsearchpostidlabel.AutoSize = True
+        Me.equipmentsearchpostidlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.equipmentsearchpostidlabel.Location = New System.Drawing.Point(149, 98)
+        Me.equipmentsearchpostidlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.equipmentsearchpostidlabel.Name = "equipmentsearchpostidlabel"
+        Me.equipmentsearchpostidlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.equipmentsearchpostidlabel.Size = New System.Drawing.Size(71, 24)
+        Me.equipmentsearchpostidlabel.TabIndex = 67
+        Me.equipmentsearchpostidlabel.Text = "Post id:"
+        Me.equipmentsearchpostidlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'userSearchBoxE
+        '
+        Me.userSearchBoxE.FormattingEnabled = True
+        Me.userSearchBoxE.Location = New System.Drawing.Point(617, 98)
+        Me.userSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
+        Me.userSearchBoxE.MaximumSize = New System.Drawing.Size(300, 0)
+        Me.userSearchBoxE.Name = "userSearchBoxE"
+        Me.userSearchBoxE.Size = New System.Drawing.Size(130, 24)
+        Me.userSearchBoxE.TabIndex = 66
+        '
+        'userPostPanel
+        '
+        Me.userPostPanel.BackColor = System.Drawing.Color.MintCream
+        Me.userPostPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.userPostPanel.Controls.Add(Me.confirmMsgP)
+        Me.userPostPanel.Controls.Add(Me.hallSearchBoxP)
+        Me.userPostPanel.Controls.Add(Me.searchErrorP)
+        Me.userPostPanel.Controls.Add(Me.printBtnP)
+        Me.userPostPanel.Controls.Add(Me.exportBtnP)
+        Me.userPostPanel.Controls.Add(Me.postSearchBox)
+        Me.userPostPanel.Controls.Add(Me.DataGridView2)
+        Me.userPostPanel.Controls.Add(Me.postTitle)
+        Me.userPostPanel.Controls.Add(Me.statesearchlabel)
+        Me.userPostPanel.Controls.Add(Me.hallsearchlabel)
+        Me.userPostPanel.Controls.Add(Me.postsearchlabel)
+        Me.userPostPanel.Controls.Add(Me.stateSearchBoxP)
+        Me.userPostPanel.Location = New System.Drawing.Point(229, 100)
+        Me.userPostPanel.Margin = New System.Windows.Forms.Padding(0)
+        Me.userPostPanel.Name = "userPostPanel"
+        Me.userPostPanel.Size = New System.Drawing.Size(935, 520)
+        Me.userPostPanel.TabIndex = 66
+        Me.userPostPanel.Visible = False
+        '
+        'confirmMsgP
+        '
+        Me.confirmMsgP.AutoSize = True
+        Me.confirmMsgP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgP.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgP.Location = New System.Drawing.Point(350, 10)
+        Me.confirmMsgP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgP.Name = "confirmMsgP"
+        Me.confirmMsgP.Size = New System.Drawing.Size(177, 20)
+        Me.confirmMsgP.TabIndex = 41
+        Me.confirmMsgP.Text = "Export successfull ✔"
+        Me.confirmMsgP.Visible = False
+        '
+        'hallSearchBoxP
+        '
+        Me.hallSearchBoxP.FormattingEnabled = True
+        Me.hallSearchBoxP.Location = New System.Drawing.Point(430, 98)
+        Me.hallSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
+        Me.hallSearchBoxP.Name = "hallSearchBoxP"
+        Me.hallSearchBoxP.Size = New System.Drawing.Size(130, 24)
+        Me.hallSearchBoxP.TabIndex = 37
+        '
+        'searchErrorP
+        '
+        Me.searchErrorP.AutoSize = True
+        Me.searchErrorP.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!, System.Drawing.FontStyle.Bold)
+        Me.searchErrorP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.searchErrorP.Location = New System.Drawing.Point(296, 277)
+        Me.searchErrorP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.searchErrorP.Name = "searchErrorP"
+        Me.searchErrorP.Size = New System.Drawing.Size(349, 47)
+        Me.searchErrorP.TabIndex = 36
+        Me.searchErrorP.Text = "No results found "
+        Me.searchErrorP.Visible = False
+        '
+        'printBtnP
+        '
+        Me.printBtnP.BackColor = System.Drawing.Color.SeaGreen
+        Me.printBtnP.FlatAppearance.BorderSize = 0
+        Me.printBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtnP.ForeColor = System.Drawing.Color.Yellow
+        Me.printBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.printBtnP.Location = New System.Drawing.Point(826, 6)
+        Me.printBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.printBtnP.Name = "printBtnP"
+        Me.printBtnP.Size = New System.Drawing.Size(100, 30)
+        Me.printBtnP.TabIndex = 33
+        Me.printBtnP.Text = "Print"
+        Me.printBtnP.UseVisualStyleBackColor = False
+        '
+        'exportBtnP
+        '
+        Me.exportBtnP.BackColor = System.Drawing.Color.SeaGreen
+        Me.exportBtnP.FlatAppearance.BorderSize = 0
+        Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportBtnP.ForeColor = System.Drawing.Color.Yellow
+        Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.exportBtnP.Location = New System.Drawing.Point(719, 6)
+        Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.exportBtnP.Name = "exportBtnP"
+        Me.exportBtnP.Size = New System.Drawing.Size(100, 30)
+        Me.exportBtnP.TabIndex = 32
+        Me.exportBtnP.Text = "Export"
+        Me.exportBtnP.UseVisualStyleBackColor = False
+        '
+        'postSearchBox
+        '
+        Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
+        Me.postSearchBox.Location = New System.Drawing.Point(238, 98)
+        Me.postSearchBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.postSearchBox.Name = "postSearchBox"
+        Me.postSearchBox.Size = New System.Drawing.Size(130, 22)
+        Me.postSearchBox.TabIndex = 31
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AllowUserToResizeColumns = False
+        Me.DataGridView2.AllowUserToResizeRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(134, 133)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(660, 290)
+        Me.DataGridView2.TabIndex = 30
+        '
+        'postTitle
+        '
+        Me.postTitle.AutoSize = True
+        Me.postTitle.BackColor = System.Drawing.Color.MintCream
+        Me.postTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.postTitle.ForeColor = System.Drawing.Color.Gray
+        Me.postTitle.Location = New System.Drawing.Point(16, 0)
+        Me.postTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.postTitle.Name = "postTitle"
+        Me.postTitle.Size = New System.Drawing.Size(78, 29)
+        Me.postTitle.TabIndex = 29
+        Me.postTitle.Text = "Posts"
+        '
+        'statesearchlabel
+        '
+        Me.statesearchlabel.AutoSize = True
+        Me.statesearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.statesearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.statesearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.statesearchlabel.Location = New System.Drawing.Point(576, 98)
+        Me.statesearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.statesearchlabel.Name = "statesearchlabel"
+        Me.statesearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.statesearchlabel.Size = New System.Drawing.Size(53, 24)
+        Me.statesearchlabel.TabIndex = 65
+        Me.statesearchlabel.Text = "state:"
+        Me.statesearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'hallsearchlabel
+        '
+        Me.hallsearchlabel.AutoSize = True
+        Me.hallsearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.hallsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hallsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.hallsearchlabel.Location = New System.Drawing.Point(387, 98)
+        Me.hallsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.hallsearchlabel.Name = "hallsearchlabel"
+        Me.hallsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.hallsearchlabel.Size = New System.Drawing.Size(44, 24)
+        Me.hallsearchlabel.TabIndex = 65
+        Me.hallsearchlabel.Text = "hall:"
+        Me.hallsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'postsearchlabel
+        '
+        Me.postsearchlabel.AutoSize = True
+        Me.postsearchlabel.BackColor = System.Drawing.Color.MintCream
+        Me.postsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.postsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.postsearchlabel.Location = New System.Drawing.Point(168, 98)
+        Me.postsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.postsearchlabel.Name = "postsearchlabel"
+        Me.postsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.postsearchlabel.Size = New System.Drawing.Size(70, 24)
+        Me.postsearchlabel.TabIndex = 64
+        Me.postsearchlabel.Text = "post id:"
+        Me.postsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'stateSearchBoxP
+        '
+        Me.stateSearchBoxP.FormattingEnabled = True
+        Me.stateSearchBoxP.Location = New System.Drawing.Point(631, 98)
+        Me.stateSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
+        Me.stateSearchBoxP.Name = "stateSearchBoxP"
+        Me.stateSearchBoxP.Size = New System.Drawing.Size(130, 24)
+        Me.stateSearchBoxP.TabIndex = 37
+        '
         'UserHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1176, 633)
+        Me.Controls.Add(Me.userPostPanel)
+        Me.Controls.Add(Me.userEquipmentPanel)
         Me.Controls.Add(Me.userProfilePanel)
         Me.Controls.Add(Me.userHeader)
         Me.Controls.Add(Me.Panel2)
@@ -1203,6 +1583,12 @@ Partial Class UserHomePage
         Me.profileSubPanel1.PerformLayout()
         Me.profileSubPanel2.ResumeLayout(False)
         Me.profileSubPanel2.PerformLayout()
+        Me.userEquipmentPanel.ResumeLayout(False)
+        Me.userEquipmentPanel.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.userPostPanel.ResumeLayout(False)
+        Me.userPostPanel.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1286,4 +1672,30 @@ Partial Class UserHomePage
     Friend WithEvents userPwdProfileLabel As Label
     Friend WithEvents userNameProfileLabel2 As Label
     Friend WithEvents profileTitle As Label
+    Friend WithEvents userEquipmentPanel As Panel
+    Friend WithEvents confirmMsgE As Label
+    Friend WithEvents hallSearchBoxE As ComboBox
+    Friend WithEvents searchErrorE As Label
+    Friend WithEvents printBtnE As Button
+    Friend WithEvents exportBtnE As Button
+    Friend WithEvents equipmentSearchBox As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents EquipmentTitle As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents equipmentsearchpostidlabel As Label
+    Friend WithEvents userSearchBoxE As ComboBox
+    Friend WithEvents userPostPanel As Panel
+    Friend WithEvents confirmMsgP As Label
+    Friend WithEvents hallSearchBoxP As ComboBox
+    Friend WithEvents searchErrorP As Label
+    Friend WithEvents printBtnP As Button
+    Friend WithEvents exportBtnP As Button
+    Friend WithEvents postSearchBox As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents postTitle As Label
+    Friend WithEvents statesearchlabel As Label
+    Friend WithEvents hallsearchlabel As Label
+    Friend WithEvents postsearchlabel As Label
+    Friend WithEvents stateSearchBoxP As ComboBox
 End Class

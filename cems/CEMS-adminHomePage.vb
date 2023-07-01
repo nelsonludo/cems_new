@@ -262,6 +262,10 @@ Public Class adminhomePage
         fillHalls(hallSearchBoxP)
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
+        postTitle.Text = "Posts"
+        DataGridView2.Visible = True
+        postSearchBox.Visible = True
+        postsearchlabel.Visible = True
     End Sub
 
 
@@ -270,6 +274,11 @@ Public Class adminhomePage
         addPostPanel.Visible = True
 
         fillHalls(postHallInput)
+
+        postTitle.Text = "Add posts"
+        DataGridView2.Visible = False
+        postSearchBox.Visible = False
+        postsearchlabel.Visible = False
     End Sub
 
 
@@ -346,10 +355,10 @@ Public Class adminhomePage
                 postStateInput.Text = ""
                 postHallInput.Text = ""
 
-                postTitle.Text = "Add posts"
-                DataGridView2.Visible = False
-                postSearchBox.Visible = False
-                Label22.Visible = False
+                postTitle.Text = "Posts"
+                DataGridView2.Visible = True
+                postSearchBox.Visible = True
+                postsearchlabel.Visible = True
 
 
             Catch ex As Exception
@@ -372,9 +381,9 @@ Public Class adminhomePage
         postHallInput.Text = ""
 
         postTitle.Text = "Posts"
-        DataGridView2.Visible = true
-        postSearchBox.Visible = true
-        Label22.Visible = true
+        DataGridView2.Visible = True
+        postSearchBox.Visible = True
+        postsearchlabel.Visible = True
     End Sub
 
     'delete post button
@@ -1402,6 +1411,12 @@ Public Class adminhomePage
         fillHalls(hallSearchBoxE)
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
+
+        EquipmentTitle.Text = "Equipment"
+        DataGridView1.Visible = True
+        equipmentSearchBox.Visible = True
+        equipmentsearchpostidlabel.Visible = True
+
     End Sub
 
 
@@ -1442,6 +1457,10 @@ Public Class adminhomePage
         stateSearchBoxP.Text = ""
 
         fillHalls(hallSearchBoxE)
+
+        DataGridView1.Visible = True
+        equipmentSearchBox.Visible = True
+        equipmentsearchpostidlabel.Visible = True
 
     End Sub
 
@@ -1500,6 +1519,10 @@ Public Class adminhomePage
         stateSearchBoxP.Text = ""
 
         fillHalls(hallSearchBoxE)
+
+        DataGridView1.Visible = True
+        equipmentSearchBox.Visible = True
+        equipmentsearchpostidlabel.Visible = True
 
     End Sub
 
@@ -1575,6 +1598,11 @@ Public Class adminhomePage
 
         fillHalls(hallSearchBoxE)
 
+        DataGridView1.Visible = True
+        equipmentSearchBox.Visible = True
+        equipmentsearchpostidlabel.Visible = True
+
+
     End Sub
 
     'Equipment add section
@@ -1582,10 +1610,22 @@ Public Class adminhomePage
         addEquipmentPanel.Visible = True
         fillcombo(postIdInput, "posts", "post_id")
         fillHalls(hallInput)
+
+        EquipmentTitle.Text = "Add equipment"
+        DataGridView1.Visible = False
+        equipmentSearchBox.Visible = False
+        equipmentsearchpostidlabel.Visible = False
+
     End Sub
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
         addEquipmentPanel.Visible = False
+
+        EquipmentTitle.Text = "Equipment"
+        DataGridView1.Visible = True
+        equipmentSearchBox.Visible = True
+        equipmentsearchpostidlabel.Visible = True
+
 
     End Sub
 
@@ -1653,6 +1693,12 @@ Public Class adminhomePage
                 hallInput.Text = ""
 
                 fillHalls(hallSearchBoxE)
+
+
+                EquipmentTitle.Text = "Equipment"
+                DataGridView1.Visible = True
+                equipmentSearchBox.Visible = True
+                equipmentsearchpostidlabel.Visible = True
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -2226,6 +2272,8 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
+
 
     'styles
 

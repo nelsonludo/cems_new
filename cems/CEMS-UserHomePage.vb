@@ -226,29 +226,6 @@ Public Class UserHomePage
     End Sub
 
     'equipment subbuttons
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs)
-        User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        exportBtnE.Visible = False
-
-        profileSubPanel2.Visible = False
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
@@ -275,27 +252,6 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs)
-        User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        exportBtnE.Visible = False
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
         User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
@@ -304,23 +260,6 @@ Public Class UserHomePage
 
         userPostPanel.Visible = False
 
-        userProfilePanel.Visible = False
-
-        exportBtnE.Visible = False
-
-        profileSubPanel2.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs)
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
         User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
 
@@ -413,20 +352,19 @@ Public Class UserHomePage
     End Sub
 
     'searches section
-    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.textChanged
+    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
         User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
-
     End Sub
 
-    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs)
+    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
         User.searchP("posts", DataGridView2, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
 
     'search by halls in posts 
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
         'SQL Connection'
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
@@ -459,7 +397,7 @@ Public Class UserHomePage
     End Sub
 
     'search by halls in equipment
-    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
         'SQL Connection'
         connect_db()
@@ -490,7 +428,7 @@ Public Class UserHomePage
     End Sub
 
     'equipment search by state
-    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs)
+    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.TextChanged
 
         Dim hall_id As Integer
         'SQL Connection'
@@ -522,7 +460,7 @@ Public Class UserHomePage
     End Sub
 
     'post search by state
-    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs)
+    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
         Dim hall_id As Integer
         'SQL Connection'
@@ -557,7 +495,7 @@ Public Class UserHomePage
     End Sub
 
     'export buttons 
-    Private Sub exportBtnP_Click(sender As Object, e As EventArgs)
+    Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
         Try
 
@@ -575,7 +513,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub exportBtnE_Click(sender As Object, e As EventArgs)
+    Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
 
         Try
 
@@ -602,28 +540,9 @@ Public Class UserHomePage
         updateProfileErrorMsg.Visible = False
         Timer2.Stop()
     End Sub
-    Private Sub printBtnP_Click(sender As Object, e As EventArgs)
 
-        Try
-            Dim height As Integer = DataGridView2.Height
-            DataGridView2.Height = DataGridView2.RowCount * DataGridView2.RowTemplate.Height
-            bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
-            DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView2.Width, Me.DataGridView2.Height))
-            PrintPreviewDialog1.Document = PrintDocument1
-            PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
-            PrintPreviewDialog1.ShowDialog()
 
-            DataGridView2.Height = height
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
-
-    End Sub
-
-    Private Sub printBtnE_Click(sender As Object, e As EventArgs)
+    Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
 
         Try
             Dim height As Integer = DataGridView1.Height
@@ -653,7 +572,4 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub monitorsBtn2_Click_1(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
-
-    End Sub
 End Class
