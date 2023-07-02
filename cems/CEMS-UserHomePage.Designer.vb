@@ -129,6 +129,7 @@ Partial Class UserHomePage
         Me.hallsearchlabel = New System.Windows.Forms.Label()
         Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
+        Me.confirmMsgPr = New System.Windows.Forms.Label()
         Me.userHeader.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -169,7 +170,7 @@ Partial Class UserHomePage
         Me.userLogout.Margin = New System.Windows.Forms.Padding(0)
         Me.userLogout.MaximumSize = New System.Drawing.Size(208, 62)
         Me.userLogout.Name = "userLogout"
-        Me.userLogout.Size = New System.Drawing.Size(80, 30)
+        Me.userLogout.Size = New System.Drawing.Size(80, 35)
         Me.userLogout.TabIndex = 23
         Me.userLogout.Text = "logout"
         Me.userLogout.UseVisualStyleBackColor = False
@@ -538,6 +539,9 @@ Partial Class UserHomePage
         '
         Me.Timer1.Interval = 15
         '
+        'Timer2
+        '
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -744,7 +748,6 @@ Partial Class UserHomePage
         '
         Me.monitorbuttoninactive.BackColor = System.Drawing.Color.MintCream
         Me.monitorbuttoninactive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.monitorbuttoninactive.Enabled = False
         Me.monitorbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.monitorbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.monitorbuttoninactive.Image = Global.cems.My.Resources.Resources.monitor1
@@ -761,7 +764,6 @@ Partial Class UserHomePage
         'IPbuttoninactive
         '
         Me.IPbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.IPbuttoninactive.Enabled = False
         Me.IPbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.IPbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IPbuttoninactive.Image = CType(resources.GetObject("IPbuttoninactive.Image"), System.Drawing.Image)
@@ -778,7 +780,6 @@ Partial Class UserHomePage
         'CPUbuttoninactive
         '
         Me.CPUbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.CPUbuttoninactive.Enabled = False
         Me.CPUbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.CPUbuttoninactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CPUbuttoninactive.Image = Global.cems.My.Resources.Resources.cpu1
@@ -806,16 +807,21 @@ Partial Class UserHomePage
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'PrintDocument1
+        '
+        '
         'userProfilePanel
         '
-        Me.userProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.userProfilePanel.Controls.Add(Me.profileSubPanel2)
+        Me.userProfilePanel.Controls.Add(Me.confirmMsgPr)
+        Me.userProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.userProfilePanel.Controls.Add(Me.profileTitle)
         Me.userProfilePanel.Location = New System.Drawing.Point(229, 100)
         Me.userProfilePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.userProfilePanel.Name = "userProfilePanel"
         Me.userProfilePanel.Size = New System.Drawing.Size(935, 520)
         Me.userProfilePanel.TabIndex = 64
+        Me.userProfilePanel.Visible = False
         '
         'profileSubPanel1
         '
@@ -886,7 +892,7 @@ Partial Class UserHomePage
         Me.userPhoneNumberProfile.BackColor = System.Drawing.Color.SeaGreen
         Me.userPhoneNumberProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.userPhoneNumberProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.userPhoneNumberProfile.Location = New System.Drawing.Point(254, 216)
+        Me.userPhoneNumberProfile.Location = New System.Drawing.Point(268, 216)
         Me.userPhoneNumberProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userPhoneNumberProfile.Name = "userPhoneNumberProfile"
         Me.userPhoneNumberProfile.Size = New System.Drawing.Size(51, 20)
@@ -1327,9 +1333,9 @@ Partial Class UserHomePage
         Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label33.Name = "Label33"
         Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label33.Size = New System.Drawing.Size(53, 24)
+        Me.Label33.Size = New System.Drawing.Size(51, 24)
         Me.Label33.TabIndex = 68
-        Me.Label33.Text = "state:"
+        Me.Label33.Text = "State"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label34
@@ -1340,9 +1346,9 @@ Partial Class UserHomePage
         Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label34.Name = "Label34"
         Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label34.Size = New System.Drawing.Size(44, 24)
+        Me.Label34.Size = New System.Drawing.Size(42, 24)
         Me.Label34.TabIndex = 69
-        Me.Label34.Text = "hall:"
+        Me.Label34.Text = "Hall"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'equipmentsearchpostidlabel
@@ -1353,15 +1359,15 @@ Partial Class UserHomePage
         Me.equipmentsearchpostidlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.equipmentsearchpostidlabel.Name = "equipmentsearchpostidlabel"
         Me.equipmentsearchpostidlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.equipmentsearchpostidlabel.Size = New System.Drawing.Size(71, 24)
+        Me.equipmentsearchpostidlabel.Size = New System.Drawing.Size(68, 24)
         Me.equipmentsearchpostidlabel.TabIndex = 67
-        Me.equipmentsearchpostidlabel.Text = "Post id:"
+        Me.equipmentsearchpostidlabel.Text = "Post ID"
         Me.equipmentsearchpostidlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'userSearchBoxE
         '
         Me.userSearchBoxE.FormattingEnabled = True
-        Me.userSearchBoxE.Location = New System.Drawing.Point(617, 98)
+        Me.userSearchBoxE.Location = New System.Drawing.Point(627, 98)
         Me.userSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
         Me.userSearchBoxE.MaximumSize = New System.Drawing.Size(300, 0)
         Me.userSearchBoxE.Name = "userSearchBoxE"
@@ -1503,9 +1509,9 @@ Partial Class UserHomePage
         Me.statesearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.statesearchlabel.Name = "statesearchlabel"
         Me.statesearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.statesearchlabel.Size = New System.Drawing.Size(53, 24)
+        Me.statesearchlabel.Size = New System.Drawing.Size(51, 24)
         Me.statesearchlabel.TabIndex = 65
-        Me.statesearchlabel.Text = "state:"
+        Me.statesearchlabel.Text = "State"
         Me.statesearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'hallsearchlabel
@@ -1518,9 +1524,9 @@ Partial Class UserHomePage
         Me.hallsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.hallsearchlabel.Name = "hallsearchlabel"
         Me.hallsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.hallsearchlabel.Size = New System.Drawing.Size(44, 24)
+        Me.hallsearchlabel.Size = New System.Drawing.Size(42, 24)
         Me.hallsearchlabel.TabIndex = 65
-        Me.hallsearchlabel.Text = "hall:"
+        Me.hallsearchlabel.Text = "Hall"
         Me.hallsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'postsearchlabel
@@ -1533,19 +1539,32 @@ Partial Class UserHomePage
         Me.postsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.postsearchlabel.Name = "postsearchlabel"
         Me.postsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.postsearchlabel.Size = New System.Drawing.Size(70, 24)
+        Me.postsearchlabel.Size = New System.Drawing.Size(68, 24)
         Me.postsearchlabel.TabIndex = 64
-        Me.postsearchlabel.Text = "post id:"
+        Me.postsearchlabel.Text = "Post ID"
         Me.postsearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'stateSearchBoxP
         '
         Me.stateSearchBoxP.FormattingEnabled = True
-        Me.stateSearchBoxP.Location = New System.Drawing.Point(631, 98)
+        Me.stateSearchBoxP.Location = New System.Drawing.Point(639, 98)
         Me.stateSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
         Me.stateSearchBoxP.Name = "stateSearchBoxP"
         Me.stateSearchBoxP.Size = New System.Drawing.Size(130, 24)
         Me.stateSearchBoxP.TabIndex = 37
+        '
+        'confirmMsgPr
+        '
+        Me.confirmMsgPr.AutoSize = True
+        Me.confirmMsgPr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgPr.Location = New System.Drawing.Point(340, 10)
+        Me.confirmMsgPr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgPr.Name = "confirmMsgPr"
+        Me.confirmMsgPr.Size = New System.Drawing.Size(255, 20)
+        Me.confirmMsgPr.TabIndex = 43
+        Me.confirmMsgPr.Text = "Profile updated successfully ✔"
+        Me.confirmMsgPr.Visible = False
         '
         'UserHomePage
         '
@@ -1553,12 +1572,12 @@ Partial Class UserHomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1176, 633)
+        Me.Controls.Add(Me.userHomePagePanel)
         Me.Controls.Add(Me.userPostPanel)
         Me.Controls.Add(Me.userEquipmentPanel)
         Me.Controls.Add(Me.userProfilePanel)
         Me.Controls.Add(Me.userHeader)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.userHomePagePanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(300, 300)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -1698,4 +1717,5 @@ Partial Class UserHomePage
     Friend WithEvents hallsearchlabel As Label
     Friend WithEvents postsearchlabel As Label
     Friend WithEvents stateSearchBoxP As ComboBox
+    Friend WithEvents confirmMsgPr As Label
 End Class

@@ -266,6 +266,9 @@ Public Class adminhomePage
         DataGridView2.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
+        addPostBtn.Visible = True
+        exportBtnP.Visible = True
+        printBtnP.Visible = True
     End Sub
 
 
@@ -279,6 +282,9 @@ Public Class adminhomePage
         DataGridView2.Visible = False
         postSearchBox.Visible = False
         postsearchlabel.Visible = False
+        addPostBtn.Visible = False
+        exportBtnP.Visible = False
+        printBtnP.Visible = False
     End Sub
 
 
@@ -359,6 +365,9 @@ Public Class adminhomePage
                 DataGridView2.Visible = True
                 postSearchBox.Visible = True
                 postsearchlabel.Visible = True
+                addPostBtn.Visible = True
+                exportBtnP.Visible = True
+                printBtnP.Visible = True
 
 
             Catch ex As Exception
@@ -384,6 +393,9 @@ Public Class adminhomePage
         DataGridView2.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
+        addPostBtn.Visible = true
+        exportBtnP.Visible = true
+        printBtnP.Visible = true
     End Sub
 
     'delete post button
@@ -507,6 +519,15 @@ Public Class adminhomePage
         User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
+
+
+        'this changes the content of confirmMsg
+        confirmMsgPr.Visible = True
+
+        'timer duration
+        Timer2.Interval = 3000
+        Timer2.Start()
+
         showUserName()
     End Sub
 
@@ -827,6 +848,13 @@ Public Class adminhomePage
 
 
         DataGridView4.Visible = True
+        addPostPanel.Visible = True
+        userDeleteBtn.Visible = False
+        userUpdateBtn.Visible = False
+        exportBtnU.Visible = True
+        PrintBtnU.Visible = True
+        userAddBtn.Visible = True
+        searchuserlabel.Visible = True
 
     End Sub
 
@@ -840,13 +868,6 @@ Public Class adminhomePage
         adminUsersPanel.Visible = True
 
         User.displayTableU("users", DataGridView4, sqlDataTableU)
-
-        addPostPanel.Visible = False
-        userUpdatePanel.Visible = False
-        userUpdateBtn.Visible = False
-        userDeleteBtn.Visible = False
-
-
 
     End Sub
     'user update section
@@ -912,13 +933,21 @@ Public Class adminhomePage
         'this makes the update panel to disappear
         userUpdatePanel.Visible = False
 
-        userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
 
 
-        Label10.Text = "users"
+        Label10.Text = "Users"
 
         DataGridView4.Visible = True
+        userUpdateBtn.Visible = True
+        userAddBtn.Visible = True
+        exportBtnU.Visible = True
+        PrintBtnU.Visible = True
+        searchuserlabel.Visible = True
+
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+
     End Sub
 
     Private Sub userCancelBtn_Click(sender As Object, e As EventArgs) Handles userCancelBtn.Click 'cancel
@@ -930,6 +959,10 @@ Public Class adminhomePage
         Label10.Text = "Users"
 
         DataGridView4.Visible = True
+        userAddBtn.Visible = True
+        exportBtnU.Visible = True
+        PrintBtnU.Visible = True
+        searchuserlabel.Visible = True
 
     End Sub
 
@@ -951,6 +984,7 @@ Public Class adminhomePage
     End Sub
 
     Private Sub userUpdateBtn_Click(sender As Object, e As EventArgs) Handles userUpdateBtn.Click 'update
+
         userUpdatePanel.Visible = True
 
         userUserTitleInput.Items.Clear()
@@ -977,9 +1011,13 @@ Public Class adminhomePage
         End Try
 
 
-        Label10.Text = "update user"
+        Label10.Text = "Update user"
 
         userUpdateBtn.Visible = False
+        userAddBtn.Visible = False
+        exportBtnU.Visible = False
+        PrintBtnU.Visible = False
+        searchuserlabel.visible = False
         DataGridView4.Visible = False
 
     End Sub
@@ -1004,7 +1042,6 @@ Public Class adminhomePage
 
     'user add Section
     Private Sub userAddBtn_Click(sender As Object, e As EventArgs) Handles userAddBtn.Click 'add 
-        userUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         userAddPanel.Visible = True
 
         userUserAddTitleInput.Items.Clear()
@@ -1036,6 +1073,10 @@ Public Class adminhomePage
 
         userUpdateBtn.Visible = False
         DataGridView4.Visible = False
+        exportBtnU.Visible = False
+        PrintBtnU.Visible = False
+        searchuserlabel.Visible = False
+
     End Sub
 
 
@@ -1132,6 +1173,17 @@ Public Class adminhomePage
                 userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
                 userAddPanel.Visible = False
 
+                Label10.Text = "Users"
+
+                DataGridView4.Visible = True
+                userUpdateBtn.Visible = True
+                userAddBtn.Visible = True
+                exportBtnU.Visible = True
+                PrintBtnU.Visible = True
+                searchuserlabel.Visible = True
+
+                userUpdateBtn.Visible = False
+                userDeleteBtn.Visible = False
             End If
 
         End If
@@ -1144,10 +1196,6 @@ Public Class adminhomePage
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
 
-        Label10.Text = "users"
-
-
-        DataGridView4.Visible = True
 
     End Sub
 
@@ -1163,10 +1211,16 @@ Public Class adminhomePage
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
 
-        Label10.Text = "users"
-
+        Label10.Text = "Users"
 
         DataGridView4.Visible = True
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddBtn.Visible = True
+        exportBtnU.Visible = True
+        PrintBtnU.Visible = True
+        searchuserlabel.Visible = True
+
 
     End Sub
 
@@ -2252,6 +2306,7 @@ Public Class adminhomePage
         confirmMsgH.Visible = False
         confirmMsgU.Visible = False
         confirmMsgR.Visible = False
+        confirmMsgPr.Visible = False
         addUserErrorMsg.Visible = False
         addEquipmentErrorMsg.Visible = False
         addRoleErrorMsg.Visible = False
@@ -2272,6 +2327,7 @@ Public Class adminhomePage
         If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
 
 
 

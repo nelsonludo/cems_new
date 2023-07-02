@@ -149,12 +149,9 @@ Public Class UserHomePage
 
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
-        userEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-
+        userEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
         userPostPanel.Visible = True
-
         userProfilePanel.Visible = False
-
         profileSubPanel2.Visible = False
 
         equipmentSearchBox.Text = ""
@@ -172,12 +169,9 @@ Public Class UserHomePage
     End Sub
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
-        userEquipmentPanel.Visible = True 'this is set to true because somehow the postpanel is inside the equipmentpanel
-
-        userPostPanel.Visible = True  'this is set to true because somehow the profilepanel is inside the postpanel
-
+        userEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
+        userPostPanel.Visible = False 'this is set to true because somehow the profilepanel is inside the postpanel
         userProfilePanel.Visible = True
-
         profileSubPanel2.Visible = False
 
         equipmentSearchBox.Text = ""
@@ -220,7 +214,6 @@ Public Class UserHomePage
 
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
-        exportBtnE.Visible = False
 
         fillHalls(hallSearchBoxE)
     End Sub
@@ -244,7 +237,27 @@ Public Class UserHomePage
         userSearchBoxE.Text = ""
         stateSearchBoxP.Text = ""
 
-        exportBtnE.Visible = False
+        profileSubPanel2.Visible = False
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
+        User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
+        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
+
+        userEquipmentPanel.Visible = True
+
+        userPostPanel.Visible = False
+
+        userProfilePanel.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
 
         profileSubPanel2.Visible = False
 
@@ -275,12 +288,36 @@ Public Class UserHomePage
         userSearchBoxE.Text = ""
         stateSearchBoxP.Text = ""
 
-        exportBtnE.Visible = False
-
         fillHalls(hallSearchBoxE)
 
     End Sub
 
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
+        User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
+        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
+
+        userEquipmentPanel.Visible = True
+
+        userPostPanel.Visible = False
+
+        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+
+        userEquipmentPanel.Visible = True
+
+        userPostPanel.Visible = False
+
+        userProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
@@ -292,7 +329,29 @@ Public Class UserHomePage
 
         userProfilePanel.Visible = False
 
-        exportBtnE.Visible = False
+
+        profileSubPanel2.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
+        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+
+        userEquipmentPanel.Visible = True
+
+        userPostPanel.Visible = False
+
+        userProfilePanel.Visible = False
+
 
         profileSubPanel2.Visible = False
         equipmentSearchBox.Text = ""
@@ -347,6 +406,13 @@ Public Class UserHomePage
 
         User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
+
+        'confirm message
+        confirmMsgPr.Visible = True
+
+        'timer interval 
+        Timer2.Interval = 3000
+        Timer2.Start()
 
         showUserName()
     End Sub
@@ -538,6 +604,7 @@ Public Class UserHomePage
         confirmMsgP.Visible = False
         confirmMsgE.Visible = False
         updateProfileErrorMsg.Visible = False
+        confirmMsgPr.Visible = False
         Timer2.Stop()
     End Sub
 
@@ -571,5 +638,6 @@ Public Class UserHomePage
         If Me.DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
+
 
 End Class

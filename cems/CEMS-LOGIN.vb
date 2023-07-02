@@ -37,6 +37,11 @@ Public Class Form1
 
         Dim wrapper As New Simple3Des("")
 
+
+        emailtxt.Text = ""
+        passwordtxt.Text = ""
+
+
         If System.IO.File.Exists(localPath) = True Then 'FILE_PATH) = True Then
 
             FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input) 
