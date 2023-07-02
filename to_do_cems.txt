@@ -1,3 +1,31 @@
 list of things to do in cems
+-export in an excel file 
 -edit admin exports(collect from user exports)
+-update exports on the user side
 -make user table to also display admins and super admins (all types of users)
+-reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead 
+-fix the tab index
+-check the add user code(it adds even when the user title is not specified)
+-when in the equipment panel the other buttons don't work and the export button is not there 
+-hide pwd and Cpwd text in create user 
+-empty other search boxes when searching (unless their value is used for the current search )
+
+
+
+
+Important styles
+label51 size:548, 45; location:0,0
+profilesubpanel1 size: 548, 466; location:188, 33
+label52 location:227, 13
+profiletextbox size:420, 22
+profilevalidatebtn size:420,35; location: 70, 375
+profilecancelbtn size:same; location: 70, 315
+
+updatebtn location:698, 145
+deletebtn location:613, 145
+otherbtns location:265, +100, +100
+searchhall location:265, 108 ; size:280, 24 ;label location:361, 75
+
+printbtn location:826, 6
+export location:719, 6
+add location:612, 6
