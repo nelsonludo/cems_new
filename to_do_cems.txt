@@ -9,6 +9,8 @@ list of things to do in cems
 -when in the equipment panel the other buttons don't work and the export button is not there 
 -hide pwd and Cpwd text in create user 
 -empty other search boxes when searching (unless their value is used for the current search )
+-YOU STILL HAVE TO STYLE THE DATATABLES MAN !!!!
+-check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 
 
 
