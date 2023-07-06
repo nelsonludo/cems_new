@@ -11,6 +11,7 @@ list of things to do in cems
 -empty other search boxes when searching (unless their value is used for the current search )
 -YOU STILL HAVE TO STYLE THE DATATABLES MAN !!!!
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
+-if update field is empty, error message(the field should not be empty)
 
 
 

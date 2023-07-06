@@ -662,23 +662,24 @@ Public Class adminhomePage
             'this makes the add panel to disappear
             hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
             hallAddpanel.Visible = False
+
+            adminAddHallNameInput.Text = ""
+            fillHalls(hallSearchBoxH)
+
+            HallUpdateBtn.Visible = False
+            HallDeleteBtn.Visible = False
+
+            Label21.Text = "Halls"
+
+            'things that have to disappear (this is annoying)
+            hallAddBtn.Visible = True
+            exportBtnH.Visible = True
+            PrintBtnH.Visible = True
+            hallSearchBoxH.Visible = True
+            Label4.Visible = True
+            DataGridView3.Visible = True
         End If
 
-        adminAddHallNameInput.Text = ""
-        fillHalls(hallSearchBoxH)
-
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
-
-        Label21.Text = "Halls"
-
-        'things that have to disappear (this is annoying)
-        hallAddBtn.Visible = True
-        exportBtnH.Visible = True
-        PrintBtnH.Visible = True
-        hallSearchBoxH.Visible = True
-        Label4.Visible = True
-        DataGridView3.Visible = True
 
     End Sub
 
@@ -1262,6 +1263,9 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         DataGridView5.Visible = True
         Roles.Text = "Roles"
+        roleAddBtn.Visible = True
+        exportBtnR.Visible = True
+        PrintBtnR.Visible = True
     End Sub
 
     'role update buttons
@@ -1305,7 +1309,9 @@ Public Class adminhomePage
 
         DataGridView5.Visible = True
         Roles.Text = "Roles"
-
+        roleAddBtn.Visible = True
+        exportBtnR.Visible = True
+        PrintBtnR.Visible = True
 
     End Sub
 
@@ -1315,6 +1321,9 @@ Public Class adminhomePage
 
         DataGridView5.Visible = True
         Roles.Text = "Roles"
+        roleAddBtn.Visible = True
+        exportBtnR.Visible = True
+        PrintBtnR.Visible = True
     End Sub
 
     Private Sub DataGridView5_CellClick() Handles DataGridView5.CellClick 'the cellclicked event
@@ -1338,6 +1347,9 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         DataGridView5.Visible = False
         Roles.Text = "Update roles"
+        roleAddBtn.Visible = False
+        exportBtnR.Visible = False
+        PrintBtnR.Visible = False
     End Sub
 
     Private Sub roleDeleteBtn_Click_1(sender As Object, e As EventArgs) Handles roleDeleteBtn.Click  'delete
@@ -1363,6 +1375,9 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         DataGridView5.Visible = False
         Roles.Text = "Add roles"
+        roleAddBtn.Visible = False
+        exportBtnR.Visible = False
+        PrintBtnR.Visible = False
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
 
@@ -1409,7 +1424,9 @@ Public Class adminhomePage
 
             DataGridView5.Visible = True
             Roles.Text = "Roles"
-
+            roleAddBtn.Visible = True
+            exportBtnR.Visible = True
+            PrintBtnR.Visible = True
         End If
     End Sub
 
@@ -1419,7 +1436,9 @@ Public Class adminhomePage
 
         DataGridView5.Visible = True
         Roles.Text = "Roles"
-
+        roleAddBtn.Visible = True
+        exportBtnR.Visible = True
+        PrintBtnR.Visible = True
     End Sub
 
     'equipment SECTION
@@ -1466,11 +1485,13 @@ Public Class adminhomePage
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
 
-        EquipmentTitle.Text = "Equipment"
         DataGridView1.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-
+        EquipmentTitle.Text = "Equipment"
+        addEquipmentBtn.Visible = true
+        exportBtnE.Visible = true
+        printBtnE.Visible = true
     End Sub
 
 
@@ -1515,6 +1536,10 @@ Public Class adminhomePage
         DataGridView1.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
+        EquipmentTitle.Text = "CPUs"
+        addEquipmentBtn.Visible = True
+        exportBtnE.Visible = True
+        printBtnE.Visible = True
 
     End Sub
 
@@ -1577,7 +1602,10 @@ Public Class adminhomePage
         DataGridView1.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-
+        EquipmentTitle.Text = "IP Phones"
+        addEquipmentBtn.Visible = True
+        exportBtnE.Visible = True
+        printBtnE.Visible = True
     End Sub
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
@@ -1655,7 +1683,10 @@ Public Class adminhomePage
         DataGridView1.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-
+        EquipmentTitle.Text = "Monitors"
+        addEquipmentBtn.Visible = True
+        exportBtnE.Visible = True
+        printBtnE.Visible = True
 
     End Sub
 
@@ -1669,7 +1700,9 @@ Public Class adminhomePage
         DataGridView1.Visible = False
         equipmentSearchBox.Visible = False
         equipmentsearchpostidlabel.Visible = False
-
+        addEquipmentBtn.Visible = False
+        exportBtnE.Visible = False
+        printBtnE.Visible = False
     End Sub
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
@@ -1679,7 +1712,9 @@ Public Class adminhomePage
         DataGridView1.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-
+        addEquipmentBtn.Visible = True
+        exportBtnE.Visible = True
+        printBtnE.Visible = True
 
     End Sub
 
@@ -1753,6 +1788,9 @@ Public Class adminhomePage
                 DataGridView1.Visible = True
                 equipmentSearchBox.Visible = True
                 equipmentsearchpostidlabel.Visible = True
+                addEquipmentBtn.Visible = True
+                exportBtnE.Visible = True
+                printBtnE.Visible = True
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)

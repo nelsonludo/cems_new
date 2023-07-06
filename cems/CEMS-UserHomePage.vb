@@ -149,8 +149,8 @@ Public Class UserHomePage
 
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
-        userEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
         userPostPanel.Visible = True
+        userEquipmentPanel.Visible = False
         userProfilePanel.Visible = False
         profileSubPanel2.Visible = False
 
@@ -169,9 +169,9 @@ Public Class UserHomePage
     End Sub
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
-        userEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
-        userPostPanel.Visible = False 'this is set to true because somehow the profilepanel is inside the postpanel
         userProfilePanel.Visible = True
+        userEquipmentPanel.Visible = False
+        userPostPanel.Visible = False
         profileSubPanel2.Visible = False
 
         equipmentSearchBox.Text = ""
@@ -273,9 +273,6 @@ Public Class UserHomePage
 
         userPostPanel.Visible = False
 
-        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
-
         userEquipmentPanel.Visible = True
 
         userPostPanel.Visible = False
@@ -299,9 +296,6 @@ Public Class UserHomePage
         userEquipmentPanel.Visible = True
 
         userPostPanel.Visible = False
-
-        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
 
         userEquipmentPanel.Visible = True
 
