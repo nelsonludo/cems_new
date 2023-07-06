@@ -24,6 +24,12 @@ Partial Class UserHomePage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserHomePage))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.userHeader = New System.Windows.Forms.Panel()
         Me.userLogout = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -111,7 +117,7 @@ Partial Class UserHomePage
         Me.printBtnE = New System.Windows.Forms.Button()
         Me.exportBtnE = New System.Windows.Forms.Button()
         Me.equipmentSearchBox = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.userDataGridView = New System.Windows.Forms.DataGridView()
         Me.EquipmentTitle = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -124,7 +130,7 @@ Partial Class UserHomePage
         Me.printBtnP = New System.Windows.Forms.Button()
         Me.exportBtnP = New System.Windows.Forms.Button()
         Me.postSearchBox = New System.Windows.Forms.TextBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.postDataGridView = New System.Windows.Forms.DataGridView()
         Me.postTitle = New System.Windows.Forms.Label()
         Me.statesearchlabel = New System.Windows.Forms.Label()
         Me.hallsearchlabel = New System.Windows.Forms.Label()
@@ -139,9 +145,9 @@ Partial Class UserHomePage
         Me.profileSubPanel2.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
         Me.userEquipmentPanel.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.userDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.userPostPanel.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'userHeader
@@ -1223,7 +1229,7 @@ Partial Class UserHomePage
         Me.userEquipmentPanel.Controls.Add(Me.printBtnE)
         Me.userEquipmentPanel.Controls.Add(Me.exportBtnE)
         Me.userEquipmentPanel.Controls.Add(Me.equipmentSearchBox)
-        Me.userEquipmentPanel.Controls.Add(Me.DataGridView1)
+        Me.userEquipmentPanel.Controls.Add(Me.userDataGridView)
         Me.userEquipmentPanel.Controls.Add(Me.EquipmentTitle)
         Me.userEquipmentPanel.Controls.Add(Me.Label33)
         Me.userEquipmentPanel.Controls.Add(Me.Label34)
@@ -1312,20 +1318,52 @@ Partial Class UserHomePage
         Me.equipmentSearchBox.Size = New System.Drawing.Size(130, 22)
         Me.equipmentSearchBox.TabIndex = 32
         '
-        'DataGridView1
+        'userDataGridView
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(123, 133)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(660, 290)
-        Me.DataGridView1.TabIndex = 31
+        Me.userDataGridView.AllowUserToAddRows = False
+        Me.userDataGridView.AllowUserToDeleteRows = False
+        Me.userDataGridView.AllowUserToResizeColumns = False
+        Me.userDataGridView.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.userDataGridView.BackgroundColor = System.Drawing.Color.MintCream
+        Me.userDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.userDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.userDataGridView.ColumnHeadersHeight = 25
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle3
+        Me.userDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.userDataGridView.EnableHeadersVisualStyles = False
+        Me.userDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.userDataGridView.Location = New System.Drawing.Point(123, 133)
+        Me.userDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.userDataGridView.Name = "userDataGridView"
+        Me.userDataGridView.RowHeadersVisible = False
+        Me.userDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.userDataGridView.Size = New System.Drawing.Size(660, 290)
+        Me.userDataGridView.TabIndex = 31
         '
         'EquipmentTitle
         '
@@ -1398,7 +1436,7 @@ Partial Class UserHomePage
         Me.userPostPanel.Controls.Add(Me.printBtnP)
         Me.userPostPanel.Controls.Add(Me.exportBtnP)
         Me.userPostPanel.Controls.Add(Me.postSearchBox)
-        Me.userPostPanel.Controls.Add(Me.DataGridView2)
+        Me.userPostPanel.Controls.Add(Me.postDataGridView)
         Me.userPostPanel.Controls.Add(Me.postTitle)
         Me.userPostPanel.Controls.Add(Me.statesearchlabel)
         Me.userPostPanel.Controls.Add(Me.hallsearchlabel)
@@ -1485,20 +1523,52 @@ Partial Class UserHomePage
         Me.postSearchBox.Size = New System.Drawing.Size(130, 22)
         Me.postSearchBox.TabIndex = 31
         '
-        'DataGridView2
+        'postDataGridView
         '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AllowUserToResizeColumns = False
-        Me.DataGridView2.AllowUserToResizeRows = False
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(134, 133)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(660, 290)
-        Me.DataGridView2.TabIndex = 30
+        Me.postDataGridView.AllowUserToAddRows = False
+        Me.postDataGridView.AllowUserToDeleteRows = False
+        Me.postDataGridView.AllowUserToResizeColumns = False
+        Me.postDataGridView.AllowUserToResizeRows = False
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
+        Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.postDataGridView.ColumnHeadersHeight = 25
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle6
+        Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.postDataGridView.EnableHeadersVisualStyles = False
+        Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.postDataGridView.Location = New System.Drawing.Point(134, 133)
+        Me.postDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.postDataGridView.Name = "postDataGridView"
+        Me.postDataGridView.RowHeadersVisible = False
+        Me.postDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.postDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.postDataGridView.Size = New System.Drawing.Size(660, 290)
+        Me.postDataGridView.TabIndex = 30
         '
         'postTitle
         '
@@ -1605,10 +1675,10 @@ Partial Class UserHomePage
         Me.profileSubPanel1.PerformLayout()
         Me.userEquipmentPanel.ResumeLayout(False)
         Me.userEquipmentPanel.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.userDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.userPostPanel.ResumeLayout(False)
         Me.userPostPanel.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1699,7 +1769,7 @@ Partial Class UserHomePage
     Friend WithEvents printBtnE As Button
     Friend WithEvents exportBtnE As Button
     Friend WithEvents equipmentSearchBox As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents userDataGridView As DataGridView
     Friend WithEvents EquipmentTitle As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
@@ -1712,7 +1782,7 @@ Partial Class UserHomePage
     Friend WithEvents printBtnP As Button
     Friend WithEvents exportBtnP As Button
     Friend WithEvents postSearchBox As TextBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents postDataGridView As DataGridView
     Friend WithEvents postTitle As Label
     Friend WithEvents statesearchlabel As Label
     Friend WithEvents hallsearchlabel As Label

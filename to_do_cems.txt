@@ -32,3 +32,48 @@ searchhall location:265, 108 ; size:280, 24 ;label location:361, 75
 printbtn location:826, 6
 export location:719, 6
 add location:612, 6
+
+datagridview style
+
+-alterningrows
+backC:mintcream
+foreC:31,31,31
+selectBackC:155,155,155
+selectFront:lightgray
+
+-backcolor:mintcream
+
+-sellborder:singlehorizontal
+
+-colomnheaderborderstyle:none
+
+-columnheaderstyle
+backC:seagreen
+font:Microsoft Sans Serif, 6.5pt, style=Bold
+foreC:mintcream
+selecback:seagreen
+selectfore:darkseagreen
+
+-columnheaderheight:25
+
+-defaulcellstyle
+backC:155,155,155
+font:Microsoft Sans Serif, 7pt
+forecolor:31,31,31
+selections:sameasalterning
+
+-enableheadervisaulstyle:false
+
+-gridcolor:215x3
+
+-rowheadervisible:false
+
+-allallows:false
+
+-editmode:programatically
+
+-columnheaderheightsize:enableresizing
+
+-rowheaderswithsizemode:autosizetoallheaders
+
+-autosizecolumnmode:fill

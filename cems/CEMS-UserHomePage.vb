@@ -162,7 +162,7 @@ Public Class UserHomePage
         stateSearchBoxP.Text = ""
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
-        User.displayTableP("posts", DataGridView2, sqlDataTableP)
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
         fillHalls(hallSearchBoxP)
 
@@ -209,7 +209,7 @@ Public Class UserHomePage
         stateSearchBoxP.Text = ""
 
         User.display(userEquipmentPanel, EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        User.displayTableE("equipments", userDataGridView, sqlDataTableE)
 
 
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
@@ -222,7 +222,7 @@ Public Class UserHomePage
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -244,7 +244,7 @@ Public Class UserHomePage
     End Sub
     Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -267,7 +267,7 @@ Public Class UserHomePage
 
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_Phone", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -291,7 +291,7 @@ Public Class UserHomePage
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_Phone", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -315,7 +315,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "Monitor", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -338,7 +338,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "Monitor", userDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -414,13 +414,13 @@ Public Class UserHomePage
     'searches section
     Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
-        User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
+        User.search("equipments", userDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
     End Sub
 
     Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
-        User.searchP("posts", DataGridView2, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+        User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
 
     'search by halls in posts 
@@ -453,7 +453,7 @@ Public Class UserHomePage
 
         End Try
 
-        User.searchHallP("posts", DataGridView2, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        User.searchHallP("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
     End Sub
 
     'search by halls in equipment
@@ -484,7 +484,7 @@ Public Class UserHomePage
 
         End Try
 
-        User.searchHall("equipments", DataGridView1, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+        User.searchHall("equipments", userDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
     End Sub
 
     'equipment search by state
@@ -516,7 +516,7 @@ Public Class UserHomePage
 
         End Try
 
-        User.searchHallAndState("equipments", DataGridView1, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+        User.searchHallAndState("equipments", userDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
     End Sub
 
     'post search by state
@@ -549,7 +549,7 @@ Public Class UserHomePage
         End Try
 
 
-        User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
 
 
     End Sub
@@ -559,7 +559,7 @@ Public Class UserHomePage
 
         Try
 
-            User.export(DataGridView2, "posts")
+            User.export(postDataGridView, "posts")
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -577,7 +577,7 @@ Public Class UserHomePage
 
         Try
 
-            User.export(DataGridView1, "equipments")
+            User.export(userDataGridView, "equipments")
 
 
         Catch ex As Exception
@@ -606,15 +606,15 @@ Public Class UserHomePage
     Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
 
         Try
-            Dim height As Integer = DataGridView1.Height
-            DataGridView1.Height = DataGridView1.RowCount * DataGridView1.RowTemplate.Height
-            bitmap = New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
-            DataGridView1.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
+            Dim height As Integer = userDataGridView.Height
+            userDataGridView.Height = userDataGridView.RowCount * userDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(Me.userDataGridView.Width, Me.userDataGridView.Height)
+            userDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.userDataGridView.Width, Me.userDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView1.Height = height
+            userDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -629,7 +629,7 @@ Public Class UserHomePage
         e.Graphics.DrawImage(bitmap, 0, 0)
         Dim recp As RectangleF = e.PageSettings.PrintableArea
 
-        If Me.DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
+        If Me.postDataGridView.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
 

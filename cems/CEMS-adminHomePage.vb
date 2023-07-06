@@ -206,10 +206,10 @@ Public Class adminhomePage
     'tab buttons section
 
     'POST SECTION
-    Private Sub DataGridView2_CellClick() Handles DataGridView2.CellClick
+    Private Sub DataGridView2_CellClick() Handles postDataGridView.CellClick
 
         Try
-            postChangeStateInput.Text = DataGridView2.SelectedRows(0).Cells(1).Value.ToString
+            postChangeStateInput.Text = postDataGridView.SelectedRows(0).Cells(1).Value.ToString
 
             postChangeStatePanel.Visible = True
 
@@ -257,13 +257,13 @@ Public Class adminhomePage
 
 
 
-        User.displayTableP("posts", DataGridView2, sqlDataTableP)  'this is a useless comment //you're the useless comment !
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
         fillHalls(hallSearchBoxP)
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
         postTitle.Text = "Posts"
-        DataGridView2.Visible = True
+        postDataGridView.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
         addPostBtn.Visible = True
@@ -279,7 +279,7 @@ Public Class adminhomePage
         fillHalls(postHallInput)
 
         postTitle.Text = "Add posts"
-        DataGridView2.Visible = False
+        postDataGridView.Visible = False
         postSearchBox.Visible = False
         postsearchlabel.Visible = False
         addPostBtn.Visible = False
@@ -342,7 +342,7 @@ Public Class adminhomePage
 
 
                 'this updates the datagridview
-                User.displayTableP("posts", DataGridView2, sqlDataTableP)
+                User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
                 'this changes the content of confirmMsg
                 confirmMsgP.Text = "Item successfully added ✔"
@@ -362,7 +362,7 @@ Public Class adminhomePage
                 postHallInput.Text = ""
 
                 postTitle.Text = "Posts"
-                DataGridView2.Visible = True
+                postDataGridView.Visible = True
                 postSearchBox.Visible = True
                 postsearchlabel.Visible = True
                 addPostBtn.Visible = True
@@ -390,7 +390,7 @@ Public Class adminhomePage
         postHallInput.Text = ""
 
         postTitle.Text = "Posts"
-        DataGridView2.Visible = True
+        postDataGridView.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
         addPostBtn.Visible = true
@@ -404,18 +404,18 @@ Public Class adminhomePage
 
         If confirm = DialogResult.Yes Then
 
-            admin.deletePost(DataGridView2, "posts", "post")
+            admin.deletePost(postDataGridView, "posts", "post")
         End If
 
         postChangeStatePanel.Visible = True
 
-        User.displayTableP("posts", DataGridView2, sqlDataTableP)
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
     End Sub
 
     'change post button
     Private Sub postChangeBtn_Click(sender As Object, e As EventArgs) Handles postChangeBtn.Click
-        Dim post_id As String = DataGridView2.SelectedRows(0).Cells(0).Value.ToString
+        Dim post_id As String = postDataGridView.SelectedRows(0).Cells(0).Value.ToString
         connect_db()
 
         sqlConn.Open()
@@ -451,7 +451,7 @@ Public Class adminhomePage
 
 
 
-        User.displayTableP("posts", DataGridView2, sqlDataTableP)
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
     End Sub
 
     'profile button
@@ -547,7 +547,7 @@ Public Class adminhomePage
         PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
         Label4.Visible = False
-        DataGridView3.Visible = False
+        hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
 
@@ -562,7 +562,7 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
 
 
-        User.displayTable("halls", DataGridView3, sqlDataTableH)
+        User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
 
         addPostPanel.Visible = False
@@ -601,7 +601,7 @@ Public Class adminhomePage
         PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
-        DataGridView3.Visible = True
+        hallDataGridView.Visible = True
 
     End Sub
 
@@ -617,7 +617,7 @@ Public Class adminhomePage
         PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
-        DataGridView3.Visible = True
+        hallDataGridView.Visible = True
 
     End Sub
 
@@ -648,7 +648,7 @@ Public Class adminhomePage
             End Try
 
             'this updates the datagridview
-            User.displayTable("halls", DataGridView3, sqlDataTableH)
+            User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
             'this changes the content of confirmMsg
             confirmMsgH.Text = "Item successfully added ✔"
@@ -677,7 +677,7 @@ Public Class adminhomePage
             PrintBtnH.Visible = True
             hallSearchBoxH.Visible = True
             Label4.Visible = True
-            DataGridView3.Visible = True
+            hallDataGridView.Visible = True
         End If
 
 
@@ -685,10 +685,10 @@ Public Class adminhomePage
 
     'hall update buttons 
 
-    Private Sub DataGridView3_CellClick() Handles DataGridView3.CellClick 'the cellclicked event
+    Private Sub DataGridView3_CellClick() Handles hallDataGridView.CellClick 'the cellclicked event
 
         Try
-            adminUpdateHallNameInput.Text = DataGridView3.SelectedRows(0).Cells(1).Value.ToString
+            adminUpdateHallNameInput.Text = hallDataGridView.SelectedRows(0).Cells(1).Value.ToString
             HallUpdateBtn.Visible = True
             HallDeleteBtn.Visible = True
 
@@ -711,7 +711,7 @@ Public Class adminhomePage
         PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
         Label4.Visible = False
-        DataGridView3.Visible = False
+        hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
 
@@ -722,14 +722,14 @@ Public Class adminhomePage
 
         If confirm = DialogResult.Yes Then
 
-            admin.deleteRecord(DataGridView3, "halls", "hall")
+            admin.deleteRecord(hallDataGridView, "halls", "hall")
 
         End If
 
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
 
-        User.displayTable("halls", DataGridView3, sqlDataTableH)
+        User.displayTable("halls", hallDataGridView, sqlDataTableH)
         fillHalls(hallSearchBoxH)
 
     End Sub
@@ -748,13 +748,13 @@ Public Class adminhomePage
         PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
-        DataGridView3.Visible = True
+        hallDataGridView.Visible = True
 
     End Sub
 
     Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidateBtn.Click 'validate update 
 
-        Dim hall_id As String = DataGridView3.SelectedRows(0).Cells(0).Value.ToString
+        Dim hall_id As String = hallDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
         connect_db()
 
@@ -774,7 +774,7 @@ Public Class adminhomePage
         sqlConn.Close()
 
         'this updates the datagridview
-        User.displayTable("halls", DataGridView3, sqlDataTableH)
+        User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
         'this changes the content of confirmMsg
         confirmMsgH.Text = "update successfull ✔"
@@ -803,7 +803,7 @@ Public Class adminhomePage
         PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
-        DataGridView3.Visible = True
+        hallDataGridView.Visible = True
 
     End Sub
 
@@ -818,7 +818,7 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
         adminUsersPanel.Visible = True
 
-        User.displayTableU("users", DataGridView4, sqlDataTableU)
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
 
         addPostPanel.Visible = False
         userUpdatePanel.Visible = False
@@ -848,7 +848,7 @@ Public Class adminhomePage
         Label10.Text = "users"
 
 
-        DataGridView4.Visible = True
+        userDataGridView.Visible = True
         addPostPanel.Visible = True
         userDeleteBtn.Visible = False
         userUpdateBtn.Visible = False
@@ -868,7 +868,7 @@ Public Class adminhomePage
         adminRolePanel.Visible = False
         adminUsersPanel.Visible = True
 
-        User.displayTableU("users", DataGridView4, sqlDataTableU)
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
 
     End Sub
     'user update section
@@ -901,7 +901,7 @@ Public Class adminhomePage
         End Try
 
 
-        Dim user_id As String = DataGridView4.SelectedRows(0).Cells(0).Value.ToString
+        Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
 
         sqlConn.Open()
@@ -920,7 +920,7 @@ Public Class adminhomePage
         sqlConn.Close()
 
         'this updates the datagridview
-        User.displayTableU("users", DataGridView4, sqlDataTableU)
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
 
         'this changes the content of confirmMsg
         confirmMsgU.Text = "update successfull ✔"
@@ -939,7 +939,7 @@ Public Class adminhomePage
 
         Label10.Text = "Users"
 
-        DataGridView4.Visible = True
+        userDataGridView.Visible = True
         userUpdateBtn.Visible = True
         userAddBtn.Visible = True
         exportBtnU.Visible = True
@@ -959,7 +959,7 @@ Public Class adminhomePage
 
         Label10.Text = "Users"
 
-        DataGridView4.Visible = True
+        userDataGridView.Visible = True
         userAddBtn.Visible = True
         exportBtnU.Visible = True
         PrintBtnU.Visible = True
@@ -967,13 +967,13 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub DataGridView4_CellClick() Handles DataGridView4.CellClick 'the cellclicked event
+    Private Sub DataGridView4_CellClick() Handles userDataGridView.CellClick 'the cellclicked event
 
         Try
-            userUserNameInput.Text = DataGridView4.SelectedRows(0).Cells(1).Value.ToString
-            userUserEmailInput.Text = DataGridView4.SelectedRows(0).Cells(2).Value.ToString
-            userUserPhoneInput.Text = DataGridView4.SelectedRows(0).Cells(3).Value.ToString
-            userUserTitleInput.Text = DataGridView4.SelectedRows(0).Cells(4).Value.ToString
+            userUserNameInput.Text = userDataGridView.SelectedRows(0).Cells(1).Value.ToString
+            userUserEmailInput.Text = userDataGridView.SelectedRows(0).Cells(2).Value.ToString
+            userUserPhoneInput.Text = userDataGridView.SelectedRows(0).Cells(3).Value.ToString
+            userUserTitleInput.Text = userDataGridView.SelectedRows(0).Cells(4).Value.ToString
 
             userUpdateBtn.Visible = True
             userDeleteBtn.Visible = True
@@ -1019,7 +1019,7 @@ Public Class adminhomePage
         exportBtnU.Visible = False
         PrintBtnU.Visible = False
         searchuserlabel.visible = False
-        DataGridView4.Visible = False
+        userDataGridView.Visible = False
 
     End Sub
 
@@ -1028,13 +1028,13 @@ Public Class adminhomePage
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this user ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
-            admin.deleteRecord(DataGridView4, "users", "user")
+            admin.deleteRecord(userDataGridView, "users", "user")
         End If
 
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
 
-        User.displayTableU("users", DataGridView4, sqlDataTableU)
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
 
 
 
@@ -1073,7 +1073,7 @@ Public Class adminhomePage
         Label10.Text = "Add user"
 
         userUpdateBtn.Visible = False
-        DataGridView4.Visible = False
+        userDataGridView.Visible = False
         exportBtnU.Visible = False
         PrintBtnU.Visible = False
         searchuserlabel.Visible = False
@@ -1159,7 +1159,7 @@ Public Class adminhomePage
                     End Try
                 End If
                 'this updates the datagridview
-                User.displayTableU("users", DataGridView4, sqlDataTableU)
+                User.displayTableU("users", userDataGridView, sqlDataTableU)
 
                 'this changes the content of confirmMsg
                 confirmMsgU.Text = "Item successfully added ✔"
@@ -1176,7 +1176,7 @@ Public Class adminhomePage
 
                 Label10.Text = "Users"
 
-                DataGridView4.Visible = True
+                userDataGridView.Visible = True
                 userUpdateBtn.Visible = True
                 userAddBtn.Visible = True
                 exportBtnU.Visible = True
@@ -1214,7 +1214,7 @@ Public Class adminhomePage
 
         Label10.Text = "Users"
 
-        DataGridView4.Visible = True
+        userDataGridView.Visible = True
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
         userAddBtn.Visible = True
@@ -1258,10 +1258,10 @@ Public Class adminhomePage
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
 
-        User.displayTable("titles", DataGridView5, sqlDataTableR)
+        User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
         roleUpdateBtn.Visible = False
-        DataGridView5.Visible = True
+        roleDataGridView.Visible = True
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
@@ -1271,7 +1271,7 @@ Public Class adminhomePage
     'role update buttons
     Private Sub roleUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateValidationBtn.Click 'validate update 
 
-        Dim role_id As String = DataGridView5.SelectedRows(0).Cells(0).Value.ToString
+        Dim role_id As String = roleDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
         connect_db()
 
@@ -1291,7 +1291,7 @@ Public Class adminhomePage
         sqlConn.Close()
 
         'this updates the datagridview
-        User.displayTable("titles", DataGridView5, sqlDataTableR)
+        User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
         'this changes the content of confirmMsg
         confirmMsgR.Text = "update successfull ✔"
@@ -1307,7 +1307,7 @@ Public Class adminhomePage
         roleUpdateBtn.Visible = False
         roleAddPanel.Visible = False
 
-        DataGridView5.Visible = True
+        roleDataGridView.Visible = True
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
@@ -1319,17 +1319,17 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False
         roleUpdateBtn.Visible = False
 
-        DataGridView5.Visible = True
+        roleDataGridView.Visible = True
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         PrintBtnR.Visible = True
     End Sub
 
-    Private Sub DataGridView5_CellClick() Handles DataGridView5.CellClick 'the cellclicked event
+    Private Sub DataGridView5_CellClick() Handles roleDataGridView.CellClick 'the cellclicked event
 
         Try
-            titleNameInput.Text = DataGridView5.SelectedRows(0).Cells(1).Value.ToString
+            titleNameInput.Text = roleDataGridView.SelectedRows(0).Cells(1).Value.ToString
             roleUpdateBtn.Visible = True
 
         Catch ex As Exception
@@ -1345,7 +1345,7 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = True
 
         roleUpdateBtn.Visible = False
-        DataGridView5.Visible = False
+        roleDataGridView.Visible = False
         Roles.Text = "Update roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
@@ -1357,12 +1357,12 @@ Public Class adminhomePage
 
         If confirm = DialogResult.Yes Then
 
-            admin.deleteRecord(DataGridView5, "titles", "title")
+            admin.deleteRecord(roleDataGridView, "titles", "title")
 
         End If
 
         roleUpdateBtn.Visible = False
-        User.displayTable("titles", DataGridView5, sqlDataTableR)
+        User.displayTable("titles", roleDataGridView, sqlDataTableR)
     End Sub
 
 
@@ -1373,7 +1373,7 @@ Public Class adminhomePage
         roleAddPanel.Visible = True
 
         roleUpdateBtn.Visible = False
-        DataGridView5.Visible = False
+        roleDataGridView.Visible = False
         Roles.Text = "Add roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
@@ -1404,7 +1404,7 @@ Public Class adminhomePage
             End Try
 
             'this updates the datagridview
-            User.displayTable("titles", DataGridView5, sqlDataTableR)
+            User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
             'this changes the content of confirmMsg
             confirmMsgR.Text = "Item successfully added ✔"
@@ -1422,7 +1422,7 @@ Public Class adminhomePage
             'empty aftwr validation
             titleAddNameInput.Text = ""
 
-            DataGridView5.Visible = True
+            roleDataGridView.Visible = True
             Roles.Text = "Roles"
             roleAddBtn.Visible = True
             exportBtnR.Visible = True
@@ -1434,7 +1434,7 @@ Public Class adminhomePage
         roleUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         roleAddPanel.Visible = False
 
-        DataGridView5.Visible = True
+        roleDataGridView.Visible = True
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
@@ -1479,13 +1479,13 @@ Public Class adminhomePage
         stateSearchBoxP.Text = ""
 
         User.display(adminEquipmentPanel, EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
         fillHalls(hallSearchBoxE)
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
 
 
-        DataGridView1.Visible = True
+        equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "Equipment"
@@ -1497,7 +1497,7 @@ Public Class adminhomePage
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1533,7 +1533,7 @@ Public Class adminhomePage
 
         fillHalls(hallSearchBoxE)
 
-        DataGridView1.Visible = True
+        equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "CPUs"
@@ -1545,7 +1545,7 @@ Public Class adminhomePage
 
     Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", DataGridView1)
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1563,7 +1563,7 @@ Public Class adminhomePage
 
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_phone", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1599,7 +1599,7 @@ Public Class adminhomePage
 
         fillHalls(hallSearchBoxE)
 
-        DataGridView1.Visible = True
+        equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "IP Phones"
@@ -1610,7 +1610,7 @@ Public Class adminhomePage
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_phone", DataGridView1)
+        User.displayEquipmentTable("equipments", "IP_phone", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1627,7 +1627,7 @@ Public Class adminhomePage
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "monitor", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1645,7 +1645,7 @@ Public Class adminhomePage
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "monitor", DataGridView1)
+        User.displayEquipmentTable("equipments", "monitor", equipmentDataGridView)
 
         adminEquipmentPanel.Visible = True
         adminPostPanel.Visible = False
@@ -1680,7 +1680,7 @@ Public Class adminhomePage
 
         fillHalls(hallSearchBoxE)
 
-        DataGridView1.Visible = True
+        equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "Monitors"
@@ -1697,7 +1697,7 @@ Public Class adminhomePage
         fillHalls(hallInput)
 
         EquipmentTitle.Text = "Add equipment"
-        DataGridView1.Visible = False
+        equipmentDataGridView.Visible = False
         equipmentSearchBox.Visible = False
         equipmentsearchpostidlabel.Visible = False
         addEquipmentBtn.Visible = False
@@ -1709,7 +1709,7 @@ Public Class adminhomePage
         addEquipmentPanel.Visible = False
 
         EquipmentTitle.Text = "Equipment"
-        DataGridView1.Visible = True
+        equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         addEquipmentBtn.Visible = True
@@ -1785,7 +1785,7 @@ Public Class adminhomePage
 
 
                 EquipmentTitle.Text = "Equipment"
-                DataGridView1.Visible = True
+                equipmentDataGridView.Visible = True
                 equipmentSearchBox.Visible = True
                 equipmentsearchpostidlabel.Visible = True
                 addEquipmentBtn.Visible = True
@@ -1805,10 +1805,10 @@ Public Class adminhomePage
 
 
     'EQUIPMENT SECTION
-    Private Sub DataGridView1_CellClick() Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick() Handles equipmentDataGridView.CellClick
 
         Try
-            equipmentState.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString
+            equipmentState.Text = equipmentDataGridView.SelectedRows(0).Cells(2).Value.ToString
 
             statePanel.Visible = True
 
@@ -1823,7 +1823,7 @@ Public Class adminhomePage
 
     'update equipment state
     Private Sub stateChangeBtn_Click(sender As Object, e As EventArgs) Handles stateChangeBtn.Click
-        Dim equipment_id As Integer = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
+        Dim equipment_id As Integer = equipmentDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
         connect_db()
 
@@ -1845,7 +1845,7 @@ Public Class adminhomePage
 
         statePanel.Visible = False
 
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
         fillHalls(hallSearchBoxE)
     End Sub
 
@@ -1856,12 +1856,12 @@ Public Class adminhomePage
 
         If confirm = DialogResult.Yes Then
 
-            admin.deleteRecord(DataGridView1, "equipments", "equipment")
+            admin.deleteRecord(equipmentDataGridView, "equipments", "equipment")
         End If
 
         statePanel.Visible = False
 
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
     End Sub
 
@@ -1893,7 +1893,7 @@ Public Class adminhomePage
 
         Try
 
-            User.export(DataGridView5, "Roles")
+            User.export(roleDataGridView, "Roles")
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1914,7 +1914,7 @@ Public Class adminhomePage
 
         Try
 
-            User.export(DataGridView3, "halls")
+            User.export(hallDataGridView, "halls")
 
 
         Catch ex As Exception
@@ -1936,7 +1936,7 @@ Public Class adminhomePage
 
         Try
 
-            User.export(DataGridView4, "users")
+            User.export(userDataGridView, "users")
 
 
         Catch ex As Exception
@@ -1957,7 +1957,7 @@ Public Class adminhomePage
 
         Try
 
-            User.export(DataGridView2, "posts")
+            User.export(postDataGridView, "posts")
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1976,7 +1976,7 @@ Public Class adminhomePage
 
         Try
 
-            User.export(DataGridView1, "equipments")
+            User.export(equipmentDataGridView, "equipments")
 
 
         Catch ex As Exception
@@ -2022,14 +2022,14 @@ Public Class adminhomePage
         End Try
 
 
-        admin.generalSearchH("halls", DataGridView3, "hall_id", hall_id, searchErrorH, sqlDataTableCBH)
+        admin.generalSearchH("halls", hallDataGridView, "hall_id", hall_id, searchErrorH, sqlDataTableCBH)
     End Sub
 
 
     'equipment searches
     Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
-        User.search("equipments", DataGridView1, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
+        User.search("equipments", equipmentDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
     End Sub
 
@@ -2062,7 +2062,7 @@ Public Class adminhomePage
 
         End Try
 
-        User.searchHall("equipments", DataGridView1, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+        User.searchHall("equipments", equipmentDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
     End Sub
 
     'equipment search by state
@@ -2094,7 +2094,7 @@ Public Class adminhomePage
 
         End Try
 
-        User.searchHallAndState("equipments", DataGridView1, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+        User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
 
 
     End Sub
@@ -2103,7 +2103,7 @@ Public Class adminhomePage
     'user searches
     Private Sub userSearchBox_textChanged(sender As Object, e As EventArgs) Handles userSearchBox.TextChanged
 
-        User.searchU("users", DataGridView4, "user_name", userSearchBox.Text, searchErrorU, sqlDataTableU)
+        User.searchU("users", userDataGridView, "user_name", userSearchBox.Text, searchErrorU, sqlDataTableU)
 
     End Sub
 
@@ -2124,7 +2124,7 @@ Public Class adminhomePage
     Private Sub Label1_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
         'MessageBox.Show("Visible change event raised!!!")
         'this updates the datagridview
-        User.displayTableE("equipments", DataGridView1, sqlDataTableE)
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
         confirmMsgE.Visible = True
 
@@ -2142,7 +2142,7 @@ Public Class adminhomePage
 
     Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
-        User.searchP("posts", DataGridView2, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+        User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
 
     End Sub
 
@@ -2177,7 +2177,7 @@ Public Class adminhomePage
 
 
 
-        User.searchHallAndStateP("posts", DataGridView2, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
 
 
     End Sub
@@ -2211,7 +2211,7 @@ Public Class adminhomePage
 
         End Try
 
-        User.searchHallP("posts", DataGridView2, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        User.searchHallP("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
     End Sub
 
 
@@ -2222,15 +2222,15 @@ Public Class adminhomePage
     Private Sub printBtnh_Click(sender As Object, e As EventArgs) Handles PrintBtnH.Click
 
         Try
-            Dim height As Integer = DataGridView3.Height
-            DataGridView3.Height = DataGridView3.RowCount * DataGridView3.RowTemplate.Height
-            bitmap = New Bitmap(Me.DataGridView3.Width, Me.DataGridView3.Height)
-            DataGridView3.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView3.Width, Me.DataGridView3.Height))
+            Dim height As Integer = hallDataGridView.Height
+            hallDataGridView.Height = hallDataGridView.RowCount * hallDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(Me.hallDataGridView.Width, Me.hallDataGridView.Height)
+            hallDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.hallDataGridView.Width, Me.hallDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView3.Height = height
+            hallDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -2246,15 +2246,15 @@ Public Class adminhomePage
     Private Sub printBtnr_Click(sender As Object, e As EventArgs) Handles PrintBtnR.Click
 
         Try
-            Dim height As Integer = DataGridView5.Height
-            DataGridView5.Height = DataGridView5.RowCount * DataGridView5.RowTemplate.Height
-            bitmap = New Bitmap(DataGridView5.Width, DataGridView5.Height)
-            DataGridView5.DrawToBitmap(bitmap, New Rectangle(0, 0, DataGridView5.Width, DataGridView5.Height))
+            Dim height As Integer = roleDataGridView.Height
+            roleDataGridView.Height = roleDataGridView.RowCount * roleDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(roleDataGridView.Width, roleDataGridView.Height)
+            roleDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, roleDataGridView.Width, roleDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView5.Height = height
+            roleDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -2270,15 +2270,15 @@ Public Class adminhomePage
     Private Sub printBtnu_Click(sender As Object, e As EventArgs) Handles PrintBtnU.Click
 
         Try
-            Dim height As Integer = DataGridView4.Height
-            DataGridView4.Height = DataGridView4.RowCount * DataGridView4.RowTemplate.Height
-            bitmap = New Bitmap(DataGridView4.Width, DataGridView4.Height)
-            DataGridView4.DrawToBitmap(bitmap, New Rectangle(0, 0, DataGridView4.Width, DataGridView4.Height))
+            Dim height As Integer = userDataGridView.Height
+            userDataGridView.Height = userDataGridView.RowCount * userDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(userDataGridView.Width, userDataGridView.Height)
+            userDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, userDataGridView.Width, userDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView4.Height = height
+            userDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -2294,15 +2294,15 @@ Public Class adminhomePage
     Private Sub printBtnP_Click(sender As Object, e As EventArgs) Handles printBtnP.Click
 
         Try
-            Dim height As Integer = DataGridView2.Height
-            DataGridView2.Height = DataGridView2.RowCount * DataGridView2.RowTemplate.Height
-            bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
-            DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView2.Width, Me.DataGridView2.Height))
+            Dim height As Integer = postDataGridView.Height
+            postDataGridView.Height = postDataGridView.RowCount * postDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(Me.postDataGridView.Width, Me.postDataGridView.Height)
+            postDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.postDataGridView.Width, Me.postDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView2.Height = height
+            postDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -2316,15 +2316,15 @@ Public Class adminhomePage
     Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
 
         Try
-            Dim height As Integer = DataGridView1.Height
-            DataGridView1.Height = DataGridView1.RowCount * DataGridView1.RowTemplate.Height
-            bitmap = New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
-            DataGridView1.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
+            Dim height As Integer = equipmentDataGridView.Height
+            equipmentDataGridView.Height = equipmentDataGridView.RowCount * equipmentDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(Me.equipmentDataGridView.Width, Me.equipmentDataGridView.Height)
+            equipmentDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.equipmentDataGridView.Width, Me.equipmentDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            DataGridView1.Height = height
+            equipmentDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -2362,7 +2362,7 @@ Public Class adminhomePage
         e.Graphics.DrawImage(bitmap, 0, 0)
         Dim recp As RectangleF = e.PageSettings.PrintableArea
 
-        If DataGridView2.Height = recp.Height > 0 Then e.HasMorePages = True
+        If postDataGridView.Height = recp.Height > 0 Then e.HasMorePages = True
 
     End Sub
 
