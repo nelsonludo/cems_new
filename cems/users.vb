@@ -328,7 +328,48 @@ Public Class users
     End Sub
 
     'post hall search function
-    Public Sub searchHallP(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+    Public Sub searchHallP(table As String, grid As DataGridView, searchColumn2 As String, searchValue2 As String, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+        connect_db()
+        Try
+
+            sqlConn.Open()
+            datatable.Rows.Clear()
+
+            sqlQuery = "select cems_" & table & " .post_id, cems_" & table & " .post_state, cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_" & table & ".hall_id = cems_halls.hall_id where cems_halls." & searchColumn & " like '" & searchValue & "' and cems_" & table & "." & searchColumn2 & " like '" & searchValue2 & "'"
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+
+            sqlReader = sqlCmd.ExecuteReader
+            datatable.Load(sqlReader)
+
+            grid.DataSource = datatable
+
+            If datatable.Rows.Count < 1 And searchValue <> "" Then
+                grid.Visible = False 'datagridview disappear
+                searchErrorLabel.Visible = True 'error message appear
+            Else
+                grid.Visible = True
+                searchErrorLabel.Visible = False 'error message disappear
+
+            End If
+
+
+            sqlReader.Close()
+            sqlConn.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+    End Sub
+
+    'search without the state 
+    Public Sub searchHallPNoState(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+
+        MsgBox(searchValue)
+
+
         connect_db()
         Try
 
@@ -384,6 +425,47 @@ Public Class users
 
 
             If datatable.Rows.Count < 1 And searchValue <> "" Then
+                grid.Visible = False 'datagridview disappear
+                searchErrorLabel.Visible = True 'error message appear
+            Else
+                grid.Visible = True
+                searchErrorLabel.Visible = False 'error message disappear
+
+            End If
+
+
+            sqlReader.Close()
+            sqlConn.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+
+    'search for post state regardless of the hall 
+    Public Sub searchHallAndState(table As String, grid As DataGridView, searchColumn2 As String, searchValue2 As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
+        connect_db()
+        Try
+
+            sqlConn.Open()
+            datatable.Rows.Clear()
+
+            sqlQuery = "select cems_" & table & " .post_id, cems_" & table & " .post_state, cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_" & table & ".hall_id = cems_halls.hall_id where cems_" & table & "." & searchColumn2 & " like '" & searchValue2 & "' "
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+
+            sqlReader = sqlCmd.ExecuteReader
+
+            datatable.Load(sqlReader)
+
+            grid.DataSource = datatable
+
+
+
+            If datatable.Rows.Count < 1 Then
                 grid.Visible = False 'datagridview disappear
                 searchErrorLabel.Visible = True 'error message appear
             Else

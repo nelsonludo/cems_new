@@ -423,38 +423,76 @@ Public Class UserHomePage
         User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
 
+
+
     'search by halls in posts 
+
+
+    'post hall search
     Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
-           + "password=" + password + ";" + "database =" + database
+
+        postSearchBox.Text = ""
+
+        If stateSearchBoxP.Text <> "" Then
+
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
-        Try
-            sqlConn.Open()
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            User.searchHallP("posts", postDataGridView, "post_state", stateSearchBoxP.Text, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        Else
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
+                sqlConn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+            End Try
 
-        End Try
+            User.searchHallPNoState("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        End If
 
-        User.searchHallP("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
     End Sub
+
+
 
     'search by halls in equipment
     Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
@@ -520,36 +558,46 @@ Public Class UserHomePage
     End Sub
 
     'post search by state
+    'post search by state
     Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
+        postSearchBox.Text = ""
+
+
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        If hallSearchBoxP.Text <> "" Then
+            'SQL Connection'
+            connect_db()
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+            Try
+                sqlConn.Open()
 
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
-
-            sqlConn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-
-        End Try
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
-        User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        Else
+
+            User.searchHallAndState("posts", postDataGridView, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        End If
+
 
 
     End Sub

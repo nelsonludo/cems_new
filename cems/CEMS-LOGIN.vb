@@ -324,28 +324,28 @@ Public Class Form1
     End Sub
 
     'password placeholder
-    Private Sub passwordtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.GotFocus
-        If passwordtxt.Text = "password" Then
-            passwordtxt.Text = ""
-        End If
-    End Sub
-    Private Sub passwordtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.LostFocus
-        If passwordtxt.Text = "" Then
-            passwordtxt.Text = "password"
-        End If
-    End Sub
-
-    'password placeholder
-    Private Sub emailtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.GotFocus
-        If emailtxt.Text = "email" Then
-            emailtxt.Text = ""
-        End If
-    End Sub
-    Private Sub emailtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.LostFocus
-        If emailtxt.Text = "" Then
-            emailtxt.Text = "email"
-        End If
-    End Sub
+    'Private Sub passwordtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.GotFocus
+    '    If passwordtxt.Text = "password" Then
+    '        passwordtxt.Text = ""
+    '    End If
+    'End Sub
+    'Private Sub passwordtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.LostFocus
+    '    If passwordtxt.Text = "" Then
+    '        passwordtxt.Text = "password"
+    '    End If
+    'End Sub
+    '
+    ''password placeholder
+    'Private Sub emailtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.GotFocus
+    '    If emailtxt.Text = "email" Then
+    '        emailtxt.Text = ""
+    '    End If
+    'End Sub
+    'Private Sub emailtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.LostFocus
+    '    If emailtxt.Text = "" Then
+    '        emailtxt.Text = "email"
+    '    End If
+    'End Sub
 
 
     Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click

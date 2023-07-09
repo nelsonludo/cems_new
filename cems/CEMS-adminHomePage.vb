@@ -1185,17 +1185,19 @@ Public Class adminhomePage
 
                 userUpdateBtn.Visible = False
                 userDeleteBtn.Visible = False
+
+
+                'empty the fields after validation
+                userUserAddNameInput.Text = ""
+                userUserAddEmailInput.Text = ""
+                userUserAddPhoneInput.Text = ""
+                userUserAddPwdInput.Text = ""
+                userUserAddConfirmPwdInput.Text = ""
+                userUserAddTitleInput.Text = ""
             End If
 
         End If
 
-        'empty the fields after validation
-        userUserAddNameInput.Text = ""
-        userUserAddEmailInput.Text = ""
-        userUserAddPhoneInput.Text = ""
-        userUserAddPwdInput.Text = ""
-        userUserAddConfirmPwdInput.Text = ""
-        userUserAddTitleInput.Text = ""
 
 
     End Sub
@@ -2149,35 +2151,43 @@ Public Class adminhomePage
     'post search by state
     Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
+        postSearchBox.Text = ""
+
+
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        If hallSearchBoxP.Text <> "" Then
+            'SQL Connection'
+            connect_db()
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+            Try
+                sqlConn.Open()
 
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
-
-            sqlConn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-
-        End Try
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-        User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        Else
+
+            User.searchHallAndState("posts", postDataGridView, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        End If
+
 
 
     End Sub
@@ -2186,32 +2196,65 @@ Public Class adminhomePage
     'post hall search
     Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        postSearchBox.Text = ""
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+        If stateSearchBoxP.Text <> "" Then
+
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
+                sqlConn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
 
-        End Try
+            End Try
 
-        User.searchHallP("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+            User.searchHallP("posts", postDataGridView, "post_state", stateSearchBoxP.Text, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        Else
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+            End Try
+
+            User.searchHallPNoState("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
+        End If
+
     End Sub
 
 

@@ -9,10 +9,28 @@ list of things to do in cems
 -when in the equipment panel the other buttons don't work and the export button is not there 
 -hide pwd and Cpwd text in create user 
 -empty other search boxes when searching (unless their value is used for the current search )
--YOU STILL HAVE TO STYLE THE DATATABLES MAN !!!!
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
-
+-Agrandir!
+-Highlight the tab button
+-review admin profile design
+-responsive
+-chose a font type
+-english and french
+-remove print for now
+-refresh tables
+-allow search on state only state 
+-remove update search
+-review filters 
+-review datagridview design(cell height)
+-remove post state panel after clicking on add
+-refresh everything after add cancel(search error shouldn't show after adding or cancelling)
+-add change hall for post
+-remove typing on combo boxes
+-add default value to post ID in db so that equipments with no posts can be added
+-change the order of state so that post state depends on equipment state
+-add dashboard button
+-review equipment datagridview(header style false)
 
 
 
