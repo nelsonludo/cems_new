@@ -2039,64 +2039,108 @@ Public Class adminhomePage
     'search by halls in equipment
     Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        equipmentSearchBox.Text = ""
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+        If userSearchBoxE.Text = "" Then
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+                sqlConn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
 
-        End Try
+            End Try
 
-        User.searchHall("equipments", equipmentDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+            User.searchHall("equipments", equipmentDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+        Else
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
+        End If
+
+
     End Sub
 
     'equipment search by state
 
     Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        equipmentSearchBox.Text = ""
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+        If hallSearchBoxE.Text <> "" Then
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
+                sqlConn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
 
-        End Try
+            End Try
 
-        User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+            User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
+        Else
+            User.searchHallAndStateNohall("equipments", equipmentDataGridView, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+        End If
+
 
 
     End Sub

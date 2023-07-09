@@ -209,7 +209,7 @@ Public Class UserHomePage
         stateSearchBoxP.Text = ""
 
         User.display(userEquipmentPanel, EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", userDataGridView, sqlDataTableE)
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
 
         fillcomboState(userSearchBoxE, "equipments", "equipment_state")
@@ -222,7 +222,7 @@ Public Class UserHomePage
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", userDataGridView)
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -244,7 +244,7 @@ Public Class UserHomePage
     End Sub
     Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", userDataGridView)
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -267,7 +267,7 @@ Public Class UserHomePage
 
     Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", userDataGridView)
+        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -291,7 +291,7 @@ Public Class UserHomePage
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", userDataGridView)
+        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -315,7 +315,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", userDataGridView)
+        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -338,7 +338,7 @@ Public Class UserHomePage
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", userDataGridView)
+        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
 
         userEquipmentPanel.Visible = True
 
@@ -414,7 +414,7 @@ Public Class UserHomePage
     'searches section
     Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
-        User.search("equipments", userDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
+        User.search("equipments", equipmentDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
     End Sub
 
@@ -497,67 +497,113 @@ Public Class UserHomePage
     'search by halls in equipment
     Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        equipmentSearchBox.Text = ""
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+        If userSearchBoxE.Text = "" Then
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+                sqlConn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
 
-        End Try
+            End Try
 
-        User.searchHall("equipments", userDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+            User.searchHall("equipments", equipmentDataGridView, "hall_id", hall_id, searchErrorE, sqlDataTableCBHE)
+        Else
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
+
+                sqlConn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+            User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
+        End If
+
+
     End Sub
 
     'equipment search by state
-    Private Sub usersearchboxe_textChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.TextChanged
 
+    Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
-        'SQL Connection'
-        connect_db()
 
-        Try
-            sqlConn.Open()
+        equipmentSearchBox.Text = ""
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+        If hallSearchBoxE.Text <> "" Then
+            'SQL Connection'
+            connect_db()
+
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-            While (sqlReader.Read())
-                hall_id = sqlReader.Item("hall_id")
-            End While
+                While (sqlReader.Read())
+                    hall_id = sqlReader.Item("hall_id")
+                End While
 
-            sqlConn.Close()
+                sqlConn.Close()
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
 
-        End Try
+            End Try
 
-        User.searchHallAndState("equipments", userDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+            User.searchHallAndState("equipments", equipmentDataGridView, "hall_id", hall_id, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+
+        Else
+            User.searchHallAndStateNohall("equipments", equipmentDataGridView, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
+        End If
+
+
+
     End Sub
 
-    'post search by state
+
     'post search by state
     Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
@@ -625,7 +671,7 @@ Public Class UserHomePage
 
         Try
 
-            User.export(userDataGridView, "equipments")
+            User.export(equipmentDataGridView, "equipments")
 
 
         Catch ex As Exception
@@ -654,15 +700,15 @@ Public Class UserHomePage
     Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
 
         Try
-            Dim height As Integer = userDataGridView.Height
-            userDataGridView.Height = userDataGridView.RowCount * userDataGridView.RowTemplate.Height
-            bitmap = New Bitmap(Me.userDataGridView.Width, Me.userDataGridView.Height)
-            userDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.userDataGridView.Width, Me.userDataGridView.Height))
+            Dim height As Integer = equipmentDataGridView.Height
+            equipmentDataGridView.Height = equipmentDataGridView.RowCount * equipmentDataGridView.RowTemplate.Height
+            bitmap = New Bitmap(Me.equipmentDataGridView.Width, Me.equipmentDataGridView.Height)
+            equipmentDataGridView.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.equipmentDataGridView.Width, Me.equipmentDataGridView.Height))
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
             PrintPreviewDialog1.ShowDialog()
 
-            userDataGridView.Height = height
+            equipmentDataGridView.Height = height
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)

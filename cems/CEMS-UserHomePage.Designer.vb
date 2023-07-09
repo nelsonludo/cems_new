@@ -117,7 +117,7 @@ Partial Class UserHomePage
         Me.printBtnE = New System.Windows.Forms.Button()
         Me.exportBtnE = New System.Windows.Forms.Button()
         Me.equipmentSearchBox = New System.Windows.Forms.TextBox()
-        Me.userDataGridView = New System.Windows.Forms.DataGridView()
+        Me.equipmentDataGridView = New System.Windows.Forms.DataGridView()
         Me.EquipmentTitle = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -145,7 +145,7 @@ Partial Class UserHomePage
         Me.profileSubPanel2.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
         Me.userEquipmentPanel.SuspendLayout()
-        CType(Me.userDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.equipmentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.userPostPanel.SuspendLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -1229,7 +1229,7 @@ Partial Class UserHomePage
         Me.userEquipmentPanel.Controls.Add(Me.printBtnE)
         Me.userEquipmentPanel.Controls.Add(Me.exportBtnE)
         Me.userEquipmentPanel.Controls.Add(Me.equipmentSearchBox)
-        Me.userEquipmentPanel.Controls.Add(Me.userDataGridView)
+        Me.userEquipmentPanel.Controls.Add(Me.equipmentDataGridView)
         Me.userEquipmentPanel.Controls.Add(Me.EquipmentTitle)
         Me.userEquipmentPanel.Controls.Add(Me.Label33)
         Me.userEquipmentPanel.Controls.Add(Me.Label34)
@@ -1318,12 +1318,12 @@ Partial Class UserHomePage
         Me.equipmentSearchBox.Size = New System.Drawing.Size(130, 22)
         Me.equipmentSearchBox.TabIndex = 32
         '
-        'userDataGridView
+        'equipmentDataGridView
         '
-        Me.userDataGridView.AllowUserToAddRows = False
-        Me.userDataGridView.AllowUserToDeleteRows = False
-        Me.userDataGridView.AllowUserToResizeColumns = False
-        Me.userDataGridView.AllowUserToResizeRows = False
+        Me.equipmentDataGridView.AllowUserToAddRows = False
+        Me.equipmentDataGridView.AllowUserToDeleteRows = False
+        Me.equipmentDataGridView.AllowUserToResizeColumns = False
+        Me.equipmentDataGridView.AllowUserToResizeRows = False
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
@@ -1331,11 +1331,11 @@ Partial Class UserHomePage
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightGray
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.userDataGridView.BackgroundColor = System.Drawing.Color.MintCream
-        Me.userDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.userDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
+        Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.equipmentDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
@@ -1343,27 +1343,27 @@ Partial Class UserHomePage
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.userDataGridView.ColumnHeadersHeight = 25
+        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.equipmentDataGridView.ColumnHeadersHeight = 25
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle3
-        Me.userDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.userDataGridView.EnableHeadersVisualStyles = False
-        Me.userDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.userDataGridView.Location = New System.Drawing.Point(123, 133)
-        Me.userDataGridView.Margin = New System.Windows.Forms.Padding(4)
-        Me.userDataGridView.Name = "userDataGridView"
-        Me.userDataGridView.RowHeadersVisible = False
-        Me.userDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.userDataGridView.Size = New System.Drawing.Size(660, 290)
-        Me.userDataGridView.TabIndex = 31
+        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle3
+        Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.equipmentDataGridView.EnableHeadersVisualStyles = False
+        Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.equipmentDataGridView.Location = New System.Drawing.Point(123, 133)
+        Me.equipmentDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.equipmentDataGridView.Name = "equipmentDataGridView"
+        Me.equipmentDataGridView.RowHeadersVisible = False
+        Me.equipmentDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.equipmentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.equipmentDataGridView.Size = New System.Drawing.Size(660, 290)
+        Me.equipmentDataGridView.TabIndex = 31
         '
         'EquipmentTitle
         '
@@ -1675,7 +1675,7 @@ Partial Class UserHomePage
         Me.profileSubPanel1.PerformLayout()
         Me.userEquipmentPanel.ResumeLayout(False)
         Me.userEquipmentPanel.PerformLayout()
-        CType(Me.userDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.equipmentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.userPostPanel.ResumeLayout(False)
         Me.userPostPanel.PerformLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1769,7 +1769,7 @@ Partial Class UserHomePage
     Friend WithEvents printBtnE As Button
     Friend WithEvents exportBtnE As Button
     Friend WithEvents equipmentSearchBox As TextBox
-    Friend WithEvents userDataGridView As DataGridView
+    Friend WithEvents equipmentDataGridView As DataGridView
     Friend WithEvents EquipmentTitle As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
