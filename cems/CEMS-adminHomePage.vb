@@ -26,10 +26,14 @@ Public Class adminhomePage
     Dim User As New users
     Dim admin As New admin
 
-
+    'this is used in the print function
     Dim bitmap As Bitmap
 
+
+    'this is for the sidebar dropdown
     Dim iscollapsed As Boolean = True
+
+    'connection functoin
     Public Sub connect_db()
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
                + "password=" + password + ";" + "database =" + database
@@ -268,7 +272,7 @@ Public Class adminhomePage
         postsearchlabel.Visible = True
         addPostBtn.Visible = True
         exportBtnP.Visible = True
-        printBtnP.Visible = True
+        'printBtnP.Visible = True
     End Sub
 
 
@@ -284,7 +288,7 @@ Public Class adminhomePage
         postsearchlabel.Visible = False
         addPostBtn.Visible = False
         exportBtnP.Visible = False
-        printBtnP.Visible = False
+        'printBtnP.Visible = False
     End Sub
 
 
@@ -367,7 +371,7 @@ Public Class adminhomePage
                 postsearchlabel.Visible = True
                 addPostBtn.Visible = True
                 exportBtnP.Visible = True
-                printBtnP.Visible = True
+                'printBtnP.Visible = True
 
 
             Catch ex As Exception
@@ -394,8 +398,8 @@ Public Class adminhomePage
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
         addPostBtn.Visible = true
-        exportBtnP.Visible = true
-        printBtnP.Visible = true
+        exportBtnP.Visible = True
+        'printBtnP.Visible = true
     End Sub
 
     'delete post button
@@ -544,7 +548,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = False
         exportBtnH.Visible = False
-        PrintBtnH.Visible = False
+        'PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
         Label4.Visible = False
         hallDataGridView.Visible = False
@@ -598,7 +602,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
-        PrintBtnH.Visible = True
+        'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
         hallDataGridView.Visible = True
@@ -614,7 +618,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
-        PrintBtnH.Visible = True
+        'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
         hallDataGridView.Visible = True
@@ -674,7 +678,7 @@ Public Class adminhomePage
             'things that have to disappear (this is annoying)
             hallAddBtn.Visible = True
             exportBtnH.Visible = True
-            PrintBtnH.Visible = True
+            'PrintBtnH.Visible = True
             hallSearchBoxH.Visible = True
             Label4.Visible = True
             hallDataGridView.Visible = True
@@ -708,7 +712,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = False
         exportBtnH.Visible = False
-        PrintBtnH.Visible = False
+        'PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
         Label4.Visible = False
         hallDataGridView.Visible = False
@@ -745,7 +749,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
-        PrintBtnH.Visible = True
+        'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
         hallDataGridView.Visible = True
@@ -800,7 +804,7 @@ Public Class adminhomePage
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
-        PrintBtnH.Visible = True
+        'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
         Label4.Visible = True
         hallDataGridView.Visible = True
@@ -853,7 +857,7 @@ Public Class adminhomePage
         userDeleteBtn.Visible = False
         userUpdateBtn.Visible = False
         exportBtnU.Visible = True
-        PrintBtnU.Visible = True
+        'PrintBtnU.Visible = True
         userAddBtn.Visible = True
         searchuserlabel.Visible = True
 
@@ -943,7 +947,7 @@ Public Class adminhomePage
         userUpdateBtn.Visible = True
         userAddBtn.Visible = True
         exportBtnU.Visible = True
-        PrintBtnU.Visible = True
+        'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
 
         userUpdateBtn.Visible = False
@@ -962,7 +966,7 @@ Public Class adminhomePage
         userDataGridView.Visible = True
         userAddBtn.Visible = True
         exportBtnU.Visible = True
-        PrintBtnU.Visible = True
+        'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
 
     End Sub
@@ -1017,7 +1021,7 @@ Public Class adminhomePage
         userUpdateBtn.Visible = False
         userAddBtn.Visible = False
         exportBtnU.Visible = False
-        PrintBtnU.Visible = False
+        'PrintBtnU.Visible = False
         searchuserlabel.visible = False
         userDataGridView.Visible = False
 
@@ -1075,7 +1079,7 @@ Public Class adminhomePage
         userUpdateBtn.Visible = False
         userDataGridView.Visible = False
         exportBtnU.Visible = False
-        PrintBtnU.Visible = False
+        'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
 
     End Sub
@@ -1180,7 +1184,7 @@ Public Class adminhomePage
                 userUpdateBtn.Visible = True
                 userAddBtn.Visible = True
                 exportBtnU.Visible = True
-                PrintBtnU.Visible = True
+                'PrintBtnU.Visible = True
                 searchuserlabel.Visible = True
 
                 userUpdateBtn.Visible = False
@@ -1221,7 +1225,7 @@ Public Class adminhomePage
         userDeleteBtn.Visible = False
         userAddBtn.Visible = True
         exportBtnU.Visible = True
-        PrintBtnU.Visible = True
+        'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
 
 
@@ -1267,7 +1271,7 @@ Public Class adminhomePage
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
-        PrintBtnR.Visible = True
+        'PrintBtnR.Visible = True
     End Sub
 
     'role update buttons
@@ -1313,7 +1317,7 @@ Public Class adminhomePage
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
-        PrintBtnR.Visible = True
+        'PrintBtnR.Visible = True
 
     End Sub
 
@@ -1325,7 +1329,7 @@ Public Class adminhomePage
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
-        PrintBtnR.Visible = True
+        'PrintBtnR.Visible = True
     End Sub
 
     Private Sub DataGridView5_CellClick() Handles roleDataGridView.CellClick 'the cellclicked event
@@ -1351,7 +1355,7 @@ Public Class adminhomePage
         Roles.Text = "Update roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
-        PrintBtnR.Visible = False
+        'PrintBtnR.Visible = False
     End Sub
 
     Private Sub roleDeleteBtn_Click_1(sender As Object, e As EventArgs) Handles roleDeleteBtn.Click  'delete
@@ -1379,7 +1383,7 @@ Public Class adminhomePage
         Roles.Text = "Add roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
-        PrintBtnR.Visible = False
+        'PrintBtnR.Visible = False
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
 
@@ -1428,7 +1432,7 @@ Public Class adminhomePage
             Roles.Text = "Roles"
             roleAddBtn.Visible = True
             exportBtnR.Visible = True
-            PrintBtnR.Visible = True
+            'PrintBtnR.Visible = True
         End If
     End Sub
 
@@ -1440,7 +1444,7 @@ Public Class adminhomePage
         Roles.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
-        PrintBtnR.Visible = True
+        'PrintBtnR.Visible = True
     End Sub
 
     'equipment SECTION
@@ -1492,8 +1496,8 @@ Public Class adminhomePage
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "Equipment"
         addEquipmentBtn.Visible = true
-        exportBtnE.Visible = true
-        printBtnE.Visible = true
+        exportBtnE.Visible = True
+        'printBtnE.Visible = true
     End Sub
 
 
@@ -1541,7 +1545,7 @@ Public Class adminhomePage
         EquipmentTitle.Text = "CPUs"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
-        printBtnE.Visible = True
+        'printBtnE.Visible = True
 
     End Sub
 
@@ -1607,7 +1611,7 @@ Public Class adminhomePage
         EquipmentTitle.Text = "IP Phones"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
-        printBtnE.Visible = True
+        'printBtnE.Visible = True
     End Sub
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
@@ -1688,7 +1692,7 @@ Public Class adminhomePage
         EquipmentTitle.Text = "Monitors"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
-        printBtnE.Visible = True
+        'printBtnE.Visible = True
 
     End Sub
 
@@ -1704,7 +1708,7 @@ Public Class adminhomePage
         equipmentsearchpostidlabel.Visible = False
         addEquipmentBtn.Visible = False
         exportBtnE.Visible = False
-        printBtnE.Visible = False
+        'printBtnE.Visible = False
     End Sub
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
@@ -1716,7 +1720,7 @@ Public Class adminhomePage
         equipmentsearchpostidlabel.Visible = True
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
-        printBtnE.Visible = True
+        'printBtnE.Visible = True
 
     End Sub
 
@@ -1792,7 +1796,7 @@ Public Class adminhomePage
                 equipmentsearchpostidlabel.Visible = True
                 addEquipmentBtn.Visible = True
                 exportBtnE.Visible = True
-                printBtnE.Visible = True
+                'printBtnE.Visible = True
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1893,15 +1897,11 @@ Public Class adminhomePage
     'role export
     Private Sub exportBtnR_Click(sender As Object, e As EventArgs) Handles exportBtnR.Click 'Role 
 
-        Try
 
-            User.export(roleDataGridView, "Roles")
+        User.export(roleDataGridView, "Roles")
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
+
             sqlConn.Dispose()
-        End Try
 
         confirmMsgR.Visible = True
         Timer2.Interval = 3000
@@ -1914,16 +1914,10 @@ Public Class adminhomePage
 
     Private Sub exportBtnH_Click(sender As Object, e As EventArgs) Handles exportBtnH.Click  'hall
 
-        Try
-
-            User.export(hallDataGridView, "halls")
 
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
+        User.export(hallDataGridView, "halls")
+        sqlConn.Dispose()
 
         'this will make the message appear for three seconds
         confirmMsgH.Visible = True
@@ -1936,16 +1930,9 @@ Public Class adminhomePage
 
     Private Sub exportBtnu_Click(sender As Object, e As EventArgs) Handles exportBtnU.Click 'user 
 
-        Try
+        User.export(userDataGridView, "users")
 
-            User.export(userDataGridView, "users")
-
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
+        sqlConn.Dispose()
 
         'this will make the message appear for three seconds
         confirmMsgU.Visible = True
@@ -1957,15 +1944,8 @@ Public Class adminhomePage
     'post export
     Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
-        Try
-
-            User.export(postDataGridView, "posts")
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
+        User.export(postDataGridView, "posts")
+        sqlConn.Dispose()
 
         confirmMsgP.Visible = True
         Timer2.Interval = 3000
@@ -2306,7 +2286,7 @@ Public Class adminhomePage
 
     'halls print
 
-    Private Sub printBtnh_Click(sender As Object, e As EventArgs) Handles PrintBtnH.Click
+    Private Sub printBtnh_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = hallDataGridView.Height
@@ -2330,7 +2310,7 @@ Public Class adminhomePage
 
     'roles print
 
-    Private Sub printBtnr_Click(sender As Object, e As EventArgs) Handles PrintBtnR.Click
+    Private Sub printBtnr_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = roleDataGridView.Height
@@ -2354,7 +2334,7 @@ Public Class adminhomePage
 
     'user print 
 
-    Private Sub printBtnu_Click(sender As Object, e As EventArgs) Handles PrintBtnU.Click
+    Private Sub printBtnu_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = userDataGridView.Height
@@ -2378,7 +2358,7 @@ Public Class adminhomePage
 
 
     'post print
-    Private Sub printBtnP_Click(sender As Object, e As EventArgs) Handles printBtnP.Click
+    Private Sub printBtnP_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = postDataGridView.Height
@@ -2400,7 +2380,7 @@ Public Class adminhomePage
     End Sub
 
     'equipment print
-    Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
+    Private Sub printBtnE_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = equipmentDataGridView.Height

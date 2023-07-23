@@ -5,10 +5,7 @@ list of things to do in cems
 -make user table to also display admins and super admins (all types of users)
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead 
 -fix the tab index
--check the add user code(it adds even when the user title is not specified)
--when in the equipment panel the other buttons don't work and the export button is not there 
 -hide pwd and Cpwd text in create user 
--empty other search boxes when searching (unless their value is used for the current search )
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
 -Agrandir!
@@ -17,20 +14,16 @@ list of things to do in cems
 -responsive
 -chose a font type
 -english and french
--remove print for now
--refresh tables
--allow search on state only state 
--remove update search
--review filters 
+-refresh tables (add a refresh button)
 -review datagridview design(cell height)
 -remove post state panel after clicking on add
 -refresh everything after add cancel(search error shouldn't show after adding or cancelling)
 -add change hall for post
 -remove typing on combo boxes
--add default value to post ID in db so that equipments with no posts can be added
 -change the order of state so that post state depends on equipment state
 -add dashboard button
--review equipment datagridview(header style false)
+-add a test to check if the post id already exist and display an error when adding a post 
+
 
 
 

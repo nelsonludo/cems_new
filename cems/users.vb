@@ -4,6 +4,13 @@ Imports cems.adminhomePage
 Imports cems.admin
 Imports cems.UserHomePage
 Imports System.IO
+Imports Microsoft.Office.Interop
+Imports ExcelAutoFormat = Microsoft.Office.Interop.Excel.XlRangeAutoFormat
+Imports Microsoft.Office.Core
+Imports Excel = Microsoft.Office.Interop.Excel
+Imports System.Xml.XPath
+Imports System.Xml
+Imports ClosedXML.Excel
 
 Public Class users
     Protected sqlConn As New MySqlConnection
@@ -25,6 +32,7 @@ Public Class users
            + "password=" + adminhomePage.password + ";" + "database =" + adminhomePage.database
     End Sub
 
+    'the login function
     Public Function login(user_password, user_email, errorMsg, timer)
         connect_db()
         Dim email As String = user_email
@@ -105,6 +113,7 @@ Public Class users
     End Sub
 
 
+    'this is the base function used to display tables 
     Public Sub displayTable(table As String, grid As DataGridView, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
         connect_db()
         Try
@@ -925,6 +934,7 @@ Public Class users
 
     End Sub
 
+    'this is used to update one's personal information
     Public Sub updateUserInformation(table As String, column As String, searchValue As Control, name As Control, email As Control, phone As Control, title As Control)
 
         connect_db()
@@ -952,26 +962,94 @@ Public Class users
         End Try
     End Sub
 
-    Public Sub export(grid As DataGridView, columnName As String)
-        Dim DGVOriginalHeight As Integer = grid.Height
-        grid.Height = (grid.RowCount * grid.RowTemplate.Height) + grid.ColumnHeadersHeight
 
-        Using bitmap As Bitmap = New Bitmap(grid.Width, grid.Height)
-            grid.DrawToBitmap(bitmap, New Rectangle(Point.Empty, grid.Size))
-            Dim DesktopFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-            bitmap.Save(Path.Combine(DesktopFolder, "" & columnName & ".png"), Imaging.ImageFormat.Png)
-        End Using
-
-        grid.Height = DGVOriginalHeight
+    Private Sub releaseObject(ByVal obj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
+            obj = Nothing
+        Catch ex As Exception
+            obj = Nothing
+        Finally
+            GC.Collect()
+        End Try
     End Sub
 
+    Public Sub export(grid As DataGridView, columnName As String)
+        'Dim DGVOriginalHeight As Integer = grid.Height
+        'grid.Height = (grid.RowCount * grid.RowTemplate.Height) + grid.ColumnHeadersHeight
+        'Using bitmap As Bitmap = New Bitmap(grid.Width, grid.Height)
+        '    grid.DrawToBitmap(bitmap, New Rectangle(Point.Empty, grid.Size))
+        '    Dim DesktopFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+        '    bitmap.Save(Path.Combine(DesktopFolder, "" & columnName & ".png"), Imaging.ImageFormat.Png)
+        'End Using
+        'grid.Height = DGVOriginalHeight
+        '
+
+        ' Get your data table
+
+
+        Try
+            Dim xlApp As Excel.Application
+            Dim xlWorkBook As Excel.Workbook
+            Dim xlWorkSheet As Excel.Worksheet
+            Dim misValue As Object = System.Reflection.Missing.Value
+
+
+            xlApp = New Excel.Application
+
+            xlWorkBook = xlApp.Workbooks.Add()
+            xlWorkSheet = xlWorkBook.Sheets(1)
+
+
+            If grid.Rows.Count > 0 AndAlso grid.Columns.Count > 0 Then
+
+                ' Loop through the rows and columns of the data table
+                For i As Integer = 0 To grid.Rows.Count - 2
+                    For j As Integer = 0 To grid.Columns.Count - 1
+                        For k As Integer = 1 To grid.Columns.Count
+                            'test that i and j are greater than the number of rows and columns 
+                            If i >= 0 AndAlso i < grid.Rows.Count AndAlso j >= 0 AndAlso j < grid.Columns.Count Then
+
+
+                                xlWorkSheet.Cells(1, k) = grid.Columns(k - 1).HeaderText
+                                xlWorkSheet.Cells(i + 2, j + 1) = grid.Rows(i).Cells(j).Value.ToString()
+
+                            End If
+                        Next
+                    Next
+                Next
+
+            End If
+
+
+            ' Save the Excel workbook to a file
+            Dim saveFileDialog As New SaveFileDialog()
+            saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx"
+            If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                xlWorkSheet.SaveAs(saveFileDialog.FileName)
+            End If
+
+            ' Release Excel objects from memory
+            xlWorkBook.Close(False)
+            xlApp.Quit()
+
+            releaseObject(xlApp)
+            releaseObject(xlWorkBook)
+            releaseObject(xlWorkSheet)
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+
+
+    End Sub
+
+    'this shows the number of functioning and malfunctioning equipments in the system 
     Public Sub activeCount(countLabel As Label, table As String, column As String, state As String, Cname As String)
-
         Dim count As Integer
-
         connect_db()
-
-
         Try
             sqlConn.Open()
             'count the number of good
@@ -982,7 +1060,6 @@ Public Class users
                 count = sqlReader.Item("count(*)")
 
             End If
-
             sqlConn.Close()
 
             If count < 10 Then
@@ -1003,7 +1080,6 @@ Public Class users
         Finally
             sqlConn.Dispose()
         End Try
-
     End Sub
 
 

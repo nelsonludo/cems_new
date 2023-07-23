@@ -651,15 +651,9 @@ Public Class UserHomePage
     'export buttons 
     Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
-        Try
 
-            User.export(postDataGridView, "posts")
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
+        User.export(postDataGridView, "posts")
+        sqlConn.Dispose()
 
         confirmMsgP.Visible = True
         Timer2.Interval = 3000
@@ -669,16 +663,9 @@ Public Class UserHomePage
 
     Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
 
-        Try
 
-            User.export(equipmentDataGridView, "equipments")
-
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            sqlConn.Dispose()
-        End Try
+        User.export(equipmentDataGridView, "equipments")
+        sqlConn.Dispose()
 
         'this will make the message appear for three seconds
         confirmMsgE.Visible = True
@@ -697,7 +684,7 @@ Public Class UserHomePage
     End Sub
 
 
-    Private Sub printBtnE_Click(sender As Object, e As EventArgs) Handles printBtnE.Click
+    Private Sub printBtnE_Click(sender As Object, e As EventArgs)
 
         Try
             Dim height As Integer = equipmentDataGridView.Height
