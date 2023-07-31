@@ -62,38 +62,11 @@ Public Class adminhomePage
     '        sqlConn.Dispose()
     '    End Try
     'End Sub
-    Public Sub showUserName()
-
-        'Dim userName
-        'Dim userEmail
-        '
-        'getEverything(userName, userEmail)
-        '
-        'aName.Text = userName
-        connect_db()
-        Try
-            sqlConn.Open()
-            'username appear
-            sqlQuery = "select * from cems.cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            If (sqlReader.Read()) Then
-                aName.Text = sqlReader.Item("admin_name")
-
-            End If
-
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-        End Try
-    End Sub
 
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connect_db()
 
-        showUserName()
+        User.showUserName(Form1.emailtxt, aName)
 
         dropdown.Size = dropdown.MinimumSize
 
@@ -493,7 +466,7 @@ Public Class adminhomePage
         stateSearchBoxP.Text = ""
 
         connect_db()
-        User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
     End Sub
 
     'update profile button
@@ -519,8 +492,8 @@ Public Class adminhomePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
 
-        User.updateUser("admin", "admin", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
-        User.updateUserInformation("admin", "admin", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
+        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
 
@@ -532,7 +505,7 @@ Public Class adminhomePage
         Timer2.Interval = 3000
         Timer2.Start()
 
-        showUserName()
+        User.showUserName(Form1.emailtxt, aName)
     End Sub
 
 
@@ -1128,25 +1101,7 @@ Public Class adminhomePage
                 Timer2.Start()
             Else
 
-                If title_id = 1 Or title_id = 3 Then
-                    Try
-                        sqlConn.Open()
-                        sqlQuery = "insert into cems.cems_admin(admin_name, admin_email, admin_phone_number, admin_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
-                        'Read through the response'
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        sqlConn.Close()
-
-
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-                    End Try
-
-                Else
-                    Try
+                Try
                         sqlConn.Open()
                         'Read through the response'
                         sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
@@ -1161,9 +1116,8 @@ Public Class adminhomePage
                     Finally
                         sqlConn.Dispose()
                     End Try
-                End If
-                'this updates the datagridview
-                User.displayTableU("users", userDataGridView, sqlDataTableU)
+                    'this updates the datagridview
+                    User.displayTableU("users", userDataGridView, sqlDataTableU)
 
                 'this changes the content of confirmMsg
                 confirmMsgU.Text = "Item successfully added ✔"
@@ -1276,6 +1230,10 @@ Public Class adminhomePage
 
     'role update buttons
     Private Sub roleUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateValidationBtn.Click 'validate update 
+
+        If titleNameInput.Text = "" Then
+
+        End If
 
         Dim role_id As String = roleDataGridView.SelectedRows(0).Cells(0).Value.ToString
 

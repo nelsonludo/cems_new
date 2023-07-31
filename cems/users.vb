@@ -44,10 +44,22 @@ Public Class users
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
-                UserHomePage.Show()
+
+                If sqlReader.GetInt32(5) = 2 Then
+
+                    UserHomePage.Show()
+                Else
+                    adminhomePage.Show()
+                End If
                 Form1.Visible = False
 
-                Return True
+
+            Else
+                errorMsg.Text = "email or password invalid"
+
+                errorMsg.visible = True
+                timer.Interval = 3000
+                timer.Start()
 
             End If
             sqlConn.Close()
@@ -60,17 +72,17 @@ Public Class users
     End Function
 
     'this is to display the user's name 
-    Public Sub showUserName(email As Control, table As String, column As String, name As Control)
+    Public Sub showUserName(email As Control, name As Control)
 
         connect_db()
         Try
             sqlConn.Open()
             'username appear
-            sqlQuery = "select * from cems.cems_" & table & " where " & column & "_email = '" & email.Text & "'"
+            sqlQuery = "select * from cems.cems_users where user_email = '" & email.Text & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
-                email.Text = sqlReader.Item("" & column & "_name")
+                name.Text = sqlReader.Item("user_name")
 
             End If
 
@@ -414,7 +426,7 @@ Public Class users
     'search without the state 
     Public Sub searchHallPNoState(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
 
-        MsgBox(searchValue)
+        'MsgBox(searchValue)
 
 
         connect_db()

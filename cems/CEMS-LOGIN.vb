@@ -284,7 +284,7 @@ Public Class Form1
 
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_admin(admin_name, admin_email, admin_phone_number, admin_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -355,9 +355,6 @@ Public Class Form1
 
         userLogin = User.login(passwordtxt.Text, emailtxt.Text, forgotPasswordMessage, Timer1)
 
-        If (Not userLogin) Then
-            admin.login(passwordtxt.Text, emailtxt.Text, forgotPasswordMessage, Timer1)
-        End If
     End Sub
 
     Private Sub passwordtxt_TextChanged(sender As Object, e As KeyEventArgs) Handles passwordtxt.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
@@ -379,13 +376,13 @@ Public Class Form1
         Try
             sqlConn.Open()
             'check user info
-            sqlQuery = "select admin_phone_number, admin_email from cems.cems_admin where title_id = '3'"
+            sqlQuery = "select user_phone_number, user_email from cems.cems_users where title_id = '1'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
 
             If (sqlReader.Read()) Then
-                admin_email = sqlReader.Item("admin_email")
-                admin_phone_number = sqlReader.Item("admin_phone_number")
+                admin_email = sqlReader.Item("user_email")
+                admin_phone_number = sqlReader.Item("user_phone_number")
             End If
 
             sqlConn.Close()
@@ -416,21 +413,7 @@ Public Class Form1
     End Sub
     Public Sub longestQuery()
 
-        sqlQuery = "CREATE TABLE `cems_admin` (
-                                  `admin_id` int(11) NOT NULL,
-                                  `admin_name` varchar(100) NOT NULL,
-                                  `admin_phone_number` varchar(9) NOT NULL,
-                                  `admin_password` varchar(12) NOT NULL,
-                                  `title_id` int(11) NOT NULL,
-                                  `admin_email` varchar(50) NOT NULL
-                                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-                            --
-                            -- Dumping data for table `cems_admin`
-                            --
-                            -- --------------------------------------------------------
-
-                            --
+        sqlQuery = "
                             -- Table structure for table `cems_equipments`
                             --
 
@@ -483,7 +466,6 @@ Public Class Form1
                             INSERT INTO `cems_titles` (`title_id`, `title_name`) VALUES
                             (1, 'admin'),
                             (2, 'user'),
-                            (3, 'super Admin');
 
                             -- --------------------------------------------------------
 

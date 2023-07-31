@@ -1,28 +1,28 @@
 list of things to do in cems
--export in an excel file 
--edit admin exports(collect from user exports)
--update exports on the user side
+*CODE TODO
 -make user table to also display admins and super admins (all types of users)
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead 
 -fix the tab index
--hide pwd and Cpwd text in create user 
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
--Agrandir!
--Highlight the tab button
--review admin profile design
--responsive
--chose a font type
 -english and french
 -refresh tables (add a refresh button)
--review datagridview design(cell height)
 -remove post state panel after clicking on add
 -refresh everything after add cancel(search error shouldn't show after adding or cancelling)
 -add change hall for post
 -remove typing on combo boxes
 -change the order of state so that post state depends on equipment state
--add dashboard button
 -add a test to check if the post id already exist and display an error when adding a post 
+-run apache and mysql when the form loads 
+
+*DESIGN TODO
+-add dashboard button
+-review datagridview design(cell height)
+-Agrandir!
+-Highlight the tab button
+-review admin profile design
+-responsive
+-chose a font type
 
 
 
@@ -88,3 +88,7 @@ selections:sameasalterning
 -rowheaderswithsizemode:autosizetoallheaders
 
 -autosizecolumnmode:fill
+
+
+
+552, 395

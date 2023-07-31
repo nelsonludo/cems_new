@@ -43,33 +43,6 @@ Public Class admin
 
     End Sub
 
-    Public Overloads Sub login(user_password, user_email, errorMsg, timer)
-        connect_db()
-        Dim email As String = user_email
-        Dim password As String = user_password
-        Try
-            sqlConn.Open()
-            sqlQuery = "select * from cems.cems_admin where admin_email = '" & email & "' and admin_password = '" & password & "'"
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            If (sqlReader.Read()) Then
-                adminhomePage.Show()
-                Form1.Visible = False
-
-            Else
-                errorMsg.Text = "email or password invalid"
-
-                errorMsg.visible = True
-                timer.Interval = 3000
-                timer.Start()
-            End If
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-        End Try
-    End Sub
 
     Public Sub generalSearchH(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 
         connect_db()

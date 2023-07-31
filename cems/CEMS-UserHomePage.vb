@@ -38,30 +38,11 @@ Public Class UserHomePage
            + "password=" + password + ";" + "database =" + database
     End Sub
 
-    Private Sub showUserName()
-        connect_db()
-        Try
-            sqlConn.Open()
-            'username appear
-            sqlQuery = "select * from cems.cems_users where user_email = '" & Form1.emailtxt.Text & "'"
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-            If (sqlReader.Read()) Then
-                uName.Text = sqlReader.Item("user_name")
 
-            End If
-
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-        End Try
-    End Sub
 
     Private Sub UserHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        showUserName()
+        User.showUserName(Form1.emailtxt, uName)
 
         dropdown.Size = dropdown.MinimumSize
 
@@ -408,7 +389,7 @@ Public Class UserHomePage
         Timer2.Interval = 3000
         Timer2.Start()
 
-        showUserName()
+        User.showUserName(Form1.emailtxt, uName)
     End Sub
 
     'searches section

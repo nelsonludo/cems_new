@@ -187,6 +187,7 @@ Partial Class Form1
         Me.passwordtxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.passwordtxt.Size = New System.Drawing.Size(420, 22)
         Me.passwordtxt.TabIndex = 3
+        Me.passwordtxt.UseSystemPasswordChar = True
         '
         'emailtxt
         '
@@ -327,6 +328,7 @@ Partial Class Form1
         Me.connexionStringPwd.Name = "connexionStringPwd"
         Me.connexionStringPwd.Size = New System.Drawing.Size(420, 22)
         Me.connexionStringPwd.TabIndex = 7
+        Me.connexionStringPwd.UseSystemPasswordChar = True
         '
         'connexionStringUserName
         '
@@ -418,8 +420,10 @@ Partial Class Form1
         Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(60, 406)
         Me.userUserAddConfirmPwdInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
+        Me.userUserAddConfirmPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(420, 22)
         Me.userUserAddConfirmPwdInput.TabIndex = 5
+        Me.userUserAddConfirmPwdInput.UseSystemPasswordChar = True
         '
         'Label2
         '
@@ -438,8 +442,10 @@ Partial Class Form1
         Me.userUserAddPwdInput.Location = New System.Drawing.Point(60, 346)
         Me.userUserAddPwdInput.Margin = New System.Windows.Forms.Padding(4)
         Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
+        Me.userUserAddPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userUserAddPwdInput.Size = New System.Drawing.Size(420, 22)
         Me.userUserAddPwdInput.TabIndex = 4
+        Me.userUserAddPwdInput.UseSystemPasswordChar = True
         '
         'Label14
         '
