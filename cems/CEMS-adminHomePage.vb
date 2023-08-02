@@ -409,19 +409,21 @@ Public Class adminhomePage
         sqlCmd.ExecuteNonQuery()
         sqlConn.Close()
 
-        sqlConn.Open()
 
-        sqlCmd.Connection = sqlConn
-
-        With sqlCmd
-
-            .CommandText = "Update cems.cems_equipments Set equipment_state ='" & postChangeStateInput.Text & "' where post_id = '" & post_id & "'"
-
-            .CommandType = CommandType.Text
-
-        End With
-        sqlCmd.ExecuteNonQuery()
-        sqlConn.Close()
+        'this was to update the equipment state when the post state was changed. It was removed because we are changing the order of update state so that equipment state change changes post state
+        'sqlConn.Open()
+        '
+        'sqlCmd.Connection = sqlConn
+        '
+        'With sqlCmd
+        '
+        '    .CommandText = "Update cems.cems_equipments Set equipment_state ='" & postChangeStateInput.Text & "' where post_id = '" & post_id & "'"
+        '
+        '    .CommandType = CommandType.Text
+        '
+        'End With
+        'sqlCmd.ExecuteNonQuery()
+        'sqlConn.Close()
 
 
         postChangeStatePanel.Visible = False
@@ -1788,6 +1790,7 @@ Public Class adminhomePage
     'update equipment state
     Private Sub stateChangeBtn_Click(sender As Object, e As EventArgs) Handles stateChangeBtn.Click
         Dim equipment_id As Integer = equipmentDataGridView.SelectedRows(0).Cells(0).Value.ToString
+        Dim post_id As Integer = equipmentDataGridView.SelectedRows(0).Cells(3).Value.ToString
 
         connect_db()
 
@@ -1798,6 +1801,21 @@ Public Class adminhomePage
         With sqlCmd
 
             .CommandText = "Update cems.cems_equipments Set equipment_state ='" & equipmentState.Text & "' where equipment_id = '" & equipment_id & "'"
+
+            .CommandType = CommandType.Text
+
+        End With
+        sqlCmd.ExecuteNonQuery()
+        sqlConn.Close()
+
+
+        sqlConn.Open()
+
+        sqlCmd.Connection = sqlConn
+
+        With sqlCmd
+            'possible problem
+            .CommandText = "Update cems.cems_posts Set post_state ='" & equipmentState.Text & "' where post_id = '" & post_id & "'"
 
             .CommandType = CommandType.Text
 

@@ -1,19 +1,16 @@
 list of things to do in cems
 *CODE TODO
--make user table to also display admins and super admins (all types of users)
--reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead 
+-change the order of state so that post state depends on equipment state
+-add a test to check if the post id already exist and display an error when adding a post 
+-run apache and mysql when the form loads
 -fix the tab index
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
--english and french
 -refresh tables (add a refresh button)
 -remove post state panel after clicking on add
 -refresh everything after add cancel(search error shouldn't show after adding or cancelling)
 -add change hall for post
--remove typing on combo boxes
--change the order of state so that post state depends on equipment state
--add a test to check if the post id already exist and display an error when adding a post 
--run apache and mysql when the form loads 
+-reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
 
 *DESIGN TODO
 -add dashboard button
@@ -23,6 +20,8 @@ list of things to do in cems
 -review admin profile design
 -responsive
 -chose a font type
+-english and french
+-remove typing on combo boxes
 
 
 
