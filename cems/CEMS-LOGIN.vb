@@ -26,6 +26,8 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         'this is to start apache server 
         Dim apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
 
@@ -42,7 +44,7 @@ Public Class Form1
         Process.Start(mysqlProcess)
 
 
-        Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+        Dim FILE_PATH As String = "C:\cems"
 
         Dim FILE_NAME As String = "connectionString.txt"
 
@@ -60,9 +62,9 @@ Public Class Form1
         passwordtxt.Text = ""
 
 
-        If System.IO.File.Exists(localPath) = True Then 'FILE_PATH) = True Then
+        If System.IO.File.Exists(localPath) = True Then
 
-            FileOpen(1, localPath, OpenMode.Input) 'FILE_PATH, OpenMode.Input) 
+            FileOpen(1, localPath, OpenMode.Input)
 
             While Not EOF(1)
                 server = wrapper.DecryptData(LineInput(1))
@@ -70,6 +72,7 @@ Public Class Form1
                 password = wrapper.DecryptData(LineInput(1))
                 database = wrapper.DecryptData(LineInput(1))
             End While
+
 
             FileClose(1)
             If server <> "" Or username <> "" Or database <> "" Then
@@ -122,7 +125,7 @@ Public Class Form1
                 Dim pwdEncr As String = wrapper.EncryptData(passwordcb)
                 Dim databaseEncr As String = wrapper.EncryptData(databasecb)
 
-                Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
+                Dim FILE_PATH As String = "C:\cems"
 
                 Dim FILE_NAME As String = "connectionString.txt"
 
@@ -163,7 +166,7 @@ Public Class Form1
                 Try
                     sqlConn.Open()
 
-                    sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_admin'"
+                    sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_users'"
 
 
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -173,66 +176,69 @@ Public Class Form1
                     End While
                     sqlConn.Close()
 
+
+                    If checkTables > 0 Then
+                        connexionStringPanel.Visible = False
+                        userAddPanel.Visible = False
+
+                    Else
+                        'create all tables
+
+                        Try
+                            sqlConn.Open()
+
+                            longestQuery()
+
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+
+                            sqlConn.Close()
+
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Finally
+                            sqlConn.Dispose()
+
+                        End Try
+
+                        'populating the title combobox
+
+                        userUserAddTitleInput.Items.Clear()
+
+
+                        Try
+                            sqlConn.Open()
+
+                            sqlQuery = "select * from  cems.cems_titles"
+
+
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            While (sqlReader.Read())
+                                userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
+
+                            End While
+                            sqlConn.Close()
+
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Finally
+                            sqlConn.Dispose()
+
+                        End Try
+
+                        userAddPanel.Visible = True
+                    End If
+                    connexionStringPanel.Visible = False
+
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "MySql counting all the tables to see if there are any", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Finally
                     sqlConn.Dispose()
 
                 End Try
 
-                If checkTables > 0 Then
-                    connexionStringPanel.Visible = False
-                    userAddPanel.Visible = False
 
-                Else
-                    'create all tables
-
-                    Try
-                        sqlConn.Open()
-
-                        longestQuery()
-
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-
-                        sqlConn.Close()
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-
-                    End Try
-
-                    'populating the title combobox
-
-                    userUserAddTitleInput.Items.Clear()
-
-
-                    Try
-                        sqlConn.Open()
-
-                        sqlQuery = "select * from  cems.cems_titles"
-
-
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        While (sqlReader.Read())
-                            userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
-
-                        End While
-                        sqlConn.Close()
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-
-                    End Try
-
-                    userAddPanel.Visible = True
-                End If
-                connexionStringPanel.Visible = False
             End If
 
 
@@ -299,10 +305,12 @@ Public Class Form1
                 Timer2.Interval = 3000
                 Timer2.Start()
             Else
+                Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
+
 
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
+                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -432,185 +440,179 @@ Public Class Form1
     Public Sub longestQuery()
 
         sqlQuery = "
-                            -- Table structure for table `cems_equipments`
                             --
+-- Database: `cems`
+--
 
-                            CREATE TABLE `cems_equipments` (
-                              `equipment_id` int(11) NOT NULL,
-                              `equipment_type` varchar(100) NOT NULL,
-                              `equipment_state` varchar(100) NOT NULL,
-                              `post_id` int(11) NOT NULL,
-                              `hall_id` int(11) NOT NULL
-                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
 
-                            -- --------------------------------------------------------
+--
+-- Table structure for table `cems_users`
+-- 
 
-                            --
-                            -- Table structure for table `cems_halls`
-                            --
+CREATE TABLE `cems_users` (
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_phone_number` varchar(9) NOT NULL,
+  `user_email` varchar(50) NOT NULL,
+  `user_password` varchar(65) NOT NULL,
+  `title_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-                            CREATE TABLE `cems_halls` (
-                              `hall_id` int(11) NOT NULL,
-                              `hall_name` varchar(100) NOT NULL
-                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Dumping data for table `cems_users`
+--
 
-                            -- --------------------------------------------------------
+INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
+(1, 'admin', '655483496', 'ict@ccousp.cm', 'admin', 1);
 
-                            --
-                            -- Table structure for table `cems_posts`
-                            --
+-- --------------------------------------------------------
 
-                            CREATE TABLE `cems_posts` (
-                              `post_id` int(11) NOT NULL,
-                              `hall_id` int(11) NOT NULL,
-                              `post_state` varchar(100) NOT NULL
-                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Table structure for table `cems_equipments`
+--
 
-                            -- --------------------------------------------------------
+CREATE TABLE `cems_equipments` (
+  `equipment_id` int(11) NOT NULL,
+  `equipment_type` varchar(100) NOT NULL,
+  `equipment_state` varchar(100) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `hall_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-                            --
-                            -- Table structure for table `cems_titles`
-                            --
+-- --------------------------------------------------------
 
-                            CREATE TABLE `cems_titles` (
-                              `title_id` int(11) NOT NULL,
-                              `title_name` varchar(50) NOT NULL
-                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Table structure for table `cems_halls`
+--
 
-                            --
-                            -- Dumping data for table `cems_titles`
-                            --
+CREATE TABLE `cems_halls` (
+  `hall_id` int(11) NOT NULL,
+  `hall_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-                            INSERT INTO `cems_titles` (`title_id`, `title_name`) VALUES
-                            (1, 'admin'),
-                            (2, 'user'),
+-- --------------------------------------------------------
 
-                            -- --------------------------------------------------------
+--
+-- Table structure for table `cems_posts`
+--
 
-                            --
-                            -- Table structure for table `cems_users`
-                            --
+CREATE TABLE `cems_posts` (
+  `post_id` int(11) NOT NULL,
+  `hall_id` int(11) NOT NULL,
+  `post_state` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-                            CREATE TABLE `cems_users` (
-                              `user_id` int(11) NOT NULL,
-                              `user_name` varchar(100) NOT NULL,
-                              `user_phone_number` varchar(9) NOT NULL,
-                              `user_email` varchar(50) NOT NULL,
-                              `user_password` varchar(12) NOT NULL,
-                              `title_id` int(11) NOT NULL
-                            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- --------------------------------------------------------
 
-                            --
-                            -- Dumping data for table `cems_users`
-                            --
-                            --
-                            -- Indexes for dumped tables
-                            --
+--
+-- Table structure for table `cems_titles`
+--
 
-                            --
-                            -- Indexes for table `cems_admin`
-                            --
-                            ALTER TABLE `cems_admin`
-                              ADD PRIMARY KEY (`admin_id`),
-                              ADD KEY `admin_title` (`title_id`);
+CREATE TABLE `cems_titles` (
+  `title_id` int(11) NOT NULL,
+  `title_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-                            --
-                            -- Indexes for table `cems_equipments`
-                            --
-                            ALTER TABLE `cems_equipments`
-                              ADD PRIMARY KEY (`equipment_id`),
-                              ADD KEY `post_id` (`post_id`),
-                              ADD KEY `cems_equipments_ibfk_2` (`hall_id`);
+--
+-- Dumping data for table `cems_titles`
+--
 
-                            --
-                            -- Indexes for table `cems_halls`
-                            --
-                            ALTER TABLE `cems_halls`
-                              ADD PRIMARY KEY (`hall_id`);
+INSERT INTO `cems_titles` (`title_id`, `title_name`) VALUES
+(1, 'admin'),
+(2, 'user');
+-- --------------------------------------------------------
 
-                            --
-                            -- Indexes for table `cems_posts`
-                            --
-                            ALTER TABLE `cems_posts`
-                              ADD PRIMARY KEY (`post_id`),
-                              ADD KEY `hall_id` (`hall_id`);
+--
+-- Indexes for dumped tables
+--
 
-                            --
-                            -- Indexes for table `cems_titles`
-                            --
-                            ALTER TABLE `cems_titles`
-                              ADD PRIMARY KEY (`title_id`);
+--
+-- Indexes for table `cems_equipments`
+--
+ALTER TABLE `cems_equipments`
+  ADD PRIMARY KEY (`equipment_id`),
+  ADD KEY `post_id` (`post_id`),
+  ADD KEY `cems_equipments_ibfk_2` (`hall_id`);
 
-                            --
-                            -- Indexes for table `cems_users`
-                            --
-                            ALTER TABLE `cems_users`
-                              ADD PRIMARY KEY (`user_id`),
-                              ADD KEY `title_id` (`title_id`);
+--
+-- Indexes for table `cems_halls`
+--
+ALTER TABLE `cems_halls`
+  ADD PRIMARY KEY (`hall_id`);
 
-                            --
-                            -- AUTO_INCREMENT for dumped tables
-                            --
+--
+-- Indexes for table `cems_posts`
+--
+ALTER TABLE `cems_posts`
+  ADD PRIMARY KEY (`post_id`),
+  ADD KEY `hall_id` (`hall_id`);
 
-                            --
-                            -- AUTO_INCREMENT for table `cems_admin`
-                            --
-                            ALTER TABLE `cems_admin`
-                              MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Indexes for table `cems_titles`
+--
+ALTER TABLE `cems_titles`
+  ADD PRIMARY KEY (`title_id`);
 
-                            --
-                            -- AUTO_INCREMENT for table `cems_equipments`
-                            --
-                            ALTER TABLE `cems_equipments`
-                              MODIFY `equipment_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Indexes for table `cems_users`
+--
+ALTER TABLE `cems_users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD KEY `title_id` (`title_id`);
 
-                            --
-                            -- AUTO_INCREMENT for table `cems_halls`
-                            --
-                            ALTER TABLE `cems_halls`
-                              MODIFY `hall_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for dumped tables
+--
 
-                            --
-                            -- AUTO_INCREMENT for table `cems_titles`
-                            --
-                            ALTER TABLE `cems_titles`
-                              MODIFY `title_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `cems_equipments`
+--
+ALTER TABLE `cems_equipments`
+  MODIFY `equipment_id` int(11) NOT NULL AUTO_INCREMENT;
 
-                            --
-                            -- AUTO_INCREMENT for table `cems_users`
-                            --
-                            ALTER TABLE `cems_users`
-                              MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `cems_halls`
+--
+ALTER TABLE `cems_halls`
+  MODIFY `hall_id` int(11) NOT NULL AUTO_INCREMENT;
 
-                            --
-                            -- Constraints for dumped tables
-                            --
+--
+-- AUTO_INCREMENT for table `cems_titles`
+--
+ALTER TABLE `cems_titles`
+  MODIFY `title_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
-                            --
-                            -- Constraints for table `cems_admin`
-                            --
-                            ALTER TABLE `cems_admin`
-                              ADD CONSTRAINT `cems_admin_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`);
+--
+-- AUTO_INCREMENT for table `cems_users`
+--
+ALTER TABLE `cems_users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
-                            --
-                            -- Constraints for table `cems_equipments`
-                            --
-                            ALTER TABLE `cems_equipments`
-                              ADD CONSTRAINT `cems_equipments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `cems_posts` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-                              ADD CONSTRAINT `cems_equipments_ibfk_2` FOREIGN KEY (`hall_id`) REFERENCES `cems_halls` (`hall_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+-- Constraints for dumped tables
+--
 
-                            --
-                            -- Constraints for table `cems_posts`
-                            --
-                            ALTER TABLE `cems_posts`
-                              ADD CONSTRAINT `cems_posts_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `cems_halls` (`hall_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+-- Constraints for table `cems_equipments`
+--
+ALTER TABLE `cems_equipments`
+  ADD CONSTRAINT `cems_equipments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `cems_posts` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cems_equipments_ibfk_2` FOREIGN KEY (`hall_id`) REFERENCES `cems_halls` (`hall_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-                            --
-                            -- Constraints for table `cems_users`
-                            --
-                            ALTER TABLE `cems_users`
-                              ADD CONSTRAINT `cems_users_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-                            COMMIT;
+--
+-- Constraints for table `cems_posts`
+--
+ALTER TABLE `cems_posts`
+  ADD CONSTRAINT `cems_posts_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `cems_halls` (`hall_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `cems_users`
+--
+ALTER TABLE `cems_users`
+  ADD CONSTRAINT `cems_users_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
                             "
     End Sub
 

@@ -3,6 +3,9 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Imports Microsoft.Win32
 Imports cems.users
 Imports cems.admin
+Imports Org.BouncyCastle.Crypto.Generators
+Imports BCrypt.Net.BCrypt
+
 Public Class adminhomePage
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -370,7 +373,7 @@ Public Class adminhomePage
         postDataGridView.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
-        addPostBtn.Visible = true
+        addPostBtn.Visible = True
         exportBtnP.Visible = True
         'printBtnP.Visible = true
     End Sub
@@ -997,7 +1000,7 @@ Public Class adminhomePage
         userAddBtn.Visible = False
         exportBtnU.Visible = False
         'PrintBtnU.Visible = False
-        searchuserlabel.visible = False
+        searchuserlabel.Visible = False
         userDataGridView.Visible = False
 
     End Sub
@@ -1103,23 +1106,25 @@ Public Class adminhomePage
                 Timer2.Start()
             Else
 
+                Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
+
+
                 Try
-                        sqlConn.Open()
-                        'Read through the response'
-                        sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & userUserAddConfirmPwdInput.Text & "','" & title_id & "')"
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        sqlConn.Close()
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
 
 
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-                    End Try
-                    'this updates the datagridview
-                    User.displayTableU("users", userDataGridView, sqlDataTableU)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+                'this updates the datagridview
+                User.displayTableU("users", userDataGridView, sqlDataTableU)
 
                 'this changes the content of confirmMsg
                 confirmMsgU.Text = "Item successfully added ✔"
@@ -1455,7 +1460,7 @@ Public Class adminhomePage
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
         EquipmentTitle.Text = "Equipment"
-        addEquipmentBtn.Visible = true
+        addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
         'printBtnE.Visible = true
     End Sub
@@ -1877,7 +1882,7 @@ Public Class adminhomePage
         User.export(roleDataGridView, "Roles")
 
 
-            sqlConn.Dispose()
+        sqlConn.Dispose()
 
         confirmMsgR.Visible = True
         Timer2.Interval = 3000

@@ -1,8 +1,6 @@
 list of things to do in cems
 *CODE TODO
--change the order of state so that post state depends on equipment state
 -add a test to check if the post id already exist and display an error when adding a post 
--run apache and mysql when the form loads
 -fix the tab index
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
@@ -11,6 +9,7 @@ list of things to do in cems
 -refresh everything after add cancel(search error shouldn't show after adding or cancelling)
 -add change hall for post
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
+-make sure that if the an admin tries to delete himself an error prompt appears explaining that he cant do that 
 
 *DESIGN TODO
 -add dashboard button
@@ -24,6 +23,33 @@ list of things to do in cems
 -remove typing on combo boxes
 
 
+
+To use the BCrypt.Net library in your VB application, you will need to install the library package via NuGet and then import the BCrypt.Net.BCrypt namespace in your code.
+
+Here are the steps to install the BCrypt.Net package in your VB project:
+
+Open your VB project in Visual Studio.
+Right-click on your project in the Solution Explorer and select "Manage NuGet Packages".
+In the "NuGet Package Manager" window, search for "BCrypt.Net" and select the package from the search results.
+Click on the "Install" button to install the package and its dependencies.
+Once the package is installed, you can import the BCrypt.Net.BCrypt namespace in your code and use its hash and verify methods, like this:
+
+vbnet
+Copy
+Imports BCrypt.Net
+
+' ...
+
+Dim password As String = "password123"
+Dim hashedPassword As String = BCrypt.HashPassword(password)
+
+Dim enteredPassword As String = "password123"
+If BCrypt.Verify(enteredPassword, hashedPassword) Then
+    ' Passwords match, login is successful
+Else
+    ' Passwords do not match, login is rejected
+End If
+In this code, the BCrypt.Net library is used to hash and verify the user's password using the bcrypt algorithm. The HashPassword() method is used to hash the password, and the Verify() method is used to compare the entered password with the stored hash.
 
 
 Important styles

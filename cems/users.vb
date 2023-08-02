@@ -11,6 +11,8 @@ Imports Excel = Microsoft.Office.Interop.Excel
 Imports System.Xml.XPath
 Imports System.Xml
 Imports ClosedXML.Excel
+Imports Org.BouncyCastle.Crypto.Generators
+Imports BCrypt.Net.BCrypt
 
 Public Class users
     Protected sqlConn As New MySqlConnection
@@ -35,27 +37,48 @@ Public Class users
     'the login function
     Public Function login(user_password, user_email, errorMsg, timer)
         connect_db()
-        Dim email As String = user_email
-        Dim password As String = user_password
         Try
+
+
             sqlConn.Open()
             'check user info
-            sqlQuery = "select * from cems.cems_users where user_email = '" & email & "' and user_password = '" & password & "'"
+            sqlQuery = "select * from cems.cems_users where user_email = '" & user_email & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
+
+
+
+            'now compare the row's password with the user input 
+
+
             If (sqlReader.Read()) Then
+                'then store the password in that row into the hashedPassword variable
+                Dim hashedPassword = sqlReader.GetString(4)
 
-                If sqlReader.GetInt32(5) = 2 Then
+                If BCrypt.Net.BCrypt.Verify(user_password, hashedPassword) Then
+                    ' Passwords match, login is successful
+                    If sqlReader.GetInt32(5) = 2 Then
 
-                    UserHomePage.Show()
+                        UserHomePage.Show()
+                    Else
+                        adminhomePage.Show()
+                    End If
+                    Form1.Visible = False
+
+
                 Else
-                    adminhomePage.Show()
+                    errorMsg.Text = "email or password invalid"
+
+                    errorMsg.visible = True
+                    timer.Interval = 3000
+                    timer.Start()
+
                 End If
-                Form1.Visible = False
+
 
 
             Else
-                errorMsg.Text = "email or password invalid"
+                errorMsg.Text = "there is a problem with the database and it's tables"
 
                 errorMsg.visible = True
                 timer.Interval = 3000
@@ -64,7 +87,7 @@ Public Class users
             End If
             sqlConn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message, "MySql login", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             sqlConn.Dispose()
         End Try
@@ -627,6 +650,7 @@ Public Class users
 
         Try
 
+            Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(pwd)
 
             If name = "" And email = "" And phone = "" And pwd = "" Then
                 errorMsg.Visible = True
@@ -707,7 +731,8 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -727,7 +752,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -746,7 +771,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -765,7 +790,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -842,7 +867,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -863,7 +888,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -883,7 +908,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & pwd & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -921,7 +946,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & pwd & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 

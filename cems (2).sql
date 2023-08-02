@@ -24,24 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cems_admin`
---
+-- Table structure for table `cems_users`
+-- 
 
-CREATE TABLE `cems_admin` (
-  `admin_id` int(11) NOT NULL,
-  `admin_name` varchar(100) NOT NULL,
-  `admin_phone_number` varchar(9) NOT NULL,
-  `admin_password` varchar(12) NOT NULL,
-  `title_id` int(11) NOT NULL,
-  `admin_email` varchar(50) NOT NULL
+CREATE TABLE `cems_users` (
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_phone_number` varchar(9) NOT NULL,
+  `user_email` varchar(50) NOT NULL,
+  `user_password` varchar(12) NOT NULL,
+  `title_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cems_admin`
+-- Dumping data for table `cems_users`
 --
 
-INSERT INTO `cems_admin` (`admin_id`, `admin_name`, `admin_phone_number`, `admin_password`, `title_id`, `admin_email`) VALUES
-(1, 'Maidey', '678956325', 'admin', 1, 'ict@ccousp.cm');
+INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
+(1, 'admin', '655483496', 'ict@ccousp.cm', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -97,41 +97,12 @@ CREATE TABLE `cems_titles` (
 
 INSERT INTO `cems_titles` (`title_id`, `title_name`) VALUES
 (1, 'admin'),
-(2, 'user'),
-(3, 'super Admin');
-
+(2, 'user');
 -- --------------------------------------------------------
-
---
--- Table structure for table `cems_users`
---
-
-CREATE TABLE `cems_users` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(100) NOT NULL,
-  `user_phone_number` varchar(9) NOT NULL,
-  `user_email` varchar(50) NOT NULL,
-  `user_password` varchar(12) NOT NULL,
-  `title_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cems_users`
---
-
-INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
-(1, 'babeni', '655483496', 'babeni', '1234', 2);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `cems_admin`
---
-ALTER TABLE `cems_admin`
-  ADD PRIMARY KEY (`admin_id`),
-  ADD KEY `admin_title` (`title_id`);
 
 --
 -- Indexes for table `cems_equipments`
@@ -172,12 +143,6 @@ ALTER TABLE `cems_users`
 --
 
 --
--- AUTO_INCREMENT for table `cems_admin`
---
-ALTER TABLE `cems_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `cems_equipments`
 --
 ALTER TABLE `cems_equipments`
@@ -204,12 +169,6 @@ ALTER TABLE `cems_users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `cems_admin`
---
-ALTER TABLE `cems_admin`
-  ADD CONSTRAINT `cems_admin_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`);
 
 --
 -- Constraints for table `cems_equipments`
