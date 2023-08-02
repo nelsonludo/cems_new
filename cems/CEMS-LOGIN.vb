@@ -4,6 +4,8 @@ Imports Microsoft.Win32
 Imports cems.users
 Imports cems.admin
 Imports cems.Simple3Des
+Imports System.Diagnostics
+Imports System.Runtime.CompilerServices
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -24,6 +26,22 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'this is to start apache server 
+        Dim apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
+
+        'this is avoid that command line, which appears when the httpd.exe is run (just as in xampp)
+        apacheProcess.CreateNoWindow = True
+        apacheProcess.UseShellExecute = False
+
+        Process.Start(apacheProcess)
+
+        ' Start mysql
+        Dim mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
+        mysqlProcess.CreateNoWindow = True
+        mysqlProcess.UseShellExecute = False
+        Process.Start(mysqlProcess)
+
+
         Dim FILE_PATH As String = "C:\Users\ludon\OneDrive\Documents\connectionString.txt"
 
         Dim FILE_NAME As String = "connectionString.txt"
