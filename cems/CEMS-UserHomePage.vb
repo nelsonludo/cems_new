@@ -696,4 +696,23 @@ Public Class UserHomePage
     End Sub
 
 
+    'close all the servers when the app is closed
+    Private Sub userHomePage_close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        ' Stop Apache
+        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+        For Each apacheProcess As Process In apacheProcesses
+            If Not apacheProcess.CloseMainWindow() Then
+                apacheProcess.Kill()
+            End If
+        Next
+
+        ' Stop MySQL
+        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+        For Each mysqlProcess As Process In mysqlProcesses
+            If Not mysqlProcess.CloseMainWindow() Then
+                mysqlProcess.Kill()
+            End If
+        Next
+
+    End Sub
 End Class

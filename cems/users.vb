@@ -37,8 +37,8 @@ Public Class users
     'the login function
     Public Function login(user_password, user_email, errorMsg, timer)
         connect_db()
-        Try
 
+        Try
 
             sqlConn.Open()
             'check user info

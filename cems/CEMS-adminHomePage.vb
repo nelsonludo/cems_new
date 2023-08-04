@@ -297,64 +297,87 @@ Public Class adminhomePage
                 sqlConn.Close()
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql get all halls ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
                 sqlConn.Dispose()
 
             End Try
+
 
             Try
                 sqlConn.Open()
-                sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
+                sqlQuery = "select * from cems_posts where post_id = '" & postPostIdInput.Text & "'"
                 'Read through the response'
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
+
+                If (sqlReader.Read()) Then
+                    addPostErrorMsg.Text = "post already exist try another one"
+                Else
+
+                    Try
+                        sqlConn.Open()
+                        sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
+                        'Read through the response'
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        sqlConn.Close()
+
+                        Dim post_id As String = postPostIdInput.Text
+
+                        sqlConn.Open()
+                        sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
+                        'Read through the response'
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        sqlConn.Close()
+
+
+                        'this updates the datagridview
+                        User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+                        'this changes the content of confirmMsg
+                        confirmMsgP.Text = "Item successfully added ✔"
+
+                        'this makes the confirm message appear for 3secs
+                        confirmMsgP.Visible = True
+                        Timer2.Interval = 3000
+                        Timer2.Start()
+
+
+                        'this makes the add panel to disappear
+                        postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
+                        addPostPanel.Visible = False
+
+                        'empty the fields after validation
+                        postStateInput.Text = ""
+                        postHallInput.Text = ""
+
+                        postTitle.Text = "Posts"
+                        postDataGridView.Visible = True
+                        postSearchBox.Visible = True
+                        postsearchlabel.Visible = True
+                        addPostBtn.Visible = True
+                        exportBtnP.Visible = True
+                        'printBtnP.Visible = True
+
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "MySql add post ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Finally
+                        sqlConn.Dispose()
+                    End Try
+
+                End If
                 sqlConn.Close()
-
-                Dim post_id As String = postPostIdInput.Text
-
-                sqlConn.Open()
-                sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
-                'Read through the response'
-                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                sqlReader = sqlCmd.ExecuteReader
-                sqlConn.Close()
-
-
-                'this updates the datagridview
-                User.displayTableP("posts", postDataGridView, sqlDataTableP)
-
-                'this changes the content of confirmMsg
-                confirmMsgP.Text = "Item successfully added ✔"
-
-                'this makes the confirm message appear for 3secs
-                confirmMsgP.Visible = True
-                Timer2.Interval = 3000
-                Timer2.Start()
-
-
-                'this makes the add panel to disappear
-                postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
-                addPostPanel.Visible = False
-
-                'empty the fields after validation
-                postStateInput.Text = ""
-                postHallInput.Text = ""
-
-                postTitle.Text = "Posts"
-                postDataGridView.Visible = True
-                postSearchBox.Visible = True
-                postsearchlabel.Visible = True
-                addPostBtn.Visible = True
-                exportBtnP.Visible = True
-                'printBtnP.Visible = True
-
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql get post and test it", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Finally
                 sqlConn.Dispose()
             End Try
+
 
         End If
 
@@ -2419,4 +2442,23 @@ Public Class adminhomePage
 
     'styles
 
+    'close all the servers when the app is closed
+    Private Sub adminHomePage_close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        ' Stop Apache
+        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+        For Each apacheProcess As Process In apacheProcesses
+            If Not apacheProcess.CloseMainWindow() Then
+                apacheProcess.Kill()
+            End If
+        Next
+
+        ' Stop MySQL
+        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+        For Each mysqlProcess As Process In mysqlProcesses
+            If Not mysqlProcess.CloseMainWindow() Then
+                mysqlProcess.Kill()
+            End If
+        Next
+
+    End Sub
 End Class

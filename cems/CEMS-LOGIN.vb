@@ -23,13 +23,16 @@ Public Class Form1
     Dim User As New users
     Dim admin As New admin
 
+    Public apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
+
+    Public mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
+
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
         'this is to start apache server 
-        Dim apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
 
         'this is avoid that command line, which appears when the httpd.exe is run (just as in xampp)
         apacheProcess.CreateNoWindow = True
@@ -38,7 +41,6 @@ Public Class Form1
         Process.Start(apacheProcess)
 
         ' Start mysql
-        Dim mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
         mysqlProcess.CreateNoWindow = True
         mysqlProcess.UseShellExecute = False
         Process.Start(mysqlProcess)
@@ -332,7 +334,7 @@ Public Class Form1
                     userAddPanel.Visible = False
 
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "MySql create first user", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Finally
                     sqlConn.Dispose()
                 End Try
@@ -614,6 +616,26 @@ ALTER TABLE `cems_users`
 COMMIT;
 
                             "
+    End Sub
+
+    'close all servers when closing the app
+    Private Sub Form1_close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        ' Stop Apache
+        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+        For Each apacheProcess As Process In apacheProcesses
+            If Not apacheProcess.CloseMainWindow() Then
+                apacheProcess.Kill()
+            End If
+        Next
+
+        ' Stop MySQL
+        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+        For Each mysqlProcess As Process In mysqlProcesses
+            If Not mysqlProcess.CloseMainWindow() Then
+                mysqlProcess.Kill()
+            End If
+        Next
+
     End Sub
 
 End Class
