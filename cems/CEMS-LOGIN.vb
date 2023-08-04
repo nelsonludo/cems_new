@@ -493,6 +493,10 @@ CREATE TABLE `cems_halls` (
   `hall_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+INSERT INTO `cems_halls` (`hall_id`, `hall_name`) VALUES
+(1, 'Hall 1');
+
 -- --------------------------------------------------------
 
 --

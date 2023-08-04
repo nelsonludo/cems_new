@@ -271,11 +271,13 @@ Public Class adminhomePage
     Private Sub addPostValidationBtn_Click(sender As Object, e As EventArgs) Handles addPostValidationBtn.Click
         connect_db()
 
-        If postStateInput.Text = "" Or postHallInput.Text = "" Then
+        If postStateInput.Text = "" And postHallInput.Text = "" Then
             addPostErrorMsg.Text = "please fill all the fields !"
             addPostErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
+
+
 
         Else
             Dim hall_id As Integer
@@ -313,63 +315,125 @@ Public Class adminhomePage
 
                 If (sqlReader.Read()) Then
                     addPostErrorMsg.Text = "post already exist try another one"
+                    addPostErrorMsg.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+                    sqlConn.Close()
                 Else
 
-                    Try
-                        sqlConn.Open()
-                        sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
-                        'Read through the response'
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        sqlConn.Close()
+                    If postHallInput.Text = "" Then
+                        Try
+                            sqlConn.Close()
+                            sqlConn.Open()
+                            sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "',1,'" & postStateInput.Text & "')"
+                            'Read through the response'
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            sqlConn.Close()
 
-                        Dim post_id As String = postPostIdInput.Text
+                            Dim post_id As String = postPostIdInput.Text
 
-                        sqlConn.Open()
-                        sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
-                        'Read through the response'
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        sqlConn.Close()
-
-
-                        'this updates the datagridview
-                        User.displayTableP("posts", postDataGridView, sqlDataTableP)
-
-                        'this changes the content of confirmMsg
-                        confirmMsgP.Text = "Item successfully added ✔"
-
-                        'this makes the confirm message appear for 3secs
-                        confirmMsgP.Visible = True
-                        Timer2.Interval = 3000
-                        Timer2.Start()
+                            sqlConn.Open()
+                            sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "',1);insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "',1);insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "',1)"
+                            'Read through the response'
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            sqlConn.Close()
 
 
-                        'this makes the add panel to disappear
-                        postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
-                        addPostPanel.Visible = False
+                            'this updates the datagridview
+                            User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
-                        'empty the fields after validation
-                        postStateInput.Text = ""
-                        postHallInput.Text = ""
+                            'this changes the content of confirmMsg
+                            confirmMsgP.Text = "Item successfully added ✔"
 
-                        postTitle.Text = "Posts"
-                        postDataGridView.Visible = True
-                        postSearchBox.Visible = True
-                        postsearchlabel.Visible = True
-                        addPostBtn.Visible = True
-                        exportBtnP.Visible = True
-                        'printBtnP.Visible = True
+                            'this makes the confirm message appear for 3secs
+                            confirmMsgP.Visible = True
+                            Timer2.Interval = 3000
+                            Timer2.Start()
 
 
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql add post ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-                    End Try
+                            'this makes the add panel to disappear
+                            postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
+                            addPostPanel.Visible = False
+
+                            'empty the fields after validation
+                            postStateInput.Text = ""
+                            postHallInput.Text = ""
+
+                            postTitle.Text = "Posts"
+                            postDataGridView.Visible = True
+                            postSearchBox.Visible = True
+                            postsearchlabel.Visible = True
+                            addPostBtn.Visible = True
+                            exportBtnP.Visible = True
+                            'printBtnP.Visible = True
+
+
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "MySql add post ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Finally
+                            sqlConn.Dispose()
+                        End Try
+                    Else
+                        Try
+                            sqlConn.Close()
+                            sqlConn.Open()
+                            sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
+                            'Read through the response'
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            sqlConn.Close()
+
+                            Dim post_id As String = postPostIdInput.Text
+
+                            sqlConn.Open()
+                            sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
+                            'Read through the response'
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            sqlConn.Close()
+
+
+                            'this updates the datagridview
+                            User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+                            'this changes the content of confirmMsg
+                            confirmMsgP.Text = "Item successfully added ✔"
+
+                            'this makes the confirm message appear for 3secs
+                            confirmMsgP.Visible = True
+                            Timer2.Interval = 3000
+                            Timer2.Start()
+
+
+                            'this makes the add panel to disappear
+                            postChangeStatePanel.Visible = False  'play it safe and make both panels visible false 
+                            addPostPanel.Visible = False
+
+                            'empty the fields after validation
+                            postStateInput.Text = ""
+                            postHallInput.Text = ""
+
+                            postTitle.Text = "Posts"
+                            postDataGridView.Visible = True
+                            postSearchBox.Visible = True
+                            postsearchlabel.Visible = True
+                            addPostBtn.Visible = True
+                            exportBtnP.Visible = True
+                            'printBtnP.Visible = True
+
+
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "MySql add post ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Finally
+                            sqlConn.Dispose()
+                        End Try
+
+                    End If
 
                 End If
-                sqlConn.Close()
+                    sqlConn.Close()
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql get post and test it", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1129,59 +1193,82 @@ Public Class adminhomePage
                 Timer2.Start()
             Else
 
-                Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
-
-
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
+                    sqlQuery = "select * from cems_users where user_email = '" & userUserAddEmailInput.Text & "'"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
-                    sqlConn.Close()
+
+                    If (sqlReader.Read()) Then
+                        addUserErrorMsg.Visible = True
+                        addUserErrorMsg.Text = "This user already exists !"
+                        Timer2.Interval = 3000
+                        Timer2.Start()
+                        sqlConn.Close()
+                    Else
+
+                        Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
+                        Try
+                            sqlConn.Close()
+                            sqlConn.Open()
+                            sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
+                            'Read through the response'
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            sqlConn.Close()
 
 
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Finally
+                            sqlConn.Dispose()
+                        End Try
+                        'this updates the datagridview
+                        User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+                        'this changes the content of confirmMsg
+                        confirmMsgU.Text = "Item successfully added ✔"
+
+                        'this makes the confirm message appear for 3secs
+                        confirmMsgU.Visible = True
+                        Timer2.Interval = 3000
+                        Timer2.Start()
+
+
+                        'this makes the add panel to disappear
+                        userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
+                        userAddPanel.Visible = False
+
+                        Label10.Text = "Users"
+
+                        userDataGridView.Visible = True
+                        userUpdateBtn.Visible = True
+                        userAddBtn.Visible = True
+                        exportBtnU.Visible = True
+                        'PrintBtnU.Visible = True
+                        searchuserlabel.Visible = True
+
+                        userUpdateBtn.Visible = False
+                        userDeleteBtn.Visible = False
+
+
+                        'empty the fields after validation
+                        userUserAddNameInput.Text = ""
+                        userUserAddEmailInput.Text = ""
+                        userUserAddPhoneInput.Text = ""
+                        userUserAddPwdInput.Text = ""
+                        userUserAddConfirmPwdInput.Text = ""
+                        userUserAddTitleInput.Text = ""
+
+                    End If
                 Catch ex As Exception
                     MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Finally
-                    sqlConn.Dispose()
                 End Try
-                'this updates the datagridview
-                User.displayTableU("users", userDataGridView, sqlDataTableU)
-
-                'this changes the content of confirmMsg
-                confirmMsgU.Text = "Item successfully added ✔"
-
-                'this makes the confirm message appear for 3secs
-                confirmMsgU.Visible = True
-                Timer2.Interval = 3000
-                Timer2.Start()
 
 
-                'this makes the add panel to disappear
-                userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
-                userAddPanel.Visible = False
-
-                Label10.Text = "Users"
-
-                userDataGridView.Visible = True
-                userUpdateBtn.Visible = True
-                userAddBtn.Visible = True
-                exportBtnU.Visible = True
-                'PrintBtnU.Visible = True
-                searchuserlabel.Visible = True
-
-                userUpdateBtn.Visible = False
-                userDeleteBtn.Visible = False
 
 
-                'empty the fields after validation
-                userUserAddNameInput.Text = ""
-                userUserAddEmailInput.Text = ""
-                userUserAddPhoneInput.Text = ""
-                userUserAddPwdInput.Text = ""
-                userUserAddConfirmPwdInput.Text = ""
-                userUserAddTitleInput.Text = ""
             End If
 
         End If
@@ -1715,7 +1802,7 @@ Public Class adminhomePage
     Private Sub addEquipmentValidationBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentValidationBtn.Click
         connect_db()
 
-        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = "" Or hallInput.Text = "" Then
+        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = "" And hallInput.Text = "" Then
             addEquipmentErrorMsg.Text = "please fill all the fields !"
             addEquipmentErrorMsg.Visible = True
             Timer2.Interval = 3000
@@ -1747,50 +1834,99 @@ Public Class adminhomePage
 
             End Try
 
-            Try
-                sqlConn.Open()
-                sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "','" & hall_id & "')"
-                'Read through the response'
-                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                sqlReader = sqlCmd.ExecuteReader
-                sqlConn.Close()
+            If hallInput.Text = "" Then
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "',1)"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
 
-                'this updates the datagridview
-                'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
+                    'this updates the datagridview
+                    'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
 
-                'this changes the content of confirmMsg
-                'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
+                    'this changes the content of confirmMsg
+                    'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
 
-                'this makes the confirm message appear for 3secs
-                'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
-                Timer2.Interval = 3000
-                Timer2.Start()
-
-
-                'this makes the add panel to disappear
-                'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
-                addEquipmentPanel.Visible = False
-
-                equipmentTypeInput.Text = ""
-                equipmentStateInput.Text = ""
-                hallInput.Text = ""
-
-                fillHalls(hallSearchBoxE)
+                    'this makes the confirm message appear for 3secs
+                    'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
 
 
-                EquipmentTitle.Text = "Equipment"
-                equipmentDataGridView.Visible = True
-                equipmentSearchBox.Visible = True
-                equipmentsearchpostidlabel.Visible = True
-                addEquipmentBtn.Visible = True
-                exportBtnE.Visible = True
-                'printBtnE.Visible = True
+                    'this makes the add panel to disappear
+                    'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
+                    addEquipmentPanel.Visible = False
 
-            Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Finally
-                sqlConn.Dispose()
-            End Try
+                    equipmentTypeInput.Text = ""
+                    equipmentStateInput.Text = ""
+                    hallInput.Text = ""
+
+                    fillHalls(hallSearchBoxE)
+
+
+                    EquipmentTitle.Text = "Equipment"
+                    equipmentDataGridView.Visible = True
+                    equipmentSearchBox.Visible = True
+                    equipmentsearchpostidlabel.Visible = True
+                    addEquipmentBtn.Visible = True
+                    exportBtnE.Visible = True
+                    'printBtnE.Visible = True
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+            Else
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "','" & hall_id & "')"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
+
+                    'this updates the datagridview
+                    'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
+
+                    'this changes the content of confirmMsg
+                    'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
+
+                    'this makes the confirm message appear for 3secs
+                    'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the add panel to disappear
+                    'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
+                    addEquipmentPanel.Visible = False
+
+                    equipmentTypeInput.Text = ""
+                    equipmentStateInput.Text = ""
+                    hallInput.Text = ""
+
+                    fillHalls(hallSearchBoxE)
+
+
+                    EquipmentTitle.Text = "Equipment"
+                    equipmentDataGridView.Visible = True
+                    equipmentSearchBox.Visible = True
+                    equipmentsearchpostidlabel.Visible = True
+                    addEquipmentBtn.Visible = True
+                    exportBtnE.Visible = True
+                    'printBtnE.Visible = True
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+            End If
+
+
         End If
     End Sub
 
