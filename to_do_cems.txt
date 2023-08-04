@@ -1,12 +1,8 @@
 list of things to do in cems
 *CODE TODO
--add a test to check if the post id already exist and display an error when adding a post 
 -fix the tab index
--check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 -if update field is empty, error message(the field should not be empty)
 -refresh tables (add a refresh button)
--remove post state panel after clicking on add
--refresh everything after add cancel(search error shouldn't show after adding or cancelling)
 -add change hall for post
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
 -make sure that if the an admin tries to delete himself an error prompt appears explaining that he cant do that 
@@ -21,6 +17,7 @@ list of things to do in cems
 -chose a font type
 -english and french
 -remove typing on combo boxes
+-check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 
 
 

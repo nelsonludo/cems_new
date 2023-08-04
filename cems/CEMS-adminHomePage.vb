@@ -264,6 +264,9 @@ Public Class adminhomePage
         postsearchlabel.Visible = False
         addPostBtn.Visible = False
         exportBtnP.Visible = False
+        postChangeStatePanel.Visible = False
+        searchErrorP.Visible = False
+
         'printBtnP.Visible = False
     End Sub
 
@@ -462,6 +465,11 @@ Public Class adminhomePage
         postsearchlabel.Visible = True
         addPostBtn.Visible = True
         exportBtnP.Visible = True
+
+
+        'this updates the datagridview
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
+        searchErrorP.Visible = False
         'printBtnP.Visible = true
     End Sub
 
@@ -1298,6 +1306,9 @@ Public Class adminhomePage
         exportBtnU.Visible = True
         'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
+        searchErrorU.Visible = False
+
 
 
     End Sub
@@ -1795,6 +1806,8 @@ Public Class adminhomePage
         equipmentsearchpostidlabel.Visible = True
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+        searchErrorE.Visible = False
         'printBtnE.Visible = True
 
     End Sub
@@ -1844,19 +1857,19 @@ Public Class adminhomePage
                     sqlConn.Close()
 
                     'this updates the datagridview
-                    'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
+                    User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
+                    confirmMsgE.Text = "Item successfully added ✔"
 
                     'this makes the confirm message appear for 3secs
-                    'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
+                    confirmMsgE.Visible = True
                     Timer2.Interval = 3000
                     Timer2.Start()
 
 
                     'this makes the add panel to disappear
-                    'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
+                    statePanel.Visible = False  'play it safe and make both panels visible false 
                     addEquipmentPanel.Visible = False
 
                     equipmentTypeInput.Text = ""
@@ -1889,19 +1902,19 @@ Public Class adminhomePage
                     sqlConn.Close()
 
                     'this updates the datagridview
-                    'User.displayTableE("equipments", adminEquipmentPanelUserControl2.DataGridView1, sqlDataTableE)
+                    User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    'adminEquipmentPanelUserControl2.confirmMsgE.Text = "Item successfully added ✔"
+                    confirmMsgE.Text = "Item successfully added ✔"
 
                     'this makes the confirm message appear for 3secs
-                    'adminEquipmentPanelUserControl2.confirmMsgE.Visible = True
+                    confirmMsgE.Visible = True
                     Timer2.Interval = 3000
                     Timer2.Start()
 
 
                     'this makes the add panel to disappear
-                    'adminEquipmentPanelUserControl2.statePanel.Visible = False  'play it safe and make both panels visible false 
+                    statePanel.Visible = False  'play it safe and make both panels visible false 
                     addEquipmentPanel.Visible = False
 
                     equipmentTypeInput.Text = ""
