@@ -24,23 +24,23 @@ Partial Class adminhomePage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminhomePage))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.IPsBtn = New System.Windows.Forms.Button()
         Me.postsBtn = New System.Windows.Forms.Button()
         Me.dropdown = New System.Windows.Forms.Panel()
@@ -439,7 +439,6 @@ Partial Class adminhomePage
         Me.equipmentsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
         resources.ApplyResources(Me.equipmentsBtn, "equipmentsBtn")
         Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
         Me.equipmentsBtn.Name = "equipmentsBtn"
         Me.equipmentsBtn.UseVisualStyleBackColor = False
         '
@@ -745,52 +744,52 @@ Partial Class adminhomePage
         Me.userDataGridView.AllowUserToDeleteRows = False
         Me.userDataGridView.AllowUserToResizeColumns = False
         Me.userDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightGray
-        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.LightGray
+        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle18
         Me.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.userDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.userDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.userDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         resources.ApplyResources(Me.userDataGridView, "userDataGridView")
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle20
         Me.userDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.userDataGridView.EnableHeadersVisualStyles = False
         Me.userDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.userDataGridView.Name = "userDataGridView"
         Me.userDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
         Me.userDataGridView.RowHeadersVisible = False
         Me.userDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.userDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.userDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle22
         Me.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'Label10
@@ -1051,6 +1050,7 @@ Partial Class adminhomePage
         '
         'adminHomePagePanel
         '
+        resources.ApplyResources(Me.adminHomePagePanel, "adminHomePagePanel")
         Me.adminHomePagePanel.BackColor = System.Drawing.Color.Transparent
         Me.adminHomePagePanel.Controls.Add(Me.CPUsBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.IPsBtn2)
@@ -1072,7 +1072,6 @@ Partial Class adminhomePage
         Me.adminHomePagePanel.Controls.Add(Me.IPbuttoninactive)
         Me.adminHomePagePanel.Controls.Add(Me.CPUbuttoninactive)
         Me.adminHomePagePanel.Controls.Add(Me.Label1)
-        resources.ApplyResources(Me.adminHomePagePanel, "adminHomePagePanel")
         Me.adminHomePagePanel.ForeColor = System.Drawing.Color.Yellow
         Me.adminHomePagePanel.Name = "adminHomePagePanel"
         '
@@ -1378,9 +1377,9 @@ Partial Class adminhomePage
         '
         'exportBtnE
         '
+        resources.ApplyResources(Me.exportBtnE, "exportBtnE")
         Me.exportBtnE.BackColor = System.Drawing.Color.SeaGreen
         Me.exportBtnE.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.exportBtnE, "exportBtnE")
         Me.exportBtnE.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnE.Name = "exportBtnE"
         Me.exportBtnE.UseVisualStyleBackColor = False
@@ -1397,33 +1396,33 @@ Partial Class adminhomePage
         Me.equipmentDataGridView.AllowUserToDeleteRows = False
         Me.equipmentDataGridView.AllowUserToResizeColumns = False
         Me.equipmentDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightGray
-        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.LightGray
+        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle23
         Me.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle24
         resources.ApplyResources(Me.equipmentDataGridView, "equipmentDataGridView")
         Me.equipmentDataGridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle25
         Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.equipmentDataGridView.Name = "equipmentDataGridView"
@@ -1479,9 +1478,9 @@ Partial Class adminhomePage
         '
         'addEquipmentBtn
         '
+        resources.ApplyResources(Me.addEquipmentBtn, "addEquipmentBtn")
         Me.addEquipmentBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.addEquipmentBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.addEquipmentBtn, "addEquipmentBtn")
         Me.addEquipmentBtn.ForeColor = System.Drawing.Color.Yellow
         Me.addEquipmentBtn.Name = "addEquipmentBtn"
         Me.addEquipmentBtn.UseVisualStyleBackColor = False
@@ -1511,7 +1510,6 @@ Partial Class adminhomePage
         '
         resources.ApplyResources(Me.adminPostPanel, "adminPostPanel")
         Me.adminPostPanel.BackColor = System.Drawing.Color.MintCream
-        Me.adminPostPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.adminPostPanel.Controls.Add(Me.addPostPanel)
         Me.adminPostPanel.Controls.Add(Me.confirmMsgP)
         Me.adminPostPanel.Controls.Add(Me.hallSearchBoxP)
@@ -1530,7 +1528,6 @@ Partial Class adminhomePage
         '
         'addPostPanel
         '
-        resources.ApplyResources(Me.addPostPanel, "addPostPanel")
         Me.addPostPanel.BackColor = System.Drawing.Color.MintCream
         Me.addPostPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.addPostPanel.Controls.Add(Me.Label68)
@@ -1544,6 +1541,7 @@ Partial Class adminhomePage
         Me.addPostPanel.Controls.Add(Me.Label29)
         Me.addPostPanel.Controls.Add(Me.addPostCancelBtn)
         Me.addPostPanel.Controls.Add(Me.addPostValidationBtn)
+        resources.ApplyResources(Me.addPostPanel, "addPostPanel")
         Me.addPostPanel.Name = "addPostPanel"
         '
         'Label68
@@ -1662,33 +1660,33 @@ Partial Class adminhomePage
         Me.postDataGridView.AllowUserToDeleteRows = False
         Me.postDataGridView.AllowUserToResizeColumns = False
         Me.postDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray
-        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.LightGray
+        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle26
         Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         resources.ApplyResources(Me.postDataGridView, "postDataGridView")
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle28
         Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.postDataGridView.EnableHeadersVisualStyles = False
         Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -2234,34 +2232,34 @@ Partial Class adminhomePage
         Me.hallDataGridView.AllowUserToDeleteRows = False
         Me.hallDataGridView.AllowUserToResizeColumns = False
         Me.hallDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle12.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        Me.hallDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle29.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        Me.hallDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle29
         Me.hallDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.hallDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.hallDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.hallDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.hallDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.hallDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
         resources.ApplyResources(Me.hallDataGridView, "hallDataGridView")
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.hallDataGridView.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.hallDataGridView.DefaultCellStyle = DataGridViewCellStyle31
         Me.hallDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.hallDataGridView.EnableHeadersVisualStyles = False
         Me.hallDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -2498,34 +2496,34 @@ Partial Class adminhomePage
         Me.roleDataGridView.AllowUserToDeleteRows = False
         Me.roleDataGridView.AllowUserToResizeColumns = False
         Me.roleDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.LightGray
-        Me.roleDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.LightGray
+        Me.roleDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle32
         Me.roleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.roleDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.roleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.roleDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.roleDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle33.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.roleDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle33
         resources.ApplyResources(Me.roleDataGridView, "roleDataGridView")
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.roleDataGridView.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.roleDataGridView.DefaultCellStyle = DataGridViewCellStyle34
         Me.roleDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.roleDataGridView.EnableHeadersVisualStyles = False
         Me.roleDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -2545,16 +2543,17 @@ Partial Class adminhomePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
+        Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminHomePagePanel)
         Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminUsersPanel)
-        Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminRolePanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
-        Me.Controls.Add(Me.adminHomePagePanel)
         Me.ForeColor = System.Drawing.Color.MintCream
+        Me.MinimizeBox = False
         Me.Name = "adminhomePage"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.dropdown.ResumeLayout(False)

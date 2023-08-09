@@ -5,6 +5,7 @@ Imports cems.users
 Imports cems.admin
 Imports Org.BouncyCastle.Crypto.Generators
 Imports BCrypt.Net.BCrypt
+Imports System.Windows.Forms
 
 Public Class adminhomePage
     Dim sqlConn As New MySqlConnection
@@ -91,6 +92,26 @@ Public Class adminhomePage
         User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
         User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
         admin.activeCount(userNumber, "users")
+
+
+
+    End Sub
+
+
+
+    'this is like the media of css for the responsiveness
+    Private Sub adminhomepage_resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
+        ' Perform layout adjustments based on the screen size
+        Dim increaseY As Integer = 30
+        Dim increaseX As Integer = 90
+
+        'If WindowState = FormWindowState.Maximized Then
+        '    userbuttoninactive.Left += increaseX
+        '    userbuttoninactive.Top += increaseY
+        'Else
+        '    userbuttoninactive.Left -= increaseX
+        '    userbuttoninactive.Top -= increaseY
+        'End If
 
     End Sub
 
@@ -2653,4 +2674,6 @@ Public Class adminhomePage
         End Try
 
     End Sub
+
+
 End Class
