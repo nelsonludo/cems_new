@@ -703,9 +703,9 @@ Partial Class adminhomePage
         '
         'userAddBtn
         '
+        resources.ApplyResources(Me.userAddBtn, "userAddBtn")
         Me.userAddBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.userAddBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.userAddBtn, "userAddBtn")
         Me.userAddBtn.ForeColor = System.Drawing.Color.Yellow
         Me.userAddBtn.Name = "userAddBtn"
         Me.userAddBtn.UseVisualStyleBackColor = False
@@ -731,9 +731,9 @@ Partial Class adminhomePage
         '
         'exportBtnU
         '
+        resources.ApplyResources(Me.exportBtnU, "exportBtnU")
         Me.exportBtnU.BackColor = System.Drawing.Color.SeaGreen
         Me.exportBtnU.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.exportBtnU, "exportBtnU")
         Me.exportBtnU.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnU.Name = "exportBtnU"
         Me.exportBtnU.UseVisualStyleBackColor = False
@@ -2543,12 +2543,12 @@ Partial Class adminhomePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
+        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminPostPanel)
         Me.Controls.Add(Me.adminHomePagePanel)
-        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminRolePanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
