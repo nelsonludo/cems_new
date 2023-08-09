@@ -60,10 +60,6 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub UserHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
-        Form1.Close()
-
-    End Sub
 
     'to load the new user information in the profile panel
 
@@ -127,7 +123,22 @@ Public Class UserHomePage
 
     'tab buttons section
 
+    'dashboard
+    Private Sub dashboard_click(sender As Object, e As EventArgs) Handles dashboardBtn.Click
+        userPostPanel.Visible = False
+        userEquipmentPanel.Visible = False
+        userProfilePanel.Visible = False
+        profileSubPanel2.Visible = False
 
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+    End Sub
+
+    'post buttons 
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
         userPostPanel.Visible = True
@@ -202,6 +213,7 @@ Public Class UserHomePage
     'equipment subbuttons
 
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
+
         User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
@@ -697,22 +709,27 @@ Public Class UserHomePage
 
 
     'close all the servers when the app is closed
-    Private Sub userHomePage_close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        ' Stop Apache
-        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-        For Each apacheProcess As Process In apacheProcesses
-            If Not apacheProcess.CloseMainWindow() Then
-                apacheProcess.Kill()
-            End If
-        Next
+    Private Sub userHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
+        Form1.Close()
 
-        ' Stop MySQL
-        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
-        For Each mysqlProcess As Process In mysqlProcesses
-            If Not mysqlProcess.CloseMainWindow() Then
-                mysqlProcess.Kill()
-            End If
-        Next
+        Try
+            ' stop apache
+            Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+            For Each apacheProcess As Process In apacheProcesses
+                If Not apacheProcess.CloseMainWindow() Then
+                    apacheProcess.Kill()
+                End If
+            Next
 
+            ' Stop MySQL
+            Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+            For Each mysqlProcess As Process In mysqlProcesses
+                If Not mysqlProcess.CloseMainWindow() Then
+                    mysqlProcess.Kill()
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "close the server", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

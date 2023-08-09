@@ -8,7 +8,6 @@ list of things to do in cems
 -make sure that if the an admin tries to delete himself an error prompt appears explaining that he cant do that 
 
 *DESIGN TODO
--add dashboard button
 -review datagridview design(cell height)
 -Agrandir!
 -Highlight the tab button

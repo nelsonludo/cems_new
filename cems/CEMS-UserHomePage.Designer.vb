@@ -24,39 +24,17 @@ Partial Class UserHomePage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserHomePage))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.userHeader = New System.Windows.Forms.Panel()
         Me.userLogout = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.uName = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Posts = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.profile = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.profileBtn = New System.Windows.Forms.Button()
-        Me.postsBtn = New System.Windows.Forms.Button()
-        Me.Equipments = New System.Windows.Forms.Label()
-        Me.dropdown = New System.Windows.Forms.Panel()
-        Me.monitors = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.IP = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.CPUs = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.CPUsBtn = New System.Windows.Forms.Button()
-        Me.IPsBtn = New System.Windows.Forms.Button()
-        Me.equipmentsBtn = New System.Windows.Forms.Button()
-        Me.monitorsBtn = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
@@ -134,10 +112,33 @@ Partial Class UserHomePage
         Me.hallsearchlabel = New System.Windows.Forms.Label()
         Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dropdown = New System.Windows.Forms.Panel()
+        Me.monitors = New System.Windows.Forms.Label()
+        Me.IP = New System.Windows.Forms.Label()
+        Me.CPUs = New System.Windows.Forms.Label()
+        Me.Equipments = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.CPUsBtn = New System.Windows.Forms.Button()
+        Me.IPsBtn = New System.Windows.Forms.Button()
+        Me.equipmentsBtn = New System.Windows.Forms.Button()
+        Me.monitorsBtn = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dashboardBtn = New System.Windows.Forms.Button()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Posts = New System.Windows.Forms.Label()
+        Me.profile = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.profileBtn = New System.Windows.Forms.Button()
+        Me.postsBtn = New System.Windows.Forms.Button()
         Me.userHeader.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.dropdown.SuspendLayout()
         Me.userHomePagePanel.SuspendLayout()
         Me.userProfilePanel.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
@@ -146,6 +147,9 @@ Partial Class UserHomePage
         CType(Me.equipmentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.userPostPanel.SuspendLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.dropdown.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'userHeader
@@ -210,334 +214,6 @@ Partial Class UserHomePage
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(267, 123)
         Me.FlowLayoutPanel1.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.MintCream
-        Me.Label2.Location = New System.Drawing.Point(55, 32)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 29)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "User"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label48)
-        Me.Panel2.Controls.Add(Me.Posts)
-        Me.Panel2.Controls.Add(Me.Label40)
-        Me.Panel2.Controls.Add(Me.profile)
-        Me.Panel2.Controls.Add(Me.Label39)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.profileBtn)
-        Me.Panel2.Controls.Add(Me.postsBtn)
-        Me.Panel2.Controls.Add(Me.Equipments)
-        Me.Panel2.Controls.Add(Me.dropdown)
-        Me.Panel2.ForeColor = System.Drawing.Color.MintCream
-        Me.Panel2.Location = New System.Drawing.Point(13, 13)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel2.MaximumSize = New System.Drawing.Size(213, 615)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(209, 607)
-        Me.Panel2.TabIndex = 2
-        '
-        'Label48
-        '
-        Me.Label48.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.MintCream
-        Me.Label48.Image = CType(resources.GetObject("Label48.Image"), System.Drawing.Image)
-        Me.Label48.Location = New System.Drawing.Point(37, 163)
-        Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(20, 20)
-        Me.Label48.TabIndex = 60
-        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Posts
-        '
-        Me.Posts.AutoSize = True
-        Me.Posts.BackColor = System.Drawing.Color.SeaGreen
-        Me.Posts.Enabled = False
-        Me.Posts.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Posts.ForeColor = System.Drawing.Color.MintCream
-        Me.Posts.Location = New System.Drawing.Point(77, 163)
-        Me.Posts.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Posts.Name = "Posts"
-        Me.Posts.Size = New System.Drawing.Size(57, 20)
-        Me.Posts.TabIndex = 59
-        Me.Posts.Text = "Posts"
-        Me.Posts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label40
-        '
-        Me.Label40.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.ForeColor = System.Drawing.Color.MintCream
-        Me.Label40.Image = CType(resources.GetObject("Label40.Image"), System.Drawing.Image)
-        Me.Label40.Location = New System.Drawing.Point(37, 106)
-        Me.Label40.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(20, 20)
-        Me.Label40.TabIndex = 52
-        Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'profile
-        '
-        Me.profile.AutoSize = True
-        Me.profile.BackColor = System.Drawing.Color.SeaGreen
-        Me.profile.Enabled = False
-        Me.profile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.profile.ForeColor = System.Drawing.Color.MintCream
-        Me.profile.Location = New System.Drawing.Point(77, 106)
-        Me.profile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.profile.Name = "profile"
-        Me.profile.Size = New System.Drawing.Size(64, 20)
-        Me.profile.TabIndex = 51
-        Me.profile.Text = "Profile"
-        Me.profile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label39
-        '
-        Me.Label39.BackColor = System.Drawing.Color.MintCream
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.Color.Yellow
-        Me.Label39.Location = New System.Drawing.Point(10, 82)
-        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(190, 2)
-        Me.Label39.TabIndex = 50
-        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'profileBtn
-        '
-        Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.profileBtn.FlatAppearance.BorderSize = 0
-        Me.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.profileBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.profileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.profileBtn.Location = New System.Drawing.Point(0, 87)
-        Me.profileBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.profileBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.profileBtn.Name = "profileBtn"
-        Me.profileBtn.Size = New System.Drawing.Size(208, 58)
-        Me.profileBtn.TabIndex = 10
-        Me.profileBtn.UseVisualStyleBackColor = False
-        '
-        'postsBtn
-        '
-        Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.postsBtn.FlatAppearance.BorderSize = 0
-        Me.postsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.postsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.postsBtn.Location = New System.Drawing.Point(0, 144)
-        Me.postsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.postsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.postsBtn.Name = "postsBtn"
-        Me.postsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.postsBtn.TabIndex = 12
-        Me.postsBtn.UseVisualStyleBackColor = False
-        '
-        'Equipments
-        '
-        Me.Equipments.AutoSize = True
-        Me.Equipments.BackColor = System.Drawing.Color.SeaGreen
-        Me.Equipments.Enabled = False
-        Me.Equipments.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Equipments.ForeColor = System.Drawing.Color.MintCream
-        Me.Equipments.Location = New System.Drawing.Point(77, 219)
-        Me.Equipments.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Equipments.Name = "Equipments"
-        Me.Equipments.Size = New System.Drawing.Size(107, 20)
-        Me.Equipments.TabIndex = 55
-        Me.Equipments.Text = "Equipments"
-        Me.Equipments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'dropdown
-        '
-        Me.dropdown.BackColor = System.Drawing.Color.LightSlateGray
-        Me.dropdown.Controls.Add(Me.monitors)
-        Me.dropdown.Controls.Add(Me.Label41)
-        Me.dropdown.Controls.Add(Me.IP)
-        Me.dropdown.Controls.Add(Me.Label42)
-        Me.dropdown.Controls.Add(Me.CPUs)
-        Me.dropdown.Controls.Add(Me.Label43)
-        Me.dropdown.Controls.Add(Me.Label44)
-        Me.dropdown.Controls.Add(Me.CPUsBtn)
-        Me.dropdown.Controls.Add(Me.IPsBtn)
-        Me.dropdown.Controls.Add(Me.equipmentsBtn)
-        Me.dropdown.Controls.Add(Me.monitorsBtn)
-        Me.dropdown.Location = New System.Drawing.Point(0, 202)
-        Me.dropdown.Margin = New System.Windows.Forms.Padding(4)
-        Me.dropdown.MaximumSize = New System.Drawing.Size(208, 230)
-        Me.dropdown.MinimumSize = New System.Drawing.Size(208, 59)
-        Me.dropdown.Name = "dropdown"
-        Me.dropdown.Size = New System.Drawing.Size(208, 230)
-        Me.dropdown.TabIndex = 7
-        '
-        'monitors
-        '
-        Me.monitors.AutoSize = True
-        Me.monitors.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.monitors.Enabled = False
-        Me.monitors.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.monitors.ForeColor = System.Drawing.Color.MintCream
-        Me.monitors.Location = New System.Drawing.Point(77, 183)
-        Me.monitors.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.monitors.Name = "monitors"
-        Me.monitors.Size = New System.Drawing.Size(82, 20)
-        Me.monitors.TabIndex = 61
-        Me.monitors.Text = "Monitors"
-        Me.monitors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label41
-        '
-        Me.Label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.MintCream
-        Me.Label41.Image = CType(resources.GetObject("Label41.Image"), System.Drawing.Image)
-        Me.Label41.Location = New System.Drawing.Point(37, 183)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(20, 20)
-        Me.Label41.TabIndex = 62
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'IP
-        '
-        Me.IP.AutoSize = True
-        Me.IP.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.IP.Enabled = False
-        Me.IP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IP.ForeColor = System.Drawing.Color.MintCream
-        Me.IP.Location = New System.Drawing.Point(77, 133)
-        Me.IP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.IP.Name = "IP"
-        Me.IP.Size = New System.Drawing.Size(94, 20)
-        Me.IP.TabIndex = 59
-        Me.IP.Text = "IP Phones"
-        Me.IP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label42
-        '
-        Me.Label42.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.Color.MintCream
-        Me.Label42.Image = CType(resources.GetObject("Label42.Image"), System.Drawing.Image)
-        Me.Label42.Location = New System.Drawing.Point(37, 133)
-        Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(20, 20)
-        Me.Label42.TabIndex = 60
-        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CPUs
-        '
-        Me.CPUs.AutoSize = True
-        Me.CPUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.CPUs.Enabled = False
-        Me.CPUs.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CPUs.ForeColor = System.Drawing.Color.MintCream
-        Me.CPUs.Location = New System.Drawing.Point(77, 82)
-        Me.CPUs.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.CPUs.Name = "CPUs"
-        Me.CPUs.Size = New System.Drawing.Size(64, 20)
-        Me.CPUs.TabIndex = 57
-        Me.CPUs.Text = "CPU'S"
-        Me.CPUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label43
-        '
-        Me.Label43.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.ForeColor = System.Drawing.Color.MintCream
-        Me.Label43.Image = CType(resources.GetObject("Label43.Image"), System.Drawing.Image)
-        Me.Label43.Location = New System.Drawing.Point(37, 82)
-        Me.Label43.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(20, 20)
-        Me.Label43.TabIndex = 58
-        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label44
-        '
-        Me.Label44.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.ForeColor = System.Drawing.Color.MintCream
-        Me.Label44.Image = CType(resources.GetObject("Label44.Image"), System.Drawing.Image)
-        Me.Label44.Location = New System.Drawing.Point(37, 17)
-        Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(20, 20)
-        Me.Label44.TabIndex = 56
-        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CPUsBtn
-        '
-        Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.CPUsBtn.FlatAppearance.BorderSize = 0
-        Me.CPUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CPUsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.CPUsBtn.Location = New System.Drawing.Point(0, 58)
-        Me.CPUsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.CPUsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.CPUsBtn.Name = "CPUsBtn"
-        Me.CPUsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.CPUsBtn.TabIndex = 9
-        Me.CPUsBtn.UseVisualStyleBackColor = False
-        '
-        'IPsBtn
-        '
-        Me.IPsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.IPsBtn.FlatAppearance.BorderSize = 0
-        Me.IPsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IPsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.IPsBtn.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.IPsBtn.Location = New System.Drawing.Point(0, 114)
-        Me.IPsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.IPsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.IPsBtn.Name = "IPsBtn"
-        Me.IPsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.IPsBtn.TabIndex = 7
-        Me.IPsBtn.UseVisualStyleBackColor = False
-        '
-        'equipmentsBtn
-        '
-        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.equipmentsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
-        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
-        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.equipmentsBtn.Name = "equipmentsBtn"
-        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 7, 0)
-        Me.equipmentsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.equipmentsBtn.TabIndex = 6
-        Me.equipmentsBtn.UseVisualStyleBackColor = False
-        '
-        'monitorsBtn
-        '
-        Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.monitorsBtn.FlatAppearance.BorderSize = 0
-        Me.monitorsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.monitorsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.monitorsBtn.Location = New System.Drawing.Point(0, 172)
-        Me.monitorsBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.monitorsBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.monitorsBtn.Name = "monitorsBtn"
-        Me.monitorsBtn.Size = New System.Drawing.Size(208, 58)
-        Me.monitorsBtn.TabIndex = 8
-        Me.monitorsBtn.UseVisualStyleBackColor = False
         '
         'Timer1
         '
@@ -1306,36 +982,36 @@ Partial Class UserHomePage
         Me.equipmentDataGridView.AllowUserToDeleteRows = False
         Me.equipmentDataGridView.AllowUserToResizeColumns = False
         Me.equipmentDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.equipmentDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.equipmentDataGridView.ColumnHeadersHeight = 25
         Me.equipmentDataGridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.equipmentDataGridView.EnableHeadersVisualStyles = False
         Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1496,35 +1172,35 @@ Partial Class UserHomePage
         Me.postDataGridView.AllowUserToDeleteRows = False
         Me.postDataGridView.AllowUserToResizeColumns = False
         Me.postDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.postDataGridView.ColumnHeadersHeight = 25
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle6
         Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.postDataGridView.EnableHeadersVisualStyles = False
         Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1604,23 +1280,430 @@ Partial Class UserHomePage
         Me.stateSearchBoxP.Size = New System.Drawing.Size(130, 24)
         Me.stateSearchBoxP.TabIndex = 37
         '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel2.Controls.Add(Me.dropdown)
+        Me.Panel2.Controls.Add(Me.PictureBox2)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.dashboardBtn)
+        Me.Panel2.Controls.Add(Me.Label48)
+        Me.Panel2.Controls.Add(Me.Label40)
+        Me.Panel2.Controls.Add(Me.Label39)
+        Me.Panel2.Controls.Add(Me.Posts)
+        Me.Panel2.Controls.Add(Me.profile)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.profileBtn)
+        Me.Panel2.Controls.Add(Me.postsBtn)
+        Me.Panel2.ForeColor = System.Drawing.Color.MintCream
+        Me.Panel2.Location = New System.Drawing.Point(13, 13)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(209, 700)
+        Me.Panel2.TabIndex = 67
+        '
+        'dropdown
+        '
+        Me.dropdown.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.dropdown.BackColor = System.Drawing.Color.SeaGreen
+        Me.dropdown.Controls.Add(Me.monitors)
+        Me.dropdown.Controls.Add(Me.IP)
+        Me.dropdown.Controls.Add(Me.CPUs)
+        Me.dropdown.Controls.Add(Me.Equipments)
+        Me.dropdown.Controls.Add(Me.Label41)
+        Me.dropdown.Controls.Add(Me.Label42)
+        Me.dropdown.Controls.Add(Me.Label43)
+        Me.dropdown.Controls.Add(Me.Label44)
+        Me.dropdown.Controls.Add(Me.CPUsBtn)
+        Me.dropdown.Controls.Add(Me.IPsBtn)
+        Me.dropdown.Controls.Add(Me.equipmentsBtn)
+        Me.dropdown.Controls.Add(Me.monitorsBtn)
+        Me.dropdown.ForeColor = System.Drawing.Color.MintCream
+        Me.dropdown.Location = New System.Drawing.Point(0, 287)
+        Me.dropdown.Margin = New System.Windows.Forms.Padding(0)
+        Me.dropdown.MinimumSize = New System.Drawing.Size(208, 58)
+        Me.dropdown.Name = "dropdown"
+        Me.dropdown.Size = New System.Drawing.Size(208, 283)
+        Me.dropdown.TabIndex = 7
+        '
+        'monitors
+        '
+        Me.monitors.AutoSize = True
+        Me.monitors.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.monitors.Enabled = False
+        Me.monitors.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.monitors.ForeColor = System.Drawing.Color.MintCream
+        Me.monitors.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.monitors.Location = New System.Drawing.Point(77, 191)
+        Me.monitors.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.monitors.Name = "monitors"
+        Me.monitors.Size = New System.Drawing.Size(82, 20)
+        Me.monitors.TabIndex = 37
+        Me.monitors.Text = "Monitors"
+        Me.monitors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'IP
+        '
+        Me.IP.AutoSize = True
+        Me.IP.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.IP.Enabled = False
+        Me.IP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.IP.ForeColor = System.Drawing.Color.MintCream
+        Me.IP.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.IP.Location = New System.Drawing.Point(77, 133)
+        Me.IP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.IP.Name = "IP"
+        Me.IP.Size = New System.Drawing.Size(94, 20)
+        Me.IP.TabIndex = 38
+        Me.IP.Text = "IP Phones"
+        Me.IP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CPUs
+        '
+        Me.CPUs.AutoSize = True
+        Me.CPUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.CPUs.Enabled = False
+        Me.CPUs.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.CPUs.ForeColor = System.Drawing.Color.MintCream
+        Me.CPUs.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CPUs.Location = New System.Drawing.Point(77, 82)
+        Me.CPUs.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CPUs.Name = "CPUs"
+        Me.CPUs.Size = New System.Drawing.Size(64, 20)
+        Me.CPUs.TabIndex = 39
+        Me.CPUs.Text = "CPU'S"
+        Me.CPUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Equipments
+        '
+        Me.Equipments.AutoSize = True
+        Me.Equipments.BackColor = System.Drawing.Color.SeaGreen
+        Me.Equipments.Enabled = False
+        Me.Equipments.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Equipments.ForeColor = System.Drawing.Color.MintCream
+        Me.Equipments.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Equipments.Location = New System.Drawing.Point(77, 19)
+        Me.Equipments.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Equipments.Name = "Equipments"
+        Me.Equipments.Size = New System.Drawing.Size(107, 20)
+        Me.Equipments.TabIndex = 40
+        Me.Equipments.Text = "Equipments"
+        Me.Equipments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label41
+        '
+        Me.Label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label41.ForeColor = System.Drawing.Color.MintCream
+        Me.Label41.Image = CType(resources.GetObject("Label41.Image"), System.Drawing.Image)
+        Me.Label41.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label41.Location = New System.Drawing.Point(37, 191)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(20, 20)
+        Me.Label41.TabIndex = 51
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label42
+        '
+        Me.Label42.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label42.ForeColor = System.Drawing.Color.MintCream
+        Me.Label42.Image = CType(resources.GetObject("Label42.Image"), System.Drawing.Image)
+        Me.Label42.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label42.Location = New System.Drawing.Point(37, 133)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(20, 20)
+        Me.Label42.TabIndex = 52
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label43
+        '
+        Me.Label43.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label43.ForeColor = System.Drawing.Color.MintCream
+        Me.Label43.Image = CType(resources.GetObject("Label43.Image"), System.Drawing.Image)
+        Me.Label43.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label43.Location = New System.Drawing.Point(37, 82)
+        Me.Label43.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(20, 20)
+        Me.Label43.TabIndex = 53
+        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label44
+        '
+        Me.Label44.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label44.ForeColor = System.Drawing.Color.MintCream
+        Me.Label44.Image = CType(resources.GetObject("Label44.Image"), System.Drawing.Image)
+        Me.Label44.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label44.Location = New System.Drawing.Point(37, 19)
+        Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(20, 20)
+        Me.Label44.TabIndex = 54
+        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CPUsBtn
+        '
+        Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.CPUsBtn.FlatAppearance.BorderSize = 0
+        Me.CPUsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.CPUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CPUsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.CPUsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.CPUsBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CPUsBtn.Location = New System.Drawing.Point(-1, 58)
+        Me.CPUsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.CPUsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.CPUsBtn.Name = "CPUsBtn"
+        Me.CPUsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.CPUsBtn.TabIndex = 9
+        Me.CPUsBtn.UseVisualStyleBackColor = False
+        '
+        'IPsBtn
+        '
+        Me.IPsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.IPsBtn.FlatAppearance.BorderSize = 0
+        Me.IPsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IPsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.IPsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.IPsBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.IPsBtn.Location = New System.Drawing.Point(-1, 114)
+        Me.IPsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.IPsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.IPsBtn.Name = "IPsBtn"
+        Me.IPsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.IPsBtn.TabIndex = 7
+        Me.IPsBtn.UseVisualStyleBackColor = False
+        '
+        'equipmentsBtn
+        '
+        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
+        Me.equipmentsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
+        Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.equipmentsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.drop_left_arrow1
+        Me.equipmentsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.equipmentsBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.equipmentsBtn.Location = New System.Drawing.Point(0, 0)
+        Me.equipmentsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.equipmentsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.equipmentsBtn.Name = "equipmentsBtn"
+        Me.equipmentsBtn.Padding = New System.Windows.Forms.Padding(0, 0, 7, 0)
+        Me.equipmentsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.equipmentsBtn.TabIndex = 6
+        Me.equipmentsBtn.UseVisualStyleBackColor = False
+        '
+        'monitorsBtn
+        '
+        Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.monitorsBtn.FlatAppearance.BorderSize = 0
+        Me.monitorsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.monitorsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.monitorsBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.monitorsBtn.Location = New System.Drawing.Point(-1, 172)
+        Me.monitorsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.monitorsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.monitorsBtn.Name = "monitorsBtn"
+        Me.monitorsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.monitorsBtn.TabIndex = 8
+        Me.monitorsBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.MintCream
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(20, 125)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 61
+        Me.PictureBox2.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.MintCream
+        Me.Label2.Enabled = False
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label2.Location = New System.Drawing.Point(66, 126)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 20)
+        Me.Label2.TabIndex = 60
+        Me.Label2.Text = "Dashboard"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'dashboardBtn
+        '
+        Me.dashboardBtn.BackColor = System.Drawing.Color.MintCream
+        Me.dashboardBtn.FlatAppearance.BorderSize = 0
+        Me.dashboardBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.dashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dashboardBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.dashboardBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.dashboardBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dashboardBtn.Location = New System.Drawing.Point(10, 112)
+        Me.dashboardBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.dashboardBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.dashboardBtn.Name = "dashboardBtn"
+        Me.dashboardBtn.Size = New System.Drawing.Size(189, 45)
+        Me.dashboardBtn.TabIndex = 59
+        Me.dashboardBtn.UseVisualStyleBackColor = False
+        '
+        'Label48
+        '
+        Me.Label48.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label48.ForeColor = System.Drawing.Color.MintCream
+        Me.Label48.Image = CType(resources.GetObject("Label48.Image"), System.Drawing.Image)
+        Me.Label48.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label48.Location = New System.Drawing.Point(37, 254)
+        Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(20, 20)
+        Me.Label48.TabIndex = 58
+        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label40
+        '
+        Me.Label40.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label40.ForeColor = System.Drawing.Color.MintCream
+        Me.Label40.Image = CType(resources.GetObject("Label40.Image"), System.Drawing.Image)
+        Me.Label40.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label40.Location = New System.Drawing.Point(37, 197)
+        Me.Label40.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(20, 20)
+        Me.Label40.TabIndex = 50
+        Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label39
+        '
+        Me.Label39.BackColor = System.Drawing.Color.MintCream
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
+        Me.Label39.ForeColor = System.Drawing.Color.Yellow
+        Me.Label39.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label39.Location = New System.Drawing.Point(10, 82)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(190, 2)
+        Me.Label39.TabIndex = 49
+        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Posts
+        '
+        Me.Posts.AutoSize = True
+        Me.Posts.BackColor = System.Drawing.Color.SeaGreen
+        Me.Posts.Enabled = False
+        Me.Posts.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Posts.ForeColor = System.Drawing.Color.MintCream
+        Me.Posts.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Posts.Location = New System.Drawing.Point(77, 254)
+        Me.Posts.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Posts.Name = "Posts"
+        Me.Posts.Size = New System.Drawing.Size(57, 20)
+        Me.Posts.TabIndex = 44
+        Me.Posts.Text = "Posts"
+        Me.Posts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'profile
+        '
+        Me.profile.AutoSize = True
+        Me.profile.BackColor = System.Drawing.Color.SeaGreen
+        Me.profile.Enabled = False
+        Me.profile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.profile.ForeColor = System.Drawing.Color.MintCream
+        Me.profile.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.profile.Location = New System.Drawing.Point(77, 199)
+        Me.profile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.profile.Name = "profile"
+        Me.profile.Size = New System.Drawing.Size(64, 20)
+        Me.profile.TabIndex = 36
+        Me.profile.Text = "Profile"
+        Me.profile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.MintCream
+        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label5.Location = New System.Drawing.Point(55, 32)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(86, 29)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Admin"
+        '
+        'profileBtn
+        '
+        Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.profileBtn.FlatAppearance.BorderSize = 0
+        Me.profileBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
+        Me.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.profileBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.profileBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.profileBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.profileBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.profileBtn.Location = New System.Drawing.Point(0, 178)
+        Me.profileBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.profileBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.profileBtn.Name = "profileBtn"
+        Me.profileBtn.Size = New System.Drawing.Size(208, 58)
+        Me.profileBtn.TabIndex = 10
+        Me.profileBtn.UseVisualStyleBackColor = False
+        '
+        'postsBtn
+        '
+        Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.postsBtn.FlatAppearance.BorderSize = 0
+        Me.postsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
+        Me.postsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.postsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.postsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.postsBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.postsBtn.Location = New System.Drawing.Point(0, 235)
+        Me.postsBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.postsBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.postsBtn.Name = "postsBtn"
+        Me.postsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.postsBtn.TabIndex = 12
+        Me.postsBtn.UseVisualStyleBackColor = False
+        '
         'UserHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.ClientSize = New System.Drawing.Size(1176, 633)
+        Me.ClientSize = New System.Drawing.Size(1176, 628)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.userProfilePanel)
         Me.Controls.Add(Me.userEquipmentPanel)
         Me.Controls.Add(Me.userPostPanel)
         Me.Controls.Add(Me.userHomePagePanel)
         Me.Controls.Add(Me.userHeader)
-        Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(300, 300)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximumSize = New System.Drawing.Size(1194, 700)
-        Me.MinimumSize = New System.Drawing.Size(1194, 605)
+        Me.MinimumSize = New System.Drawing.Size(1194, 675)
         Me.Name = "UserHomePage"
         Me.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1628,10 +1711,6 @@ Partial Class UserHomePage
         Me.userHeader.ResumeLayout(False)
         Me.userHeader.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.dropdown.ResumeLayout(False)
-        Me.dropdown.PerformLayout()
         Me.userHomePagePanel.ResumeLayout(False)
         Me.userHomePagePanel.PerformLayout()
         Me.userProfilePanel.ResumeLayout(False)
@@ -1646,6 +1725,11 @@ Partial Class UserHomePage
         Me.userPostPanel.ResumeLayout(False)
         Me.userPostPanel.PerformLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.dropdown.ResumeLayout(False)
+        Me.dropdown.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1653,37 +1737,15 @@ Partial Class UserHomePage
     Friend WithEvents userHeader As Panel
     Friend WithEvents uName As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents equipmentsBtn As Button
-    Friend WithEvents dropdown As Panel
-    Friend WithEvents CPUsBtn As Button
-    Friend WithEvents IPsBtn As Button
-    Friend WithEvents monitorsBtn As Button
-    Friend WithEvents profileBtn As Button
-    Friend WithEvents postsBtn As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents userHomePagePanel As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents userLogout As Button
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents profile As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Posts As Label
-    Friend WithEvents Equipments As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents CPUs As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents IP As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents monitors As Label
-    Friend WithEvents Label41 As Label
     Friend WithEvents CPUsBtn2 As Button
     Friend WithEvents IPsBtn2 As Button
     Friend WithEvents monitorsBtn2 As Button
@@ -1754,4 +1816,29 @@ Partial Class UserHomePage
     Friend WithEvents postsearchlabel As Label
     Friend WithEvents stateSearchBoxP As ComboBox
     Friend WithEvents confirmMsgPr As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents dropdown As Panel
+    Friend WithEvents monitors As Label
+    Friend WithEvents IP As Label
+    Friend WithEvents CPUs As Label
+    Friend WithEvents Equipments As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents CPUsBtn As Button
+    Friend WithEvents IPsBtn As Button
+    Friend WithEvents equipmentsBtn As Button
+    Friend WithEvents monitorsBtn As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents dashboardBtn As Button
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Posts As Label
+    Friend WithEvents profile As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents profileBtn As Button
+    Friend WithEvents postsBtn As Button
 End Class

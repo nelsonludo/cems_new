@@ -94,10 +94,6 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub adminHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
-        Form1.Close()
-
-    End Sub
 
     'dropdown code 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -184,6 +180,43 @@ Public Class adminhomePage
 
 
     'tab buttons section
+
+    'dashboard button
+    Private Sub dashboardBtn_Click(sender As Object, e As EventArgs) Handles dashboardBtn.Click
+
+        adminEquipmentPanel.Visible = False
+        adminPostPanel.Visible = False
+        adminProfilePanel.Visible = False
+        adminHallsPanel.Visible = False
+        adminUsersPanel.Visible = False
+        adminRolePanel.Visible = False
+
+        profileSubPanel2.Visible = False
+        addPostPanel.Visible = False
+        addEquipmentPanel.Visible = False
+        postChangeStatePanel.Visible = False
+        statePanel.Visible = False
+        hallUpdatePanel.Visible = False
+        hallAddpanel.Visible = False
+        userUpdatePanel.Visible = False
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
+        userAddPanel.Visible = False
+        roleUpdateBtn.Visible = False
+        roleUpdatePanel.Visible = False
+        roleAddPanel.Visible = False
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
+    End Sub
+
 
     'POST SECTION
     Private Sub DataGridView2_CellClick() Handles postDataGridView.CellClick
@@ -530,6 +563,8 @@ Public Class adminhomePage
 
         User.displayTableP("posts", postDataGridView, sqlDataTableP)
     End Sub
+
+
 
     'profile button
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
@@ -2547,7 +2582,7 @@ Public Class adminhomePage
             equipmentDataGridView.Height = height
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "print error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             sqlConn.Dispose()
         End Try
@@ -2592,22 +2627,30 @@ Public Class adminhomePage
     'styles
 
     'close all the servers when the app is closed
-    Private Sub adminHomePage_close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        ' Stop Apache
-        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-        For Each apacheProcess As Process In apacheProcesses
-            If Not apacheProcess.CloseMainWindow() Then
-                apacheProcess.Kill()
-            End If
-        Next
+    Private Sub adminHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
+        Form1.Close()
 
-        ' Stop MySQL
-        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
-        For Each mysqlProcess As Process In mysqlProcesses
-            If Not mysqlProcess.CloseMainWindow() Then
-                mysqlProcess.Kill()
-            End If
-        Next
+        ' Stop Apache
+
+        Try
+
+            Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+            For Each apacheProcess As Process In apacheProcesses
+                If Not apacheProcess.CloseMainWindow() Then
+                    apacheProcess.Kill()
+                End If
+            Next
+
+            ' Stop MySQL
+            Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+            For Each mysqlProcess As Process In mysqlProcesses
+                If Not mysqlProcess.CloseMainWindow() Then
+                    mysqlProcess.Kill()
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "close the server", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 End Class

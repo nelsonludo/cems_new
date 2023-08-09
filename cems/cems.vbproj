@@ -173,6 +173,9 @@
     <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CEMS-adminHomePage.aa.resx">
+      <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CEMS-adminHomePage.resx">
       <DependentUpon>CEMS-adminHomePage.vb</DependentUpon>
     </EmbeddedResource>
