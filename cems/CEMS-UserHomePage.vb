@@ -115,6 +115,7 @@ Public Class UserHomePage
         EquipmentPanel.Visible = False
         ProfilePanel.Visible = False
         profileSubPanel2.Visible = False
+        HomePagePanel.Visible = True
 
         equipmentSearchBox.Text = ""
         postSearchBox.Text = ""
@@ -254,7 +255,7 @@ Public Class UserHomePage
         fillHalls(hallSearchBoxE)
 
     End Sub
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs)
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(EquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
 
@@ -301,7 +302,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs)
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
         User.display(EquipmentPanel, EquipmentTitle, "IP Phones")
         User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
 
@@ -348,7 +349,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs)
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
         User.display(EquipmentPanel, EquipmentTitle, "Monitors")
         User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
 
@@ -371,7 +372,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub userLogout_Click(sender As Object, e As EventArgs)
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
         Form1.Show()
         Me.Visible = False
 
@@ -396,13 +397,13 @@ Public Class UserHomePage
 
 
     'searches section
-    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs)
+    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
         User.search("equipments", equipmentDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
     End Sub
 
-    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs)
+    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
         User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
@@ -413,7 +414,7 @@ Public Class UserHomePage
 
 
     'post hall search
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
 
         postSearchBox.Text = ""
@@ -479,7 +480,7 @@ Public Class UserHomePage
 
 
     'search by halls in equipment
-    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
 
         equipmentSearchBox.Text = ""
@@ -546,7 +547,7 @@ Public Class UserHomePage
 
     'equipment search by state
 
-    Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.SelectedIndexChanged
         Dim hall_id As Integer
 
         equipmentSearchBox.Text = ""
@@ -589,7 +590,7 @@ Public Class UserHomePage
 
 
     'post search by state
-    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs)
+    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
         postSearchBox.Text = ""
 
@@ -633,7 +634,7 @@ Public Class UserHomePage
     End Sub
 
     'export buttons 
-    Private Sub exportBtnP_Click(sender As Object, e As EventArgs)
+    Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
 
         User.export(postDataGridView, "posts")
@@ -645,7 +646,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub exportBtnE_Click(sender As Object, e As EventArgs)
+    Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
 
 
         User.export(equipmentDataGridView, "equipments")
