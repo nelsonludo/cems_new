@@ -119,14 +119,14 @@ Public Class adminhomePage
     'dropdown code 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If iscollapsed Then
-            equipmentsBtn.Image = My.Resources.drop_down_arrow
+            'equipmentsBtn.Image = My.Resources.drop_down_arrow
             dropdown.Height += 10
             If dropdown.Size = dropdown.MaximumSize Then
                 Timer1.Stop()
                 iscollapsed = False
             End If
         Else
-            equipmentsBtn.Image = My.Resources.drop_left_arrow1
+            'equipmentsBtn.Image = My.Resources.drop_left_arrow1
             dropdown.Height -= 10
             If dropdown.Size = dropdown.MinimumSize Then
                 Timer1.Stop()
@@ -1849,6 +1849,7 @@ Public Class adminhomePage
         equipmentSearchBox.Visible = False
         equipmentsearchpostidlabel.Visible = False
         addEquipmentBtn.Visible = False
+        statePanel.Visible = False
         exportBtnE.Visible = False
         'printBtnE.Visible = False
     End Sub
@@ -1871,7 +1872,7 @@ Public Class adminhomePage
     Private Sub addEquipmentValidationBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentValidationBtn.Click
         connect_db()
 
-        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = "" And hallInput.Text = "" Then
+        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = ""  Then
             addEquipmentErrorMsg.Text = "please fill all the fields !"
             addEquipmentErrorMsg.Visible = True
             Timer2.Interval = 3000
@@ -1903,10 +1904,12 @@ Public Class adminhomePage
 
             End Try
 
-            If hallInput.Text = "" Then
+
+
+            If hallInput.Text = "" And postIdInput.Text = "" Then
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "',1)"
+                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',0,0)"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -1944,7 +1947,98 @@ Public Class adminhomePage
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "MySql if hall and post are not specified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+            ElseIf hallInput.Text = "" Then
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "',0)"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
+
+                    'this updates the datagridview
+                    User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+                    'this changes the content of confirmMsg
+                    confirmMsgE.Text = "Item successfully added ✔"
+
+                    'this makes the confirm message appear for 3secs
+                    confirmMsgE.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the add panel to disappear
+                    statePanel.Visible = False  'play it safe and make both panels visible false 
+                    addEquipmentPanel.Visible = False
+
+                    equipmentTypeInput.Text = ""
+                    equipmentStateInput.Text = ""
+                    hallInput.Text = ""
+
+                    fillHalls(hallSearchBoxE)
+
+
+                    EquipmentTitle.Text = "Equipment"
+                    equipmentDataGridView.Visible = True
+                    equipmentSearchBox.Visible = True
+                    equipmentsearchpostidlabel.Visible = True
+                    addEquipmentBtn.Visible = True
+                    exportBtnE.Visible = True
+                    'printBtnE.Visible = True
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql if hall is not specified", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Finally
+                    sqlConn.Dispose()
+                End Try
+
+            ElseIf postIdInput.Text = "" Then
+                Try
+                    sqlConn.Open()
+                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',0,'" & hall_id & "')"
+                    'Read through the response'
+                    sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                    sqlReader = sqlCmd.ExecuteReader
+                    sqlConn.Close()
+
+                    'this updates the datagridview
+                    User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+                    'this changes the content of confirmMsg
+                    confirmMsgE.Text = "Item successfully added ✔"
+
+                    'this makes the confirm message appear for 3secs
+                    confirmMsgE.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the add panel to disappear
+                    statePanel.Visible = False  'play it safe and make both panels visible false 
+                    addEquipmentPanel.Visible = False
+
+                    equipmentTypeInput.Text = ""
+                    equipmentStateInput.Text = ""
+                    hallInput.Text = ""
+
+                    fillHalls(hallSearchBoxE)
+
+
+                    EquipmentTitle.Text = "Equipment"
+                    equipmentDataGridView.Visible = True
+                    equipmentSearchBox.Visible = True
+                    equipmentsearchpostidlabel.Visible = True
+                    addEquipmentBtn.Visible = True
+                    exportBtnE.Visible = True
+                    'printBtnE.Visible = True
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "MySql if post is not specified", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Finally
                     sqlConn.Dispose()
                 End Try
@@ -1989,7 +2083,7 @@ Public Class adminhomePage
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "MySql if all the inputs are specified", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Finally
                     sqlConn.Dispose()
                 End Try

@@ -85,7 +85,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.login)
         Me.Panel1.Controls.Add(Me.passwordtxt)
         Me.Panel1.Controls.Add(Me.emailtxt)
-        Me.Panel1.Location = New System.Drawing.Point(303, 136)
+        Me.Panel1.Location = New System.Drawing.Point(808, 300)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(548, 385)
@@ -213,7 +213,7 @@ Partial Class Form1
         Me.connexionStringPanel.Controls.Add(Me.connexionStringPwd)
         Me.connexionStringPanel.Controls.Add(Me.connexionStringUserName)
         Me.connexionStringPanel.Controls.Add(Me.Label9)
-        Me.connexionStringPanel.Location = New System.Drawing.Point(300, 136)
+        Me.connexionStringPanel.Location = New System.Drawing.Point(808, 300)
         Me.connexionStringPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.connexionStringPanel.Name = "connexionStringPanel"
         Me.connexionStringPanel.Size = New System.Drawing.Size(552, 395)
@@ -373,7 +373,7 @@ Partial Class Form1
         Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
         Me.userAddPanel.Controls.Add(Me.Label18)
         Me.userAddPanel.Controls.Add(Me.Label10)
-        Me.userAddPanel.Location = New System.Drawing.Point(300, 41)
+        Me.userAddPanel.Location = New System.Drawing.Point(808, 300)
         Me.userAddPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.userAddPanel.Name = "userAddPanel"
         Me.userAddPanel.Size = New System.Drawing.Size(552, 520)
@@ -568,15 +568,17 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.ClientSize = New System.Drawing.Size(1176, 633)
+        Me.ClientSize = New System.Drawing.Size(1924, 731)
         Me.Controls.Add(Me.userAddPanel)
         Me.Controls.Add(Me.connexionStringPanel)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CEMS-Login"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.connexionStringPanel.ResumeLayout(False)

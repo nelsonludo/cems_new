@@ -66,21 +66,7 @@ Public Class UserHomePage
 
     'dropdown code 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If iscollapsed Then
-            equipmentsBtn.Image = My.Resources.drop_down_arrow
-            dropdown.Height += 10
-            If dropdown.Size = dropdown.MaximumSize Then
-                Timer1.Stop()
-                iscollapsed = False
-            End If
-        Else
-            equipmentsBtn.Image = My.Resources.drop_left_arrow1
-            dropdown.Height -= 10
-            If dropdown.Size = dropdown.MinimumSize Then
-                Timer1.Stop()
-                iscollapsed = True
-            End If
-        End If
+        User.dropdownTimer(iscollapsed, dropdown, Timer1)
     End Sub
 
 
@@ -125,9 +111,9 @@ Public Class UserHomePage
 
     'dashboard
     Private Sub dashboard_click(sender As Object, e As EventArgs) Handles dashboardBtn.Click
-        userPostPanel.Visible = False
-        userEquipmentPanel.Visible = False
-        userProfilePanel.Visible = False
+        PostPanel.Visible = False
+        EquipmentPanel.Visible = False
+        ProfilePanel.Visible = False
         profileSubPanel2.Visible = False
 
         equipmentSearchBox.Text = ""
@@ -138,32 +124,12 @@ Public Class UserHomePage
         stateSearchBoxP.Text = ""
     End Sub
 
-    'post buttons 
-    Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
-
-        userPostPanel.Visible = True
-        userEquipmentPanel.Visible = False
-        userProfilePanel.Visible = False
-        profileSubPanel2.Visible = False
-
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-        fillcomboState(stateSearchBoxP, "posts", "post_state")
-
-        User.displayTableP("posts", postDataGridView, sqlDataTableP)
-
-        fillHalls(hallSearchBoxP)
-
-    End Sub
+    'profile buttons
     Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
-        userProfilePanel.Visible = True
-        userEquipmentPanel.Visible = False
-        userPostPanel.Visible = False
+        ProfilePanel.Visible = True
+        EquipmentPanel.Visible = False
+        PostPanel.Visible = False
         profileSubPanel2.Visible = False
 
         equipmentSearchBox.Text = ""
@@ -175,203 +141,6 @@ Public Class UserHomePage
 
         connect_db()
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
-
-    End Sub
-
-
-    Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
-        Timer1.Start()
-
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-
-        exportBtnE.Visible = True
-
-        profileSubPanel2.Visible = False
-
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        User.display(userEquipmentPanel, EquipmentTitle, "Equipments")
-        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
-
-
-        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
-
-
-        fillHalls(hallSearchBoxE)
-    End Sub
-
-    'equipment subbuttons
-
-    Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
-
-        User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        profileSubPanel2.Visible = False
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
-        User.display(userEquipmentPanel, EquipmentTitle, "CPUs")
-        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        profileSubPanel2.Visible = False
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
-        User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
-        User.display(userEquipmentPanel, EquipmentTitle, "IP Phones")
-        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
-        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-
-
-        profileSubPanel2.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
-        User.display(userEquipmentPanel, EquipmentTitle, "Monitors")
-        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
-
-        userEquipmentPanel.Visible = True
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-
-
-        profileSubPanel2.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        fillHalls(hallSearchBoxE)
-
-    End Sub
-
-    Private Sub userLogout_Click(sender As Object, e As EventArgs) Handles userLogout.Click
-        Form1.Show()
-        Me.Visible = False
-
-        Form1.emailtxt.Text = ""
-        Form1.passwordtxt.Text = ""
-
-        userEquipmentPanel.Visible = False
-
-        userPostPanel.Visible = False
-
-        userProfilePanel.Visible = False
-        equipmentSearchBox.Text = ""
-        postSearchBox.Text = ""
-        hallSearchBoxP.Text = ""
-        hallSearchBoxE.Text = ""
-        userSearchBoxE.Text = ""
-        stateSearchBoxP.Text = ""
-
-        exportBtnE.Visible = False
 
     End Sub
 
@@ -404,14 +173,236 @@ Public Class UserHomePage
         User.showUserName(Form1.emailtxt, uName)
     End Sub
 
+
+    'post buttons 
+    Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
+
+        PostPanel.Visible = True
+        EquipmentPanel.Visible = False
+        ProfilePanel.Visible = False
+        profileSubPanel2.Visible = False
+        HomePagePanel.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+        fillcomboState(stateSearchBoxP, "posts", "post_state")
+
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+        fillHalls(hallSearchBoxP)
+
+    End Sub
+
+
+    Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
+        Timer1.Start()
+
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+
+        exportBtnE.Visible = True
+
+        profileSubPanel2.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        User.display(EquipmentPanel, EquipmentTitle, "Equipments")
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+
+        fillcomboState(userSearchBoxE, "equipments", "equipment_state")
+
+
+        fillHalls(hallSearchBoxE)
+    End Sub
+
+    'equipment subbuttons
+
+    Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
+
+        User.display(EquipmentPanel, EquipmentTitle, "CPUs")
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        profileSubPanel2.Visible = False
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+    Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs)
+        User.display(EquipmentPanel, EquipmentTitle, "CPUs")
+        User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        profileSubPanel2.Visible = False
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub IPsBtn_Click(sender As Object, e As EventArgs) Handles IPsBtn.Click
+        User.display(EquipmentPanel, EquipmentTitle, "IP Phones")
+        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub IPsBtn2_Click(sender As Object, e As EventArgs)
+        User.display(EquipmentPanel, EquipmentTitle, "IP Phones")
+        User.displayEquipmentTable("equipments", "IP_Phone", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
+        User.display(EquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+
+
+        profileSubPanel2.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs)
+        User.display(EquipmentPanel, EquipmentTitle, "Monitors")
+        User.displayEquipmentTable("equipments", "Monitor", equipmentDataGridView)
+
+        EquipmentPanel.Visible = True
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+
+
+        profileSubPanel2.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        fillHalls(hallSearchBoxE)
+
+    End Sub
+
+    Private Sub userLogout_Click(sender As Object, e As EventArgs)
+        Form1.Show()
+        Me.Visible = False
+
+        Form1.emailtxt.Text = ""
+        Form1.passwordtxt.Text = ""
+
+        EquipmentPanel.Visible = False
+
+        PostPanel.Visible = False
+
+        ProfilePanel.Visible = False
+        equipmentSearchBox.Text = ""
+        postSearchBox.Text = ""
+        hallSearchBoxP.Text = ""
+        hallSearchBoxE.Text = ""
+        userSearchBoxE.Text = ""
+        stateSearchBoxP.Text = ""
+
+        exportBtnE.Visible = False
+
+    End Sub
+
+
     'searches section
-    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
+    Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs)
 
         User.search("equipments", equipmentDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
 
     End Sub
 
-    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
+    Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs)
 
         User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
     End Sub
@@ -422,7 +413,7 @@ Public Class UserHomePage
 
 
     'post hall search
-    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
+    Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim hall_id As Integer
 
         postSearchBox.Text = ""
@@ -488,7 +479,7 @@ Public Class UserHomePage
 
 
     'search by halls in equipment
-    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxE.SelectedIndexChanged
+    Private Sub hallSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim hall_id As Integer
 
         equipmentSearchBox.Text = ""
@@ -555,7 +546,7 @@ Public Class UserHomePage
 
     'equipment search by state
 
-    Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles userSearchBoxE.SelectedIndexChanged
+    Private Sub userSearchBoxE_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim hall_id As Integer
 
         equipmentSearchBox.Text = ""
@@ -598,7 +589,7 @@ Public Class UserHomePage
 
 
     'post search by state
-    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
+    Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs)
 
         postSearchBox.Text = ""
 
@@ -642,7 +633,7 @@ Public Class UserHomePage
     End Sub
 
     'export buttons 
-    Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
+    Private Sub exportBtnP_Click(sender As Object, e As EventArgs)
 
 
         User.export(postDataGridView, "posts")
@@ -654,7 +645,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
+    Private Sub exportBtnE_Click(sender As Object, e As EventArgs)
 
 
         User.export(equipmentDataGridView, "equipments")
@@ -732,4 +723,5 @@ Public Class UserHomePage
             MessageBox.Show(ex.Message, "close the server", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 End Class

@@ -495,7 +495,7 @@ CREATE TABLE `cems_halls` (
 
 
 INSERT INTO `cems_halls` (`hall_id`, `hall_name`) VALUES
-(1, 'Hall 1');
+(0, 'Hall 0');
 
 -- --------------------------------------------------------
 
@@ -508,6 +508,10 @@ CREATE TABLE `cems_posts` (
   `hall_id` int(11) NOT NULL,
   `post_state` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
+(0, 0, good);
 
 -- --------------------------------------------------------
 

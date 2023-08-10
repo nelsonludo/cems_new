@@ -1119,7 +1119,24 @@ Public Class users
         End Try
     End Sub
 
-
+    'dropdown timer function
+    Public Sub dropdownTimer(iscollapsed As Boolean, dropdown As Panel, timer1 As Timer)
+        If iscollapsed Then
+            'equipmentsBtn.Image = My.Resources.drop_down_arrow
+            dropdown.Height += 10
+            If dropdown.Size = dropdown.MaximumSize Then
+                timer1.Stop()
+                iscollapsed = False
+            End If
+        Else
+            'equipmentsBtn.Image = My.Resources.drop_left_arrow1
+            dropdown.Height -= 10
+            If dropdown.Size = dropdown.MinimumSize Then
+                timer1.Stop()
+                iscollapsed = True
+            End If
+        End If
+    End Sub
 
 
 End Class
