@@ -100,6 +100,7 @@ Partial Class UserHomePage
         Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
         Me.PostPanel = New System.Windows.Forms.Panel()
+        Me.refreshBtnP = New System.Windows.Forms.Button()
         Me.confirmMsgP = New System.Windows.Forms.Label()
         Me.hallSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.searchErrorP = New System.Windows.Forms.Label()
@@ -112,6 +113,7 @@ Partial Class UserHomePage
         Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.EquipmentPanel = New System.Windows.Forms.Panel()
+        Me.refreshBtnE = New System.Windows.Forms.Button()
         Me.confirmMsgE = New System.Windows.Forms.Label()
         Me.hallSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.searchErrorE = New System.Windows.Forms.Label()
@@ -123,8 +125,6 @@ Partial Class UserHomePage
         Me.Label34 = New System.Windows.Forms.Label()
         Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
-        Me.refreshBtnP = New System.Windows.Forms.Button()
-        Me.refreshBtnE = New System.Windows.Forms.Button()
         Me.sideBar.SuspendLayout()
         Me.dropdown.SuspendLayout()
         Me.Header.SuspendLayout()
@@ -1184,6 +1184,25 @@ Partial Class UserHomePage
         Me.PostPanel.TabIndex = 71
         Me.PostPanel.Visible = False
         '
+        'refreshBtnP
+        '
+        Me.refreshBtnP.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.refreshBtnP.AutoSize = True
+        Me.refreshBtnP.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnP.FlatAppearance.BorderSize = 0
+        Me.refreshBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.refreshBtnP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.refreshBtnP.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.refreshBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.refreshBtnP.Location = New System.Drawing.Point(1570, 6)
+        Me.refreshBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.refreshBtnP.Name = "refreshBtnP"
+        Me.refreshBtnP.Size = New System.Drawing.Size(100, 35)
+        Me.refreshBtnP.TabIndex = 73
+        Me.refreshBtnP.Text = "Refresh"
+        Me.refreshBtnP.UseVisualStyleBackColor = False
+        '
         'confirmMsgP
         '
         Me.confirmMsgP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1202,6 +1221,7 @@ Partial Class UserHomePage
         '
         'hallSearchBoxP
         '
+        Me.hallSearchBoxP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.hallSearchBoxP.FormattingEnabled = True
         Me.hallSearchBoxP.Location = New System.Drawing.Point(710, 98)
         Me.hallSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
@@ -1364,6 +1384,7 @@ Partial Class UserHomePage
         '
         'stateSearchBoxP
         '
+        Me.stateSearchBoxP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.stateSearchBoxP.FormattingEnabled = True
         Me.stateSearchBoxP.Location = New System.Drawing.Point(919, 98)
         Me.stateSearchBoxP.Margin = New System.Windows.Forms.Padding(4)
@@ -1397,6 +1418,25 @@ Partial Class UserHomePage
         Me.EquipmentPanel.TabIndex = 72
         Me.EquipmentPanel.Visible = False
         '
+        'refreshBtnE
+        '
+        Me.refreshBtnE.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.refreshBtnE.AutoSize = True
+        Me.refreshBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnE.FlatAppearance.BorderSize = 0
+        Me.refreshBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.refreshBtnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.refreshBtnE.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.refreshBtnE.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.refreshBtnE.Location = New System.Drawing.Point(1570, 6)
+        Me.refreshBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.refreshBtnE.Name = "refreshBtnE"
+        Me.refreshBtnE.Size = New System.Drawing.Size(100, 35)
+        Me.refreshBtnE.TabIndex = 73
+        Me.refreshBtnE.Text = "Refresh"
+        Me.refreshBtnE.UseVisualStyleBackColor = False
+        '
         'confirmMsgE
         '
         Me.confirmMsgE.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1414,6 +1454,7 @@ Partial Class UserHomePage
         '
         'hallSearchBoxE
         '
+        Me.hallSearchBoxE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.hallSearchBoxE.FormattingEnabled = True
         Me.hallSearchBoxE.Location = New System.Drawing.Point(710, 98)
         Me.hallSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
@@ -1573,6 +1614,7 @@ Partial Class UserHomePage
         '
         'userSearchBoxE
         '
+        Me.userSearchBoxE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.userSearchBoxE.FormattingEnabled = True
         Me.userSearchBoxE.Location = New System.Drawing.Point(919, 98)
         Me.userSearchBoxE.Margin = New System.Windows.Forms.Padding(4)
@@ -1580,44 +1622,6 @@ Partial Class UserHomePage
         Me.userSearchBoxE.Name = "userSearchBoxE"
         Me.userSearchBoxE.Size = New System.Drawing.Size(130, 24)
         Me.userSearchBoxE.TabIndex = 66
-        '
-        'refreshBtnP
-        '
-        Me.refreshBtnP.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.refreshBtnP.AutoSize = True
-        Me.refreshBtnP.BackColor = System.Drawing.Color.SeaGreen
-        Me.refreshBtnP.FlatAppearance.BorderSize = 0
-        Me.refreshBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.refreshBtnP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.refreshBtnP.ForeColor = System.Drawing.Color.Yellow
-        Me.refreshBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.refreshBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.refreshBtnP.Location = New System.Drawing.Point(1570, 6)
-        Me.refreshBtnP.Margin = New System.Windows.Forms.Padding(4)
-        Me.refreshBtnP.Name = "refreshBtnP"
-        Me.refreshBtnP.Size = New System.Drawing.Size(100, 35)
-        Me.refreshBtnP.TabIndex = 73
-        Me.refreshBtnP.Text = "Refresh"
-        Me.refreshBtnP.UseVisualStyleBackColor = False
-        '
-        'refreshBtnE
-        '
-        Me.refreshBtnE.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.refreshBtnE.AutoSize = True
-        Me.refreshBtnE.BackColor = System.Drawing.Color.SeaGreen
-        Me.refreshBtnE.FlatAppearance.BorderSize = 0
-        Me.refreshBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.refreshBtnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.refreshBtnE.ForeColor = System.Drawing.Color.Yellow
-        Me.refreshBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.refreshBtnE.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.refreshBtnE.Location = New System.Drawing.Point(1570, 6)
-        Me.refreshBtnE.Margin = New System.Windows.Forms.Padding(4)
-        Me.refreshBtnE.Name = "refreshBtnE"
-        Me.refreshBtnE.Size = New System.Drawing.Size(100, 35)
-        Me.refreshBtnE.TabIndex = 73
-        Me.refreshBtnE.Text = "Refresh"
-        Me.refreshBtnE.UseVisualStyleBackColor = False
         '
         'UserHomePage
         '

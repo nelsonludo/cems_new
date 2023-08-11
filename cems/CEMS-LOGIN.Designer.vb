@@ -408,6 +408,7 @@ Partial Class Form1
         '
         'userUserAddTitleInput
         '
+        Me.userUserAddTitleInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.userUserAddTitleInput.FormattingEnabled = True
         Me.userUserAddTitleInput.Location = New System.Drawing.Point(60, 286)
         Me.userUserAddTitleInput.Margin = New System.Windows.Forms.Padding(4)

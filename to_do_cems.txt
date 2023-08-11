@@ -8,7 +8,6 @@ list of things to do in cems
 
 *DESIGN TODO
 -english and french
--remove typing on combo boxes
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 
