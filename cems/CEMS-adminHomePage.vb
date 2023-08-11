@@ -118,21 +118,7 @@ Public Class adminhomePage
 
     'dropdown code 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If iscollapsed Then
-            'equipmentsBtn.Image = My.Resources.drop_down_arrow
-            dropdown.Height += 10
-            If dropdown.Size = dropdown.MaximumSize Then
-                Timer1.Stop()
-                iscollapsed = False
-            End If
-        Else
-            'equipmentsBtn.Image = My.Resources.drop_left_arrow1
-            dropdown.Height -= 10
-            If dropdown.Size = dropdown.MinimumSize Then
-                Timer1.Stop()
-                iscollapsed = True
-            End If
-        End If
+        User.dropdownTimer(iscollapsed, dropdown, Timer1)
     End Sub
 
 
@@ -2768,6 +2754,9 @@ Public Class adminhomePage
         End Try
 
     End Sub
+
+
+    'General styles part 
 
 
 End Class

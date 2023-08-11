@@ -725,4 +725,37 @@ Public Class UserHomePage
         End Try
     End Sub
 
+
+    'General styles part 
+
+    'hovers 
+    Private Sub dashboardBtn_MouseHover(sender As Object, e As EventArgs) Handles dashboardBtn.MouseHover
+        'this is for mintcream hover, it slightly lowers the opacity of the button
+        User.dashboardBtnHover(dashboardBtn, 245, 255, 250, 130, dashBoardIcon, dashBoard)
+    End Sub
+    Private Sub profileBtn_MouseHover(sender As Object, e As EventArgs) Handles profileBtn.MouseHover
+        'this is for seagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(profileBtn, 46, 139, 87, 130, profileIcon, profile)
+    End Sub
+    Private Sub postsBtn_MouseHover(sender As Object, e As EventArgs) Handles postsBtn.MouseHover
+        'this is for seagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(postsBtn, 46, 139, 87, 130, postIcon, Posts)
+    End Sub
+    Private Sub equipmentsBtn_MouseHover(sender As Object, e As EventArgs) Handles equipmentsBtn.MouseHover
+        'this is for seagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(equipmentsBtn, 46, 139, 87, 130, EquipmentIcon, Equipments)
+    End Sub
+    Private Sub monitorsBtn_MouseHover(sender As Object, e As EventArgs) Handles monitorsBtn.MouseHover
+        'this is for darkseagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(monitorsBtn, 61, 122, 81, 130, monitorIcon, monitors)
+    End Sub
+    Private Sub CPUsBtn_MouseHover(sender As Object, e As EventArgs) Handles CPUsBtn.MouseHover
+        'this is for darkseagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(CPUsBtn, 61, 122, 81, 130, CPUIcon, CPUs)
+    End Sub
+    Private Sub IPphonesBtn_MouseHover(sender As Object, e As EventArgs) Handles IPsBtn.MouseHover
+        'this is for darkseagreen hover, it slightly lowers the opacity of the button
+        User.sidebarBtnHover(IPsBtn, 61, 122, 81, 130, IPphoneIcon, IP)
+    End Sub
+
 End Class

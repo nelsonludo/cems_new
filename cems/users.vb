@@ -1139,6 +1139,19 @@ Public Class users
     End Sub
 
 
+    'button hovers styles
+    Public Sub sidebarBtnHover(button As Button, red As Integer, green As Integer, blue As Integer, alpha As Integer, icon As Label, label As Label)
+        button.BackColor = Color.FromArgb(red, green, blue, alpha)
+        icon.BackColor = Color.FromArgb(red, green, blue, alpha)
+        label.BackColor = Color.FromArgb(red, green, blue, alpha)
+    End Sub
+    Public Sub dashboardBtnHover(button As Button, red As Integer, green As Integer, blue As Integer, alpha As Integer, icon As PictureBox, label As Label)
+        button.BackColor = Color.FromArgb(red, green, blue, alpha)
+        icon.BackColor = Color.FromArgb(red, green, blue, alpha)
+        label.BackColor = Color.FromArgb(red, green, blue, alpha)
+    End Sub
+
+
 End Class
 
 '                    .CommandText = "Update cems.cems_'" & table & "' Set user_name = '" & name & "', user_phone_number = '" & phone & "', user_email = '" & email & "'  where user_email = '" & Form1.emailtxt.Text & "'"

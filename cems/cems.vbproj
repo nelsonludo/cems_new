@@ -294,6 +294,42 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5070392.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipmentScrew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\posts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thingForCPU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,9 +9,7 @@ list of things to do in cems
 
 *DESIGN TODO
 -review datagridview design(cell height)
--Agrandir!
 -Highlight the tab button
--review admin profile design
 -responsive
 -chose a font type
 -english and french
