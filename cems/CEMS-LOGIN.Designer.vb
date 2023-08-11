@@ -94,22 +94,22 @@ Partial Class Form1
         'userEmail
         '
         Me.userEmail.AutoSize = True
-        Me.userEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.userEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.userEmail.Location = New System.Drawing.Point(55, 80)
         Me.userEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userEmail.Name = "userEmail"
-        Me.userEmail.Size = New System.Drawing.Size(56, 20)
+        Me.userEmail.Size = New System.Drawing.Size(62, 20)
         Me.userEmail.TabIndex = 54
         Me.userEmail.Text = "Email "
         '
         'userPwd
         '
         Me.userPwd.AutoSize = True
-        Me.userPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.userPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.userPwd.Location = New System.Drawing.Point(55, 140)
         Me.userPwd.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.userPwd.Name = "userPwd"
-        Me.userPwd.Size = New System.Drawing.Size(88, 20)
+        Me.userPwd.Size = New System.Drawing.Size(97, 20)
         Me.userPwd.TabIndex = 53
         Me.userPwd.Text = "Password "
         '
@@ -117,12 +117,12 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.MintCream
         Me.Label1.Location = New System.Drawing.Point(240, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 25)
+        Me.Label1.Size = New System.Drawing.Size(59, 22)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Login"
         '
@@ -169,7 +169,7 @@ Partial Class Form1
         Me.login.BackColor = System.Drawing.Color.SeaGreen
         Me.login.FlatAppearance.BorderSize = 0
         Me.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.login.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.login.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.login.ForeColor = System.Drawing.Color.Yellow
         Me.login.Location = New System.Drawing.Point(60, 210)
         Me.login.Margin = New System.Windows.Forms.Padding(4)
@@ -223,12 +223,12 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.MintCream
         Me.Label3.Location = New System.Drawing.Point(240, 9)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 25)
+        Me.Label3.Size = New System.Drawing.Size(105, 22)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Connexion"
         '
@@ -236,11 +236,11 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.MintCream
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label7.Location = New System.Drawing.Point(55, 200)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 20)
+        Me.Label7.Size = New System.Drawing.Size(91, 20)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Password"
         '
@@ -248,11 +248,11 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.MintCream
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.Location = New System.Drawing.Point(55, 80)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 20)
+        Me.Label6.Size = New System.Drawing.Size(70, 20)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Server "
         '
@@ -260,11 +260,11 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.MintCream
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.Location = New System.Drawing.Point(55, 260)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 20)
+        Me.Label5.Size = New System.Drawing.Size(89, 20)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Database"
         '
@@ -272,11 +272,11 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.MintCream
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(55, 140)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 20)
+        Me.Label4.Size = New System.Drawing.Size(100, 20)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "User name"
         '
@@ -311,7 +311,7 @@ Partial Class Form1
         Me.connectBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.connectBtn.FlatAppearance.BorderSize = 0
         Me.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.connectBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.connectBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.connectBtn.ForeColor = System.Drawing.Color.Yellow
         Me.connectBtn.Location = New System.Drawing.Point(60, 315)
         Me.connectBtn.Margin = New System.Windows.Forms.Padding(4)
@@ -384,12 +384,12 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.MintCream
         Me.Label8.Location = New System.Drawing.Point(210, 9)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(129, 25)
+        Me.Label8.Size = New System.Drawing.Size(129, 22)
         Me.Label8.TabIndex = 59
         Me.Label8.Text = "Create admin"
         '
@@ -429,11 +429,11 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.MintCream
-        Me.Label2.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(55, 380)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 22)
+        Me.Label2.Size = New System.Drawing.Size(161, 20)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Confirm password"
         '
@@ -451,11 +451,11 @@ Partial Class Form1
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.MintCream
-        Me.Label14.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label14.Location = New System.Drawing.Point(55, 320)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(135, 22)
+        Me.Label14.Size = New System.Drawing.Size(135, 20)
         Me.Label14.TabIndex = 54
         Me.Label14.Text = "User password"
         '
@@ -463,11 +463,11 @@ Partial Class Form1
         '
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.MintCream
-        Me.Label15.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label15.Location = New System.Drawing.Point(55, 260)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(88, 22)
+        Me.Label15.Size = New System.Drawing.Size(87, 20)
         Me.Label15.TabIndex = 52
         Me.Label15.Text = "User title"
         '
@@ -483,11 +483,11 @@ Partial Class Form1
         '
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.MintCream
-        Me.Label16.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label16.Location = New System.Drawing.Point(55, 200)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(180, 22)
+        Me.Label16.Size = New System.Drawing.Size(173, 20)
         Me.Label16.TabIndex = 50
         Me.Label16.Text = "User phone number"
         '
@@ -503,11 +503,11 @@ Partial Class Form1
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.MintCream
-        Me.Label17.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label17.Location = New System.Drawing.Point(55, 140)
         Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(101, 22)
+        Me.Label17.Size = New System.Drawing.Size(100, 20)
         Me.Label17.TabIndex = 48
         Me.Label17.Text = "User email"
         '
@@ -525,7 +525,7 @@ Partial Class Form1
         Me.userAddvalidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.userAddvalidationBtn.FlatAppearance.BorderSize = 0
         Me.userAddvalidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.userAddvalidationBtn.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.userAddvalidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.userAddvalidationBtn.ForeColor = System.Drawing.Color.Yellow
         Me.userAddvalidationBtn.Location = New System.Drawing.Point(60, 436)
         Me.userAddvalidationBtn.Margin = New System.Windows.Forms.Padding(0)
@@ -540,11 +540,11 @@ Partial Class Form1
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.MintCream
-        Me.Label18.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!)
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label18.Location = New System.Drawing.Point(55, 80)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(102, 22)
+        Me.Label18.Size = New System.Drawing.Size(100, 20)
         Me.Label18.TabIndex = 11
         Me.Label18.Text = "User name"
         '
@@ -568,7 +568,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.ClientSize = New System.Drawing.Size(1924, 731)
+        Me.ClientSize = New System.Drawing.Size(1924, 859)
         Me.Controls.Add(Me.userAddPanel)
         Me.Controls.Add(Me.connexionStringPanel)
         Me.Controls.Add(Me.Panel1)
