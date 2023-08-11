@@ -75,6 +75,7 @@ Public Class UserHomePage
         search.Items.Clear()
 
 
+
         search.Items.Add("Good")
         search.Items.Add("Bad")
         search.Items.Add("In reparation")
@@ -85,6 +86,7 @@ Public Class UserHomePage
 
         search.Items.Clear()
 
+        connect_db()
         Try
             sqlConn.Open()
 

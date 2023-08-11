@@ -142,7 +142,7 @@ Partial Class Form1
         '
         Me.forgotPasswordMessage.AutoSize = True
         Me.forgotPasswordMessage.ForeColor = System.Drawing.Color.Red
-        Me.forgotPasswordMessage.Location = New System.Drawing.Point(36, 342)
+        Me.forgotPasswordMessage.Location = New System.Drawing.Point(10, 342)
         Me.forgotPasswordMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.forgotPasswordMessage.Name = "forgotPasswordMessage"
         Me.forgotPasswordMessage.Size = New System.Drawing.Size(13, 16)

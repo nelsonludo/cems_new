@@ -1350,6 +1350,9 @@
   <data name="userAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="userAddBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="userAddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -1428,6 +1431,9 @@
   <data name="&gt;&gt;confirmMsgU.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="userUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="userUpdateBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1441,7 +1447,7 @@
     <value>NoControl</value>
   </data>
   <data name="userUpdateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1237, 94</value>
+    <value>1227, 94</value>
   </data>
   <data name="userUpdateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1512,6 +1518,9 @@
   <data name="exportBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="exportBtnU.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="exportBtnU.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -1551,17 +1560,20 @@
   <data name="&gt;&gt;exportBtnU.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="userDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="userDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>45</value>
   </data>
   <data name="userDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 133</value>
+    <value>99, 133</value>
   </data>
   <data name="userDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 14</value>
   </data>
   <data name="userDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 410</value>
+    <value>1225, 410</value>
   </data>
   <data name="userDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1614,6 +1626,9 @@
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="userDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="userDeleteBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1627,7 +1642,7 @@
     <value>NoControl</value>
   </data>
   <data name="userDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1146, 94</value>
+    <value>1126, 94</value>
   </data>
   <data name="userDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1723,7 +1738,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -3525,7 +3540,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminHomePagePanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="adminEquipmentPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -4109,6 +4124,9 @@
   <data name="exportBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="exportBtnE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="exportBtnE.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -4128,7 +4146,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="exportBtnE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
+    <value>100, 32</value>
   </data>
   <data name="exportBtnE.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -4175,17 +4193,20 @@
   <data name="&gt;&gt;equipmentSearchBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="equipmentDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="equipmentDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>45</value>
   </data>
   <data name="equipmentDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 133</value>
+    <value>99, 133</value>
   </data>
   <data name="equipmentDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 14</value>
   </data>
   <data name="equipmentDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 410</value>
+    <value>1225, 410</value>
   </data>
   <data name="equipmentDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -4237,6 +4258,9 @@
   </data>
   <data name="&gt;&gt;EquipmentTitle.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="statePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="Label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4478,6 +4502,9 @@
   <data name="addEquipmentBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="addEquipmentBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="addEquipmentBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -4497,7 +4524,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="addEquipmentBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
+    <value>100, 32</value>
   </data>
   <data name="addEquipmentBtn.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -4695,7 +4722,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="adminPostPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -5201,6 +5228,9 @@
   <data name="exportBtnP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="exportBtnP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="exportBtnP.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -5220,7 +5250,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="exportBtnP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
+    <value>100, 32</value>
   </data>
   <data name="exportBtnP.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -5264,17 +5294,20 @@
   <data name="&gt;&gt;postSearchBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="postDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="postDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>45</value>
   </data>
   <data name="postDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 133</value>
+    <value>99, 133</value>
   </data>
   <data name="postDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 14</value>
   </data>
   <data name="postDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 410</value>
+    <value>1225, 410</value>
   </data>
   <data name="postDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -5326,6 +5359,9 @@
   </data>
   <data name="&gt;&gt;postTitle.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="postChangeStatePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="Label66.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5567,6 +5603,9 @@
   <data name="addPostBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="addPostBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="addPostBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -5586,7 +5625,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="addPostBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
+    <value>100, 32</value>
   </data>
   <data name="addPostBtn.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -5781,7 +5820,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminPostPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="adminProfilePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -6828,7 +6867,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminProfilePanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="adminHallsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -7340,6 +7379,9 @@
   <data name="hallAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="hallAddBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="hallAddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -7421,6 +7463,9 @@
   <data name="&gt;&gt;confirmMsgH.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="HallUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="HallUpdateBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7434,7 +7479,7 @@
     <value>NoControl</value>
   </data>
   <data name="HallUpdateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1237, 94</value>
+    <value>1227, 94</value>
   </data>
   <data name="HallUpdateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -7529,6 +7574,9 @@
   <data name="exportBtnH.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="exportBtnH.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="exportBtnH.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -7568,17 +7616,20 @@
   <data name="&gt;&gt;exportBtnH.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="hallDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="hallDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>45</value>
   </data>
   <data name="hallDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 133</value>
+    <value>99, 133</value>
   </data>
   <data name="hallDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 14</value>
   </data>
   <data name="hallDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 410</value>
+    <value>1225, 410</value>
   </data>
   <data name="hallDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -7631,6 +7682,9 @@
   <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="HallDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="HallDeleteBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7644,7 +7698,7 @@
     <value>NoControl</value>
   </data>
   <data name="HallDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1146, 94</value>
+    <value>1126, 94</value>
   </data>
   <data name="HallDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8285,6 +8339,9 @@
   <data name="&gt;&gt;roleAddPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="roleDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="roleDeleteBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -8298,7 +8355,7 @@
     <value>NoControl</value>
   </data>
   <data name="roleDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1145, 95</value>
+    <value>1125, 92</value>
   </data>
   <data name="roleDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8329,6 +8386,9 @@
   </data>
   <data name="roleAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="roleAddBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="roleAddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -8411,6 +8471,9 @@
   <data name="&gt;&gt;confirmMsgR.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="roleUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="roleUpdateBtn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -8424,7 +8487,7 @@
     <value>NoControl</value>
   </data>
   <data name="roleUpdateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1236, 95</value>
+    <value>1226, 91</value>
   </data>
   <data name="roleUpdateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -8495,6 +8558,9 @@
   <data name="exportBtnR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="exportBtnR.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="exportBtnR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -8534,17 +8600,20 @@
   <data name="&gt;&gt;exportBtnR.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="roleDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="roleDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>45</value>
   </data>
   <data name="roleDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 133</value>
+    <value>99, 133</value>
   </data>
   <data name="roleDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 14</value>
   </data>
   <data name="roleDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 410</value>
+    <value>1225, 410</value>
   </data>
   <data name="roleDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -8622,7 +8691,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminRolePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

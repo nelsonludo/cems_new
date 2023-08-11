@@ -249,6 +249,7 @@ Public Class adminhomePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+        adminHomePagePanel.Visible = False
 
         postChangeStatePanel.Visible = False
         addPostPanel.Visible = False
@@ -582,6 +583,7 @@ Public Class adminhomePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+        adminHomePagePanel.Visible = False
 
         profileSubPanel2.Visible = False
         addPostPanel.Visible = False
@@ -1135,6 +1137,7 @@ Public Class adminhomePage
 
         userUpdateBtn.Visible = False
         userAddBtn.Visible = False
+        userDeleteBtn.Visible = False
         exportBtnU.Visible = False
         'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
