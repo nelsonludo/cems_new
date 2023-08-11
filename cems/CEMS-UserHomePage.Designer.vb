@@ -200,7 +200,6 @@ Partial Class UserHomePage
         '
         Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.CPUsBtn.FlatAppearance.BorderSize = 0
-        Me.CPUsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.CPUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CPUsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.CPUsBtn.ForeColor = System.Drawing.Color.MintCream
@@ -242,7 +241,6 @@ Partial Class UserHomePage
         Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        Me.equipmentsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
         Me.equipmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.equipmentsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
@@ -330,7 +328,6 @@ Partial Class UserHomePage
         Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.profileBtn.FlatAppearance.BorderSize = 0
-        Me.profileBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
         Me.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.profileBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.profileBtn.ForeColor = System.Drawing.Color.MintCream
@@ -352,7 +349,6 @@ Partial Class UserHomePage
         Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.postsBtn.FlatAppearance.BorderSize = 0
-        Me.postsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen
         Me.postsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.postsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.postsBtn.ForeColor = System.Drawing.Color.MintCream
