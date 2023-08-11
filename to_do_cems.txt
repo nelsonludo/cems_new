@@ -9,9 +9,7 @@ list of things to do in cems
 
 *DESIGN TODO
 -review datagridview design(cell height)
--Highlight the tab button
 -responsive
--chose a font type
 -english and french
 -remove typing on combo boxes
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 

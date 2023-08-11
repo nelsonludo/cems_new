@@ -173,10 +173,10 @@ Partial Class UserHomePage
         Me.sideBar.Controls.Add(Me.profileBtn)
         Me.sideBar.Controls.Add(Me.postsBtn)
         Me.sideBar.ForeColor = System.Drawing.Color.MintCream
-        Me.sideBar.Location = New System.Drawing.Point(13, 13)
-        Me.sideBar.Margin = New System.Windows.Forms.Padding(4)
+        Me.sideBar.Location = New System.Drawing.Point(15, 28)
+        Me.sideBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 44)
         Me.sideBar.Name = "sideBar"
-        Me.sideBar.Size = New System.Drawing.Size(209, 803)
+        Me.sideBar.Size = New System.Drawing.Size(209, 675)
         Me.sideBar.TabIndex = 67
         '
         'dropdown
@@ -193,7 +193,7 @@ Partial Class UserHomePage
         Me.dropdown.Margin = New System.Windows.Forms.Padding(0)
         Me.dropdown.MinimumSize = New System.Drawing.Size(208, 58)
         Me.dropdown.Name = "dropdown"
-        Me.dropdown.Size = New System.Drawing.Size(208, 386)
+        Me.dropdown.Size = New System.Drawing.Size(208, 258)
         Me.dropdown.TabIndex = 7
         '
         'CPUsBtn
@@ -375,10 +375,10 @@ Partial Class UserHomePage
         Me.Header.Controls.Add(Me.PictureBox1)
         Me.Header.Controls.Add(Me.uName)
         Me.Header.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Header.Location = New System.Drawing.Point(229, 13)
+        Me.Header.Location = New System.Drawing.Point(231, 28)
         Me.Header.Margin = New System.Windows.Forms.Padding(4)
         Me.Header.Name = "Header"
-        Me.Header.Size = New System.Drawing.Size(1683, 78)
+        Me.Header.Size = New System.Drawing.Size(1679, 78)
         Me.Header.TabIndex = 68
         '
         'Logout
@@ -392,7 +392,7 @@ Partial Class UserHomePage
         Me.Logout.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.Logout.ForeColor = System.Drawing.Color.SeaGreen
         Me.Logout.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Logout.Location = New System.Drawing.Point(1546, 23)
+        Me.Logout.Location = New System.Drawing.Point(1542, 23)
         Me.Logout.Margin = New System.Windows.Forms.Padding(0)
         Me.Logout.MaximumSize = New System.Drawing.Size(208, 62)
         Me.Logout.Name = "Logout"
@@ -460,10 +460,10 @@ Partial Class UserHomePage
         Me.HomePagePanel.Controls.Add(Me.Label3)
         Me.HomePagePanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.HomePagePanel.ForeColor = System.Drawing.Color.Yellow
-        Me.HomePagePanel.Location = New System.Drawing.Point(229, 100)
+        Me.HomePagePanel.Location = New System.Drawing.Point(231, 115)
         Me.HomePagePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HomePagePanel.Name = "HomePagePanel"
-        Me.HomePagePanel.Size = New System.Drawing.Size(1683, 614)
+        Me.HomePagePanel.Size = New System.Drawing.Size(1679, 584)
         Me.HomePagePanel.TabIndex = 69
         '
         'CPUsBtn2
@@ -729,10 +729,10 @@ Partial Class UserHomePage
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.ProfilePanel.Controls.Add(Me.profileTitle)
-        Me.ProfilePanel.Location = New System.Drawing.Point(229, 100)
+        Me.ProfilePanel.Location = New System.Drawing.Point(231, 115)
         Me.ProfilePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ProfilePanel.Name = "ProfilePanel"
-        Me.ProfilePanel.Size = New System.Drawing.Size(1683, 618)
+        Me.ProfilePanel.Size = New System.Drawing.Size(1679, 588)
         Me.ProfilePanel.TabIndex = 70
         Me.ProfilePanel.Visible = False
         '
@@ -743,7 +743,7 @@ Partial Class UserHomePage
         Me.confirmMsgPr.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
         Me.confirmMsgPr.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.confirmMsgPr.Location = New System.Drawing.Point(1100, 10)
+        Me.confirmMsgPr.Location = New System.Drawing.Point(1096, 10)
         Me.confirmMsgPr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgPr.Name = "confirmMsgPr"
         Me.confirmMsgPr.Size = New System.Drawing.Size(290, 22)
@@ -1174,10 +1174,10 @@ Partial Class UserHomePage
         Me.PostPanel.Controls.Add(Me.hallsearchlabel)
         Me.PostPanel.Controls.Add(Me.postsearchlabel)
         Me.PostPanel.Controls.Add(Me.stateSearchBoxP)
-        Me.PostPanel.Location = New System.Drawing.Point(229, 100)
+        Me.PostPanel.Location = New System.Drawing.Point(231, 115)
         Me.PostPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.PostPanel.Name = "PostPanel"
-        Me.PostPanel.Size = New System.Drawing.Size(1683, 618)
+        Me.PostPanel.Size = New System.Drawing.Size(1679, 588)
         Me.PostPanel.TabIndex = 71
         Me.PostPanel.Visible = False
         '
@@ -1230,7 +1230,7 @@ Partial Class UserHomePage
         Me.exportBtnP.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.exportBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.exportBtnP.Location = New System.Drawing.Point(1469, 6)
+        Me.exportBtnP.Location = New System.Drawing.Point(1465, 6)
         Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnP.Name = "exportBtnP"
         Me.exportBtnP.Size = New System.Drawing.Size(100, 30)
@@ -1253,11 +1253,13 @@ Partial Class UserHomePage
         Me.postDataGridView.AllowUserToDeleteRows = False
         Me.postDataGridView.AllowUserToResizeColumns = False
         Me.postDataGridView.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
@@ -1271,25 +1273,27 @@ Partial Class UserHomePage
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.postDataGridView.ColumnHeadersHeight = 25
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray
+        Me.postDataGridView.ColumnHeadersHeight = 45
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.postDataGridView.EnableHeadersVisualStyles = False
         Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.postDataGridView.Location = New System.Drawing.Point(444, 133)
-        Me.postDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.postDataGridView.Location = New System.Drawing.Point(209, 133)
+        Me.postDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 14)
+        Me.postDataGridView.MultiSelect = False
         Me.postDataGridView.Name = "postDataGridView"
+        Me.postDataGridView.ReadOnly = True
         Me.postDataGridView.RowHeadersVisible = False
-        Me.postDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.postDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.postDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.postDataGridView.Size = New System.Drawing.Size(880, 410)
+        Me.postDataGridView.Size = New System.Drawing.Size(1136, 420)
         Me.postDataGridView.TabIndex = 30
         '
         'postTitle
@@ -1381,10 +1385,10 @@ Partial Class UserHomePage
         Me.EquipmentPanel.Controls.Add(Me.equipmentsearchpostidlabel)
         Me.EquipmentPanel.Controls.Add(Me.userSearchBoxE)
         Me.EquipmentPanel.ForeColor = System.Drawing.Color.Black
-        Me.EquipmentPanel.Location = New System.Drawing.Point(229, 100)
+        Me.EquipmentPanel.Location = New System.Drawing.Point(231, 115)
         Me.EquipmentPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.EquipmentPanel.Name = "EquipmentPanel"
-        Me.EquipmentPanel.Size = New System.Drawing.Size(1683, 618)
+        Me.EquipmentPanel.Size = New System.Drawing.Size(1679, 588)
         Me.EquipmentPanel.TabIndex = 72
         Me.EquipmentPanel.Visible = False
         '
@@ -1395,7 +1399,7 @@ Partial Class UserHomePage
         Me.confirmMsgE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgE.ForeColor = System.Drawing.Color.LimeGreen
         Me.confirmMsgE.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.confirmMsgE.Location = New System.Drawing.Point(1100, 10)
+        Me.confirmMsgE.Location = New System.Drawing.Point(1096, 10)
         Me.confirmMsgE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgE.Name = "confirmMsgE"
         Me.confirmMsgE.Size = New System.Drawing.Size(202, 22)
@@ -1436,7 +1440,7 @@ Partial Class UserHomePage
         Me.exportBtnE.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.exportBtnE.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.exportBtnE.Location = New System.Drawing.Point(1469, 6)
+        Me.exportBtnE.Location = New System.Drawing.Point(1465, 6)
         Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnE.Name = "exportBtnE"
         Me.exportBtnE.Size = New System.Drawing.Size(100, 30)
@@ -1461,42 +1465,49 @@ Partial Class UserHomePage
         Me.equipmentDataGridView.AllowUserToResizeColumns = False
         Me.equipmentDataGridView.AllowUserToResizeRows = False
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.equipmentDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.equipmentDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.equipmentDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.MintCream
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.equipmentDataGridView.ColumnHeadersHeight = 25
+        Me.equipmentDataGridView.ColumnHeadersHeight = 45
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(155, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle6
         Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.equipmentDataGridView.EnableHeadersVisualStyles = False
         Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.equipmentDataGridView.Location = New System.Drawing.Point(444, 133)
-        Me.equipmentDataGridView.Margin = New System.Windows.Forms.Padding(4)
+        Me.equipmentDataGridView.Location = New System.Drawing.Point(209, 133)
+        Me.equipmentDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 14)
+        Me.equipmentDataGridView.MultiSelect = False
         Me.equipmentDataGridView.Name = "equipmentDataGridView"
+        Me.equipmentDataGridView.ReadOnly = True
         Me.equipmentDataGridView.RowHeadersVisible = False
-        Me.equipmentDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.equipmentDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.equipmentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.equipmentDataGridView.Size = New System.Drawing.Size(880, 410)
+        Me.equipmentDataGridView.Size = New System.Drawing.Size(1136, 420)
         Me.equipmentDataGridView.TabIndex = 31
         '
         'EquipmentTitle
@@ -1571,8 +1582,8 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
-        Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.PostPanel)
+        Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.Header)
@@ -1583,7 +1594,7 @@ Partial Class UserHomePage
         Me.MaximizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1194, 675)
         Me.Name = "UserHomePage"
-        Me.Padding = New System.Windows.Forms.Padding(13, 0, 13, 0)
+        Me.Padding = New System.Windows.Forms.Padding(15)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home Page"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
