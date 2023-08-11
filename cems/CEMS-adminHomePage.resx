@@ -333,6 +333,51 @@
   <data name="adminUsersPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="refreshBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="refreshBtnU.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="refreshBtnU.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="refreshBtnU.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="refreshBtnU.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="refreshBtnU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshBtnU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1500, 6</value>
+  </data>
+  <data name="refreshBtnU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="refreshBtnU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="refreshBtnU.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="refreshBtnU.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnU.Name" xml:space="preserve">
+    <value>refreshBtnU</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnU.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnU.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label59.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -745,7 +790,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label60.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1321,7 +1366,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userAddPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="userSearchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>601, 98</value>
@@ -1345,7 +1390,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userSearchBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="userAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1387,7 +1432,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userAddBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="confirmMsgU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1429,7 +1474,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;confirmMsgU.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="userUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1474,7 +1519,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userUpdateBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="searchErrorU.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1513,7 +1558,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;searchErrorU.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="exportBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1558,7 +1603,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;exportBtnU.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="userDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1588,7 +1633,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userDataGridView.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1624,7 +1669,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="userDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1669,7 +1714,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;userDeleteBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="searchuserlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1711,7 +1756,7 @@
     <value>adminUsersPanel</value>
   </data>
   <data name="&gt;&gt;searchuserlabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="adminUsersPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 100</value>
@@ -1738,7 +1783,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -3545,6 +3590,51 @@
   <data name="adminEquipmentPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="refreshBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="refreshBtnE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="refreshBtnE.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="refreshBtnE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="refreshBtnE.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="refreshBtnE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshBtnE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1500, 6</value>
+  </data>
+  <data name="refreshBtnE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="refreshBtnE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="refreshBtnE.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="refreshBtnE.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnE.Name" xml:space="preserve">
+    <value>refreshBtnE</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4011,7 +4101,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;addEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="confirmMsgE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4053,7 +4143,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;confirmMsgE.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="hallSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
     <value>710, 98</value>
@@ -4080,7 +4170,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;hallSearchBoxE.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="searchErrorE.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4119,7 +4209,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;searchErrorE.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="exportBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4164,7 +4254,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;exportBtnE.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="equipmentSearchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>518, 98</value>
@@ -4191,7 +4281,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;equipmentSearchBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="equipmentDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -4221,7 +4311,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;equipmentDataGridView.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="EquipmentTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4257,7 +4347,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;EquipmentTitle.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="statePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4497,7 +4587,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;statePanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="addEquipmentBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4542,7 +4632,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;addEquipmentBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Label33.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4584,7 +4674,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;Label33.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label34.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4626,7 +4716,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="equipmentsearchpostidlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4668,7 +4758,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;equipmentsearchpostidlabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="userSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
     <value>919, 98</value>
@@ -4695,7 +4785,7 @@
     <value>adminEquipmentPanel</value>
   </data>
   <data name="&gt;&gt;userSearchBoxE.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="adminEquipmentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 100</value>
@@ -4722,10 +4812,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="adminPostPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="refreshBtnP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="refreshBtnP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="refreshBtnP.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="refreshBtnP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="refreshBtnP.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="refreshBtnP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshBtnP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1500, 6</value>
+  </data>
+  <data name="refreshBtnP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="refreshBtnP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="refreshBtnP.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="refreshBtnP.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnP.Name" xml:space="preserve">
+    <value>refreshBtnP</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnP.Parent" xml:space="preserve">
+    <value>adminPostPanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnP.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Label68.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5118,7 +5253,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;addPostPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="confirmMsgP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -5160,7 +5295,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;confirmMsgP.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="hallSearchBoxP.Location" type="System.Drawing.Point, System.Drawing">
     <value>710, 98</value>
@@ -5184,7 +5319,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;hallSearchBoxP.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="searchErrorP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5223,7 +5358,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;searchErrorP.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="exportBtnP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5268,7 +5403,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;exportBtnP.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="postSearchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>518, 98</value>
@@ -5292,7 +5427,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;postSearchBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="postDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -5322,7 +5457,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;postDataGridView.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="postTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5358,7 +5493,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;postTitle.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="postChangeStatePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5598,7 +5733,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;postChangeStatePanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="addPostBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5643,7 +5778,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;addPostBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="statesearchlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5685,7 +5820,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;statesearchlabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="hallsearchlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5727,7 +5862,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;hallsearchlabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="postsearchlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5769,7 +5904,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;postsearchlabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="stateSearchBoxP.Location" type="System.Drawing.Point, System.Drawing">
     <value>919, 98</value>
@@ -5793,7 +5928,7 @@
     <value>adminPostPanel</value>
   </data>
   <data name="&gt;&gt;stateSearchBoxP.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="adminPostPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 100</value>
@@ -7571,6 +7706,51 @@
   <data name="&gt;&gt;searchErrorH.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="refreshBtnH.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="refreshBtnH.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="refreshBtnH.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="refreshBtnH.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="refreshBtnH.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="refreshBtnH.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshBtnH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1500, 6</value>
+  </data>
+  <data name="refreshBtnH.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="refreshBtnH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="refreshBtnH.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="refreshBtnH.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Name" xml:space="preserve">
+    <value>refreshBtnH</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="exportBtnH.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -7614,7 +7794,7 @@
     <value>adminHallsPanel</value>
   </data>
   <data name="&gt;&gt;exportBtnH.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="hallDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -7644,7 +7824,7 @@
     <value>adminHallsPanel</value>
   </data>
   <data name="&gt;&gt;hallDataGridView.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="Label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7680,7 +7860,7 @@
     <value>adminHallsPanel</value>
   </data>
   <data name="&gt;&gt;Label21.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="HallDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -7725,7 +7905,7 @@
     <value>adminHallsPanel</value>
   </data>
   <data name="&gt;&gt;HallDeleteBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7767,7 +7947,7 @@
     <value>adminHallsPanel</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="adminHallsPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 100</value>
@@ -7794,10 +7974,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminHallsPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="adminRolePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="refreshBtnR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="refreshBtnR.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="refreshBtnR.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="refreshBtnR.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="refreshBtnR.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="refreshBtnR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshBtnR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1500, 6</value>
+  </data>
+  <data name="refreshBtnR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="refreshBtnR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="refreshBtnR.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="refreshBtnR.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnR.Name" xml:space="preserve">
+    <value>refreshBtnR</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnR.Parent" xml:space="preserve">
+    <value>adminRolePanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnR.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Label62.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8031,7 +8256,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleUpdatePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label64.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8337,7 +8562,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleAddPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="roleDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8382,7 +8607,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleDeleteBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="roleAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8427,7 +8652,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleAddBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="confirmMsgR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8469,7 +8694,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;confirmMsgR.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="roleUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8514,7 +8739,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleUpdateBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="searchErrorR.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8553,7 +8778,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;searchErrorR.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="exportBtnR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -8598,7 +8823,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;exportBtnR.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="roleDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -8628,7 +8853,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;roleDataGridView.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="Roles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8664,7 +8889,7 @@
     <value>adminRolePanel</value>
   </data>
   <data name="&gt;&gt;Roles.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="adminRolePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 100</value>
@@ -8691,7 +8916,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminRolePanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -275,6 +275,11 @@ Partial Class adminhomePage
         Me.exportBtnR = New System.Windows.Forms.Button()
         Me.roleDataGridView = New System.Windows.Forms.DataGridView()
         Me.Roles = New System.Windows.Forms.Label()
+        Me.refreshBtnH = New System.Windows.Forms.Button()
+        Me.refreshBtnE = New System.Windows.Forms.Button()
+        Me.refreshBtnP = New System.Windows.Forms.Button()
+        Me.refreshBtnU = New System.Windows.Forms.Button()
+        Me.refreshBtnR = New System.Windows.Forms.Button()
         Me.dropdown.SuspendLayout()
         Me.adminUsersPanel.SuspendLayout()
         Me.userUpdatePanel.SuspendLayout()
@@ -364,6 +369,7 @@ Partial Class adminhomePage
         '
         resources.ApplyResources(Me.adminUsersPanel, "adminUsersPanel")
         Me.adminUsersPanel.BackColor = System.Drawing.Color.Transparent
+        Me.adminUsersPanel.Controls.Add(Me.refreshBtnU)
         Me.adminUsersPanel.Controls.Add(Me.userUpdatePanel)
         Me.adminUsersPanel.Controls.Add(Me.userAddPanel)
         Me.adminUsersPanel.Controls.Add(Me.userSearchBox)
@@ -1070,6 +1076,7 @@ Partial Class adminhomePage
         '
         resources.ApplyResources(Me.adminEquipmentPanel, "adminEquipmentPanel")
         Me.adminEquipmentPanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminEquipmentPanel.Controls.Add(Me.refreshBtnE)
         Me.adminEquipmentPanel.Controls.Add(Me.addEquipmentPanel)
         Me.adminEquipmentPanel.Controls.Add(Me.confirmMsgE)
         Me.adminEquipmentPanel.Controls.Add(Me.hallSearchBoxE)
@@ -1368,6 +1375,7 @@ Partial Class adminhomePage
         '
         resources.ApplyResources(Me.adminPostPanel, "adminPostPanel")
         Me.adminPostPanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminPostPanel.Controls.Add(Me.refreshBtnP)
         Me.adminPostPanel.Controls.Add(Me.addPostPanel)
         Me.adminPostPanel.Controls.Add(Me.confirmMsgP)
         Me.adminPostPanel.Controls.Add(Me.hallSearchBoxP)
@@ -1910,6 +1918,7 @@ Partial Class adminhomePage
         Me.adminHallsPanel.Controls.Add(Me.HallUpdateBtn)
         Me.adminHallsPanel.Controls.Add(Me.hallSearchBoxH)
         Me.adminHallsPanel.Controls.Add(Me.searchErrorH)
+        Me.adminHallsPanel.Controls.Add(Me.refreshBtnH)
         Me.adminHallsPanel.Controls.Add(Me.exportBtnH)
         Me.adminHallsPanel.Controls.Add(Me.hallDataGridView)
         Me.adminHallsPanel.Controls.Add(Me.Label21)
@@ -2165,6 +2174,7 @@ Partial Class adminhomePage
         '
         resources.ApplyResources(Me.adminRolePanel, "adminRolePanel")
         Me.adminRolePanel.BackColor = System.Drawing.Color.MintCream
+        Me.adminRolePanel.Controls.Add(Me.refreshBtnR)
         Me.adminRolePanel.Controls.Add(Me.roleUpdatePanel)
         Me.adminRolePanel.Controls.Add(Me.roleAddPanel)
         Me.adminRolePanel.Controls.Add(Me.roleDeleteBtn)
@@ -2405,16 +2415,61 @@ Partial Class adminhomePage
         Me.Roles.ForeColor = System.Drawing.Color.Gray
         Me.Roles.Name = "Roles"
         '
+        'refreshBtnH
+        '
+        resources.ApplyResources(Me.refreshBtnH, "refreshBtnH")
+        Me.refreshBtnH.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnH.FlatAppearance.BorderSize = 0
+        Me.refreshBtnH.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnH.Name = "refreshBtnH"
+        Me.refreshBtnH.UseVisualStyleBackColor = False
+        '
+        'refreshBtnE
+        '
+        resources.ApplyResources(Me.refreshBtnE, "refreshBtnE")
+        Me.refreshBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnE.FlatAppearance.BorderSize = 0
+        Me.refreshBtnE.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnE.Name = "refreshBtnE"
+        Me.refreshBtnE.UseVisualStyleBackColor = False
+        '
+        'refreshBtnP
+        '
+        resources.ApplyResources(Me.refreshBtnP, "refreshBtnP")
+        Me.refreshBtnP.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnP.FlatAppearance.BorderSize = 0
+        Me.refreshBtnP.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnP.Name = "refreshBtnP"
+        Me.refreshBtnP.UseVisualStyleBackColor = False
+        '
+        'refreshBtnU
+        '
+        resources.ApplyResources(Me.refreshBtnU, "refreshBtnU")
+        Me.refreshBtnU.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnU.FlatAppearance.BorderSize = 0
+        Me.refreshBtnU.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnU.Name = "refreshBtnU"
+        Me.refreshBtnU.UseVisualStyleBackColor = False
+        '
+        'refreshBtnR
+        '
+        resources.ApplyResources(Me.refreshBtnR, "refreshBtnR")
+        Me.refreshBtnR.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnR.FlatAppearance.BorderSize = 0
+        Me.refreshBtnR.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnR.Name = "refreshBtnR"
+        Me.refreshBtnR.UseVisualStyleBackColor = False
+        '
         'adminhomePage
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.Controls.Add(Me.adminHallsPanel)
-        Me.Controls.Add(Me.adminEquipmentPanel)
-        Me.Controls.Add(Me.adminPostPanel)
-        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminRolePanel)
+        Me.Controls.Add(Me.adminUsersPanel)
+        Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminEquipmentPanel)
+        Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminHomePagePanel)
         Me.Controls.Add(Me.Panel2)
@@ -2711,4 +2766,9 @@ Partial Class adminhomePage
     Friend WithEvents dashboardBtn As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents Label23 As Label
+    Friend WithEvents refreshBtnE As Button
+    Friend WithEvents refreshBtnH As Button
+    Friend WithEvents refreshBtnU As Button
+    Friend WithEvents refreshBtnP As Button
+    Friend WithEvents refreshBtnR As Button
 End Class

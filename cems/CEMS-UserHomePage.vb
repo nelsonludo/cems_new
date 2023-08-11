@@ -200,6 +200,11 @@ Public Class UserHomePage
 
     End Sub
 
+    'refresh post button 
+    Private Sub refreshBtnP_click(sender As Object, e As EventArgs) Handles refreshBtnP.Click
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
+
+    End Sub
 
     Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
         Timer1.Start()
@@ -230,6 +235,12 @@ Public Class UserHomePage
 
 
         fillHalls(hallSearchBoxE)
+    End Sub
+
+    'refresh equipment button 
+    Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
     End Sub
 
     'equipment subbuttons

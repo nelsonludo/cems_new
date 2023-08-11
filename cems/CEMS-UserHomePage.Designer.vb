@@ -123,6 +123,8 @@ Partial Class UserHomePage
         Me.Label34 = New System.Windows.Forms.Label()
         Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
+        Me.refreshBtnP = New System.Windows.Forms.Button()
+        Me.refreshBtnE = New System.Windows.Forms.Button()
         Me.sideBar.SuspendLayout()
         Me.dropdown.SuspendLayout()
         Me.Header.SuspendLayout()
@@ -1163,6 +1165,7 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PostPanel.BackColor = System.Drawing.Color.MintCream
+        Me.PostPanel.Controls.Add(Me.refreshBtnP)
         Me.PostPanel.Controls.Add(Me.confirmMsgP)
         Me.PostPanel.Controls.Add(Me.hallSearchBoxP)
         Me.PostPanel.Controls.Add(Me.searchErrorP)
@@ -1223,6 +1226,7 @@ Partial Class UserHomePage
         'exportBtnP
         '
         Me.exportBtnP.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.exportBtnP.AutoSize = True
         Me.exportBtnP.BackColor = System.Drawing.Color.SeaGreen
         Me.exportBtnP.FlatAppearance.BorderSize = 0
         Me.exportBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1233,7 +1237,7 @@ Partial Class UserHomePage
         Me.exportBtnP.Location = New System.Drawing.Point(1465, 6)
         Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnP.Name = "exportBtnP"
-        Me.exportBtnP.Size = New System.Drawing.Size(100, 30)
+        Me.exportBtnP.Size = New System.Drawing.Size(100, 32)
         Me.exportBtnP.TabIndex = 32
         Me.exportBtnP.Text = "Export"
         Me.exportBtnP.UseVisualStyleBackColor = False
@@ -1373,6 +1377,7 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.EquipmentPanel.BackColor = System.Drawing.Color.MintCream
+        Me.EquipmentPanel.Controls.Add(Me.refreshBtnE)
         Me.EquipmentPanel.Controls.Add(Me.confirmMsgE)
         Me.EquipmentPanel.Controls.Add(Me.hallSearchBoxE)
         Me.EquipmentPanel.Controls.Add(Me.searchErrorE)
@@ -1433,6 +1438,7 @@ Partial Class UserHomePage
         'exportBtnE
         '
         Me.exportBtnE.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.exportBtnE.AutoSize = True
         Me.exportBtnE.BackColor = System.Drawing.Color.SeaGreen
         Me.exportBtnE.FlatAppearance.BorderSize = 0
         Me.exportBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -1443,7 +1449,7 @@ Partial Class UserHomePage
         Me.exportBtnE.Location = New System.Drawing.Point(1465, 6)
         Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnE.Name = "exportBtnE"
-        Me.exportBtnE.Size = New System.Drawing.Size(100, 30)
+        Me.exportBtnE.Size = New System.Drawing.Size(100, 32)
         Me.exportBtnE.TabIndex = 33
         Me.exportBtnE.Text = "Export"
         Me.exportBtnE.UseVisualStyleBackColor = False
@@ -1575,6 +1581,44 @@ Partial Class UserHomePage
         Me.userSearchBoxE.Size = New System.Drawing.Size(130, 24)
         Me.userSearchBoxE.TabIndex = 66
         '
+        'refreshBtnP
+        '
+        Me.refreshBtnP.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.refreshBtnP.AutoSize = True
+        Me.refreshBtnP.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnP.FlatAppearance.BorderSize = 0
+        Me.refreshBtnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.refreshBtnP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.refreshBtnP.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.refreshBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.refreshBtnP.Location = New System.Drawing.Point(1570, 6)
+        Me.refreshBtnP.Margin = New System.Windows.Forms.Padding(4)
+        Me.refreshBtnP.Name = "refreshBtnP"
+        Me.refreshBtnP.Size = New System.Drawing.Size(100, 35)
+        Me.refreshBtnP.TabIndex = 73
+        Me.refreshBtnP.Text = "Refresh"
+        Me.refreshBtnP.UseVisualStyleBackColor = False
+        '
+        'refreshBtnE
+        '
+        Me.refreshBtnE.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.refreshBtnE.AutoSize = True
+        Me.refreshBtnE.BackColor = System.Drawing.Color.SeaGreen
+        Me.refreshBtnE.FlatAppearance.BorderSize = 0
+        Me.refreshBtnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.refreshBtnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.refreshBtnE.ForeColor = System.Drawing.Color.Yellow
+        Me.refreshBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.refreshBtnE.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.refreshBtnE.Location = New System.Drawing.Point(1570, 6)
+        Me.refreshBtnE.Margin = New System.Windows.Forms.Padding(4)
+        Me.refreshBtnE.Name = "refreshBtnE"
+        Me.refreshBtnE.Size = New System.Drawing.Size(100, 35)
+        Me.refreshBtnE.TabIndex = 73
+        Me.refreshBtnE.Text = "Refresh"
+        Me.refreshBtnE.UseVisualStyleBackColor = False
+        '
         'UserHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1582,8 +1626,8 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
-        Me.Controls.Add(Me.PostPanel)
         Me.Controls.Add(Me.EquipmentPanel)
+        Me.Controls.Add(Me.PostPanel)
         Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.Header)
@@ -1714,4 +1758,6 @@ Partial Class UserHomePage
     Friend WithEvents Label34 As Label
     Friend WithEvents equipmentsearchpostidlabel As Label
     Friend WithEvents userSearchBoxE As ComboBox
+    Friend WithEvents refreshBtnP As Button
+    Friend WithEvents refreshBtnE As Button
 End Class

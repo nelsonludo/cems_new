@@ -293,6 +293,13 @@ Public Class adminhomePage
     End Sub
 
 
+    'refresh post button 
+    Private Sub refreshBtnP_click(sender As Object, e As EventArgs) Handles refreshBtnP.Click
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
+
+    End Sub
+
+
     'POST add section
     Private Sub addPostBtn_Click(sender As Object, e As EventArgs) Handles addPostBtn.Click
         addPostPanel.Visible = True
@@ -726,6 +733,12 @@ Public Class adminhomePage
 
     End Sub
 
+    'refresh hall button 
+    Private Sub refreshBtnH_click(sender As Object, e As EventArgs) Handles refreshBtnH.Click
+        User.displayTable("halls", hallDataGridView, sqlDataTableH)
+
+    End Sub
+
     'hall add buttons
     Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles HallAddCancelBtn.Click 'cancel add
         hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
@@ -980,6 +993,11 @@ Public Class adminhomePage
 
     End Sub
 
+    'refresh user button 
+    Private Sub refreshBtnU_click(sender As Object, e As EventArgs) Handles refreshBtnU.Click
+        User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+    End Sub
 
     Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
         adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
@@ -1401,6 +1419,12 @@ Public Class adminhomePage
         'PrintBtnR.Visible = True
     End Sub
 
+    'refresh roles button 
+    Private Sub refreshBtnR_click(sender As Object, e As EventArgs) Handles refreshBtnR.Click
+        User.displayTable("titles", roleDataGridView, sqlDataTableR)
+
+    End Sub
+
     'role update buttons
     Private Sub roleUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateValidationBtn.Click 'validate update 
 
@@ -1631,7 +1655,11 @@ Public Class adminhomePage
         'printBtnE.Visible = true
     End Sub
 
+    'refresh equipment button 
+    Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
+    End Sub
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
         User.display(adminEquipmentPanel, EquipmentTitle, "CPUs")
         User.displayEquipmentTable("equipments", "CPU", equipmentDataGridView)
@@ -2204,7 +2232,7 @@ Public Class adminhomePage
 
     'halls export 
 
-    Private Sub exportBtnH_Click(sender As Object, e As EventArgs) Handles exportBtnH.Click  'hall
+    Private Sub exportBtnH_Click(sender As Object, e As EventArgs) Handles exportBtnH.Click, refreshBtnH.Click  'hall
 
 
 

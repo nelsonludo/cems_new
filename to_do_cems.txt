@@ -1,17 +1,15 @@
 list of things to do in cems
 *CODE TODO
--fix the tab index
 -if update field is empty, error message(the field should not be empty)
--refresh tables (add a refresh button)
 -add change hall for post
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
+-fix the tab index
 -make sure that if the an admin tries to delete himself an error prompt appears explaining that he cant do that 
 
 *DESIGN TODO
--review datagridview design(cell height)
--responsive
 -english and french
 -remove typing on combo boxes
+-responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 
 
