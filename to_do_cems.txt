@@ -13,6 +13,7 @@ list of things to do in cems
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 
 
+take note of the commit message !
 
 Important styles
 label51 size:548, 45; location:0,0
