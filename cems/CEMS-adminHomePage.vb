@@ -776,7 +776,7 @@ Public Class adminhomePage
                 sqlConn.Close()
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql add hall", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
                 sqlConn.Dispose()
             End Try
@@ -888,56 +888,75 @@ Public Class adminhomePage
 
     Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidateBtn.Click 'validate update 
 
-        Dim hall_id As String = hallDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
-        connect_db()
+        If adminUpdateHallNameInput.Text = "" Then
+            'this changes the content of updateHallErrorMsg
+            updateHallErrorMsg.Text = "Please fill all the fields"
 
-        sqlConn.Open()
+            'this makes the confirm message appear for 3secs
+            updateHallErrorMsg.Visible = True
+            Timer2.Interval = 3000
+            Timer2.Start()
 
-        sqlCmd.Connection = sqlConn
-        'this changes the hall name
+        Else
 
-        With sqlCmd
+            Try
+                Dim hall_id As String = hallDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
-            .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
+                connect_db()
 
-            .CommandType = CommandType.Text
+                sqlConn.Open()
 
-        End With
-        sqlCmd.ExecuteNonQuery()
-        sqlConn.Close()
+                sqlCmd.Connection = sqlConn
+                'this changes the hall name
 
-        'this updates the datagridview
-        User.displayTable("halls", hallDataGridView, sqlDataTableH)
+                With sqlCmd
 
-        'this changes the content of confirmMsg
-        confirmMsgH.Text = "update successfull ✔"
+                    .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
 
-        'this makes the confirm message appear for 3secs
-        confirmMsgH.Visible = True
-        Timer2.Interval = 3000
-        Timer2.Start()
+                    .CommandType = CommandType.Text
+
+                End With
+                sqlCmd.ExecuteNonQuery()
+                sqlConn.Close()
+
+                'this updates the datagridview
+                User.displayTable("halls", hallDataGridView, sqlDataTableH)
+
+                'this changes the content of confirmMsg
+                confirmMsgH.Text = "update successfull ✔"
+
+                'this makes the confirm message appear for 3secs
+                confirmMsgH.Visible = True
+                Timer2.Interval = 3000
+                Timer2.Start()
 
 
-        'this makes the update panel to disappear
-        hallUpdatePanel.Visible = False
+                'this makes the update panel to disappear
+                hallUpdatePanel.Visible = False
 
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+                HallUpdateBtn.Visible = False
+                HallDeleteBtn.Visible = False
 
-        adminUpdateHallNameInput.Text = ""
-        fillHalls(hallSearchBoxH)
+                adminUpdateHallNameInput.Text = ""
+                fillHalls(hallSearchBoxH)
 
 
-        Label21.Text = "Halls"
+                Label21.Text = "Halls"
 
-        'things that have to disappear (this is annoying)
-        hallAddBtn.Visible = True
-        exportBtnH.Visible = True
-        'PrintBtnH.Visible = True
-        hallSearchBoxH.Visible = True
-        Label4.Visible = True
-        hallDataGridView.Visible = True
+                'things that have to disappear (this is annoying)
+                hallAddBtn.Visible = True
+                exportBtnH.Visible = True
+                'PrintBtnH.Visible = True
+                hallSearchBoxH.Visible = True
+                Label4.Visible = True
+                hallDataGridView.Visible = True
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "mysql update role", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
+        End If
+
 
     End Sub
 
@@ -1018,75 +1037,89 @@ Public Class adminhomePage
         Dim title_id As Integer
         'SQL Connection'
 
-        Try
-            sqlConn.Open()
+        If userUserTitleInput.Text = "" Or userUserNameInput.Text = "" Or userUserPhoneInput.Text = "" Or userUserEmailInput.Text = "" Then
+            'this changes the content of updateuserErrorMsg
+            updateUserErrorMsg.Text = "Please fill all the fields!"
 
-            sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserTitleInput.Text & "'"
+            'this makes the confirm message appear for 3secs
 
-
-            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
-
-            While (sqlReader.Read())
-                title_id = sqlReader.Item("title_id")
-            End While
-
-            sqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Finally
-            sqlConn.Dispose()
-
-        End Try
+            updateUserErrorMsg.Visible = True
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
 
 
-        Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserTitleInput.Text & "'"
 
 
-        sqlConn.Open()
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
 
-        sqlCmd.Connection = sqlConn
-        'this changes the hall name
+                While (sqlReader.Read())
+                    title_id = sqlReader.Item("title_id")
+                End While
 
-        With sqlCmd
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql getting titles for update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
 
-            .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
-
-            .CommandType = CommandType.Text
-
-        End With
-        sqlCmd.ExecuteNonQuery()
-        sqlConn.Close()
-
-        'this updates the datagridview
-        User.displayTableU("users", userDataGridView, sqlDataTableU)
-
-        'this changes the content of confirmMsg
-        confirmMsgU.Text = "update successfull ✔"
-
-        'this makes the confirm message appear for 3secs
-        confirmMsgU.Visible = True
-        Timer2.Interval = 3000
-        Timer2.Start()
+            Try
+                Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
 
-        'this makes the update panel to disappear
-        userUpdatePanel.Visible = False
+                sqlCmd.Connection = sqlConn
+                'this changes the hall name
 
-        userDeleteBtn.Visible = False
+                With sqlCmd
+
+                    .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
+
+                    .CommandType = CommandType.Text
+
+                End With
+                sqlCmd.ExecuteNonQuery()
+                sqlConn.Close()
+
+                'this updates the datagridview
+                User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+                'this changes the content of confirmMsg
+                confirmMsgU.Text = "update successfull ✔"
+
+                'this makes the confirm message appear for 3secs
+                confirmMsgU.Visible = True
+                Timer2.Interval = 3000
+                Timer2.Start()
 
 
-        Label10.Text = "Users"
+                'this makes the update panel to disappear
+                userUpdatePanel.Visible = False
 
-        userDataGridView.Visible = True
-        userUpdateBtn.Visible = True
-        userAddBtn.Visible = True
-        exportBtnU.Visible = True
-        'PrintBtnU.Visible = True
-        searchuserlabel.Visible = True
+                userDeleteBtn.Visible = False
 
-        userUpdateBtn.Visible = False
-        userDeleteBtn.Visible = False
+
+                Label10.Text = "Users"
+
+                userDataGridView.Visible = True
+                userUpdateBtn.Visible = True
+                userAddBtn.Visible = True
+                exportBtnU.Visible = True
+                'PrintBtnU.Visible = True
+                searchuserlabel.Visible = True
+
+                userUpdateBtn.Visible = False
+                userDeleteBtn.Visible = False
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "mysql update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+        End If
 
     End Sub
 
@@ -1163,12 +1196,18 @@ Public Class adminhomePage
 
     End Sub
 
-    Private Sub userdeleteBtn_Click(sender As Object, e As EventArgs) Handles userDeleteBtn.Click 'delete
+    Private Sub userdeleteBtn_Click(sender As Object, e As EventArgs) Handles userDeleteBtn.Click 'delete user
 
-        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this user ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this user ?", "Comfirm User Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
-            admin.deleteRecord(userDataGridView, "users", "user")
+
+            If admin.compareSelectedRecordWithLoggedinUser(userDataGridView, Form1.emailtxt.Text) Then
+                MessageBox.Show("It is not possible to delete a loggedin user!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                admin.deleteRecord(userDataGridView, "users", "user")
+
+            End If
         End If
 
         userUpdateBtn.Visible = False
@@ -1250,7 +1289,7 @@ Public Class adminhomePage
 
                 sqlConn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql getting all titles for add user", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
                 sqlConn.Dispose()
 
@@ -1291,7 +1330,7 @@ Public Class adminhomePage
 
 
                         Catch ex As Exception
-                            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            MessageBox.Show(ex.Message, "MySql inserting a user", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Finally
                             sqlConn.Dispose()
                         End Try
@@ -1334,10 +1373,8 @@ Public Class adminhomePage
 
                     End If
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "MySql adding a user", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Try
-
-
 
 
             End If
@@ -1429,50 +1466,65 @@ Public Class adminhomePage
     Private Sub roleUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles roleUpdateValidationBtn.Click 'validate update 
 
         If titleNameInput.Text = "" Then
+            'this changes the content of updateRoleErrorMsg
+            updateRoleErrorMsg.Text = "Please fill all the fields!"
+
+            'this makes the confirm message appear for 3secs
+            updateRoleErrorMsg.Visible = True
+            Timer2.Interval = 3000
+            Timer2.Start()
+        Else
+            Try
+
+                Dim role_id As String = roleDataGridView.SelectedRows(0).Cells(0).Value.ToString
+
+                connect_db()
+
+                sqlConn.Open()
+
+                sqlCmd.Connection = sqlConn
+                'this changes the role name
+
+                With sqlCmd
+
+                    .CommandText = "Update cems.cems_titles Set title_name ='" & titleNameInput.Text & "' where title_id = '" & role_id & "' "
+
+                    .CommandType = CommandType.Text
+
+                End With
+                sqlCmd.ExecuteNonQuery()
+                sqlConn.Close()
+
+                'this updates the datagridview
+                User.displayTable("titles", roleDataGridView, sqlDataTableR)
+
+                'this changes the content of confirmMsg
+                confirmMsgR.Text = "update successfull ✔"
+
+                'this makes the confirm message appear for 3secs
+                confirmMsgR.Visible = True
+                Timer2.Interval = 3000
+                Timer2.Start()
+
+
+                'this makes the update panel to disappear
+                roleUpdatePanel.Visible = False
+                roleUpdateBtn.Visible = False
+                roleAddPanel.Visible = False
+
+                roleDataGridView.Visible = True
+                Roles.Text = "Roles"
+                roleAddBtn.Visible = True
+                exportBtnR.Visible = True
+                'PrintBtnR.Visible = True
+
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "mysql update role", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
 
         End If
 
-        Dim role_id As String = roleDataGridView.SelectedRows(0).Cells(0).Value.ToString
-
-        connect_db()
-
-        sqlConn.Open()
-
-        sqlCmd.Connection = sqlConn
-        'this changes the role name
-
-        With sqlCmd
-
-            .CommandText = "Update cems.cems_titles Set title_name ='" & titleNameInput.Text & "' where title_id = '" & role_id & "' "
-
-            .CommandType = CommandType.Text
-
-        End With
-        sqlCmd.ExecuteNonQuery()
-        sqlConn.Close()
-
-        'this updates the datagridview
-        User.displayTable("titles", roleDataGridView, sqlDataTableR)
-
-        'this changes the content of confirmMsg
-        confirmMsgR.Text = "update successfull ✔"
-
-        'this makes the confirm message appear for 3secs
-        confirmMsgR.Visible = True
-        Timer2.Interval = 3000
-        Timer2.Start()
-
-
-        'this makes the update panel to disappear
-        roleUpdatePanel.Visible = False
-        roleUpdateBtn.Visible = False
-        roleAddPanel.Visible = False
-
-        roleDataGridView.Visible = True
-        Roles.Text = "Roles"
-        roleAddBtn.Visible = True
-        exportBtnR.Visible = True
-        'PrintBtnR.Visible = True
 
     End Sub
 
@@ -1559,7 +1611,7 @@ Public Class adminhomePage
                 sqlConn.Close()
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql role add", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
                 sqlConn.Dispose()
             End Try
@@ -2739,6 +2791,9 @@ Public Class adminhomePage
         addPostErrorMsg.Visible = False
         addUserErrorMsg.Visible = False
         updateProfileErrorMsg.Visible = False
+        updateRoleErrorMsg.Visible = False
+        updateUserErrorMsg.Visible = False
+        updateHallErrorMsg.Visible = False
 
         Timer2.Stop()
     End Sub

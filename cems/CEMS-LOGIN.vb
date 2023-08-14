@@ -29,6 +29,7 @@ Public Class Form1
 
 
 
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -381,7 +382,9 @@ Public Class Form1
 
         Dim userLogin As Boolean
 
-        userLogin = User.login(passwordtxt.Text, emailtxt.Text, forgotPasswordMessage, Timer1)
+        User.user_email = emailtxt.Text
+
+        userLogin = User.login(passwordtxt.Text, User.user_email, forgotPasswordMessage, Timer1)
 
     End Sub
 

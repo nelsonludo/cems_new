@@ -102,6 +102,19 @@ Public Class admin
 
 
     End Sub
+    Public Function compareSelectedRecordWithLoggedinUser(grid As DataGridView, loggedInUserEmail As String)
+        Dim selectedEmail As String = grid.SelectedRows(0).Cells(2).Value.ToString
+
+
+        If selectedEmail = loggedInUserEmail Then
+            'if it is true the admin is trying to delete himself
+            Return True
+        Else
+            'if not he is trying to delete another user and that's okay
+            Return False
+        End If
+
+    End Function
 
     Public Sub deletePost(grid As DataGridView, table As String, column As String)
         Dim id As String = grid.SelectedRows(0).Cells(0).Value.ToString

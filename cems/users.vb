@@ -22,10 +22,8 @@ Public Class users
     Protected sqlDataAdapter As New MySqlDataAdapter
     Protected sqlQuery As String
 
-    Protected user_name As String
-    Protected user_phone_number As String
-    Protected user_password As String
-    Protected user_email As String
+    Public user_name As String
+    Public user_email As String
     Protected errorMsg As Control
     Protected timer As Timer
 
