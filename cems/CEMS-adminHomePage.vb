@@ -7,7 +7,7 @@ Imports Org.BouncyCastle.Crypto.Generators
 Imports BCrypt.Net.BCrypt
 Imports System.Windows.Forms
 
-Public Class adminhomePage
+Public Class homePage
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
     Dim sqlReader As MySqlDataReader
@@ -484,7 +484,7 @@ Public Class adminhomePage
                     End If
 
                 End If
-                    sqlConn.Close()
+                sqlConn.Close()
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql get post and test it", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -666,7 +666,7 @@ Public Class adminhomePage
     Private Sub hallAddBtn_Click(sender As Object, e As EventArgs) Handles hallAddBtn.Click 'add 
         hallUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         hallAddpanel.Visible = True
-        Label21.Text = "Add halls"
+        hallsTitle.Text = "Add halls"
 
 
         'things that have to disappear (this is annoying)
@@ -674,7 +674,7 @@ Public Class adminhomePage
         exportBtnH.Visible = False
         'PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
-        Label4.Visible = False
+        hallSearchLabelH.Visible = False
         hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
@@ -721,14 +721,14 @@ Public Class adminhomePage
         fillHalls(hallSearchBoxH)
 
 
-        Label21.Text = "Halls"
+        hallsTitle.Text = "Halls"
 
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
         'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
-        Label4.Visible = True
+        hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
 
     End Sub
@@ -743,14 +743,14 @@ Public Class adminhomePage
     Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles HallAddCancelBtn.Click 'cancel add
         hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         hallAddpanel.Visible = False
-        Label21.Text = "Halls"
+        hallsTitle.Text = "Halls"
 
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
         'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
-        Label4.Visible = True
+        hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
 
     End Sub
@@ -803,14 +803,14 @@ Public Class adminhomePage
             HallUpdateBtn.Visible = False
             HallDeleteBtn.Visible = False
 
-            Label21.Text = "Halls"
+            hallsTitle.Text = "Halls"
 
             'things that have to disappear (this is annoying)
             hallAddBtn.Visible = True
             exportBtnH.Visible = True
             'PrintBtnH.Visible = True
             hallSearchBoxH.Visible = True
-            Label4.Visible = True
+            hallSearchLabelH.Visible = True
             hallDataGridView.Visible = True
         End If
 
@@ -836,7 +836,7 @@ Public Class adminhomePage
     Private Sub HallUpdateBtn_Click(sender As Object, e As EventArgs) Handles HallUpdateBtn.Click 'update
         hallUpdatePanel.Visible = True
 
-        Label21.Text = "Update halls"
+        hallsTitle.Text = "Update halls"
 
 
         'things that have to disappear (this is annoying)
@@ -844,7 +844,7 @@ Public Class adminhomePage
         exportBtnH.Visible = False
         'PrintBtnH.Visible = False
         hallSearchBoxH.Visible = False
-        Label4.Visible = False
+        hallSearchLabelH.Visible = False
         hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
@@ -874,14 +874,14 @@ Public Class adminhomePage
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
 
-        Label21.Text = "Halls"
+        hallsTitle.Text = "Halls"
 
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
         'PrintBtnH.Visible = True
         hallSearchBoxH.Visible = True
-        Label4.Visible = True
+        hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
 
     End Sub
@@ -942,14 +942,14 @@ Public Class adminhomePage
                 fillHalls(hallSearchBoxH)
 
 
-                Label21.Text = "Halls"
+                hallsTitle.Text = "Halls"
 
                 'things that have to disappear (this is annoying)
                 hallAddBtn.Visible = True
                 exportBtnH.Visible = True
                 'PrintBtnH.Visible = True
                 hallSearchBoxH.Visible = True
-                Label4.Visible = True
+                hallSearchLabelH.Visible = True
                 hallDataGridView.Visible = True
 
             Catch ex As Exception
@@ -963,7 +963,7 @@ Public Class adminhomePage
 
     'user buttons
 
-    Private Sub userBtn_Click(sender As Object, e As EventArgs) Handles userBtn.Click
+    Private Sub userBtn_Click(sender As Object, e As EventArgs) Handles usersBtn.Click
         adminEquipmentPanel.Visible = False 'this is set to true because somehow the postpanel is inside the equipmentpanel
         adminPostPanel.Visible = False  'this is set to true because somehow the profilepanel is inside the postpanel
         adminProfilePanel.Visible = False
@@ -1941,7 +1941,7 @@ Public Class adminhomePage
     Private Sub addEquipmentValidationBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentValidationBtn.Click
         connect_db()
 
-        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = ""  Then
+        If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = "" Then
             addEquipmentErrorMsg.Text = "please fill all the fields !"
             addEquipmentErrorMsg.Visible = True
             Timer2.Interval = 3000
@@ -2245,7 +2245,7 @@ Public Class adminhomePage
 
 
     'logout button
-    Private Sub adminLogout_Click(sender As Object, e As EventArgs) Handles adminLogout.Click
+    Private Sub adminLogout_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Form1.Show()
         Me.Visible = False
         Form1.emailtxt.Text = ""

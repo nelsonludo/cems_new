@@ -1,6 +1,6 @@
 ﻿
 Imports MySql.Data.MySqlClient
-Imports cems.adminhomePage
+Imports cems.homePage
 Imports cems.admin
 Imports cems.UserHomePage
 Imports System.IO
@@ -28,8 +28,8 @@ Public Class users
     Protected timer As Timer
 
     Public Sub connect_db()
-        sqlConn.ConnectionString = "server =" + adminhomePage.server + ";" + "user id =" + adminhomePage.username + ";" _
-           + "password=" + adminhomePage.password + ";" + "database =" + adminhomePage.database
+        sqlConn.ConnectionString = "server =" + homePage.server + ";" + "user id =" + homePage.username + ";" _
+           + "password=" + homePage.password + ";" + "database =" + homePage.database
     End Sub
 
     'the login function
@@ -59,7 +59,7 @@ Public Class users
 
                         UserHomePage.Show()
                     Else
-                        adminhomePage.Show()
+                        homePage.Show()
                     End If
                     Form1.Visible = False
 

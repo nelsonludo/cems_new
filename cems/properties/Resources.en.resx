@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="addHallErrorMsg" xml:space="preserve">
+    <value>Please fill all the fields</value>
+  </data>
+  <data name="adminHomePage" xml:space="preserve">
+    <value>Home Page</value>
+    <comment>this is the home page text</comment>
+  </data>
+  <data name="confirmMsgE.text.add" xml:space="preserve">
+    <value>Hall successfully added ✔</value>
+  </data>
+  <data name="confirmMsgE.text.delete" xml:space="preserve">
+    <value>Hall successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgE.text.export" xml:space="preserve">
+    <value>Export successful ✔</value>
+  </data>
+  <data name="confirmMsgE.text.update" xml:space="preserve">
+    <value>Hall successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgH.text.add" xml:space="preserve">
+    <value>Hall successfully added ✔</value>
+  </data>
+  <data name="confirmMsgH.text.delete" xml:space="preserve">
+    <value>Hall successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgH.text.export" xml:space="preserve">
+    <value>Export successful ✔</value>
+  </data>
+  <data name="confirmMsgH.text.update" xml:space="preserve">
+    <value>Hall successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgP.text.add" xml:space="preserve">
+    <value>Hall successfully added ✔</value>
+  </data>
+  <data name="confirmMsgP.text.delete" xml:space="preserve">
+    <value>Hall successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgP.text.export" xml:space="preserve">
+    <value>Export successful ✔</value>
+  </data>
+  <data name="confirmMsgP.text.update" xml:space="preserve">
+    <value>Hall successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgR.text.add" xml:space="preserve">
+    <value>Hall successfully added ✔</value>
+  </data>
+  <data name="confirmMsgR.text.delete" xml:space="preserve">
+    <value>Hall successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgR.text.export" xml:space="preserve">
+    <value>Export successful ✔</value>
+  </data>
+  <data name="confirmMsgR.text.update" xml:space="preserve">
+    <value>Hall successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgU.text.add" xml:space="preserve">
+    <value>Hall successfully added ✔</value>
+  </data>
+  <data name="confirmMsgU.text.delete" xml:space="preserve">
+    <value>Hall successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgU.text.export" xml:space="preserve">
+    <value>Export successful ✔</value>
+  </data>
+  <data name="confirmMsgU.text.update" xml:space="preserve">
+    <value>Hall successfully updated ✔</value>
+  </data>
+  <data name="CPUsBtn" xml:space="preserve">
+    <value>CPUs</value>
+  </data>
+  <data name="dashBoardBtn" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="equipmentAddBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="equipmentAddCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="equipmentAddValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="equipmentDeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="equipmentsBtn" xml:space="preserve">
+    <value>Equipments</value>
+  </data>
+  <data name="equipmentUpdateBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="equipmentUpdateCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="equipmentUpdateValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="exportBtnE" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="exportBtnH" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="exportBtnP" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="exportBtnR" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="exportBtnU" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="hallAddBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="hallAddCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="hallAddNameLabel" xml:space="preserve">
+    <value>Hall Name</value>
+  </data>
+  <data name="hallAddTitle" xml:space="preserve">
+    <value>Add hall</value>
+  </data>
+  <data name="hallAddValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="hallDeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="hallsBtn" xml:space="preserve">
+    <value>Halls</value>
+  </data>
+  <data name="hallSearchLabelE" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hallSearchLabelH" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hallSearchLabelP" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hallSearchLabelR" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hallSearchLabelU" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hallUpdateBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="hallUpdateCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="hallUpdateNameLabel" xml:space="preserve">
+    <value>Hall Name</value>
+  </data>
+  <data name="hallUpdateTitle" xml:space="preserve">
+    <value>Update hall</value>
+  </data>
+  <data name="hallUpdateValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="IPsBtn" xml:space="preserve">
+    <value>IP Phones</value>
+  </data>
+  <data name="logoutBtn" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="monitorsBtn" xml:space="preserve">
+    <value>Monitors</value>
+  </data>
+  <data name="postAddBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="postAddCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="postAddValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="postDeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="postsBtn" xml:space="preserve">
+    <value>Posts</value>
+  </data>
+  <data name="postUpdateBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="postUpdateCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="postUpdateValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="profileBtn" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="refreshBtnE" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="refreshBtnH" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="refreshBtnP" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="refreshBtnR" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="refreshBtnU" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="roleAddBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="roleAddCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="roleAddValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="roleDeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="rolesBtn" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="roleTitle" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="roleUpdateBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="roleUpdateCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="roleUpdateValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="searchErrorE" xml:space="preserve">
+    <value>No result found</value>
+  </data>
+  <data name="searchErrorH" xml:space="preserve">
+    <value>No result found</value>
+  </data>
+  <data name="searchErrorP" xml:space="preserve">
+    <value>No result found</value>
+  </data>
+  <data name="searchErrorR" xml:space="preserve">
+    <value>No result found</value>
+  </data>
+  <data name="searchErrorU" xml:space="preserve">
+    <value>No result found</value>
+  </data>
+  <data name="updateHallErrorMsg" xml:space="preserve">
+    <value>Please fill all the fields</value>
+  </data>
+  <data name="userAddBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="userAddCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="userAddValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="userDeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="usersBtn" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="userTypeTitle" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="userUpdateBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="userUpdateCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="userUpdateValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+</root>
