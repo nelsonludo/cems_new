@@ -118,497 +118,497 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="addequipmenthalllabel" xml:space="preserve">
-    <value>Equipment hall </value>
+    <value>Salle de l'équipement</value>
   </data>
   <data name="addequipmentpostidlabel" xml:space="preserve">
-    <value>Equipment post ID</value>
+    <value>ID du poste de l'équipement</value>
   </data>
   <data name="addequipmentstatelabel" xml:space="preserve">
-    <value>Equipment state </value>
+    <value>État de l'équipement</value>
   </data>
   <data name="addEquipmentTitle" xml:space="preserve">
-    <value>Add equipment</value>
+    <value>Ajouter un équipement</value>
   </data>
   <data name="addequipmenttitlelabel" xml:space="preserve">
-    <value>Equipment title</value>
+    <value>Titre de l'équipement</value>
   </data>
   <data name="addHallErrorMsg" xml:space="preserve">
-    <value>Please fill all the fields</value>
+    <value>Veuillez remplir tous les champs!</value>
   </data>
   <data name="addPostHallLabel" xml:space="preserve">
-    <value>Post Hall</value>
+    <value>Salle du poste</value>
   </data>
   <data name="addPostIDLabel" xml:space="preserve">
-    <value>Post ID</value>
+    <value>ID du poste</value>
   </data>
   <data name="addPostStateLabel" xml:space="preserve">
-    <value>Post state</value>
+    <value>État de poste</value>
   </data>
   <data name="addPostTitle" xml:space="preserve">
-    <value>Add post</value>
+    <value>Ajouter un poste</value>
   </data>
   <data name="addRoleErrorMsg" xml:space="preserve">
-    <value>Please fill the field</value>
+    <value>Veuillez remplir le champ!</value>
   </data>
   <data name="addRoleNameLabel" xml:space="preserve">
-    <value>Role name</value>
+    <value>Nom du Rôle</value>
   </data>
   <data name="addRoleTitle" xml:space="preserve">
-    <value>Add role</value>
+    <value>Ajouter un rôle</value>
   </data>
   <data name="addUserConfirmPwdLabel" xml:space="preserve">
-    <value>Confirm Password</value>
+    <value>Confirmez le mot de passe</value>
   </data>
   <data name="addUserEmailLabel" xml:space="preserve">
-    <value>User email</value>
+    <value>Courriel de l'utilisateur</value>
   </data>
   <data name="addUserErrorMsg.EmptyField" xml:space="preserve">
-    <value>Please fill all the fields!</value>
+    <value>Veuillez remplir tous les champs</value>
   </data>
   <data name="addUserErrorMsg.PwdNotMatch" xml:space="preserve">
-    <value>Please enter the same password!</value>
+    <value>Veuillez saisir le même mot de passe !</value>
   </data>
   <data name="addUserNameLabel" xml:space="preserve">
-    <value>User name</value>
+    <value>Nom de l'utilisateur</value>
   </data>
   <data name="addUserPhoneLabel" xml:space="preserve">
-    <value>User phone number</value>
+    <value>Numéro de téléphone de l'utilisateur</value>
   </data>
   <data name="addUserPwdLabel" xml:space="preserve">
-    <value>User Password</value>
+    <value>Mot de passe de l'utilisateur</value>
   </data>
   <data name="addUserTitleLabel" xml:space="preserve">
-    <value>User Title</value>
+    <value>Titre de l'utilisateur</value>
   </data>
   <data name="adminConfirmPasswordLabel" xml:space="preserve">
-    <value>Confirm Password</value>
+    <value>Confirmez le mot de passe</value>
   </data>
   <data name="adminEmailLabel" xml:space="preserve">
-    <value>Admin email</value>
+    <value>Courriel de l'administrateur</value>
   </data>
   <data name="adminHomePage" xml:space="preserve">
-    <value>Home Page</value>
+    <value>Page d'accueil</value>
     <comment>this is the home page text</comment>
   </data>
   <data name="adminNameLabel" xml:space="preserve">
-    <value>Admin name</value>
+    <value>Nom de l'administrateur</value>
   </data>
   <data name="adminPhoneNumberLabel" xml:space="preserve">
-    <value>Admin phone number</value>
+    <value>Numéro de téléphone de l'administrateur</value>
   </data>
   <data name="adminPwdLabel" xml:space="preserve">
-    <value>Admin password </value>
+    <value>Mot de passe administrateur</value>
   </data>
   <data name="changeequipmentstatelabel" xml:space="preserve">
-    <value>Equipment state</value>
+    <value>État de l'équipement</value>
   </data>
   <data name="changepoststatelabel" xml:space="preserve">
-    <value>Post State</value>
+    <value>État du poste</value>
   </data>
   <data name="confirmMsgE.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+    <value>équipement ajouté avec succès ✔</value>
   </data>
   <data name="confirmMsgE.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+    <value>équipement supprimée avec succès ✔</value>
   </data>
   <data name="confirmMsgE.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgE.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+    <value>équipement mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgH.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+    <value>Salle ajoutée avec succès ✔</value>
   </data>
   <data name="confirmMsgH.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+    <value>Salle supprimée avec succès ✔</value>
   </data>
   <data name="confirmMsgH.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgH.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+    <value>Salle ajoutée avec succès ✔</value>
   </data>
   <data name="confirmMsgP.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+    <value>Poste ajouté avec succès ✔</value>
   </data>
   <data name="confirmMsgP.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+    <value>Poste supprimée avec succès ✔</value>
   </data>
   <data name="confirmMsgP.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgP.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+    <value>Poste mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgPr" xml:space="preserve">
     <value>Profile updated successfully</value>
   </data>
   <data name="confirmMsgR.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+    <value>rôle ajouté avec succès ✔</value>
   </data>
   <data name="confirmMsgR.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+    <value>rôle supprimée avec succès ✔</value>
   </data>
   <data name="confirmMsgR.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgR.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+    <value>Rôle mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgU.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+    <value>Utilisateur ajouté avec succès ✔</value>
   </data>
   <data name="confirmMsgU.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+    <value>Utisateur supprimée avec succès ✔</value>
   </data>
   <data name="confirmMsgU.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgU.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+    <value>Utilisateur mise à jour avec succès ✔</value>
   </data>
   <data name="connectBtn" xml:space="preserve">
-    <value>Connect</value>
+    <value>Connecter</value>
   </data>
   <data name="connexionDatabaseLabel" xml:space="preserve">
-    <value>Database</value>
+    <value>Base de donné</value>
   </data>
   <data name="connexionPwdLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>Mot de passe</value>
   </data>
   <data name="connexionServerLabel" xml:space="preserve">
-    <value>Server</value>
+    <value>Serveur</value>
   </data>
   <data name="connexionUserNameLabel" xml:space="preserve">
-    <value>User name</value>
+    <value>Nom de l'utitsateur</value>
   </data>
   <data name="CPUsBtn" xml:space="preserve">
-    <value>CPUs</value>
+    <value>Unités centrales</value>
   </data>
   <data name="CPUsBtn2" xml:space="preserve">
-    <value>view</value>
+    <value>Voir</value>
   </data>
   <data name="createAdminTitle" xml:space="preserve">
-    <value>Create admin</value>
+    <value>Créer un administrateur</value>
   </data>
   <data name="dashBoardBtn" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>Tableau de bord</value>
   </data>
   <data name="dashboardCPULabel" xml:space="preserve">
-    <value>CPUs</value>
+    <value>Unités centrales</value>
   </data>
   <data name="dashboardIPLabel" xml:space="preserve">
-    <value>IP Phones </value>
+    <value>Téléphones IP</value>
   </data>
   <data name="dashboardMonitorLabel" xml:space="preserve">
-    <value>Monitors </value>
+    <value>Moniteurs</value>
   </data>
   <data name="dashboardTitle" xml:space="preserve">
-    <value>All categories of equipment</value>
+    <value>Toutes les catégories d'équipements</value>
   </data>
   <data name="dashbooardUserLabel" xml:space="preserve">
-    <value>Users</value>
+    <value>Utilisateurs</value>
   </data>
   <data name="emailProfileLabel" xml:space="preserve">
-    <value>User email</value>
+    <value>Courriel de l'utilisateur</value>
   </data>
   <data name="equipmentAddBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="equipmentAddCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="equipmentAddValidationBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="EquipmentChangeBtn" xml:space="preserve">
-    <value>Change</value>
+    <value>Changer</value>
   </data>
   <data name="equipmentDeleteBtn" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="equipmentsBtn" xml:space="preserve">
-    <value>Equipments</value>
+    <value>Équipements</value>
   </data>
   <data name="equipmentsearchhalllabel" xml:space="preserve">
-    <value>Hall</value>
+    <value>Salle</value>
   </data>
   <data name="equipmentsearchpostidlabel" xml:space="preserve">
-    <value>Post</value>
+    <value>Poste</value>
   </data>
   <data name="equipmentsearchstatelabel" xml:space="preserve">
-    <value>State</value>
+    <value>État</value>
   </data>
   <data name="equipmentsTitle" xml:space="preserve">
-    <value>Equipments</value>
+    <value>Équipements</value>
   </data>
   <data name="equipmentUpdateBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="equipmentUpdateCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="equipmentUpdateValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="exportBtnE" xml:space="preserve">
-    <value>Export</value>
+    <value>Exporter</value>
   </data>
   <data name="exportBtnH" xml:space="preserve">
-    <value>Export</value>
+    <value>Exporter</value>
   </data>
   <data name="exportBtnP" xml:space="preserve">
-    <value>Export</value>
+    <value>Exporter</value>
   </data>
   <data name="exportBtnR" xml:space="preserve">
-    <value>Export</value>
+    <value>Exporter</value>
   </data>
   <data name="exportBtnU" xml:space="preserve">
-    <value>Export</value>
+    <value>Exporter</value>
   </data>
   <data name="forgotPwdBtn" xml:space="preserve">
-    <value>Forgot password ?</value>
+    <value>Mot de passe oublié ?</value>
   </data>
   <data name="hallAddBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="hallAddCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="hallAddNameLabel" xml:space="preserve">
-    <value>Hall Name</value>
+    <value>Nom de la salle</value>
   </data>
   <data name="hallAddTitle" xml:space="preserve">
-    <value>Add hall</value>
+    <value>Ajouter une salle </value>
   </data>
   <data name="hallAddValidationBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="hallDeleteBtn" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="hallsBtn" xml:space="preserve">
-    <value>Halls</value>
+    <value>Salles</value>
   </data>
   <data name="hallSearchLabel" xml:space="preserve">
-    <value>Hall</value>
+    <value>Salle</value>
   </data>
   <data name="hallSearchLabelE" xml:space="preserve">
-    <value>Hall</value>
+    <value>Salle</value>
   </data>
   <data name="hallSearchLabelH" xml:space="preserve">
-    <value>search Hall</value>
+    <value>Recherche salle</value>
   </data>
   <data name="hallSearchLabelP" xml:space="preserve">
-    <value>Hall</value>
+    <value>Salle</value>
   </data>
   <data name="hallUpdateBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="hallUpdateCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="hallUpdateNameLabel" xml:space="preserve">
-    <value>Hall Name</value>
+    <value>Nom de salle</value>
   </data>
   <data name="hallUpdateTitle" xml:space="preserve">
-    <value>Update hall</value>
+    <value>Mettre la salle à jour</value>
   </data>
   <data name="hallUpdateValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>mettre à jour</value>
   </data>
   <data name="IPsBtn" xml:space="preserve">
-    <value>IP Phones</value>
+    <value>Téléphones IP</value>
   </data>
   <data name="IPsBtn2" xml:space="preserve">
-    <value>view</value>
+    <value>Voir</value>
   </data>
   <data name="loginBtn" xml:space="preserve">
-    <value>Login</value>
+    <value>Se connecter</value>
   </data>
   <data name="loginUserEmailLabel" xml:space="preserve">
-    <value>Email</value>
+    <value>E-mail</value>
   </data>
   <data name="loginUserPwdLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>Mot de passe</value>
   </data>
   <data name="logoutBtn" xml:space="preserve">
-    <value>Logout</value>
+    <value>Se déconnecter</value>
   </data>
   <data name="monitorsBtn" xml:space="preserve">
-    <value>Monitors</value>
+    <value>Moniteurs</value>
   </data>
   <data name="monitorsBtn2" xml:space="preserve">
-    <value>view</value>
+    <value>Voir</value>
   </data>
   <data name="nameProfileLabel" xml:space="preserve">
-    <value>User name</value>
+    <value>Nom de l'utilisateur</value>
   </data>
   <data name="phoneNumberProfileLable" xml:space="preserve">
-    <value>User Phone number</value>
+    <value>Numéro de téléphone de l'utilisateur</value>
   </data>
   <data name="postAddBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="postAddCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="postAddValidationBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="postChangeBtn" xml:space="preserve">
-    <value>Change</value>
+    <value>Changer</value>
   </data>
   <data name="postDeleteBtn" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="postsBtn" xml:space="preserve">
-    <value>Posts</value>
+    <value>Postes</value>
   </data>
   <data name="postsearchlabel" xml:space="preserve">
-    <value>Post</value>
+    <value>Poste</value>
   </data>
   <data name="postsTitle" xml:space="preserve">
-    <value>Posts</value>
+    <value>Postes</value>
   </data>
   <data name="postUpdateBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="postUpdateCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="postUpdateValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="profileBtn" xml:space="preserve">
-    <value>Profile</value>
+    <value>Profil</value>
   </data>
   <data name="profileTitle" xml:space="preserve">
     <value>Profile</value>
   </data>
   <data name="refreshBtnE" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Rafraîchir</value>
   </data>
   <data name="refreshBtnH" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Rafraîchir</value>
   </data>
   <data name="refreshBtnP" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Rafraîchir</value>
   </data>
   <data name="refreshBtnR" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Rafraîchir</value>
   </data>
   <data name="refreshBtnU" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Rafraîchir</value>
   </data>
   <data name="roleAddBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="roleAddCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="roleAddValidationBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="roleDeleteBtn" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="rolesBtn" xml:space="preserve">
-    <value>Roles</value>
+    <value>Rôles</value>
   </data>
   <data name="rolesTitle" xml:space="preserve">
-    <value>Roles</value>
+    <value>Rôles</value>
   </data>
   <data name="roleUpdateBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="roleUpdateCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="roleUpdateValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="searchErrorE" xml:space="preserve">
-    <value>No result found</value>
+    <value>Aucun résultat trouvé</value>
   </data>
   <data name="searchErrorH" xml:space="preserve">
-    <value>No result found</value>
+    <value>Aucun résultat trouvé</value>
   </data>
   <data name="searchErrorP" xml:space="preserve">
-    <value>No result found</value>
+    <value>Aucun résultat trouvé</value>
   </data>
   <data name="searchErrorR" xml:space="preserve">
-    <value>No result found</value>
+    <value>Aucun résultat trouvé</value>
   </data>
   <data name="searchErrorU" xml:space="preserve">
-    <value>No result found</value>
+    <value>Aucun résultat trouvé</value>
   </data>
   <data name="searchUserLabel" xml:space="preserve">
-    <value>Search username</value>
+    <value>Rechercher un nom d'utilisateur</value>
   </data>
   <data name="statesearchlabel" xml:space="preserve">
-    <value>State</value>
+    <value>État</value>
   </data>
   <data name="TitleProfileLabel" xml:space="preserve">
-    <value>User Title</value>
+    <value>Titre de l'utilisateur</value>
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
-    <value>Update equipment</value>
+    <value>Mettre l'équipement à jour</value>
   </data>
   <data name="updateHallErrorMsg" xml:space="preserve">
-    <value>Please fill all the fields</value>
+    <value>Veuillez remplir tous les champs</value>
   </data>
   <data name="updatePostTitle" xml:space="preserve">
-    <value>Update post</value>
+    <value>Mettre le poste à jour</value>
   </data>
   <data name="updateProfielShowBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="updateProfileTitle" xml:space="preserve">
-    <value>Update Profile</value>
+    <value>Mettre le profil à jour</value>
   </data>
   <data name="updateProfileValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="updateRoleErrorMsg" xml:space="preserve">
-    <value>Please fill the field</value>
+    <value>Veuillez remplir tous les champs</value>
   </data>
   <data name="updateRoleNameLabel" xml:space="preserve">
-    <value>Role name</value>
+    <value>Nom du Rôle</value>
   </data>
   <data name="updateRoleTitle" xml:space="preserve">
-    <value>Update role</value>
+    <value>mettre le rôle à jour</value>
   </data>
   <data name="updateUserEmailLabel" xml:space="preserve">
-    <value>User email</value>
+    <value>Courriel de l'utilisateur</value>
   </data>
   <data name="updateUserNameLabel" xml:space="preserve">
-    <value>User name</value>
+    <value>Nom de l'utilisateur</value>
   </data>
   <data name="updateUserPhoneLabel" xml:space="preserve">
-    <value>User phone number</value>
+    <value>Numéro de téléphone de l'utilisateur</value>
   </data>
   <data name="updateUserTitle" xml:space="preserve">
-    <value>Update User</value>
+    <value>Mettre l'utilisateur à jour</value>
   </data>
   <data name="updateUserTitleLabel" xml:space="preserve">
-    <value>User Title</value>
+    <value>Titre de l'utilisateur</value>
   </data>
   <data name="userAddBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="userAddCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Ajouter</value>
   </data>
   <data name="userAddValidationBtn" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="userConfirmPwdProfileLabel2" xml:space="preserve">
     <value>Confirm Password</value>
   </data>
   <data name="userDeleteBtn" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="userEmailProfileLabel2" xml:space="preserve">
     <value>User email</value>
@@ -623,24 +623,24 @@
     <value>Enter new password</value>
   </data>
   <data name="usersBtn" xml:space="preserve">
-    <value>Users</value>
+    <value>Utilisateurs</value>
   </data>
   <data name="usersBtn2" xml:space="preserve">
     <value>view</value>
   </data>
   <data name="usersTitle" xml:space="preserve">
-    <value>Users</value>
+    <value>Utilisateurs</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">
-    <value>Admin</value>
+    <value>Administrateurs</value>
   </data>
   <data name="userUpdateBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
   <data name="userUpdateCancelBtn" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="userUpdateValidationBtn" xml:space="preserve">
-    <value>Update</value>
+    <value>Mettre à jour</value>
   </data>
 </root>

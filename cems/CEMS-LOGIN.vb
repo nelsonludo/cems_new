@@ -377,7 +377,7 @@ Public Class Form1
     'End Sub
 
 
-    Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
+    Private Sub login_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
 
 
         Dim userLogin As Boolean
@@ -399,7 +399,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub forgotPasswordBtn_Click(sender As Object, e As EventArgs) Handles forgotPasswordBtn.Click
+    Private Sub forgotPasswordBtn_Click(sender As Object, e As EventArgs) Handles forgotPwdBtn.Click
         Dim admin_email As String = ""
         Dim admin_phone_number As String = ""
 

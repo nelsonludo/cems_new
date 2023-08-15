@@ -609,612 +609,6 @@
   <data name="&gt;&gt;refreshBtnU.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
-    <value>updateUserErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
-    <value>updateUserTitle</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
-    <value>Label58</value>
-  </data>
-  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
-    <value>userUserTitleInput</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
-    <value>updateUserTitleLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
-    <value>userUserPhoneInput</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
-    <value>updateUserPhoneLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
-    <value>userUserEmailInput</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
-    <value>updateUserEmailLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
-    <value>userUpdateCancelBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
-    <value>userUserNameInput</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
-    <value>userUpdateValidationBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
-    <value>updateUserNameLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="userUpdatePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 90</value>
-  </data>
-  <data name="userUpdatePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUpdatePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 466</value>
-  </data>
-  <data name="userUpdatePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="userUpdatePanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Name" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="updateUserErrorMsg.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="updateUserErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 440</value>
-  </data>
-  <data name="updateUserErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 18</value>
-  </data>
-  <data name="updateUserErrorMsg.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="updateUserErrorMsg.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
-    <value>updateUserErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="updateUserTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="updateUserTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 12</value>
-  </data>
-  <data name="updateUserTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
-  </data>
-  <data name="updateUserTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="updateUserTitle.Text" xml:space="preserve">
-    <value>Update User</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
-    <value>updateUserTitle</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label58.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="Label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label58.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Label58.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 45</value>
-  </data>
-  <data name="Label58.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="Label58.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
-    <value>Label58</value>
-  </data>
-  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="userUserTitleInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 290</value>
-  </data>
-  <data name="userUserTitleInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUserTitleInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 24</value>
-  </data>
-  <data name="userUserTitleInput.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
-    <value>userUserTitleInput</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="updateUserTitleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="updateUserTitleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 260</value>
-  </data>
-  <data name="updateUserTitleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 25</value>
-  </data>
-  <data name="updateUserTitleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="updateUserTitleLabel.Text" xml:space="preserve">
-    <value>User title</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
-    <value>updateUserTitleLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="userUserPhoneInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 230</value>
-  </data>
-  <data name="userUserPhoneInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUserPhoneInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 22</value>
-  </data>
-  <data name="userUserPhoneInput.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
-    <value>userUserPhoneInput</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="updateUserPhoneLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserPhoneLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="updateUserPhoneLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserPhoneLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 200</value>
-  </data>
-  <data name="updateUserPhoneLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserPhoneLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 25</value>
-  </data>
-  <data name="updateUserPhoneLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="updateUserPhoneLabel.Text" xml:space="preserve">
-    <value>User phone number</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
-    <value>updateUserPhoneLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="userUserEmailInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 170</value>
-  </data>
-  <data name="userUserEmailInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUserEmailInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 22</value>
-  </data>
-  <data name="userUserEmailInput.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
-    <value>userUserEmailInput</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="updateUserEmailLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserEmailLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="updateUserEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 140</value>
-  </data>
-  <data name="updateUserEmailLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 25</value>
-  </data>
-  <data name="updateUserEmailLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="updateUserEmailLabel.Text" xml:space="preserve">
-    <value>User email</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
-    <value>updateUserEmailLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="userUpdateCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="userUpdateCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="userUpdateCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userUpdateCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 388</value>
-  </data>
-  <data name="userUpdateCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="userUpdateCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="userUpdateCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 35</value>
-  </data>
-  <data name="userUpdateCancelBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="userUpdateCancelBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
-    <value>userUpdateCancelBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="userUserNameInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 110</value>
-  </data>
-  <data name="userUserNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUserNameInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 22</value>
-  </data>
-  <data name="userUserNameInput.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
-    <value>userUserNameInput</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="userUpdateValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="userUpdateValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="userUpdateValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userUpdateValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 348</value>
-  </data>
-  <data name="userUpdateValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="userUpdateValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="userUpdateValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 35</value>
-  </data>
-  <data name="userUpdateValidationBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="userUpdateValidationBtn.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
-    <value>userUpdateValidationBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="updateUserNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateUserNameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="updateUserNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateUserNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 80</value>
-  </data>
-  <data name="updateUserNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateUserNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 25</value>
-  </data>
-  <data name="updateUserNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="updateUserNameLabel.Text" xml:space="preserve">
-    <value>User name</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
-    <value>updateUserNameLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="&gt;&gt;addUserTitle.Name" xml:space="preserve">
     <value>addUserTitle</value>
   </data>
@@ -1994,6 +1388,612 @@
   </data>
   <data name="&gt;&gt;addUserNameLabel.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
+    <value>updateUserErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
+    <value>updateUserTitle</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
+    <value>userUserTitleInput</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
+    <value>updateUserTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
+    <value>userUserPhoneInput</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
+    <value>updateUserPhoneLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
+    <value>userUserEmailInput</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
+    <value>updateUserEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
+    <value>userUpdateCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
+    <value>userUserNameInput</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
+    <value>userUpdateValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
+    <value>updateUserNameLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="userUpdatePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 90</value>
+  </data>
+  <data name="userUpdatePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUpdatePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 466</value>
+  </data>
+  <data name="userUpdatePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="userUpdatePanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Name" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="updateUserErrorMsg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="updateUserErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 440</value>
+  </data>
+  <data name="updateUserErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="updateUserErrorMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="updateUserErrorMsg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
+    <value>updateUserErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="updateUserTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="updateUserTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 12</value>
+  </data>
+  <data name="updateUserTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="updateUserTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="updateUserTitle.Text" xml:space="preserve">
+    <value>Update User</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
+    <value>updateUserTitle</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Label58.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 45</value>
+  </data>
+  <data name="Label58.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="Label58.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="userUserTitleInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 290</value>
+  </data>
+  <data name="userUserTitleInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUserTitleInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 24</value>
+  </data>
+  <data name="userUserTitleInput.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
+    <value>userUserTitleInput</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="updateUserTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="updateUserTitleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 260</value>
+  </data>
+  <data name="updateUserTitleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 25</value>
+  </data>
+  <data name="updateUserTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="updateUserTitleLabel.Text" xml:space="preserve">
+    <value>User title</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
+    <value>updateUserTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="userUserPhoneInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 230</value>
+  </data>
+  <data name="userUserPhoneInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUserPhoneInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 22</value>
+  </data>
+  <data name="userUserPhoneInput.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
+    <value>userUserPhoneInput</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="updateUserPhoneLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserPhoneLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="updateUserPhoneLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserPhoneLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 200</value>
+  </data>
+  <data name="updateUserPhoneLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserPhoneLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 25</value>
+  </data>
+  <data name="updateUserPhoneLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="updateUserPhoneLabel.Text" xml:space="preserve">
+    <value>User phone number</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
+    <value>updateUserPhoneLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="userUserEmailInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 170</value>
+  </data>
+  <data name="userUserEmailInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUserEmailInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 22</value>
+  </data>
+  <data name="userUserEmailInput.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
+    <value>userUserEmailInput</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="updateUserEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserEmailLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="updateUserEmailLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 140</value>
+  </data>
+  <data name="updateUserEmailLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 25</value>
+  </data>
+  <data name="updateUserEmailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="updateUserEmailLabel.Text" xml:space="preserve">
+    <value>User email</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
+    <value>updateUserEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="userUpdateCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="userUpdateCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="userUpdateCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userUpdateCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 388</value>
+  </data>
+  <data name="userUpdateCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="userUpdateCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="userUpdateCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 35</value>
+  </data>
+  <data name="userUpdateCancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="userUpdateCancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
+    <value>userUpdateCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="userUserNameInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 110</value>
+  </data>
+  <data name="userUserNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUserNameInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 22</value>
+  </data>
+  <data name="userUserNameInput.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
+    <value>userUserNameInput</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="userUpdateValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="userUpdateValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="userUpdateValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userUpdateValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 348</value>
+  </data>
+  <data name="userUpdateValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="userUpdateValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="userUpdateValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 35</value>
+  </data>
+  <data name="userUpdateValidationBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="userUpdateValidationBtn.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
+    <value>userUpdateValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="updateUserNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateUserNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="updateUserNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateUserNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 80</value>
+  </data>
+  <data name="updateUserNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateUserNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 25</value>
+  </data>
+  <data name="updateUserNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="updateUserNameLabel.Text" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
+    <value>updateUserNameLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="userSearchBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>601, 98</value>
@@ -3251,6 +3251,273 @@
   <data name="adminHomePagePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;CPUsBtn2.Name" xml:space="preserve">
+    <value>CPUsBtn2</value>
+  </data>
+  <data name="&gt;&gt;CPUsBtn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CPUsBtn2.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;CPUsBtn2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;IPsBtn2.Name" xml:space="preserve">
+    <value>IPsBtn2</value>
+  </data>
+  <data name="&gt;&gt;IPsBtn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IPsBtn2.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;IPsBtn2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;monitorsBtn2.Name" xml:space="preserve">
+    <value>monitorsBtn2</value>
+  </data>
+  <data name="&gt;&gt;monitorsBtn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;monitorsBtn2.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;monitorsBtn2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;usersBtn2.Name" xml:space="preserve">
+    <value>usersBtn2</value>
+  </data>
+  <data name="&gt;&gt;usersBtn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usersBtn2.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;usersBtn2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dashboardUserLabel.Name" xml:space="preserve">
+    <value>dashboardUserLabel</value>
+  </data>
+  <data name="&gt;&gt;dashboardUserLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboardUserLabel.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;dashboardUserLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dashboardMonitorLabel.Name" xml:space="preserve">
+    <value>dashboardMonitorLabel</value>
+  </data>
+  <data name="&gt;&gt;dashboardMonitorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboardMonitorLabel.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;dashboardMonitorLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dashboardIPLabel.Name" xml:space="preserve">
+    <value>dashboardIPLabel</value>
+  </data>
+  <data name="&gt;&gt;dashboardIPLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboardIPLabel.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;dashboardIPLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dashboardCPULabel.Name" xml:space="preserve">
+    <value>dashboardCPULabel</value>
+  </data>
+  <data name="&gt;&gt;dashboardCPULabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboardCPULabel.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;dashboardCPULabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;userNumber.Name" xml:space="preserve">
+    <value>userNumber</value>
+  </data>
+  <data name="&gt;&gt;userNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;userNumber.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;userbuttoninactive.Name" xml:space="preserve">
+    <value>userbuttoninactive</value>
+  </data>
+  <data name="&gt;&gt;userbuttoninactive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userbuttoninactive.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;userbuttoninactive.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;nonActiveMonitorNumber.Name" xml:space="preserve">
+    <value>nonActiveMonitorNumber</value>
+  </data>
+  <data name="&gt;&gt;nonActiveMonitorNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nonActiveMonitorNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;nonActiveMonitorNumber.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;activeMonitorNumber.Name" xml:space="preserve">
+    <value>activeMonitorNumber</value>
+  </data>
+  <data name="&gt;&gt;activeMonitorNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;activeMonitorNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;activeMonitorNumber.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;nonActiveIPNumber.Name" xml:space="preserve">
+    <value>nonActiveIPNumber</value>
+  </data>
+  <data name="&gt;&gt;nonActiveIPNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nonActiveIPNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;nonActiveIPNumber.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;activeIPNumber.Name" xml:space="preserve">
+    <value>activeIPNumber</value>
+  </data>
+  <data name="&gt;&gt;activeIPNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;activeIPNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;activeIPNumber.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;nonActiveCPUNumber.Name" xml:space="preserve">
+    <value>nonActiveCPUNumber</value>
+  </data>
+  <data name="&gt;&gt;nonActiveCPUNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nonActiveCPUNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;nonActiveCPUNumber.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;activeCPUNumber.Name" xml:space="preserve">
+    <value>activeCPUNumber</value>
+  </data>
+  <data name="&gt;&gt;activeCPUNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;activeCPUNumber.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;activeCPUNumber.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;monitorbuttoninactive.Name" xml:space="preserve">
+    <value>monitorbuttoninactive</value>
+  </data>
+  <data name="&gt;&gt;monitorbuttoninactive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;monitorbuttoninactive.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;monitorbuttoninactive.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;IPbuttoninactive.Name" xml:space="preserve">
+    <value>IPbuttoninactive</value>
+  </data>
+  <data name="&gt;&gt;IPbuttoninactive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IPbuttoninactive.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;IPbuttoninactive.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;CPUbuttoninactive.Name" xml:space="preserve">
+    <value>CPUbuttoninactive</value>
+  </data>
+  <data name="&gt;&gt;CPUbuttoninactive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CPUbuttoninactive.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;CPUbuttoninactive.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;dashboardTitle.Name" xml:space="preserve">
+    <value>dashboardTitle</value>
+  </data>
+  <data name="&gt;&gt;dashboardTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboardTitle.Parent" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;dashboardTitle.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="adminHomePagePanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="adminHomePagePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 100</value>
+  </data>
+  <data name="adminHomePagePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="adminHomePagePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1610, 614</value>
+  </data>
+  <data name="adminHomePagePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;adminHomePagePanel.Name" xml:space="preserve">
+    <value>adminHomePagePanel</value>
+  </data>
+  <data name="&gt;&gt;adminHomePagePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminHomePagePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;adminHomePagePanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="CPUsBtn2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4280,242 +4547,8 @@
   <data name="&gt;&gt;dashboardTitle.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="adminHomePagePanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="adminHomePagePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 100</value>
-  </data>
-  <data name="adminHomePagePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="adminHomePagePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1610, 614</value>
-  </data>
-  <data name="adminHomePagePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;adminHomePagePanel.Name" xml:space="preserve">
-    <value>adminHomePagePanel</value>
-  </data>
-  <data name="&gt;&gt;adminHomePagePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminHomePagePanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;adminHomePagePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="adminEquipmentPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnE.Name" xml:space="preserve">
-    <value>refreshBtnE</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnE.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentPanel.Name" xml:space="preserve">
-    <value>addEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentPanel.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Name" xml:space="preserve">
-    <value>confirmMsgE</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Name" xml:space="preserve">
-    <value>hallSearchBoxE</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Name" xml:space="preserve">
-    <value>searchErrorE</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Name" xml:space="preserve">
-    <value>exportBtnE</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Name" xml:space="preserve">
-    <value>equipmentSearchBox</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Name" xml:space="preserve">
-    <value>equipmentDataGridView</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Name" xml:space="preserve">
-    <value>EquipmentTitle</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Name" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;statePanel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Name" xml:space="preserve">
-    <value>addEquipmentBtn</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Label33.Name" xml:space="preserve">
-    <value>Label33</value>
-  </data>
-  <data name="&gt;&gt;Label33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label33.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;Label33.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
-    <value>Label34</value>
-  </data>
-  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Name" xml:space="preserve">
-    <value>equipmentsearchpostidlabel</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Name" xml:space="preserve">
-    <value>userSearchBoxE</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="adminEquipmentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 100</value>
-  </data>
-  <data name="adminEquipmentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="adminEquipmentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1610, 618</value>
-  </data>
-  <data name="adminEquipmentPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="adminEquipmentPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;adminEquipmentPanel.Name" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;adminEquipmentPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminEquipmentPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="refreshBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4744,6 +4777,579 @@
   </data>
   <data name="&gt;&gt;addEquipmentPanel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="confirmMsgE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="confirmMsgE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="confirmMsgE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="confirmMsgE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="confirmMsgE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1027, 10</value>
+  </data>
+  <data name="confirmMsgE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="confirmMsgE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="confirmMsgE.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="confirmMsgE.Text" xml:space="preserve">
+    <value>Export successfull ✔</value>
+  </data>
+  <data name="confirmMsgE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgE.Name" xml:space="preserve">
+    <value>confirmMsgE</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="hallSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>710, 98</value>
+  </data>
+  <data name="hallSearchBoxE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="hallSearchBoxE.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 0</value>
+  </data>
+  <data name="hallSearchBoxE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 24</value>
+  </data>
+  <data name="hallSearchBoxE.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxE.Name" xml:space="preserve">
+    <value>hallSearchBoxE</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxE.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="searchErrorE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="searchErrorE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24.25pt, style=Bold</value>
+  </data>
+  <data name="searchErrorE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="searchErrorE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 277</value>
+  </data>
+  <data name="searchErrorE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="searchErrorE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 47</value>
+  </data>
+  <data name="searchErrorE.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="searchErrorE.Text" xml:space="preserve">
+    <value>No results found </value>
+  </data>
+  <data name="searchErrorE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;searchErrorE.Name" xml:space="preserve">
+    <value>searchErrorE</value>
+  </data>
+  <data name="&gt;&gt;searchErrorE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchErrorE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;searchErrorE.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="exportBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="exportBtnE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="exportBtnE.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="exportBtnE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="exportBtnE.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="exportBtnE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="exportBtnE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1396, 6</value>
+  </data>
+  <data name="exportBtnE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="exportBtnE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 32</value>
+  </data>
+  <data name="exportBtnE.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="exportBtnE.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;exportBtnE.Name" xml:space="preserve">
+    <value>exportBtnE</value>
+  </data>
+  <data name="&gt;&gt;exportBtnE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportBtnE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;exportBtnE.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="equipmentSearchBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>518, 98</value>
+  </data>
+  <data name="equipmentSearchBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="equipmentSearchBox.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 100</value>
+  </data>
+  <data name="equipmentSearchBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
+  </data>
+  <data name="equipmentSearchBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;equipmentSearchBox.Name" xml:space="preserve">
+    <value>equipmentSearchBox</value>
+  </data>
+  <data name="&gt;&gt;equipmentSearchBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentSearchBox.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentSearchBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="equipmentDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="equipmentDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="equipmentDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 133</value>
+  </data>
+  <data name="equipmentDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 14</value>
+  </data>
+  <data name="equipmentDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 410</value>
+  </data>
+  <data name="equipmentDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;equipmentDataGridView.Name" xml:space="preserve">
+    <value>equipmentDataGridView</value>
+  </data>
+  <data name="&gt;&gt;equipmentDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentDataGridView.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentDataGridView.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="EquipmentTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EquipmentTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="EquipmentTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EquipmentTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 0</value>
+  </data>
+  <data name="EquipmentTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="EquipmentTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 29</value>
+  </data>
+  <data name="EquipmentTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="EquipmentTitle.Text" xml:space="preserve">
+    <value>CPUs</value>
+  </data>
+  <data name="&gt;&gt;EquipmentTitle.Name" xml:space="preserve">
+    <value>EquipmentTitle</value>
+  </data>
+  <data name="&gt;&gt;EquipmentTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EquipmentTitle.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;EquipmentTitle.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="statePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;updateEquipmentTitle.Name" xml:space="preserve">
+    <value>updateEquipmentTitle</value>
+  </data>
+  <data name="&gt;&gt;updateEquipmentTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateEquipmentTitle.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;updateEquipmentTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
+    <value>Label23</value>
+  </data>
+  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;stateChangeBtn.Name" xml:space="preserve">
+    <value>stateChangeBtn</value>
+  </data>
+  <data name="&gt;&gt;stateChangeBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stateChangeBtn.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;stateChangeBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;equipmentDeleteBtn.Name" xml:space="preserve">
+    <value>equipmentDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;equipmentDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentDeleteBtn.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentDeleteBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;changeequipementstatelabel.Name" xml:space="preserve">
+    <value>changeequipementstatelabel</value>
+  </data>
+  <data name="&gt;&gt;changeequipementstatelabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeequipementstatelabel.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;changeequipementstatelabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;equipmentState.Name" xml:space="preserve">
+    <value>equipmentState</value>
+  </data>
+  <data name="&gt;&gt;equipmentState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentState.Parent" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentState.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="statePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1335, 133</value>
+  </data>
+  <data name="statePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="statePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 410</value>
+  </data>
+  <data name="statePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="statePanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statePanel.Name" xml:space="preserve">
+    <value>statePanel</value>
+  </data>
+  <data name="&gt;&gt;statePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statePanel.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;statePanel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="addEquipmentBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="addEquipmentBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addEquipmentBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="addEquipmentBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="addEquipmentBtn.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="addEquipmentBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addEquipmentBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1289, 6</value>
+  </data>
+  <data name="addEquipmentBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="addEquipmentBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 32</value>
+  </data>
+  <data name="addEquipmentBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="addEquipmentBtn.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;addEquipmentBtn.Name" xml:space="preserve">
+    <value>addEquipmentBtn</value>
+  </data>
+  <data name="&gt;&gt;addEquipmentBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addEquipmentBtn.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;addEquipmentBtn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="equipmentsearchstatelabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="equipmentsearchstatelabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="equipmentsearchstatelabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="equipmentsearchstatelabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 98</value>
+  </data>
+  <data name="equipmentsearchstatelabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="equipmentsearchstatelabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="equipmentsearchstatelabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 24</value>
+  </data>
+  <data name="equipmentsearchstatelabel.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="equipmentsearchstatelabel.Text" xml:space="preserve">
+    <value>state:</value>
+  </data>
+  <data name="equipmentsearchstatelabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchstatelabel.Name" xml:space="preserve">
+    <value>equipmentsearchstatelabel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchstatelabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchstatelabel.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchstatelabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="equipmentsearchhalllabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="equipmentsearchhalllabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="equipmentsearchhalllabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="equipmentsearchhalllabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>667, 98</value>
+  </data>
+  <data name="equipmentsearchhalllabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="equipmentsearchhalllabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="equipmentsearchhalllabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 24</value>
+  </data>
+  <data name="equipmentsearchhalllabel.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="equipmentsearchhalllabel.Text" xml:space="preserve">
+    <value>hall:</value>
+  </data>
+  <data name="equipmentsearchhalllabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchhalllabel.Name" xml:space="preserve">
+    <value>equipmentsearchhalllabel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchhalllabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchhalllabel.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchhalllabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 99</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.Text" xml:space="preserve">
+    <value>Post id:</value>
+  </data>
+  <data name="equipmentsearchpostidlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchpostidlabel.Name" xml:space="preserve">
+    <value>equipmentsearchpostidlabel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchpostidlabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchpostidlabel.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;equipmentsearchpostidlabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="userSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>919, 98</value>
+  </data>
+  <data name="userSearchBoxE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userSearchBoxE.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 0</value>
+  </data>
+  <data name="userSearchBoxE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 24</value>
+  </data>
+  <data name="userSearchBoxE.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;userSearchBoxE.Name" xml:space="preserve">
+    <value>userSearchBoxE</value>
+  </data>
+  <data name="&gt;&gt;userSearchBoxE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userSearchBoxE.Parent" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;userSearchBoxE.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="adminEquipmentPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 100</value>
+  </data>
+  <data name="adminEquipmentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="adminEquipmentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1610, 618</value>
+  </data>
+  <data name="adminEquipmentPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="adminEquipmentPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;adminEquipmentPanel.Name" xml:space="preserve">
+    <value>adminEquipmentPanel</value>
+  </data>
+  <data name="&gt;&gt;adminEquipmentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminEquipmentPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="addEquipmentTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5186,354 +5792,6 @@
   <data name="&gt;&gt;equipmenttitlelabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="confirmMsgE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="confirmMsgE.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="confirmMsgE.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="confirmMsgE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="confirmMsgE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1027, 10</value>
-  </data>
-  <data name="confirmMsgE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="confirmMsgE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
-  </data>
-  <data name="confirmMsgE.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="confirmMsgE.Text" xml:space="preserve">
-    <value>Export successfull ✔</value>
-  </data>
-  <data name="confirmMsgE.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Name" xml:space="preserve">
-    <value>confirmMsgE</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgE.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="hallSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>710, 98</value>
-  </data>
-  <data name="hallSearchBoxE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="hallSearchBoxE.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 0</value>
-  </data>
-  <data name="hallSearchBoxE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 24</value>
-  </data>
-  <data name="hallSearchBoxE.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Name" xml:space="preserve">
-    <value>hallSearchBoxE</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;hallSearchBoxE.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="searchErrorE.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="searchErrorE.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 24.25pt, style=Bold</value>
-  </data>
-  <data name="searchErrorE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchErrorE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 277</value>
-  </data>
-  <data name="searchErrorE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="searchErrorE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 47</value>
-  </data>
-  <data name="searchErrorE.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="searchErrorE.Text" xml:space="preserve">
-    <value>No results found </value>
-  </data>
-  <data name="searchErrorE.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Name" xml:space="preserve">
-    <value>searchErrorE</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;searchErrorE.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="exportBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="exportBtnE.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="exportBtnE.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="exportBtnE.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="exportBtnE.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="exportBtnE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="exportBtnE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1396, 6</value>
-  </data>
-  <data name="exportBtnE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="exportBtnE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 32</value>
-  </data>
-  <data name="exportBtnE.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="exportBtnE.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Name" xml:space="preserve">
-    <value>exportBtnE</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;exportBtnE.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="equipmentSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 98</value>
-  </data>
-  <data name="equipmentSearchBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="equipmentSearchBox.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 100</value>
-  </data>
-  <data name="equipmentSearchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
-  </data>
-  <data name="equipmentSearchBox.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Name" xml:space="preserve">
-    <value>equipmentSearchBox</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentSearchBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="equipmentDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="equipmentDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="equipmentDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 133</value>
-  </data>
-  <data name="equipmentDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 14</value>
-  </data>
-  <data name="equipmentDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1225, 410</value>
-  </data>
-  <data name="equipmentDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Name" xml:space="preserve">
-    <value>equipmentDataGridView</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentDataGridView.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="EquipmentTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="EquipmentTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
-  </data>
-  <data name="EquipmentTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="EquipmentTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 0</value>
-  </data>
-  <data name="EquipmentTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="EquipmentTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 29</value>
-  </data>
-  <data name="EquipmentTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="EquipmentTitle.Text" xml:space="preserve">
-    <value>CPUs</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Name" xml:space="preserve">
-    <value>EquipmentTitle</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;EquipmentTitle.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="statePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;updateEquipmentTitle.Name" xml:space="preserve">
-    <value>updateEquipmentTitle</value>
-  </data>
-  <data name="&gt;&gt;updateEquipmentTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateEquipmentTitle.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;updateEquipmentTitle.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
-    <value>Label23</value>
-  </data>
-  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;stateChangeBtn.Name" xml:space="preserve">
-    <value>stateChangeBtn</value>
-  </data>
-  <data name="&gt;&gt;stateChangeBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;stateChangeBtn.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;stateChangeBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;equipmentDeleteBtn.Name" xml:space="preserve">
-    <value>equipmentDeleteBtn</value>
-  </data>
-  <data name="&gt;&gt;equipmentDeleteBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentDeleteBtn.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentDeleteBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;changeequipementstatelabel.Name" xml:space="preserve">
-    <value>changeequipementstatelabel</value>
-  </data>
-  <data name="&gt;&gt;changeequipementstatelabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;changeequipementstatelabel.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;changeequipementstatelabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;equipmentState.Name" xml:space="preserve">
-    <value>equipmentState</value>
-  </data>
-  <data name="&gt;&gt;equipmentState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentState.Parent" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentState.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="statePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1335, 133</value>
-  </data>
-  <data name="statePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="statePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 410</value>
-  </data>
-  <data name="statePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="statePanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Name" xml:space="preserve">
-    <value>statePanel</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statePanel.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;statePanel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="updateEquipmentTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -5743,204 +6001,6 @@
   </data>
   <data name="&gt;&gt;equipmentState.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="addEquipmentBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="addEquipmentBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="addEquipmentBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="addEquipmentBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="addEquipmentBtn.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="addEquipmentBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="addEquipmentBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1289, 6</value>
-  </data>
-  <data name="addEquipmentBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="addEquipmentBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 32</value>
-  </data>
-  <data name="addEquipmentBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="addEquipmentBtn.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Name" xml:space="preserve">
-    <value>addEquipmentBtn</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;addEquipmentBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Label33.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label33.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="Label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>856, 98</value>
-  </data>
-  <data name="Label33.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label33.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="Label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 24</value>
-  </data>
-  <data name="Label33.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="Label33.Text" xml:space="preserve">
-    <value>state:</value>
-  </data>
-  <data name="Label33.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;Label33.Name" xml:space="preserve">
-    <value>Label33</value>
-  </data>
-  <data name="&gt;&gt;Label33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label33.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;Label33.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="Label34.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label34.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="Label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 98</value>
-  </data>
-  <data name="Label34.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label34.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="Label34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 24</value>
-  </data>
-  <data name="Label34.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="Label34.Text" xml:space="preserve">
-    <value>hall:</value>
-  </data>
-  <data name="Label34.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
-    <value>Label34</value>
-  </data>
-  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 99</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 24</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.Text" xml:space="preserve">
-    <value>Post id:</value>
-  </data>
-  <data name="equipmentsearchpostidlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Name" xml:space="preserve">
-    <value>equipmentsearchpostidlabel</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;equipmentsearchpostidlabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="userSearchBoxE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>919, 98</value>
-  </data>
-  <data name="userSearchBoxE.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userSearchBoxE.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 0</value>
-  </data>
-  <data name="userSearchBoxE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 24</value>
-  </data>
-  <data name="userSearchBoxE.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Name" xml:space="preserve">
-    <value>userSearchBoxE</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.Parent" xml:space="preserve">
-    <value>adminEquipmentPanel</value>
-  </data>
-  <data name="&gt;&gt;userSearchBoxE.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="adminPostPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -7589,6 +7649,561 @@
   <data name="&gt;&gt;confirmMsgPr.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="profileSubPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;Label50.Name" xml:space="preserve">
+    <value>Label50</value>
+  </data>
+  <data name="&gt;&gt;Label50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label50.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;Label50.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Name" xml:space="preserve">
+    <value>EmailProfile</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Name" xml:space="preserve">
+    <value>adminTitleProfile</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Name" xml:space="preserve">
+    <value>adminPhoneNumberProfile</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Name" xml:space="preserve">
+    <value>adminNameProfile</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Name" xml:space="preserve">
+    <value>EmailProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Name" xml:space="preserve">
+    <value>PhoneNumberProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Name" xml:space="preserve">
+    <value>TitleProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Name" xml:space="preserve">
+    <value>NameProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Name" xml:space="preserve">
+    <value>updateProfileShowBtn</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Label49.Name" xml:space="preserve">
+    <value>Label49</value>
+  </data>
+  <data name="&gt;&gt;Label49.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label49.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;Label49.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="profileSubPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 90</value>
+  </data>
+  <data name="profileSubPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="profileSubPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 466</value>
+  </data>
+  <data name="profileSubPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel1.Name" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel1.Parent" xml:space="preserve">
+    <value>adminProfilePanel</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label50.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label50.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label50.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -1</value>
+  </data>
+  <data name="Label50.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 231</value>
+  </data>
+  <data name="Label50.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="Label50.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label50.Name" xml:space="preserve">
+    <value>Label50</value>
+  </data>
+  <data name="&gt;&gt;Label50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label50.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;Label50.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EmailProfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EmailProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="EmailProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EmailProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 304</value>
+  </data>
+  <data name="EmailProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 5, 0</value>
+  </data>
+  <data name="EmailProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="EmailProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="EmailProfile.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Name" xml:space="preserve">
+    <value>EmailProfile</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;EmailProfile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="adminTitleProfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="adminTitleProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="adminTitleProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adminTitleProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 386</value>
+  </data>
+  <data name="adminTitleProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 5, 0</value>
+  </data>
+  <data name="adminTitleProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="adminTitleProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="adminTitleProfile.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Name" xml:space="preserve">
+    <value>adminTitleProfile</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminTitleProfile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="adminPhoneNumberProfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="adminPhoneNumberProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="adminPhoneNumberProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adminPhoneNumberProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 343</value>
+  </data>
+  <data name="adminPhoneNumberProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 5, 0</value>
+  </data>
+  <data name="adminPhoneNumberProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="adminPhoneNumberProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="adminPhoneNumberProfile.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Name" xml:space="preserve">
+    <value>adminPhoneNumberProfile</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminPhoneNumberProfile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="adminNameProfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="adminNameProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="adminNameProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adminNameProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 262</value>
+  </data>
+  <data name="adminNameProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 5, 0</value>
+  </data>
+  <data name="adminNameProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="adminNameProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="adminNameProfile.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Name" xml:space="preserve">
+    <value>adminNameProfile</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;adminNameProfile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EmailProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EmailProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="EmailProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EmailProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 304</value>
+  </data>
+  <data name="EmailProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 10, 0</value>
+  </data>
+  <data name="EmailProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="EmailProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="EmailProfileLabel.Text" xml:space="preserve">
+    <value>User email :</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Name" xml:space="preserve">
+    <value>EmailProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;EmailProfileLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 343</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 10, 0</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="PhoneNumberProfileLabel.Text" xml:space="preserve">
+    <value>User telephone nunber :</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Name" xml:space="preserve">
+    <value>PhoneNumberProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;PhoneNumberProfileLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TitleProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TitleProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="TitleProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="TitleProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 386</value>
+  </data>
+  <data name="TitleProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 10, 0</value>
+  </data>
+  <data name="TitleProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="TitleProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="TitleProfileLabel.Text" xml:space="preserve">
+    <value>User Title :</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Name" xml:space="preserve">
+    <value>TitleProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;TitleProfileLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="NameProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NameProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="NameProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="NameProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 260</value>
+  </data>
+  <data name="NameProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 10, 0</value>
+  </data>
+  <data name="NameProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="NameProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="NameProfileLabel.Text" xml:space="preserve">
+    <value>User name :</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Name" xml:space="preserve">
+    <value>NameProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;NameProfileLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="updateProfileShowBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateProfileShowBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="updateProfileShowBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="updateProfileShowBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateProfileShowBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 420</value>
+  </data>
+  <data name="updateProfileShowBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="updateProfileShowBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>208, 62</value>
+  </data>
+  <data name="updateProfileShowBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 34</value>
+  </data>
+  <data name="updateProfileShowBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="updateProfileShowBtn.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Name" xml:space="preserve">
+    <value>updateProfileShowBtn</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;updateProfileShowBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Label49.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label49.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label49.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 229</value>
+  </data>
+  <data name="Label49.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label49.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 235</value>
+  </data>
+  <data name="Label49.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="Label49.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label49.Name" xml:space="preserve">
+    <value>Label49</value>
+  </data>
+  <data name="&gt;&gt;Label49.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label49.Parent" xml:space="preserve">
+    <value>profileSubPanel1</value>
+  </data>
+  <data name="&gt;&gt;Label49.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;userPwdProfileInput.Name" xml:space="preserve">
     <value>userPwdProfileInput</value>
   </data>
@@ -8284,561 +8899,6 @@
   </data>
   <data name="&gt;&gt;userNameProfileLabel2.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="profileSubPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;Label50.Name" xml:space="preserve">
-    <value>Label50</value>
-  </data>
-  <data name="&gt;&gt;Label50.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label50.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label50.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Name" xml:space="preserve">
-    <value>EmailProfile</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Name" xml:space="preserve">
-    <value>adminTitleProfile</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Name" xml:space="preserve">
-    <value>adminPhoneNumberProfile</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Name" xml:space="preserve">
-    <value>adminNameProfile</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Name" xml:space="preserve">
-    <value>EmailProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Name" xml:space="preserve">
-    <value>PhoneNumberProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Name" xml:space="preserve">
-    <value>TitleProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Name" xml:space="preserve">
-    <value>NameProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Name" xml:space="preserve">
-    <value>updateProfileShowBtn</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Label49.Name" xml:space="preserve">
-    <value>Label49</value>
-  </data>
-  <data name="&gt;&gt;Label49.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label49.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label49.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="profileSubPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 90</value>
-  </data>
-  <data name="profileSubPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="profileSubPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 466</value>
-  </data>
-  <data name="profileSubPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;profileSubPanel1.Name" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;profileSubPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;profileSubPanel1.Parent" xml:space="preserve">
-    <value>adminProfilePanel</value>
-  </data>
-  <data name="&gt;&gt;profileSubPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label50.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="Label50.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, -1</value>
-  </data>
-  <data name="Label50.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 231</value>
-  </data>
-  <data name="Label50.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="Label50.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Label50.Name" xml:space="preserve">
-    <value>Label50</value>
-  </data>
-  <data name="&gt;&gt;Label50.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label50.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label50.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="EmailProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="EmailProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="EmailProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="EmailProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 304</value>
-  </data>
-  <data name="EmailProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 5, 0</value>
-  </data>
-  <data name="EmailProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="EmailProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="EmailProfile.Text" xml:space="preserve">
-    <value>******</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Name" xml:space="preserve">
-    <value>EmailProfile</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;EmailProfile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="adminTitleProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="adminTitleProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="adminTitleProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="adminTitleProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 386</value>
-  </data>
-  <data name="adminTitleProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 5, 0</value>
-  </data>
-  <data name="adminTitleProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="adminTitleProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="adminTitleProfile.Text" xml:space="preserve">
-    <value>******</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Name" xml:space="preserve">
-    <value>adminTitleProfile</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminTitleProfile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="adminPhoneNumberProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="adminPhoneNumberProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="adminPhoneNumberProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="adminPhoneNumberProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 343</value>
-  </data>
-  <data name="adminPhoneNumberProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 5, 0</value>
-  </data>
-  <data name="adminPhoneNumberProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="adminPhoneNumberProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="adminPhoneNumberProfile.Text" xml:space="preserve">
-    <value>******</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Name" xml:space="preserve">
-    <value>adminPhoneNumberProfile</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminPhoneNumberProfile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="adminNameProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="adminNameProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="adminNameProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="adminNameProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 262</value>
-  </data>
-  <data name="adminNameProfile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 5, 0</value>
-  </data>
-  <data name="adminNameProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 22</value>
-  </data>
-  <data name="adminNameProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="adminNameProfile.Text" xml:space="preserve">
-    <value>******</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Name" xml:space="preserve">
-    <value>adminNameProfile</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;adminNameProfile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="EmailProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="EmailProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="EmailProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="EmailProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 304</value>
-  </data>
-  <data name="EmailProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 10, 0</value>
-  </data>
-  <data name="EmailProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="EmailProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="EmailProfileLabel.Text" xml:space="preserve">
-    <value>User email :</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Name" xml:space="preserve">
-    <value>EmailProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;EmailProfileLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 343</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 10, 0</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 22</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="PhoneNumberProfileLabel.Text" xml:space="preserve">
-    <value>User telephone nunber :</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Name" xml:space="preserve">
-    <value>PhoneNumberProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;PhoneNumberProfileLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="TitleProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TitleProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="TitleProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="TitleProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 386</value>
-  </data>
-  <data name="TitleProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 10, 0</value>
-  </data>
-  <data name="TitleProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="TitleProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="TitleProfileLabel.Text" xml:space="preserve">
-    <value>User Title :</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Name" xml:space="preserve">
-    <value>TitleProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;TitleProfileLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="NameProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="NameProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="NameProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="NameProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 260</value>
-  </data>
-  <data name="NameProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 10, 0</value>
-  </data>
-  <data name="NameProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
-  </data>
-  <data name="NameProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="NameProfileLabel.Text" xml:space="preserve">
-    <value>User name :</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Name" xml:space="preserve">
-    <value>NameProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;NameProfileLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="updateProfileShowBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateProfileShowBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="updateProfileShowBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="updateProfileShowBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateProfileShowBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 420</value>
-  </data>
-  <data name="updateProfileShowBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="updateProfileShowBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>208, 62</value>
-  </data>
-  <data name="updateProfileShowBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 34</value>
-  </data>
-  <data name="updateProfileShowBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="updateProfileShowBtn.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Name" xml:space="preserve">
-    <value>updateProfileShowBtn</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;updateProfileShowBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="Label49.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="Label49.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label49.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 229</value>
-  </data>
-  <data name="Label49.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 235</value>
-  </data>
-  <data name="Label49.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="Label49.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Label49.Name" xml:space="preserve">
-    <value>Label49</value>
-  </data>
-  <data name="&gt;&gt;Label49.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label49.Parent" xml:space="preserve">
-    <value>profileSubPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label49.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="profileTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

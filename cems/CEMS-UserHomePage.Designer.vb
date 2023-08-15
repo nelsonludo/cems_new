@@ -47,7 +47,7 @@ Partial Class UserHomePage
         Me.profileBtn = New System.Windows.Forms.Button()
         Me.postsBtn = New System.Windows.Forms.Button()
         Me.Header = New System.Windows.Forms.Panel()
-        Me.Logout = New System.Windows.Forms.Button()
+        Me.logoutBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.uName = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -55,9 +55,9 @@ Partial Class UserHomePage
         Me.CPUsBtn2 = New System.Windows.Forms.Button()
         Me.IPsBtn2 = New System.Windows.Forms.Button()
         Me.monitorsBtn2 = New System.Windows.Forms.Button()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dashboardMonitorlabel = New System.Windows.Forms.Label()
+        Me.dashboardIPlabel = New System.Windows.Forms.Label()
+        Me.dashboardCPUlabel = New System.Windows.Forms.Label()
         Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
         Me.activeMonitorNumber = New System.Windows.Forms.Label()
         Me.nonActiveIPNumber = New System.Windows.Forms.Label()
@@ -92,10 +92,10 @@ Partial Class UserHomePage
         Me.userTitleProfile = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfile = New System.Windows.Forms.Label()
         Me.userNameProfile = New System.Windows.Forms.Label()
-        Me.userEmailProfileLabel = New System.Windows.Forms.Label()
-        Me.userPhoneNumberProfileLabel = New System.Windows.Forms.Label()
-        Me.userTitleProfileLabel = New System.Windows.Forms.Label()
-        Me.userNameProfileLabel = New System.Windows.Forms.Label()
+        Me.EmailProfileLabel = New System.Windows.Forms.Label()
+        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
+        Me.TitleProfileLabel = New System.Windows.Forms.Label()
+        Me.NameProfileLabel = New System.Windows.Forms.Label()
         Me.updateProfileShowBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
@@ -121,8 +121,8 @@ Partial Class UserHomePage
         Me.equipmentSearchBox = New System.Windows.Forms.TextBox()
         Me.equipmentDataGridView = New System.Windows.Forms.DataGridView()
         Me.EquipmentTitle = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
+        Me.equipmentsearchstatelabel = New System.Windows.Forms.Label()
+        Me.equipmentsearchhalllabel = New System.Windows.Forms.Label()
         Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.sideBar.SuspendLayout()
@@ -373,7 +373,7 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Header.BackColor = System.Drawing.Color.Transparent
         Me.Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Header.Controls.Add(Me.Logout)
+        Me.Header.Controls.Add(Me.logoutBtn)
         Me.Header.Controls.Add(Me.PictureBox1)
         Me.Header.Controls.Add(Me.uName)
         Me.Header.Controls.Add(Me.FlowLayoutPanel1)
@@ -383,25 +383,25 @@ Partial Class UserHomePage
         Me.Header.Size = New System.Drawing.Size(1679, 78)
         Me.Header.TabIndex = 68
         '
-        'Logout
+        'logoutBtn
         '
-        Me.Logout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Logout.AutoSize = True
-        Me.Logout.BackColor = System.Drawing.Color.Transparent
-        Me.Logout.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.Logout.FlatAppearance.BorderSize = 2
-        Me.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Logout.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Logout.ForeColor = System.Drawing.Color.SeaGreen
-        Me.Logout.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Logout.Location = New System.Drawing.Point(1542, 23)
-        Me.Logout.Margin = New System.Windows.Forms.Padding(0)
-        Me.Logout.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.Logout.Name = "Logout"
-        Me.Logout.Size = New System.Drawing.Size(85, 36)
-        Me.Logout.TabIndex = 37
-        Me.Logout.Text = "Logout"
-        Me.Logout.UseVisualStyleBackColor = False
+        Me.logoutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.logoutBtn.AutoSize = True
+        Me.logoutBtn.BackColor = System.Drawing.Color.Transparent
+        Me.logoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.logoutBtn.FlatAppearance.BorderSize = 2
+        Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.logoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.logoutBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.logoutBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.logoutBtn.Location = New System.Drawing.Point(1542, 23)
+        Me.logoutBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.logoutBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.logoutBtn.Name = "logoutBtn"
+        Me.logoutBtn.Size = New System.Drawing.Size(85, 36)
+        Me.logoutBtn.TabIndex = 37
+        Me.logoutBtn.Text = "Logout"
+        Me.logoutBtn.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -447,9 +447,9 @@ Partial Class UserHomePage
         Me.HomePagePanel.Controls.Add(Me.CPUsBtn2)
         Me.HomePagePanel.Controls.Add(Me.IPsBtn2)
         Me.HomePagePanel.Controls.Add(Me.monitorsBtn2)
-        Me.HomePagePanel.Controls.Add(Me.Label37)
-        Me.HomePagePanel.Controls.Add(Me.Label36)
-        Me.HomePagePanel.Controls.Add(Me.Label1)
+        Me.HomePagePanel.Controls.Add(Me.dashboardMonitorlabel)
+        Me.HomePagePanel.Controls.Add(Me.dashboardIPlabel)
+        Me.HomePagePanel.Controls.Add(Me.dashboardCPUlabel)
         Me.HomePagePanel.Controls.Add(Me.nonActiveMonitorNumber)
         Me.HomePagePanel.Controls.Add(Me.activeMonitorNumber)
         Me.HomePagePanel.Controls.Add(Me.nonActiveIPNumber)
@@ -525,47 +525,47 @@ Partial Class UserHomePage
         Me.monitorsBtn2.Text = "View"
         Me.monitorsBtn2.UseVisualStyleBackColor = False
         '
-        'Label37
+        'dashboardMonitorlabel
         '
-        Me.Label37.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label37.ForeColor = System.Drawing.Color.Yellow
-        Me.Label37.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label37.Location = New System.Drawing.Point(1118, 337)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(300, 25)
-        Me.Label37.TabIndex = 47
-        Me.Label37.Text = "Monitors"
-        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.dashboardMonitorlabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.dashboardMonitorlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.dashboardMonitorlabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardMonitorlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dashboardMonitorlabel.Location = New System.Drawing.Point(1118, 337)
+        Me.dashboardMonitorlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.dashboardMonitorlabel.Name = "dashboardMonitorlabel"
+        Me.dashboardMonitorlabel.Size = New System.Drawing.Size(300, 25)
+        Me.dashboardMonitorlabel.TabIndex = 47
+        Me.dashboardMonitorlabel.Text = "Monitors"
+        Me.dashboardMonitorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label36
+        'dashboardIPlabel
         '
-        Me.Label36.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label36.ForeColor = System.Drawing.Color.Yellow
-        Me.Label36.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label36.Location = New System.Drawing.Point(778, 336)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(300, 25)
-        Me.Label36.TabIndex = 46
-        Me.Label36.Text = "IP Phones"
-        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.dashboardIPlabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.dashboardIPlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.dashboardIPlabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardIPlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dashboardIPlabel.Location = New System.Drawing.Point(778, 336)
+        Me.dashboardIPlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.dashboardIPlabel.Name = "dashboardIPlabel"
+        Me.dashboardIPlabel.Size = New System.Drawing.Size(300, 25)
+        Me.dashboardIPlabel.TabIndex = 46
+        Me.dashboardIPlabel.Text = "IP Phones"
+        Me.dashboardIPlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'dashboardCPUlabel
         '
-        Me.Label1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(438, 335)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(300, 25)
-        Me.Label1.TabIndex = 45
-        Me.Label1.Text = "CPU'S"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.dashboardCPUlabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.dashboardCPUlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.dashboardCPUlabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardCPUlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dashboardCPUlabel.Location = New System.Drawing.Point(438, 335)
+        Me.dashboardCPUlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.dashboardCPUlabel.Name = "dashboardCPUlabel"
+        Me.dashboardCPUlabel.Size = New System.Drawing.Size(300, 25)
+        Me.dashboardCPUlabel.TabIndex = 45
+        Me.dashboardCPUlabel.Text = "CPU'S"
+        Me.dashboardCPUlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'nonActiveMonitorNumber
         '
@@ -728,8 +728,8 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProfilePanel.Controls.Add(Me.confirmMsgPr)
-        Me.ProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel1)
+        Me.ProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.ProfilePanel.Controls.Add(Me.profileTitle)
         Me.ProfilePanel.Location = New System.Drawing.Point(231, 115)
         Me.ProfilePanel.Margin = New System.Windows.Forms.Padding(4)
@@ -975,10 +975,10 @@ Partial Class UserHomePage
         Me.profileSubPanel1.Controls.Add(Me.userTitleProfile)
         Me.profileSubPanel1.Controls.Add(Me.userPhoneNumberProfile)
         Me.profileSubPanel1.Controls.Add(Me.userNameProfile)
-        Me.profileSubPanel1.Controls.Add(Me.userEmailProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.userPhoneNumberProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.userTitleProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.userNameProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
         Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
         Me.profileSubPanel1.Controls.Add(Me.Label49)
         Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
@@ -1059,61 +1059,61 @@ Partial Class UserHomePage
         Me.userNameProfile.TabIndex = 7
         Me.userNameProfile.Text = "******"
         '
-        'userEmailProfileLabel
+        'EmailProfileLabel
         '
-        Me.userEmailProfileLabel.AutoSize = True
-        Me.userEmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.userEmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userEmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.userEmailProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userEmailProfileLabel.Location = New System.Drawing.Point(37, 304)
-        Me.userEmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userEmailProfileLabel.Name = "userEmailProfileLabel"
-        Me.userEmailProfileLabel.Size = New System.Drawing.Size(117, 22)
-        Me.userEmailProfileLabel.TabIndex = 11
-        Me.userEmailProfileLabel.Text = "User email :"
+        Me.EmailProfileLabel.AutoSize = True
+        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EmailProfileLabel.Location = New System.Drawing.Point(37, 304)
+        Me.EmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.EmailProfileLabel.Name = "EmailProfileLabel"
+        Me.EmailProfileLabel.Size = New System.Drawing.Size(117, 22)
+        Me.EmailProfileLabel.TabIndex = 11
+        Me.EmailProfileLabel.Text = "User email :"
         '
-        'userPhoneNumberProfileLabel
+        'PhoneNumberProfileLabel
         '
-        Me.userPhoneNumberProfileLabel.AutoSize = True
-        Me.userPhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.userPhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userPhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.userPhoneNumberProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userPhoneNumberProfileLabel.Location = New System.Drawing.Point(36, 343)
-        Me.userPhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userPhoneNumberProfileLabel.Name = "userPhoneNumberProfileLabel"
-        Me.userPhoneNumberProfileLabel.Size = New System.Drawing.Size(226, 22)
-        Me.userPhoneNumberProfileLabel.TabIndex = 10
-        Me.userPhoneNumberProfileLabel.Text = "User telephone nunber :"
+        Me.PhoneNumberProfileLabel.AutoSize = True
+        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.PhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.PhoneNumberProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PhoneNumberProfileLabel.Location = New System.Drawing.Point(36, 343)
+        Me.PhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
+        Me.PhoneNumberProfileLabel.Size = New System.Drawing.Size(226, 22)
+        Me.PhoneNumberProfileLabel.TabIndex = 10
+        Me.PhoneNumberProfileLabel.Text = "User telephone nunber :"
         '
-        'userTitleProfileLabel
+        'TitleProfileLabel
         '
-        Me.userTitleProfileLabel.AutoSize = True
-        Me.userTitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.userTitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userTitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.userTitleProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userTitleProfileLabel.Location = New System.Drawing.Point(37, 386)
-        Me.userTitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userTitleProfileLabel.Name = "userTitleProfileLabel"
-        Me.userTitleProfileLabel.Size = New System.Drawing.Size(110, 22)
-        Me.userTitleProfileLabel.TabIndex = 9
-        Me.userTitleProfileLabel.Text = "User Title :"
+        Me.TitleProfileLabel.AutoSize = True
+        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.TitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.TitleProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TitleProfileLabel.Location = New System.Drawing.Point(37, 386)
+        Me.TitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.TitleProfileLabel.Name = "TitleProfileLabel"
+        Me.TitleProfileLabel.Size = New System.Drawing.Size(110, 22)
+        Me.TitleProfileLabel.TabIndex = 9
+        Me.TitleProfileLabel.Text = "User Title :"
         '
-        'userNameProfileLabel
+        'NameProfileLabel
         '
-        Me.userNameProfileLabel.AutoSize = True
-        Me.userNameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.userNameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userNameProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.userNameProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userNameProfileLabel.Location = New System.Drawing.Point(38, 260)
-        Me.userNameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userNameProfileLabel.Name = "userNameProfileLabel"
-        Me.userNameProfileLabel.Size = New System.Drawing.Size(118, 22)
-        Me.userNameProfileLabel.TabIndex = 7
-        Me.userNameProfileLabel.Text = "User name :"
+        Me.NameProfileLabel.AutoSize = True
+        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.NameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.NameProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NameProfileLabel.Location = New System.Drawing.Point(38, 260)
+        Me.NameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NameProfileLabel.Name = "NameProfileLabel"
+        Me.NameProfileLabel.Size = New System.Drawing.Size(118, 22)
+        Me.NameProfileLabel.TabIndex = 7
+        Me.NameProfileLabel.Text = "User name :"
         '
         'updateProfileShowBtn
         '
@@ -1406,8 +1406,8 @@ Partial Class UserHomePage
         Me.EquipmentPanel.Controls.Add(Me.equipmentSearchBox)
         Me.EquipmentPanel.Controls.Add(Me.equipmentDataGridView)
         Me.EquipmentPanel.Controls.Add(Me.EquipmentTitle)
-        Me.EquipmentPanel.Controls.Add(Me.Label33)
-        Me.EquipmentPanel.Controls.Add(Me.Label34)
+        Me.EquipmentPanel.Controls.Add(Me.equipmentsearchstatelabel)
+        Me.EquipmentPanel.Controls.Add(Me.equipmentsearchhalllabel)
         Me.EquipmentPanel.Controls.Add(Me.equipmentsearchpostidlabel)
         Me.EquipmentPanel.Controls.Add(Me.userSearchBoxE)
         Me.EquipmentPanel.ForeColor = System.Drawing.Color.Black
@@ -1570,33 +1570,33 @@ Partial Class UserHomePage
         Me.EquipmentTitle.TabIndex = 30
         Me.EquipmentTitle.Text = "CPUs"
         '
-        'Label33
+        'equipmentsearchstatelabel
         '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label33.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label33.Location = New System.Drawing.Point(856, 98)
-        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label33.Name = "Label33"
-        Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label33.Size = New System.Drawing.Size(53, 24)
-        Me.Label33.TabIndex = 68
-        Me.Label33.Text = "state:"
-        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.equipmentsearchstatelabel.AutoSize = True
+        Me.equipmentsearchstatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.equipmentsearchstatelabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.equipmentsearchstatelabel.Location = New System.Drawing.Point(856, 98)
+        Me.equipmentsearchstatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.equipmentsearchstatelabel.Name = "equipmentsearchstatelabel"
+        Me.equipmentsearchstatelabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.equipmentsearchstatelabel.Size = New System.Drawing.Size(53, 24)
+        Me.equipmentsearchstatelabel.TabIndex = 68
+        Me.equipmentsearchstatelabel.Text = "state:"
+        Me.equipmentsearchstatelabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label34
+        'equipmentsearchhalllabel
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label34.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label34.Location = New System.Drawing.Point(667, 98)
-        Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label34.Name = "Label34"
-        Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label34.Size = New System.Drawing.Size(44, 24)
-        Me.Label34.TabIndex = 69
-        Me.Label34.Text = "hall:"
-        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.equipmentsearchhalllabel.AutoSize = True
+        Me.equipmentsearchhalllabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.equipmentsearchhalllabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.equipmentsearchhalllabel.Location = New System.Drawing.Point(667, 98)
+        Me.equipmentsearchhalllabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.equipmentsearchhalllabel.Name = "equipmentsearchhalllabel"
+        Me.equipmentsearchhalllabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.equipmentsearchhalllabel.Size = New System.Drawing.Size(44, 24)
+        Me.equipmentsearchhalllabel.TabIndex = 69
+        Me.equipmentsearchhalllabel.Text = "hall:"
+        Me.equipmentsearchhalllabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'equipmentsearchpostidlabel
         '
@@ -1630,10 +1630,10 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
-        Me.Controls.Add(Me.EquipmentPanel)
-        Me.Controls.Add(Me.PostPanel)
-        Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.ProfilePanel)
+        Me.Controls.Add(Me.HomePagePanel)
+        Me.Controls.Add(Me.PostPanel)
+        Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.sideBar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1686,7 +1686,7 @@ Partial Class UserHomePage
     Friend WithEvents profileBtn As Button
     Friend WithEvents postsBtn As Button
     Friend WithEvents Header As Panel
-    Friend WithEvents Logout As Button
+    Friend WithEvents logoutBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents uName As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
@@ -1694,9 +1694,9 @@ Partial Class UserHomePage
     Friend WithEvents CPUsBtn2 As Button
     Friend WithEvents IPsBtn2 As Button
     Friend WithEvents monitorsBtn2 As Button
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents dashboardMonitorlabel As Label
+    Friend WithEvents dashboardIPlabel As Label
+    Friend WithEvents dashboardCPUlabel As Label
     Friend WithEvents nonActiveMonitorNumber As Label
     Friend WithEvents activeMonitorNumber As Label
     Friend WithEvents nonActiveIPNumber As Label
@@ -1731,10 +1731,10 @@ Partial Class UserHomePage
     Friend WithEvents userTitleProfile As Label
     Friend WithEvents userPhoneNumberProfile As Label
     Friend WithEvents userNameProfile As Label
-    Friend WithEvents userEmailProfileLabel As Label
-    Friend WithEvents userPhoneNumberProfileLabel As Label
-    Friend WithEvents userTitleProfileLabel As Label
-    Friend WithEvents userNameProfileLabel As Label
+    Friend WithEvents EmailProfileLabel As Label
+    Friend WithEvents PhoneNumberProfileLabel As Label
+    Friend WithEvents TitleProfileLabel As Label
+    Friend WithEvents NameProfileLabel As Label
     Friend WithEvents updateProfileShowBtn As Button
     Friend WithEvents Label49 As Label
     Friend WithEvents profileTitle As Label
@@ -1758,8 +1758,8 @@ Partial Class UserHomePage
     Friend WithEvents equipmentSearchBox As TextBox
     Friend WithEvents equipmentDataGridView As DataGridView
     Friend WithEvents EquipmentTitle As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label34 As Label
+    Friend WithEvents equipmentsearchstatelabel As Label
+    Friend WithEvents equipmentsearchhalllabel As Label
     Friend WithEvents equipmentsearchpostidlabel As Label
     Friend WithEvents userSearchBoxE As ComboBox
     Friend WithEvents refreshBtnP As Button

@@ -385,7 +385,7 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Form1.Show()
         Me.Visible = False
 
