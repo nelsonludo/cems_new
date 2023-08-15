@@ -117,12 +117,78 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addequipmenthalllabel" xml:space="preserve">
+    <value>Equipment hall </value>
+  </data>
+  <data name="addequipmentpostidlabel" xml:space="preserve">
+    <value>Equipment post ID</value>
+  </data>
+  <data name="addequipmentstatelabel" xml:space="preserve">
+    <value>Equipment state </value>
+  </data>
+  <data name="addEquipmentTitle" xml:space="preserve">
+    <value>Add equipment</value>
+  </data>
+  <data name="addequipmenttitlelabel" xml:space="preserve">
+    <value>Equipment title</value>
+  </data>
   <data name="addHallErrorMsg" xml:space="preserve">
     <value>Please fill all the fields</value>
+  </data>
+  <data name="addPostHallLabel" xml:space="preserve">
+    <value>Post Hall</value>
+  </data>
+  <data name="addPostIDLabel" xml:space="preserve">
+    <value>Post ID</value>
+  </data>
+  <data name="addPostStateLabel" xml:space="preserve">
+    <value>Post state</value>
+  </data>
+  <data name="addPostTitle" xml:space="preserve">
+    <value>Add post</value>
+  </data>
+  <data name="addRoleErrorMsg" xml:space="preserve">
+    <value>Please fill the field</value>
+  </data>
+  <data name="addRoleNameLabel" xml:space="preserve">
+    <value>Role name</value>
+  </data>
+  <data name="addRoleTitle" xml:space="preserve">
+    <value>Add role</value>
+  </data>
+  <data name="addUserConfirmPwdLabel" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="addUserEmailLabel" xml:space="preserve">
+    <value>User email</value>
+  </data>
+  <data name="addUserErrorMsg.EmptyField" xml:space="preserve">
+    <value>Please fill all the fields!</value>
+  </data>
+  <data name="addUserErrorMsg.PwdNotMatch" xml:space="preserve">
+    <value>Please enter the same password!</value>
+  </data>
+  <data name="addUserNameLabel" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="addUserPhoneLabel" xml:space="preserve">
+    <value>User phone number</value>
+  </data>
+  <data name="addUserPwdLabel" xml:space="preserve">
+    <value>User Password</value>
+  </data>
+  <data name="addUserTitleLabel" xml:space="preserve">
+    <value>User Title</value>
   </data>
   <data name="adminHomePage" xml:space="preserve">
     <value>Home Page</value>
     <comment>this is the home page text</comment>
+  </data>
+  <data name="changeequipmentstatelabel" xml:space="preserve">
+    <value>Equipment state</value>
+  </data>
+  <data name="changepoststatelabel" xml:space="preserve">
+    <value>Post State</value>
   </data>
   <data name="confirmMsgE.text.add" xml:space="preserve">
     <value>Hall successfully added ✔</value>
@@ -160,6 +226,9 @@
   <data name="confirmMsgP.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
   </data>
+  <data name="confirmMsgPr" xml:space="preserve">
+    <value>Profile updated successfully</value>
+  </data>
   <data name="confirmMsgR.text.add" xml:space="preserve">
     <value>Hall successfully added ✔</value>
   </data>
@@ -187,8 +256,29 @@
   <data name="CPUsBtn" xml:space="preserve">
     <value>CPUs</value>
   </data>
+  <data name="CPUsBtn2" xml:space="preserve">
+    <value>view</value>
+  </data>
   <data name="dashBoardBtn" xml:space="preserve">
     <value>Dashboard</value>
+  </data>
+  <data name="dashboardCPULabel" xml:space="preserve">
+    <value>CPUs</value>
+  </data>
+  <data name="dashboardIPLabel" xml:space="preserve">
+    <value>IP Phones </value>
+  </data>
+  <data name="dashboardMonitorLabel" xml:space="preserve">
+    <value>Monitors </value>
+  </data>
+  <data name="dashboardTitle" xml:space="preserve">
+    <value>All categories of equipment</value>
+  </data>
+  <data name="dashbooardUserLabel" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="emailProfileLabel" xml:space="preserve">
+    <value>User email</value>
   </data>
   <data name="equipmentAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -199,10 +289,16 @@
   <data name="equipmentAddValidationBtn" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="EquipmentChangeBtn" xml:space="preserve">
+    <value>Change</value>
+  </data>
   <data name="equipmentDeleteBtn" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="equipmentsBtn" xml:space="preserve">
+    <value>Equipments</value>
+  </data>
+  <data name="equipmentsTitle" xml:space="preserve">
     <value>Equipments</value>
   </data>
   <data name="equipmentUpdateBtn" xml:space="preserve">
@@ -250,19 +346,16 @@
   <data name="hallsBtn" xml:space="preserve">
     <value>Halls</value>
   </data>
+  <data name="hallSearchLabel" xml:space="preserve">
+    <value>Hall</value>
+  </data>
   <data name="hallSearchLabelE" xml:space="preserve">
     <value>Hall</value>
   </data>
   <data name="hallSearchLabelH" xml:space="preserve">
-    <value>Hall</value>
+    <value>search Hall</value>
   </data>
   <data name="hallSearchLabelP" xml:space="preserve">
-    <value>Hall</value>
-  </data>
-  <data name="hallSearchLabelR" xml:space="preserve">
-    <value>Hall</value>
-  </data>
-  <data name="hallSearchLabelU" xml:space="preserve">
     <value>Hall</value>
   </data>
   <data name="hallUpdateBtn" xml:space="preserve">
@@ -283,11 +376,23 @@
   <data name="IPsBtn" xml:space="preserve">
     <value>IP Phones</value>
   </data>
+  <data name="IPsBtn2" xml:space="preserve">
+    <value>view</value>
+  </data>
   <data name="logoutBtn" xml:space="preserve">
     <value>Logout</value>
   </data>
   <data name="monitorsBtn" xml:space="preserve">
     <value>Monitors</value>
+  </data>
+  <data name="monitorsBtn2" xml:space="preserve">
+    <value>view</value>
+  </data>
+  <data name="nameProfileLabel" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="phoneNumberProfileLable" xml:space="preserve">
+    <value>User Phone number</value>
   </data>
   <data name="postAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -298,10 +403,19 @@
   <data name="postAddValidationBtn" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="postChangeBtn" xml:space="preserve">
+    <value>Change</value>
+  </data>
   <data name="postDeleteBtn" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="postsBtn" xml:space="preserve">
+    <value>Posts</value>
+  </data>
+  <data name="postsearchlabel" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="postsTitle" xml:space="preserve">
     <value>Posts</value>
   </data>
   <data name="postUpdateBtn" xml:space="preserve">
@@ -314,6 +428,9 @@
     <value>Update</value>
   </data>
   <data name="profileBtn" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="profileTitle" xml:space="preserve">
     <value>Profile</value>
   </data>
   <data name="refreshBtnE" xml:space="preserve">
@@ -346,7 +463,7 @@
   <data name="rolesBtn" xml:space="preserve">
     <value>Roles</value>
   </data>
-  <data name="roleTitle" xml:space="preserve">
+  <data name="rolesTitle" xml:space="preserve">
     <value>Roles</value>
   </data>
   <data name="roleUpdateBtn" xml:space="preserve">
@@ -373,8 +490,56 @@
   <data name="searchErrorU" xml:space="preserve">
     <value>No result found</value>
   </data>
+  <data name="searchUserLabel" xml:space="preserve">
+    <value>Search username</value>
+  </data>
+  <data name="statesearchlabel" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="TitleProfileLabel" xml:space="preserve">
+    <value>User Title</value>
+  </data>
+  <data name="updateEquipmentTitle" xml:space="preserve">
+    <value>Update equipment</value>
+  </data>
   <data name="updateHallErrorMsg" xml:space="preserve">
     <value>Please fill all the fields</value>
+  </data>
+  <data name="updatePostTitle" xml:space="preserve">
+    <value>Update post</value>
+  </data>
+  <data name="updateProfielShowBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="updateProfileTitle" xml:space="preserve">
+    <value>Update Profile</value>
+  </data>
+  <data name="updateProfileValidationBtn" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="updateRoleErrorMsg" xml:space="preserve">
+    <value>Please fill the field</value>
+  </data>
+  <data name="updateRoleNameLabel" xml:space="preserve">
+    <value>Role name</value>
+  </data>
+  <data name="updateRoleTitle" xml:space="preserve">
+    <value>Update role</value>
+  </data>
+  <data name="updateUserEmailLabel" xml:space="preserve">
+    <value>User email</value>
+  </data>
+  <data name="updateUserNameLabel" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="updateUserPhoneLabel" xml:space="preserve">
+    <value>User phone number</value>
+  </data>
+  <data name="updateUserTitle" xml:space="preserve">
+    <value>Update User</value>
+  </data>
+  <data name="updateUserTitleLabel" xml:space="preserve">
+    <value>User Title</value>
   </data>
   <data name="userAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -385,10 +550,31 @@
   <data name="userAddValidationBtn" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="userConfirmPwdProfileLabel2" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
   <data name="userDeleteBtn" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="userEmailProfileLabel2" xml:space="preserve">
+    <value>User email</value>
+  </data>
+  <data name="userNameProfileLabel2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="userPhoneNumberProfileLabel2" xml:space="preserve">
+    <value>User phone number</value>
+  </data>
+  <data name="userPwdProfileLabel2" xml:space="preserve">
+    <value>Enter new password</value>
+  </data>
   <data name="usersBtn" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="usersBtn2" xml:space="preserve">
+    <value>view</value>
+  </data>
+  <data name="usersTitle" xml:space="preserve">
     <value>Users</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">

@@ -24,57 +24,61 @@ Partial Class homePage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(homePage))
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dropdown = New System.Windows.Forms.Panel()
+        Me.CPUsBtn = New System.Windows.Forms.Button()
+        Me.IPsBtn = New System.Windows.Forms.Button()
+        Me.equipmentsBtn = New System.Windows.Forms.Button()
+        Me.monitorsBtn = New System.Windows.Forms.Button()
         Me.adminUsersPanel = New System.Windows.Forms.Panel()
         Me.refreshBtnU = New System.Windows.Forms.Button()
         Me.userUpdatePanel = New System.Windows.Forms.Panel()
         Me.updateUserErrorMsg = New System.Windows.Forms.Label()
-        Me.Label59 = New System.Windows.Forms.Label()
+        Me.updateUserTitle = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.userUserTitleInput = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.updateUserTitleLabel = New System.Windows.Forms.Label()
         Me.userUserPhoneInput = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.updateUserPhoneLabel = New System.Windows.Forms.Label()
         Me.userUserEmailInput = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.userCancelBtn = New System.Windows.Forms.Button()
+        Me.updateUserEmailLabel = New System.Windows.Forms.Label()
+        Me.userUpdateCancelBtn = New System.Windows.Forms.Button()
         Me.userUserNameInput = New System.Windows.Forms.TextBox()
         Me.userUpdateValidationBtn = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.updateUserNameLabel = New System.Windows.Forms.Label()
         Me.userAddPanel = New System.Windows.Forms.Panel()
-        Me.Label60 = New System.Windows.Forms.Label()
+        Me.addUserTitle = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.addUserErrorMsg = New System.Windows.Forms.Label()
         Me.userUserAddTitleInput = New System.Windows.Forms.ComboBox()
         Me.userUserAddConfirmPwdInput = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.addUserConfirmPwdLabel = New System.Windows.Forms.Label()
         Me.userUserAddPwdInput = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.addUserPwdLabel = New System.Windows.Forms.Label()
+        Me.addUserTitleLabel = New System.Windows.Forms.Label()
         Me.userUserAddPhoneInput = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.addUserPhoneLabel = New System.Windows.Forms.Label()
         Me.userUserAddEmailInput = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.addUserEmailLabel = New System.Windows.Forms.Label()
         Me.userAddCancelBtn = New System.Windows.Forms.Button()
         Me.userUserAddNameInput = New System.Windows.Forms.TextBox()
         Me.userAddvalidationBtn = New System.Windows.Forms.Button()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.addUserNameLabel = New System.Windows.Forms.Label()
         Me.userSearchBox = New System.Windows.Forms.TextBox()
         Me.userAddBtn = New System.Windows.Forms.Button()
         Me.confirmMsgU = New System.Windows.Forms.Label()
@@ -82,16 +86,23 @@ Partial Class homePage
         Me.searchErrorU = New System.Windows.Forms.Label()
         Me.exportBtnU = New System.Windows.Forms.Button()
         Me.userDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.usersTitle = New System.Windows.Forms.Label()
         Me.userDeleteBtn = New System.Windows.Forms.Button()
         Me.searchuserlabel = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.dashboardBtn = New System.Windows.Forms.Button()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.userTypeTitle = New System.Windows.Forms.Label()
+        Me.rolesBtn = New System.Windows.Forms.Button()
+        Me.hallsBtn = New System.Windows.Forms.Button()
+        Me.usersBtn = New System.Windows.Forms.Button()
+        Me.profileBtn = New System.Windows.Forms.Button()
+        Me.postsBtn = New System.Windows.Forms.Button()
         Me.aName = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.adminHeader = New System.Windows.Forms.Panel()
         Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -102,22 +113,26 @@ Partial Class homePage
         Me.IPsBtn2 = New System.Windows.Forms.Button()
         Me.monitorsBtn2 = New System.Windows.Forms.Button()
         Me.usersBtn2 = New System.Windows.Forms.Button()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dashboardUserLabel = New System.Windows.Forms.Label()
+        Me.dashboardMonitorLabel = New System.Windows.Forms.Label()
+        Me.dashboardIPLabel = New System.Windows.Forms.Label()
+        Me.dashboardCPULabel = New System.Windows.Forms.Label()
         Me.userNumber = New System.Windows.Forms.Label()
+        Me.userbuttoninactive = New System.Windows.Forms.Button()
         Me.nonActiveMonitorNumber = New System.Windows.Forms.Label()
         Me.activeMonitorNumber = New System.Windows.Forms.Label()
         Me.nonActiveIPNumber = New System.Windows.Forms.Label()
         Me.activeIPNumber = New System.Windows.Forms.Label()
         Me.nonActiveCPUNumber = New System.Windows.Forms.Label()
         Me.activeCPUNumber = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.monitorbuttoninactive = New System.Windows.Forms.Button()
+        Me.IPbuttoninactive = New System.Windows.Forms.Button()
+        Me.CPUbuttoninactive = New System.Windows.Forms.Button()
+        Me.dashboardTitle = New System.Windows.Forms.Label()
         Me.adminEquipmentPanel = New System.Windows.Forms.Panel()
         Me.refreshBtnE = New System.Windows.Forms.Button()
         Me.addEquipmentPanel = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.addEquipmentTitle = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.postIdInput = New System.Windows.Forms.ComboBox()
         Me.equipmentStateInput = New System.Windows.Forms.ComboBox()
@@ -129,7 +144,7 @@ Partial Class homePage
         Me.addequimentstatelabel = New System.Windows.Forms.Label()
         Me.addEquipmentCancelBtn = New System.Windows.Forms.Button()
         Me.addEquipmentValidationBtn = New System.Windows.Forms.Button()
-        Me.equipmentstatelabel = New System.Windows.Forms.Label()
+        Me.equipmenttitlelabel = New System.Windows.Forms.Label()
         Me.confirmMsgE = New System.Windows.Forms.Label()
         Me.hallSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.searchErrorE = New System.Windows.Forms.Label()
@@ -138,7 +153,7 @@ Partial Class homePage
         Me.equipmentDataGridView = New System.Windows.Forms.DataGridView()
         Me.EquipmentTitle = New System.Windows.Forms.Label()
         Me.statePanel = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.updateEquipmentTitle = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.stateChangeBtn = New System.Windows.Forms.Button()
         Me.equipmentDeleteBtn = New System.Windows.Forms.Button()
@@ -152,15 +167,15 @@ Partial Class homePage
         Me.adminPostPanel = New System.Windows.Forms.Panel()
         Me.refreshBtnP = New System.Windows.Forms.Button()
         Me.addPostPanel = New System.Windows.Forms.Panel()
-        Me.Label68 = New System.Windows.Forms.Label()
+        Me.addPostTitle = New System.Windows.Forms.Label()
         Me.Label69 = New System.Windows.Forms.Label()
         Me.postPostIdInput = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.addPostIDLabel = New System.Windows.Forms.Label()
         Me.postStateInput = New System.Windows.Forms.ComboBox()
         Me.addPostErrorMsg = New System.Windows.Forms.Label()
         Me.postHallInput = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
+        Me.addPostHallLabel = New System.Windows.Forms.Label()
+        Me.addPostStateLabel = New System.Windows.Forms.Label()
         Me.addPostCancelBtn = New System.Windows.Forms.Button()
         Me.addPostValidationBtn = New System.Windows.Forms.Button()
         Me.confirmMsgP = New System.Windows.Forms.Label()
@@ -171,7 +186,7 @@ Partial Class homePage
         Me.postDataGridView = New System.Windows.Forms.DataGridView()
         Me.postTitle = New System.Windows.Forms.Label()
         Me.postChangeStatePanel = New System.Windows.Forms.Panel()
-        Me.Label66 = New System.Windows.Forms.Label()
+        Me.updatePostTitle = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.postDeleteBtn = New System.Windows.Forms.Button()
         Me.postChangeBtn = New System.Windows.Forms.Button()
@@ -186,7 +201,7 @@ Partial Class homePage
         Me.confirmMsgPr = New System.Windows.Forms.Label()
         Me.profileSubPanel2 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.Label52 = New System.Windows.Forms.Label()
+        Me.updateProfileTitle = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
@@ -195,20 +210,21 @@ Partial Class homePage
         Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
         Me.userEmailProfileInput = New System.Windows.Forms.TextBox()
         Me.userNameProfileInput = New System.Windows.Forms.TextBox()
-        Me.updateProfileValidateBtn = New System.Windows.Forms.Button()
+        Me.updateProfileValidationBtn = New System.Windows.Forms.Button()
         Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
         Me.profileSubPanel1 = New System.Windows.Forms.Panel()
-        Me.adminEmailProfile = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.EmailProfile = New System.Windows.Forms.Label()
         Me.adminTitleProfile = New System.Windows.Forms.Label()
         Me.adminPhoneNumberProfile = New System.Windows.Forms.Label()
         Me.adminNameProfile = New System.Windows.Forms.Label()
-        Me.adminEmailProfileLabel = New System.Windows.Forms.Label()
-        Me.adminPhoneNumberProfileLabel = New System.Windows.Forms.Label()
-        Me.adminTitleProfileLabel = New System.Windows.Forms.Label()
-        Me.adminNameProfileLabel = New System.Windows.Forms.Label()
+        Me.EmailProfileLabel = New System.Windows.Forms.Label()
+        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
+        Me.TitleProfileLabel = New System.Windows.Forms.Label()
+        Me.NameProfileLabel = New System.Windows.Forms.Label()
         Me.updateProfileShowBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
@@ -219,7 +235,7 @@ Partial Class homePage
         Me.Label57 = New System.Windows.Forms.Label()
         Me.hallUpdateCancelBtn = New System.Windows.Forms.Button()
         Me.adminUpdateHallNameInput = New System.Windows.Forms.TextBox()
-        Me.hallUpdateValidateBtn = New System.Windows.Forms.Button()
+        Me.hallUpdateValidationBtn = New System.Windows.Forms.Button()
         Me.updateHallNameLabel = New System.Windows.Forms.Label()
         Me.hallAddpanel = New System.Windows.Forms.Panel()
         Me.hallAddTitle = New System.Windows.Forms.Label()
@@ -227,7 +243,7 @@ Partial Class homePage
         Me.addHallErrorMsg = New System.Windows.Forms.Label()
         Me.HallAddCancelBtn = New System.Windows.Forms.Button()
         Me.adminAddHallNameInput = New System.Windows.Forms.TextBox()
-        Me.HallAddValidateBtn = New System.Windows.Forms.Button()
+        Me.HallAddValidationBtn = New System.Windows.Forms.Button()
         Me.addHallNameLabel = New System.Windows.Forms.Label()
         Me.hallAddBtn = New System.Windows.Forms.Button()
         Me.confirmMsgH = New System.Windows.Forms.Label()
@@ -243,21 +259,21 @@ Partial Class homePage
         Me.adminRolePanel = New System.Windows.Forms.Panel()
         Me.refreshBtnR = New System.Windows.Forms.Button()
         Me.roleUpdatePanel = New System.Windows.Forms.Panel()
-        Me.Label62 = New System.Windows.Forms.Label()
+        Me.UpdateRoleTitle = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.roleUpdateCancelBtn = New System.Windows.Forms.Button()
         Me.titleNameInput = New System.Windows.Forms.TextBox()
         Me.roleUpdateValidationBtn = New System.Windows.Forms.Button()
         Me.updateRoleErrorMsg = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
+        Me.updateRoleNameLabel = New System.Windows.Forms.Label()
         Me.roleAddPanel = New System.Windows.Forms.Panel()
-        Me.Label64 = New System.Windows.Forms.Label()
+        Me.addRoleTitle = New System.Windows.Forms.Label()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.addRoleErrorMsg = New System.Windows.Forms.Label()
         Me.roleAddCancelBtn = New System.Windows.Forms.Button()
         Me.titleAddNameInput = New System.Windows.Forms.TextBox()
         Me.roleAddValidationBtn = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.addRoleNameLabel = New System.Windows.Forms.Label()
         Me.roleDeleteBtn = New System.Windows.Forms.Button()
         Me.roleAddBtn = New System.Windows.Forms.Button()
         Me.confirmMsgR = New System.Windows.Forms.Label()
@@ -265,23 +281,7 @@ Partial Class homePage
         Me.searchErrorR = New System.Windows.Forms.Label()
         Me.exportBtnR = New System.Windows.Forms.Button()
         Me.roleDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Roles = New System.Windows.Forms.Label()
-        Me.CPUsBtn = New System.Windows.Forms.Button()
-        Me.IPsBtn = New System.Windows.Forms.Button()
-        Me.equipmentsBtn = New System.Windows.Forms.Button()
-        Me.monitorsBtn = New System.Windows.Forms.Button()
-        Me.dashboardBtn = New System.Windows.Forms.Button()
-        Me.rolesBtn = New System.Windows.Forms.Button()
-        Me.hallsBtn = New System.Windows.Forms.Button()
-        Me.usersBtn = New System.Windows.Forms.Button()
-        Me.profileBtn = New System.Windows.Forms.Button()
-        Me.postsBtn = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.userbuttoninactive = New System.Windows.Forms.Button()
-        Me.monitorbuttoninactive = New System.Windows.Forms.Button()
-        Me.IPbuttoninactive = New System.Windows.Forms.Button()
-        Me.CPUbuttoninactive = New System.Windows.Forms.Button()
-        Me.Label50 = New System.Windows.Forms.Label()
+        Me.rolesTitle = New System.Windows.Forms.Label()
         Me.dropdown.SuspendLayout()
         Me.adminUsersPanel.SuspendLayout()
         Me.userUpdatePanel.SuspendLayout()
@@ -289,6 +289,7 @@ Partial Class homePage
         CType(Me.userDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.adminHeader.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.adminHomePagePanel.SuspendLayout()
         Me.adminEquipmentPanel.SuspendLayout()
         Me.addEquipmentPanel.SuspendLayout()
@@ -309,7 +310,6 @@ Partial Class homePage
         Me.roleUpdatePanel.SuspendLayout()
         Me.roleAddPanel.SuspendLayout()
         CType(Me.roleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dropdown
@@ -324,13 +324,56 @@ Partial Class homePage
         resources.ApplyResources(Me.dropdown, "dropdown")
         Me.dropdown.Name = "dropdown"
         '
+        'CPUsBtn
+        '
+        Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.CPUsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.CPUsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.CPUsBtn, "CPUsBtn")
+        Me.CPUsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.CPUsBtn.Image = Global.cems.My.Resources.Resources.thingForCPU
+        Me.CPUsBtn.Name = "CPUsBtn"
+        Me.CPUsBtn.UseVisualStyleBackColor = False
+        '
+        'IPsBtn
+        '
+        Me.IPsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.IPsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.IPsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.IPsBtn, "IPsBtn")
+        Me.IPsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.IPsBtn.Image = Global.cems.My.Resources.Resources.Phone
+        Me.IPsBtn.Name = "IPsBtn"
+        Me.IPsBtn.UseVisualStyleBackColor = False
+        '
+        'equipmentsBtn
+        '
+        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.equipmentsBtn, "equipmentsBtn")
+        Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.equipmentScrew
+        Me.equipmentsBtn.Name = "equipmentsBtn"
+        Me.equipmentsBtn.UseVisualStyleBackColor = False
+        '
+        'monitorsBtn
+        '
+        Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.monitorsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.monitorsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.monitorsBtn, "monitorsBtn")
+        Me.monitorsBtn.Image = Global.cems.My.Resources.Resources.monitor2
+        Me.monitorsBtn.Name = "monitorsBtn"
+        Me.monitorsBtn.UseVisualStyleBackColor = False
+        '
         'adminUsersPanel
         '
         resources.ApplyResources(Me.adminUsersPanel, "adminUsersPanel")
         Me.adminUsersPanel.BackColor = System.Drawing.Color.Transparent
         Me.adminUsersPanel.Controls.Add(Me.refreshBtnU)
-        Me.adminUsersPanel.Controls.Add(Me.userUpdatePanel)
         Me.adminUsersPanel.Controls.Add(Me.userAddPanel)
+        Me.adminUsersPanel.Controls.Add(Me.userUpdatePanel)
         Me.adminUsersPanel.Controls.Add(Me.userSearchBox)
         Me.adminUsersPanel.Controls.Add(Me.userAddBtn)
         Me.adminUsersPanel.Controls.Add(Me.confirmMsgU)
@@ -338,7 +381,7 @@ Partial Class homePage
         Me.adminUsersPanel.Controls.Add(Me.searchErrorU)
         Me.adminUsersPanel.Controls.Add(Me.exportBtnU)
         Me.adminUsersPanel.Controls.Add(Me.userDataGridView)
-        Me.adminUsersPanel.Controls.Add(Me.Label10)
+        Me.adminUsersPanel.Controls.Add(Me.usersTitle)
         Me.adminUsersPanel.Controls.Add(Me.userDeleteBtn)
         Me.adminUsersPanel.Controls.Add(Me.searchuserlabel)
         Me.adminUsersPanel.ForeColor = System.Drawing.Color.Black
@@ -358,18 +401,18 @@ Partial Class homePage
         Me.userUpdatePanel.BackColor = System.Drawing.Color.MintCream
         Me.userUpdatePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.userUpdatePanel.Controls.Add(Me.updateUserErrorMsg)
-        Me.userUpdatePanel.Controls.Add(Me.Label59)
+        Me.userUpdatePanel.Controls.Add(Me.updateUserTitle)
         Me.userUpdatePanel.Controls.Add(Me.Label58)
         Me.userUpdatePanel.Controls.Add(Me.userUserTitleInput)
-        Me.userUpdatePanel.Controls.Add(Me.Label11)
+        Me.userUpdatePanel.Controls.Add(Me.updateUserTitleLabel)
         Me.userUpdatePanel.Controls.Add(Me.userUserPhoneInput)
-        Me.userUpdatePanel.Controls.Add(Me.Label9)
+        Me.userUpdatePanel.Controls.Add(Me.updateUserPhoneLabel)
         Me.userUpdatePanel.Controls.Add(Me.userUserEmailInput)
-        Me.userUpdatePanel.Controls.Add(Me.Label8)
-        Me.userUpdatePanel.Controls.Add(Me.userCancelBtn)
+        Me.userUpdatePanel.Controls.Add(Me.updateUserEmailLabel)
+        Me.userUpdatePanel.Controls.Add(Me.userUpdateCancelBtn)
         Me.userUpdatePanel.Controls.Add(Me.userUserNameInput)
         Me.userUpdatePanel.Controls.Add(Me.userUpdateValidationBtn)
-        Me.userUpdatePanel.Controls.Add(Me.Label7)
+        Me.userUpdatePanel.Controls.Add(Me.updateUserNameLabel)
         resources.ApplyResources(Me.userUpdatePanel, "userUpdatePanel")
         Me.userUpdatePanel.Name = "userUpdatePanel"
         '
@@ -380,12 +423,12 @@ Partial Class homePage
         Me.updateUserErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.updateUserErrorMsg.Name = "updateUserErrorMsg"
         '
-        'Label59
+        'updateUserTitle
         '
-        resources.ApplyResources(Me.Label59, "Label59")
-        Me.Label59.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label59.ForeColor = System.Drawing.Color.MintCream
-        Me.Label59.Name = "Label59"
+        resources.ApplyResources(Me.updateUserTitle, "updateUserTitle")
+        Me.updateUserTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateUserTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.updateUserTitle.Name = "updateUserTitle"
         '
         'Label58
         '
@@ -401,43 +444,43 @@ Partial Class homePage
         resources.ApplyResources(Me.userUserTitleInput, "userUserTitleInput")
         Me.userUserTitleInput.Name = "userUserTitleInput"
         '
-        'Label11
+        'updateUserTitleLabel
         '
-        resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label11.Name = "Label11"
+        resources.ApplyResources(Me.updateUserTitleLabel, "updateUserTitleLabel")
+        Me.updateUserTitleLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.updateUserTitleLabel.Name = "updateUserTitleLabel"
         '
         'userUserPhoneInput
         '
         resources.ApplyResources(Me.userUserPhoneInput, "userUserPhoneInput")
         Me.userUserPhoneInput.Name = "userUserPhoneInput"
         '
-        'Label9
+        'updateUserPhoneLabel
         '
-        resources.ApplyResources(Me.Label9, "Label9")
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label9.Name = "Label9"
+        resources.ApplyResources(Me.updateUserPhoneLabel, "updateUserPhoneLabel")
+        Me.updateUserPhoneLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.updateUserPhoneLabel.Name = "updateUserPhoneLabel"
         '
         'userUserEmailInput
         '
         resources.ApplyResources(Me.userUserEmailInput, "userUserEmailInput")
         Me.userUserEmailInput.Name = "userUserEmailInput"
         '
-        'Label8
+        'updateUserEmailLabel
         '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label8.Name = "Label8"
+        resources.ApplyResources(Me.updateUserEmailLabel, "updateUserEmailLabel")
+        Me.updateUserEmailLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.updateUserEmailLabel.Name = "updateUserEmailLabel"
         '
-        'userCancelBtn
+        'userUpdateCancelBtn
         '
-        Me.userCancelBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.userCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.userCancelBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.userCancelBtn, "userCancelBtn")
-        Me.userCancelBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.userCancelBtn.Name = "userCancelBtn"
-        Me.userCancelBtn.UseVisualStyleBackColor = False
+        Me.userUpdateCancelBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.userUpdateCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.userUpdateCancelBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.userUpdateCancelBtn, "userUpdateCancelBtn")
+        Me.userUpdateCancelBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.userUpdateCancelBtn.Name = "userUpdateCancelBtn"
+        Me.userUpdateCancelBtn.UseVisualStyleBackColor = False
         '
         'userUserNameInput
         '
@@ -454,42 +497,42 @@ Partial Class homePage
         Me.userUpdateValidationBtn.Name = "userUpdateValidationBtn"
         Me.userUpdateValidationBtn.UseVisualStyleBackColor = False
         '
-        'Label7
+        'updateUserNameLabel
         '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label7.Name = "Label7"
+        resources.ApplyResources(Me.updateUserNameLabel, "updateUserNameLabel")
+        Me.updateUserNameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.updateUserNameLabel.Name = "updateUserNameLabel"
         '
         'userAddPanel
         '
         Me.userAddPanel.BackColor = System.Drawing.Color.MintCream
         Me.userAddPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.userAddPanel.Controls.Add(Me.Label60)
+        Me.userAddPanel.Controls.Add(Me.addUserTitle)
         Me.userAddPanel.Controls.Add(Me.Label61)
         Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
         Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
         Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
-        Me.userAddPanel.Controls.Add(Me.Label6)
+        Me.userAddPanel.Controls.Add(Me.addUserConfirmPwdLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
-        Me.userAddPanel.Controls.Add(Me.Label14)
-        Me.userAddPanel.Controls.Add(Me.Label15)
+        Me.userAddPanel.Controls.Add(Me.addUserPwdLabel)
+        Me.userAddPanel.Controls.Add(Me.addUserTitleLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddPhoneInput)
-        Me.userAddPanel.Controls.Add(Me.Label16)
+        Me.userAddPanel.Controls.Add(Me.addUserPhoneLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
-        Me.userAddPanel.Controls.Add(Me.Label17)
+        Me.userAddPanel.Controls.Add(Me.addUserEmailLabel)
         Me.userAddPanel.Controls.Add(Me.userAddCancelBtn)
         Me.userAddPanel.Controls.Add(Me.userUserAddNameInput)
         Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
-        Me.userAddPanel.Controls.Add(Me.Label18)
+        Me.userAddPanel.Controls.Add(Me.addUserNameLabel)
         resources.ApplyResources(Me.userAddPanel, "userAddPanel")
         Me.userAddPanel.Name = "userAddPanel"
         '
-        'Label60
+        'addUserTitle
         '
-        resources.ApplyResources(Me.Label60, "Label60")
-        Me.Label60.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label60.ForeColor = System.Drawing.Color.MintCream
-        Me.Label60.Name = "Label60"
+        resources.ApplyResources(Me.addUserTitle, "addUserTitle")
+        Me.addUserTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.addUserTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.addUserTitle.Name = "addUserTitle"
         '
         'Label61
         '
@@ -518,10 +561,10 @@ Partial Class homePage
         Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
         Me.userUserAddConfirmPwdInput.UseSystemPasswordChar = True
         '
-        'Label6
+        'addUserConfirmPwdLabel
         '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.Name = "Label6"
+        resources.ApplyResources(Me.addUserConfirmPwdLabel, "addUserConfirmPwdLabel")
+        Me.addUserConfirmPwdLabel.Name = "addUserConfirmPwdLabel"
         '
         'userUserAddPwdInput
         '
@@ -529,35 +572,35 @@ Partial Class homePage
         Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
         Me.userUserAddPwdInput.UseSystemPasswordChar = True
         '
-        'Label14
+        'addUserPwdLabel
         '
-        resources.ApplyResources(Me.Label14, "Label14")
-        Me.Label14.Name = "Label14"
+        resources.ApplyResources(Me.addUserPwdLabel, "addUserPwdLabel")
+        Me.addUserPwdLabel.Name = "addUserPwdLabel"
         '
-        'Label15
+        'addUserTitleLabel
         '
-        resources.ApplyResources(Me.Label15, "Label15")
-        Me.Label15.Name = "Label15"
+        resources.ApplyResources(Me.addUserTitleLabel, "addUserTitleLabel")
+        Me.addUserTitleLabel.Name = "addUserTitleLabel"
         '
         'userUserAddPhoneInput
         '
         resources.ApplyResources(Me.userUserAddPhoneInput, "userUserAddPhoneInput")
         Me.userUserAddPhoneInput.Name = "userUserAddPhoneInput"
         '
-        'Label16
+        'addUserPhoneLabel
         '
-        resources.ApplyResources(Me.Label16, "Label16")
-        Me.Label16.Name = "Label16"
+        resources.ApplyResources(Me.addUserPhoneLabel, "addUserPhoneLabel")
+        Me.addUserPhoneLabel.Name = "addUserPhoneLabel"
         '
         'userUserAddEmailInput
         '
         resources.ApplyResources(Me.userUserAddEmailInput, "userUserAddEmailInput")
         Me.userUserAddEmailInput.Name = "userUserAddEmailInput"
         '
-        'Label17
+        'addUserEmailLabel
         '
-        resources.ApplyResources(Me.Label17, "Label17")
-        Me.Label17.Name = "Label17"
+        resources.ApplyResources(Me.addUserEmailLabel, "addUserEmailLabel")
+        Me.addUserEmailLabel.Name = "addUserEmailLabel"
         '
         'userAddCancelBtn
         '
@@ -584,10 +627,10 @@ Partial Class homePage
         Me.userAddvalidationBtn.Name = "userAddvalidationBtn"
         Me.userAddvalidationBtn.UseVisualStyleBackColor = False
         '
-        'Label18
+        'addUserNameLabel
         '
-        resources.ApplyResources(Me.Label18, "Label18")
-        Me.Label18.Name = "Label18"
+        resources.ApplyResources(Me.addUserNameLabel, "addUserNameLabel")
+        Me.addUserNameLabel.Name = "addUserNameLabel"
         '
         'userSearchBox
         '
@@ -637,36 +680,36 @@ Partial Class homePage
         Me.userDataGridView.AllowUserToDeleteRows = False
         Me.userDataGridView.AllowUserToResizeColumns = False
         Me.userDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
         resources.ApplyResources(Me.userDataGridView, "userDataGridView")
         Me.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.userDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.userDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.userDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.userDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.DefaultCellStyle = DataGridViewCellStyle19
         Me.userDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.userDataGridView.EnableHeadersVisualStyles = False
         Me.userDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -674,23 +717,23 @@ Partial Class homePage
         Me.userDataGridView.Name = "userDataGridView"
         Me.userDataGridView.ReadOnly = True
         Me.userDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.userDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.userDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.userDataGridView.RowHeadersVisible = False
         Me.userDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
-        'Label10
+        'usersTitle
         '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.ForeColor = System.Drawing.Color.Gray
-        Me.Label10.Name = "Label10"
+        resources.ApplyResources(Me.usersTitle, "usersTitle")
+        Me.usersTitle.ForeColor = System.Drawing.Color.Gray
+        Me.usersTitle.Name = "usersTitle"
         '
         'userDeleteBtn
         '
@@ -721,6 +764,16 @@ Partial Class homePage
         Me.Panel2.ForeColor = System.Drawing.Color.MintCream
         Me.Panel2.Name = "Panel2"
         '
+        'dashboardBtn
+        '
+        Me.dashboardBtn.BackColor = System.Drawing.Color.MintCream
+        Me.dashboardBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.dashboardBtn, "dashboardBtn")
+        Me.dashboardBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.dashboardBtn.Image = Global.cems.My.Resources.Resources.home
+        Me.dashboardBtn.Name = "dashboardBtn"
+        Me.dashboardBtn.UseVisualStyleBackColor = False
+        '
         'Label39
         '
         Me.Label39.BackColor = System.Drawing.Color.MintCream
@@ -733,6 +786,61 @@ Partial Class homePage
         resources.ApplyResources(Me.userTypeTitle, "userTypeTitle")
         Me.userTypeTitle.ForeColor = System.Drawing.Color.MintCream
         Me.userTypeTitle.Name = "userTypeTitle"
+        '
+        'rolesBtn
+        '
+        Me.rolesBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.rolesBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.rolesBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.rolesBtn, "rolesBtn")
+        Me.rolesBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.rolesBtn.Image = Global.cems.My.Resources.Resources.roles
+        Me.rolesBtn.Name = "rolesBtn"
+        Me.rolesBtn.UseVisualStyleBackColor = False
+        '
+        'hallsBtn
+        '
+        Me.hallsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.hallsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.hallsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.hallsBtn, "hallsBtn")
+        Me.hallsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.hallsBtn.Image = Global.cems.My.Resources.Resources.Hall
+        Me.hallsBtn.Name = "hallsBtn"
+        Me.hallsBtn.UseVisualStyleBackColor = False
+        '
+        'usersBtn
+        '
+        Me.usersBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.usersBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.usersBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.usersBtn, "usersBtn")
+        Me.usersBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.usersBtn.Image = Global.cems.My.Resources.Resources.user3
+        Me.usersBtn.Name = "usersBtn"
+        Me.usersBtn.UseVisualStyleBackColor = False
+        '
+        'profileBtn
+        '
+        Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.profileBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.profileBtn, "profileBtn")
+        Me.profileBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.profileBtn.Image = Global.cems.My.Resources.Resources.profile
+        Me.profileBtn.Name = "profileBtn"
+        Me.profileBtn.UseVisualStyleBackColor = False
+        '
+        'postsBtn
+        '
+        Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.postsBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.postsBtn, "postsBtn")
+        Me.postsBtn.ForeColor = System.Drawing.Color.MintCream
+        Me.postsBtn.Image = Global.cems.My.Resources.Resources.posts
+        Me.postsBtn.Name = "postsBtn"
+        Me.postsBtn.UseVisualStyleBackColor = False
         '
         'aName
         '
@@ -766,6 +874,13 @@ Partial Class homePage
         Me.logoutBtn.Name = "logoutBtn"
         Me.logoutBtn.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
+        '
         'Timer1
         '
         Me.Timer1.Interval = 15
@@ -793,10 +908,10 @@ Partial Class homePage
         Me.adminHomePagePanel.Controls.Add(Me.IPsBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.monitorsBtn2)
         Me.adminHomePagePanel.Controls.Add(Me.usersBtn2)
-        Me.adminHomePagePanel.Controls.Add(Me.Label38)
-        Me.adminHomePagePanel.Controls.Add(Me.Label37)
-        Me.adminHomePagePanel.Controls.Add(Me.Label36)
-        Me.adminHomePagePanel.Controls.Add(Me.Label2)
+        Me.adminHomePagePanel.Controls.Add(Me.dashboardUserLabel)
+        Me.adminHomePagePanel.Controls.Add(Me.dashboardMonitorLabel)
+        Me.adminHomePagePanel.Controls.Add(Me.dashboardIPLabel)
+        Me.adminHomePagePanel.Controls.Add(Me.dashboardCPULabel)
         Me.adminHomePagePanel.Controls.Add(Me.userNumber)
         Me.adminHomePagePanel.Controls.Add(Me.userbuttoninactive)
         Me.adminHomePagePanel.Controls.Add(Me.nonActiveMonitorNumber)
@@ -808,7 +923,7 @@ Partial Class homePage
         Me.adminHomePagePanel.Controls.Add(Me.monitorbuttoninactive)
         Me.adminHomePagePanel.Controls.Add(Me.IPbuttoninactive)
         Me.adminHomePagePanel.Controls.Add(Me.CPUbuttoninactive)
-        Me.adminHomePagePanel.Controls.Add(Me.Label1)
+        Me.adminHomePagePanel.Controls.Add(Me.dashboardTitle)
         Me.adminHomePagePanel.ForeColor = System.Drawing.Color.Yellow
         Me.adminHomePagePanel.Name = "adminHomePagePanel"
         '
@@ -852,33 +967,33 @@ Partial Class homePage
         Me.usersBtn2.Name = "usersBtn2"
         Me.usersBtn2.UseVisualStyleBackColor = False
         '
-        'Label38
+        'dashboardUserLabel
         '
-        Me.Label38.BackColor = System.Drawing.Color.SeaGreen
-        resources.ApplyResources(Me.Label38, "Label38")
-        Me.Label38.ForeColor = System.Drawing.Color.Yellow
-        Me.Label38.Name = "Label38"
+        Me.dashboardUserLabel.BackColor = System.Drawing.Color.SeaGreen
+        resources.ApplyResources(Me.dashboardUserLabel, "dashboardUserLabel")
+        Me.dashboardUserLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardUserLabel.Name = "dashboardUserLabel"
         '
-        'Label37
+        'dashboardMonitorLabel
         '
-        Me.Label37.BackColor = System.Drawing.Color.SeaGreen
-        resources.ApplyResources(Me.Label37, "Label37")
-        Me.Label37.ForeColor = System.Drawing.Color.Yellow
-        Me.Label37.Name = "Label37"
+        Me.dashboardMonitorLabel.BackColor = System.Drawing.Color.SeaGreen
+        resources.ApplyResources(Me.dashboardMonitorLabel, "dashboardMonitorLabel")
+        Me.dashboardMonitorLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardMonitorLabel.Name = "dashboardMonitorLabel"
         '
-        'Label36
+        'dashboardIPLabel
         '
-        Me.Label36.BackColor = System.Drawing.Color.SeaGreen
-        resources.ApplyResources(Me.Label36, "Label36")
-        Me.Label36.ForeColor = System.Drawing.Color.Yellow
-        Me.Label36.Name = "Label36"
+        Me.dashboardIPLabel.BackColor = System.Drawing.Color.SeaGreen
+        resources.ApplyResources(Me.dashboardIPLabel, "dashboardIPLabel")
+        Me.dashboardIPLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardIPLabel.Name = "dashboardIPLabel"
         '
-        'Label2
+        'dashboardCPULabel
         '
-        Me.Label2.BackColor = System.Drawing.Color.SeaGreen
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.ForeColor = System.Drawing.Color.Yellow
-        Me.Label2.Name = "Label2"
+        Me.dashboardCPULabel.BackColor = System.Drawing.Color.SeaGreen
+        resources.ApplyResources(Me.dashboardCPULabel, "dashboardCPULabel")
+        Me.dashboardCPULabel.ForeColor = System.Drawing.Color.Yellow
+        Me.dashboardCPULabel.Name = "dashboardCPULabel"
         '
         'userNumber
         '
@@ -886,6 +1001,17 @@ Partial Class homePage
         Me.userNumber.BackColor = System.Drawing.Color.MintCream
         Me.userNumber.ForeColor = System.Drawing.Color.SeaGreen
         Me.userNumber.Name = "userNumber"
+        '
+        'userbuttoninactive
+        '
+        Me.userbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        resources.ApplyResources(Me.userbuttoninactive, "userbuttoninactive")
+        Me.userbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.userbuttoninactive.FlatAppearance.BorderSize = 2
+        Me.userbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
+        Me.userbuttoninactive.Image = Global.cems.My.Resources.Resources.user2
+        Me.userbuttoninactive.Name = "userbuttoninactive"
+        Me.userbuttoninactive.UseVisualStyleBackColor = False
         '
         'nonActiveMonitorNumber
         '
@@ -929,11 +1055,43 @@ Partial Class homePage
         Me.activeCPUNumber.ForeColor = System.Drawing.Color.SeaGreen
         Me.activeCPUNumber.Name = "activeCPUNumber"
         '
-        'Label1
+        'monitorbuttoninactive
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Name = "Label1"
+        Me.monitorbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        resources.ApplyResources(Me.monitorbuttoninactive, "monitorbuttoninactive")
+        Me.monitorbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.monitorbuttoninactive.FlatAppearance.BorderSize = 2
+        Me.monitorbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
+        Me.monitorbuttoninactive.Image = Global.cems.My.Resources.Resources.monitor1
+        Me.monitorbuttoninactive.Name = "monitorbuttoninactive"
+        Me.monitorbuttoninactive.UseVisualStyleBackColor = False
+        '
+        'IPbuttoninactive
+        '
+        Me.IPbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.IPbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.IPbuttoninactive.FlatAppearance.BorderSize = 2
+        Me.IPbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
+        resources.ApplyResources(Me.IPbuttoninactive, "IPbuttoninactive")
+        Me.IPbuttoninactive.Name = "IPbuttoninactive"
+        Me.IPbuttoninactive.UseVisualStyleBackColor = False
+        '
+        'CPUbuttoninactive
+        '
+        Me.CPUbuttoninactive.BackColor = System.Drawing.Color.MintCream
+        Me.CPUbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.CPUbuttoninactive.FlatAppearance.BorderSize = 2
+        Me.CPUbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
+        resources.ApplyResources(Me.CPUbuttoninactive, "CPUbuttoninactive")
+        Me.CPUbuttoninactive.Image = Global.cems.My.Resources.Resources.cpu1
+        Me.CPUbuttoninactive.Name = "CPUbuttoninactive"
+        Me.CPUbuttoninactive.UseVisualStyleBackColor = False
+        '
+        'dashboardTitle
+        '
+        resources.ApplyResources(Me.dashboardTitle, "dashboardTitle")
+        Me.dashboardTitle.ForeColor = System.Drawing.Color.Gray
+        Me.dashboardTitle.Name = "dashboardTitle"
         '
         'adminEquipmentPanel
         '
@@ -970,7 +1128,7 @@ Partial Class homePage
         '
         Me.addEquipmentPanel.BackColor = System.Drawing.Color.MintCream
         Me.addEquipmentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.addEquipmentPanel.Controls.Add(Me.Label13)
+        Me.addEquipmentPanel.Controls.Add(Me.addEquipmentTitle)
         Me.addEquipmentPanel.Controls.Add(Me.Label22)
         Me.addEquipmentPanel.Controls.Add(Me.postIdInput)
         Me.addEquipmentPanel.Controls.Add(Me.equipmentStateInput)
@@ -982,16 +1140,16 @@ Partial Class homePage
         Me.addEquipmentPanel.Controls.Add(Me.addequimentstatelabel)
         Me.addEquipmentPanel.Controls.Add(Me.addEquipmentCancelBtn)
         Me.addEquipmentPanel.Controls.Add(Me.addEquipmentValidationBtn)
-        Me.addEquipmentPanel.Controls.Add(Me.equipmentstatelabel)
+        Me.addEquipmentPanel.Controls.Add(Me.equipmenttitlelabel)
         resources.ApplyResources(Me.addEquipmentPanel, "addEquipmentPanel")
         Me.addEquipmentPanel.Name = "addEquipmentPanel"
         '
-        'Label13
+        'addEquipmentTitle
         '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label13.ForeColor = System.Drawing.Color.MintCream
-        Me.Label13.Name = "Label13"
+        resources.ApplyResources(Me.addEquipmentTitle, "addEquipmentTitle")
+        Me.addEquipmentTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.addEquipmentTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.addEquipmentTitle.Name = "addEquipmentTitle"
         '
         'Label22
         '
@@ -1072,10 +1230,10 @@ Partial Class homePage
         Me.addEquipmentValidationBtn.Name = "addEquipmentValidationBtn"
         Me.addEquipmentValidationBtn.UseVisualStyleBackColor = False
         '
-        'equipmentstatelabel
+        'equipmenttitlelabel
         '
-        resources.ApplyResources(Me.equipmentstatelabel, "equipmentstatelabel")
-        Me.equipmentstatelabel.Name = "equipmentstatelabel"
+        resources.ApplyResources(Me.equipmenttitlelabel, "equipmenttitlelabel")
+        Me.equipmenttitlelabel.Name = "equipmenttitlelabel"
         '
         'confirmMsgE
         '
@@ -1116,36 +1274,36 @@ Partial Class homePage
         Me.equipmentDataGridView.AllowUserToDeleteRows = False
         Me.equipmentDataGridView.AllowUserToResizeColumns = False
         Me.equipmentDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
         resources.ApplyResources(Me.equipmentDataGridView, "equipmentDataGridView")
         Me.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.equipmentDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.equipmentDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle38.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle38
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle23
         Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.equipmentDataGridView.EnableHeadersVisualStyles = False
         Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1166,7 +1324,7 @@ Partial Class homePage
         '
         resources.ApplyResources(Me.statePanel, "statePanel")
         Me.statePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.statePanel.Controls.Add(Me.Label25)
+        Me.statePanel.Controls.Add(Me.updateEquipmentTitle)
         Me.statePanel.Controls.Add(Me.Label23)
         Me.statePanel.Controls.Add(Me.stateChangeBtn)
         Me.statePanel.Controls.Add(Me.equipmentDeleteBtn)
@@ -1174,12 +1332,12 @@ Partial Class homePage
         Me.statePanel.Controls.Add(Me.equipmentState)
         Me.statePanel.Name = "statePanel"
         '
-        'Label25
+        'updateEquipmentTitle
         '
-        resources.ApplyResources(Me.Label25, "Label25")
-        Me.Label25.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label25.ForeColor = System.Drawing.Color.MintCream
-        Me.Label25.Name = "Label25"
+        resources.ApplyResources(Me.updateEquipmentTitle, "updateEquipmentTitle")
+        Me.updateEquipmentTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateEquipmentTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.updateEquipmentTitle.Name = "updateEquipmentTitle"
         '
         'Label23
         '
@@ -1284,26 +1442,26 @@ Partial Class homePage
         '
         Me.addPostPanel.BackColor = System.Drawing.Color.MintCream
         Me.addPostPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.addPostPanel.Controls.Add(Me.Label68)
+        Me.addPostPanel.Controls.Add(Me.addPostTitle)
         Me.addPostPanel.Controls.Add(Me.Label69)
         Me.addPostPanel.Controls.Add(Me.postPostIdInput)
-        Me.addPostPanel.Controls.Add(Me.Label19)
+        Me.addPostPanel.Controls.Add(Me.addPostIDLabel)
         Me.addPostPanel.Controls.Add(Me.postStateInput)
         Me.addPostPanel.Controls.Add(Me.addPostErrorMsg)
         Me.addPostPanel.Controls.Add(Me.postHallInput)
-        Me.addPostPanel.Controls.Add(Me.Label20)
-        Me.addPostPanel.Controls.Add(Me.Label29)
+        Me.addPostPanel.Controls.Add(Me.addPostHallLabel)
+        Me.addPostPanel.Controls.Add(Me.addPostStateLabel)
         Me.addPostPanel.Controls.Add(Me.addPostCancelBtn)
         Me.addPostPanel.Controls.Add(Me.addPostValidationBtn)
         resources.ApplyResources(Me.addPostPanel, "addPostPanel")
         Me.addPostPanel.Name = "addPostPanel"
         '
-        'Label68
+        'addPostTitle
         '
-        resources.ApplyResources(Me.Label68, "Label68")
-        Me.Label68.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label68.ForeColor = System.Drawing.Color.MintCream
-        Me.Label68.Name = "Label68"
+        resources.ApplyResources(Me.addPostTitle, "addPostTitle")
+        Me.addPostTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.addPostTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.addPostTitle.Name = "addPostTitle"
         '
         'Label69
         '
@@ -1317,11 +1475,11 @@ Partial Class homePage
         resources.ApplyResources(Me.postPostIdInput, "postPostIdInput")
         Me.postPostIdInput.Name = "postPostIdInput"
         '
-        'Label19
+        'addPostIDLabel
         '
-        resources.ApplyResources(Me.Label19, "Label19")
-        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label19.Name = "Label19"
+        resources.ApplyResources(Me.addPostIDLabel, "addPostIDLabel")
+        Me.addPostIDLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.addPostIDLabel.Name = "addPostIDLabel"
         '
         'postStateInput
         '
@@ -1345,17 +1503,17 @@ Partial Class homePage
         resources.ApplyResources(Me.postHallInput, "postHallInput")
         Me.postHallInput.Name = "postHallInput"
         '
-        'Label20
+        'addPostHallLabel
         '
-        resources.ApplyResources(Me.Label20, "Label20")
-        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label20.Name = "Label20"
+        resources.ApplyResources(Me.addPostHallLabel, "addPostHallLabel")
+        Me.addPostHallLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.addPostHallLabel.Name = "addPostHallLabel"
         '
-        'Label29
+        'addPostStateLabel
         '
-        resources.ApplyResources(Me.Label29, "Label29")
-        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.Label29.Name = "Label29"
+        resources.ApplyResources(Me.addPostStateLabel, "addPostStateLabel")
+        Me.addPostStateLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.addPostStateLabel.Name = "addPostStateLabel"
         '
         'addPostCancelBtn
         '
@@ -1417,35 +1575,35 @@ Partial Class homePage
         Me.postDataGridView.AllowUserToDeleteRows = False
         Me.postDataGridView.AllowUserToResizeColumns = False
         Me.postDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle24
         resources.ApplyResources(Me.postDataGridView, "postDataGridView")
         Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle25.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle26
         Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.postDataGridView.EnableHeadersVisualStyles = False
         Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1468,7 +1626,7 @@ Partial Class homePage
         resources.ApplyResources(Me.postChangeStatePanel, "postChangeStatePanel")
         Me.postChangeStatePanel.BackColor = System.Drawing.Color.MintCream
         Me.postChangeStatePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.postChangeStatePanel.Controls.Add(Me.Label66)
+        Me.postChangeStatePanel.Controls.Add(Me.updatePostTitle)
         Me.postChangeStatePanel.Controls.Add(Me.Label67)
         Me.postChangeStatePanel.Controls.Add(Me.postDeleteBtn)
         Me.postChangeStatePanel.Controls.Add(Me.postChangeBtn)
@@ -1476,12 +1634,12 @@ Partial Class homePage
         Me.postChangeStatePanel.Controls.Add(Me.postChangeStateInput)
         Me.postChangeStatePanel.Name = "postChangeStatePanel"
         '
-        'Label66
+        'updatePostTitle
         '
-        resources.ApplyResources(Me.Label66, "Label66")
-        Me.Label66.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label66.ForeColor = System.Drawing.Color.MintCream
-        Me.Label66.Name = "Label66"
+        resources.ApplyResources(Me.updatePostTitle, "updatePostTitle")
+        Me.updatePostTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.updatePostTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.updatePostTitle.Name = "updatePostTitle"
         '
         'Label67
         '
@@ -1563,8 +1721,8 @@ Partial Class homePage
         '
         resources.ApplyResources(Me.adminProfilePanel, "adminProfilePanel")
         Me.adminProfilePanel.Controls.Add(Me.confirmMsgPr)
-        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
+        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Name = "adminProfilePanel"
         '
@@ -1579,7 +1737,7 @@ Partial Class homePage
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
         Me.profileSubPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.Label52)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileTitle)
         Me.profileSubPanel2.Controls.Add(Me.Label51)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
@@ -1588,7 +1746,7 @@ Partial Class homePage
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidateBtn)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidationBtn)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
@@ -1602,12 +1760,12 @@ Partial Class homePage
         Me.userPwdProfileInput.Name = "userPwdProfileInput"
         Me.userPwdProfileInput.UseSystemPasswordChar = True
         '
-        'Label52
+        'updateProfileTitle
         '
-        resources.ApplyResources(Me.Label52, "Label52")
-        Me.Label52.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label52.ForeColor = System.Drawing.Color.MintCream
-        Me.Label52.Name = "Label52"
+        resources.ApplyResources(Me.updateProfileTitle, "updateProfileTitle")
+        Me.updateProfileTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.updateProfileTitle.Name = "updateProfileTitle"
         '
         'Label51
         '
@@ -1660,15 +1818,15 @@ Partial Class homePage
         resources.ApplyResources(Me.userNameProfileInput, "userNameProfileInput")
         Me.userNameProfileInput.Name = "userNameProfileInput"
         '
-        'updateProfileValidateBtn
+        'updateProfileValidationBtn
         '
-        Me.updateProfileValidateBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.updateProfileValidateBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.updateProfileValidateBtn, "updateProfileValidateBtn")
-        Me.updateProfileValidateBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.updateProfileValidateBtn.Name = "updateProfileValidateBtn"
-        Me.updateProfileValidateBtn.UseVisualStyleBackColor = False
+        Me.updateProfileValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.updateProfileValidationBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.updateProfileValidationBtn, "updateProfileValidationBtn")
+        Me.updateProfileValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.updateProfileValidationBtn.Name = "updateProfileValidationBtn"
+        Me.updateProfileValidationBtn.UseVisualStyleBackColor = False
         '
         'userEmailProfileLabel2
         '
@@ -1700,26 +1858,34 @@ Partial Class homePage
         resources.ApplyResources(Me.profileSubPanel1, "profileSubPanel1")
         Me.profileSubPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.profileSubPanel1.Controls.Add(Me.Label50)
-        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfile)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfile)
         Me.profileSubPanel1.Controls.Add(Me.adminTitleProfile)
         Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfile)
         Me.profileSubPanel1.Controls.Add(Me.adminNameProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminEmailProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.adminNameProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
         Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
         Me.profileSubPanel1.Controls.Add(Me.Label49)
         Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.profileSubPanel1.ForeColor = System.Drawing.Color.Yellow
         Me.profileSubPanel1.Name = "profileSubPanel1"
         '
-        'adminEmailProfile
+        'Label50
         '
-        resources.ApplyResources(Me.adminEmailProfile, "adminEmailProfile")
-        Me.adminEmailProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminEmailProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.adminEmailProfile.Name = "adminEmailProfile"
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.Label50, "Label50")
+        Me.Label50.ForeColor = System.Drawing.Color.Yellow
+        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
+        Me.Label50.Name = "Label50"
+        '
+        'EmailProfile
+        '
+        resources.ApplyResources(Me.EmailProfile, "EmailProfile")
+        Me.EmailProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfile.Name = "EmailProfile"
         '
         'adminTitleProfile
         '
@@ -1742,33 +1908,33 @@ Partial Class homePage
         Me.adminNameProfile.ForeColor = System.Drawing.Color.Yellow
         Me.adminNameProfile.Name = "adminNameProfile"
         '
-        'adminEmailProfileLabel
+        'EmailProfileLabel
         '
-        resources.ApplyResources(Me.adminEmailProfileLabel, "adminEmailProfileLabel")
-        Me.adminEmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminEmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.adminEmailProfileLabel.Name = "adminEmailProfileLabel"
+        resources.ApplyResources(Me.EmailProfileLabel, "EmailProfileLabel")
+        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfileLabel.Name = "EmailProfileLabel"
         '
-        'adminPhoneNumberProfileLabel
+        'PhoneNumberProfileLabel
         '
-        resources.ApplyResources(Me.adminPhoneNumberProfileLabel, "adminPhoneNumberProfileLabel")
-        Me.adminPhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminPhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.adminPhoneNumberProfileLabel.Name = "adminPhoneNumberProfileLabel"
+        resources.ApplyResources(Me.PhoneNumberProfileLabel, "PhoneNumberProfileLabel")
+        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
         '
-        'adminTitleProfileLabel
+        'TitleProfileLabel
         '
-        resources.ApplyResources(Me.adminTitleProfileLabel, "adminTitleProfileLabel")
-        Me.adminTitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminTitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.adminTitleProfileLabel.Name = "adminTitleProfileLabel"
+        resources.ApplyResources(Me.TitleProfileLabel, "TitleProfileLabel")
+        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.TitleProfileLabel.Name = "TitleProfileLabel"
         '
-        'adminNameProfileLabel
+        'NameProfileLabel
         '
-        resources.ApplyResources(Me.adminNameProfileLabel, "adminNameProfileLabel")
-        Me.adminNameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminNameProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.adminNameProfileLabel.Name = "adminNameProfileLabel"
+        resources.ApplyResources(Me.NameProfileLabel, "NameProfileLabel")
+        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.NameProfileLabel.Name = "NameProfileLabel"
         '
         'updateProfileShowBtn
         '
@@ -1820,7 +1986,7 @@ Partial Class homePage
         Me.hallUpdatePanel.Controls.Add(Me.Label57)
         Me.hallUpdatePanel.Controls.Add(Me.hallUpdateCancelBtn)
         Me.hallUpdatePanel.Controls.Add(Me.adminUpdateHallNameInput)
-        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateValidateBtn)
+        Me.hallUpdatePanel.Controls.Add(Me.hallUpdateValidationBtn)
         Me.hallUpdatePanel.Controls.Add(Me.updateHallNameLabel)
         resources.ApplyResources(Me.hallUpdatePanel, "hallUpdatePanel")
         Me.hallUpdatePanel.Name = "hallUpdatePanel"
@@ -1862,15 +2028,15 @@ Partial Class homePage
         resources.ApplyResources(Me.adminUpdateHallNameInput, "adminUpdateHallNameInput")
         Me.adminUpdateHallNameInput.Name = "adminUpdateHallNameInput"
         '
-        'hallUpdateValidateBtn
+        'hallUpdateValidationBtn
         '
-        Me.hallUpdateValidateBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.hallUpdateValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.hallUpdateValidateBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.hallUpdateValidateBtn, "hallUpdateValidateBtn")
-        Me.hallUpdateValidateBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.hallUpdateValidateBtn.Name = "hallUpdateValidateBtn"
-        Me.hallUpdateValidateBtn.UseVisualStyleBackColor = False
+        Me.hallUpdateValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.hallUpdateValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.hallUpdateValidationBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.hallUpdateValidationBtn, "hallUpdateValidationBtn")
+        Me.hallUpdateValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.hallUpdateValidationBtn.Name = "hallUpdateValidationBtn"
+        Me.hallUpdateValidationBtn.UseVisualStyleBackColor = False
         '
         'updateHallNameLabel
         '
@@ -1887,7 +2053,7 @@ Partial Class homePage
         Me.hallAddpanel.Controls.Add(Me.addHallErrorMsg)
         Me.hallAddpanel.Controls.Add(Me.HallAddCancelBtn)
         Me.hallAddpanel.Controls.Add(Me.adminAddHallNameInput)
-        Me.hallAddpanel.Controls.Add(Me.HallAddValidateBtn)
+        Me.hallAddpanel.Controls.Add(Me.HallAddValidationBtn)
         Me.hallAddpanel.Controls.Add(Me.addHallNameLabel)
         resources.ApplyResources(Me.hallAddpanel, "hallAddpanel")
         Me.hallAddpanel.Name = "hallAddpanel"
@@ -1928,15 +2094,15 @@ Partial Class homePage
         resources.ApplyResources(Me.adminAddHallNameInput, "adminAddHallNameInput")
         Me.adminAddHallNameInput.Name = "adminAddHallNameInput"
         '
-        'HallAddValidateBtn
+        'HallAddValidationBtn
         '
-        Me.HallAddValidateBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.HallAddValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.HallAddValidateBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.HallAddValidateBtn, "HallAddValidateBtn")
-        Me.HallAddValidateBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.HallAddValidateBtn.Name = "HallAddValidateBtn"
-        Me.HallAddValidateBtn.UseVisualStyleBackColor = False
+        Me.HallAddValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.HallAddValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.HallAddValidationBtn.FlatAppearance.BorderSize = 0
+        resources.ApplyResources(Me.HallAddValidationBtn, "HallAddValidationBtn")
+        Me.HallAddValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.HallAddValidationBtn.Name = "HallAddValidationBtn"
+        Me.HallAddValidationBtn.UseVisualStyleBackColor = False
         '
         'addHallNameLabel
         '
@@ -2006,36 +2172,36 @@ Partial Class homePage
         Me.hallDataGridView.AllowUserToDeleteRows = False
         Me.hallDataGridView.AllowUserToResizeColumns = False
         Me.hallDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle43.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.hallDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle43
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.hallDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
         resources.ApplyResources(Me.hallDataGridView, "hallDataGridView")
         Me.hallDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.hallDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.hallDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.hallDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle44.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.hallDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.hallDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
         Me.hallDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle45.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.hallDataGridView.DefaultCellStyle = DataGridViewCellStyle45
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle29.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.hallDataGridView.DefaultCellStyle = DataGridViewCellStyle29
         Me.hallDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.hallDataGridView.EnableHeadersVisualStyles = False
         Me.hallDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -2087,7 +2253,7 @@ Partial Class homePage
         Me.adminRolePanel.Controls.Add(Me.searchErrorR)
         Me.adminRolePanel.Controls.Add(Me.exportBtnR)
         Me.adminRolePanel.Controls.Add(Me.roleDataGridView)
-        Me.adminRolePanel.Controls.Add(Me.Roles)
+        Me.adminRolePanel.Controls.Add(Me.rolesTitle)
         Me.adminRolePanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.adminRolePanel.Name = "adminRolePanel"
         '
@@ -2104,22 +2270,22 @@ Partial Class homePage
         '
         Me.roleUpdatePanel.BackColor = System.Drawing.Color.MintCream
         Me.roleUpdatePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.roleUpdatePanel.Controls.Add(Me.Label62)
+        Me.roleUpdatePanel.Controls.Add(Me.UpdateRoleTitle)
         Me.roleUpdatePanel.Controls.Add(Me.Label63)
         Me.roleUpdatePanel.Controls.Add(Me.roleUpdateCancelBtn)
         Me.roleUpdatePanel.Controls.Add(Me.titleNameInput)
         Me.roleUpdatePanel.Controls.Add(Me.roleUpdateValidationBtn)
         Me.roleUpdatePanel.Controls.Add(Me.updateRoleErrorMsg)
-        Me.roleUpdatePanel.Controls.Add(Me.Label28)
+        Me.roleUpdatePanel.Controls.Add(Me.updateRoleNameLabel)
         resources.ApplyResources(Me.roleUpdatePanel, "roleUpdatePanel")
         Me.roleUpdatePanel.Name = "roleUpdatePanel"
         '
-        'Label62
+        'UpdateRoleTitle
         '
-        resources.ApplyResources(Me.Label62, "Label62")
-        Me.Label62.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label62.ForeColor = System.Drawing.Color.MintCream
-        Me.Label62.Name = "Label62"
+        resources.ApplyResources(Me.UpdateRoleTitle, "UpdateRoleTitle")
+        Me.UpdateRoleTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.UpdateRoleTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.UpdateRoleTitle.Name = "UpdateRoleTitle"
         '
         'Label63
         '
@@ -2160,31 +2326,31 @@ Partial Class homePage
         Me.updateRoleErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.updateRoleErrorMsg.Name = "updateRoleErrorMsg"
         '
-        'Label28
+        'updateRoleNameLabel
         '
-        resources.ApplyResources(Me.Label28, "Label28")
-        Me.Label28.Name = "Label28"
+        resources.ApplyResources(Me.updateRoleNameLabel, "updateRoleNameLabel")
+        Me.updateRoleNameLabel.Name = "updateRoleNameLabel"
         '
         'roleAddPanel
         '
         Me.roleAddPanel.BackColor = System.Drawing.Color.MintCream
         Me.roleAddPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.roleAddPanel.Controls.Add(Me.Label64)
+        Me.roleAddPanel.Controls.Add(Me.addRoleTitle)
         Me.roleAddPanel.Controls.Add(Me.Label65)
         Me.roleAddPanel.Controls.Add(Me.addRoleErrorMsg)
         Me.roleAddPanel.Controls.Add(Me.roleAddCancelBtn)
         Me.roleAddPanel.Controls.Add(Me.titleAddNameInput)
         Me.roleAddPanel.Controls.Add(Me.roleAddValidationBtn)
-        Me.roleAddPanel.Controls.Add(Me.Label24)
+        Me.roleAddPanel.Controls.Add(Me.addRoleNameLabel)
         resources.ApplyResources(Me.roleAddPanel, "roleAddPanel")
         Me.roleAddPanel.Name = "roleAddPanel"
         '
-        'Label64
+        'addRoleTitle
         '
-        resources.ApplyResources(Me.Label64, "Label64")
-        Me.Label64.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label64.ForeColor = System.Drawing.Color.MintCream
-        Me.Label64.Name = "Label64"
+        resources.ApplyResources(Me.addRoleTitle, "addRoleTitle")
+        Me.addRoleTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.addRoleTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.addRoleTitle.Name = "addRoleTitle"
         '
         'Label65
         '
@@ -2225,10 +2391,10 @@ Partial Class homePage
         Me.roleAddValidationBtn.Name = "roleAddValidationBtn"
         Me.roleAddValidationBtn.UseVisualStyleBackColor = False
         '
-        'Label24
+        'addRoleNameLabel
         '
-        resources.ApplyResources(Me.Label24, "Label24")
-        Me.Label24.Name = "Label24"
+        resources.ApplyResources(Me.addRoleNameLabel, "addRoleNameLabel")
+        Me.addRoleNameLabel.Name = "addRoleNameLabel"
         '
         'roleDeleteBtn
         '
@@ -2281,36 +2447,36 @@ Partial Class homePage
         Me.roleDataGridView.AllowUserToDeleteRows = False
         Me.roleDataGridView.AllowUserToResizeColumns = False
         Me.roleDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle46.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.roleDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle46
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.roleDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle30
         resources.ApplyResources(Me.roleDataGridView, "roleDataGridView")
         Me.roleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.roleDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.roleDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.roleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.roleDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle47.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle47.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.roleDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle47
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle48.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.roleDataGridView.DefaultCellStyle = DataGridViewCellStyle48
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle31.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.roleDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.roleDataGridView.DefaultCellStyle = DataGridViewCellStyle32
         Me.roleDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.roleDataGridView.EnableHeadersVisualStyles = False
         Me.roleDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -2321,190 +2487,24 @@ Partial Class homePage
         Me.roleDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.roleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
-        'Roles
+        'rolesTitle
         '
-        resources.ApplyResources(Me.Roles, "Roles")
-        Me.Roles.ForeColor = System.Drawing.Color.Gray
-        Me.Roles.Name = "Roles"
-        '
-        'CPUsBtn
-        '
-        Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.CPUsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.CPUsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.CPUsBtn, "CPUsBtn")
-        Me.CPUsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.CPUsBtn.Image = Global.cems.My.Resources.Resources.thingForCPU
-        Me.CPUsBtn.Name = "CPUsBtn"
-        Me.CPUsBtn.UseVisualStyleBackColor = False
-        '
-        'IPsBtn
-        '
-        Me.IPsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.IPsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.IPsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.IPsBtn, "IPsBtn")
-        Me.IPsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.IPsBtn.Image = Global.cems.My.Resources.Resources.Phone
-        Me.IPsBtn.Name = "IPsBtn"
-        Me.IPsBtn.UseVisualStyleBackColor = False
-        '
-        'equipmentsBtn
-        '
-        Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.equipmentsBtn, "equipmentsBtn")
-        Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.equipmentScrew
-        Me.equipmentsBtn.Name = "equipmentsBtn"
-        Me.equipmentsBtn.UseVisualStyleBackColor = False
-        '
-        'monitorsBtn
-        '
-        Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.monitorsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.monitorsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.monitorsBtn, "monitorsBtn")
-        Me.monitorsBtn.Image = Global.cems.My.Resources.Resources.monitor2
-        Me.monitorsBtn.Name = "monitorsBtn"
-        Me.monitorsBtn.UseVisualStyleBackColor = False
-        '
-        'dashboardBtn
-        '
-        Me.dashboardBtn.BackColor = System.Drawing.Color.MintCream
-        Me.dashboardBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.dashboardBtn, "dashboardBtn")
-        Me.dashboardBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.dashboardBtn.Image = Global.cems.My.Resources.Resources.home
-        Me.dashboardBtn.Name = "dashboardBtn"
-        Me.dashboardBtn.UseVisualStyleBackColor = False
-        '
-        'rolesBtn
-        '
-        Me.rolesBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.rolesBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.rolesBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.rolesBtn, "rolesBtn")
-        Me.rolesBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.rolesBtn.Image = Global.cems.My.Resources.Resources.roles
-        Me.rolesBtn.Name = "rolesBtn"
-        Me.rolesBtn.UseVisualStyleBackColor = False
-        '
-        'hallsBtn
-        '
-        Me.hallsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.hallsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.hallsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.hallsBtn, "hallsBtn")
-        Me.hallsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.hallsBtn.Image = Global.cems.My.Resources.Resources.Hall
-        Me.hallsBtn.Name = "hallsBtn"
-        Me.hallsBtn.UseVisualStyleBackColor = False
-        '
-        'usersBtn
-        '
-        Me.usersBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.usersBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.usersBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.usersBtn, "usersBtn")
-        Me.usersBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.usersBtn.Image = Global.cems.My.Resources.Resources.user3
-        Me.usersBtn.Name = "usersBtn"
-        Me.usersBtn.UseVisualStyleBackColor = False
-        '
-        'profileBtn
-        '
-        Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.profileBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.profileBtn, "profileBtn")
-        Me.profileBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.profileBtn.Image = Global.cems.My.Resources.Resources.profile
-        Me.profileBtn.Name = "profileBtn"
-        Me.profileBtn.UseVisualStyleBackColor = False
-        '
-        'postsBtn
-        '
-        Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.postsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.postsBtn, "postsBtn")
-        Me.postsBtn.ForeColor = System.Drawing.Color.MintCream
-        Me.postsBtn.Image = Global.cems.My.Resources.Resources.posts
-        Me.postsBtn.Name = "postsBtn"
-        Me.postsBtn.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.cems.My.Resources.Resources.logo_light
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
-        '
-        'userbuttoninactive
-        '
-        Me.userbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        resources.ApplyResources(Me.userbuttoninactive, "userbuttoninactive")
-        Me.userbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.userbuttoninactive.FlatAppearance.BorderSize = 2
-        Me.userbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
-        Me.userbuttoninactive.Image = Global.cems.My.Resources.Resources.user2
-        Me.userbuttoninactive.Name = "userbuttoninactive"
-        Me.userbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'monitorbuttoninactive
-        '
-        Me.monitorbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        resources.ApplyResources(Me.monitorbuttoninactive, "monitorbuttoninactive")
-        Me.monitorbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.monitorbuttoninactive.FlatAppearance.BorderSize = 2
-        Me.monitorbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
-        Me.monitorbuttoninactive.Image = Global.cems.My.Resources.Resources.monitor1
-        Me.monitorbuttoninactive.Name = "monitorbuttoninactive"
-        Me.monitorbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'IPbuttoninactive
-        '
-        Me.IPbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.IPbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.IPbuttoninactive.FlatAppearance.BorderSize = 2
-        Me.IPbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
-        resources.ApplyResources(Me.IPbuttoninactive, "IPbuttoninactive")
-        Me.IPbuttoninactive.Name = "IPbuttoninactive"
-        Me.IPbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'CPUbuttoninactive
-        '
-        Me.CPUbuttoninactive.BackColor = System.Drawing.Color.MintCream
-        Me.CPUbuttoninactive.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.CPUbuttoninactive.FlatAppearance.BorderSize = 2
-        Me.CPUbuttoninactive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MintCream
-        resources.ApplyResources(Me.CPUbuttoninactive, "CPUbuttoninactive")
-        Me.CPUbuttoninactive.Image = Global.cems.My.Resources.Resources.cpu1
-        Me.CPUbuttoninactive.Name = "CPUbuttoninactive"
-        Me.CPUbuttoninactive.UseVisualStyleBackColor = False
-        '
-        'Label50
-        '
-        Me.Label50.BackColor = System.Drawing.Color.Transparent
-        resources.ApplyResources(Me.Label50, "Label50")
-        Me.Label50.ForeColor = System.Drawing.Color.Yellow
-        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
-        Me.Label50.Name = "Label50"
+        resources.ApplyResources(Me.rolesTitle, "rolesTitle")
+        Me.rolesTitle.ForeColor = System.Drawing.Color.Gray
+        Me.rolesTitle.Name = "rolesTitle"
         '
         'homePage
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
+        Me.Controls.Add(Me.adminHomePagePanel)
+        Me.Controls.Add(Me.adminEquipmentPanel)
+        Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminProfilePanel)
+        Me.Controls.Add(Me.adminRolePanel)
         Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminHallsPanel)
-        Me.Controls.Add(Me.adminRolePanel)
-        Me.Controls.Add(Me.adminPostPanel)
-        Me.Controls.Add(Me.adminEquipmentPanel)
-        Me.Controls.Add(Me.adminProfilePanel)
-        Me.Controls.Add(Me.adminHomePagePanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.adminHeader)
         Me.ForeColor = System.Drawing.Color.MintCream
@@ -2523,6 +2523,7 @@ Partial Class homePage
         Me.Panel2.PerformLayout()
         Me.adminHeader.ResumeLayout(False)
         Me.adminHeader.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.adminHomePagePanel.ResumeLayout(False)
         Me.adminHomePagePanel.PerformLayout()
         Me.adminEquipmentPanel.ResumeLayout(False)
@@ -2559,7 +2560,6 @@ Partial Class homePage
         Me.roleAddPanel.ResumeLayout(False)
         Me.roleAddPanel.PerformLayout()
         CType(Me.roleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2598,7 +2598,7 @@ Partial Class homePage
     Friend WithEvents monitorbuttoninactive As Button
     Friend WithEvents IPbuttoninactive As Button
     Friend WithEvents CPUbuttoninactive As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents dashboardTitle As Label
     Friend WithEvents adminEquipmentPanel As Panel
     Friend WithEvents confirmMsgE As Label
     Friend WithEvents hallSearchBoxE As ComboBox
@@ -2628,7 +2628,7 @@ Partial Class homePage
     Friend WithEvents addequimentstatelabel As Label
     Friend WithEvents addEquipmentCancelBtn As Button
     Friend WithEvents addEquipmentValidationBtn As Button
-    Friend WithEvents equipmentstatelabel As Label
+    Friend WithEvents equipmenttitlelabel As Label
     Friend WithEvents adminPostPanel As Panel
     Friend WithEvents confirmMsgP As Label
     Friend WithEvents hallSearchBoxP As ComboBox
@@ -2649,25 +2649,25 @@ Partial Class homePage
     Friend WithEvents stateSearchBoxP As ComboBox
     Friend WithEvents addPostPanel As Panel
     Friend WithEvents postPostIdInput As TextBox
-    Friend WithEvents Label19 As Label
+    Friend WithEvents addPostIDLabel As Label
     Friend WithEvents postStateInput As ComboBox
     Friend WithEvents addPostErrorMsg As Label
     Friend WithEvents postHallInput As ComboBox
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label29 As Label
+    Friend WithEvents addPostHallLabel As Label
+    Friend WithEvents addPostStateLabel As Label
     Friend WithEvents addPostCancelBtn As Button
     Friend WithEvents addPostValidationBtn As Button
     Friend WithEvents adminProfilePanel As Panel
     Friend WithEvents profileSubPanel1 As Panel
     Friend WithEvents updateProfileShowBtn As Button
-    Friend WithEvents adminEmailProfile As Label
+    Friend WithEvents EmailProfile As Label
     Friend WithEvents adminTitleProfile As Label
     Friend WithEvents adminPhoneNumberProfile As Label
     Friend WithEvents adminNameProfile As Label
-    Friend WithEvents adminEmailProfileLabel As Label
-    Friend WithEvents adminPhoneNumberProfileLabel As Label
-    Friend WithEvents adminTitleProfileLabel As Label
-    Friend WithEvents adminNameProfileLabel As Label
+    Friend WithEvents EmailProfileLabel As Label
+    Friend WithEvents PhoneNumberProfileLabel As Label
+    Friend WithEvents TitleProfileLabel As Label
+    Friend WithEvents NameProfileLabel As Label
     Friend WithEvents profileTitle As Label
     Friend WithEvents profileSubPanel2 As Panel
     Friend WithEvents userConfirmPwdProfileInput As TextBox
@@ -2678,7 +2678,7 @@ Partial Class homePage
     Friend WithEvents userPhoneNumberProfileInput As TextBox
     Friend WithEvents userEmailProfileInput As TextBox
     Friend WithEvents userNameProfileInput As TextBox
-    Friend WithEvents updateProfileValidateBtn As Button
+    Friend WithEvents updateProfileValidationBtn As Button
     Friend WithEvents userEmailProfileLabel2 As Label
     Friend WithEvents userPhoneNumberProfileLabel2 As Label
     Friend WithEvents userPwdProfileLabel As Label
@@ -2698,12 +2698,12 @@ Partial Class homePage
     Friend WithEvents addHallErrorMsg As Label
     Friend WithEvents HallAddCancelBtn As Button
     Friend WithEvents adminAddHallNameInput As TextBox
-    Friend WithEvents HallAddValidateBtn As Button
+    Friend WithEvents HallAddValidationBtn As Button
     Friend WithEvents addHallNameLabel As Label
     Friend WithEvents hallUpdatePanel As Panel
     Friend WithEvents hallUpdateCancelBtn As Button
     Friend WithEvents adminUpdateHallNameInput As TextBox
-    Friend WithEvents hallUpdateValidateBtn As Button
+    Friend WithEvents hallUpdateValidationBtn As Button
     Friend WithEvents updateHallNameLabel As Label
     Friend WithEvents adminUsersPanel As Panel
     Friend WithEvents userSearchBox As TextBox
@@ -2713,36 +2713,36 @@ Partial Class homePage
     Friend WithEvents searchErrorU As Label
     Friend WithEvents exportBtnU As Button
     Friend WithEvents userDataGridView As DataGridView
-    Friend WithEvents Label10 As Label
+    Friend WithEvents usersTitle As Label
     Friend WithEvents userDeleteBtn As Button
     Friend WithEvents searchuserlabel As Label
     Friend WithEvents userAddPanel As Panel
     Friend WithEvents addUserErrorMsg As Label
     Friend WithEvents userUserAddTitleInput As ComboBox
     Friend WithEvents userUserAddConfirmPwdInput As TextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents addUserConfirmPwdLabel As Label
     Friend WithEvents userUserAddPwdInput As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents addUserPwdLabel As Label
+    Friend WithEvents addUserTitleLabel As Label
     Friend WithEvents userUserAddPhoneInput As TextBox
-    Friend WithEvents Label16 As Label
+    Friend WithEvents addUserPhoneLabel As Label
     Friend WithEvents userUserAddEmailInput As TextBox
-    Friend WithEvents Label17 As Label
+    Friend WithEvents addUserEmailLabel As Label
     Friend WithEvents userAddCancelBtn As Button
     Friend WithEvents userUserAddNameInput As TextBox
     Friend WithEvents userAddvalidationBtn As Button
-    Friend WithEvents Label18 As Label
+    Friend WithEvents addUserNameLabel As Label
     Friend WithEvents userUpdatePanel As Panel
     Friend WithEvents userUserTitleInput As ComboBox
-    Friend WithEvents Label11 As Label
+    Friend WithEvents updateUserTitleLabel As Label
     Friend WithEvents userUserPhoneInput As TextBox
-    Friend WithEvents Label9 As Label
+    Friend WithEvents updateUserPhoneLabel As Label
     Friend WithEvents userUserEmailInput As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents userCancelBtn As Button
+    Friend WithEvents updateUserEmailLabel As Label
+    Friend WithEvents userUpdateCancelBtn As Button
     Friend WithEvents userUserNameInput As TextBox
     Friend WithEvents userUpdateValidationBtn As Button
-    Friend WithEvents Label7 As Label
+    Friend WithEvents updateUserNameLabel As Label
     Friend WithEvents adminRolePanel As Panel
     Friend WithEvents roleDeleteBtn As Button
     Friend WithEvents roleAddBtn As Button
@@ -2751,53 +2751,53 @@ Partial Class homePage
     Friend WithEvents searchErrorR As Label
     Friend WithEvents exportBtnR As Button
     Friend WithEvents roleDataGridView As DataGridView
-    Friend WithEvents Roles As Label
+    Friend WithEvents rolesTitle As Label
     Friend WithEvents roleAddPanel As Panel
     Friend WithEvents addRoleErrorMsg As Label
     Friend WithEvents updateRoleErrorMsg As Label
     Friend WithEvents roleAddCancelBtn As Button
     Friend WithEvents titleAddNameInput As TextBox
     Friend WithEvents roleAddValidationBtn As Button
-    Friend WithEvents Label24 As Label
+    Friend WithEvents addRoleNameLabel As Label
     Friend WithEvents roleUpdatePanel As Panel
     Friend WithEvents roleUpdateCancelBtn As Button
     Friend WithEvents titleNameInput As TextBox
     Friend WithEvents roleUpdateValidationBtn As Button
-    Friend WithEvents Label28 As Label
+    Friend WithEvents updateRoleNameLabel As Label
     Friend WithEvents CPUsBtn2 As Button
     Friend WithEvents IPsBtn2 As Button
     Friend WithEvents monitorsBtn2 As Button
     Friend WithEvents usersBtn2 As Button
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents dashboardUserLabel As Label
+    Friend WithEvents dashboardMonitorLabel As Label
+    Friend WithEvents dashboardIPLabel As Label
+    Friend WithEvents dashboardCPULabel As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
-    Friend WithEvents Label52 As Label
+    Friend WithEvents updateProfileTitle As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents hallAddTitle As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents hallUpdateTitle As Label
     Friend WithEvents Label57 As Label
     Friend WithEvents Label58 As Label
-    Friend WithEvents Label59 As Label
-    Friend WithEvents Label60 As Label
+    Friend WithEvents updateUserTitle As Label
+    Friend WithEvents addUserTitle As Label
     Friend WithEvents Label61 As Label
-    Friend WithEvents Label62 As Label
+    Friend WithEvents UpdateRoleTitle As Label
     Friend WithEvents Label63 As Label
-    Friend WithEvents Label64 As Label
+    Friend WithEvents addRoleTitle As Label
     Friend WithEvents Label65 As Label
-    Friend WithEvents Label66 As Label
+    Friend WithEvents updatePostTitle As Label
     Friend WithEvents Label67 As Label
-    Friend WithEvents Label68 As Label
+    Friend WithEvents addPostTitle As Label
     Friend WithEvents Label69 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents addEquipmentTitle As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents confirmMsgPr As Label
     Friend WithEvents dashboardBtn As Button
-    Friend WithEvents Label25 As Label
+    Friend WithEvents updateEquipmentTitle As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents refreshBtnE As Button
     Friend WithEvents refreshBtnH As Button

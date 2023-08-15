@@ -617,7 +617,7 @@ Public Class homePage
         stateSearchBoxP.Text = ""
 
         connect_db()
-        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
     End Sub
 
     'update profile button
@@ -627,7 +627,7 @@ Public Class homePage
 
         userNameProfileInput.Text = adminNameProfile.Text
         userPhoneNumberProfileInput.Text = adminPhoneNumberProfile.Text
-        userEmailProfileInput.Text = adminEmailProfile.Text
+        userEmailProfileInput.Text = EmailProfile.Text
 
         userPwdProfileInput.Text = ""
         userConfirmPwdProfileInput.Text = ""
@@ -641,10 +641,10 @@ Public Class homePage
         updateProfileErrorMsg.Visible = False
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
+    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
         User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
-        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, adminEmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
 
@@ -756,7 +756,7 @@ Public Class homePage
     End Sub
 
 
-    Private Sub HallAddValidateBtn_Click(sender As Object, e As EventArgs) Handles HallAddValidateBtn.Click 'validate add
+    Private Sub HallAddValidateBtn_Click(sender As Object, e As EventArgs) Handles HallAddValidationBtn.Click 'validate add
 
         connect_db()
 
@@ -886,7 +886,7 @@ Public Class homePage
 
     End Sub
 
-    Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidateBtn.Click 'validate update 
+    Private Sub hallUpdateValidateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateValidationBtn.Click 'validate update 
 
 
         If adminUpdateHallNameInput.Text = "" Then
@@ -998,7 +998,7 @@ Public Class homePage
         stateSearchBoxP.Text = ""
 
 
-        Label10.Text = "users"
+        usersTitle.Text = "users"
 
 
         userDataGridView.Visible = True
@@ -1101,7 +1101,7 @@ Public Class homePage
                 userDeleteBtn.Visible = False
 
 
-                Label10.Text = "Users"
+                usersTitle.Text = "Users"
 
                 userDataGridView.Visible = True
                 userUpdateBtn.Visible = True
@@ -1123,13 +1123,13 @@ Public Class homePage
 
     End Sub
 
-    Private Sub userCancelBtn_Click(sender As Object, e As EventArgs) Handles userCancelBtn.Click 'cancel
+    Private Sub userCancelBtn_Click(sender As Object, e As EventArgs) Handles userUpdateCancelBtn.Click 'cancel
         userUpdatePanel.Visible = False
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
 
 
-        Label10.Text = "Users"
+        usersTitle.Text = "Users"
 
         userDataGridView.Visible = True
         userAddBtn.Visible = True
@@ -1184,7 +1184,7 @@ Public Class homePage
         End Try
 
 
-        Label10.Text = "Update user"
+        usersTitle.Text = "Update user"
 
         userUpdateBtn.Visible = False
         userAddBtn.Visible = False
@@ -1249,7 +1249,7 @@ Public Class homePage
         End Try
 
 
-        Label10.Text = "Add user"
+        usersTitle.Text = "Add user"
 
         userUpdateBtn.Visible = False
         userDataGridView.Visible = False
@@ -1350,7 +1350,7 @@ Public Class homePage
                         userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
                         userAddPanel.Visible = False
 
-                        Label10.Text = "Users"
+                        usersTitle.Text = "Users"
 
                         userDataGridView.Visible = True
                         userUpdateBtn.Visible = True
@@ -1397,7 +1397,7 @@ Public Class homePage
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
 
-        Label10.Text = "Users"
+        usersTitle.Text = "Users"
 
         userDataGridView.Visible = True
         userUpdateBtn.Visible = False
@@ -1450,7 +1450,7 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = True
-        Roles.Text = "Roles"
+        rolesTitle.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -1513,7 +1513,7 @@ Public Class homePage
                 roleAddPanel.Visible = False
 
                 roleDataGridView.Visible = True
-                Roles.Text = "Roles"
+                rolesTitle.Text = "Roles"
                 roleAddBtn.Visible = True
                 exportBtnR.Visible = True
                 'PrintBtnR.Visible = True
@@ -1533,7 +1533,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
 
         roleDataGridView.Visible = True
-        Roles.Text = "Roles"
+        rolesTitle.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -1559,7 +1559,7 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = False
-        Roles.Text = "Update roles"
+        rolesTitle.Text = "Update roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
@@ -1587,7 +1587,7 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = False
-        Roles.Text = "Add roles"
+        rolesTitle.Text = "Add roles"
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
@@ -1636,7 +1636,7 @@ Public Class homePage
             titleAddNameInput.Text = ""
 
             roleDataGridView.Visible = True
-            Roles.Text = "Roles"
+            rolesTitle.Text = "Roles"
             roleAddBtn.Visible = True
             exportBtnR.Visible = True
             'PrintBtnR.Visible = True
@@ -1648,7 +1648,7 @@ Public Class homePage
         roleAddPanel.Visible = False
 
         roleDataGridView.Visible = True
-        Roles.Text = "Roles"
+        rolesTitle.Text = "Roles"
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -2840,6 +2840,9 @@ Public Class homePage
         End Try
 
     End Sub
+
+
+
 
 
     'General styles part 
