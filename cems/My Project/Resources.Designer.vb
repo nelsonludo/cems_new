@@ -153,6 +153,16 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property englishFlag() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("englishFlag", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property equipmentScrew() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("equipmentScrew", resourceCulture)
@@ -166,6 +176,16 @@ Namespace My.Resources
         Friend ReadOnly Property export() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("export", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property frenchFlag() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("frenchFlag", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

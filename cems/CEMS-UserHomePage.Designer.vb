@@ -47,6 +47,8 @@ Partial Class UserHomePage
         Me.profileBtn = New System.Windows.Forms.Button()
         Me.postsBtn = New System.Windows.Forms.Button()
         Me.Header = New System.Windows.Forms.Panel()
+        Me.englishBtn = New System.Windows.Forms.Button()
+        Me.frenchBtn = New System.Windows.Forms.Button()
         Me.logoutBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.uName = New System.Windows.Forms.Label()
@@ -70,6 +72,18 @@ Partial Class UserHomePage
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ProfilePanel = New System.Windows.Forms.Panel()
         Me.confirmMsgPr = New System.Windows.Forms.Label()
+        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.userEmailProfile = New System.Windows.Forms.Label()
+        Me.userTitleProfile = New System.Windows.Forms.Label()
+        Me.userPhoneNumberProfile = New System.Windows.Forms.Label()
+        Me.userNameProfile = New System.Windows.Forms.Label()
+        Me.EmailProfileLabel = New System.Windows.Forms.Label()
+        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
+        Me.TitleProfileLabel = New System.Windows.Forms.Label()
+        Me.NameProfileLabel = New System.Windows.Forms.Label()
+        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.profileSubPanel2 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.Label52 = New System.Windows.Forms.Label()
@@ -86,18 +100,6 @@ Partial Class UserHomePage
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
-        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.userEmailProfile = New System.Windows.Forms.Label()
-        Me.userTitleProfile = New System.Windows.Forms.Label()
-        Me.userPhoneNumberProfile = New System.Windows.Forms.Label()
-        Me.userNameProfile = New System.Windows.Forms.Label()
-        Me.EmailProfileLabel = New System.Windows.Forms.Label()
-        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
-        Me.TitleProfileLabel = New System.Windows.Forms.Label()
-        Me.NameProfileLabel = New System.Windows.Forms.Label()
-        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
-        Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
         Me.PostPanel = New System.Windows.Forms.Panel()
         Me.refreshBtnP = New System.Windows.Forms.Button()
@@ -131,8 +133,8 @@ Partial Class UserHomePage
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HomePagePanel.SuspendLayout()
         Me.ProfilePanel.SuspendLayout()
-        Me.profileSubPanel2.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
+        Me.profileSubPanel2.SuspendLayout()
         Me.PostPanel.SuspendLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EquipmentPanel.SuspendLayout()
@@ -373,6 +375,8 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Header.BackColor = System.Drawing.Color.Transparent
         Me.Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Header.Controls.Add(Me.englishBtn)
+        Me.Header.Controls.Add(Me.frenchBtn)
         Me.Header.Controls.Add(Me.logoutBtn)
         Me.Header.Controls.Add(Me.PictureBox1)
         Me.Header.Controls.Add(Me.uName)
@@ -382,6 +386,53 @@ Partial Class UserHomePage
         Me.Header.Name = "Header"
         Me.Header.Size = New System.Drawing.Size(1679, 78)
         Me.Header.TabIndex = 68
+        '
+        'englishBtn
+        '
+        Me.englishBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.englishBtn.AutoSize = True
+        Me.englishBtn.BackColor = System.Drawing.Color.Transparent
+        Me.englishBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.englishBtn.FlatAppearance.BorderSize = 0
+        Me.englishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.englishBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.englishBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.englishBtn.Image = Global.cems.My.Resources.Resources.englishFlag
+        Me.englishBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.englishBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.englishBtn.Location = New System.Drawing.Point(1455, 23)
+        Me.englishBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.englishBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.englishBtn.Name = "englishBtn"
+        Me.englishBtn.Size = New System.Drawing.Size(65, 36)
+        Me.englishBtn.TabIndex = 38
+        Me.englishBtn.Text = "En"
+        Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.englishBtn.UseVisualStyleBackColor = False
+        Me.englishBtn.Visible = False
+        '
+        'frenchBtn
+        '
+        Me.frenchBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.frenchBtn.AutoSize = True
+        Me.frenchBtn.BackColor = System.Drawing.Color.Transparent
+        Me.frenchBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.frenchBtn.FlatAppearance.BorderSize = 0
+        Me.frenchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.frenchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.frenchBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.frenchBtn.Image = Global.cems.My.Resources.Resources.frenchFlag
+        Me.frenchBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.frenchBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.frenchBtn.Location = New System.Drawing.Point(1455, 23)
+        Me.frenchBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.frenchBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.frenchBtn.Name = "frenchBtn"
+        Me.frenchBtn.Size = New System.Drawing.Size(60, 36)
+        Me.frenchBtn.TabIndex = 39
+        Me.frenchBtn.Text = "Fr"
+        Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.frenchBtn.UseVisualStyleBackColor = False
         '
         'logoutBtn
         '
@@ -753,6 +804,187 @@ Partial Class UserHomePage
         Me.confirmMsgPr.Text = "Profile updated successfully ✔"
         Me.confirmMsgPr.Visible = False
         '
+        'profileSubPanel1
+        '
+        Me.profileSubPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.profileSubPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.profileSubPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.profileSubPanel1.Controls.Add(Me.Label50)
+        Me.profileSubPanel1.Controls.Add(Me.userEmailProfile)
+        Me.profileSubPanel1.Controls.Add(Me.userTitleProfile)
+        Me.profileSubPanel1.Controls.Add(Me.userPhoneNumberProfile)
+        Me.profileSubPanel1.Controls.Add(Me.userNameProfile)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
+        Me.profileSubPanel1.Controls.Add(Me.Label49)
+        Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.profileSubPanel1.ForeColor = System.Drawing.Color.Yellow
+        Me.profileSubPanel1.Location = New System.Drawing.Point(582, 90)
+        Me.profileSubPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.profileSubPanel1.Name = "profileSubPanel1"
+        Me.profileSubPanel1.Size = New System.Drawing.Size(548, 466)
+        Me.profileSubPanel1.TabIndex = 31
+        '
+        'Label50
+        '
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
+        Me.Label50.ForeColor = System.Drawing.Color.Yellow
+        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
+        Me.Label50.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label50.Location = New System.Drawing.Point(-1, -1)
+        Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(548, 231)
+        Me.Label50.TabIndex = 51
+        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'userEmailProfile
+        '
+        Me.userEmailProfile.AutoSize = True
+        Me.userEmailProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.userEmailProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userEmailProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.userEmailProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userEmailProfile.Location = New System.Drawing.Point(187, 304)
+        Me.userEmailProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userEmailProfile.Name = "userEmailProfile"
+        Me.userEmailProfile.Size = New System.Drawing.Size(58, 22)
+        Me.userEmailProfile.TabIndex = 14
+        Me.userEmailProfile.Text = "******"
+        '
+        'userTitleProfile
+        '
+        Me.userTitleProfile.AutoSize = True
+        Me.userTitleProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.userTitleProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userTitleProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.userTitleProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userTitleProfile.Location = New System.Drawing.Point(181, 386)
+        Me.userTitleProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userTitleProfile.Name = "userTitleProfile"
+        Me.userTitleProfile.Size = New System.Drawing.Size(58, 22)
+        Me.userTitleProfile.TabIndex = 13
+        Me.userTitleProfile.Text = "******"
+        '
+        'userPhoneNumberProfile
+        '
+        Me.userPhoneNumberProfile.AutoSize = True
+        Me.userPhoneNumberProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.userPhoneNumberProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userPhoneNumberProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.userPhoneNumberProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userPhoneNumberProfile.Location = New System.Drawing.Point(296, 343)
+        Me.userPhoneNumberProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userPhoneNumberProfile.Name = "userPhoneNumberProfile"
+        Me.userPhoneNumberProfile.Size = New System.Drawing.Size(58, 22)
+        Me.userPhoneNumberProfile.TabIndex = 12
+        Me.userPhoneNumberProfile.Text = "******"
+        '
+        'userNameProfile
+        '
+        Me.userNameProfile.AutoSize = True
+        Me.userNameProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.userNameProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userNameProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.userNameProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userNameProfile.Location = New System.Drawing.Point(191, 262)
+        Me.userNameProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userNameProfile.Name = "userNameProfile"
+        Me.userNameProfile.Size = New System.Drawing.Size(58, 22)
+        Me.userNameProfile.TabIndex = 7
+        Me.userNameProfile.Text = "******"
+        '
+        'EmailProfileLabel
+        '
+        Me.EmailProfileLabel.AutoSize = True
+        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.EmailProfileLabel.Location = New System.Drawing.Point(37, 304)
+        Me.EmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.EmailProfileLabel.Name = "EmailProfileLabel"
+        Me.EmailProfileLabel.Size = New System.Drawing.Size(117, 22)
+        Me.EmailProfileLabel.TabIndex = 11
+        Me.EmailProfileLabel.Text = "User email :"
+        '
+        'PhoneNumberProfileLabel
+        '
+        Me.PhoneNumberProfileLabel.AutoSize = True
+        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.PhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.PhoneNumberProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PhoneNumberProfileLabel.Location = New System.Drawing.Point(36, 343)
+        Me.PhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
+        Me.PhoneNumberProfileLabel.Size = New System.Drawing.Size(226, 22)
+        Me.PhoneNumberProfileLabel.TabIndex = 10
+        Me.PhoneNumberProfileLabel.Text = "User telephone nunber :"
+        '
+        'TitleProfileLabel
+        '
+        Me.TitleProfileLabel.AutoSize = True
+        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.TitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.TitleProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TitleProfileLabel.Location = New System.Drawing.Point(37, 386)
+        Me.TitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.TitleProfileLabel.Name = "TitleProfileLabel"
+        Me.TitleProfileLabel.Size = New System.Drawing.Size(110, 22)
+        Me.TitleProfileLabel.TabIndex = 9
+        Me.TitleProfileLabel.Text = "User Title :"
+        '
+        'NameProfileLabel
+        '
+        Me.NameProfileLabel.AutoSize = True
+        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.NameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.NameProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.NameProfileLabel.Location = New System.Drawing.Point(38, 260)
+        Me.NameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NameProfileLabel.Name = "NameProfileLabel"
+        Me.NameProfileLabel.Size = New System.Drawing.Size(118, 22)
+        Me.NameProfileLabel.TabIndex = 7
+        Me.NameProfileLabel.Text = "User name :"
+        '
+        'updateProfileShowBtn
+        '
+        Me.updateProfileShowBtn.AutoSize = True
+        Me.updateProfileShowBtn.BackColor = System.Drawing.Color.Transparent
+        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateProfileShowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileShowBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileShowBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.updateProfileShowBtn.Location = New System.Drawing.Point(409, 420)
+        Me.updateProfileShowBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.updateProfileShowBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
+        Me.updateProfileShowBtn.Size = New System.Drawing.Size(86, 34)
+        Me.updateProfileShowBtn.TabIndex = 13
+        Me.updateProfileShowBtn.Text = "Update"
+        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
+        '
+        'Label49
+        '
+        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
+        Me.Label49.ForeColor = System.Drawing.Color.Yellow
+        Me.Label49.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label49.Location = New System.Drawing.Point(0, 229)
+        Me.Label49.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(548, 235)
+        Me.Label49.TabIndex = 50
+        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'profileSubPanel2
         '
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
@@ -965,187 +1197,6 @@ Partial Class UserHomePage
         Me.userNameProfileLabel2.TabIndex = 7
         Me.userNameProfileLabel2.Text = "User name "
         '
-        'profileSubPanel1
-        '
-        Me.profileSubPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.profileSubPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.profileSubPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.profileSubPanel1.Controls.Add(Me.Label50)
-        Me.profileSubPanel1.Controls.Add(Me.userEmailProfile)
-        Me.profileSubPanel1.Controls.Add(Me.userTitleProfile)
-        Me.profileSubPanel1.Controls.Add(Me.userPhoneNumberProfile)
-        Me.profileSubPanel1.Controls.Add(Me.userNameProfile)
-        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
-        Me.profileSubPanel1.Controls.Add(Me.Label49)
-        Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.profileSubPanel1.ForeColor = System.Drawing.Color.Yellow
-        Me.profileSubPanel1.Location = New System.Drawing.Point(582, 90)
-        Me.profileSubPanel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.profileSubPanel1.Name = "profileSubPanel1"
-        Me.profileSubPanel1.Size = New System.Drawing.Size(548, 466)
-        Me.profileSubPanel1.TabIndex = 31
-        '
-        'Label50
-        '
-        Me.Label50.BackColor = System.Drawing.Color.Transparent
-        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
-        Me.Label50.ForeColor = System.Drawing.Color.Yellow
-        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
-        Me.Label50.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label50.Location = New System.Drawing.Point(-1, -1)
-        Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(548, 231)
-        Me.Label50.TabIndex = 51
-        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'userEmailProfile
-        '
-        Me.userEmailProfile.AutoSize = True
-        Me.userEmailProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.userEmailProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userEmailProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.userEmailProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userEmailProfile.Location = New System.Drawing.Point(187, 304)
-        Me.userEmailProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userEmailProfile.Name = "userEmailProfile"
-        Me.userEmailProfile.Size = New System.Drawing.Size(58, 22)
-        Me.userEmailProfile.TabIndex = 14
-        Me.userEmailProfile.Text = "******"
-        '
-        'userTitleProfile
-        '
-        Me.userTitleProfile.AutoSize = True
-        Me.userTitleProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.userTitleProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userTitleProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.userTitleProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userTitleProfile.Location = New System.Drawing.Point(181, 386)
-        Me.userTitleProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userTitleProfile.Name = "userTitleProfile"
-        Me.userTitleProfile.Size = New System.Drawing.Size(58, 22)
-        Me.userTitleProfile.TabIndex = 13
-        Me.userTitleProfile.Text = "******"
-        '
-        'userPhoneNumberProfile
-        '
-        Me.userPhoneNumberProfile.AutoSize = True
-        Me.userPhoneNumberProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.userPhoneNumberProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userPhoneNumberProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.userPhoneNumberProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userPhoneNumberProfile.Location = New System.Drawing.Point(296, 343)
-        Me.userPhoneNumberProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userPhoneNumberProfile.Name = "userPhoneNumberProfile"
-        Me.userPhoneNumberProfile.Size = New System.Drawing.Size(58, 22)
-        Me.userPhoneNumberProfile.TabIndex = 12
-        Me.userPhoneNumberProfile.Text = "******"
-        '
-        'userNameProfile
-        '
-        Me.userNameProfile.AutoSize = True
-        Me.userNameProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.userNameProfile.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userNameProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.userNameProfile.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userNameProfile.Location = New System.Drawing.Point(191, 262)
-        Me.userNameProfile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userNameProfile.Name = "userNameProfile"
-        Me.userNameProfile.Size = New System.Drawing.Size(58, 22)
-        Me.userNameProfile.TabIndex = 7
-        Me.userNameProfile.Text = "******"
-        '
-        'EmailProfileLabel
-        '
-        Me.EmailProfileLabel.AutoSize = True
-        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.EmailProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.EmailProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.EmailProfileLabel.Location = New System.Drawing.Point(37, 304)
-        Me.EmailProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.EmailProfileLabel.Name = "EmailProfileLabel"
-        Me.EmailProfileLabel.Size = New System.Drawing.Size(117, 22)
-        Me.EmailProfileLabel.TabIndex = 11
-        Me.EmailProfileLabel.Text = "User email :"
-        '
-        'PhoneNumberProfileLabel
-        '
-        Me.PhoneNumberProfileLabel.AutoSize = True
-        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.PhoneNumberProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.PhoneNumberProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PhoneNumberProfileLabel.Location = New System.Drawing.Point(36, 343)
-        Me.PhoneNumberProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
-        Me.PhoneNumberProfileLabel.Size = New System.Drawing.Size(226, 22)
-        Me.PhoneNumberProfileLabel.TabIndex = 10
-        Me.PhoneNumberProfileLabel.Text = "User telephone nunber :"
-        '
-        'TitleProfileLabel
-        '
-        Me.TitleProfileLabel.AutoSize = True
-        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.TitleProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.TitleProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TitleProfileLabel.Location = New System.Drawing.Point(37, 386)
-        Me.TitleProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.TitleProfileLabel.Name = "TitleProfileLabel"
-        Me.TitleProfileLabel.Size = New System.Drawing.Size(110, 22)
-        Me.TitleProfileLabel.TabIndex = 9
-        Me.TitleProfileLabel.Text = "User Title :"
-        '
-        'NameProfileLabel
-        '
-        Me.NameProfileLabel.AutoSize = True
-        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.NameProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.NameProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.NameProfileLabel.Location = New System.Drawing.Point(38, 260)
-        Me.NameProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.NameProfileLabel.Name = "NameProfileLabel"
-        Me.NameProfileLabel.Size = New System.Drawing.Size(118, 22)
-        Me.NameProfileLabel.TabIndex = 7
-        Me.NameProfileLabel.Text = "User name :"
-        '
-        'updateProfileShowBtn
-        '
-        Me.updateProfileShowBtn.AutoSize = True
-        Me.updateProfileShowBtn.BackColor = System.Drawing.Color.Transparent
-        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileShowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileShowBtn.ForeColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileShowBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.updateProfileShowBtn.Location = New System.Drawing.Point(409, 420)
-        Me.updateProfileShowBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileShowBtn.MaximumSize = New System.Drawing.Size(208, 62)
-        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
-        Me.updateProfileShowBtn.Size = New System.Drawing.Size(86, 34)
-        Me.updateProfileShowBtn.TabIndex = 13
-        Me.updateProfileShowBtn.Text = "Update"
-        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
-        '
-        'Label49
-        '
-        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
-        Me.Label49.ForeColor = System.Drawing.Color.Yellow
-        Me.Label49.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label49.Location = New System.Drawing.Point(0, 229)
-        Me.Label49.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(548, 235)
-        Me.Label49.TabIndex = 50
-        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'profileTitle
         '
         Me.profileTitle.AutoSize = True
@@ -1298,6 +1349,7 @@ Partial Class UserHomePage
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.postDataGridView.ColumnHeadersHeight = 45
+        Me.postDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.MintCream
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1534,6 +1586,7 @@ Partial Class UserHomePage
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.equipmentDataGridView.ColumnHeadersHeight = 45
+        Me.equipmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.MintCream
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1656,10 +1709,10 @@ Partial Class UserHomePage
         Me.HomePagePanel.PerformLayout()
         Me.ProfilePanel.ResumeLayout(False)
         Me.ProfilePanel.PerformLayout()
-        Me.profileSubPanel2.ResumeLayout(False)
-        Me.profileSubPanel2.PerformLayout()
         Me.profileSubPanel1.ResumeLayout(False)
         Me.profileSubPanel1.PerformLayout()
+        Me.profileSubPanel2.ResumeLayout(False)
+        Me.profileSubPanel2.PerformLayout()
         Me.PostPanel.ResumeLayout(False)
         Me.PostPanel.PerformLayout()
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1764,4 +1817,6 @@ Partial Class UserHomePage
     Friend WithEvents userSearchBoxE As ComboBox
     Friend WithEvents refreshBtnP As Button
     Friend WithEvents refreshBtnE As Button
+    Friend WithEvents englishBtn As Button
+    Friend WithEvents frenchBtn As Button
 End Class

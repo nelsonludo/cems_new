@@ -5,6 +5,9 @@ Imports cems.users
 Imports cems.admin
 Imports System.IO
 Imports System.Data.SqlClient
+Imports System.Resources
+Imports System.Globalization
+Imports System.Threading
 
 Public Class UserHomePage
     Dim sqlConn As New MySqlConnection
@@ -39,8 +42,24 @@ Public Class UserHomePage
     End Sub
 
 
+    'this is the translation section 
+    Private resourceManager As New ResourceManager("cems.translations.Resources", GetType(homePage).Assembly)
 
+    Private Sub LoadTranslations(cultureInfo As CultureInfo)
+        ' Set the current thread's culture
+        Thread.CurrentThread.CurrentCulture = cultureInfo
+        Thread.CurrentThread.CurrentUICulture = cultureInfo
+
+        ' Update the text of each control
+        For Each control As Control In Me.Controls
+            control.Text = resourceManager.GetString(control.Name, cultureInfo)
+        Next
+    End Sub
     Private Sub UserHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' Load translations for the default language (English)
+        LoadTranslations(New CultureInfo("en-US"))
+
 
         User.showUserName(Form1.emailtxt, uName)
 
@@ -108,6 +127,23 @@ Public Class UserHomePage
 
         End Try
     End Sub
+
+
+    'translation buttons 
+    Private Sub FrenchButton_Click(sender As Object, e As EventArgs) Handles frenchBtn.Click
+        ' Load translations for French language
+        LoadTranslations(New CultureInfo("fr-FR"))
+        frenchBtn.Visible = False
+        englishBtn.Visible = True
+    End Sub
+
+    Private Sub EnglishButton_Click(sender As Object, e As EventArgs) Handles englishBtn.Click
+        ' Load translations for English language
+        LoadTranslations(New CultureInfo("en-US"))
+        frenchBtn.Visible = True
+        englishBtn.Visible = False
+    End Sub
+
 
     'tab buttons section
 

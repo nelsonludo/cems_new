@@ -6,6 +6,9 @@ Imports cems.admin
 Imports cems.Simple3Des
 Imports System.Diagnostics
 Imports System.Runtime.CompilerServices
+Imports System.Resources
+Imports System.Globalization
+Imports System.Threading
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -28,9 +31,24 @@ Public Class Form1
     Public mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
 
 
+    'this is the translation section 
+    Private resourceManager As New ResourceManager("cems.translations.Resources", GetType(homePage).Assembly)
 
+    Private Sub LoadTranslations(cultureInfo As CultureInfo)
+        ' Set the current thread's culture
+        Thread.CurrentThread.CurrentCulture = cultureInfo
+        Thread.CurrentThread.CurrentUICulture = cultureInfo
+
+        ' Update the text of each control
+        For Each control As Control In Me.Controls
+            control.Text = resourceManager.GetString(control.Name, cultureInfo)
+        Next
+    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' Load translations for the default language (English)
+        LoadTranslations(New CultureInfo("en-US"))
 
 
         'this is to start apache server 
@@ -85,6 +103,23 @@ Public Class Form1
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
         End If
+    End Sub
+
+
+
+    'translation buttons 
+    Private Sub FrenchButton_Click(sender As Object, e As EventArgs) Handles frenchBtn.Click
+        ' Load translations for French language
+        LoadTranslations(New CultureInfo("fr-FR"))
+        frenchBtn.Visible = False
+        englishBtn.Visible = True
+    End Sub
+
+    Private Sub EnglishButton_Click(sender As Object, e As EventArgs) Handles englishBtn.Click
+        ' Load translations for English language
+        LoadTranslations(New CultureInfo("en-US"))
+        frenchBtn.Visible = True
+        englishBtn.Visible = False
     End Sub
 
 
@@ -418,7 +453,6 @@ Public Class Form1
 
             sqlConn.Close()
 
-            MessageBox.Show(admin_email + admin_phone_number)
 
             forgotPasswordMessage.Text = "Veuillez contacter l'administrateur à travers ces contacts " & admin_email & " et " & admin_phone_number & " "
 

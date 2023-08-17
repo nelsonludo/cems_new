@@ -6,6 +6,11 @@ Imports cems.admin
 Imports Org.BouncyCastle.Crypto.Generators
 Imports BCrypt.Net.BCrypt
 Imports System.Windows.Forms
+Imports System.Resources
+Imports System.Globalization
+Imports System.Threading
+
+
 
 Public Class homePage
     Dim sqlConn As New MySqlConnection
@@ -37,6 +42,8 @@ Public Class homePage
     'this is for the sidebar dropdown
     Dim iscollapsed As Boolean = True
 
+
+
     'connection functoin
     Public Sub connect_db()
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
@@ -67,7 +74,25 @@ Public Class homePage
     '    End Try
     'End Sub
 
+
+    'this is the translation section 
+    Private resourceManager As New ResourceManager("cems.translations.Resources", GetType(homePage).Assembly)
+
+    Private Sub LoadTranslations(cultureInfo As CultureInfo)
+        ' Set the current thread's culture
+        Thread.CurrentThread.CurrentCulture = cultureInfo
+        Thread.CurrentThread.CurrentUICulture = cultureInfo
+
+        ' Update the text of each control
+        For Each control As Control In Me.Controls
+            control.Text = resourceManager.GetString(control.Name, cultureInfo)
+        Next
+    End Sub
+
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Load translations for the default language (English)
+        LoadTranslations(New CultureInfo("en-US"))
+
         connect_db()
 
         User.showUserName(Form1.emailtxt, aName)
@@ -185,6 +210,21 @@ Public Class homePage
 
     End Sub
 
+
+    'translation buttons 
+    Private Sub FrenchButton_Click(sender As Object, e As EventArgs) Handles FrenchBtn.Click
+        ' Load translations for French language
+        LoadTranslations(New CultureInfo("fr-FR"))
+        frenchBtn.Visible = False
+        englishBtn.Visible = True
+    End Sub
+
+    Private Sub EnglishButton_Click(sender As Object, e As EventArgs) Handles EnglishBtn.Click
+        ' Load translations for English language
+        LoadTranslations(New CultureInfo("en-US"))
+        frenchBtn.Visible = True
+        englishBtn.Visible = False
+    End Sub
 
     'tab buttons section
 
@@ -2840,6 +2880,8 @@ Public Class homePage
         End Try
 
     End Sub
+
+
 
 
 

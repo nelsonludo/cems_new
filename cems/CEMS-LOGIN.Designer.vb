@@ -67,6 +67,8 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.englishBtn = New System.Windows.Forms.Button()
+        Me.frenchBtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
@@ -564,12 +566,61 @@ Partial Class Form1
         'Timer2
         '
         '
+        'englishBtn
+        '
+        Me.englishBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.englishBtn.AutoSize = True
+        Me.englishBtn.BackColor = System.Drawing.Color.Transparent
+        Me.englishBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.englishBtn.FlatAppearance.BorderSize = 0
+        Me.englishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.englishBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.englishBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.englishBtn.Image = Global.cems.My.Resources.Resources.englishFlag
+        Me.englishBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.englishBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.englishBtn.Location = New System.Drawing.Point(1157, 255)
+        Me.englishBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.englishBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.englishBtn.Name = "englishBtn"
+        Me.englishBtn.Size = New System.Drawing.Size(65, 36)
+        Me.englishBtn.TabIndex = 38
+        Me.englishBtn.Text = "En"
+        Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.englishBtn.UseVisualStyleBackColor = False
+        Me.englishBtn.Visible = False
+        '
+        'frenchBtn
+        '
+        Me.frenchBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.frenchBtn.AutoSize = True
+        Me.frenchBtn.BackColor = System.Drawing.Color.Transparent
+        Me.frenchBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.frenchBtn.FlatAppearance.BorderSize = 0
+        Me.frenchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.frenchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.frenchBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.frenchBtn.Image = Global.cems.My.Resources.Resources.frenchFlag
+        Me.frenchBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.frenchBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.frenchBtn.Location = New System.Drawing.Point(1158, 255)
+        Me.frenchBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.frenchBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.frenchBtn.Name = "frenchBtn"
+        Me.frenchBtn.Size = New System.Drawing.Size(60, 36)
+        Me.frenchBtn.TabIndex = 39
+        Me.frenchBtn.Text = "Fr"
+        Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.frenchBtn.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 859)
+        Me.Controls.Add(Me.englishBtn)
+        Me.Controls.Add(Me.frenchBtn)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.connexionStringPanel)
         Me.Controls.Add(Me.userAddPanel)
@@ -587,6 +638,7 @@ Partial Class Form1
         Me.userAddPanel.ResumeLayout(False)
         Me.userAddPanel.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -633,4 +685,6 @@ Partial Class Form1
     Friend WithEvents loginUserPwdLabel As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents englishBtn As Button
+    Friend WithEvents frenchBtn As Button
 End Class
