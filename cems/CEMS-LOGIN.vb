@@ -9,6 +9,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Resources
 Imports System.Globalization
 Imports System.Threading
+Imports System.Text
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -31,24 +32,13 @@ Public Class Form1
     Public mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
 
 
-    'this is the translation section 
-    Private resourceManager As New ResourceManager("cems.translations.Resources", GetType(homePage).Assembly)
+    'the resourcemanager as it name says helps to manage the resources. In our case these are the translation files found in the language folder 
+    Private resourceManager As New ResourceManager("cems.Resources", GetType(Form1).Assembly)
 
-    Private Sub LoadTranslations(cultureInfo As CultureInfo)
-        ' Set the current thread's culture
-        Thread.CurrentThread.CurrentCulture = cultureInfo
-        Thread.CurrentThread.CurrentUICulture = cultureInfo
 
-        ' Update the text of each control
-        For Each control As Control In Me.Controls
-            control.Text = resourceManager.GetString(control.Name, cultureInfo)
-        Next
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Load translations for the default language (English)
-        LoadTranslations(New CultureInfo("en-US"))
 
 
         'this is to start apache server 
@@ -63,6 +53,9 @@ Public Class Form1
         mysqlProcess.CreateNoWindow = True
         mysqlProcess.UseShellExecute = False
         Process.Start(mysqlProcess)
+
+
+        TranslateFormControlsEnglish(Me)
 
 
         Dim FILE_PATH As String = "C:\cems"
@@ -107,19 +100,58 @@ Public Class Form1
 
 
 
+    'this is a recurcive function that loops through all the controls(mostly labels and buttons) in the form and translates them to english as set in the resourceEnText.resx file
+    Private Sub TranslateFormControlsEnglish(ByVal control As Control)
+        For Each childControl As Control In control.Controls
+            If TypeOf childControl Is Button OrElse TypeOf childControl Is Label OrElse TypeOf childControl Is TextBox Then
+                Dim resourceName As String = childControl.Name
+                Dim translatedText As String = My.Resources.resourcesEnText.ResourceManager.GetString(resourceName)
+                If Not String.IsNullOrEmpty(translatedText) Then
+                    childControl.Text = translatedText
+                End If
+            End If
+
+            ' Recursively translate child controls
+            TranslateFormControlsEnglish(childControl)
+        Next
+    End Sub
+
+    'this is a recurcive function that loops through all the controls(mostly labels and buttons) in the form and translates them to french as set in the resourceFrText.resx file
+    Private Sub TranslateFormControlsFrench(ByVal control As Control)
+        For Each childControl As Control In control.Controls
+            If TypeOf childControl Is Button OrElse TypeOf childControl Is Label OrElse TypeOf childControl Is TextBox Then
+                Dim resourceName As String = childControl.Name
+                Dim translatedText As String = My.Resources.resourcesFrText.ResourceManager.GetString(resourceName)
+                If Not String.IsNullOrEmpty(translatedText) Then
+                    childControl.Text = translatedText
+                End If
+            End If
+
+            ' Recursively translate child controls
+            TranslateFormControlsFrench(childControl)
+        Next
+    End Sub
+
+
+
     'translation buttons 
     Private Sub FrenchButton_Click(sender As Object, e As EventArgs) Handles frenchBtn.Click
-        ' Load translations for French language
-        LoadTranslations(New CultureInfo("fr-FR"))
         frenchBtn.Visible = False
         englishBtn.Visible = True
+
+        TranslateFormControlsFrench(Me)
+
+
+
     End Sub
 
     Private Sub EnglishButton_Click(sender As Object, e As EventArgs) Handles englishBtn.Click
-        ' Load translations for English language
-        LoadTranslations(New CultureInfo("en-US"))
+
         frenchBtn.Visible = True
         englishBtn.Visible = False
+
+        TranslateFormControlsEnglish(Me)
+
     End Sub
 
 

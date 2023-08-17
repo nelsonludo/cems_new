@@ -151,6 +151,16 @@
     </Compile>
     <Compile Include="equipments.vb" />
     <Compile Include="halls.vb" />
+    <Compile Include="languages\resourcesEnText.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resourcesEnText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="languages\resourcesFrText.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resourcesFrText.resx</DependentUpon>
+    </Compile>
     <Compile Include="posts.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -191,8 +201,18 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="translations\Resources.en.resx" />
-    <EmbeddedResource Include="translations\Resources.fr.resx" />
+    <EmbeddedResource Include="languages\resourcesEnText.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resourcesEnText.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="languages\resourcesFrText.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resourcesFrText.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
