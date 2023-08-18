@@ -316,6 +316,7 @@ Partial Class homePage
         '
         'dropdown
         '
+        resources.ApplyResources(Me.dropdown, "dropdown")
         Me.dropdown.BackColor = System.Drawing.Color.SeaGreen
         Me.dropdown.Controls.Add(Me.CPUsBtn)
         Me.dropdown.Controls.Add(Me.IPsBtn)
@@ -323,15 +324,14 @@ Partial Class homePage
         Me.dropdown.Controls.Add(Me.monitorsBtn)
         Me.dropdown.Cursor = System.Windows.Forms.Cursors.Default
         Me.dropdown.ForeColor = System.Drawing.Color.MintCream
-        resources.ApplyResources(Me.dropdown, "dropdown")
         Me.dropdown.Name = "dropdown"
         '
         'CPUsBtn
         '
+        resources.ApplyResources(Me.CPUsBtn, "CPUsBtn")
         Me.CPUsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.CPUsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.CPUsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.CPUsBtn, "CPUsBtn")
         Me.CPUsBtn.ForeColor = System.Drawing.Color.MintCream
         Me.CPUsBtn.Image = Global.cems.My.Resources.Resources.thingForCPU
         Me.CPUsBtn.Name = "CPUsBtn"
@@ -339,10 +339,10 @@ Partial Class homePage
         '
         'IPsBtn
         '
+        resources.ApplyResources(Me.IPsBtn, "IPsBtn")
         Me.IPsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.IPsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.IPsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.IPsBtn, "IPsBtn")
         Me.IPsBtn.ForeColor = System.Drawing.Color.MintCream
         Me.IPsBtn.Image = Global.cems.My.Resources.Resources.Phone
         Me.IPsBtn.Name = "IPsBtn"
@@ -350,10 +350,10 @@ Partial Class homePage
         '
         'equipmentsBtn
         '
+        resources.ApplyResources(Me.equipmentsBtn, "equipmentsBtn")
         Me.equipmentsBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.equipmentsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.equipmentsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.equipmentsBtn, "equipmentsBtn")
         Me.equipmentsBtn.ForeColor = System.Drawing.Color.MintCream
         Me.equipmentsBtn.Image = Global.cems.My.Resources.Resources.equipmentScrew
         Me.equipmentsBtn.Name = "equipmentsBtn"
@@ -361,10 +361,10 @@ Partial Class homePage
         '
         'monitorsBtn
         '
+        resources.ApplyResources(Me.monitorsBtn, "monitorsBtn")
         Me.monitorsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.monitorsBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
         Me.monitorsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.monitorsBtn, "monitorsBtn")
         Me.monitorsBtn.Image = Global.cems.My.Resources.Resources.monitor2
         Me.monitorsBtn.Name = "monitorsBtn"
         Me.monitorsBtn.UseVisualStyleBackColor = False
@@ -769,9 +769,9 @@ Partial Class homePage
         '
         'dashboardBtn
         '
+        resources.ApplyResources(Me.dashboardBtn, "dashboardBtn")
         Me.dashboardBtn.BackColor = System.Drawing.Color.MintCream
         Me.dashboardBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.dashboardBtn, "dashboardBtn")
         Me.dashboardBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.dashboardBtn.Image = Global.cems.My.Resources.Resources.home
         Me.dashboardBtn.Name = "dashboardBtn"
@@ -779,8 +779,8 @@ Partial Class homePage
         '
         'Label39
         '
-        Me.Label39.BackColor = System.Drawing.Color.MintCream
         resources.ApplyResources(Me.Label39, "Label39")
+        Me.Label39.BackColor = System.Drawing.Color.MintCream
         Me.Label39.ForeColor = System.Drawing.Color.Yellow
         Me.Label39.Name = "Label39"
         '
@@ -792,10 +792,10 @@ Partial Class homePage
         '
         'rolesBtn
         '
+        resources.ApplyResources(Me.rolesBtn, "rolesBtn")
         Me.rolesBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.rolesBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.rolesBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.rolesBtn, "rolesBtn")
         Me.rolesBtn.ForeColor = System.Drawing.Color.MintCream
         Me.rolesBtn.Image = Global.cems.My.Resources.Resources.roles
         Me.rolesBtn.Name = "rolesBtn"
@@ -803,10 +803,10 @@ Partial Class homePage
         '
         'hallsBtn
         '
+        resources.ApplyResources(Me.hallsBtn, "hallsBtn")
         Me.hallsBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.hallsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.hallsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.hallsBtn, "hallsBtn")
         Me.hallsBtn.ForeColor = System.Drawing.Color.MintCream
         Me.hallsBtn.Image = Global.cems.My.Resources.Resources.Hall
         Me.hallsBtn.Name = "hallsBtn"
@@ -814,10 +814,10 @@ Partial Class homePage
         '
         'usersBtn
         '
+        resources.ApplyResources(Me.usersBtn, "usersBtn")
         Me.usersBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.usersBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.usersBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.usersBtn, "usersBtn")
         Me.usersBtn.ForeColor = System.Drawing.Color.MintCream
         Me.usersBtn.Image = Global.cems.My.Resources.Resources.user3
         Me.usersBtn.Name = "usersBtn"
@@ -825,10 +825,10 @@ Partial Class homePage
         '
         'profileBtn
         '
+        resources.ApplyResources(Me.profileBtn, "profileBtn")
         Me.profileBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.profileBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.profileBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.profileBtn, "profileBtn")
         Me.profileBtn.ForeColor = System.Drawing.Color.MintCream
         Me.profileBtn.Image = Global.cems.My.Resources.Resources.profile
         Me.profileBtn.Name = "profileBtn"
@@ -836,10 +836,10 @@ Partial Class homePage
         '
         'postsBtn
         '
+        resources.ApplyResources(Me.postsBtn, "postsBtn")
         Me.postsBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.postsBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.postsBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.postsBtn, "postsBtn")
         Me.postsBtn.ForeColor = System.Drawing.Color.MintCream
         Me.postsBtn.Image = Global.cems.My.Resources.Resources.posts
         Me.postsBtn.Name = "postsBtn"
@@ -1749,9 +1749,9 @@ Partial Class homePage
         'adminProfilePanel
         '
         resources.ApplyResources(Me.adminProfilePanel, "adminProfilePanel")
+        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.confirmMsgPr)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
-        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Name = "adminProfilePanel"
         '
@@ -1783,8 +1783,8 @@ Partial Class homePage
         '
         'Label50
         '
-        Me.Label50.BackColor = System.Drawing.Color.Transparent
         resources.ApplyResources(Me.Label50, "Label50")
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
         Me.Label50.ForeColor = System.Drawing.Color.Yellow
         Me.Label50.Image = Global.cems.My.Resources.Resources.user2
         Me.Label50.Name = "Label50"
@@ -1856,8 +1856,8 @@ Partial Class homePage
         '
         'Label49
         '
-        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
         resources.ApplyResources(Me.Label49, "Label49")
+        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
         Me.Label49.ForeColor = System.Drawing.Color.Yellow
         Me.Label49.Name = "Label49"
         '
@@ -1898,8 +1898,8 @@ Partial Class homePage
         '
         'Label51
         '
-        Me.Label51.BackColor = System.Drawing.Color.SeaGreen
         resources.ApplyResources(Me.Label51, "Label51")
+        Me.Label51.BackColor = System.Drawing.Color.SeaGreen
         Me.Label51.ForeColor = System.Drawing.Color.Yellow
         Me.Label51.Name = "Label51"
         '
@@ -1917,10 +1917,10 @@ Partial Class homePage
         '
         'updateProfileCancelBtn
         '
+        resources.ApplyResources(Me.updateProfileCancelBtn, "updateProfileCancelBtn")
         Me.updateProfileCancelBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.updateProfileCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.updateProfileCancelBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.updateProfileCancelBtn, "updateProfileCancelBtn")
         Me.updateProfileCancelBtn.ForeColor = System.Drawing.Color.Yellow
         Me.updateProfileCancelBtn.Name = "updateProfileCancelBtn"
         Me.updateProfileCancelBtn.UseVisualStyleBackColor = False
@@ -1949,10 +1949,10 @@ Partial Class homePage
         '
         'updateProfileValidationBtn
         '
+        resources.ApplyResources(Me.updateProfileValidationBtn, "updateProfileValidationBtn")
         Me.updateProfileValidationBtn.BackColor = System.Drawing.Color.SeaGreen
         Me.updateProfileValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
         Me.updateProfileValidationBtn.FlatAppearance.BorderSize = 0
-        resources.ApplyResources(Me.updateProfileValidationBtn, "updateProfileValidationBtn")
         Me.updateProfileValidationBtn.ForeColor = System.Drawing.Color.Yellow
         Me.updateProfileValidationBtn.Name = "updateProfileValidationBtn"
         Me.updateProfileValidationBtn.UseVisualStyleBackColor = False
@@ -2528,10 +2528,10 @@ Partial Class homePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.Controls.Add(Me.adminEquipmentPanel)
-        Me.Controls.Add(Me.adminHomePagePanel)
-        Me.Controls.Add(Me.adminPostPanel)
         Me.Controls.Add(Me.adminProfilePanel)
+        Me.Controls.Add(Me.adminHomePagePanel)
+        Me.Controls.Add(Me.adminEquipmentPanel)
+        Me.Controls.Add(Me.adminPostPanel)
         Me.Controls.Add(Me.adminRolePanel)
         Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminHallsPanel)

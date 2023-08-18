@@ -215,6 +215,7 @@ Public Class UserHomePage
     'update buttons 
     Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs) Handles updateProfileShowBtn.Click
         profileSubPanel2.Visible = True
+        profileSubPanel1.Visible = False
 
         userNameProfileInput.Text = userNameProfile.Text
         userPhoneNumberProfileInput.Text = userPhoneNumberProfile.Text

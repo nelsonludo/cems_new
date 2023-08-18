@@ -81,7 +81,7 @@ Public Class homePage
 
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        TranslateFormControlsEnglish(Me)
+        TranslateFormControlsFrench(Me)
 
 
         connect_db()
@@ -284,6 +284,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        adminHomePagePanel.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -355,7 +356,9 @@ Public Class homePage
         fillHalls(hallSearchBoxP)
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
+
         postTitle.Text = "Posts"
+
         postDataGridView.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
@@ -696,6 +699,7 @@ Public Class homePage
 
     Private Sub updateProfileShowBtn_Click(sender As Object, e As EventArgs) Handles updateProfileShowBtn.Click
         profileSubPanel2.Visible = True
+        profileSubPanel1.Visible = False
 
         userNameProfileInput.Text = adminNameProfile.Text
         userPhoneNumberProfileInput.Text = adminPhoneNumberProfile.Text

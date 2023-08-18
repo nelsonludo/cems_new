@@ -292,7 +292,7 @@
   <data name="createAdminTitle" xml:space="preserve">
     <value>Create admin</value>
   </data>
-  <data name="dashBoardBtn" xml:space="preserve">
+  <data name="dashboardBtn" xml:space="preserve">
     <value>Dashboard</value>
   </data>
   <data name="dashboardCPULabel" xml:space="preserve">
@@ -307,11 +307,14 @@
   <data name="dashboardTitle" xml:space="preserve">
     <value>All categories of equipment</value>
   </data>
+  <data name="dashboardUserLabel" xml:space="preserve">
+    <value>Users</value>
+  </data>
   <data name="dashbooardUserLabel" xml:space="preserve">
     <value>Users</value>
   </data>
-  <data name="emailProfileLabel" xml:space="preserve">
-    <value>User email</value>
+  <data name="EmailProfileLabel" xml:space="preserve">
+    <value>User email:</value>
   </data>
   <data name="equipmentAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -340,7 +343,7 @@
   <data name="equipmentsearchstatelabel" xml:space="preserve">
     <value>State</value>
   </data>
-  <data name="equipmentsTitle" xml:space="preserve">
+  <data name="equipmentTitle" xml:space="preserve">
     <value>Equipments</value>
   </data>
   <data name="equipmentUpdateBtn" xml:space="preserve">
@@ -403,6 +406,9 @@
   <data name="hallSearchLabelP" xml:space="preserve">
     <value>Hall</value>
   </data>
+  <data name="hallTitle" xml:space="preserve">
+    <value>Halls</value>
+  </data>
   <data name="hallUpdateBtn" xml:space="preserve">
     <value>Update</value>
   </data>
@@ -442,11 +448,11 @@
   <data name="monitorsBtn2" xml:space="preserve">
     <value>view</value>
   </data>
-  <data name="nameProfileLabel" xml:space="preserve">
-    <value>User name</value>
+  <data name="NameProfileLabel" xml:space="preserve">
+    <value>User name:</value>
   </data>
-  <data name="phoneNumberProfileLable" xml:space="preserve">
-    <value>User Phone number</value>
+  <data name="PhoneNumberProfileLabel" xml:space="preserve">
+    <value>User Phone number:</value>
   </data>
   <data name="postAddBtn" xml:space="preserve">
     <value>Add</value>
@@ -469,7 +475,7 @@
   <data name="postsearchlabel" xml:space="preserve">
     <value>Post</value>
   </data>
-  <data name="postsTitle" xml:space="preserve">
+  <data name="postTitle" xml:space="preserve">
     <value>Posts</value>
   </data>
   <data name="postUpdateBtn" xml:space="preserve">
@@ -517,7 +523,7 @@
   <data name="rolesBtn" xml:space="preserve">
     <value>Roles</value>
   </data>
-  <data name="rolesTitle" xml:space="preserve">
+  <data name="roleTitle" xml:space="preserve">
     <value>Roles</value>
   </data>
   <data name="roleUpdateBtn" xml:space="preserve">
@@ -551,7 +557,7 @@
     <value>State</value>
   </data>
   <data name="TitleProfileLabel" xml:space="preserve">
-    <value>User Title</value>
+    <value>User Title:</value>
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Update equipment</value>
@@ -562,7 +568,10 @@
   <data name="updatePostTitle" xml:space="preserve">
     <value>Update post</value>
   </data>
-  <data name="updateProfielShowBtn" xml:space="preserve">
+  <data name="updateProfileCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="updateProfileShowBtn" xml:space="preserve">
     <value>Update</value>
   </data>
   <data name="updateProfileTitle" xml:space="preserve">
@@ -628,11 +637,14 @@
   <data name="usersBtn2" xml:space="preserve">
     <value>view</value>
   </data>
-  <data name="usersTitle" xml:space="preserve">
+  <data name="userTitle" xml:space="preserve">
     <value>Users</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">
     <value>Admin</value>
+  </data>
+  <data name="userTypeTitleU" xml:space="preserve">
+    <value>Users</value>
   </data>
   <data name="userUpdateBtn" xml:space="preserve">
     <value>Update</value>

@@ -292,7 +292,7 @@
   <data name="createAdminTitle" xml:space="preserve">
     <value>Créer un administrateur</value>
   </data>
-  <data name="dashBoardBtn" xml:space="preserve">
+  <data name="dashboardBtn" xml:space="preserve">
     <value>Tableau de bord</value>
   </data>
   <data name="dashboardCPULabel" xml:space="preserve">
@@ -307,11 +307,14 @@
   <data name="dashboardTitle" xml:space="preserve">
     <value>Toutes les catégories d'équipements</value>
   </data>
+  <data name="dashboardUserLabel" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
   <data name="dashbooardUserLabel" xml:space="preserve">
     <value>Utilisateurs</value>
   </data>
-  <data name="emailProfileLabel" xml:space="preserve">
-    <value>Courriel de l'utilisateur</value>
+  <data name="EmailProfileLabel" xml:space="preserve">
+    <value>E-mail de l'utilisateur:</value>
   </data>
   <data name="equipmentAddBtn" xml:space="preserve">
     <value>Ajouter</value>
@@ -340,7 +343,7 @@
   <data name="equipmentsearchstatelabel" xml:space="preserve">
     <value>État</value>
   </data>
-  <data name="equipmentsTitle" xml:space="preserve">
+  <data name="equipmentTitle" xml:space="preserve">
     <value>Équipements</value>
   </data>
   <data name="equipmentUpdateBtn" xml:space="preserve">
@@ -403,6 +406,9 @@
   <data name="hallSearchLabelP" xml:space="preserve">
     <value>Salle</value>
   </data>
+  <data name="hallTitle" xml:space="preserve">
+    <value>Salles</value>
+  </data>
   <data name="hallUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>
   </data>
@@ -442,11 +448,11 @@
   <data name="monitorsBtn2" xml:space="preserve">
     <value>Voir</value>
   </data>
-  <data name="nameProfileLabel" xml:space="preserve">
-    <value>Nom de l'utilisateur</value>
+  <data name="NameProfileLabel" xml:space="preserve">
+    <value>Nom de l'utilisateur:</value>
   </data>
-  <data name="phoneNumberProfileLable" xml:space="preserve">
-    <value>Numéro de téléphone de l'utilisateur</value>
+  <data name="PhoneNumberProfileLabel" xml:space="preserve">
+    <value>Numéro de téléphone de l'utilisateur:</value>
   </data>
   <data name="postAddBtn" xml:space="preserve">
     <value>Ajouter</value>
@@ -469,7 +475,7 @@
   <data name="postsearchlabel" xml:space="preserve">
     <value>Poste</value>
   </data>
-  <data name="postsTitle" xml:space="preserve">
+  <data name="postTitle" xml:space="preserve">
     <value>Postes</value>
   </data>
   <data name="postUpdateBtn" xml:space="preserve">
@@ -485,7 +491,7 @@
     <value>Profil</value>
   </data>
   <data name="profileTitle" xml:space="preserve">
-    <value>Profile</value>
+    <value>Profil</value>
   </data>
   <data name="refreshBtnE" xml:space="preserve">
     <value>Rafraîchir</value>
@@ -551,7 +557,7 @@
     <value>État</value>
   </data>
   <data name="TitleProfileLabel" xml:space="preserve">
-    <value>Titre de l'utilisateur</value>
+    <value>Titre de l'utilisateur:</value>
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Mettre l'équipement à jour</value>
@@ -562,7 +568,10 @@
   <data name="updatePostTitle" xml:space="preserve">
     <value>Mettre le poste à jour</value>
   </data>
-  <data name="updateProfielShowBtn" xml:space="preserve">
+  <data name="updateProfileCancelBtn" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="updateProfileShowBtn" xml:space="preserve">
     <value>Mettre à jour</value>
   </data>
   <data name="updateProfileTitle" xml:space="preserve">
@@ -626,13 +635,16 @@
     <value>Utilisateurs</value>
   </data>
   <data name="usersBtn2" xml:space="preserve">
-    <value>view</value>
+    <value>Voir</value>
   </data>
   <data name="usersTitle" xml:space="preserve">
     <value>Utilisateurs</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">
     <value>Administrateurs</value>
+  </data>
+  <data name="userTypeTitleU" xml:space="preserve">
+    <value>Utilisateurs</value>
   </data>
   <data name="userUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>

@@ -583,7 +583,7 @@ Partial Class Form1
         Me.englishBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.englishBtn.MaximumSize = New System.Drawing.Size(208, 62)
         Me.englishBtn.Name = "englishBtn"
-        Me.englishBtn.Size = New System.Drawing.Size(65, 36)
+        Me.englishBtn.Size = New System.Drawing.Size(90, 36)
         Me.englishBtn.TabIndex = 38
         Me.englishBtn.Text = "En"
         Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -607,7 +607,7 @@ Partial Class Form1
         Me.frenchBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.frenchBtn.MaximumSize = New System.Drawing.Size(208, 62)
         Me.frenchBtn.Name = "frenchBtn"
-        Me.frenchBtn.Size = New System.Drawing.Size(60, 36)
+        Me.frenchBtn.Size = New System.Drawing.Size(90, 36)
         Me.frenchBtn.TabIndex = 39
         Me.frenchBtn.Text = "Fr"
         Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight

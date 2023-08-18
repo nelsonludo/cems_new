@@ -589,9 +589,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Tableau de bord.
         '''</summary>
-        Friend Shared ReadOnly Property dashBoardBtn() As String
+        Friend Shared ReadOnly Property dashboardBtn() As String
             Get
-                Return ResourceManager.GetString("dashBoardBtn", resourceCulture)
+                Return ResourceManager.GetString("dashboardBtn", resourceCulture)
             End Get
         End Property
         
@@ -634,6 +634,15 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Utilisateurs.
         '''</summary>
+        Friend Shared ReadOnly Property dashboardUserLabel() As String
+            Get
+                Return ResourceManager.GetString("dashboardUserLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Utilisateurs.
+        '''</summary>
         Friend Shared ReadOnly Property dashbooardUserLabel() As String
             Get
                 Return ResourceManager.GetString("dashbooardUserLabel", resourceCulture)
@@ -641,11 +650,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Courriel de l&apos;utilisateur.
+        '''  Recherche une chaîne localisée semblable à E-mail de l&apos;utilisateur:.
         '''</summary>
-        Friend Shared ReadOnly Property emailProfileLabel() As String
+        Friend Shared ReadOnly Property EmailProfileLabel() As String
             Get
-                Return ResourceManager.GetString("emailProfileLabel", resourceCulture)
+                Return ResourceManager.GetString("EmailProfileLabel", resourceCulture)
             End Get
         End Property
         
@@ -733,9 +742,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Équipements.
         '''</summary>
-        Friend Shared ReadOnly Property equipmentsTitle() As String
+        Friend Shared ReadOnly Property equipmentTitle() As String
             Get
-                Return ResourceManager.GetString("equipmentsTitle", resourceCulture)
+                Return ResourceManager.GetString("equipmentTitle", resourceCulture)
             End Get
         End Property
         
@@ -920,6 +929,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Salles.
+        '''</summary>
+        Friend Shared ReadOnly Property hallTitle() As String
+            Get
+                Return ResourceManager.GetString("hallTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Mettre à jour.
         '''</summary>
         Friend Shared ReadOnly Property hallUpdateBtn() As String
@@ -1037,20 +1055,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Nom de l&apos;utilisateur.
+        '''  Recherche une chaîne localisée semblable à Nom de l&apos;utilisateur:.
         '''</summary>
-        Friend Shared ReadOnly Property nameProfileLabel() As String
+        Friend Shared ReadOnly Property NameProfileLabel() As String
             Get
-                Return ResourceManager.GetString("nameProfileLabel", resourceCulture)
+                Return ResourceManager.GetString("NameProfileLabel", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Numéro de téléphone de l&apos;utilisateur.
+        '''  Recherche une chaîne localisée semblable à Numéro de téléphone de l&apos;utilisateur:.
         '''</summary>
-        Friend Shared ReadOnly Property phoneNumberProfileLable() As String
+        Friend Shared ReadOnly Property PhoneNumberProfileLabel() As String
             Get
-                Return ResourceManager.GetString("phoneNumberProfileLable", resourceCulture)
+                Return ResourceManager.GetString("PhoneNumberProfileLabel", resourceCulture)
             End Get
         End Property
         
@@ -1120,9 +1138,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Postes.
         '''</summary>
-        Friend Shared ReadOnly Property postsTitle() As String
+        Friend Shared ReadOnly Property postTitle() As String
             Get
-                Return ResourceManager.GetString("postsTitle", resourceCulture)
+                Return ResourceManager.GetString("postTitle", resourceCulture)
             End Get
         End Property
         
@@ -1163,7 +1181,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Profile.
+        '''  Recherche une chaîne localisée semblable à Profil.
         '''</summary>
         Friend Shared ReadOnly Property profileTitle() As String
             Get
@@ -1361,7 +1379,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Titre de l&apos;utilisateur.
+        '''  Recherche une chaîne localisée semblable à Titre de l&apos;utilisateur:.
         '''</summary>
         Friend Shared ReadOnly Property TitleProfileLabel() As String
             Get
@@ -1397,11 +1415,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Annuler.
+        '''</summary>
+        Friend Shared ReadOnly Property updateProfileCancelBtn() As String
+            Get
+                Return ResourceManager.GetString("updateProfileCancelBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Mettre à jour.
         '''</summary>
-        Friend Shared ReadOnly Property updateProfielShowBtn() As String
+        Friend Shared ReadOnly Property updateProfileShowBtn() As String
             Get
-                Return ResourceManager.GetString("updateProfielShowBtn", resourceCulture)
+                Return ResourceManager.GetString("updateProfileShowBtn", resourceCulture)
             End Get
         End Property
         
@@ -1586,7 +1613,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à view.
+        '''  Recherche une chaîne localisée semblable à Voir.
         '''</summary>
         Friend Shared ReadOnly Property usersBtn2() As String
             Get
@@ -1609,6 +1636,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property userTypeTitle() As String
             Get
                 Return ResourceManager.GetString("userTypeTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Utilisateurs.
+        '''</summary>
+        Friend Shared ReadOnly Property userTypeTitleU() As String
+            Get
+                Return ResourceManager.GetString("userTypeTitleU", resourceCulture)
             End Get
         End Property
         
