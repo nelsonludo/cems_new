@@ -135,6 +135,12 @@
   <data name="addHallErrorMsg" xml:space="preserve">
     <value>Veuillez remplir tous les champs!</value>
   </data>
+  <data name="addPostBtn" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="addPostCancelBtn" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
   <data name="addPostHallLabel" xml:space="preserve">
     <value>Salle du poste</value>
   </data>
@@ -146,6 +152,9 @@
   </data>
   <data name="addPostTitle" xml:space="preserve">
     <value>Ajouter un poste</value>
+  </data>
+  <data name="addPostValidationBtn" xml:space="preserve">
+    <value>Ajouter</value>
   </data>
   <data name="addRoleErrorMsg" xml:space="preserve">
     <value>Veuillez remplir le champ!</value>
@@ -394,7 +403,7 @@
   <data name="hallsBtn" xml:space="preserve">
     <value>Salles</value>
   </data>
-  <data name="hallSearchLabel" xml:space="preserve">
+  <data name="hallsearchlabel" xml:space="preserve">
     <value>Salle</value>
   </data>
   <data name="hallSearchLabelE" xml:space="preserve">

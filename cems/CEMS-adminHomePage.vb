@@ -339,6 +339,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        refreshBtnP.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -389,6 +390,8 @@ Public Class homePage
         exportBtnP.Visible = False
         postChangeStatePanel.Visible = False
         searchErrorP.Visible = False
+        refreshBtnP.Visible = False
+
 
         'printBtnP.Visible = False
     End Sub
@@ -493,6 +496,7 @@ Public Class homePage
                             postsearchlabel.Visible = True
                             addPostBtn.Visible = True
                             exportBtnP.Visible = True
+                            refreshBtnP.Visible = True
                             'printBtnP.Visible = True
 
 
@@ -547,6 +551,7 @@ Public Class homePage
                             postsearchlabel.Visible = True
                             addPostBtn.Visible = True
                             exportBtnP.Visible = True
+                            refreshBtnP.Visible = True
                             'printBtnP.Visible = True
 
 
@@ -588,6 +593,7 @@ Public Class homePage
         postsearchlabel.Visible = True
         addPostBtn.Visible = True
         exportBtnP.Visible = True
+        refreshBtnP.Visible = True
 
 
         'this updates the datagridview
@@ -756,6 +762,7 @@ Public Class homePage
         hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
+        refreshBtnH.Visible = False
 
     End Sub
 
@@ -786,6 +793,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        refreshBtnH.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -830,6 +838,7 @@ Public Class homePage
         hallSearchBoxH.Visible = True
         hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
+        refreshBtnH.Visible = True
 
     End Sub
 
@@ -890,6 +899,7 @@ Public Class homePage
             hallSearchBoxH.Visible = True
             hallSearchLabelH.Visible = True
             hallDataGridView.Visible = True
+            refreshBtnH.Visible = True
         End If
 
 
@@ -926,6 +936,7 @@ Public Class homePage
         hallDataGridView.Visible = False
         HallUpdateBtn.Visible = False
         HallDeleteBtn.Visible = False
+        refreshBtnH.Visible = False
 
     End Sub
 
@@ -961,6 +972,7 @@ Public Class homePage
         hallSearchBoxH.Visible = True
         hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
+        refreshBtnH.Visible = True
 
     End Sub
 
@@ -1029,6 +1041,7 @@ Public Class homePage
                 hallSearchBoxH.Visible = True
                 hallSearchLabelH.Visible = True
                 hallDataGridView.Visible = True
+                refreshBtnH.Visible = True
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "mysql update role", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1065,6 +1078,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        refreshBtnU.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -1103,6 +1117,7 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminRolePanel.Visible = False
         adminUsersPanel.Visible = True
+        refreshBtnU.Visible = True
 
         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
@@ -1190,6 +1205,7 @@ Public Class homePage
 
                 userUpdateBtn.Visible = False
                 userDeleteBtn.Visible = False
+                refreshBtnU.Visible = True
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "mysql update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -1214,6 +1230,7 @@ Public Class homePage
         exportBtnU.Visible = True
         'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
+        refreshBtnU.Visible = True
 
     End Sub
 
@@ -1270,7 +1287,8 @@ Public Class homePage
         exportBtnU.Visible = False
         'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
-        userDataGridView.Visible = False
+        userDataGridView.Visible =
+        refreshBtnU.Visible = False
 
     End Sub
 
@@ -1334,6 +1352,7 @@ Public Class homePage
         exportBtnU.Visible = False
         'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
+        refreshBtnU.Visible = False
 
     End Sub
 
@@ -1439,6 +1458,7 @@ Public Class homePage
 
                         userUpdateBtn.Visible = False
                         userDeleteBtn.Visible = False
+                        refreshBtnU.Visible = True
 
 
                         'empty the fields after validation
@@ -1486,6 +1506,7 @@ Public Class homePage
         searchuserlabel.Visible = True
         User.displayTableU("users", userDataGridView, sqlDataTableU)
         searchErrorU.Visible = False
+        refreshBtnU.Visible = True
 
 
 
@@ -1514,6 +1535,7 @@ Public Class homePage
         userUpdateBtn.Visible = False
         userDeleteBtn.Visible = False
         userAddPanel.Visible = False
+        refreshBtnR.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -1595,6 +1617,7 @@ Public Class homePage
                 roleAddBtn.Visible = True
                 exportBtnR.Visible = True
                 'PrintBtnR.Visible = True
+                refreshBtnR.Visible = True
 
 
             Catch ex As Exception
@@ -1615,6 +1638,7 @@ Public Class homePage
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
+        refreshBtnR.Visible = True
     End Sub
 
     Private Sub DataGridView5_CellClick() Handles roleDataGridView.CellClick 'the cellclicked event
@@ -1641,6 +1665,7 @@ Public Class homePage
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
+        refreshBtnR.Visible = False
     End Sub
 
     Private Sub roleDeleteBtn_Click_1(sender As Object, e As EventArgs) Handles roleDeleteBtn.Click  'delete
@@ -1669,6 +1694,7 @@ Public Class homePage
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
+        refreshBtnR.Visible = False
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
 
@@ -1718,6 +1744,7 @@ Public Class homePage
             roleAddBtn.Visible = True
             exportBtnR.Visible = True
             'PrintBtnR.Visible = True
+            refreshBtnR.Visible = True
         End If
     End Sub
 
@@ -1730,6 +1757,7 @@ Public Class homePage
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
+        refreshBtnR.Visible = True
     End Sub
 
     'equipment SECTION
@@ -1759,6 +1787,7 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        refreshBtnE.Visible = True
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -1834,6 +1863,7 @@ Public Class homePage
         EquipmentTitle.Text = "CPUs"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
+        refreshBtnE.Visible = True
         'printBtnE.Visible = True
 
     End Sub
@@ -1851,6 +1881,7 @@ Public Class homePage
 
 
         addPostPanel.Visible = False
+        refreshBtnE.Visible = True
 
         fillHalls(hallSearchBoxE)
 
@@ -1900,6 +1931,7 @@ Public Class homePage
         EquipmentTitle.Text = "IP Phones"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
+        refreshBtnE.Visible = True
         'printBtnE.Visible = True
     End Sub
 
@@ -1915,6 +1947,7 @@ Public Class homePage
         adminRolePanel.Visible = False
 
         addPostPanel.Visible = False
+        refreshBtnE.Visible = True
 
         fillHalls(hallSearchBoxE)
 
@@ -1932,6 +1965,7 @@ Public Class homePage
         adminRolePanel.Visible = False
 
         addPostPanel.Visible = False
+        refreshBtnE.Visible = True
 
         fillHalls(hallSearchBoxE)
 
@@ -1981,6 +2015,7 @@ Public Class homePage
         EquipmentTitle.Text = "Monitors"
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
+        refreshBtnE.Visible = True
         'printBtnE.Visible = True
 
     End Sub
@@ -1999,6 +2034,7 @@ Public Class homePage
         statePanel.Visible = False
         exportBtnE.Visible = False
         'printBtnE.Visible = False
+        refreshBtnE.Visible = False
     End Sub
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
@@ -2013,6 +2049,7 @@ Public Class homePage
         User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
         searchErrorE.Visible = False
         'printBtnE.Visible = True
+        refreshBtnE.Visible = True
 
     End Sub
 
@@ -2091,6 +2128,7 @@ Public Class homePage
                     equipmentsearchpostidlabel.Visible = True
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
+                    refreshBtnE.Visible = True
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -2136,6 +2174,7 @@ Public Class homePage
                     equipmentsearchpostidlabel.Visible = True
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
+                    refreshBtnE.Visible = True
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -2182,6 +2221,7 @@ Public Class homePage
                     equipmentsearchpostidlabel.Visible = True
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
+                    refreshBtnE.Visible = True
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -2227,6 +2267,7 @@ Public Class homePage
                     equipmentsearchpostidlabel.Visible = True
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
+                    refreshBtnE.Visible = True
                     'printBtnE.Visible = True
 
                 Catch ex As Exception

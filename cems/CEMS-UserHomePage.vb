@@ -47,7 +47,7 @@ Public Class UserHomePage
 
     Private Sub UserHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        TranslateFormControlsEnglish(Me)
+        TranslateFormControlsFrench(Me)
 
 
         User.showUserName(Form1.emailtxt, uName)

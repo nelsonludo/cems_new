@@ -55,7 +55,7 @@ Public Class Form1
         Process.Start(mysqlProcess)
 
 
-        TranslateFormControlsEnglish(Me)
+        TranslateFormControlsFrench(Me)
 
 
         Dim FILE_PATH As String = "C:\cems"

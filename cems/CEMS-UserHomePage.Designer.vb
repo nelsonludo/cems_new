@@ -419,7 +419,6 @@ Partial Class UserHomePage
         Me.englishBtn.Text = "En"
         Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.englishBtn.UseVisualStyleBackColor = False
-        Me.englishBtn.Visible = False
         '
         'frenchBtn
         '
@@ -443,6 +442,7 @@ Partial Class UserHomePage
         Me.frenchBtn.Text = "Fr"
         Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.frenchBtn.UseVisualStyleBackColor = False
+        Me.frenchBtn.Visible = False
         '
         'logoutBtn
         '
@@ -1279,12 +1279,12 @@ Partial Class UserHomePage
         Me.refreshBtnP.ForeColor = System.Drawing.Color.Yellow
         Me.refreshBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.refreshBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.refreshBtnP.Location = New System.Drawing.Point(1468, 6)
+        Me.refreshBtnP.Location = New System.Drawing.Point(1456, 6)
         Me.refreshBtnP.Margin = New System.Windows.Forms.Padding(4)
         Me.refreshBtnP.Name = "refreshBtnP"
-        Me.refreshBtnP.Size = New System.Drawing.Size(100, 35)
+        Me.refreshBtnP.Size = New System.Drawing.Size(107, 35)
         Me.refreshBtnP.TabIndex = 73
-        Me.refreshBtnP.Text = "Refresh"
+        Me.refreshBtnP.Text = "Rafraichir"
         Me.refreshBtnP.UseVisualStyleBackColor = False
         '
         'confirmMsgP
@@ -1338,18 +1338,18 @@ Partial Class UserHomePage
         Me.exportBtnP.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.exportBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.exportBtnP.Location = New System.Drawing.Point(1363, 6)
+        Me.exportBtnP.Location = New System.Drawing.Point(1330, 6)
         Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnP.Name = "exportBtnP"
         Me.exportBtnP.Size = New System.Drawing.Size(100, 32)
         Me.exportBtnP.TabIndex = 32
-        Me.exportBtnP.Text = "Export"
+        Me.exportBtnP.Text = "Exporter"
         Me.exportBtnP.UseVisualStyleBackColor = False
         '
         'postSearchBox
         '
         Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
-        Me.postSearchBox.Location = New System.Drawing.Point(518, 98)
+        Me.postSearchBox.Location = New System.Drawing.Point(500, 98)
         Me.postSearchBox.Margin = New System.Windows.Forms.Padding(4)
         Me.postSearchBox.Name = "postSearchBox"
         Me.postSearchBox.Size = New System.Drawing.Size(130, 22)
@@ -1373,7 +1373,7 @@ Partial Class UserHomePage
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.MintCream
@@ -1442,7 +1442,7 @@ Partial Class UserHomePage
         Me.hallsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.hallsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.hallsearchlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.hallsearchlabel.Location = New System.Drawing.Point(667, 98)
+        Me.hallsearchlabel.Location = New System.Drawing.Point(648, 98)
         Me.hallsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.hallsearchlabel.Name = "hallsearchlabel"
         Me.hallsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1458,7 +1458,7 @@ Partial Class UserHomePage
         Me.postsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.postsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.postsearchlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.postsearchlabel.Location = New System.Drawing.Point(440, 99)
+        Me.postsearchlabel.Location = New System.Drawing.Point(420, 99)
         Me.postsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.postsearchlabel.Name = "postsearchlabel"
         Me.postsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1716,8 +1716,8 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
-        Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.PostPanel)
+        Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.Header)

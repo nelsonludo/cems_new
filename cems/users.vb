@@ -76,7 +76,7 @@ Public Class users
 
 
             Else
-                errorMsg.Text = "there is a problem with the database and it's tables"
+                errorMsg.Text = "email or password invalid!"
 
                 errorMsg.visible = True
                 timer.Interval = 3000

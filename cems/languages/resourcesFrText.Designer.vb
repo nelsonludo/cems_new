@@ -119,6 +119,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Ajouter.
+        '''</summary>
+        Friend Shared ReadOnly Property addPostBtn() As String
+            Get
+                Return ResourceManager.GetString("addPostBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Annuler.
+        '''</summary>
+        Friend Shared ReadOnly Property addPostCancelBtn() As String
+            Get
+                Return ResourceManager.GetString("addPostCancelBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle du poste.
         '''</summary>
         Friend Shared ReadOnly Property addPostHallLabel() As String
@@ -151,6 +169,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property addPostTitle() As String
             Get
                 Return ResourceManager.GetString("addPostTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Ajouter.
+        '''</summary>
+        Friend Shared ReadOnly Property addPostValidationBtn() As String
+            Get
+                Return ResourceManager.GetString("addPostValidationBtn", resourceCulture)
             End Get
         End Property
         
@@ -895,9 +922,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle.
         '''</summary>
-        Friend Shared ReadOnly Property hallSearchLabel() As String
+        Friend Shared ReadOnly Property hallsearchlabel() As String
             Get
-                Return ResourceManager.GetString("hallSearchLabel", resourceCulture)
+                Return ResourceManager.GetString("hallsearchlabel", resourceCulture)
             End Get
         End Property
         

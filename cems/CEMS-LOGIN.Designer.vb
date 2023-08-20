@@ -588,7 +588,6 @@ Partial Class Form1
         Me.englishBtn.Text = "En"
         Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.englishBtn.UseVisualStyleBackColor = False
-        Me.englishBtn.Visible = False
         '
         'frenchBtn
         '
@@ -612,6 +611,7 @@ Partial Class Form1
         Me.frenchBtn.Text = "Fr"
         Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.frenchBtn.UseVisualStyleBackColor = False
+        Me.frenchBtn.Visible = False
         '
         'Form1
         '
