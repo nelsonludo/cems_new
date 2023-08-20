@@ -199,6 +199,8 @@ Public Class UserHomePage
         EquipmentPanel.Visible = False
         PostPanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
+        HomePagePanel.Visible = False
 
         equipmentSearchBox.Text = ""
         postSearchBox.Text = ""
@@ -224,10 +226,11 @@ Public Class UserHomePage
 
     Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
         profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
         updateProfileErrorMsg.Visible = False
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidateBtn.Click
+    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
         User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)

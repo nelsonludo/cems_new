@@ -200,19 +200,6 @@ Partial Class homePage
         Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.adminProfilePanel = New System.Windows.Forms.Panel()
-        Me.confirmMsgPr = New System.Windows.Forms.Label()
-        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.EmailProfile = New System.Windows.Forms.Label()
-        Me.adminTitleProfile = New System.Windows.Forms.Label()
-        Me.adminPhoneNumberProfile = New System.Windows.Forms.Label()
-        Me.adminNameProfile = New System.Windows.Forms.Label()
-        Me.EmailProfileLabel = New System.Windows.Forms.Label()
-        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
-        Me.TitleProfileLabel = New System.Windows.Forms.Label()
-        Me.NameProfileLabel = New System.Windows.Forms.Label()
-        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
-        Me.Label49 = New System.Windows.Forms.Label()
         Me.profileSubPanel2 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.updateProfileTitle = New System.Windows.Forms.Label()
@@ -229,6 +216,19 @@ Partial Class homePage
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
+        Me.confirmMsgPr = New System.Windows.Forms.Label()
+        Me.profileSubPanel1 = New System.Windows.Forms.Panel()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.EmailProfile = New System.Windows.Forms.Label()
+        Me.adminTitleProfile = New System.Windows.Forms.Label()
+        Me.adminPhoneNumberProfile = New System.Windows.Forms.Label()
+        Me.adminNameProfile = New System.Windows.Forms.Label()
+        Me.EmailProfileLabel = New System.Windows.Forms.Label()
+        Me.PhoneNumberProfileLabel = New System.Windows.Forms.Label()
+        Me.TitleProfileLabel = New System.Windows.Forms.Label()
+        Me.NameProfileLabel = New System.Windows.Forms.Label()
+        Me.updateProfileShowBtn = New System.Windows.Forms.Button()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
         Me.adminHallsPanel = New System.Windows.Forms.Panel()
         Me.hallUpdatePanel = New System.Windows.Forms.Panel()
@@ -302,8 +302,8 @@ Partial Class homePage
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.postChangeStatePanel.SuspendLayout()
         Me.adminProfilePanel.SuspendLayout()
-        Me.profileSubPanel1.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
+        Me.profileSubPanel1.SuspendLayout()
         Me.adminHallsPanel.SuspendLayout()
         Me.hallUpdatePanel.SuspendLayout()
         Me.hallAddpanel.SuspendLayout()
@@ -1755,112 +1755,6 @@ Partial Class homePage
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Name = "adminProfilePanel"
         '
-        'confirmMsgPr
-        '
-        resources.ApplyResources(Me.confirmMsgPr, "confirmMsgPr")
-        Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgPr.Name = "confirmMsgPr"
-        '
-        'profileSubPanel1
-        '
-        Me.profileSubPanel1.BackColor = System.Drawing.Color.Transparent
-        resources.ApplyResources(Me.profileSubPanel1, "profileSubPanel1")
-        Me.profileSubPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.profileSubPanel1.Controls.Add(Me.Label50)
-        Me.profileSubPanel1.Controls.Add(Me.EmailProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfile)
-        Me.profileSubPanel1.Controls.Add(Me.adminNameProfile)
-        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
-        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
-        Me.profileSubPanel1.Controls.Add(Me.Label49)
-        Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.profileSubPanel1.ForeColor = System.Drawing.Color.Yellow
-        Me.profileSubPanel1.Name = "profileSubPanel1"
-        '
-        'Label50
-        '
-        resources.ApplyResources(Me.Label50, "Label50")
-        Me.Label50.BackColor = System.Drawing.Color.Transparent
-        Me.Label50.ForeColor = System.Drawing.Color.Yellow
-        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
-        Me.Label50.Name = "Label50"
-        '
-        'EmailProfile
-        '
-        resources.ApplyResources(Me.EmailProfile, "EmailProfile")
-        Me.EmailProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.EmailProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.EmailProfile.Name = "EmailProfile"
-        '
-        'adminTitleProfile
-        '
-        resources.ApplyResources(Me.adminTitleProfile, "adminTitleProfile")
-        Me.adminTitleProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminTitleProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.adminTitleProfile.Name = "adminTitleProfile"
-        '
-        'adminPhoneNumberProfile
-        '
-        resources.ApplyResources(Me.adminPhoneNumberProfile, "adminPhoneNumberProfile")
-        Me.adminPhoneNumberProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminPhoneNumberProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.adminPhoneNumberProfile.Name = "adminPhoneNumberProfile"
-        '
-        'adminNameProfile
-        '
-        resources.ApplyResources(Me.adminNameProfile, "adminNameProfile")
-        Me.adminNameProfile.BackColor = System.Drawing.Color.SeaGreen
-        Me.adminNameProfile.ForeColor = System.Drawing.Color.Yellow
-        Me.adminNameProfile.Name = "adminNameProfile"
-        '
-        'EmailProfileLabel
-        '
-        resources.ApplyResources(Me.EmailProfileLabel, "EmailProfileLabel")
-        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.EmailProfileLabel.Name = "EmailProfileLabel"
-        '
-        'PhoneNumberProfileLabel
-        '
-        resources.ApplyResources(Me.PhoneNumberProfileLabel, "PhoneNumberProfileLabel")
-        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
-        '
-        'TitleProfileLabel
-        '
-        resources.ApplyResources(Me.TitleProfileLabel, "TitleProfileLabel")
-        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.TitleProfileLabel.Name = "TitleProfileLabel"
-        '
-        'NameProfileLabel
-        '
-        resources.ApplyResources(Me.NameProfileLabel, "NameProfileLabel")
-        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
-        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
-        Me.NameProfileLabel.Name = "NameProfileLabel"
-        '
-        'updateProfileShowBtn
-        '
-        resources.ApplyResources(Me.updateProfileShowBtn, "updateProfileShowBtn")
-        Me.updateProfileShowBtn.BackColor = System.Drawing.Color.Transparent
-        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileShowBtn.ForeColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
-        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
-        '
-        'Label49
-        '
-        resources.ApplyResources(Me.Label49, "Label49")
-        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label49.ForeColor = System.Drawing.Color.Yellow
-        Me.Label49.Name = "Label49"
-        '
         'profileSubPanel2
         '
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
@@ -1980,6 +1874,112 @@ Partial Class homePage
         resources.ApplyResources(Me.userNameProfileLabel2, "userNameProfileLabel2")
         Me.userNameProfileLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.userNameProfileLabel2.Name = "userNameProfileLabel2"
+        '
+        'confirmMsgPr
+        '
+        resources.ApplyResources(Me.confirmMsgPr, "confirmMsgPr")
+        Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgPr.Name = "confirmMsgPr"
+        '
+        'profileSubPanel1
+        '
+        Me.profileSubPanel1.BackColor = System.Drawing.Color.Transparent
+        resources.ApplyResources(Me.profileSubPanel1, "profileSubPanel1")
+        Me.profileSubPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.profileSubPanel1.Controls.Add(Me.Label50)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminTitleProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminPhoneNumberProfile)
+        Me.profileSubPanel1.Controls.Add(Me.adminNameProfile)
+        Me.profileSubPanel1.Controls.Add(Me.EmailProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.PhoneNumberProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.TitleProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.NameProfileLabel)
+        Me.profileSubPanel1.Controls.Add(Me.updateProfileShowBtn)
+        Me.profileSubPanel1.Controls.Add(Me.Label49)
+        Me.profileSubPanel1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.profileSubPanel1.ForeColor = System.Drawing.Color.Yellow
+        Me.profileSubPanel1.Name = "profileSubPanel1"
+        '
+        'Label50
+        '
+        resources.ApplyResources(Me.Label50, "Label50")
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
+        Me.Label50.ForeColor = System.Drawing.Color.Yellow
+        Me.Label50.Image = Global.cems.My.Resources.Resources.user2
+        Me.Label50.Name = "Label50"
+        '
+        'EmailProfile
+        '
+        resources.ApplyResources(Me.EmailProfile, "EmailProfile")
+        Me.EmailProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfile.Name = "EmailProfile"
+        '
+        'adminTitleProfile
+        '
+        resources.ApplyResources(Me.adminTitleProfile, "adminTitleProfile")
+        Me.adminTitleProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.adminTitleProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.adminTitleProfile.Name = "adminTitleProfile"
+        '
+        'adminPhoneNumberProfile
+        '
+        resources.ApplyResources(Me.adminPhoneNumberProfile, "adminPhoneNumberProfile")
+        Me.adminPhoneNumberProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.adminPhoneNumberProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.adminPhoneNumberProfile.Name = "adminPhoneNumberProfile"
+        '
+        'adminNameProfile
+        '
+        resources.ApplyResources(Me.adminNameProfile, "adminNameProfile")
+        Me.adminNameProfile.BackColor = System.Drawing.Color.SeaGreen
+        Me.adminNameProfile.ForeColor = System.Drawing.Color.Yellow
+        Me.adminNameProfile.Name = "adminNameProfile"
+        '
+        'EmailProfileLabel
+        '
+        resources.ApplyResources(Me.EmailProfileLabel, "EmailProfileLabel")
+        Me.EmailProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.EmailProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.EmailProfileLabel.Name = "EmailProfileLabel"
+        '
+        'PhoneNumberProfileLabel
+        '
+        resources.ApplyResources(Me.PhoneNumberProfileLabel, "PhoneNumberProfileLabel")
+        Me.PhoneNumberProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.PhoneNumberProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.PhoneNumberProfileLabel.Name = "PhoneNumberProfileLabel"
+        '
+        'TitleProfileLabel
+        '
+        resources.ApplyResources(Me.TitleProfileLabel, "TitleProfileLabel")
+        Me.TitleProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.TitleProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.TitleProfileLabel.Name = "TitleProfileLabel"
+        '
+        'NameProfileLabel
+        '
+        resources.ApplyResources(Me.NameProfileLabel, "NameProfileLabel")
+        Me.NameProfileLabel.BackColor = System.Drawing.Color.SeaGreen
+        Me.NameProfileLabel.ForeColor = System.Drawing.Color.Yellow
+        Me.NameProfileLabel.Name = "NameProfileLabel"
+        '
+        'updateProfileShowBtn
+        '
+        resources.ApplyResources(Me.updateProfileShowBtn, "updateProfileShowBtn")
+        Me.updateProfileShowBtn.BackColor = System.Drawing.Color.Transparent
+        Me.updateProfileShowBtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileShowBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileShowBtn.Name = "updateProfileShowBtn"
+        Me.updateProfileShowBtn.UseVisualStyleBackColor = False
+        '
+        'Label49
+        '
+        resources.ApplyResources(Me.Label49, "Label49")
+        Me.Label49.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label49.ForeColor = System.Drawing.Color.Yellow
+        Me.Label49.Name = "Label49"
         '
         'profileTitle
         '
@@ -2528,8 +2528,8 @@ Partial Class homePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminHomePagePanel)
+        Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminPostPanel)
         Me.Controls.Add(Me.adminRolePanel)
@@ -2572,10 +2572,10 @@ Partial Class homePage
         Me.postChangeStatePanel.PerformLayout()
         Me.adminProfilePanel.ResumeLayout(False)
         Me.adminProfilePanel.PerformLayout()
-        Me.profileSubPanel1.ResumeLayout(False)
-        Me.profileSubPanel1.PerformLayout()
         Me.profileSubPanel2.ResumeLayout(False)
         Me.profileSubPanel2.PerformLayout()
+        Me.profileSubPanel1.ResumeLayout(False)
+        Me.profileSubPanel1.PerformLayout()
         Me.adminHallsPanel.ResumeLayout(False)
         Me.adminHallsPanel.PerformLayout()
         Me.hallUpdatePanel.ResumeLayout(False)

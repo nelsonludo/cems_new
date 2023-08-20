@@ -661,13 +661,14 @@ Public Class homePage
 
         adminEquipmentPanel.Visible = False
         adminPostPanel.Visible = False
-        adminProfilePanel.Visible = True
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
         adminHomePagePanel.Visible = False
+        adminProfilePanel.Visible = True
 
         profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
         addPostPanel.Visible = False
         addEquipmentPanel.Visible = False
         postChangeStatePanel.Visible = False
@@ -714,6 +715,7 @@ Public Class homePage
     'profile cancel
     Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
         profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
         updateProfileErrorMsg.Visible = False
     End Sub
 
@@ -2916,6 +2918,8 @@ Public Class homePage
         End Try
 
     End Sub
+
+
 
 
 

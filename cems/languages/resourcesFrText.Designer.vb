@@ -1282,9 +1282,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Rôles.
         '''</summary>
-        Friend Shared ReadOnly Property rolesTitle() As String
+        Friend Shared ReadOnly Property roleTitle() As String
             Get
-                Return ResourceManager.GetString("rolesTitle", resourceCulture)
+                Return ResourceManager.GetString("roleTitle", resourceCulture)
             End Get
         End Property
         
@@ -1550,11 +1550,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Confirm Password.
+        '''  Recherche une chaîne localisée semblable à Confirmez le mot de passe.
         '''</summary>
-        Friend Shared ReadOnly Property userConfirmPwdProfileLabel2() As String
+        Friend Shared ReadOnly Property userConfirmPwdProfileLabel() As String
             Get
-                Return ResourceManager.GetString("userConfirmPwdProfileLabel2", resourceCulture)
+                Return ResourceManager.GetString("userConfirmPwdProfileLabel", resourceCulture)
             End Get
         End Property
         
@@ -1568,7 +1568,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à User email.
+        '''  Recherche une chaîne localisée semblable à E-mail de l&apos;utilisateur.
         '''</summary>
         Friend Shared ReadOnly Property userEmailProfileLabel2() As String
             Get
@@ -1577,7 +1577,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à User name.
+        '''  Recherche une chaîne localisée semblable à Nom de l&apos;utilisateur.
         '''</summary>
         Friend Shared ReadOnly Property userNameProfileLabel2() As String
             Get
@@ -1586,7 +1586,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à User phone number.
+        '''  Recherche une chaîne localisée semblable à Numéro de téléphone de l&apos;utilisateur.
         '''</summary>
         Friend Shared ReadOnly Property userPhoneNumberProfileLabel2() As String
             Get
@@ -1595,11 +1595,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Enter new password.
+        '''  Recherche une chaîne localisée semblable à Entrez le mot de passe.
         '''</summary>
-        Friend Shared ReadOnly Property userPwdProfileLabel2() As String
+        Friend Shared ReadOnly Property userPwdProfileLabel() As String
             Get
-                Return ResourceManager.GetString("userPwdProfileLabel2", resourceCulture)
+                Return ResourceManager.GetString("userPwdProfileLabel", resourceCulture)
             End Get
         End Property
         
@@ -1624,9 +1624,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Utilisateurs.
         '''</summary>
-        Friend Shared ReadOnly Property usersTitle() As String
+        Friend Shared ReadOnly Property userTitle() As String
             Get
-                Return ResourceManager.GetString("usersTitle", resourceCulture)
+                Return ResourceManager.GetString("userTitle", resourceCulture)
             End Get
         End Property
         

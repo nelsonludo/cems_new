@@ -7,12 +7,37 @@ list of things to do in cems
 
 *DESIGN TODO
 -english and french
+-translate the error messages individually 
+-translate the panelTitle individually (because it's value changes when adding)
 -disable resizing in the datagridview
 -set a limited input size for phone number
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
-
-
+/login
+-the incorrect password or email doesn't show when login
+/postpanel
+-post datagridview header align should centered
+-translate the addPostbtn
+-arrange the placement of top right buttons in all the panels
+-arrange placement of the updatePostTitle
+-translate hall
+-translate the add & cancel post buttons
+-make the refresh button disappear when adding post
+/hallpanel
+-search hall combobox placement should be changed
+-translate addhallnamelabel, addhallbtn & addhallcancelbtn
+-remove refreshbtn when adding a post
+-translate deletehallbtn & updatehallbtn & updatehallnamelabel
+/userpanel
+-translate searchusernamelabel, addusertitle & adduserbtn
+-arrange placement of delete and update buttons in every panel
+-change the text of the addusercancelbtn in the resourceFrText
+-make the add and the refresh button disappear when adding and updating
+/rolepanel
+-make the refreshbtn disappear when adding and updating role
+/equipmentpanel
+-arrange the placement of the searchhallcombobox
+-translate the changebtn, changeequipmentstatelabel, and the add btn and the addvalidationbtn and addcancelbtn
 take note of the commit message !
 
 Important styles

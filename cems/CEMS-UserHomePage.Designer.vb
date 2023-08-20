@@ -24,12 +24,12 @@ Partial Class UserHomePage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserHomePage))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -69,11 +69,11 @@ Partial Class UserHomePage
         Me.monitorbuttoninactive = New System.Windows.Forms.Button()
         Me.IPbuttoninactive = New System.Windows.Forms.Button()
         Me.CPUbuttoninactive = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dashboardTitle = New System.Windows.Forms.Label()
         Me.ProfilePanel = New System.Windows.Forms.Panel()
         Me.profileSubPanel2 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.Label52 = New System.Windows.Forms.Label()
+        Me.updateProfileTitle = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
@@ -82,12 +82,11 @@ Partial Class UserHomePage
         Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
         Me.userEmailProfileInput = New System.Windows.Forms.TextBox()
         Me.userNameProfileInput = New System.Windows.Forms.TextBox()
-        Me.updateProfileValidateBtn = New System.Windows.Forms.Button()
+        Me.updateProfileValidationBtn = New System.Windows.Forms.Button()
         Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
-        Me.confirmMsgPr = New System.Windows.Forms.Label()
         Me.profileSubPanel1 = New System.Windows.Forms.Panel()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.userEmailProfile = New System.Windows.Forms.Label()
@@ -100,6 +99,7 @@ Partial Class UserHomePage
         Me.NameProfileLabel = New System.Windows.Forms.Label()
         Me.updateProfileShowBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
+        Me.confirmMsgPr = New System.Windows.Forms.Label()
         Me.profileTitle = New System.Windows.Forms.Label()
         Me.PostPanel = New System.Windows.Forms.Panel()
         Me.refreshBtnP = New System.Windows.Forms.Button()
@@ -520,7 +520,7 @@ Partial Class UserHomePage
         Me.HomePagePanel.Controls.Add(Me.monitorbuttoninactive)
         Me.HomePagePanel.Controls.Add(Me.IPbuttoninactive)
         Me.HomePagePanel.Controls.Add(Me.CPUbuttoninactive)
-        Me.HomePagePanel.Controls.Add(Me.Label3)
+        Me.HomePagePanel.Controls.Add(Me.dashboardTitle)
         Me.HomePagePanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.HomePagePanel.ForeColor = System.Drawing.Color.Yellow
         Me.HomePagePanel.Location = New System.Drawing.Point(333, 115)
@@ -770,26 +770,26 @@ Partial Class UserHomePage
         Me.CPUbuttoninactive.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CPUbuttoninactive.UseVisualStyleBackColor = False
         '
-        'Label3
+        'dashboardTitle
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(16, 0)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(348, 29)
-        Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Categories of all equipments"
+        Me.dashboardTitle.AutoSize = True
+        Me.dashboardTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.dashboardTitle.ForeColor = System.Drawing.Color.Gray
+        Me.dashboardTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dashboardTitle.Location = New System.Drawing.Point(16, 0)
+        Me.dashboardTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.dashboardTitle.Name = "dashboardTitle"
+        Me.dashboardTitle.Size = New System.Drawing.Size(348, 29)
+        Me.dashboardTitle.TabIndex = 23
+        Me.dashboardTitle.Text = "Categories of all equipments"
         '
         'ProfilePanel
         '
         Me.ProfilePanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel2)
+        Me.ProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.ProfilePanel.Controls.Add(Me.confirmMsgPr)
         Me.ProfilePanel.Controls.Add(Me.profileTitle)
         Me.ProfilePanel.Location = New System.Drawing.Point(333, 115)
@@ -804,7 +804,7 @@ Partial Class UserHomePage
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
         Me.profileSubPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.Label52)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileTitle)
         Me.profileSubPanel2.Controls.Add(Me.Label51)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
@@ -813,7 +813,7 @@ Partial Class UserHomePage
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileInput)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidateBtn)
+        Me.profileSubPanel2.Controls.Add(Me.updateProfileValidationBtn)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
@@ -837,19 +837,19 @@ Partial Class UserHomePage
         Me.userPwdProfileInput.TabIndex = 18
         Me.userPwdProfileInput.UseSystemPasswordChar = True
         '
-        'Label52
+        'updateProfileTitle
         '
-        Me.Label52.AutoSize = True
-        Me.Label52.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label52.ForeColor = System.Drawing.Color.MintCream
-        Me.Label52.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label52.Location = New System.Drawing.Point(275, 13)
-        Me.Label52.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(122, 22)
-        Me.Label52.TabIndex = 52
-        Me.Label52.Text = "Update User"
+        Me.updateProfileTitle.AutoSize = True
+        Me.updateProfileTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.updateProfileTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.updateProfileTitle.Location = New System.Drawing.Point(275, 13)
+        Me.updateProfileTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.updateProfileTitle.Name = "updateProfileTitle"
+        Me.updateProfileTitle.Size = New System.Drawing.Size(122, 22)
+        Me.updateProfileTitle.TabIndex = 52
+        Me.updateProfileTitle.Text = "Update User"
         '
         'Label51
         '
@@ -954,24 +954,24 @@ Partial Class UserHomePage
         Me.userNameProfileInput.Size = New System.Drawing.Size(534, 22)
         Me.userNameProfileInput.TabIndex = 15
         '
-        'updateProfileValidateBtn
+        'updateProfileValidationBtn
         '
-        Me.updateProfileValidateBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.updateProfileValidationBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.updateProfileValidateBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.updateProfileValidateBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.updateProfileValidateBtn.FlatAppearance.BorderSize = 0
-        Me.updateProfileValidateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateProfileValidateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.updateProfileValidateBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.updateProfileValidateBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.updateProfileValidateBtn.Location = New System.Drawing.Point(70, 376)
-        Me.updateProfileValidateBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.updateProfileValidateBtn.Name = "updateProfileValidateBtn"
-        Me.updateProfileValidateBtn.Size = New System.Drawing.Size(532, 35)
-        Me.updateProfileValidateBtn.TabIndex = 13
-        Me.updateProfileValidateBtn.Text = "Done"
-        Me.updateProfileValidateBtn.UseVisualStyleBackColor = False
+        Me.updateProfileValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.updateProfileValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.updateProfileValidationBtn.FlatAppearance.BorderSize = 0
+        Me.updateProfileValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateProfileValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.updateProfileValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.updateProfileValidationBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.updateProfileValidationBtn.Location = New System.Drawing.Point(70, 376)
+        Me.updateProfileValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.updateProfileValidationBtn.Name = "updateProfileValidationBtn"
+        Me.updateProfileValidationBtn.Size = New System.Drawing.Size(532, 35)
+        Me.updateProfileValidationBtn.TabIndex = 13
+        Me.updateProfileValidationBtn.Text = "Done"
+        Me.updateProfileValidationBtn.UseVisualStyleBackColor = False
         '
         'userEmailProfileLabel2
         '
@@ -1024,21 +1024,6 @@ Partial Class UserHomePage
         Me.userNameProfileLabel2.Size = New System.Drawing.Size(106, 20)
         Me.userNameProfileLabel2.TabIndex = 7
         Me.userNameProfileLabel2.Text = "User name "
-        '
-        'confirmMsgPr
-        '
-        Me.confirmMsgPr.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.confirmMsgPr.AutoSize = True
-        Me.confirmMsgPr.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
-        Me.confirmMsgPr.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.confirmMsgPr.Location = New System.Drawing.Point(994, 10)
-        Me.confirmMsgPr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.confirmMsgPr.Name = "confirmMsgPr"
-        Me.confirmMsgPr.Size = New System.Drawing.Size(290, 22)
-        Me.confirmMsgPr.TabIndex = 42
-        Me.confirmMsgPr.Text = "Profile updated successfully ✔"
-        Me.confirmMsgPr.Visible = False
         '
         'profileSubPanel1
         '
@@ -1230,6 +1215,21 @@ Partial Class UserHomePage
         Me.Label49.TabIndex = 50
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'confirmMsgPr
+        '
+        Me.confirmMsgPr.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.confirmMsgPr.AutoSize = True
+        Me.confirmMsgPr.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.confirmMsgPr.ForeColor = System.Drawing.Color.LimeGreen
+        Me.confirmMsgPr.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.confirmMsgPr.Location = New System.Drawing.Point(994, 10)
+        Me.confirmMsgPr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.confirmMsgPr.Name = "confirmMsgPr"
+        Me.confirmMsgPr.Size = New System.Drawing.Size(290, 22)
+        Me.confirmMsgPr.TabIndex = 42
+        Me.confirmMsgPr.Text = "Profile updated successfully ✔"
+        Me.confirmMsgPr.Visible = False
+        '
         'profileTitle
         '
         Me.profileTitle.AutoSize = True
@@ -1361,36 +1361,36 @@ Partial Class UserHomePage
         Me.postDataGridView.AllowUserToDeleteRows = False
         Me.postDataGridView.AllowUserToResizeColumns = False
         Me.postDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.postDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.postDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.postDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.postDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.postDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.postDataGridView.ColumnHeadersHeight = 45
         Me.postDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.postDataGridView.DefaultCellStyle = DataGridViewCellStyle9
         Me.postDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.postDataGridView.EnableHeadersVisualStyles = False
         Me.postDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1596,12 +1596,12 @@ Partial Class UserHomePage
         Me.equipmentDataGridView.AllowUserToDeleteRows = False
         Me.equipmentDataGridView.AllowUserToResizeColumns = False
         Me.equipmentDataGridView.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.equipmentDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.equipmentDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1610,25 +1610,25 @@ Partial Class UserHomePage
         Me.equipmentDataGridView.BackgroundColor = System.Drawing.Color.MintCream
         Me.equipmentDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.equipmentDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.equipmentDataGridView.ColumnHeadersHeight = 45
         Me.equipmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.MintCream
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.equipmentDataGridView.DefaultCellStyle = DataGridViewCellStyle12
         Me.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.equipmentDataGridView.EnableHeadersVisualStyles = False
         Me.equipmentDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -1717,8 +1717,8 @@ Partial Class UserHomePage
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
         Me.Controls.Add(Me.ProfilePanel)
-        Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.PostPanel)
+        Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.sideBar)
@@ -1792,12 +1792,12 @@ Partial Class UserHomePage
     Friend WithEvents monitorbuttoninactive As Button
     Friend WithEvents IPbuttoninactive As Button
     Friend WithEvents CPUbuttoninactive As Button
-    Friend WithEvents Label3 As Label
+    Friend WithEvents dashboardTitle As Label
     Friend WithEvents ProfilePanel As Panel
     Friend WithEvents confirmMsgPr As Label
     Friend WithEvents profileSubPanel2 As Panel
     Friend WithEvents userPwdProfileInput As TextBox
-    Friend WithEvents Label52 As Label
+    Friend WithEvents updateProfileTitle As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents userConfirmPwdProfileInput As TextBox
     Friend WithEvents userConfirmPwdProfileLabel As Label
@@ -1806,7 +1806,7 @@ Partial Class UserHomePage
     Friend WithEvents userPhoneNumberProfileInput As TextBox
     Friend WithEvents userEmailProfileInput As TextBox
     Friend WithEvents userNameProfileInput As TextBox
-    Friend WithEvents updateProfileValidateBtn As Button
+    Friend WithEvents updateProfileValidationBtn As Button
     Friend WithEvents userEmailProfileLabel2 As Label
     Friend WithEvents userPhoneNumberProfileLabel2 As Label
     Friend WithEvents userPwdProfileLabel As Label

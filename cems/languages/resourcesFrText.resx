@@ -523,7 +523,7 @@
   <data name="rolesBtn" xml:space="preserve">
     <value>Rôles</value>
   </data>
-  <data name="rolesTitle" xml:space="preserve">
+  <data name="roleTitle" xml:space="preserve">
     <value>Rôles</value>
   </data>
   <data name="roleUpdateBtn" xml:space="preserve">
@@ -613,23 +613,23 @@
   <data name="userAddValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
-  <data name="userConfirmPwdProfileLabel2" xml:space="preserve">
-    <value>Confirm Password</value>
+  <data name="userConfirmPwdProfileLabel" xml:space="preserve">
+    <value>Confirmez le mot de passe</value>
   </data>
   <data name="userDeleteBtn" xml:space="preserve">
     <value>Supprimer</value>
   </data>
   <data name="userEmailProfileLabel2" xml:space="preserve">
-    <value>User email</value>
+    <value>E-mail de l'utilisateur</value>
   </data>
   <data name="userNameProfileLabel2" xml:space="preserve">
-    <value>User name</value>
+    <value>Nom de l'utilisateur</value>
   </data>
   <data name="userPhoneNumberProfileLabel2" xml:space="preserve">
-    <value>User phone number</value>
+    <value>Numéro de téléphone de l'utilisateur</value>
   </data>
-  <data name="userPwdProfileLabel2" xml:space="preserve">
-    <value>Enter new password</value>
+  <data name="userPwdProfileLabel" xml:space="preserve">
+    <value>Entrez le mot de passe</value>
   </data>
   <data name="usersBtn" xml:space="preserve">
     <value>Utilisateurs</value>
@@ -637,7 +637,7 @@
   <data name="usersBtn2" xml:space="preserve">
     <value>Voir</value>
   </data>
-  <data name="usersTitle" xml:space="preserve">
+  <data name="userTitle" xml:space="preserve">
     <value>Utilisateurs</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">
