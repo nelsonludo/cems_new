@@ -12,11 +12,6 @@ list of things to do in cems
 -set a limited input size for phone number
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
-/hallpanel
--search hall combobox placement should be changed
--translate addhallnamelabel, addhallbtn & addhallcancelbtn
--remove refreshbtn when adding a post
--translate deletehallbtn & updatehallbtn & updatehallnamelabel
 /userpanel
 -translate searchusernamelabel, addusertitle & adduserbtn
 -arrange placement of delete and update buttons in every panel

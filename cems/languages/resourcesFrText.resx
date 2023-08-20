@@ -135,6 +135,9 @@
   <data name="addHallErrorMsg" xml:space="preserve">
     <value>Veuillez remplir tous les champs!</value>
   </data>
+  <data name="addHallNameLabel" xml:space="preserve">
+    <value>Nom de la salle</value>
+  </data>
   <data name="addPostBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
@@ -380,7 +383,7 @@
     <value>Exporter</value>
   </data>
   <data name="forgotPwdBtn" xml:space="preserve">
-    <value>Mot de passe oublié ?</value>
+    <value>Mot de passe oublié?</value>
   </data>
   <data name="hallAddBtn" xml:space="preserve">
     <value>Ajouter</value>
@@ -573,6 +576,9 @@
   </data>
   <data name="updateHallErrorMsg" xml:space="preserve">
     <value>Veuillez remplir tous les champs</value>
+  </data>
+  <data name="updateHallNameLabel" xml:space="preserve">
+    <value>Nom de la salle</value>
   </data>
   <data name="updatePostTitle" xml:space="preserve">
     <value>Mettre le poste à jour</value>

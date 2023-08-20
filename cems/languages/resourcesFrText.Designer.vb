@@ -119,6 +119,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Nom de la salle.
+        '''</summary>
+        Friend Shared ReadOnly Property addHallNameLabel() As String
+            Get
+                Return ResourceManager.GetString("addHallNameLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Ajouter.
         '''</summary>
         Friend Shared ReadOnly Property addPostBtn() As String
@@ -848,7 +857,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Mot de passe oublié ?.
+        '''  Recherche une chaîne localisée semblable à Mot de passe oublié?.
         '''</summary>
         Friend Shared ReadOnly Property forgotPwdBtn() As String
             Get
@@ -1429,6 +1438,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property updateHallErrorMsg() As String
             Get
                 Return ResourceManager.GetString("updateHallErrorMsg", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Nom de la salle.
+        '''</summary>
+        Friend Shared ReadOnly Property updateHallNameLabel() As String
+            Get
+                Return ResourceManager.GetString("updateHallNameLabel", resourceCulture)
             End Get
         End Property
         

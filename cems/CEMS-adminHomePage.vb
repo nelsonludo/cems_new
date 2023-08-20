@@ -760,8 +760,8 @@ Public Class homePage
         hallSearchBoxH.Visible = False
         hallSearchLabelH.Visible = False
         hallDataGridView.Visible = False
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
         refreshBtnH.Visible = False
 
     End Sub
@@ -779,8 +779,8 @@ Public Class homePage
 
 
         addPostPanel.Visible = False
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
         hallUpdatePanel.Visible = False
         addEquipmentPanel.Visible = False
         postChangeStatePanel.Visible = False
@@ -826,7 +826,7 @@ Public Class homePage
     End Sub
 
     'hall add buttons
-    Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles HallAddCancelBtn.Click 'cancel add
+    Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles hallAddCancelBtn.Click 'cancel add
         hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         hallAddpanel.Visible = False
         hallsTitle.Text = "Halls"
@@ -843,7 +843,7 @@ Public Class homePage
     End Sub
 
 
-    Private Sub HallAddValidateBtn_Click(sender As Object, e As EventArgs) Handles HallAddValidationBtn.Click 'validate add
+    Private Sub HallAddValidateBtn_Click(sender As Object, e As EventArgs) Handles hallAddValidationBtn.Click 'validate add
 
         connect_db()
 
@@ -887,8 +887,8 @@ Public Class homePage
             adminAddHallNameInput.Text = ""
             fillHalls(hallSearchBoxH)
 
-            HallUpdateBtn.Visible = False
-            HallDeleteBtn.Visible = False
+            hallUpdateBtn.Visible = False
+            hallDeleteBtn.Visible = False
 
             hallsTitle.Text = "Halls"
 
@@ -911,8 +911,8 @@ Public Class homePage
 
         Try
             adminUpdateHallNameInput.Text = hallDataGridView.SelectedRows(0).Cells(1).Value.ToString
-            HallUpdateBtn.Visible = True
-            HallDeleteBtn.Visible = True
+            hallUpdateBtn.Visible = True
+            hallDeleteBtn.Visible = True
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -921,7 +921,7 @@ Public Class homePage
     End Sub
 
 
-    Private Sub HallUpdateBtn_Click(sender As Object, e As EventArgs) Handles HallUpdateBtn.Click 'update
+    Private Sub HallUpdateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateBtn.Click 'update
         hallUpdatePanel.Visible = True
 
         hallsTitle.Text = "Update halls"
@@ -934,13 +934,13 @@ Public Class homePage
         hallSearchBoxH.Visible = False
         hallSearchLabelH.Visible = False
         hallDataGridView.Visible = False
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
         refreshBtnH.Visible = False
 
     End Sub
 
-    Private Sub HalldeleteBtn_Click(sender As Object, e As EventArgs) Handles HallDeleteBtn.Click 'delete
+    Private Sub HalldeleteBtn_Click(sender As Object, e As EventArgs) Handles hallDeleteBtn.Click 'delete
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this hall ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
@@ -949,8 +949,8 @@ Public Class homePage
 
         End If
 
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
 
         User.displayTable("halls", hallDataGridView, sqlDataTableH)
         fillHalls(hallSearchBoxH)
@@ -960,8 +960,8 @@ Public Class homePage
     Private Sub hallUpdateCancelBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateCancelBtn.Click 'cancel
         hallUpdatePanel.Visible = False
 
-        HallUpdateBtn.Visible = False
-        HallDeleteBtn.Visible = False
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
 
         hallsTitle.Text = "Halls"
 
@@ -1025,8 +1025,8 @@ Public Class homePage
                 'this makes the update panel to disappear
                 hallUpdatePanel.Visible = False
 
-                HallUpdateBtn.Visible = False
-                HallDeleteBtn.Visible = False
+                hallUpdateBtn.Visible = False
+                hallDeleteBtn.Visible = False
 
                 adminUpdateHallNameInput.Text = ""
                 fillHalls(hallSearchBoxH)
