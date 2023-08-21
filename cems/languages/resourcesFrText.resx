@@ -358,6 +358,18 @@
   <data name="equipmentTitle" xml:space="preserve">
     <value>Équipements</value>
   </data>
+  <data name="EquipmentTitle_Add" xml:space="preserve">
+    <value>Ajouter un equipement</value>
+  </data>
+  <data name="EquipmentTitle_CPU" xml:space="preserve">
+    <value>Unités centrales</value>
+  </data>
+  <data name="EquipmentTitle_IP" xml:space="preserve">
+    <value>Téléphones IP</value>
+  </data>
+  <data name="EquipmentTitle_Monitor" xml:space="preserve">
+    <value>Moniteurs</value>
+  </data>
   <data name="equipmentUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>
   </data>
@@ -420,6 +432,12 @@
   </data>
   <data name="hallTitle" xml:space="preserve">
     <value>Salles</value>
+  </data>
+  <data name="hallTitle_Add" xml:space="preserve">
+    <value>Ajouter une salle</value>
+  </data>
+  <data name="hallTitle_Update" xml:space="preserve">
+    <value>Mêttre la salle à jour </value>
   </data>
   <data name="hallUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>
@@ -493,6 +511,9 @@
   <data name="postTitle" xml:space="preserve">
     <value>Postes</value>
   </data>
+  <data name="postTitle_Add" xml:space="preserve">
+    <value>Ajouter un poste</value>
+  </data>
   <data name="postUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>
   </data>
@@ -507,6 +528,9 @@
   </data>
   <data name="profileTitle" xml:space="preserve">
     <value>Profil</value>
+  </data>
+  <data name="profileTitle_Update" xml:space="preserve">
+    <value>Mêttre le profil à jour</value>
   </data>
   <data name="refreshBtnE" xml:space="preserve">
     <value>Rafraîchir</value>
@@ -540,6 +564,12 @@
   </data>
   <data name="roleTitle" xml:space="preserve">
     <value>Rôles</value>
+  </data>
+  <data name="roleTitle_Add" xml:space="preserve">
+    <value>Ajouter un rôle</value>
+  </data>
+  <data name="roleTitle_Update" xml:space="preserve">
+    <value>Mêttre le rôle à jour</value>
   </data>
   <data name="roleUpdateBtn" xml:space="preserve">
     <value>Mettre à jour</value>
@@ -660,6 +690,12 @@
   </data>
   <data name="userTitle" xml:space="preserve">
     <value>Utilisateurs</value>
+  </data>
+  <data name="userTitle_Add" xml:space="preserve">
+    <value>Ajouter un utilisateur</value>
+  </data>
+  <data name="userTitle_Update" xml:space="preserve">
+    <value>Mêttre l'utilisateur à jour</value>
   </data>
   <data name="userTypeTitle" xml:space="preserve">
     <value>Administrateurs</value>

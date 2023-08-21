@@ -35,6 +35,8 @@ Public Class UserHomePage
 
     Dim bitmap As Bitmap
 
+    Dim isFrench As Boolean = True
+
     Dim iscollapsed As Boolean = True
     Public Sub connect_db()
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
@@ -134,6 +136,8 @@ Public Class UserHomePage
             ' Recursively translate child controls
             TranslateFormControlsEnglish(childControl)
         Next
+
+        isFrench = False
     End Sub
 
     'this is a recurcive function that loops through all the controls(mostly labels and buttons) in the form and translates them to french as set in the resourceFrText.resx file
@@ -150,6 +154,9 @@ Public Class UserHomePage
             ' Recursively translate child controls
             TranslateFormControlsFrench(childControl)
         Next
+
+        isFrench = True
+
     End Sub
 
 
@@ -161,6 +168,26 @@ Public Class UserHomePage
 
         TranslateFormControlsFrench(Me)
 
+        If PostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle
+        End If
+
+        If EquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+
+        End If
+
+        If ProfilePanel.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        End If
+
+        If profileSubPanel2.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle_Update
+        End If
 
 
     End Sub
@@ -171,6 +198,27 @@ Public Class UserHomePage
         englishBtn.Visible = False
 
         TranslateFormControlsEnglish(Me)
+
+        If PostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle
+        End If
+
+        If EquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+
+        End If
+
+        If ProfilePanel.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
+        If profileSubPanel2.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle_Update
+        End If
 
     End Sub
 
@@ -208,6 +256,14 @@ Public Class UserHomePage
         hallSearchBoxE.Text = ""
         userSearchBoxE.Text = ""
         stateSearchBoxP.Text = ""
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
 
         connect_db()
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
@@ -222,12 +278,30 @@ Public Class UserHomePage
         userNameProfileInput.Text = userNameProfile.Text
         userPhoneNumberProfileInput.Text = userPhoneNumberProfile.Text
         userEmailProfileInput.Text = userEmailProfile.Text
+
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle_Update
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle_Update
+        End If
+
     End Sub
 
     Private Sub updateProfileCancelBtn_Click(sender As Object, e As EventArgs) Handles updateProfileCancelBtn.Click
         profileSubPanel2.Visible = False
         profileSubPanel1.Visible = True
         updateProfileErrorMsg.Visible = False
+
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
     End Sub
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
@@ -241,6 +315,15 @@ Public Class UserHomePage
         'timer interval 
         Timer2.Interval = 3000
         Timer2.Start()
+
+
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
 
         User.showUserName(Form1.emailtxt, uName)
     End Sub
@@ -266,6 +349,15 @@ Public Class UserHomePage
         User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
         fillHalls(hallSearchBoxP)
+
+
+        If isFrench Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle
+        Else
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle
+        End If
 
     End Sub
 
@@ -304,6 +396,16 @@ Public Class UserHomePage
 
 
         fillHalls(hallSearchBoxE)
+
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+        End If
+
     End Sub
 
     'refresh equipment button 
@@ -336,6 +438,16 @@ Public Class UserHomePage
 
         fillHalls(hallSearchBoxE)
 
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_CPU
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_CPU
+        End If
+
+
     End Sub
     Private Sub CPUsBtn2_Click(sender As Object, e As EventArgs) Handles CPUsBtn2.Click
         User.display(EquipmentPanel, EquipmentTitle, "CPUs")
@@ -357,6 +469,16 @@ Public Class UserHomePage
         profileSubPanel2.Visible = False
 
         fillHalls(hallSearchBoxE)
+
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_CPU
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_CPU
+        End If
+
 
     End Sub
 
@@ -382,6 +504,16 @@ Public Class UserHomePage
 
         fillHalls(hallSearchBoxE)
 
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_IP
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_IP
+        End If
+
+
     End Sub
 
     Private Sub IPsBtn2_Click(sender As Object, e As EventArgs) Handles IPsBtn2.Click
@@ -406,6 +538,16 @@ Public Class UserHomePage
 
         fillHalls(hallSearchBoxE)
 
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_IP
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_IP
+        End If
+
+
     End Sub
 
     Private Sub monitorsBtn_Click(sender As Object, e As EventArgs) Handles monitorsBtn.Click
@@ -429,6 +571,16 @@ Public Class UserHomePage
 
         fillHalls(hallSearchBoxE)
 
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_Monitor
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_Monitor
+        End If
+
+
     End Sub
 
     Private Sub monitorsBtn2_Click(sender As Object, e As EventArgs) Handles monitorsBtn2.Click
@@ -451,6 +603,16 @@ Public Class UserHomePage
         stateSearchBoxP.Text = ""
 
         fillHalls(hallSearchBoxE)
+
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_Monitor
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_Monitor
+        End If
+
 
     End Sub
 

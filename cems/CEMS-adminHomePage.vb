@@ -42,6 +42,8 @@ Public Class homePage
     'this is for the sidebar dropdown
     Dim iscollapsed As Boolean = True
 
+    Dim isFrench As Boolean = True
+
 
 
     'connection functoin
@@ -217,7 +219,10 @@ Public Class homePage
 
             ' Recursively translate child controls
             TranslateFormControlsEnglish(childControl)
+
+
         Next
+        isFrench = False
     End Sub
 
     'this is a recurcive function that loops through all the controls(mostly labels and buttons) in the form and translates them to french as set in the resourceFrText.resx file
@@ -234,6 +239,8 @@ Public Class homePage
             ' Recursively translate child controls
             TranslateFormControlsFrench(childControl)
         Next
+        isFrench = True
+
     End Sub
 
 
@@ -245,6 +252,85 @@ Public Class homePage
 
         TranslateFormControlsFrench(Me)
 
+        If adminPostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle
+        End If
+
+        If addPostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle_Add
+        End If
+
+        If adminEquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+
+        End If
+
+
+
+        If addEquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_Add
+
+        End If
+
+        If adminHallsPanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+        End If
+
+        If hallUpdatePanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle_Update
+        End If
+
+        If hallAddpanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle_Add
+        End If
+
+        If adminUsersPanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle
+        End If
+
+        If userUpdatePanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle_Update
+        End If
+
+        If userAddPanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle_Add
+        End If
+
+        If adminRolePanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+        End If
+
+        If roleUpdatePanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle_Update
+        End If
+
+        If roleAddPanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle_Add
+        End If
+
+        If adminProfilePanel.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        End If
+
+        If profileSubPanel2.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle_Update
+        End If
+
 
 
     End Sub
@@ -255,6 +341,84 @@ Public Class homePage
         englishBtn.Visible = False
 
         TranslateFormControlsEnglish(Me)
+
+        If adminPostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle
+        End If
+
+        If addPostPanel.Visible = True Then
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle_Add
+        End If
+
+        If adminEquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+
+        End If
+
+        If addEquipmentPanel.Visible = True Then
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_Add
+
+        End If
+
+        If adminHallsPanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+        End If
+
+        If hallUpdatePanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle_Update
+        End If
+
+        If hallAddpanel.Visible = True Then
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle_Add
+        End If
+
+        If adminUsersPanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle
+        End If
+
+        If userUpdatePanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle_Update
+        End If
+
+        If userAddPanel.Visible = True Then
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle_Add
+        End If
+
+        If adminRolePanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+        End If
+
+        If roleUpdatePanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle_Update
+        End If
+
+        If roleAddPanel.Visible = True Then
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle_Add
+        End If
+
+        If adminProfilePanel.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
+        If profileSubPanel2.Visible = True Then
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle_Update
+        End If
+
 
     End Sub
 
@@ -357,8 +521,13 @@ Public Class homePage
         fillHalls(hallSearchBoxP)
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
+        If isFrench Then
 
-        postTitle.Text = "Posts"
+            postTitle.Text = My.Resources.resourcesFrText.postTitle
+        Else
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle
+        End If
 
         postDataGridView.Visible = True
         postSearchBox.Visible = True
@@ -394,6 +563,15 @@ Public Class homePage
 
 
         'printBtnP.Visible = False
+
+
+        If isFrench Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle_Add
+        Else
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle_Add
+        End If
     End Sub
 
 
@@ -490,7 +668,13 @@ Public Class homePage
                             postStateInput.Text = ""
                             postHallInput.Text = ""
 
-                            postTitle.Text = "Posts"
+                            If isFrench Then
+
+                                postTitle.Text = My.Resources.resourcesFrText.postTitle
+                            Else
+
+                                postTitle.Text = My.Resources.resourcesEnText.postTitle
+                            End If
                             postDataGridView.Visible = True
                             postSearchBox.Visible = True
                             postsearchlabel.Visible = True
@@ -545,7 +729,13 @@ Public Class homePage
                             postStateInput.Text = ""
                             postHallInput.Text = ""
 
-                            postTitle.Text = "Posts"
+                            If isFrench Then
+
+                                postTitle.Text = My.Resources.resourcesFrText.postTitle
+                            Else
+
+                                postTitle.Text = My.Resources.resourcesEnText.postTitle
+                            End If
                             postDataGridView.Visible = True
                             postSearchBox.Visible = True
                             postsearchlabel.Visible = True
@@ -587,7 +777,13 @@ Public Class homePage
         postStateInput.Text = ""
         postHallInput.Text = ""
 
-        postTitle.Text = "Posts"
+        If isFrench Then
+
+            postTitle.Text = My.Resources.resourcesFrText.postTitle
+        Else
+
+            postTitle.Text = My.Resources.resourcesEnText.postTitle
+        End If
         postDataGridView.Visible = True
         postSearchBox.Visible = True
         postsearchlabel.Visible = True
@@ -698,6 +894,16 @@ Public Class homePage
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
 
+
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
+
         connect_db()
         User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
     End Sub
@@ -715,6 +921,13 @@ Public Class homePage
         userPwdProfileInput.Text = ""
         userConfirmPwdProfileInput.Text = ""
 
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle_Update
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle_Update
+        End If
 
     End Sub
 
@@ -723,6 +936,14 @@ Public Class homePage
         profileSubPanel2.Visible = False
         profileSubPanel1.Visible = True
         updateProfileErrorMsg.Visible = False
+
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
     End Sub
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
@@ -740,6 +961,14 @@ Public Class homePage
         Timer2.Interval = 3000
         Timer2.Start()
 
+        If isFrench Then
+
+            profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+        Else
+
+            profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+        End If
+
         User.showUserName(Form1.emailtxt, aName)
     End Sub
 
@@ -750,7 +979,13 @@ Public Class homePage
     Private Sub hallAddBtn_Click(sender As Object, e As EventArgs) Handles hallAddBtn.Click 'add 
         hallUpdatePanel.Visible = False 'add panel is on update panel so updatepanel has to be visible 
         hallAddpanel.Visible = True
-        hallsTitle.Text = "Add halls"
+        If isFrench Then
+
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle_Add
+        Else
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle_Add
+        End If
 
 
         'things that have to disappear (this is annoying)
@@ -806,9 +1041,14 @@ Public Class homePage
 
         fillHalls(hallSearchBoxH)
 
+        'this is to translate the title of the panel 
+        If isFrench Then
 
-        hallsTitle.Text = "Halls"
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+        Else
 
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+        End If
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
@@ -829,7 +1069,13 @@ Public Class homePage
     Private Sub HallAddCancelBtn_Click(sender As Object, e As EventArgs) Handles hallAddCancelBtn.Click 'cancel add
         hallUpdatePanel.Visible = False  'play it safe and make both panels visible false 
         hallAddpanel.Visible = False
-        hallsTitle.Text = "Halls"
+        If isFrench Then
+
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+        Else
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+        End If
 
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
@@ -890,8 +1136,13 @@ Public Class homePage
             hallUpdateBtn.Visible = False
             hallDeleteBtn.Visible = False
 
-            hallsTitle.Text = "Halls"
+            If isFrench Then
 
+                hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+            Else
+
+                hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+            End If
             'things that have to disappear (this is annoying)
             hallAddBtn.Visible = True
             exportBtnH.Visible = True
@@ -924,8 +1175,13 @@ Public Class homePage
     Private Sub HallUpdateBtn_Click(sender As Object, e As EventArgs) Handles hallUpdateBtn.Click 'update
         hallUpdatePanel.Visible = True
 
-        hallsTitle.Text = "Update halls"
+        If isFrench Then
 
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle_Update
+        Else
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle_Update
+        End If
 
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = False
@@ -963,8 +1219,13 @@ Public Class homePage
         hallUpdateBtn.Visible = False
         hallDeleteBtn.Visible = False
 
-        hallsTitle.Text = "Halls"
+        If isFrench Then
 
+            hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+        Else
+
+            hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+        End If
         'things that have to disappear (this is annoying)
         hallAddBtn.Visible = True
         exportBtnH.Visible = True
@@ -1032,8 +1293,13 @@ Public Class homePage
                 fillHalls(hallSearchBoxH)
 
 
-                hallsTitle.Text = "Halls"
+                If isFrench Then
 
+                    hallTitle.Text = My.Resources.resourcesFrText.hallTitle
+                Else
+
+                    hallTitle.Text = My.Resources.resourcesEnText.hallTitle
+                End If
                 'things that have to disappear (this is annoying)
                 hallAddBtn.Visible = True
                 exportBtnH.Visible = True
@@ -1091,8 +1357,13 @@ Public Class homePage
         stateSearchBoxP.Text = ""
 
 
-        usersTitle.Text = "users"
+        If isFrench Then
 
+            userTitle.Text = My.Resources.resourcesFrText.userTitle
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle
+        End If
 
         userDataGridView.Visible = True
         addPostPanel.Visible = True
@@ -1119,6 +1390,16 @@ Public Class homePage
         adminRolePanel.Visible = False
         adminUsersPanel.Visible = True
         refreshBtnU.Visible = True
+
+
+        If isFrench Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle
+        End If
+
 
         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
@@ -1195,7 +1476,13 @@ Public Class homePage
                 userDeleteBtn.Visible = False
 
 
-                usersTitle.Text = "Users"
+                If isFrench Then
+
+                    userTitle.Text = My.Resources.resourcesFrText.userTitle
+                Else
+
+                    userTitle.Text = My.Resources.resourcesEnText.userTitle
+                End If
 
                 userDataGridView.Visible = True
                 userUpdateBtn.Visible = True
@@ -1224,7 +1511,13 @@ Public Class homePage
         userDeleteBtn.Visible = False
 
 
-        usersTitle.Text = "Users"
+        If isFrench Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle
+        End If
 
         userDataGridView.Visible = True
         userAddBtn.Visible = True
@@ -1280,7 +1573,13 @@ Public Class homePage
         End Try
 
 
-        usersTitle.Text = "Update user"
+        If isFrench Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle_Update
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle_Update
+        End If
 
         userUpdateBtn.Visible = False
         userAddBtn.Visible = False
@@ -1346,7 +1645,13 @@ Public Class homePage
         End Try
 
 
-        usersTitle.Text = "Add user"
+        If isFrench Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle_Add
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle_Add
+        End If
 
         userUpdateBtn.Visible = False
         userDataGridView.Visible = False
@@ -1449,7 +1754,13 @@ Public Class homePage
                         userUpdatePanel.Visible = False  'play it safe and make both panels visible false 
                         userAddPanel.Visible = False
 
-                        usersTitle.Text = "Users"
+                        If isFrench Then
+
+                            userTitle.Text = My.Resources.resourcesFrText.userTitle
+                        Else
+
+                            userTitle.Text = My.Resources.resourcesEnText.userTitle
+                        End If
 
                         userDataGridView.Visible = True
                         userUpdateBtn.Visible = True
@@ -1497,7 +1808,13 @@ Public Class homePage
         userUserAddConfirmPwdInput.Text = ""
         userUserAddTitleInput.Text = ""
 
-        usersTitle.Text = "Users"
+        If isFrench Then
+
+            userTitle.Text = My.Resources.resourcesFrText.userTitle
+        Else
+
+            userTitle.Text = My.Resources.resourcesEnText.userTitle
+        End If
 
         userDataGridView.Visible = True
         userUpdateBtn.Visible = False
@@ -1552,7 +1869,14 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = True
-        rolesTitle.Text = "Roles"
+        If isFrench Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+        Else
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+        End If
+
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -1615,7 +1939,14 @@ Public Class homePage
                 roleAddPanel.Visible = False
 
                 roleDataGridView.Visible = True
-                rolesTitle.Text = "Roles"
+                If isFrench Then
+
+                    roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+                Else
+
+                    roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+                End If
+
                 roleAddBtn.Visible = True
                 exportBtnR.Visible = True
                 'PrintBtnR.Visible = True
@@ -1636,7 +1967,14 @@ Public Class homePage
         roleUpdateBtn.Visible = False
 
         roleDataGridView.Visible = True
-        rolesTitle.Text = "Roles"
+        If isFrench Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+        Else
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+        End If
+
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -1663,7 +2001,14 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = False
-        rolesTitle.Text = "Update roles"
+        If isFrench Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle_Update
+        Else
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle_Update
+        End If
+
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
@@ -1692,7 +2037,14 @@ Public Class homePage
 
         roleUpdateBtn.Visible = False
         roleDataGridView.Visible = False
-        rolesTitle.Text = "Add roles"
+        If isFrench Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle_Add
+        Else
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle_Add
+        End If
+
         roleAddBtn.Visible = False
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
@@ -1742,7 +2094,14 @@ Public Class homePage
             titleAddNameInput.Text = ""
 
             roleDataGridView.Visible = True
-            rolesTitle.Text = "Roles"
+            If isFrench Then
+
+                roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+            Else
+
+                roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+            End If
+
             roleAddBtn.Visible = True
             exportBtnR.Visible = True
             'PrintBtnR.Visible = True
@@ -1755,7 +2114,14 @@ Public Class homePage
         roleAddPanel.Visible = False
 
         roleDataGridView.Visible = True
-        rolesTitle.Text = "Roles"
+        If isFrench Then
+
+            roleTitle.Text = My.Resources.resourcesFrText.roleTitle
+        Else
+
+            roleTitle.Text = My.Resources.resourcesEnText.roleTitle
+        End If
+
         roleAddBtn.Visible = True
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
@@ -1810,7 +2176,14 @@ Public Class homePage
         equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-        EquipmentTitle.Text = "Equipment"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+        End If
+
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
         'printBtnE.Visible = true
@@ -1862,7 +2235,14 @@ Public Class homePage
         equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-        EquipmentTitle.Text = "CPUs"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_CPU
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_CPU
+        End If
+
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
         refreshBtnE.Visible = True
@@ -1880,6 +2260,14 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_CPU
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_CPU
+        End If
 
 
         addPostPanel.Visible = False
@@ -1930,7 +2318,14 @@ Public Class homePage
         equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-        EquipmentTitle.Text = "IP Phones"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_IP
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_IP
+        End If
+
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
         refreshBtnE.Visible = True
@@ -1951,6 +2346,16 @@ Public Class homePage
         addPostPanel.Visible = False
         refreshBtnE.Visible = True
 
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_IP
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_IP
+        End If
+
+
         fillHalls(hallSearchBoxE)
 
     End Sub
@@ -1970,6 +2375,16 @@ Public Class homePage
         refreshBtnE.Visible = True
 
         fillHalls(hallSearchBoxE)
+
+
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_Monitor
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_Monitor
+        End If
+
 
     End Sub
 
@@ -2014,7 +2429,14 @@ Public Class homePage
         equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
-        EquipmentTitle.Text = "Monitors"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle_Monitor
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle_Monitor
+        End If
+
         addEquipmentBtn.Visible = True
         exportBtnE.Visible = True
         refreshBtnE.Visible = True
@@ -2028,7 +2450,13 @@ Public Class homePage
         fillcombo(postIdInput, "posts", "post_id")
         fillHalls(hallInput)
 
-        EquipmentTitle.Text = "Add equipment"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.EquipmentTitle_Add
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.EquipmentTitle_Add
+        End If
         equipmentDataGridView.Visible = False
         equipmentSearchBox.Visible = False
         equipmentsearchpostidlabel.Visible = False
@@ -2042,7 +2470,13 @@ Public Class homePage
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
         addEquipmentPanel.Visible = False
 
-        EquipmentTitle.Text = "Equipment"
+        If isFrench Then
+
+            EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+        Else
+
+            EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+        End If
         equipmentDataGridView.Visible = True
         equipmentSearchBox.Visible = True
         equipmentsearchpostidlabel.Visible = True
@@ -2124,7 +2558,13 @@ Public Class homePage
                     fillHalls(hallSearchBoxE)
 
 
-                    EquipmentTitle.Text = "Equipment"
+                    If isFrench Then
+
+                        EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+                    Else
+
+                        EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+                    End If
                     equipmentDataGridView.Visible = True
                     equipmentSearchBox.Visible = True
                     equipmentsearchpostidlabel.Visible = True
@@ -2170,7 +2610,13 @@ Public Class homePage
                     fillHalls(hallSearchBoxE)
 
 
-                    EquipmentTitle.Text = "Equipment"
+                    If isFrench Then
+
+                        EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+                    Else
+
+                        EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+                    End If
                     equipmentDataGridView.Visible = True
                     equipmentSearchBox.Visible = True
                     equipmentsearchpostidlabel.Visible = True
@@ -2217,7 +2663,13 @@ Public Class homePage
                     fillHalls(hallSearchBoxE)
 
 
-                    EquipmentTitle.Text = "Equipment"
+                    If isFrench Then
+
+                        EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+                    Else
+
+                        EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+                    End If
                     equipmentDataGridView.Visible = True
                     equipmentSearchBox.Visible = True
                     equipmentsearchpostidlabel.Visible = True
@@ -2263,7 +2715,13 @@ Public Class homePage
                     fillHalls(hallSearchBoxE)
 
 
-                    EquipmentTitle.Text = "Equipment"
+                    If isFrench Then
+
+                        EquipmentTitle.Text = My.Resources.resourcesFrText.equipmentTitle
+                    Else
+
+                        EquipmentTitle.Text = My.Resources.resourcesEnText.equipmentTitle
+                    End If
                     equipmentDataGridView.Visible = True
                     equipmentSearchBox.Visible = True
                     equipmentsearchpostidlabel.Visible = True

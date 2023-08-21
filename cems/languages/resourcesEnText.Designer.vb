@@ -749,6 +749,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add Equipment.
+        '''</summary>
+        Friend Shared ReadOnly Property EquipmentTitle_Add() As String
+            Get
+                Return ResourceManager.GetString("EquipmentTitle_Add", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à CPUs.
+        '''</summary>
+        Friend Shared ReadOnly Property EquipmentTitle_CPU() As String
+            Get
+                Return ResourceManager.GetString("EquipmentTitle_CPU", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à IP Phones.
+        '''</summary>
+        Friend Shared ReadOnly Property EquipmentTitle_IP() As String
+            Get
+                Return ResourceManager.GetString("EquipmentTitle_IP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Monitors.
+        '''</summary>
+        Friend Shared ReadOnly Property EquipmentTitle_Monitor() As String
+            Get
+                Return ResourceManager.GetString("EquipmentTitle_Monitor", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Update.
         '''</summary>
         Friend Shared ReadOnly Property equipmentUpdateBtn() As String
@@ -934,6 +970,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property hallTitle() As String
             Get
                 Return ResourceManager.GetString("hallTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add hall.
+        '''</summary>
+        Friend Shared ReadOnly Property hallTitle_Add() As String
+            Get
+                Return ResourceManager.GetString("hallTitle_Add", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Update hall.
+        '''</summary>
+        Friend Shared ReadOnly Property hallTitle_Update() As String
+            Get
+                Return ResourceManager.GetString("hallTitle_Update", resourceCulture)
             End Get
         End Property
         
@@ -1154,6 +1208,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add post.
+        '''</summary>
+        Friend Shared ReadOnly Property postTitle_Add() As String
+            Get
+                Return ResourceManager.GetString("postTitle_Add", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Update.
         '''</summary>
         Friend Shared ReadOnly Property postUpdateBtn() As String
@@ -1195,6 +1258,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property profileTitle() As String
             Get
                 Return ResourceManager.GetString("profileTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Update profile.
+        '''</summary>
+        Friend Shared ReadOnly Property profileTitle_Update() As String
+            Get
+                Return ResourceManager.GetString("profileTitle_Update", resourceCulture)
             End Get
         End Property
         
@@ -1294,6 +1366,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property roleTitle() As String
             Get
                 Return ResourceManager.GetString("roleTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add role.
+        '''</summary>
+        Friend Shared ReadOnly Property roleTitle_Add() As String
+            Get
+                Return ResourceManager.GetString("roleTitle_Add", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Update role.
+        '''</summary>
+        Friend Shared ReadOnly Property roleTitle_Update() As String
+            Get
+                Return ResourceManager.GetString("roleTitle_Update", resourceCulture)
             End Get
         End Property
         
@@ -1636,6 +1726,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property userTitle() As String
             Get
                 Return ResourceManager.GetString("userTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add user.
+        '''</summary>
+        Friend Shared ReadOnly Property userTitle_Add() As String
+            Get
+                Return ResourceManager.GetString("userTitle_Add", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Update user.
+        '''</summary>
+        Friend Shared ReadOnly Property userTitle_Update() As String
+            Get
+                Return ResourceManager.GetString("userTitle_Update", resourceCulture)
             End Get
         End Property
         
