@@ -336,189 +336,6 @@
   <data name="adminUsersPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;refreshBtnU.Name" xml:space="preserve">
-    <value>refreshBtnU</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;refreshBtnU.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;userAddPanel.Name" xml:space="preserve">
-    <value>userAddPanel</value>
-  </data>
-  <data name="&gt;&gt;userAddPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userAddPanel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userAddPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Name" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Name" xml:space="preserve">
-    <value>userSearchBox</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Name" xml:space="preserve">
-    <value>userAddBtn</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Name" xml:space="preserve">
-    <value>confirmMsgU</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Name" xml:space="preserve">
-    <value>userUpdateBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Name" xml:space="preserve">
-    <value>searchErrorU</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Name" xml:space="preserve">
-    <value>exportBtnU</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Name" xml:space="preserve">
-    <value>userDataGridView</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Name" xml:space="preserve">
-    <value>usersTitle</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Name" xml:space="preserve">
-    <value>userDeleteBtn</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Name" xml:space="preserve">
-    <value>searchuserlabel</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="adminUsersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 100</value>
-  </data>
-  <data name="adminUsersPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="adminUsersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1511, 618</value>
-  </data>
-  <data name="adminUsersPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="adminUsersPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;adminUsersPanel.Name" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;adminUsersPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminUsersPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="refreshBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -744,16 +561,16 @@
   <data name="&gt;&gt;userUserAddNameInput.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Name" xml:space="preserve">
-    <value>userAddvalidationBtn</value>
+  <data name="&gt;&gt;userAddValidationBtn.Name" xml:space="preserve">
+    <value>userAddValidationBtn</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.Parent" xml:space="preserve">
     <value>userAddPanel</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="&gt;&gt;addUserNameLabel.Name" xml:space="preserve">
@@ -794,6 +611,606 @@
   </data>
   <data name="&gt;&gt;userAddPanel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
+    <value>updateUserErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
+    <value>updateUserTitle</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
+    <value>Label58</value>
+  </data>
+  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
+    <value>userUserTitleInput</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
+    <value>updateUserTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
+    <value>userUserPhoneInput</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
+    <value>updateUserPhoneLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
+    <value>userUserEmailInput</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
+    <value>updateUserEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
+    <value>userUpdateCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
+    <value>userUserNameInput</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
+    <value>userUpdateValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
+    <value>updateUserNameLabel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="userUpdatePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 90</value>
+  </data>
+  <data name="userUpdatePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUpdatePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 466</value>
+  </data>
+  <data name="userUpdatePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="userUpdatePanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Name" xml:space="preserve">
+    <value>userUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="userSearchBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 98</value>
+  </data>
+  <data name="userSearchBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userSearchBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 22</value>
+  </data>
+  <data name="userSearchBox.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;userSearchBox.Name" xml:space="preserve">
+    <value>userSearchBox</value>
+  </data>
+  <data name="&gt;&gt;userSearchBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userSearchBox.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userSearchBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="userAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="userAddBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userAddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="userAddBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="userAddBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userAddBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1160, 6</value>
+  </data>
+  <data name="userAddBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userAddBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="userAddBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="userAddBtn.Text" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="&gt;&gt;userAddBtn.Name" xml:space="preserve">
+    <value>userAddBtn</value>
+  </data>
+  <data name="&gt;&gt;userAddBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userAddBtn.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userAddBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="confirmMsgU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="confirmMsgU.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="confirmMsgU.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="confirmMsgU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="confirmMsgU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>928, 10</value>
+  </data>
+  <data name="confirmMsgU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="confirmMsgU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="confirmMsgU.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="confirmMsgU.Text" xml:space="preserve">
+    <value>Export successfull ✔</value>
+  </data>
+  <data name="confirmMsgU.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgU.Name" xml:space="preserve">
+    <value>confirmMsgU</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgU.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgU.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="userUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="userUpdateBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userUpdateBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="userUpdateBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="userUpdateBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userUpdateBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1128, 94</value>
+  </data>
+  <data name="userUpdateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userUpdateBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 36</value>
+  </data>
+  <data name="userUpdateBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="userUpdateBtn.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="userUpdateBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;userUpdateBtn.Name" xml:space="preserve">
+    <value>userUpdateBtn</value>
+  </data>
+  <data name="&gt;&gt;userUpdateBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userUpdateBtn.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userUpdateBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="searchErrorU.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="searchErrorU.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 24.25pt, style=Bold</value>
+  </data>
+  <data name="searchErrorU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="searchErrorU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 277</value>
+  </data>
+  <data name="searchErrorU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="searchErrorU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 47</value>
+  </data>
+  <data name="searchErrorU.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="searchErrorU.Text" xml:space="preserve">
+    <value>No results found </value>
+  </data>
+  <data name="searchErrorU.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;searchErrorU.Name" xml:space="preserve">
+    <value>searchErrorU</value>
+  </data>
+  <data name="&gt;&gt;searchErrorU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchErrorU.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;searchErrorU.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="exportBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="exportBtnU.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="exportBtnU.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="exportBtnU.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="exportBtnU.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="exportBtnU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="exportBtnU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1277, 6</value>
+  </data>
+  <data name="exportBtnU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="exportBtnU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="exportBtnU.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="exportBtnU.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;exportBtnU.Name" xml:space="preserve">
+    <value>exportBtnU</value>
+  </data>
+  <data name="&gt;&gt;exportBtnU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportBtnU.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;exportBtnU.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="userDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="userDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="userDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 133</value>
+  </data>
+  <data name="userDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 14</value>
+  </data>
+  <data name="userDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1126, 410</value>
+  </data>
+  <data name="userDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;userDataGridView.Name" xml:space="preserve">
+    <value>userDataGridView</value>
+  </data>
+  <data name="&gt;&gt;userDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userDataGridView.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userDataGridView.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="usersTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="usersTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="usersTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="usersTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 0</value>
+  </data>
+  <data name="usersTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="usersTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 29</value>
+  </data>
+  <data name="usersTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="usersTitle.Text" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="&gt;&gt;usersTitle.Name" xml:space="preserve">
+    <value>usersTitle</value>
+  </data>
+  <data name="&gt;&gt;usersTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usersTitle.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;usersTitle.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="userDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="userDeleteBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userDeleteBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="userDeleteBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="userDeleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>970, 94</value>
+  </data>
+  <data name="userDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 36</value>
+  </data>
+  <data name="userDeleteBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="userDeleteBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="userDeleteBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;userDeleteBtn.Name" xml:space="preserve">
+    <value>userDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;userDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userDeleteBtn.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;userDeleteBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="searchuserlabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="searchuserlabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="searchuserlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="searchuserlabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 99</value>
+  </data>
+  <data name="searchuserlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="searchuserlabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="searchuserlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 24</value>
+  </data>
+  <data name="searchuserlabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="searchuserlabel.Text" xml:space="preserve">
+    <value>search username</value>
+  </data>
+  <data name="searchuserlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;searchuserlabel.Name" xml:space="preserve">
+    <value>searchuserlabel</value>
+  </data>
+  <data name="&gt;&gt;searchuserlabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchuserlabel.Parent" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;searchuserlabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="adminUsersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 100</value>
+  </data>
+  <data name="adminUsersPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="adminUsersPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1511, 618</value>
+  </data>
+  <data name="adminUsersPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="adminUsersPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;adminUsersPanel.Name" xml:space="preserve">
+    <value>adminUsersPanel</value>
+  </data>
+  <data name="&gt;&gt;adminUsersPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminUsersPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="addUserTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1269,43 +1686,43 @@
   <data name="&gt;&gt;userUserAddNameInput.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="userAddvalidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="userAddValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="userAddvalidationBtn.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="userAddValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
   </data>
-  <data name="userAddvalidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="userAddValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="userAddvalidationBtn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="userAddValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 413</value>
   </data>
-  <data name="userAddvalidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="userAddValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="userAddvalidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="userAddValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>500, 62</value>
   </data>
-  <data name="userAddvalidationBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="userAddValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>420, 35</value>
   </data>
-  <data name="userAddvalidationBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="userAddValidationBtn.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="userAddvalidationBtn.Text" xml:space="preserve">
+  <data name="userAddValidationBtn.Text" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Name" xml:space="preserve">
-    <value>userAddvalidationBtn</value>
+  <data name="&gt;&gt;userAddValidationBtn.Name" xml:space="preserve">
+    <value>userAddValidationBtn</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.Parent" xml:space="preserve">
     <value>userAddPanel</value>
   </data>
-  <data name="&gt;&gt;userAddvalidationBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;userAddValidationBtn.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="addUserNameLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -1343,189 +1760,6 @@
   </data>
   <data name="&gt;&gt;addUserNameLabel.ZOrder" xml:space="preserve">
     <value>16</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Name" xml:space="preserve">
-    <value>updateUserErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserErrorMsg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Name" xml:space="preserve">
-    <value>updateUserTitle</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label58.Name" xml:space="preserve">
-    <value>Label58</value>
-  </data>
-  <data name="&gt;&gt;Label58.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label58.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;Label58.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Name" xml:space="preserve">
-    <value>userUserTitleInput</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserTitleInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Name" xml:space="preserve">
-    <value>updateUserTitleLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserTitleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Name" xml:space="preserve">
-    <value>userUserPhoneInput</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserPhoneInput.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Name" xml:space="preserve">
-    <value>updateUserPhoneLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserPhoneLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Name" xml:space="preserve">
-    <value>userUserEmailInput</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserEmailInput.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Name" xml:space="preserve">
-    <value>updateUserEmailLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserEmailLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Name" xml:space="preserve">
-    <value>userUpdateCancelBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateCancelBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Name" xml:space="preserve">
-    <value>userUserNameInput</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUserNameInput.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Name" xml:space="preserve">
-    <value>userUpdateValidationBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateValidationBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Name" xml:space="preserve">
-    <value>updateUserNameLabel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.Parent" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="userUpdatePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 90</value>
-  </data>
-  <data name="userUpdatePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUpdatePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 466</value>
-  </data>
-  <data name="userUpdatePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="userUpdatePanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Name" xml:space="preserve">
-    <value>userUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdatePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="updateUserErrorMsg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1948,396 +2182,6 @@
     <value>userUpdatePanel</value>
   </data>
   <data name="&gt;&gt;updateUserNameLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="userSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 98</value>
-  </data>
-  <data name="userSearchBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userSearchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 22</value>
-  </data>
-  <data name="userSearchBox.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Name" xml:space="preserve">
-    <value>userSearchBox</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userSearchBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="userAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="userAddBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="userAddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="userAddBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="userAddBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userAddBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1190, 6</value>
-  </data>
-  <data name="userAddBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userAddBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="userAddBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="userAddBtn.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Name" xml:space="preserve">
-    <value>userAddBtn</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userAddBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="confirmMsgU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="confirmMsgU.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="confirmMsgU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="confirmMsgU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="confirmMsgU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>928, 10</value>
-  </data>
-  <data name="confirmMsgU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="confirmMsgU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 22</value>
-  </data>
-  <data name="confirmMsgU.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="confirmMsgU.Text" xml:space="preserve">
-    <value>Export successfull ✔</value>
-  </data>
-  <data name="confirmMsgU.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Name" xml:space="preserve">
-    <value>confirmMsgU</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;confirmMsgU.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="userUpdateBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="userUpdateBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="userUpdateBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="userUpdateBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="userUpdateBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userUpdateBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1128, 94</value>
-  </data>
-  <data name="userUpdateBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userUpdateBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 36</value>
-  </data>
-  <data name="userUpdateBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="userUpdateBtn.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="userUpdateBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Name" xml:space="preserve">
-    <value>userUpdateBtn</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userUpdateBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="searchErrorU.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="searchErrorU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 24.25pt, style=Bold</value>
-  </data>
-  <data name="searchErrorU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchErrorU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 277</value>
-  </data>
-  <data name="searchErrorU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="searchErrorU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 47</value>
-  </data>
-  <data name="searchErrorU.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="searchErrorU.Text" xml:space="preserve">
-    <value>No results found </value>
-  </data>
-  <data name="searchErrorU.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Name" xml:space="preserve">
-    <value>searchErrorU</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;searchErrorU.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="exportBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="exportBtnU.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="exportBtnU.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="exportBtnU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="exportBtnU.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="exportBtnU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="exportBtnU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1297, 6</value>
-  </data>
-  <data name="exportBtnU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="exportBtnU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="exportBtnU.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="exportBtnU.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Name" xml:space="preserve">
-    <value>exportBtnU</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;exportBtnU.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="userDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="userDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="userDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 133</value>
-  </data>
-  <data name="userDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 14</value>
-  </data>
-  <data name="userDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1126, 410</value>
-  </data>
-  <data name="userDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Name" xml:space="preserve">
-    <value>userDataGridView</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userDataGridView.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="usersTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="usersTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
-  </data>
-  <data name="usersTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="usersTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 0</value>
-  </data>
-  <data name="usersTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="usersTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 29</value>
-  </data>
-  <data name="usersTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="usersTitle.Text" xml:space="preserve">
-    <value>Users</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Name" xml:space="preserve">
-    <value>usersTitle</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;usersTitle.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="userDeleteBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="userDeleteBtn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="userDeleteBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="userDeleteBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="userDeleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1027, 94</value>
-  </data>
-  <data name="userDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userDeleteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 36</value>
-  </data>
-  <data name="userDeleteBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="userDeleteBtn.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="userDeleteBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Name" xml:space="preserve">
-    <value>userDeleteBtn</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;userDeleteBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="searchuserlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="searchuserlabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="searchuserlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchuserlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 99</value>
-  </data>
-  <data name="searchuserlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="searchuserlabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="searchuserlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 24</value>
-  </data>
-  <data name="searchuserlabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="searchuserlabel.Text" xml:space="preserve">
-    <value>search username</value>
-  </data>
-  <data name="searchuserlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Name" xml:space="preserve">
-    <value>searchuserlabel</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.Parent" xml:space="preserve">
-    <value>adminUsersPanel</value>
-  </data>
-  <data name="&gt;&gt;searchuserlabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -3606,7 +3450,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminHomePagePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="CPUsBtn2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4845,7 +4689,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="refreshBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -6480,7 +6324,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminPostPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="refreshBtnP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -7875,7 +7719,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminProfilePanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;userPwdProfileInput.Name" xml:space="preserve">
     <value>userPwdProfileInput</value>
@@ -9251,6 +9095,189 @@
   <data name="adminHallsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;hallUpdatePanel.Name" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdatePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallUpdatePanel.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdatePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;hallAddpanel.Name" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddpanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallAddpanel.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddpanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;hallAddBtn.Name" xml:space="preserve">
+    <value>hallAddBtn</value>
+  </data>
+  <data name="&gt;&gt;hallAddBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallAddBtn.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgH.Name" xml:space="preserve">
+    <value>confirmMsgH</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;confirmMsgH.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateBtn.Name" xml:space="preserve">
+    <value>hallUpdateBtn</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateBtn.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxH.Name" xml:space="preserve">
+    <value>hallSearchBoxH</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallSearchBoxH.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;searchErrorH.Name" xml:space="preserve">
+    <value>searchErrorH</value>
+  </data>
+  <data name="&gt;&gt;searchErrorH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchErrorH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;searchErrorH.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Name" xml:space="preserve">
+    <value>refreshBtnH</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;refreshBtnH.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;exportBtnH.Name" xml:space="preserve">
+    <value>exportBtnH</value>
+  </data>
+  <data name="&gt;&gt;exportBtnH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportBtnH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;exportBtnH.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;hallDataGridView.Name" xml:space="preserve">
+    <value>hallDataGridView</value>
+  </data>
+  <data name="&gt;&gt;hallDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallDataGridView.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallDataGridView.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;hallsTitle.Name" xml:space="preserve">
+    <value>hallsTitle</value>
+  </data>
+  <data name="&gt;&gt;hallsTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallsTitle.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallsTitle.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;hallDeleteBtn.Name" xml:space="preserve">
+    <value>hallDeleteBtn</value>
+  </data>
+  <data name="&gt;&gt;hallDeleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallDeleteBtn.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallDeleteBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;hallSearchLabelH.Name" xml:space="preserve">
+    <value>hallSearchLabelH</value>
+  </data>
+  <data name="&gt;&gt;hallSearchLabelH.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallSearchLabelH.Parent" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;hallSearchLabelH.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="adminHallsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 100</value>
+  </data>
+  <data name="adminHallsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="adminHallsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1511, 618</value>
+  </data>
+  <data name="adminHallsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="adminHallsPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;adminHallsPanel.Name" xml:space="preserve">
+    <value>adminHallsPanel</value>
+  </data>
+  <data name="&gt;&gt;adminHallsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminHallsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;adminHallsPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;updateHallErrorMsg.Name" xml:space="preserve">
     <value>updateHallErrorMsg</value>
   </data>
@@ -9362,6 +9389,249 @@
   <data name="&gt;&gt;hallUpdatePanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="updateHallErrorMsg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateHallErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="updateHallErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateHallErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 260</value>
+  </data>
+  <data name="updateHallErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateHallErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="updateHallErrorMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="updateHallErrorMsg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;updateHallErrorMsg.Name" xml:space="preserve">
+    <value>updateHallErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;updateHallErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateHallErrorMsg.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateHallErrorMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="hallUpdateTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hallUpdateTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallUpdateTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallUpdateTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 15</value>
+  </data>
+  <data name="hallUpdateTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="hallUpdateTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
+  </data>
+  <data name="hallUpdateTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="hallUpdateTitle.Text" xml:space="preserve">
+    <value>Update hall</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateTitle.Name" xml:space="preserve">
+    <value>hallUpdateTitle</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateTitle.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Label57.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 45</value>
+  </data>
+  <data name="Label57.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="Label57.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label57.Name" xml:space="preserve">
+    <value>Label57</value>
+  </data>
+  <data name="&gt;&gt;Label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label57.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;Label57.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="hallUpdateCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="hallUpdateCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallUpdateCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallUpdateCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 207</value>
+  </data>
+  <data name="hallUpdateCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="hallUpdateCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="hallUpdateCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 30</value>
+  </data>
+  <data name="hallUpdateCancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="hallUpdateCancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateCancelBtn.Name" xml:space="preserve">
+    <value>hallUpdateCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateCancelBtn.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateCancelBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="adminUpdateHallNameInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 118</value>
+  </data>
+  <data name="adminUpdateHallNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="adminUpdateHallNameInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 22</value>
+  </data>
+  <data name="adminUpdateHallNameInput.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;adminUpdateHallNameInput.Name" xml:space="preserve">
+    <value>adminUpdateHallNameInput</value>
+  </data>
+  <data name="&gt;&gt;adminUpdateHallNameInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminUpdateHallNameInput.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;adminUpdateHallNameInput.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="hallUpdateValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="hallUpdateValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallUpdateValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallUpdateValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 158</value>
+  </data>
+  <data name="hallUpdateValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="hallUpdateValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="hallUpdateValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 30</value>
+  </data>
+  <data name="hallUpdateValidationBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="hallUpdateValidationBtn.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateValidationBtn.Name" xml:space="preserve">
+    <value>hallUpdateValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateValidationBtn.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;hallUpdateValidationBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="updateHallNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="updateHallNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="updateHallNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateHallNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 82</value>
+  </data>
+  <data name="updateHallNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="updateHallNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 20</value>
+  </data>
+  <data name="updateHallNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="updateHallNameLabel.Text" xml:space="preserve">
+    <value>Hall name</value>
+  </data>
+  <data name="&gt;&gt;updateHallNameLabel.Name" xml:space="preserve">
+    <value>updateHallNameLabel</value>
+  </data>
+  <data name="&gt;&gt;updateHallNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateHallNameLabel.Parent" xml:space="preserve">
+    <value>hallUpdatePanel</value>
+  </data>
+  <data name="&gt;&gt;updateHallNameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="&gt;&gt;hallAddTitle.Name" xml:space="preserve">
     <value>hallAddTitle</value>
   </data>
@@ -9472,6 +9742,249 @@
   </data>
   <data name="&gt;&gt;hallAddpanel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="hallAddTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hallAddTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallAddTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallAddTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 15</value>
+  </data>
+  <data name="hallAddTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="hallAddTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 22</value>
+  </data>
+  <data name="hallAddTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="hallAddTitle.Text" xml:space="preserve">
+    <value>Add hall</value>
+  </data>
+  <data name="&gt;&gt;hallAddTitle.Name" xml:space="preserve">
+    <value>hallAddTitle</value>
+  </data>
+  <data name="&gt;&gt;hallAddTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallAddTitle.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label54.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label54.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Label54.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label54.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 45</value>
+  </data>
+  <data name="Label54.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="Label54.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label54.Name" xml:space="preserve">
+    <value>Label54</value>
+  </data>
+  <data name="&gt;&gt;Label54.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label54.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;Label54.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="addHallErrorMsg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addHallErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="addHallErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addHallErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 251</value>
+  </data>
+  <data name="addHallErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="addHallErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="addHallErrorMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="addHallErrorMsg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;addHallErrorMsg.Name" xml:space="preserve">
+    <value>addHallErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;addHallErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addHallErrorMsg.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;addHallErrorMsg.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="hallAddCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="hallAddCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallAddCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallAddCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 207</value>
+  </data>
+  <data name="hallAddCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="hallAddCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="hallAddCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 35</value>
+  </data>
+  <data name="hallAddCancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="hallAddCancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;hallAddCancelBtn.Name" xml:space="preserve">
+    <value>hallAddCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;hallAddCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallAddCancelBtn.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddCancelBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="adminAddHallNameInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 118</value>
+  </data>
+  <data name="adminAddHallNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="adminAddHallNameInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 22</value>
+  </data>
+  <data name="adminAddHallNameInput.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;adminAddHallNameInput.Name" xml:space="preserve">
+    <value>adminAddHallNameInput</value>
+  </data>
+  <data name="&gt;&gt;adminAddHallNameInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminAddHallNameInput.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;adminAddHallNameInput.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="hallAddValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="hallAddValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="hallAddValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="hallAddValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 158</value>
+  </data>
+  <data name="hallAddValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="hallAddValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 62</value>
+  </data>
+  <data name="hallAddValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>420, 35</value>
+  </data>
+  <data name="hallAddValidationBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="hallAddValidationBtn.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;hallAddValidationBtn.Name" xml:space="preserve">
+    <value>hallAddValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;hallAddValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hallAddValidationBtn.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;hallAddValidationBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="addHallNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addHallNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="addHallNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="addHallNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 82</value>
+  </data>
+  <data name="addHallNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="addHallNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 20</value>
+  </data>
+  <data name="addHallNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="addHallNameLabel.Text" xml:space="preserve">
+    <value>Hall name</value>
+  </data>
+  <data name="&gt;&gt;addHallNameLabel.Name" xml:space="preserve">
+    <value>addHallNameLabel</value>
+  </data>
+  <data name="&gt;&gt;addHallNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addHallNameLabel.Parent" xml:space="preserve">
+    <value>hallAddpanel</value>
+  </data>
+  <data name="&gt;&gt;addHallNameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="hallAddBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -9840,7 +10353,7 @@
     <value>NoControl</value>
   </data>
   <data name="hallDeleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>980, 94</value>
+    <value>960, 94</value>
   </data>
   <data name="hallDeleteBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -9910,519 +10423,6 @@
   </data>
   <data name="&gt;&gt;hallSearchLabelH.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="adminHallsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 100</value>
-  </data>
-  <data name="adminHallsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="adminHallsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1511, 618</value>
-  </data>
-  <data name="adminHallsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="adminHallsPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;adminHallsPanel.Name" xml:space="preserve">
-    <value>adminHallsPanel</value>
-  </data>
-  <data name="&gt;&gt;adminHallsPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminHallsPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;adminHallsPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="updateHallErrorMsg.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateHallErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="updateHallErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateHallErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 260</value>
-  </data>
-  <data name="updateHallErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateHallErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 18</value>
-  </data>
-  <data name="updateHallErrorMsg.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="updateHallErrorMsg.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;updateHallErrorMsg.Name" xml:space="preserve">
-    <value>updateHallErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;updateHallErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateHallErrorMsg.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateHallErrorMsg.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="hallUpdateTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="hallUpdateTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallUpdateTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallUpdateTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 15</value>
-  </data>
-  <data name="hallUpdateTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="hallUpdateTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="hallUpdateTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="hallUpdateTitle.Text" xml:space="preserve">
-    <value>Update hall</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateTitle.Name" xml:space="preserve">
-    <value>hallUpdateTitle</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateTitle.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label57.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="Label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label57.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Label57.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label57.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 45</value>
-  </data>
-  <data name="Label57.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="Label57.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Label57.Name" xml:space="preserve">
-    <value>Label57</value>
-  </data>
-  <data name="&gt;&gt;Label57.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label57.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;Label57.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="hallUpdateCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="hallUpdateCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallUpdateCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallUpdateCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 207</value>
-  </data>
-  <data name="hallUpdateCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="hallUpdateCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="hallUpdateCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 30</value>
-  </data>
-  <data name="hallUpdateCancelBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="hallUpdateCancelBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateCancelBtn.Name" xml:space="preserve">
-    <value>hallUpdateCancelBtn</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateCancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateCancelBtn.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateCancelBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="adminUpdateHallNameInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 118</value>
-  </data>
-  <data name="adminUpdateHallNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="adminUpdateHallNameInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 22</value>
-  </data>
-  <data name="adminUpdateHallNameInput.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;adminUpdateHallNameInput.Name" xml:space="preserve">
-    <value>adminUpdateHallNameInput</value>
-  </data>
-  <data name="&gt;&gt;adminUpdateHallNameInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminUpdateHallNameInput.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;adminUpdateHallNameInput.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="hallUpdateValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="hallUpdateValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallUpdateValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallUpdateValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 158</value>
-  </data>
-  <data name="hallUpdateValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="hallUpdateValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="hallUpdateValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 30</value>
-  </data>
-  <data name="hallUpdateValidationBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="hallUpdateValidationBtn.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateValidationBtn.Name" xml:space="preserve">
-    <value>hallUpdateValidationBtn</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateValidationBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateValidationBtn.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;hallUpdateValidationBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="updateHallNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="updateHallNameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="updateHallNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="updateHallNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 82</value>
-  </data>
-  <data name="updateHallNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="updateHallNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
-  </data>
-  <data name="updateHallNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="updateHallNameLabel.Text" xml:space="preserve">
-    <value>Hall name</value>
-  </data>
-  <data name="&gt;&gt;updateHallNameLabel.Name" xml:space="preserve">
-    <value>updateHallNameLabel</value>
-  </data>
-  <data name="&gt;&gt;updateHallNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateHallNameLabel.Parent" xml:space="preserve">
-    <value>hallUpdatePanel</value>
-  </data>
-  <data name="&gt;&gt;updateHallNameLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="hallAddTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="hallAddTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallAddTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallAddTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 15</value>
-  </data>
-  <data name="hallAddTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="hallAddTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 22</value>
-  </data>
-  <data name="hallAddTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="hallAddTitle.Text" xml:space="preserve">
-    <value>Add hall</value>
-  </data>
-  <data name="&gt;&gt;hallAddTitle.Name" xml:space="preserve">
-    <value>hallAddTitle</value>
-  </data>
-  <data name="&gt;&gt;hallAddTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallAddTitle.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;hallAddTitle.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Label54.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
-  </data>
-  <data name="Label54.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Label54.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Label54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 45</value>
-  </data>
-  <data name="Label54.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="Label54.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Label54.Name" xml:space="preserve">
-    <value>Label54</value>
-  </data>
-  <data name="&gt;&gt;Label54.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label54.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;Label54.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="addHallErrorMsg.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="addHallErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="addHallErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="addHallErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 251</value>
-  </data>
-  <data name="addHallErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="addHallErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 18</value>
-  </data>
-  <data name="addHallErrorMsg.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="addHallErrorMsg.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;addHallErrorMsg.Name" xml:space="preserve">
-    <value>addHallErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;addHallErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addHallErrorMsg.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;addHallErrorMsg.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="hallAddCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="hallAddCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallAddCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallAddCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 207</value>
-  </data>
-  <data name="hallAddCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="hallAddCancelBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="hallAddCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 35</value>
-  </data>
-  <data name="hallAddCancelBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="hallAddCancelBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;hallAddCancelBtn.Name" xml:space="preserve">
-    <value>hallAddCancelBtn</value>
-  </data>
-  <data name="&gt;&gt;hallAddCancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallAddCancelBtn.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;hallAddCancelBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="adminAddHallNameInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 118</value>
-  </data>
-  <data name="adminAddHallNameInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="adminAddHallNameInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 22</value>
-  </data>
-  <data name="adminAddHallNameInput.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;adminAddHallNameInput.Name" xml:space="preserve">
-    <value>adminAddHallNameInput</value>
-  </data>
-  <data name="&gt;&gt;adminAddHallNameInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;adminAddHallNameInput.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;adminAddHallNameInput.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="hallAddValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="hallAddValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
-  </data>
-  <data name="hallAddValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="hallAddValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 158</value>
-  </data>
-  <data name="hallAddValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="hallAddValidationBtn.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 62</value>
-  </data>
-  <data name="hallAddValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>420, 35</value>
-  </data>
-  <data name="hallAddValidationBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="hallAddValidationBtn.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;hallAddValidationBtn.Name" xml:space="preserve">
-    <value>hallAddValidationBtn</value>
-  </data>
-  <data name="&gt;&gt;hallAddValidationBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hallAddValidationBtn.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;hallAddValidationBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="addHallNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="addHallNameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="addHallNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="addHallNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 82</value>
-  </data>
-  <data name="addHallNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="addHallNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
-  </data>
-  <data name="addHallNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="addHallNameLabel.Text" xml:space="preserve">
-    <value>Hall name</value>
-  </data>
-  <data name="&gt;&gt;addHallNameLabel.Name" xml:space="preserve">
-    <value>addHallNameLabel</value>
-  </data>
-  <data name="&gt;&gt;addHallNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addHallNameLabel.Parent" xml:space="preserve">
-    <value>hallAddpanel</value>
-  </data>
-  <data name="&gt;&gt;addHallNameLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="adminRolePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -10584,7 +10584,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminRolePanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="refreshBtnR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -12251,7 +12251,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Home Page</value>
+    <value> </value>
   </data>
   <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
     <value>Timer1</value>

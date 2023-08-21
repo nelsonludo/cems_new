@@ -1061,6 +1061,7 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminRolePanel.Visible = False
         adminUsersPanel.Visible = True
+        adminHomePagePanel.Visible = False
 
         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
@@ -1287,7 +1288,7 @@ Public Class homePage
         exportBtnU.Visible = False
         'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
-        userDataGridView.Visible =
+        userDataGridView.Visible = False
         refreshBtnU.Visible = False
 
     End Sub
@@ -1353,11 +1354,12 @@ Public Class homePage
         'PrintBtnU.Visible = False
         searchuserlabel.Visible = False
         refreshBtnU.Visible = False
+        userAddBtn.Visible = False
 
     End Sub
 
 
-    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddvalidationBtn.Click 'validate add
+    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddValidationBtn.Click 'validate add
 
         connect_db()
 
@@ -2403,7 +2405,7 @@ Public Class homePage
 
     'halls export 
 
-    Private Sub exportBtnH_Click(sender As Object, e As EventArgs) Handles exportBtnH.Click, refreshBtnH.Click  'hall
+    Private Sub exportBtnH_Click(sender As Object, e As EventArgs) Handles exportBtnH.Click 'hall
 
 
 

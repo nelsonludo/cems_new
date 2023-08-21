@@ -10,13 +10,9 @@ list of things to do in cems
 -translate the error messages individually 
 -translate the panelTitle individually (because it's value changes when adding)
 -set a limited input size for phone number
+-make delete and update btn/panel disappear after refreshbtn.click
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
-/userpanel
--translate searchusernamelabel, addusertitle & adduserbtn
--arrange placement of delete and update buttons in every panel
--change the text of the addusercancelbtn in the resourceFrText
--make the add and the refresh button disappear when adding and updating
 /rolepanel
 -make the refreshbtn disappear when adding and updating role
 /equipmentpanel

@@ -153,6 +153,7 @@ Partial Class Form1
         '
         'forgotPwdBtn
         '
+        Me.forgotPwdBtn.AutoSize = True
         Me.forgotPwdBtn.BackColor = System.Drawing.Color.Transparent
         Me.forgotPwdBtn.FlatAppearance.BorderSize = 0
         Me.forgotPwdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat

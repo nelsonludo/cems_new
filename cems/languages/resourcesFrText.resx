@@ -189,7 +189,7 @@
   <data name="addUserPwdLabel" xml:space="preserve">
     <value>Mot de passe de l'utilisateur</value>
   </data>
-  <data name="addUserTitleLabel" xml:space="preserve">
+  <data name="addUserTitle" xml:space="preserve">
     <value>Titre de l'utilisateur</value>
   </data>
   <data name="adminConfirmPasswordLabel" xml:space="preserve">
@@ -562,11 +562,14 @@
   <data name="searchErrorU" xml:space="preserve">
     <value>Aucun résultat trouvé</value>
   </data>
-  <data name="searchUserLabel" xml:space="preserve">
+  <data name="searchuserlabel" xml:space="preserve">
     <value>Rechercher un nom d'utilisateur</value>
   </data>
   <data name="statesearchlabel" xml:space="preserve">
     <value>État</value>
+  </data>
+  <data name="string" xml:space="preserve">
+    <value />
   </data>
   <data name="TitleProfileLabel" xml:space="preserve">
     <value>Titre de l'utilisateur:</value>
@@ -623,7 +626,7 @@
     <value>Ajouter</value>
   </data>
   <data name="userAddCancelBtn" xml:space="preserve">
-    <value>Ajouter</value>
+    <value>Annuler</value>
   </data>
   <data name="userAddValidationBtn" xml:space="preserve">
     <value>Ajouter</value>

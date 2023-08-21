@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à .
+        '''</summary>
+        Friend Shared ReadOnly Property _string() As String
+            Get
+                Return ResourceManager.GetString("string", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle de l&apos;équipement.
         '''</summary>
         Friend Shared ReadOnly Property addequipmenthalllabel() As String
@@ -283,9 +292,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Titre de l&apos;utilisateur.
         '''</summary>
-        Friend Shared ReadOnly Property addUserTitleLabel() As String
+        Friend Shared ReadOnly Property addUserTitle() As String
             Get
-                Return ResourceManager.GetString("addUserTitleLabel", resourceCulture)
+                Return ResourceManager.GetString("addUserTitle", resourceCulture)
             End Get
         End Property
         
@@ -1399,9 +1408,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Rechercher un nom d&apos;utilisateur.
         '''</summary>
-        Friend Shared ReadOnly Property searchUserLabel() As String
+        Friend Shared ReadOnly Property searchuserlabel() As String
             Get
-                Return ResourceManager.GetString("searchUserLabel", resourceCulture)
+                Return ResourceManager.GetString("searchuserlabel", resourceCulture)
             End Get
         End Property
         
@@ -1577,7 +1586,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Ajouter.
+        '''  Recherche une chaîne localisée semblable à Annuler.
         '''</summary>
         Friend Shared ReadOnly Property userAddCancelBtn() As String
             Get
