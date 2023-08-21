@@ -433,6 +433,9 @@
   <data name="loginBtn" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="loginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="loginUserEmailLabel" xml:space="preserve">
     <value>Email</value>
   </data>

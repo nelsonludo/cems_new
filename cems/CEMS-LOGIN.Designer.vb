@@ -27,7 +27,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.loginUserEmailLabel = New System.Windows.Forms.Label()
         Me.loginUserPwdLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.loginTitle = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.forgotPasswordMessage = New System.Windows.Forms.Label()
         Me.forgotPwdBtn = New System.Windows.Forms.Button()
@@ -80,7 +80,7 @@ Partial Class Form1
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.loginUserEmailLabel)
         Me.Panel1.Controls.Add(Me.loginUserPwdLabel)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.loginTitle)
         Me.Panel1.Controls.Add(Me.Label51)
         Me.Panel1.Controls.Add(Me.forgotPasswordMessage)
         Me.Panel1.Controls.Add(Me.forgotPwdBtn)
@@ -115,18 +115,18 @@ Partial Class Form1
         Me.loginUserPwdLabel.TabIndex = 53
         Me.loginUserPwdLabel.Text = "Password "
         '
-        'Label1
+        'loginTitle
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.MintCream
-        Me.Label1.Location = New System.Drawing.Point(240, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 22)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Login"
+        Me.loginTitle.AutoSize = True
+        Me.loginTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.loginTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.loginTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.loginTitle.Location = New System.Drawing.Point(240, 9)
+        Me.loginTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.loginTitle.Name = "loginTitle"
+        Me.loginTitle.Size = New System.Drawing.Size(59, 22)
+        Me.loginTitle.TabIndex = 1
+        Me.loginTitle.Text = "Login"
         '
         'Label51
         '
@@ -644,7 +644,7 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents loginTitle As Label
     Friend WithEvents forgotPwdBtn As Button
     Friend WithEvents loginBtn As Button
     Friend WithEvents passwordtxt As TextBox

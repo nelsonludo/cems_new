@@ -4,7 +4,9 @@ list of things to do in cems
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
 -fix the tab index
 -make sure that if the an admin tries to delete himself an error prompt appears explaining that he cant do that 
-
+-add a check on admin roles so that he can't delete admin and user roles 
+-add a function that changes the location of titles based on the language
+-DISCUSS THE ON ANY MODIFICATOINS CONCERNING THE ROLE BECAUSE THE QUERRIES DEPEND ON THOSE (UPDATING,ADDING OR DELETING A ROLE MIGHT MAKE EVERY USER WITH THAT INAPTE TO USE THE SYSTEM)
 *DESIGN TODO
 -english and french
 -translate the error messages individually 
@@ -13,11 +15,6 @@ list of things to do in cems
 -make delete and update btn/panel disappear after refreshbtn.click
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
-/rolepanel
--make the refreshbtn disappear when adding and updating role
-/equipmentpanel
--arrange the placement of the searchhallcombobox
--translate the changebtn, changeequipmentstatelabel, and the add btn and the addvalidationbtn and addcancelbtn
 take note of the commit message !
 
 Important styles

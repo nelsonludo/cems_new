@@ -1338,7 +1338,7 @@ Partial Class UserHomePage
         Me.exportBtnP.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.exportBtnP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.exportBtnP.Location = New System.Drawing.Point(1330, 6)
+        Me.exportBtnP.Location = New System.Drawing.Point(1331, 6)
         Me.exportBtnP.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnP.Name = "exportBtnP"
         Me.exportBtnP.Size = New System.Drawing.Size(100, 32)
@@ -1349,7 +1349,7 @@ Partial Class UserHomePage
         'postSearchBox
         '
         Me.postSearchBox.ForeColor = System.Drawing.Color.DarkGray
-        Me.postSearchBox.Location = New System.Drawing.Point(500, 98)
+        Me.postSearchBox.Location = New System.Drawing.Point(495, 98)
         Me.postSearchBox.Margin = New System.Windows.Forms.Padding(4)
         Me.postSearchBox.Name = "postSearchBox"
         Me.postSearchBox.Size = New System.Drawing.Size(130, 22)
@@ -1442,7 +1442,7 @@ Partial Class UserHomePage
         Me.hallsearchlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.hallsearchlabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.hallsearchlabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.hallsearchlabel.Location = New System.Drawing.Point(648, 98)
+        Me.hallsearchlabel.Location = New System.Drawing.Point(649, 98)
         Me.hallsearchlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.hallsearchlabel.Name = "hallsearchlabel"
         Me.hallsearchlabel.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1572,7 +1572,7 @@ Partial Class UserHomePage
         Me.exportBtnE.ForeColor = System.Drawing.Color.Yellow
         Me.exportBtnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.exportBtnE.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.exportBtnE.Location = New System.Drawing.Point(1363, 6)
+        Me.exportBtnE.Location = New System.Drawing.Point(1340, 6)
         Me.exportBtnE.Margin = New System.Windows.Forms.Padding(4)
         Me.exportBtnE.Name = "exportBtnE"
         Me.exportBtnE.Size = New System.Drawing.Size(100, 32)
@@ -1583,7 +1583,7 @@ Partial Class UserHomePage
         'equipmentSearchBox
         '
         Me.equipmentSearchBox.ForeColor = System.Drawing.Color.DarkGray
-        Me.equipmentSearchBox.Location = New System.Drawing.Point(518, 98)
+        Me.equipmentSearchBox.Location = New System.Drawing.Point(513, 98)
         Me.equipmentSearchBox.Margin = New System.Windows.Forms.Padding(4)
         Me.equipmentSearchBox.MaximumSize = New System.Drawing.Size(300, 100)
         Me.equipmentSearchBox.Name = "equipmentSearchBox"
@@ -1675,7 +1675,7 @@ Partial Class UserHomePage
         Me.equipmentsearchhalllabel.AutoSize = True
         Me.equipmentsearchhalllabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.equipmentsearchhalllabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.equipmentsearchhalllabel.Location = New System.Drawing.Point(667, 98)
+        Me.equipmentsearchhalllabel.Location = New System.Drawing.Point(657, 98)
         Me.equipmentsearchhalllabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.equipmentsearchhalllabel.Name = "equipmentsearchhalllabel"
         Me.equipmentsearchhalllabel.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1716,10 +1716,10 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
+        Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.PostPanel)
         Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.HomePagePanel)
-        Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.sideBar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

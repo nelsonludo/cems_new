@@ -1010,6 +1010,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Login.
+        '''</summary>
+        Friend Shared ReadOnly Property loginTitle() As String
+            Get
+                Return ResourceManager.GetString("loginTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Email.
         '''</summary>
         Friend Shared ReadOnly Property loginUserEmailLabel() As String

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addEquipmentBtn" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="addEquipmentCancelBtn" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
   <data name="addequipmenthalllabel" xml:space="preserve">
     <value>Salle de l'équipement</value>
   </data>
@@ -131,6 +137,9 @@
   </data>
   <data name="addequipmenttitlelabel" xml:space="preserve">
     <value>Titre de l'équipement</value>
+  </data>
+  <data name="addEquipmentValidationBtn" xml:space="preserve">
+    <value>Ajouter</value>
   </data>
   <data name="addHallErrorMsg" xml:space="preserve">
     <value>Veuillez remplir tous les champs!</value>
@@ -328,15 +337,6 @@
   <data name="EmailProfileLabel" xml:space="preserve">
     <value>E-mail de l'utilisateur:</value>
   </data>
-  <data name="equipmentAddBtn" xml:space="preserve">
-    <value>Ajouter</value>
-  </data>
-  <data name="equipmentAddCancelBtn" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="equipmentAddValidationBtn" xml:space="preserve">
-    <value>Ajouter</value>
-  </data>
   <data name="EquipmentChangeBtn" xml:space="preserve">
     <value>Changer</value>
   </data>
@@ -443,6 +443,9 @@
     <value>Voir</value>
   </data>
   <data name="loginBtn" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="loginTitle" xml:space="preserve">
     <value>Se connecter</value>
   </data>
   <data name="loginUserEmailLabel" xml:space="preserve">
@@ -565,11 +568,11 @@
   <data name="searchuserlabel" xml:space="preserve">
     <value>Rechercher un nom d'utilisateur</value>
   </data>
+  <data name="stateChangeBtn" xml:space="preserve">
+    <value>Changer</value>
+  </data>
   <data name="statesearchlabel" xml:space="preserve">
     <value>État</value>
-  </data>
-  <data name="string" xml:space="preserve">
-    <value />
   </data>
   <data name="TitleProfileLabel" xml:space="preserve">
     <value>Titre de l'utilisateur:</value>
