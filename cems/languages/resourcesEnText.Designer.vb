@@ -110,15 +110,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Please fill all the fields.
-        '''</summary>
-        Friend Shared ReadOnly Property addHallErrorMsg() As String
-            Get
-                Return ResourceManager.GetString("addHallErrorMsg", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Recherche une chaîne localisée semblable à Post Hall.
         '''</summary>
         Friend Shared ReadOnly Property addPostHallLabel() As String
@@ -155,15 +146,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Please fill the field.
-        '''</summary>
-        Friend Shared ReadOnly Property addRoleErrorMsg() As String
-            Get
-                Return ResourceManager.GetString("addRoleErrorMsg", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Recherche une chaîne localisée semblable à Role name.
         '''</summary>
         Friend Shared ReadOnly Property addRoleNameLabel() As String
@@ -196,24 +178,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property addUserEmailLabel() As String
             Get
                 Return ResourceManager.GetString("addUserEmailLabel", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Please fill all the fields!.
-        '''</summary>
-        Friend Shared ReadOnly Property addUserErrorMsg_EmptyField() As String
-            Get
-                Return ResourceManager.GetString("addUserErrorMsg.EmptyField", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Please enter the same password!.
-        '''</summary>
-        Friend Shared ReadOnly Property addUserErrorMsg_PwdNotMatch() As String
-            Get
-                Return ResourceManager.GetString("addUserErrorMsg.PwdNotMatch", resourceCulture)
             End Get
         End Property
         
@@ -344,15 +308,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Export successful ✔.
-        '''</summary>
-        Friend Shared ReadOnly Property confirmMsgE_text_export() As String
-            Get
-                Return ResourceManager.GetString("confirmMsgE.text.export", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Recherche une chaîne localisée semblable à Hall successfully updated ✔.
         '''</summary>
         Friend Shared ReadOnly Property confirmMsgE_text_update() As String
@@ -376,15 +331,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property confirmMsgH_text_delete() As String
             Get
                 Return ResourceManager.GetString("confirmMsgH.text.delete", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Export successful ✔.
-        '''</summary>
-        Friend Shared ReadOnly Property confirmMsgH_text_export() As String
-            Get
-                Return ResourceManager.GetString("confirmMsgH.text.export", resourceCulture)
             End Get
         End Property
         
@@ -416,15 +362,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Export successful ✔.
-        '''</summary>
-        Friend Shared ReadOnly Property confirmMsgP_text_export() As String
-            Get
-                Return ResourceManager.GetString("confirmMsgP.text.export", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Recherche une chaîne localisée semblable à Hall successfully updated ✔.
         '''</summary>
         Friend Shared ReadOnly Property confirmMsgP_text_update() As String
@@ -434,7 +371,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Profile updated successfully.
+        '''  Recherche une chaîne localisée semblable à Profile updated successfully ✔.
         '''</summary>
         Friend Shared ReadOnly Property confirmMsgPr() As String
             Get
@@ -457,15 +394,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property confirmMsgR_text_delete() As String
             Get
                 Return ResourceManager.GetString("confirmMsgR.text.delete", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Export successful ✔.
-        '''</summary>
-        Friend Shared ReadOnly Property confirmMsgR_text_export() As String
-            Get
-                Return ResourceManager.GetString("confirmMsgR.text.export", resourceCulture)
             End Get
         End Property
         
@@ -493,15 +421,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property confirmMsgU_text_delete() As String
             Get
                 Return ResourceManager.GetString("confirmMsgU.text.delete", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Export successful ✔.
-        '''</summary>
-        Friend Shared ReadOnly Property confirmMsgU_text_export() As String
-            Get
-                Return ResourceManager.GetString("confirmMsgU.text.export", resourceCulture)
             End Get
         End Property
         
@@ -659,6 +578,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Please fill all the fields!.
+        '''</summary>
+        Friend Shared ReadOnly Property EmptyField() As String
+            Get
+                Return ResourceManager.GetString("EmptyField", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Add.
         '''</summary>
         Friend Shared ReadOnly Property equipmentAddBtn() As String
@@ -808,6 +736,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property equipmentUpdateValidationBtn() As String
             Get
                 Return ResourceManager.GetString("equipmentUpdateValidationBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Export successful ✔.
+        '''</summary>
+        Friend Shared ReadOnly Property export() As String
+            Get
+                Return ResourceManager.GetString("export", resourceCulture)
             End Get
         End Property
         
@@ -1271,6 +1208,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Please enter the same password!.
+        '''</summary>
+        Friend Shared ReadOnly Property PwdNotMatch() As String
+            Get
+                Return ResourceManager.GetString("PwdNotMatch", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Refresh.
         '''</summary>
         Friend Shared ReadOnly Property refreshBtnE() As String
@@ -1492,15 +1438,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property updateEquipmentTitle() As String
             Get
                 Return ResourceManager.GetString("updateEquipmentTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Please fill all the fields.
-        '''</summary>
-        Friend Shared ReadOnly Property updateHallErrorMsg() As String
-            Get
-                Return ResourceManager.GetString("updateHallErrorMsg", resourceCulture)
             End Get
         End Property
         

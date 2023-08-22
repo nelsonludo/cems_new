@@ -141,9 +141,6 @@
   <data name="addEquipmentValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
-  <data name="addHallErrorMsg" xml:space="preserve">
-    <value>Veuillez remplir tous les champs!</value>
-  </data>
   <data name="addHallNameLabel" xml:space="preserve">
     <value>Nom de la salle</value>
   </data>
@@ -168,9 +165,6 @@
   <data name="addPostValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
-  <data name="addRoleErrorMsg" xml:space="preserve">
-    <value>Veuillez remplir le champ!</value>
-  </data>
   <data name="addRoleNameLabel" xml:space="preserve">
     <value>Nom du Rôle</value>
   </data>
@@ -182,12 +176,6 @@
   </data>
   <data name="addUserEmailLabel" xml:space="preserve">
     <value>Courriel de l'utilisateur</value>
-  </data>
-  <data name="addUserErrorMsg.EmptyField" xml:space="preserve">
-    <value>Veuillez remplir tous les champs</value>
-  </data>
-  <data name="addUserErrorMsg.PwdNotMatch" xml:space="preserve">
-    <value>Veuillez saisir le même mot de passe !</value>
   </data>
   <data name="addUserNameLabel" xml:space="preserve">
     <value>Nom de l'utilisateur</value>
@@ -232,9 +220,6 @@
   <data name="confirmMsgE.text.delete" xml:space="preserve">
     <value>équipement supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgE.text.export" xml:space="preserve">
-    <value>Exportation réussie ✔</value>
-  </data>
   <data name="confirmMsgE.text.update" xml:space="preserve">
     <value>équipement mise à jour avec succès ✔</value>
   </data>
@@ -243,9 +228,6 @@
   </data>
   <data name="confirmMsgH.text.delete" xml:space="preserve">
     <value>Salle supprimée avec succès ✔</value>
-  </data>
-  <data name="confirmMsgH.text.export" xml:space="preserve">
-    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgH.text.update" xml:space="preserve">
     <value>Salle ajoutée avec succès ✔</value>
@@ -256,23 +238,17 @@
   <data name="confirmMsgP.text.delete" xml:space="preserve">
     <value>Poste supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgP.text.export" xml:space="preserve">
-    <value>Exportation réussie ✔</value>
-  </data>
   <data name="confirmMsgP.text.update" xml:space="preserve">
     <value>Poste mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgPr" xml:space="preserve">
-    <value>Profile updated successfully</value>
+    <value>Profil mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgR.text.add" xml:space="preserve">
     <value>rôle ajouté avec succès ✔</value>
   </data>
   <data name="confirmMsgR.text.delete" xml:space="preserve">
     <value>rôle supprimée avec succès ✔</value>
-  </data>
-  <data name="confirmMsgR.text.export" xml:space="preserve">
-    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgR.text.update" xml:space="preserve">
     <value>Rôle mise à jour avec succès ✔</value>
@@ -282,9 +258,6 @@
   </data>
   <data name="confirmMsgU.text.delete" xml:space="preserve">
     <value>Utisateur supprimée avec succès ✔</value>
-  </data>
-  <data name="confirmMsgU.text.export" xml:space="preserve">
-    <value>Exportation réussie ✔</value>
   </data>
   <data name="confirmMsgU.text.update" xml:space="preserve">
     <value>Utilisateur mise à jour avec succès ✔</value>
@@ -337,6 +310,9 @@
   <data name="EmailProfileLabel" xml:space="preserve">
     <value>E-mail de l'utilisateur:</value>
   </data>
+  <data name="EmptyField" xml:space="preserve">
+    <value>Veuillez remplir tous les champs!</value>
+  </data>
   <data name="EquipmentChangeBtn" xml:space="preserve">
     <value>Changer</value>
   </data>
@@ -378,6 +354,9 @@
   </data>
   <data name="equipmentUpdateValidationBtn" xml:space="preserve">
     <value>Mettre à jour</value>
+  </data>
+  <data name="export" xml:space="preserve">
+    <value>Exportation réussie ✔</value>
   </data>
   <data name="exportBtnE" xml:space="preserve">
     <value>Exporter</value>
@@ -532,6 +511,9 @@
   <data name="profileTitle_Update" xml:space="preserve">
     <value>Mêttre le profil à jour</value>
   </data>
+  <data name="PwdNotMatch" xml:space="preserve">
+    <value>Veuillez saisir le même mot de passe!</value>
+  </data>
   <data name="refreshBtnE" xml:space="preserve">
     <value>Rafraîchir</value>
   </data>
@@ -610,9 +592,6 @@
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Mettre l'équipement à jour</value>
   </data>
-  <data name="updateHallErrorMsg" xml:space="preserve">
-    <value>Veuillez remplir tous les champs</value>
-  </data>
   <data name="updateHallNameLabel" xml:space="preserve">
     <value>Nom de la salle</value>
   </data>
@@ -630,9 +609,6 @@
   </data>
   <data name="updateProfileValidationBtn" xml:space="preserve">
     <value>Mettre à jour</value>
-  </data>
-  <data name="updateRoleErrorMsg" xml:space="preserve">
-    <value>Veuillez remplir tous les champs</value>
   </data>
   <data name="updateRoleNameLabel" xml:space="preserve">
     <value>Nom du Rôle</value>

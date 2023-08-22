@@ -640,7 +640,7 @@ Public Class users
     End Sub
 
 
-    Public Sub updateUser(table As String, column As String, name As String, phone As String, email As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
+    Public Sub updateUser(isfrench As Boolean, table As String, column As String, name As String, phone As String, email As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
 
         connect_db()
 
@@ -650,14 +650,24 @@ Public Class users
 
             If name = "" And email = "" And phone = "" And pwd = "" Then
                 errorMsg.Visible = True
-                errorMsg.Text = "Please fill the fields"
+                If isfrench Then
+                    errorMsg.Text = My.Resources.resourcesFrText.EmptyField
+                Else
+                    errorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+                End If
 
                 timer.Interval = 3000
                 timer.Start()
             Else
                 If pwd <> confirmPwd Then
                     errorMsg.Visible = True
-                    errorMsg.Text = "The password does not correspond"
+                    If isfrench Then
+                        errorMsg.Text = My.Resources.resourcesFrText.PwdNotMatch
+                    Else
+                        errorMsg.Text = My.Resources.resourcesEnText.PwdNotMatch
+
+                    End If
 
                     timer.Interval = 3000
                     timer.Start()

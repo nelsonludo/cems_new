@@ -132,9 +132,6 @@
   <data name="addequipmenttitlelabel" xml:space="preserve">
     <value>Equipment title</value>
   </data>
-  <data name="addHallErrorMsg" xml:space="preserve">
-    <value>Please fill all the fields</value>
-  </data>
   <data name="addPostHallLabel" xml:space="preserve">
     <value>Post Hall</value>
   </data>
@@ -147,9 +144,6 @@
   <data name="addPostTitle" xml:space="preserve">
     <value>Add post</value>
   </data>
-  <data name="addRoleErrorMsg" xml:space="preserve">
-    <value>Please fill the field</value>
-  </data>
   <data name="addRoleNameLabel" xml:space="preserve">
     <value>Role name</value>
   </data>
@@ -161,12 +155,6 @@
   </data>
   <data name="addUserEmailLabel" xml:space="preserve">
     <value>User email</value>
-  </data>
-  <data name="addUserErrorMsg.EmptyField" xml:space="preserve">
-    <value>Please fill all the fields!</value>
-  </data>
-  <data name="addUserErrorMsg.PwdNotMatch" xml:space="preserve">
-    <value>Please enter the same password!</value>
   </data>
   <data name="addUserNameLabel" xml:space="preserve">
     <value>User name</value>
@@ -211,9 +199,6 @@
   <data name="confirmMsgE.text.delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
   </data>
-  <data name="confirmMsgE.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
-  </data>
   <data name="confirmMsgE.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
   </data>
@@ -222,9 +207,6 @@
   </data>
   <data name="confirmMsgH.text.delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
-  </data>
-  <data name="confirmMsgH.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
   </data>
   <data name="confirmMsgH.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
@@ -235,23 +217,17 @@
   <data name="confirmMsgP.text.delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
   </data>
-  <data name="confirmMsgP.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
-  </data>
   <data name="confirmMsgP.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
   </data>
   <data name="confirmMsgPr" xml:space="preserve">
-    <value>Profile updated successfully</value>
+    <value>Profile updated successfully ✔</value>
   </data>
   <data name="confirmMsgR.text.add" xml:space="preserve">
     <value>Hall successfully added ✔</value>
   </data>
   <data name="confirmMsgR.text.delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
-  </data>
-  <data name="confirmMsgR.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
   </data>
   <data name="confirmMsgR.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
@@ -261,9 +237,6 @@
   </data>
   <data name="confirmMsgU.text.delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
-  </data>
-  <data name="confirmMsgU.text.export" xml:space="preserve">
-    <value>Export successful ✔</value>
   </data>
   <data name="confirmMsgU.text.update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
@@ -316,6 +289,9 @@
   <data name="EmailProfileLabel" xml:space="preserve">
     <value>User email:</value>
   </data>
+  <data name="EmptyField" xml:space="preserve">
+    <value>Please fill all the fields!</value>
+  </data>
   <data name="equipmentAddBtn" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -366,6 +342,9 @@
   </data>
   <data name="equipmentUpdateValidationBtn" xml:space="preserve">
     <value>Update</value>
+  </data>
+  <data name="export" xml:space="preserve">
+    <value>Export successful ✔</value>
   </data>
   <data name="exportBtnE" xml:space="preserve">
     <value>Export</value>
@@ -520,6 +499,9 @@
   <data name="profileTitle_Update" xml:space="preserve">
     <value>Update profile</value>
   </data>
+  <data name="PwdNotMatch" xml:space="preserve">
+    <value>Please enter the same password!</value>
+  </data>
   <data name="refreshBtnE" xml:space="preserve">
     <value>Refresh</value>
   </data>
@@ -594,9 +576,6 @@
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Update equipment</value>
-  </data>
-  <data name="updateHallErrorMsg" xml:space="preserve">
-    <value>Please fill all the fields</value>
   </data>
   <data name="updatePostTitle" xml:space="preserve">
     <value>Update post</value>

@@ -306,7 +306,7 @@ Public Class UserHomePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
-        User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
+        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
         'confirm message
@@ -885,6 +885,14 @@ Public Class UserHomePage
         sqlConn.Dispose()
 
         confirmMsgP.Visible = True
+
+        If isFrench Then
+            confirmMsgP.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgP.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
 
@@ -898,6 +906,14 @@ Public Class UserHomePage
 
         'this will make the message appear for three seconds
         confirmMsgE.Visible = True
+
+        If isFrench Then
+            confirmMsgE.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgE.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
     End Sub

@@ -948,7 +948,7 @@ Public Class homePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
-        User.updateUser("users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
+        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
@@ -2872,6 +2872,14 @@ Public Class homePage
 
         'this will make the message appear for three seconds
         confirmMsgH.Visible = True
+
+        If isFrench Then
+            confirmMsgH.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgH.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
     End Sub
@@ -2887,6 +2895,14 @@ Public Class homePage
 
         'this will make the message appear for three seconds
         confirmMsgU.Visible = True
+
+        If isFrench Then
+            confirmMsgU.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgU.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
     End Sub
@@ -2899,6 +2915,14 @@ Public Class homePage
         sqlConn.Dispose()
 
         confirmMsgP.Visible = True
+
+        If isFrench Then
+            confirmMsgP.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgP.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
 
@@ -2920,6 +2944,14 @@ Public Class homePage
 
         'this will make the message appear for three seconds
         confirmMsgE.Visible = True
+
+        If isFrench Then
+            confirmMsgE.Text = My.Resources.resourcesFrText.export
+        Else
+            confirmMsgE.Text = My.Resources.resourcesEnText.export
+
+        End If
+
         Timer2.Interval = 3000
         Timer2.Start()
     End Sub
