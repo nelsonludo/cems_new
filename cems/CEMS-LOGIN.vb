@@ -10,6 +10,7 @@ Imports System.Resources
 Imports System.Globalization
 Imports System.Threading
 Imports System.Text
+Imports System.Text.RegularExpressions
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -714,5 +715,31 @@ COMMIT;
         Next
 
     End Sub
+
+    Private Sub emailtxt_TextChanged(sender As Object, e As EventArgs) Handles emailtxt.TextChanged
+        textBoxEmail_Validating(emailtxt)
+    End Sub
+
+
+    Private Sub textBoxEmail_Validating(textBoxEmail As TextBox)
+        Dim email As String = textBoxEmail.Text
+
+        ' Check for email format
+        IsValidEmail(email)
+
+        If Not IsValidEmail(email) Then
+            errorProviderEmail.SetError(textBoxEmail, "Invalid email format")
+        Else
+            errorProviderEmail.SetError(textBoxEmail, "") ' Clear the error message
+        End If
+    End Sub
+
+    Private Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        Dim regex As New Regex(pattern)
+        Dim match As Match = regex.Match(email)
+        Return match.Success
+    End Function
+
 
 End Class

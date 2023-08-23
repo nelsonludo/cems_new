@@ -9,6 +9,8 @@ Imports System.Windows.Forms
 Imports System.Resources
 Imports System.Globalization
 Imports System.Threading
+Imports System.Text.RegularExpressions
+
 
 
 
@@ -3720,6 +3722,39 @@ Public Class homePage
     End Sub
 
 
+    'checks the format of email 
+
+    Private Sub userUserEmailInput_TextChanged(sender As Object, e As EventArgs) Handles userUserEmailInput.TextChanged
+        textBoxEmail_Validating(userUserEmailInput)
+    End Sub
+    Private Sub userUserAddEmailInput_TextChanged(sender As Object, e As EventArgs) Handles userUserAddEmailInput.TextChanged
+        textBoxEmail_Validating(userUserAddEmailInput)
+    End Sub
+
+    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles userEmailProfileInput.TextChanged
+        textBoxEmail_Validating(userEmailProfileInput)
+    End Sub
+
+    Private Sub textBoxEmail_Validating(textBoxEmail As TextBox)
+        Dim email As String = textBoxEmail.Text
+
+        ' Check for email format
+        IsValidEmail(email)
+
+        If Not IsValidEmail(email) Then
+            errorProviderEmail.SetError(textBoxEmail, "Invalid email format")
+        Else
+            errorProviderEmail.SetError(textBoxEmail, "") ' Clear the error message
+        End If
+    End Sub
+
+    Private Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        Dim regex As New Regex(pattern)
+        Dim match As Match = regex.Match(email)
+        Return match.Success
+    End Function
+
     'close all the servers when the app is closed
     Private Sub adminHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
         Form1.Close()
@@ -3747,6 +3782,9 @@ Public Class homePage
         End Try
 
     End Sub
+
+
+
 
     'styles
 

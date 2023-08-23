@@ -286,6 +286,7 @@ Partial Class homePage
         Me.exportBtnR = New System.Windows.Forms.Button()
         Me.roleDataGridView = New System.Windows.Forms.DataGridView()
         Me.roleTitle = New System.Windows.Forms.Label()
+        Me.errorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.dropdown.SuspendLayout()
         Me.adminUsersPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
@@ -314,6 +315,7 @@ Partial Class homePage
         Me.roleUpdatePanel.SuspendLayout()
         Me.roleAddPanel.SuspendLayout()
         CType(Me.roleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dropdown
@@ -2540,6 +2542,10 @@ Partial Class homePage
         Me.roleTitle.ForeColor = System.Drawing.Color.Gray
         Me.roleTitle.Name = "roleTitle"
         '
+        'errorProviderEmail
+        '
+        Me.errorProviderEmail.ContainerControl = Me
+        '
         'homePage
         '
         resources.ApplyResources(Me, "$this")
@@ -2607,6 +2613,7 @@ Partial Class homePage
         Me.roleAddPanel.ResumeLayout(False)
         Me.roleAddPanel.PerformLayout()
         CType(Me.roleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2857,4 +2864,5 @@ Partial Class homePage
     Friend WithEvents englishBtn As Button
     Friend WithEvents changeposthalllabel As Label
     Friend WithEvents postChangeHallInput As ComboBox
+    Friend WithEvents errorProviderEmail As ErrorProvider
 End Class

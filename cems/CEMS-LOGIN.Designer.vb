@@ -69,9 +69,11 @@ Partial Class Form1
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.englishBtn = New System.Windows.Forms.Button()
         Me.frenchBtn = New System.Windows.Forms.Button()
+        Me.errorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
+        CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -614,6 +616,10 @@ Partial Class Form1
         Me.frenchBtn.UseVisualStyleBackColor = False
         Me.frenchBtn.Visible = False
         '
+        'errorProviderEmail
+        '
+        Me.errorProviderEmail.ContainerControl = Me
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -638,6 +644,7 @@ Partial Class Form1
         Me.connexionStringPanel.PerformLayout()
         Me.userAddPanel.ResumeLayout(False)
         Me.userAddPanel.PerformLayout()
+        CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -688,4 +695,5 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents englishBtn As Button
     Friend WithEvents frenchBtn As Button
+    Friend WithEvents errorProviderEmail As ErrorProvider
 End Class

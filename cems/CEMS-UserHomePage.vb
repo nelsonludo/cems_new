@@ -8,6 +8,7 @@ Imports System.Data.SqlClient
 Imports System.Resources
 Imports System.Globalization
 Imports System.Threading
+Imports System.Text.RegularExpressions
 
 Public Class UserHomePage
     Dim sqlConn As New MySqlConnection
@@ -977,6 +978,34 @@ Public Class UserHomePage
             e.Handled = True
         End If
     End Sub
+
+
+    'checks for email format 
+
+    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles userEmailProfileInput.TextChanged
+        textBoxEmail_Validating(userEmailProfileInput)
+    End Sub
+
+    Private Sub textBoxEmail_Validating(textBoxEmail As TextBox)
+        Dim email As String = textBoxEmail.Text
+
+        ' Check for email format
+        IsValidEmail(email)
+
+        If Not IsValidEmail(email) Then
+            errorProviderEmail.SetError(textBoxEmail, "Invalid email format")
+        Else
+            errorProviderEmail.SetError(textBoxEmail, "") ' Clear the error message
+        End If
+    End Sub
+
+    Private Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        Dim regex As New Regex(pattern)
+        Dim match As Match = regex.Match(email)
+        Return match.Success
+    End Function
+
 
     'close all the servers when the app is closed
     Private Sub userHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
