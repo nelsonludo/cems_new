@@ -930,6 +930,7 @@ Partial Class UserHomePage
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.userPhoneNumberProfileInput.Location = New System.Drawing.Point(70, 219)
         Me.userPhoneNumberProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userPhoneNumberProfileInput.MaxLength = 9
         Me.userPhoneNumberProfileInput.Name = "userPhoneNumberProfileInput"
         Me.userPhoneNumberProfileInput.Size = New System.Drawing.Size(532, 22)
         Me.userPhoneNumberProfileInput.TabIndex = 17

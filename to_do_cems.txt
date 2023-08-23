@@ -1,15 +1,13 @@
 list of things to do in cems
 *CODE TODO
--add change hall for post
--reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
+-add a function that changes the location of titles based on the language
+-set a check for all email textboxes for email format
 -fix the tab index
 -add a check on admin roles so that he can't delete admin and user roles 
--add a function that changes the location of titles based on the language
 -DISCUSS THE ON ANY MODIFICATOINS CONCERNING THE ROLE BECAUSE THE QUERRIES DEPEND ON THOSE (UPDATING,ADDING OR DELETING A ROLE MIGHT MAKE EVERY USER WITH THAT INAPTE TO USE THE SYSTEM)
+-reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
 
 *DESIGN TODO
--set a limited input size for phone number
--make delete and update btn/panel disappear after refreshbtn.click
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 take note of the commit message !

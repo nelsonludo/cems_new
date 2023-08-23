@@ -3712,10 +3712,13 @@ Public Class homePage
 
     End Sub
 
+    'accept only digits for phone number input boxes 
+    Private Sub textBoxPhoneNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles userUserPhoneInput.KeyPress, userUserAddPhoneInput.KeyPress, userPhoneNumberProfileInput.KeyPress
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
 
-
-
-    'styles
 
     'close all the servers when the app is closed
     Private Sub adminHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
@@ -3744,6 +3747,8 @@ Public Class homePage
         End Try
 
     End Sub
+
+    'styles
 
 
 
