@@ -344,6 +344,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Salle du poste.
+        '''</summary>
+        Friend Shared ReadOnly Property changeposthalllabel() As String
+            Get
+                Return ResourceManager.GetString("changeposthalllabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à État du poste.
         '''</summary>
         Friend Shared ReadOnly Property changepoststatelabel() As String

@@ -467,6 +467,7 @@ Public Class homePage
 
         Try
             postChangeStateInput.Text = postDataGridView.SelectedRows(0).Cells(1).Value.ToString
+            postChangeHallInput.Text = postDataGridView.SelectedRows(0).Cells(2).Value.ToString
 
             postChangeStatePanel.Visible = True
 
@@ -519,6 +520,11 @@ Public Class homePage
         User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
         fillHalls(hallSearchBoxP)
+
+        'this fills the halls in the change post hall combobox
+        fillHalls(postChangeHallInput)
+
+
         fillcomboState(stateSearchBoxP, "posts", "post_state")
 
         If isFrench Then
@@ -841,6 +847,32 @@ Public Class homePage
     'change post button
     Private Sub postChangeBtn_Click(sender As Object, e As EventArgs) Handles postChangeBtn.Click
         Dim post_id As String = postDataGridView.SelectedRows(0).Cells(0).Value.ToString
+
+        Dim hall_id As Integer
+        'SQL Connection'
+        connect_db()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & postChangeHallInput.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
         connect_db()
 
         sqlConn.Open()
@@ -849,7 +881,7 @@ Public Class homePage
 
         With sqlCmd
             'possible problem
-            .CommandText = "Update cems.cems_posts Set post_state ='" & postChangeStateInput.Text & "' where post_id = '" & post_id & "'"
+            .CommandText = "Update cems.cems_posts Set post_state ='" & postChangeStateInput.Text & "', hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
 
             .CommandType = CommandType.Text
 

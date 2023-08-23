@@ -281,6 +281,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Post hall.
+        '''</summary>
+        Friend Shared ReadOnly Property changeposthalllabel() As String
+            Get
+                Return ResourceManager.GetString("changeposthalllabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Post State.
         '''</summary>
         Friend Shared ReadOnly Property changepoststatelabel() As String

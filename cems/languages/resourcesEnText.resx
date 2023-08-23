@@ -190,6 +190,9 @@
   <data name="changeequipmentstatelabel" xml:space="preserve">
     <value>Equipment state</value>
   </data>
+  <data name="changeposthalllabel" xml:space="preserve">
+    <value>Post hall</value>
+  </data>
   <data name="changepoststatelabel" xml:space="preserve">
     <value>Post State</value>
   </data>

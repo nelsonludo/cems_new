@@ -211,6 +211,9 @@
   <data name="changeequipmentstatelabel" xml:space="preserve">
     <value>État de l'équipement</value>
   </data>
+  <data name="changeposthalllabel" xml:space="preserve">
+    <value>Salle du poste</value>
+  </data>
   <data name="changepoststatelabel" xml:space="preserve">
     <value>État du poste</value>
   </data>
