@@ -548,6 +548,8 @@ Public Class homePage
     Private Sub refreshBtnP_click(sender As Object, e As EventArgs) Handles refreshBtnP.Click
         User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
+        postChangeStatePanel.Visible = False
+
     End Sub
 
 
@@ -557,7 +559,6 @@ Public Class homePage
 
         fillHalls(postHallInput)
 
-        postTitle.Text = "Add posts"
         postDataGridView.Visible = False
         postSearchBox.Visible = False
         postsearchlabel.Visible = False
@@ -1128,6 +1129,9 @@ Public Class homePage
     Private Sub refreshBtnH_click(sender As Object, e As EventArgs) Handles refreshBtnH.Click
         User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
+
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
     End Sub
 
     'hall add buttons
@@ -1472,6 +1476,8 @@ Public Class homePage
     Private Sub refreshBtnU_click(sender As Object, e As EventArgs) Handles refreshBtnU.Click
         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
+        userUpdateBtn.Visible = True
+        userDeleteBtn.Visible = True
     End Sub
 
     Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
@@ -2115,6 +2121,8 @@ Public Class homePage
     Private Sub refreshBtnR_click(sender As Object, e As EventArgs) Handles refreshBtnR.Click
         User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
+        roleUpdateBtn.Visible = True
+
     End Sub
 
     'role update buttons
@@ -2449,6 +2457,8 @@ Public Class homePage
     'refresh equipment button 
     Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
         User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+        statePanel.Visible = True
 
     End Sub
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
