@@ -355,81 +355,81 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à équipement ajouté avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgE_text_add() As String
+        Friend Shared ReadOnly Property confirmMsgE_add() As String
             Get
-                Return ResourceManager.GetString("confirmMsgE.text.add", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgE_add", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à équipement supprimée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgE_text_delete() As String
+        Friend Shared ReadOnly Property confirmMsgE_delete() As String
             Get
-                Return ResourceManager.GetString("confirmMsgE.text.delete", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgE_delete", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à équipement mise à jour avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgE_text_update() As String
+        Friend Shared ReadOnly Property confirmMsgE_update() As String
             Get
-                Return ResourceManager.GetString("confirmMsgE.text.update", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgE_update", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle ajoutée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgH_text_add() As String
+        Friend Shared ReadOnly Property confirmMsgH_add() As String
             Get
-                Return ResourceManager.GetString("confirmMsgH.text.add", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgH_add", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle supprimée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgH_text_delete() As String
+        Friend Shared ReadOnly Property confirmMsgH_delete() As String
             Get
-                Return ResourceManager.GetString("confirmMsgH.text.delete", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgH_delete", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Salle ajoutée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgH_text_update() As String
+        Friend Shared ReadOnly Property confirmMsgH_update() As String
             Get
-                Return ResourceManager.GetString("confirmMsgH.text.update", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgH_update", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Poste ajouté avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgP_text_add() As String
+        Friend Shared ReadOnly Property confirmMsgP_add() As String
             Get
-                Return ResourceManager.GetString("confirmMsgP.text.add", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgP_add", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Poste supprimée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgP_text_delete() As String
+        Friend Shared ReadOnly Property confirmMsgP_delete() As String
             Get
-                Return ResourceManager.GetString("confirmMsgP.text.delete", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgP_delete", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Poste mise à jour avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgP_text_update() As String
+        Friend Shared ReadOnly Property confirmMsgP_update() As String
             Get
-                Return ResourceManager.GetString("confirmMsgP.text.update", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgP_update", resourceCulture)
             End Get
         End Property
         
@@ -445,54 +445,54 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à rôle ajouté avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgR_text_add() As String
+        Friend Shared ReadOnly Property confirmMsgR_add() As String
             Get
-                Return ResourceManager.GetString("confirmMsgR.text.add", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgR_add", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à rôle supprimée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgR_text_delete() As String
+        Friend Shared ReadOnly Property confirmMsgR_delete() As String
             Get
-                Return ResourceManager.GetString("confirmMsgR.text.delete", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgR_delete", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Rôle mise à jour avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgR_text_update() As String
+        Friend Shared ReadOnly Property confirmMsgR_update() As String
             Get
-                Return ResourceManager.GetString("confirmMsgR.text.update", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgR_update", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Utilisateur ajouté avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgU_text_add() As String
+        Friend Shared ReadOnly Property confirmMsgU_add() As String
             Get
-                Return ResourceManager.GetString("confirmMsgU.text.add", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgU_add", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Utisateur supprimée avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgU_text_delete() As String
+        Friend Shared ReadOnly Property confirmMsgU_delete() As String
             Get
-                Return ResourceManager.GetString("confirmMsgU.text.delete", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgU_delete", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Utilisateur mise à jour avec succès ✔.
         '''</summary>
-        Friend Shared ReadOnly Property confirmMsgU_text_update() As String
+        Friend Shared ReadOnly Property confirmMsgU_update() As String
             Get
-                Return ResourceManager.GetString("confirmMsgU.text.update", resourceCulture)
+                Return ResourceManager.GetString("confirmMsgU_update", resourceCulture)
             End Get
         End Property
         
@@ -1154,6 +1154,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Ce poste exist déjà éssayé d&apos;en ajouter un autre!.
+        '''</summary>
+        Friend Shared ReadOnly Property postExist() As String
+            Get
+                Return ResourceManager.GetString("postExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Postes.
         '''</summary>
         Friend Shared ReadOnly Property postsBtn() As String
@@ -1654,6 +1663,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property userEmailProfileLabel2() As String
             Get
                 Return ResourceManager.GetString("userEmailProfileLabel2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Cette utilisateur exist déjà!.
+        '''</summary>
+        Friend Shared ReadOnly Property userExist() As String
+            Get
+                Return ResourceManager.GetString("userExist", resourceCulture)
             End Get
         End Property
         

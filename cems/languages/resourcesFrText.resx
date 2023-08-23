@@ -214,52 +214,52 @@
   <data name="changepoststatelabel" xml:space="preserve">
     <value>État du poste</value>
   </data>
-  <data name="confirmMsgE.text.add" xml:space="preserve">
+  <data name="confirmMsgE_add" xml:space="preserve">
     <value>équipement ajouté avec succès ✔</value>
   </data>
-  <data name="confirmMsgE.text.delete" xml:space="preserve">
+  <data name="confirmMsgE_delete" xml:space="preserve">
     <value>équipement supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgE.text.update" xml:space="preserve">
+  <data name="confirmMsgE_update" xml:space="preserve">
     <value>équipement mise à jour avec succès ✔</value>
   </data>
-  <data name="confirmMsgH.text.add" xml:space="preserve">
+  <data name="confirmMsgH_add" xml:space="preserve">
     <value>Salle ajoutée avec succès ✔</value>
   </data>
-  <data name="confirmMsgH.text.delete" xml:space="preserve">
+  <data name="confirmMsgH_delete" xml:space="preserve">
     <value>Salle supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgH.text.update" xml:space="preserve">
+  <data name="confirmMsgH_update" xml:space="preserve">
     <value>Salle ajoutée avec succès ✔</value>
-  </data>
-  <data name="confirmMsgP.text.add" xml:space="preserve">
-    <value>Poste ajouté avec succès ✔</value>
-  </data>
-  <data name="confirmMsgP.text.delete" xml:space="preserve">
-    <value>Poste supprimée avec succès ✔</value>
-  </data>
-  <data name="confirmMsgP.text.update" xml:space="preserve">
-    <value>Poste mise à jour avec succès ✔</value>
   </data>
   <data name="confirmMsgPr" xml:space="preserve">
     <value>Profil mise à jour avec succès ✔</value>
   </data>
-  <data name="confirmMsgR.text.add" xml:space="preserve">
+  <data name="confirmMsgP_add" xml:space="preserve">
+    <value>Poste ajouté avec succès ✔</value>
+  </data>
+  <data name="confirmMsgP_delete" xml:space="preserve">
+    <value>Poste supprimée avec succès ✔</value>
+  </data>
+  <data name="confirmMsgP_update" xml:space="preserve">
+    <value>Poste mise à jour avec succès ✔</value>
+  </data>
+  <data name="confirmMsgR_add" xml:space="preserve">
     <value>rôle ajouté avec succès ✔</value>
   </data>
-  <data name="confirmMsgR.text.delete" xml:space="preserve">
+  <data name="confirmMsgR_delete" xml:space="preserve">
     <value>rôle supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgR.text.update" xml:space="preserve">
+  <data name="confirmMsgR_update" xml:space="preserve">
     <value>Rôle mise à jour avec succès ✔</value>
   </data>
-  <data name="confirmMsgU.text.add" xml:space="preserve">
+  <data name="confirmMsgU_add" xml:space="preserve">
     <value>Utilisateur ajouté avec succès ✔</value>
   </data>
-  <data name="confirmMsgU.text.delete" xml:space="preserve">
+  <data name="confirmMsgU_delete" xml:space="preserve">
     <value>Utisateur supprimée avec succès ✔</value>
   </data>
-  <data name="confirmMsgU.text.update" xml:space="preserve">
+  <data name="confirmMsgU_update" xml:space="preserve">
     <value>Utilisateur mise à jour avec succès ✔</value>
   </data>
   <data name="connectBtn" xml:space="preserve">
@@ -481,6 +481,9 @@
   <data name="postDeleteBtn" xml:space="preserve">
     <value>Supprimer</value>
   </data>
+  <data name="postExist" xml:space="preserve">
+    <value>Ce poste exist déjà éssayé d'en ajouter un autre!</value>
+  </data>
   <data name="postsBtn" xml:space="preserve">
     <value>Postes</value>
   </data>
@@ -648,6 +651,9 @@
   </data>
   <data name="userEmailProfileLabel2" xml:space="preserve">
     <value>E-mail de l'utilisateur</value>
+  </data>
+  <data name="userExist" xml:space="preserve">
+    <value>Cette utilisateur exist déjà!</value>
   </data>
   <data name="userNameProfileLabel2" xml:space="preserve">
     <value>Nom de l'utilisateur</value>

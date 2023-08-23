@@ -579,7 +579,14 @@ Public Class homePage
         connect_db()
 
         If postStateInput.Text = "" And postHallInput.Text = "" Then
-            addPostErrorMsg.Text = "please fill all the fields !"
+
+            If isFrench Then
+                addPostErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                addPostErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
             addPostErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -621,7 +628,14 @@ Public Class homePage
                 sqlReader = sqlCmd.ExecuteReader
 
                 If (sqlReader.Read()) Then
-                    addPostErrorMsg.Text = "post already exist try another one"
+
+                    If isFrench Then
+                        addPostErrorMsg.Text = My.Resources.resourcesFrText.postExist
+                    Else
+                        addPostErrorMsg.Text = My.Resources.resourcesEnText.postExist
+
+                    End If
+
                     addPostErrorMsg.Visible = True
                     Timer2.Interval = 3000
                     Timer2.Start()
@@ -652,7 +666,14 @@ Public Class homePage
                             User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
                             'this changes the content of confirmMsg
-                            confirmMsgP.Text = "Item successfully added ✔"
+
+                            If isFrench Then
+                                confirmMsgP.Text = My.Resources.resourcesFrText.confirmMsgP_add
+                            Else
+                                confirmMsgP.Text = My.Resources.resourcesEnText.confirmMsgP_add
+
+                            End If
+
 
                             'this makes the confirm message appear for 3secs
                             confirmMsgP.Visible = True
@@ -713,8 +734,12 @@ Public Class homePage
                             User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
                             'this changes the content of confirmMsg
-                            confirmMsgP.Text = "Item successfully added ✔"
+                            If isFrench Then
+                                confirmMsgP.Text = My.Resources.resourcesFrText.confirmMsgP_add
+                            Else
+                                confirmMsgP.Text = My.Resources.resourcesEnText.confirmMsgP_add
 
+                            End If
                             'this makes the confirm message appear for 3secs
                             confirmMsgP.Visible = True
                             Timer2.Interval = 3000
@@ -807,7 +832,7 @@ Public Class homePage
             admin.deletePost(postDataGridView, "posts", "post")
         End If
 
-        postChangeStatePanel.Visible = True
+        postChangeStatePanel.Visible = False
 
         User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
@@ -952,10 +977,18 @@ Public Class homePage
         User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
 
 
         'this changes the content of confirmMsg
         confirmMsgPr.Visible = True
+
+        If isFrench Then
+            confirmMsgPr.Text = My.Resources.resourcesFrText.confirmMsgPr
+        Else
+            confirmMsgPr.Text = My.Resources.resourcesEnText.confirmMsgPr
+
+        End If
 
         'timer duration
         Timer2.Interval = 3000
@@ -1094,7 +1127,14 @@ Public Class homePage
         connect_db()
 
         If adminAddHallNameInput.Text = "" Then
-            addHallErrorMsg.Text = "please fill the field !"
+
+            If isFrench Then
+                addHallErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                addHallErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
             addHallErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -1118,7 +1158,14 @@ Public Class homePage
             User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
             'this changes the content of confirmMsg
-            confirmMsgH.Text = "Item successfully added ✔"
+
+            If isFrench Then
+                confirmMsgH.Text = My.Resources.resourcesFrText.confirmMsgH_add
+            Else
+                confirmMsgH.Text = My.Resources.resourcesEnText.confirmMsgH_add
+
+            End If
+
 
             'this makes the confirm message appear for 3secs
             confirmMsgH.Visible = True
@@ -1242,7 +1289,14 @@ Public Class homePage
 
         If adminUpdateHallNameInput.Text = "" Then
             'this changes the content of updateHallErrorMsg
-            updateHallErrorMsg.Text = "Please fill all the fields"
+
+            If isFrench Then
+                updateHallErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                updateHallErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
 
             'this makes the confirm message appear for 3secs
             updateHallErrorMsg.Visible = True
@@ -1275,7 +1329,13 @@ Public Class homePage
                 User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
                 'this changes the content of confirmMsg
-                confirmMsgH.Text = "update successfull ✔"
+
+                If isFrench Then
+                    confirmMsgH.Text = My.Resources.resourcesFrText.confirmMsgH_update
+                Else
+                    confirmMsgH.Text = My.Resources.resourcesEnText.confirmMsgH_update
+
+                End If
 
                 'this makes the confirm message appear for 3secs
                 confirmMsgH.Visible = True
@@ -1412,15 +1472,113 @@ Public Class homePage
         Dim title_id As Integer
         'SQL Connection'
 
-        If userUserTitleInput.Text = "" Or userUserNameInput.Text = "" Or userUserPhoneInput.Text = "" Or userUserEmailInput.Text = "" Then
+        If userUserNameInput.Text = "" Or userUserPhoneInput.Text = "" Or userUserEmailInput.Text = "" Then
             'this changes the content of updateuserErrorMsg
-            updateUserErrorMsg.Text = "Please fill all the fields!"
+
+            If isFrench Then
+                updateUserErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                updateUserErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
 
             'this makes the confirm message appear for 3secs
 
             updateUserErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
+
+        ElseIf userUserTitleInput.Text = "" Then
+            Try
+                sqlConn.Open()
+
+                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserTitleInput.Text & "'"
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
+
+                While (sqlReader.Read())
+                    title_id = sqlReader.Item("title_id")
+                End While
+
+
+                sqlConn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "MySql getting titles for update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
+
+            Try
+                sqlConn.Open()
+
+                Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+
+
+                sqlCmd.Connection = sqlConn
+                'this changes the hall name
+
+                With sqlCmd
+
+                    .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "' where user_id = '" & user_id & "'"
+
+                    .CommandType = CommandType.Text
+
+                End With
+                sqlCmd.ExecuteNonQuery()
+                sqlConn.Close()
+
+                'this updates the datagridview
+                User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+                'this changes the content of confirmMsg
+
+                If isFrench Then
+                    confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                Else
+                    confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+
+                End If
+
+
+                'this makes the confirm message appear for 3secs
+                confirmMsgU.Visible = True
+                Timer2.Interval = 3000
+                Timer2.Start()
+
+
+                'this makes the update panel to disappear
+                userUpdatePanel.Visible = False
+
+                userDeleteBtn.Visible = False
+
+
+                If isFrench Then
+
+                    userTitle.Text = My.Resources.resourcesFrText.userTitle
+                Else
+
+                    userTitle.Text = My.Resources.resourcesEnText.userTitle
+                End If
+
+                userDataGridView.Visible = True
+                userUpdateBtn.Visible = True
+                userAddBtn.Visible = True
+                exportBtnU.Visible = True
+                'PrintBtnU.Visible = True
+                searchuserlabel.Visible = True
+
+                userUpdateBtn.Visible = False
+                userDeleteBtn.Visible = False
+                refreshBtnU.Visible = True
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "mysql update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Finally
+                sqlConn.Dispose()
+
+            End Try
+
+
         Else
 
 
@@ -1437,11 +1595,15 @@ Public Class homePage
                     title_id = sqlReader.Item("title_id")
                 End While
 
+
+                sqlConn.Close()
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql getting titles for update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Try
 
             Try
+                sqlConn.Open()
+
                 Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
 
 
@@ -1462,7 +1624,14 @@ Public Class homePage
                 User.displayTableU("users", userDataGridView, sqlDataTableU)
 
                 'this changes the content of confirmMsg
-                confirmMsgU.Text = "update successfull ✔"
+
+                If isFrench Then
+                    confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                Else
+                    confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+
+                End If
+
 
                 'this makes the confirm message appear for 3secs
                 confirmMsgU.Visible = True
@@ -1669,7 +1838,15 @@ Public Class homePage
         connect_db()
 
         If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Or userUserAddTitleInput.Text = "" Then
-            addUserErrorMsg.Text = "please fill all the fields !"
+
+            If isFrench Then
+                addUserErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                addUserErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
+
             addUserErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -1702,7 +1879,14 @@ Public Class homePage
 
             If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
                 addUserErrorMsg.Visible = True
-                addUserErrorMsg.Text = "The password does not correspond"
+
+                If isFrench Then
+                    addUserErrorMsg.Text = My.Resources.resourcesFrText.PwdNotMatch
+                Else
+                    addUserErrorMsg.Text = My.Resources.resourcesEnText.PwdNotMatch
+
+                End If
+
                 Timer2.Interval = 3000
                 Timer2.Start()
             Else
@@ -1716,7 +1900,14 @@ Public Class homePage
 
                     If (sqlReader.Read()) Then
                         addUserErrorMsg.Visible = True
-                        addUserErrorMsg.Text = "This user already exists !"
+
+                        If isFrench Then
+                            addUserErrorMsg.Text = My.Resources.resourcesFrText.userExist
+                        Else
+                            addUserErrorMsg.Text = My.Resources.resourcesEnText.userExist
+
+                        End If
+
                         Timer2.Interval = 3000
                         Timer2.Start()
                         sqlConn.Close()
@@ -1742,7 +1933,13 @@ Public Class homePage
                         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
                         'this changes the content of confirmMsg
-                        confirmMsgU.Text = "Item successfully added ✔"
+
+                        If isFrench Then
+                            confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_add
+                        Else
+                            confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_add
+
+                        End If
 
                         'this makes the confirm message appear for 3secs
                         confirmMsgU.Visible = True
@@ -1893,7 +2090,14 @@ Public Class homePage
 
         If titleNameInput.Text = "" Then
             'this changes the content of updateRoleErrorMsg
-            updateRoleErrorMsg.Text = "Please fill all the fields!"
+
+            If isFrench Then
+                updateRoleErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                updateRoleErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
 
             'this makes the confirm message appear for 3secs
             updateRoleErrorMsg.Visible = True
@@ -1925,7 +2129,14 @@ Public Class homePage
                 User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
                 'this changes the content of confirmMsg
-                confirmMsgR.Text = "update successfull ✔"
+
+                If isFrench Then
+                    confirmMsgR.Text = My.Resources.resourcesFrText.confirmMsgR_update
+                Else
+                    confirmMsgR.Text = My.Resources.resourcesEnText.confirmMsgR_update
+
+                End If
+
 
                 'this makes the confirm message appear for 3secs
                 confirmMsgR.Visible = True
@@ -2055,7 +2266,14 @@ Public Class homePage
         connect_db()
 
         If titleAddNameInput.Text = "" Then
-            addRoleErrorMsg.Text = "please fill the field"
+
+            If isFrench Then
+                addRoleErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                addRoleErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
             addRoleErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -2078,7 +2296,14 @@ Public Class homePage
             User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
             'this changes the content of confirmMsg
-            confirmMsgR.Text = "Item successfully added ✔"
+
+
+            If isFrench Then
+                confirmMsgR.Text = My.Resources.resourcesFrText.confirmMsgR_add
+            Else
+                confirmMsgR.Text = My.Resources.resourcesEnText.confirmMsgR_add
+
+            End If
 
             'this makes the confirm message appear for 3secs
             confirmMsgR.Visible = True
@@ -2493,7 +2718,14 @@ Public Class homePage
         connect_db()
 
         If equipmentTypeInput.Text = "" Or equipmentStateInput.Text = "" Then
-            addEquipmentErrorMsg.Text = "please fill all the fields !"
+
+            If isFrench Then
+                addEquipmentErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                addEquipmentErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
             addEquipmentErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -2539,7 +2771,14 @@ Public Class homePage
                     User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    confirmMsgE.Text = "Item successfully added ✔"
+
+                    If isFrench Then
+                        confirmMsgE.Text = My.Resources.resourcesFrText.confirmMsgE_add
+                    Else
+                        confirmMsgE.Text = My.Resources.resourcesEnText.confirmMsgE_add
+
+                    End If
+
 
                     'this makes the confirm message appear for 3secs
                     confirmMsgE.Visible = True
@@ -2591,8 +2830,12 @@ Public Class homePage
                     User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    confirmMsgE.Text = "Item successfully added ✔"
+                    If isFrench Then
+                        confirmMsgE.Text = My.Resources.resourcesFrText.confirmMsgE_add
+                    Else
+                        confirmMsgE.Text = My.Resources.resourcesEnText.confirmMsgE_add
 
+                    End If
                     'this makes the confirm message appear for 3secs
                     confirmMsgE.Visible = True
                     Timer2.Interval = 3000
@@ -2644,8 +2887,12 @@ Public Class homePage
                     User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    confirmMsgE.Text = "Item successfully added ✔"
+                    If isFrench Then
+                        confirmMsgE.Text = My.Resources.resourcesFrText.confirmMsgE_add
+                    Else
+                        confirmMsgE.Text = My.Resources.resourcesEnText.confirmMsgE_add
 
+                    End If
                     'this makes the confirm message appear for 3secs
                     confirmMsgE.Visible = True
                     Timer2.Interval = 3000
@@ -2696,8 +2943,12 @@ Public Class homePage
                     User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
                     'this changes the content of confirmMsg
-                    confirmMsgE.Text = "Item successfully added ✔"
+                    If isFrench Then
+                        confirmMsgE.Text = My.Resources.resourcesFrText.confirmMsgE_add
+                    Else
+                        confirmMsgE.Text = My.Resources.resourcesEnText.confirmMsgE_add
 
+                    End If
                     'this makes the confirm message appear for 3secs
                     confirmMsgE.Visible = True
                     Timer2.Interval = 3000

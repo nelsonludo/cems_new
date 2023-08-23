@@ -309,8 +309,19 @@ Public Class UserHomePage
         User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
         User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
+        profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
+
+
         'confirm message
         confirmMsgPr.Visible = True
+
+        If isFrench Then
+            confirmMsgP.Text = My.Resources.resourcesFrText.confirmMsgPr
+        Else
+            confirmMsgP.Text = My.Resources.resourcesEnText.confirmMsgPr
+
+        End If
 
         'timer interval 
         Timer2.Interval = 3000

@@ -853,7 +853,7 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "' where " & column & "_email = '" & previousEmail & "'"
 
                         .CommandType = CommandType.Text
 
@@ -999,7 +999,7 @@ Public Class users
 
             sqlConn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message, "MySql update user information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             sqlConn.Dispose()
         End Try

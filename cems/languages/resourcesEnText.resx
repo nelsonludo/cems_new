@@ -193,53 +193,53 @@
   <data name="changepoststatelabel" xml:space="preserve">
     <value>Post State</value>
   </data>
-  <data name="confirmMsgE.text.add" xml:space="preserve">
+  <data name="confirmMsgE_add" xml:space="preserve">
+    <value>Equipment successfully added ✔</value>
+  </data>
+  <data name="confirmMsgE_delete" xml:space="preserve">
+    <value>Equipment successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgE_update" xml:space="preserve">
+    <value>Equipment successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgH_add" xml:space="preserve">
     <value>Hall successfully added ✔</value>
   </data>
-  <data name="confirmMsgE.text.delete" xml:space="preserve">
+  <data name="confirmMsgH_delete" xml:space="preserve">
     <value>Hall successfully deleted ✔</value>
   </data>
-  <data name="confirmMsgE.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
-  </data>
-  <data name="confirmMsgH.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
-  </data>
-  <data name="confirmMsgH.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
-  </data>
-  <data name="confirmMsgH.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
-  </data>
-  <data name="confirmMsgP.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
-  </data>
-  <data name="confirmMsgP.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
-  </data>
-  <data name="confirmMsgP.text.update" xml:space="preserve">
+  <data name="confirmMsgH_update" xml:space="preserve">
     <value>Hall successfully updated ✔</value>
   </data>
   <data name="confirmMsgPr" xml:space="preserve">
     <value>Profile updated successfully ✔</value>
   </data>
-  <data name="confirmMsgR.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+  <data name="confirmMsgP_add" xml:space="preserve">
+    <value>Post successfully added ✔</value>
   </data>
-  <data name="confirmMsgR.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+  <data name="confirmMsgP_delete" xml:space="preserve">
+    <value>Post successfully deleted ✔</value>
   </data>
-  <data name="confirmMsgR.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+  <data name="confirmMsgP_update" xml:space="preserve">
+    <value>Post successfully updated ✔</value>
   </data>
-  <data name="confirmMsgU.text.add" xml:space="preserve">
-    <value>Hall successfully added ✔</value>
+  <data name="confirmMsgR_add" xml:space="preserve">
+    <value>Role successfully added ✔</value>
   </data>
-  <data name="confirmMsgU.text.delete" xml:space="preserve">
-    <value>Hall successfully deleted ✔</value>
+  <data name="confirmMsgR_delete" xml:space="preserve">
+    <value>Rolel successfully deleted ✔</value>
   </data>
-  <data name="confirmMsgU.text.update" xml:space="preserve">
-    <value>Hall successfully updated ✔</value>
+  <data name="confirmMsgR_update" xml:space="preserve">
+    <value>Role successfully updated ✔</value>
+  </data>
+  <data name="confirmMsgU_add" xml:space="preserve">
+    <value>User successfully added ✔</value>
+  </data>
+  <data name="confirmMsgU_delete" xml:space="preserve">
+    <value>User successfully deleted ✔</value>
+  </data>
+  <data name="confirmMsgU_update" xml:space="preserve">
+    <value>User successfully updated ✔</value>
   </data>
   <data name="connectBtn" xml:space="preserve">
     <value>Connect</value>
@@ -469,6 +469,9 @@
   <data name="postDeleteBtn" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="postExist" xml:space="preserve">
+    <value>Post already exist try adding another one!</value>
+  </data>
   <data name="postsBtn" xml:space="preserve">
     <value>Posts</value>
   </data>
@@ -633,6 +636,9 @@
   </data>
   <data name="userEmailProfileLabel2" xml:space="preserve">
     <value>User email</value>
+  </data>
+  <data name="userExist" xml:space="preserve">
+    <value>User already exist try adding another one!</value>
   </data>
   <data name="userNameProfileLabel2" xml:space="preserve">
     <value>User name</value>
