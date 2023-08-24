@@ -436,6 +436,9 @@
   <data name="hallUpdateValidationBtn" xml:space="preserve">
     <value>mettre à jour</value>
   </data>
+  <data name="invalidEmail" xml:space="preserve">
+    <value>Format de l'E-mail Invalide!</value>
+  </data>
   <data name="IPsBtn" xml:space="preserve">
     <value>Téléphones IP</value>
   </data>

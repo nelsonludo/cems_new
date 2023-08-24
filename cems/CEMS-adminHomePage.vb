@@ -1008,12 +1008,9 @@ Public Class homePage
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
-        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
-        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
         profileSubPanel2.Visible = False
         profileSubPanel1.Visible = True
-
 
         'this changes the content of confirmMsg
         confirmMsgPr.Visible = True
@@ -1550,67 +1547,84 @@ Public Class homePage
             End Try
 
             Try
-                sqlConn.Open()
+                If Not User.IsValidEmail(userUserEmailInput.Text) Then
+                    If isFrench Then
+                        updateUserErrorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
-                Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+                    Else
+                        updateUserErrorMsg.Text = My.Resources.resourcesFrText.invalidEmail
 
-
-                sqlCmd.Connection = sqlConn
-                'this changes the hall name
-
-                With sqlCmd
-
-                    .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "' where user_id = '" & user_id & "'"
-
-                    .CommandType = CommandType.Text
-
-                End With
-                sqlCmd.ExecuteNonQuery()
-                sqlConn.Close()
-
-                'this updates the datagridview
-                User.displayTableU("users", userDataGridView, sqlDataTableU)
-
-                'this changes the content of confirmMsg
-
-                If isFrench Then
-                    confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                    End If
+                    updateUserErrorMsg.Visible = True
+                    Timer1.Interval = 3000
+                    Timer1.Start()
                 Else
-                    confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+                    sqlConn.Open()
+
+                    Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+
+
+                    sqlCmd.Connection = sqlConn
+                    'this changes the hall name
+
+                    With sqlCmd
+
+                        .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "' where user_id = '" & user_id & "'"
+
+                        .CommandType = CommandType.Text
+
+                    End With
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
+
+
+
+                    'this updates the datagridview
+                    User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+                    'this changes the content of confirmMsg
+
+                    If isFrench Then
+                        confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                    Else
+                        confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+
+                    End If
+
+
+                    'this makes the confirm message appear for 3secs
+                    confirmMsgU.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the update panel to disappear
+                    userUpdatePanel.Visible = False
+
+                    userDeleteBtn.Visible = False
+
+
+                    If isFrench Then
+
+                        userTitle.Text = My.Resources.resourcesFrText.userTitle
+                    Else
+
+                        userTitle.Text = My.Resources.resourcesEnText.userTitle
+                    End If
+
+                    userDataGridView.Visible = True
+                    userUpdateBtn.Visible = True
+                    userAddBtn.Visible = True
+                    exportBtnU.Visible = True
+                    'PrintBtnU.Visible = True
+                    searchuserlabel.Visible = True
+
+                    userUpdateBtn.Visible = False
+                    userDeleteBtn.Visible = False
+                    refreshBtnU.Visible = True
 
                 End If
 
-
-                'this makes the confirm message appear for 3secs
-                confirmMsgU.Visible = True
-                Timer2.Interval = 3000
-                Timer2.Start()
-
-
-                'this makes the update panel to disappear
-                userUpdatePanel.Visible = False
-
-                userDeleteBtn.Visible = False
-
-
-                If isFrench Then
-
-                    userTitle.Text = My.Resources.resourcesFrText.userTitle
-                Else
-
-                    userTitle.Text = My.Resources.resourcesEnText.userTitle
-                End If
-
-                userDataGridView.Visible = True
-                userUpdateBtn.Visible = True
-                userAddBtn.Visible = True
-                exportBtnU.Visible = True
-                'PrintBtnU.Visible = True
-                searchuserlabel.Visible = True
-
-                userUpdateBtn.Visible = False
-                userDeleteBtn.Visible = False
-                refreshBtnU.Visible = True
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "mysql update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -1642,67 +1656,81 @@ Public Class homePage
             End Try
 
             Try
-                sqlConn.Open()
+                If Not User.IsValidEmail(userUserEmailInput.Text) Then
+                    If isFrench Then
+                        updateUserErrorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
-                Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+                    Else
+                        updateUserErrorMsg.Text = My.Resources.resourcesFrText.invalidEmail
 
-
-                sqlCmd.Connection = sqlConn
-                'this changes the hall name
-
-                With sqlCmd
-
-                    .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
-
-                    .CommandType = CommandType.Text
-
-                End With
-                sqlCmd.ExecuteNonQuery()
-                sqlConn.Close()
-
-                'this updates the datagridview
-                User.displayTableU("users", userDataGridView, sqlDataTableU)
-
-                'this changes the content of confirmMsg
-
-                If isFrench Then
-                    confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                    End If
+                    updateUserErrorMsg.Visible = True
+                    Timer1.Interval = 3000
+                    Timer1.Start()
                 Else
-                    confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+                    sqlConn.Open()
 
+                    Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
+
+
+                    sqlCmd.Connection = sqlConn
+                    'this changes the hall name
+
+                    With sqlCmd
+
+                        .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
+
+                        .CommandType = CommandType.Text
+
+                    End With
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
+
+                    'this updates the datagridview
+                    User.displayTableU("users", userDataGridView, sqlDataTableU)
+
+                    'this changes the content of confirmMsg
+
+                    If isFrench Then
+                        confirmMsgU.Text = My.Resources.resourcesFrText.confirmMsgU_update
+                    Else
+                        confirmMsgU.Text = My.Resources.resourcesEnText.confirmMsgU_update
+
+                    End If
+
+
+                    'this makes the confirm message appear for 3secs
+                    confirmMsgU.Visible = True
+                    Timer2.Interval = 3000
+                    Timer2.Start()
+
+
+                    'this makes the update panel to disappear
+                    userUpdatePanel.Visible = False
+
+                    userDeleteBtn.Visible = False
+
+
+                    If isFrench Then
+
+                        userTitle.Text = My.Resources.resourcesFrText.userTitle
+                    Else
+
+                        userTitle.Text = My.Resources.resourcesEnText.userTitle
+                    End If
+
+                    userDataGridView.Visible = True
+                    userUpdateBtn.Visible = True
+                    userAddBtn.Visible = True
+                    exportBtnU.Visible = True
+                    'PrintBtnU.Visible = True
+                    searchuserlabel.Visible = True
+
+                    userUpdateBtn.Visible = False
+                    userDeleteBtn.Visible = False
+                    refreshBtnU.Visible = True
                 End If
 
-
-                'this makes the confirm message appear for 3secs
-                confirmMsgU.Visible = True
-                Timer2.Interval = 3000
-                Timer2.Start()
-
-
-                'this makes the update panel to disappear
-                userUpdatePanel.Visible = False
-
-                userDeleteBtn.Visible = False
-
-
-                If isFrench Then
-
-                    userTitle.Text = My.Resources.resourcesFrText.userTitle
-                Else
-
-                    userTitle.Text = My.Resources.resourcesEnText.userTitle
-                End If
-
-                userDataGridView.Visible = True
-                userUpdateBtn.Visible = True
-                userAddBtn.Visible = True
-                exportBtnU.Visible = True
-                'PrintBtnU.Visible = True
-                searchuserlabel.Visible = True
-
-                userUpdateBtn.Visible = False
-                userDeleteBtn.Visible = False
-                refreshBtnU.Visible = True
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "mysql update user", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -1951,6 +1979,18 @@ Public Class homePage
                         Timer2.Interval = 3000
                         Timer2.Start()
                         sqlConn.Close()
+
+                    ElseIf Not user.IsValidEmail(userUserAddEmailInput.Text) Then
+                        If isFrench Then
+                            addUserErrorMsg.Text = My.Resources.resourcesEnText.invalidEmail
+
+                        Else
+                            addUserErrorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+
+                        End If
+                        addUserErrorMsg.Visible = True
+                        Timer1.Interval = 3000
+                        Timer1.Start()
                     Else
 
                         Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
@@ -3731,7 +3771,7 @@ Public Class homePage
         textBoxEmail_Validating(userUserAddEmailInput)
     End Sub
 
-    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles userEmailProfileInput.TextChanged
+    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As EventArgs) Handles userEmailProfileInput.TextChanged
         textBoxEmail_Validating(userEmailProfileInput)
     End Sub
 
@@ -3739,21 +3779,15 @@ Public Class homePage
         Dim email As String = textBoxEmail.Text
 
         ' Check for email format
-        IsValidEmail(email)
-
-        If Not IsValidEmail(email) Then
+        If Not User.IsValidEmail(email) Then
             errorProviderEmail.SetError(textBoxEmail, "Invalid email format")
         Else
             errorProviderEmail.SetError(textBoxEmail, "") ' Clear the error message
         End If
     End Sub
 
-    Private Function IsValidEmail(email As String) As Boolean
-        Dim pattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-        Dim regex As New Regex(pattern)
-        Dim match As Match = regex.Match(email)
-        Return match.Success
-    End Function
+
+
 
     'close all the servers when the app is closed
     Private Sub adminHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing

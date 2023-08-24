@@ -424,6 +424,9 @@
   <data name="hallUpdateValidationBtn" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="invalidEmail" xml:space="preserve">
+    <value>Invalid email format!</value>
+  </data>
   <data name="IPsBtn" xml:space="preserve">
     <value>IP Phones</value>
   </data>

@@ -1019,6 +1019,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Format de l&apos;E-mail Invalide!.
+        '''</summary>
+        Friend Shared ReadOnly Property invalidEmail() As String
+            Get
+                Return ResourceManager.GetString("invalidEmail", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Téléphones IP.
         '''</summary>
         Friend Shared ReadOnly Property IPsBtn() As String

@@ -1,7 +1,7 @@
 list of things to do in cems
 *CODE TODO
 -add a function that changes the location of titles based on the language
--set a check for all email textboxes for email format
+-complete login forms translations
 -fix the tab index
 -add a check on admin roles so that he can't delete admin and user roles 
 -DISCUSS THE ON ANY MODIFICATOINS CONCERNING THE ROLE BECAUSE THE QUERRIES DEPEND ON THOSE (UPDATING,ADDING OR DELETING A ROLE MIGHT MAKE EVERY USER WITH THAT INAPTE TO USE THE SYSTEM)

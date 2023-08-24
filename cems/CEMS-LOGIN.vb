@@ -36,7 +36,7 @@ Public Class Form1
     'the resourcemanager as it name says helps to manage the resources. In our case these are the translation files found in the language folder 
     Private resourceManager As New ResourceManager("cems.Resources", GetType(Form1).Assembly)
 
-
+    Dim isFrench As Boolean = True
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -115,6 +115,8 @@ Public Class Form1
             ' Recursively translate child controls
             TranslateFormControlsEnglish(childControl)
         Next
+
+        isFrench = False
     End Sub
 
     'this is a recurcive function that loops through all the controls(mostly labels and buttons) in the form and translates them to french as set in the resourceFrText.resx file
@@ -131,6 +133,8 @@ Public Class Form1
             ' Recursively translate child controls
             TranslateFormControlsFrench(childControl)
         Next
+
+        isFrench = True
     End Sub
 
 
@@ -452,7 +456,24 @@ Public Class Form1
 
         User.user_email = emailtxt.Text
 
-        userLogin = User.login(passwordtxt.Text, User.user_email, forgotPasswordMessage, Timer1)
+        IsValidEmail(emailtxt.Text)
+
+        If Not IsValidEmail(emailtxt.Text) Then
+            If isFrench Then
+                forgotPasswordMessage.Text = My.Resources.resourcesEnText.invalidEmail
+
+            Else
+                forgotPasswordMessage.Text = My.Resources.resourcesFrText.invalidEmail
+
+            End If
+            forgotPasswordMessage.Visible = True
+            Timer1.Interval = 3000
+            Timer1.Start()
+        Else
+
+            userLogin = User.login(passwordtxt.Text, User.user_email, forgotPasswordMessage, Timer1)
+        End If
+
 
     End Sub
 
@@ -733,6 +754,7 @@ COMMIT;
             errorProviderEmail.SetError(textBoxEmail, "") ' Clear the error message
         End If
     End Sub
+
 
     Private Function IsValidEmail(email As String) As Boolean
         Dim pattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
