@@ -1019,6 +1019,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Votre chaîne de connexion n&apos;est pas valide vérifiez vos informations !.
+        '''</summary>
+        Friend Shared ReadOnly Property InvalidConnectionString() As String
+            Get
+                Return ResourceManager.GetString("InvalidConnectionString", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Format de l&apos;E-mail Invalide!.
         '''</summary>
         Friend Shared ReadOnly Property invalidEmail() As String
@@ -1051,6 +1060,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property loginBtn() As String
             Get
                 Return ResourceManager.GetString("loginBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Connexion avec les informations du compte administrateur avec succès ✔.
+        '''</summary>
+        Friend Shared ReadOnly Property LoginSuccess() As String
+            Get
+                Return ResourceManager.GetString("LoginSuccess", resourceCulture)
             End Get
         End Property
         

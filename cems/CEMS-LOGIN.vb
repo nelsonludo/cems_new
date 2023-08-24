@@ -169,7 +169,14 @@ Public Class Form1
         Dim test As Boolean = False
 
         If servercb = "" Or usernamecb = "" Or databasecb = "" Then
-            connexionErrorMsg.Text = "please fill all the fields "
+
+            If isFrench Then
+                connexionErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            Else
+                connexionErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+
+            End If
 
             connexionErrorMsg.Visible = True
             Timer1.Interval = 3000
@@ -187,8 +194,15 @@ Public Class Form1
             End Try
 
             If test Then
-                connexionErrorMsg.Text = "your connexion string is not valid check your information"
 
+
+                If isFrench Then
+                    connexionErrorMsg.Text = My.Resources.resourcesEnText.InvalidConnectionString
+
+                Else
+                    connexionErrorMsg.Text = My.Resources.resourcesFrText.InvalidConnectionString
+
+                End If
                 connexionErrorMsg.Visible = True
                 Timer1.Interval = 3000
                 Timer1.Start()
@@ -342,7 +356,15 @@ Public Class Form1
         connect_db(server, username, password, database)
 
         If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Or userUserAddTitleInput.Text = "" Then
-            addUserErrorMsg.Text = "please fill all the fields !"
+
+            If isFrench Then
+                addUserErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            Else
+                addUserErrorMsg.Text = My.Resources.resourcesFrText.EmptyField
+
+            End If
+
             addUserErrorMsg.Visible = True
             Timer2.Interval = 3000
             Timer2.Start()
@@ -376,7 +398,15 @@ Public Class Form1
 
             If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
                 addUserErrorMsg.Visible = True
-                addUserErrorMsg.Text = "The password does not correspond"
+                If isFrench Then
+                    addUserErrorMsg.Text = My.Resources.resourcesEnText.PwdNotMatch
+
+                Else
+                    addUserErrorMsg.Text = My.Resources.resourcesFrText.PwdNotMatch
+
+                End If
+
+
                 Timer2.Interval = 3000
                 Timer2.Start()
             Else
@@ -395,6 +425,14 @@ Public Class Form1
                     forgotPasswordMessage.ForeColor = Color.Green
 
                     forgotPasswordMessage.Text = "login with the admin account information ✔"
+
+                    If isFrench Then
+                        forgotPasswordMessage.Text = My.Resources.resourcesEnText.LoginSuccess
+
+                    Else
+                        forgotPasswordMessage.Text = My.Resources.resourcesFrText.LoginSuccess
+
+                    End If
 
 
                     'this makes the confirm message appear for 3secs
@@ -507,8 +545,13 @@ Public Class Form1
 
             sqlConn.Close()
 
+            If isFrench Then
 
-            forgotPasswordMessage.Text = "Veuillez contacter l'administrateur à travers ces contacts " & admin_email & " et " & admin_phone_number & " "
+                forgotPasswordMessage.Text = "Veuillez contacter l'administrateur via ces contacts " & admin_email & " et " & admin_phone_number & " "
+            Else
+                forgotPasswordMessage.Text = "Please contact the administrator via " & admin_email & " and, or  " & admin_phone_number & " "
+
+            End If
 
             forgotPasswordMessage.Visible = True
             Timer1.Interval = 3000

@@ -436,6 +436,9 @@
   <data name="hallUpdateValidationBtn" xml:space="preserve">
     <value>mettre à jour</value>
   </data>
+  <data name="InvalidConnectionString" xml:space="preserve">
+    <value>Votre chaîne de connexion n'est pas valide vérifiez vos informations !</value>
+  </data>
   <data name="invalidEmail" xml:space="preserve">
     <value>Format de l'E-mail Invalide!</value>
   </data>
@@ -447,6 +450,9 @@
   </data>
   <data name="loginBtn" xml:space="preserve">
     <value>Se connecter</value>
+  </data>
+  <data name="LoginSuccess" xml:space="preserve">
+    <value>Connexion avec les informations du compte administrateur avec succès ✔</value>
   </data>
   <data name="loginTitle" xml:space="preserve">
     <value>Se connecter</value>

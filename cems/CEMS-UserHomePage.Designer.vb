@@ -1298,7 +1298,7 @@ Partial Class UserHomePage
         Me.confirmMsgP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgP.ForeColor = System.Drawing.Color.LimeGreen
         Me.confirmMsgP.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.confirmMsgP.Location = New System.Drawing.Point(1098, 10)
+        Me.confirmMsgP.Location = New System.Drawing.Point(1060, 55)
         Me.confirmMsgP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgP.Name = "confirmMsgP"
         Me.confirmMsgP.Size = New System.Drawing.Size(202, 22)
@@ -1532,7 +1532,7 @@ Partial Class UserHomePage
         Me.confirmMsgE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.confirmMsgE.ForeColor = System.Drawing.Color.LimeGreen
         Me.confirmMsgE.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.confirmMsgE.Location = New System.Drawing.Point(994, 10)
+        Me.confirmMsgE.Location = New System.Drawing.Point(1060, 55)
         Me.confirmMsgE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.confirmMsgE.Name = "confirmMsgE"
         Me.confirmMsgE.Size = New System.Drawing.Size(202, 22)
