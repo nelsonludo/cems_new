@@ -846,7 +846,7 @@ Partial Class UserHomePage
         Me.updateProfileTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.updateProfileTitle.ForeColor = System.Drawing.Color.MintCream
         Me.updateProfileTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.updateProfileTitle.Location = New System.Drawing.Point(275, 13)
+        Me.updateProfileTitle.Location = New System.Drawing.Point(55, 9)
         Me.updateProfileTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.updateProfileTitle.Name = "updateProfileTitle"
         Me.updateProfileTitle.Size = New System.Drawing.Size(122, 22)
@@ -1723,9 +1723,9 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
+        Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.PostPanel)
-        Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.sideBar)

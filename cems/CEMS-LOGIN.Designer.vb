@@ -123,7 +123,7 @@ Partial Class Form1
         Me.loginTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.loginTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.loginTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.loginTitle.Location = New System.Drawing.Point(240, 9)
+        Me.loginTitle.Location = New System.Drawing.Point(55, 9)
         Me.loginTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.loginTitle.Name = "loginTitle"
         Me.loginTitle.Size = New System.Drawing.Size(59, 22)
@@ -230,7 +230,7 @@ Partial Class Form1
         Me.connexionTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.connexionTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.connexionTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.connexionTitle.Location = New System.Drawing.Point(222, 9)
+        Me.connexionTitle.Location = New System.Drawing.Point(55, 9)
         Me.connexionTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.connexionTitle.Name = "connexionTitle"
         Me.connexionTitle.Size = New System.Drawing.Size(105, 22)
@@ -391,7 +391,7 @@ Partial Class Form1
         Me.createAdminTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.createAdminTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.createAdminTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.createAdminTitle.Location = New System.Drawing.Point(210, 9)
+        Me.createAdminTitle.Location = New System.Drawing.Point(55, 9)
         Me.createAdminTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.createAdminTitle.Name = "createAdminTitle"
         Me.createAdminTitle.Size = New System.Drawing.Size(129, 22)

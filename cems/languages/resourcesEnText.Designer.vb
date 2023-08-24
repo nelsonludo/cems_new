@@ -1469,6 +1469,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à .
+        '''</summary>
+        Friend Shared ReadOnly Property sttring() As String
+            Get
+                Return ResourceManager.GetString("sttring", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à User Title:.
         '''</summary>
         Friend Shared ReadOnly Property TitleProfileLabel() As String
