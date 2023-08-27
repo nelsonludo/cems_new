@@ -1099,6 +1099,7 @@ Public Class users
 
         connect_db()
 
+        
 
         Try
             sqlConn.Open()

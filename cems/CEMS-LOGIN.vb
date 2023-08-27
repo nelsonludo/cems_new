@@ -520,6 +520,7 @@ Public Class Form1
             user_email = emailtxt.Text
         End If
 
+
     End Sub
 
     Private Sub passwordtxt_TextChanged(sender As Object, e As KeyEventArgs) Handles passwordtxt.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
