@@ -14,8 +14,6 @@ Imports ClosedXML.Excel
 Imports Org.BouncyCastle.Crypto.Generators
 Imports BCrypt.Net.BCrypt
 Imports System.Text.RegularExpressions
-
-
 Public Class users
     Protected sqlConn As New MySqlConnection
     Protected sqlCmd As New MySqlCommand
@@ -26,6 +24,7 @@ Public Class users
 
     Public user_name As String
     Public user_email As String
+    Public permanentEmail As String
     Protected errorMsg As Control
     Protected timer As Timer
 
@@ -35,11 +34,10 @@ Public Class users
     End Sub
 
     'the login function
-    Public Function login(user_password, user_email, errorMsg, timer)
+    Public Function login(user_password As String, user_email As String, errorMsg As Label, timer As Timer)
         connect_db()
 
         Try
-
             sqlConn.Open()
             'check user info
             sqlQuery = "select * from cems.cems_users where user_email = '" & user_email & "'"
@@ -63,13 +61,14 @@ Public Class users
                     Else
                         homePage.Show()
                     End If
+                    permanentEmail = user_email 'this is the email that is going to be used throughout the application 
                     Form1.Visible = False
 
 
                 Else
                     errorMsg.Text = "email or password invalid"
 
-                    errorMsg.visible = True
+                    errorMsg.Visible = True
                     timer.Interval = 3000
                     timer.Start()
 
@@ -80,18 +79,20 @@ Public Class users
             Else
                 errorMsg.Text = "email or password invalid!"
 
-                errorMsg.visible = True
+                errorMsg.Visible = True
                 timer.Interval = 3000
                 timer.Start()
 
             End If
             sqlConn.Close()
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MySql login", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             sqlConn.Dispose()
         End Try
-        Return 0
+        Return True
     End Function
 
     'this is to display the user's name 
@@ -1062,6 +1063,8 @@ Public Class users
 
                         sqlCmd.Connection = sqlConn
 
+                        MessageBox.Show(phone)
+
                         With sqlCmd
 
                             .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
@@ -1092,14 +1095,15 @@ Public Class users
     End Sub
 
     'this is used to update one's personal information
-    Public Sub updateUserInformation(table As String, column As String, searchValue As Control, name As Control, email As Control, phone As Control, title As Control)
+    Public Sub updateUserInformation(table As String, column As String, searchValue As String, name As Control, email As Control, phone As Control, title As Control)
 
         connect_db()
+
 
         Try
             sqlConn.Open()
             'username appear
-            sqlQuery = "select cems_" & table & "." & column & "_id, cems_" & table & "." & column & "_name, cems_" & table & "." & column & "_phone_number, cems_" & table & "." & column & "_email, cems_titles.title_name from cems_" & table & "  inner join cems_titles on cems_" & table & ".title_id = cems_titles.title_id where " & column & "_email = '" & searchValue.Text & "'" 'Form1.emailtxt.Text'
+            sqlQuery = "select cems_" & table & "." & column & "_id, cems_" & table & "." & column & "_name, cems_" & table & "." & column & "_phone_number, cems_" & table & "." & column & "_email, cems_titles.title_name from cems_" & table & "  inner join cems_titles on cems_" & table & ".title_id = cems_titles.title_id where " & column & "_email = '" & searchValue & "'" 'Form1.emailtxt.Text'
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then

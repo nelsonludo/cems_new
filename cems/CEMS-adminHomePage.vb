@@ -14,6 +14,7 @@ Imports System.Text.RegularExpressions
 
 
 
+
 Public Class homePage
     Dim sqlConn As New MySqlConnection
     Dim sqlCmd As New MySqlCommand
@@ -113,6 +114,9 @@ Public Class homePage
         User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
         admin.activeCount(userNumber, "users")
 
+        User.activeCount(repairCPUNumber, "equipments", "equipment", "In reparation", "CPU")
+        User.activeCount(repairIPNumber, "equipments", "equipment", "In reparation", "IP_phone")
+        User.activeCount(repairMonitorNumber, "equipments", "equipment", "In reparation", "monitor")
 
 
     End Sub
@@ -552,6 +556,15 @@ Public Class homePage
 
         postChangeStatePanel.Visible = False
 
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
+
     End Sub
 
 
@@ -965,7 +978,8 @@ Public Class homePage
 
 
         connect_db()
-        User.updateUserInformation("users", "user", Form1.emailtxt, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+
     End Sub
 
     'update profile button
@@ -1007,6 +1021,8 @@ Public Class homePage
     End Sub
 
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
+        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, confirmMsgPr, profileSubPanel2, Timer1)
+        User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
 
         profileSubPanel2.Visible = False
@@ -1035,6 +1051,8 @@ Public Class homePage
         End If
 
         User.showUserName(Form1.emailtxt, aName)
+
+
     End Sub
 
 
@@ -1131,6 +1149,15 @@ Public Class homePage
 
         hallUpdateBtn.Visible = False
         hallDeleteBtn.Visible = False
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
     End Sub
 
     'hall add buttons
@@ -1477,6 +1504,15 @@ Public Class homePage
 
         userUpdateBtn.Visible = True
         userDeleteBtn.Visible = True
+
+        hallSearchBoxH.Text = ""
+        equipmentSearchBox.Text = ""
+        hallSearchBoxE.Text = ""
+        hallSearchBoxP.Text = ""
+        userSearchBoxE.Text = ""
+        userSearchBox.Text = ""
+        postSearchBox.Text = ""
+        stateSearchBoxP.Text = ""
     End Sub
 
     Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
@@ -1897,6 +1933,7 @@ Public Class homePage
         searchuserlabel.Visible = False
         refreshBtnU.Visible = False
         userAddBtn.Visible = False
+        userDeleteBtn.Visible = False
 
     End Sub
 
@@ -2164,6 +2201,7 @@ Public Class homePage
         User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
         roleUpdateBtn.Visible = True
+
 
     End Sub
 
@@ -2500,7 +2538,12 @@ Public Class homePage
     Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
         User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
-        statePanel.Visible = True
+        statePanel.Visible = False
+        hallSearchBoxE.Text = ""
+        equipmentSearchBox.Text = ""
+        userSearchBoxE.Text = ""
+
+
 
     End Sub
     Private Sub CPUsBtn_Click(sender As Object, e As EventArgs) Handles CPUsBtn.Click
@@ -3143,7 +3186,7 @@ Public Class homePage
 
     'delete equipment
 
-    Private Sub equipmentdeleteBtn_Click(sender As Object, e As EventArgs) Handles equipmentDeleteBtn.Click  'delete
+    Private Sub equipmentdeleteBtn_Click(sender As Object, e As EventArgs)  'delete
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this equipment ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then

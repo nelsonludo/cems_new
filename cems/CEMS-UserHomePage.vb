@@ -66,6 +66,10 @@ Public Class UserHomePage
         User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
         User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
 
+        User.activeCount(repairCPUNumber, "equipments", "equipment", "In reparation", "CPU")
+        User.activeCount(repairIPNumber, "equipments", "equipment", "In reparation", "IP_phone")
+        User.activeCount(repairMonitorNumber, "equipments", "equipment", "In reparation", "monitor")
+
 
 
 
@@ -267,7 +271,7 @@ Public Class UserHomePage
 
 
         connect_db()
-        User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
+        User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
     End Sub
 
@@ -308,7 +312,7 @@ Public Class UserHomePage
     Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
         User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
-        User.updateUserInformation("users", "user", Form1.emailtxt, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
+        User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
         profileSubPanel2.Visible = False
         profileSubPanel1.Visible = True
@@ -982,7 +986,7 @@ Public Class UserHomePage
 
     'checks for email format 
 
-    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles userEmailProfileInput.TextChanged
+    Private Sub userEmailProfileInput_TextChanged(sender As Object, e As EventArgs) Handles userEmailProfileInput.TextChanged
         textBoxEmail_Validating(userEmailProfileInput)
     End Sub
 

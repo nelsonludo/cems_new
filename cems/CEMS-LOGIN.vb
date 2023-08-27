@@ -27,7 +27,7 @@ Public Class Form1
 
     Dim User As New users
     Dim admin As New admin
-
+    Public user_email As String
     Public apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
 
     Public mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
@@ -492,6 +492,8 @@ Public Class Form1
 
         Dim userLogin As Boolean
 
+
+        'set the value of the email textbox to the user_email variable of the user class for test in the user login method
         User.user_email = emailtxt.Text
 
         IsValidEmail(emailtxt.Text)
@@ -509,9 +511,14 @@ Public Class Form1
             Timer1.Start()
         Else
 
+
             userLogin = User.login(passwordtxt.Text, User.user_email, forgotPasswordMessage, Timer1)
+
         End If
 
+        If userLogin Then
+            user_email = emailtxt.Text
+        End If
 
     End Sub
 

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addEquipmentBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="addequipmenthalllabel" xml:space="preserve">
     <value>Equipment hall </value>
   </data>
@@ -294,9 +297,6 @@
   </data>
   <data name="EmptyField" xml:space="preserve">
     <value>Please fill all the fields!</value>
-  </data>
-  <data name="equipmentAddBtn" xml:space="preserve">
-    <value>Add</value>
   </data>
   <data name="equipmentAddCancelBtn" xml:space="preserve">
     <value>Cancel</value>

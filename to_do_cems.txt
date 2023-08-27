@@ -1,16 +1,25 @@
 list of things to do in cems
 *CODE TODO
 -add a function that changes the location of titles based on the language
--complete login forms translations
 -fix the tab index
 -add a check on admin roles so that he can't delete admin and user roles 
--DISCUSS THE ON ANY MODIFICATOINS CONCERNING THE ROLE BECAUSE THE QUERRIES DEPEND ON THOSE (UPDATING,ADDING OR DELETING A ROLE MIGHT MAKE EVERY USER WITH THAT INAPTE TO USE THE SYSTEM)
+-remove add role btn
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
+-add a post number and equipment number in the show all halls datagrid view 
+
+*both
+-add a side panel to specify the number of posts and number equipment and make a combobox for equipment type selection
 
 *DESIGN TODO
 -responsive
 -check if the design is appropriate for the disabled and color blind people(read on how to do that) 
 take note of the commit message !
+
+
+
+*GENERAL TODO
+-produce a testing check list
+-create microsoft account 
 
 Important styles
 label51 size:548, 45; location:0,0

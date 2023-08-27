@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add.
+        '''</summary>
+        Friend Shared ReadOnly Property addEquipmentBtn() As String
+            Get
+                Return ResourceManager.GetString("addEquipmentBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Equipment hall .
         '''</summary>
         Friend Shared ReadOnly Property addequipmenthalllabel() As String
@@ -592,15 +601,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property EmptyField() As String
             Get
                 Return ResourceManager.GetString("EmptyField", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une chaîne localisée semblable à Add.
-        '''</summary>
-        Friend Shared ReadOnly Property equipmentAddBtn() As String
-            Get
-                Return ResourceManager.GetString("equipmentAddBtn", resourceCulture)
             End Get
         End Property
         
