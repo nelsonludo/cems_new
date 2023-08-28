@@ -932,7 +932,7 @@ Public Class homePage
 
 
     'profile button
-    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
+    Private Async Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
         adminEquipmentPanel.Visible = False
         adminPostPanel.Visible = False
@@ -978,7 +978,7 @@ Public Class homePage
 
 
         connect_db()
-        User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+        Await User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
     End Sub
 
@@ -1020,9 +1020,10 @@ Public Class homePage
         End If
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
+    Private Async Sub updateProfileValidateBtn_ClickAsync(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
         User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, confirmMsgPr, profileSubPanel2, Timer1)
-        User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
+
+        Await User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
 
         profileSubPanel2.Visible = False

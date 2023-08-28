@@ -669,6 +669,8 @@ Public Class users
                 timer.Interval = 3000
                 timer.Start()
             Else
+
+
                 If pwd <> confirmPwd Then
                     errorMsg.Visible = True
                     If isfrench Then
@@ -684,35 +686,23 @@ Public Class users
 
                 ElseIf name = "" And phone = "" And pwd = "" Then
 
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlConn.Open()
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    sqlCmd.Connection = sqlConn
 
-                        sqlCmd.Connection = sqlConn
+                    With sqlCmd
 
-                        With sqlCmd
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandType = CommandType.Text
 
-                            .CommandType = CommandType.Text
+                    End With
 
-                        End With
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-                    End If
+                    panel.Visible = False
 
                 ElseIf name = "" And email = "" And pwd = "" Then
 
@@ -776,37 +766,25 @@ Public Class users
                 ElseIf name = "" And phone = "" Then
 
 
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
+                    sqlConn.Open()
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlCmd.Connection = sqlConn
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    With sqlCmd
 
-                        sqlCmd.Connection = sqlConn
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                        With sqlCmd
+                        .CommandType = CommandType.Text
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
+                    End With
 
-                            .CommandType = CommandType.Text
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        End With
-
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-                    End If
+                    panel.Visible = False
 
                 ElseIf name = "" And email = "" Then
+
 
                     sqlConn.Open()
 
@@ -845,35 +823,23 @@ Public Class users
                     panel.Visible = False
 
                 ElseIf name = "" And pwd = "" Then
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlConn.Open()
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    sqlCmd.Connection = sqlConn
 
-                        sqlCmd.Connection = sqlConn
+                    With sqlCmd
 
-                        With sqlCmd
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_phone_number = '" & phone & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_phone_number = '" & phone & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandType = CommandType.Text
 
-                            .CommandType = CommandType.Text
+                    End With
 
-                        End With
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-                    End If
+                    panel.Visible = False
 
 
                 ElseIf pwd = "" And email = "" Then
@@ -896,102 +862,62 @@ Public Class users
                     panel.Visible = False
 
                 ElseIf pwd = "" And phone = "" Then
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
+                    sqlConn.Open()
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlCmd.Connection = sqlConn
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    With sqlCmd
 
-                        sqlCmd.Connection = sqlConn
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "' where " & column & "_email = '" & previousEmail & "'"
 
-                        With sqlCmd
+                        .CommandType = CommandType.Text
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "' where " & column & "_email = '" & previousEmail & "'"
+                    End With
 
-                            .CommandType = CommandType.Text
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        End With
+                    panel.Visible = False
 
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-
-                    End If
 
                 ElseIf name = "" Then
 
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
+                    sqlConn.Open()
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlCmd.Connection = sqlConn
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    With sqlCmd
 
-                        sqlCmd.Connection = sqlConn
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                        With sqlCmd
+                        .CommandType = CommandType.Text
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
+                    End With
 
-                            .CommandType = CommandType.Text
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        End With
-
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-                    End If
+                    panel.Visible = False
 
                 ElseIf phone = "" Then
 
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                    sqlConn.Open()
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
+                    sqlCmd.Connection = sqlConn
 
-                        sqlConn.Open()
+                    With sqlCmd
 
-                        sqlCmd.Connection = sqlConn
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                        With sqlCmd
+                        .CommandType = CommandType.Text
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
+                    End With
 
-                            .CommandType = CommandType.Text
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        End With
-
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-                    End If
-
+                    panel.Visible = False
 
                 ElseIf email = "" Then
 
@@ -1015,19 +941,7 @@ Public Class users
 
                 ElseIf pwd = "" Then
 
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
-
-                        Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
-
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    sqlConn.Open()
 
                         sqlCmd.Connection = sqlConn
 
@@ -1043,47 +957,34 @@ Public Class users
                         sqlConn.Close()
 
                         panel.Visible = False
-                    End If
-
-                Else
-
-                    If Not IsValidEmail(email) Then
-                        If isfrench Then
-                            errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
                         Else
-                            errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
 
-                        End If
-                        errorMsg.Visible = True
-                        timer.Interval = 3000
-                        timer.Start()
-                    Else
-                        sqlConn.Open()
+                    sqlConn.Open()
 
-                        sqlCmd.Connection = sqlConn
+                    sqlCmd.Connection = sqlConn
 
-                        MessageBox.Show(phone)
 
-                        With sqlCmd
+                    With sqlCmd
 
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
 
-                            .CommandType = CommandType.Text
+                        .CommandType = CommandType.Text
 
-                        End With
+                    End With
 
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                        panel.Visible = False
-                    End If
+                    panel.Visible = False
 
 
                 End If
 
+
             End If
 
+            Form1.user_email = email
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1095,20 +996,22 @@ Public Class users
     End Sub
 
     'this is used to update one's personal information
-    Public Sub updateUserInformation(table As String, column As String, searchValue As String, name As Control, email As Control, phone As Control, title As Control)
+    Public Async Function updateUserInformation(table As String, column As String, searchValue As String, name As Control, email As Control, phone As Control, title As Control) As Task
 
         connect_db()
 
-        
+
 
         Try
             sqlConn.Open()
             'username appear
             sqlQuery = "select cems_" & table & "." & column & "_id, cems_" & table & "." & column & "_name, cems_" & table & "." & column & "_phone_number, cems_" & table & "." & column & "_email, cems_titles.title_name from cems_" & table & "  inner join cems_titles on cems_" & table & ".title_id = cems_titles.title_id where " & column & "_email = '" & searchValue & "'" 'Form1.emailtxt.Text'
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-            sqlReader = sqlCmd.ExecuteReader
+            sqlReader = Await sqlCmd.ExecuteReaderAsync
             If (sqlReader.Read()) Then
                 name.Text = sqlReader.Item("" & column & "_name")
+
+
                 email.Text = sqlReader.Item("" & column & "_email")
                 phone.Text = sqlReader.Item("" & column & "_phone_number")
                 title.Text = sqlReader.Item("title_name")
@@ -1122,7 +1025,8 @@ Public Class users
         Finally
             sqlConn.Dispose()
         End Try
-    End Sub
+
+    End Function
 
 
     Private Sub releaseObject(ByVal obj As Object)

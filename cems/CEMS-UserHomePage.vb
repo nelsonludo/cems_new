@@ -246,7 +246,7 @@ Public Class UserHomePage
     End Sub
 
     'profile buttons
-    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
+    Private Async Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
 
         ProfilePanel.Visible = True
         EquipmentPanel.Visible = False
@@ -271,7 +271,7 @@ Public Class UserHomePage
 
 
         connect_db()
-        User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
+        Await User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
     End Sub
 
@@ -309,10 +309,10 @@ Public Class UserHomePage
 
     End Sub
 
-    Private Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
+    Private Async Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
         User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
-        User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
+        Await User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
         profileSubPanel2.Visible = False
         profileSubPanel1.Visible = True
