@@ -6255,7 +6255,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="userPwdProfileInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 279</value>
+    <value>70, 173</value>
   </data>
   <data name="userPwdProfileInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -6276,9 +6276,366 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userPwdProfileInput.Parent" xml:space="preserve">
-    <value>profileSubPanel2</value>
+    <value>profileSubPanel3</value>
   </data>
   <data name="&gt;&gt;userPwdProfileInput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="changePwdTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="changePwdTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="changePwdTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="changePwdTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changePwdTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 13</value>
+  </data>
+  <data name="changePwdTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="changePwdTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 22</value>
+  </data>
+  <data name="changePwdTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="changePwdTitle.Text" xml:space="preserve">
+    <value>Update Profile</value>
+  </data>
+  <data name="&gt;&gt;changePwdTitle.Name" xml:space="preserve">
+    <value>changePwdTitle</value>
+  </data>
+  <data name="&gt;&gt;changePwdTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePwdTitle.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;changePwdTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6pt, style=Bold</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>660, 45</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="Label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 248</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 22</value>
+  </data>
+  <data name="userConfirmPwdProfileInput.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileInput.Name" xml:space="preserve">
+    <value>userConfirmPwdProfileInput</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileInput.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileInput.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 213</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 20</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="userConfirmPwdProfileLabel.Text" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileLabel.Name" xml:space="preserve">
+    <value>userConfirmPwdProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;userConfirmPwdProfileLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="changePwdCancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="changePwdCancelBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="changePwdCancelBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="changePwdCancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changePwdCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 417</value>
+  </data>
+  <data name="changePwdCancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="changePwdCancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 35</value>
+  </data>
+  <data name="changePwdCancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="changePwdCancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;changePwdCancelBtn.Name" xml:space="preserve">
+    <value>changePwdCancelBtn</value>
+  </data>
+  <data name="&gt;&gt;changePwdCancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePwdCancelBtn.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;changePwdCancelBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="changePwdErrorMsg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="changePwdErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6.75pt</value>
+  </data>
+  <data name="changePwdErrorMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changePwdErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 470</value>
+  </data>
+  <data name="changePwdErrorMsg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="changePwdErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 15</value>
+  </data>
+  <data name="changePwdErrorMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="changePwdErrorMsg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;changePwdErrorMsg.Name" xml:space="preserve">
+    <value>changePwdErrorMsg</value>
+  </data>
+  <data name="&gt;&gt;changePwdErrorMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePwdErrorMsg.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;changePwdErrorMsg.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="changePwdValidationBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="changePwdValidationBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="changePwdValidationBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt, style=Bold</value>
+  </data>
+  <data name="changePwdValidationBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changePwdValidationBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 376</value>
+  </data>
+  <data name="changePwdValidationBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="changePwdValidationBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>532, 35</value>
+  </data>
+  <data name="changePwdValidationBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="changePwdValidationBtn.Text" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="&gt;&gt;changePwdValidationBtn.Name" xml:space="preserve">
+    <value>changePwdValidationBtn</value>
+  </data>
+  <data name="&gt;&gt;changePwdValidationBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePwdValidationBtn.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;changePwdValidationBtn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="userPwdProfileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userPwdProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="userPwdProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userPwdProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 138</value>
+  </data>
+  <data name="userPwdProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="userPwdProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 20</value>
+  </data>
+  <data name="userPwdProfileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="userPwdProfileLabel.Text" xml:space="preserve">
+    <value>Enter new password</value>
+  </data>
+  <data name="&gt;&gt;userPwdProfileLabel.Name" xml:space="preserve">
+    <value>userPwdProfileLabel</value>
+  </data>
+  <data name="&gt;&gt;userPwdProfileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userPwdProfileLabel.Parent" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;userPwdProfileLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="profileSubPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 90</value>
+  </data>
+  <data name="profileSubPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="profileSubPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>660, 500</value>
+  </data>
+  <data name="profileSubPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="profileSubPanel3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel3.Name" xml:space="preserve">
+    <value>profileSubPanel3</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel3.Parent" xml:space="preserve">
+    <value>adminProfilePanel</value>
+  </data>
+  <data name="&gt;&gt;profileSubPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="changePwdBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="changePwdBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="changePwdBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Underline</value>
+  </data>
+  <data name="changePwdBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 264</value>
+  </data>
+  <data name="changePwdBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="changePwdBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="changePwdBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="changePwdBtn.Text" xml:space="preserve">
+    <value>Change password </value>
+  </data>
+  <data name="changePwdBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;changePwdBtn.Name" xml:space="preserve">
+    <value>changePwdBtn</value>
+  </data>
+  <data name="&gt;&gt;changePwdBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePwdBtn.Parent" xml:space="preserve">
+    <value>profileSubPanel2</value>
+  </data>
+  <data name="&gt;&gt;changePwdBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="updateProfileTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -6356,72 +6713,6 @@
   <data name="&gt;&gt;Label51.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="userConfirmPwdProfileInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="userConfirmPwdProfileInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 339</value>
-  </data>
-  <data name="userConfirmPwdProfileInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="userConfirmPwdProfileInput.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="userConfirmPwdProfileInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 22</value>
-  </data>
-  <data name="userConfirmPwdProfileInput.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileInput.Name" xml:space="preserve">
-    <value>userConfirmPwdProfileInput</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileInput.Parent" xml:space="preserve">
-    <value>profileSubPanel2</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 309</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 20</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="userConfirmPwdProfileLabel.Text" xml:space="preserve">
-    <value>Confirm password</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileLabel.Name" xml:space="preserve">
-    <value>userConfirmPwdProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel2</value>
-  </data>
-  <data name="&gt;&gt;userConfirmPwdProfileLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="updateProfileCancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -6459,7 +6750,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;updateProfileCancelBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="updateProfileErrorMsg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6495,7 +6786,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;updateProfileErrorMsg.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="userPhoneNumberProfileInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -6525,7 +6816,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userPhoneNumberProfileInput.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="userEmailProfileInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -6552,7 +6843,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userEmailProfileInput.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="userNameProfileInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -6579,7 +6870,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userNameProfileInput.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="updateProfileValidationBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -6618,7 +6909,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;updateProfileValidationBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="userEmailProfileLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6654,7 +6945,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userEmailProfileLabel2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="userPhoneNumberProfileLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6690,43 +6981,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userPhoneNumberProfileLabel2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="userPwdProfileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="userPwdProfileLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="userPwdProfileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="userPwdProfileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 249</value>
-  </data>
-  <data name="userPwdProfileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="userPwdProfileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 20</value>
-  </data>
-  <data name="userPwdProfileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="userPwdProfileLabel.Text" xml:space="preserve">
-    <value>Enter new password</value>
-  </data>
-  <data name="&gt;&gt;userPwdProfileLabel.Name" xml:space="preserve">
-    <value>userPwdProfileLabel</value>
-  </data>
-  <data name="&gt;&gt;userPwdProfileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userPwdProfileLabel.Parent" xml:space="preserve">
-    <value>profileSubPanel2</value>
-  </data>
-  <data name="&gt;&gt;userPwdProfileLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>10</value>
   </data>
   <data name="userNameProfileLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6762,7 +7017,7 @@
     <value>profileSubPanel2</value>
   </data>
   <data name="&gt;&gt;userNameProfileLabel2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="profileSubPanel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>582, 90</value>
@@ -6789,7 +7044,7 @@
     <value>adminProfilePanel</value>
   </data>
   <data name="&gt;&gt;profileSubPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="confirmMsgPr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -6831,7 +7086,7 @@
     <value>adminProfilePanel</value>
   </data>
   <data name="&gt;&gt;confirmMsgPr.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="profileSubPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -7275,7 +7530,7 @@
     <value>adminProfilePanel</value>
   </data>
   <data name="&gt;&gt;profileSubPanel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="profileTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7311,7 +7566,7 @@
     <value>adminProfilePanel</value>
   </data>
   <data name="&gt;&gt;profileTitle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="adminProfilePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>328, 100</value>

@@ -441,6 +441,7 @@ Public Class homePage
         adminRolePanel.Visible = False
 
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         addPostPanel.Visible = False
         addEquipmentPanel.Visible = False
         postChangeStatePanel.Visible = False
@@ -500,6 +501,7 @@ Public Class homePage
         addEquipmentPanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -943,6 +945,7 @@ Public Class homePage
         adminProfilePanel.Visible = True
 
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         profileSubPanel1.Visible = True
         addPostPanel.Visible = False
         addEquipmentPanel.Visible = False
@@ -1021,27 +1024,60 @@ Public Class homePage
     End Sub
 
     Private Async Sub updateProfileValidateBtn_ClickAsync(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
-        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, confirmMsgPr, profileSubPanel2, Timer1)
+        'this function is called to update the user information in the database and do all the client side validations
+        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, Form1.user_email, updateProfileErrorMsg, profileSubPanel2, Timer2)
+
+        'this variable store the value returned by the updateuser() function 
+        Dim userUpdateCall As Boolean = User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, Form1.user_email, updateProfileErrorMsg, profileSubPanel2, Timer2)
+
 
         Await User.updateUserInformation("users", "user", Form1.user_email, adminNameProfile, EmailProfile, adminPhoneNumberProfile, adminTitleProfile)
 
 
-        profileSubPanel2.Visible = False
-        profileSubPanel1.Visible = True
+        'this checks if  the update was successful before doing anything else concerning the update 
+        If userUpdateCall Then
+            profileSubPanel2.Visible = False
+            profileSubPanel1.Visible = True
 
-        'this changes the content of confirmMsg
-        confirmMsgPr.Visible = True
+            'this changes the content of confirmMsg
+            confirmMsgPr.Visible = True
 
-        If isFrench Then
-            confirmMsgPr.Text = My.Resources.resourcesFrText.confirmMsgPr
-        Else
-            confirmMsgPr.Text = My.Resources.resourcesEnText.confirmMsgPr
+            If isFrench Then
+                confirmMsgPr.Text = My.Resources.resourcesFrText.confirmMsgPr
+            Else
+                confirmMsgPr.Text = My.Resources.resourcesEnText.confirmMsgPr
+
+            End If
+
+            'timer duration
+            Timer2.Interval = 3000
+            Timer2.Start()
+
+            If isFrench Then
+
+                profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+            Else
+
+                profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+            End If
+
+            User.showUserName(Form1.emailtxt, aName)
 
         End If
 
-        'timer duration
-        Timer2.Interval = 3000
-        Timer2.Start()
+    End Sub
+
+    Private Sub changePwdBtn_Click(sender As Object, e As EventArgs) Handles changePwdBtn.Click
+        profileSubPanel3.Visible = True
+        profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = False
+
+    End Sub
+    Private Sub changePwdCancelBtn_Click(sender As Object, e As EventArgs) Handles changePwdCancelBtn.Click
+        profileSubPanel3.Visible = False
+        profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
+
 
         If isFrench Then
 
@@ -1050,11 +1086,48 @@ Public Class homePage
 
             profileTitle.Text = My.Resources.resourcesEnText.profileTitle
         End If
-
-        User.showUserName(Form1.emailtxt, aName)
-
-
     End Sub
+
+    Private Sub changePwdValidationBtn_Click(sender As Object, e As EventArgs) Handles changePwdValidationBtn.Click
+        User.updateUserPwd(isFrench, "users", "user", userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, changePwdErrorMsg, profileSubPanel3, Timer2)
+
+        Dim changePwdCall As Boolean = User.updateUserPwd(isFrench, "users", "user", userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, changePwdErrorMsg, profileSubPanel3, Timer2)
+
+        If changePwdCall Then
+
+            profileSubPanel3.Visible = False
+            profileSubPanel2.Visible = False
+            profileSubPanel1.Visible = True
+
+
+            'this changes the content of confirmMsg
+            confirmMsgPr.Visible = True
+
+            If isFrench Then
+                confirmMsgPr.Text = My.Resources.resourcesFrText.PwdChanged
+            Else
+                confirmMsgPr.Text = My.Resources.resourcesEnText.PwdChanged
+
+            End If
+
+            'timer duration
+            Timer2.Interval = 3000
+            Timer2.Start()
+
+            If isFrench Then
+
+                profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+            Else
+
+                profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+            End If
+
+            User.showUserName(Form1.emailtxt, aName)
+
+        End If
+    End Sub
+
+
 
 
     'halls buttons
@@ -1462,6 +1535,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userAddPanel.Visible = False
@@ -1593,8 +1667,8 @@ Public Class homePage
 
                     End If
                     updateUserErrorMsg.Visible = True
-                    Timer1.Interval = 3000
-                    Timer1.Start()
+                    Timer2.Interval = 3000
+                    Timer2.Start()
                 Else
                     sqlConn.Open()
 
@@ -1702,8 +1776,8 @@ Public Class homePage
 
                     End If
                     updateUserErrorMsg.Visible = True
-                    Timer1.Interval = 3000
-                    Timer1.Start()
+                    Timer2.Interval = 3000
+                    Timer2.Start()
                 Else
                     sqlConn.Open()
 
@@ -2027,8 +2101,8 @@ Public Class homePage
 
                         End If
                         addUserErrorMsg.Visible = True
-                        Timer1.Interval = 3000
-                        Timer1.Start()
+                        Timer2.Interval = 3000
+                        Timer2.Start()
                     Else
 
                         Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(userUserAddConfirmPwdInput.Text)
@@ -2163,6 +2237,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -2492,6 +2567,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -2564,6 +2640,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible =
+                profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -2646,6 +2723,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -2758,6 +2836,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -3784,6 +3863,7 @@ Public Class homePage
         updateRoleErrorMsg.Visible = False
         updateUserErrorMsg.Visible = False
         updateHallErrorMsg.Visible = False
+        changePwdErrorMsg.Visible = False
 
         Timer2.Stop()
     End Sub

@@ -649,15 +649,71 @@ Public Class users
         Dim match As Match = regex.Match(email)
         Return match.Success
     End Function
-    Public Sub updateUser(isfrench As Boolean, table As String, column As String, name As String, phone As String, email As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
 
+    'this is to change the password 
+    Public Function updateUserPwd(isfrench As Boolean, table As String, column As String, pwd As String, confirmPwd As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
+
+        Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(confirmPwd)
+
+        Dim updatesuccess As Boolean = False
+
+        If pwd = "" Or confirmPwd = "" Then
+            errorMsg.Visible = True
+            If isfrench Then
+                errorMsg.Text = My.Resources.resourcesFrText.EmptyField
+            Else
+                errorMsg.Text = My.Resources.resourcesEnText.EmptyField
+
+            End If
+
+            timer.Interval = 3000
+            timer.Start()
+        ElseIf pwd <> confirmPwd Then
+            errorMsg.Visible = True
+            If isfrench Then
+                errorMsg.Text = My.Resources.resourcesFrText.PwdNotMatch
+            Else
+                errorMsg.Text = My.Resources.resourcesEnText.PwdNotMatch
+
+            End If
+
+            timer.Interval = 3000
+            timer.Start()
+
+        Else
+
+            sqlConn.Open()
+
+            sqlCmd.Connection = sqlConn
+
+
+            With sqlCmd
+
+                .CommandText = "Update cems.cems_" & table & " Set  " & column & "_password = '" & hashedPassword & "' where " & column & "_email = '" & previousEmail & "'"
+
+                .CommandType = CommandType.Text
+
+            End With
+
+            sqlCmd.ExecuteNonQuery()
+            sqlConn.Close()
+
+            panel.Visible = False
+            updatesuccess = True
+        End If
+
+        Return updatesuccess
+    End Function
+
+    'this is to update the profile 
+    Public Function updateUser(isfrench As Boolean, table As String, column As String, name As String, phone As String, email As String, previousEmail As String, errorMsg As Control, panel As Control, timer As Timer)
+
+        Dim updateSuccess As Boolean = False
         connect_db()
 
         Try
 
-            Dim hashedPassword = BCrypt.Net.BCrypt.HashPassword(pwd)
-
-            If name = "" And email = "" And phone = "" And pwd = "" Then
+            If name = "" Or email = "" Or phone = "" Then
                 errorMsg.Visible = True
                 If isfrench Then
                     errorMsg.Text = My.Resources.resourcesFrText.EmptyField
@@ -668,319 +724,35 @@ Public Class users
 
                 timer.Interval = 3000
                 timer.Start()
-            Else
-
-
-                If pwd <> confirmPwd Then
-                    errorMsg.Visible = True
-                    If isfrench Then
-                        errorMsg.Text = My.Resources.resourcesFrText.PwdNotMatch
-                    Else
-                        errorMsg.Text = My.Resources.resourcesEnText.PwdNotMatch
-
-                    End If
-
-                    timer.Interval = 3000
-                    timer.Start()
-
-
-                ElseIf name = "" And phone = "" And pwd = "" Then
-
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf name = "" And email = "" And pwd = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf email = "" And phone = "" And pwd = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf email = "" And phone = "" And name = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-
-                ElseIf name = "" And phone = "" Then
-
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf name = "" And email = "" Then
-
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf email = "" And phone = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf name = "" And pwd = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_email = '" & email & "', " & column & "_phone_number = '" & phone & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-
-                ElseIf pwd = "" And email = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_name = '" & name & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf pwd = "" And phone = "" Then
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "' where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-
-                ElseIf name = "" Then
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf phone = "" Then
-
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_email = '" & email & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf email = "" Then
-
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
-                ElseIf pwd = "" Then
-
-                    sqlConn.Open()
-
-                        sqlCmd.Connection = sqlConn
-
-                        With sqlCmd
-
-                            .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
-
-                            .CommandType = CommandType.Text
-
-                        End With
-
-                        sqlCmd.ExecuteNonQuery()
-                        sqlConn.Close()
-
-                        panel.Visible = False
-
-                        Else
-
-                    sqlConn.Open()
-
-                    sqlCmd.Connection = sqlConn
-
-
-                    With sqlCmd
-
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_password = '" & hashedPassword & "', " & column & "_email = '" & email & "'   where " & column & "_email = '" & previousEmail & "'"
-
-                        .CommandType = CommandType.Text
-
-                    End With
-
-                    sqlCmd.ExecuteNonQuery()
-                    sqlConn.Close()
-
-                    panel.Visible = False
-
+            ElseIf Not IsValidEmail(email) Then
+                errorMsg.Visible = True
+                If isfrench Then
+                    errorMsg.Text = My.Resources.resourcesFrText.invalidEmail
+                Else
+                    errorMsg.Text = My.Resources.resourcesEnText.invalidEmail
 
                 End If
 
+                timer.Interval = 3000
+                timer.Start()
+            Else
+                sqlConn.Open()
+
+                sqlCmd.Connection = sqlConn
+
+                With sqlCmd
+
+                    .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
+
+                    .CommandType = CommandType.Text
+
+                End With
+
+                sqlCmd.ExecuteNonQuery()
+                sqlConn.Close()
+
+                panel.Visible = False
+                updateSuccess = True
 
             End If
 
@@ -992,8 +764,9 @@ Public Class users
             sqlConn.Dispose()
         End Try
 
+        Return updateSuccess
 
-    End Sub
+    End Function
 
     'this is used to update one's personal information
     Public Async Function updateUserInformation(table As String, column As String, searchValue As String, name As Control, email As Control, phone As Control, title As Control) As Task

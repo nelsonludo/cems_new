@@ -362,6 +362,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Changer de mot de passe.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Annuler.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdCancelBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdCancelBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Changer le mot de passe.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdTitle() As String
+            Get
+                Return ResourceManager.GetString("changePwdTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Changer.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdValidationBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdValidationBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à équipement ajouté avec succès ✔.
         '''</summary>
         Friend Shared ReadOnly Property confirmMsgE_add() As String
@@ -1285,6 +1321,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property profileTitle_Update() As String
             Get
                 Return ResourceManager.GetString("profileTitle_Update", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Mot de passe mise à jour avec succès ✔.
+        '''</summary>
+        Friend Shared ReadOnly Property PwdChanged() As String
+            Get
+                Return ResourceManager.GetString("PwdChanged", resourceCulture)
             End Get
         End Property
         

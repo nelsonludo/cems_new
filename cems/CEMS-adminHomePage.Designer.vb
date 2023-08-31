@@ -204,12 +204,20 @@ Partial Class homePage
         Me.postsearchlabel = New System.Windows.Forms.Label()
         Me.stateSearchBoxP = New System.Windows.Forms.ComboBox()
         Me.adminProfilePanel = New System.Windows.Forms.Panel()
-        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
+        Me.profileSubPanel3 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.updateProfileTitle = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
+        Me.changePwdTitle = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.changePwdCancelBtn = New System.Windows.Forms.Button()
+        Me.changePwdErrorMsg = New System.Windows.Forms.Label()
+        Me.changePwdValidationBtn = New System.Windows.Forms.Button()
+        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
+        Me.changePwdBtn = New System.Windows.Forms.Button()
+        Me.updateProfileTitle = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
         Me.updateProfileCancelBtn = New System.Windows.Forms.Button()
         Me.updateProfileErrorMsg = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
@@ -218,7 +226,6 @@ Partial Class homePage
         Me.updateProfileValidationBtn = New System.Windows.Forms.Button()
         Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
-        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
         Me.confirmMsgPr = New System.Windows.Forms.Label()
         Me.profileSubPanel1 = New System.Windows.Forms.Panel()
@@ -307,6 +314,7 @@ Partial Class homePage
         CType(Me.postDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.postChangeStatePanel.SuspendLayout()
         Me.adminProfilePanel.SuspendLayout()
+        Me.profileSubPanel3.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
         Me.adminHallsPanel.SuspendLayout()
@@ -1784,21 +1792,101 @@ Partial Class homePage
         'adminProfilePanel
         '
         resources.ApplyResources(Me.adminProfilePanel, "adminProfilePanel")
+        Me.adminProfilePanel.Controls.Add(Me.profileSubPanel3)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.adminProfilePanel.Controls.Add(Me.confirmMsgPr)
         Me.adminProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.adminProfilePanel.Controls.Add(Me.profileTitle)
         Me.adminProfilePanel.Name = "adminProfilePanel"
         '
+        'profileSubPanel3
+        '
+        Me.profileSubPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.profileSubPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.profileSubPanel3.Controls.Add(Me.userPwdProfileInput)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdTitle)
+        Me.profileSubPanel3.Controls.Add(Me.Label2)
+        Me.profileSubPanel3.Controls.Add(Me.userConfirmPwdProfileInput)
+        Me.profileSubPanel3.Controls.Add(Me.userConfirmPwdProfileLabel)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdCancelBtn)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdErrorMsg)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdValidationBtn)
+        Me.profileSubPanel3.Controls.Add(Me.userPwdProfileLabel)
+        resources.ApplyResources(Me.profileSubPanel3, "profileSubPanel3")
+        Me.profileSubPanel3.Name = "profileSubPanel3"
+        '
+        'userPwdProfileInput
+        '
+        resources.ApplyResources(Me.userPwdProfileInput, "userPwdProfileInput")
+        Me.userPwdProfileInput.Name = "userPwdProfileInput"
+        Me.userPwdProfileInput.UseSystemPasswordChar = True
+        '
+        'changePwdTitle
+        '
+        resources.ApplyResources(Me.changePwdTitle, "changePwdTitle")
+        Me.changePwdTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.changePwdTitle.Name = "changePwdTitle"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label2.ForeColor = System.Drawing.Color.Yellow
+        Me.Label2.Name = "Label2"
+        '
+        'userConfirmPwdProfileInput
+        '
+        resources.ApplyResources(Me.userConfirmPwdProfileInput, "userConfirmPwdProfileInput")
+        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
+        Me.userConfirmPwdProfileInput.UseSystemPasswordChar = True
+        '
+        'userConfirmPwdProfileLabel
+        '
+        resources.ApplyResources(Me.userConfirmPwdProfileLabel, "userConfirmPwdProfileLabel")
+        Me.userConfirmPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
+        '
+        'changePwdCancelBtn
+        '
+        resources.ApplyResources(Me.changePwdCancelBtn, "changePwdCancelBtn")
+        Me.changePwdCancelBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.changePwdCancelBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdCancelBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.changePwdCancelBtn.Name = "changePwdCancelBtn"
+        Me.changePwdCancelBtn.UseVisualStyleBackColor = False
+        '
+        'changePwdErrorMsg
+        '
+        resources.ApplyResources(Me.changePwdErrorMsg, "changePwdErrorMsg")
+        Me.changePwdErrorMsg.BackColor = System.Drawing.Color.MintCream
+        Me.changePwdErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.changePwdErrorMsg.Name = "changePwdErrorMsg"
+        '
+        'changePwdValidationBtn
+        '
+        resources.ApplyResources(Me.changePwdValidationBtn, "changePwdValidationBtn")
+        Me.changePwdValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.changePwdValidationBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.changePwdValidationBtn.Name = "changePwdValidationBtn"
+        Me.changePwdValidationBtn.UseVisualStyleBackColor = False
+        '
+        'userPwdProfileLabel
+        '
+        resources.ApplyResources(Me.userPwdProfileLabel, "userPwdProfileLabel")
+        Me.userPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
+        '
         'profileSubPanel2
         '
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
         Me.profileSubPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.changePwdBtn)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileTitle)
         Me.profileSubPanel2.Controls.Add(Me.Label51)
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileCancelBtn)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileErrorMsg)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
@@ -1807,16 +1895,18 @@ Partial Class homePage
         Me.profileSubPanel2.Controls.Add(Me.updateProfileValidationBtn)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
         resources.ApplyResources(Me.profileSubPanel2, "profileSubPanel2")
         Me.profileSubPanel2.Name = "profileSubPanel2"
         '
-        'userPwdProfileInput
+        'changePwdBtn
         '
-        resources.ApplyResources(Me.userPwdProfileInput, "userPwdProfileInput")
-        Me.userPwdProfileInput.Name = "userPwdProfileInput"
-        Me.userPwdProfileInput.UseSystemPasswordChar = True
+        resources.ApplyResources(Me.changePwdBtn, "changePwdBtn")
+        Me.changePwdBtn.BackColor = System.Drawing.Color.Transparent
+        Me.changePwdBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.changePwdBtn.Name = "changePwdBtn"
+        Me.changePwdBtn.UseVisualStyleBackColor = False
         '
         'updateProfileTitle
         '
@@ -1831,18 +1921,6 @@ Partial Class homePage
         Me.Label51.BackColor = System.Drawing.Color.SeaGreen
         Me.Label51.ForeColor = System.Drawing.Color.Yellow
         Me.Label51.Name = "Label51"
-        '
-        'userConfirmPwdProfileInput
-        '
-        resources.ApplyResources(Me.userConfirmPwdProfileInput, "userConfirmPwdProfileInput")
-        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
-        Me.userConfirmPwdProfileInput.UseSystemPasswordChar = True
-        '
-        'userConfirmPwdProfileLabel
-        '
-        resources.ApplyResources(Me.userConfirmPwdProfileLabel, "userConfirmPwdProfileLabel")
-        Me.userConfirmPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
         '
         'updateProfileCancelBtn
         '
@@ -1897,12 +1975,6 @@ Partial Class homePage
         resources.ApplyResources(Me.userPhoneNumberProfileLabel2, "userPhoneNumberProfileLabel2")
         Me.userPhoneNumberProfileLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.userPhoneNumberProfileLabel2.Name = "userPhoneNumberProfileLabel2"
-        '
-        'userPwdProfileLabel
-        '
-        resources.ApplyResources(Me.userPwdProfileLabel, "userPwdProfileLabel")
-        Me.userPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
         '
         'userNameProfileLabel2
         '
@@ -2611,6 +2683,8 @@ Partial Class homePage
         Me.postChangeStatePanel.PerformLayout()
         Me.adminProfilePanel.ResumeLayout(False)
         Me.adminProfilePanel.PerformLayout()
+        Me.profileSubPanel3.ResumeLayout(False)
+        Me.profileSubPanel3.PerformLayout()
         Me.profileSubPanel2.ResumeLayout(False)
         Me.profileSubPanel2.PerformLayout()
         Me.profileSubPanel1.ResumeLayout(False)
@@ -2739,18 +2813,14 @@ Partial Class homePage
     Friend WithEvents NameProfileLabel As Label
     Friend WithEvents profileTitle As Label
     Friend WithEvents profileSubPanel2 As Panel
-    Friend WithEvents userConfirmPwdProfileInput As TextBox
-    Friend WithEvents userConfirmPwdProfileLabel As Label
     Friend WithEvents updateProfileCancelBtn As Button
     Friend WithEvents updateProfileErrorMsg As Label
-    Friend WithEvents userPwdProfileInput As TextBox
     Friend WithEvents userPhoneNumberProfileInput As TextBox
     Friend WithEvents userEmailProfileInput As TextBox
     Friend WithEvents userNameProfileInput As TextBox
     Friend WithEvents updateProfileValidationBtn As Button
     Friend WithEvents userEmailProfileLabel2 As Label
     Friend WithEvents userPhoneNumberProfileLabel2 As Label
-    Friend WithEvents userPwdProfileLabel As Label
     Friend WithEvents userNameProfileLabel2 As Label
     Friend WithEvents adminHallsPanel As Panel
     Friend WithEvents hallAddBtn As Button
@@ -2883,4 +2953,15 @@ Partial Class homePage
     Friend WithEvents repairCPUNumber As Label
     Friend WithEvents repairMonitorNumber As Label
     Friend WithEvents repairIPNumber As Label
+    Friend WithEvents profileSubPanel3 As Panel
+    Friend WithEvents userPwdProfileInput As TextBox
+    Friend WithEvents changePwdTitle As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents userConfirmPwdProfileInput As TextBox
+    Friend WithEvents userConfirmPwdProfileLabel As Label
+    Friend WithEvents changePwdCancelBtn As Button
+    Friend WithEvents changePwdErrorMsg As Label
+    Friend WithEvents changePwdValidationBtn As Button
+    Friend WithEvents userPwdProfileLabel As Label
+    Friend WithEvents changePwdBtn As Button
 End Class

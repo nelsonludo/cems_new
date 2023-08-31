@@ -308,6 +308,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Change password.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Cancel.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdCancelBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdCancelBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Change Password.
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdTitle() As String
+            Get
+                Return ResourceManager.GetString("changePwdTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Change .
+        '''</summary>
+        Friend Shared ReadOnly Property changePwdValidationBtn() As String
+            Get
+                Return ResourceManager.GetString("changePwdValidationBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Equipment successfully added ✔.
         '''</summary>
         Friend Shared ReadOnly Property confirmMsgE_add() As String
@@ -1253,6 +1289,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Password changed successfully ✔.
+        '''</summary>
+        Friend Shared ReadOnly Property PwdChanged() As String
+            Get
+                Return ResourceManager.GetString("PwdChanged", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Please enter the same password!.
         '''</summary>
         Friend Shared ReadOnly Property PwdNotMatch() As String
@@ -1469,15 +1514,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à .
-        '''</summary>
-        Friend Shared ReadOnly Property sttring() As String
-            Get
-                Return ResourceManager.GetString("sttring", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Recherche une chaîne localisée semblable à User Title:.
         '''</summary>
         Friend Shared ReadOnly Property TitleProfileLabel() As String
@@ -1640,6 +1676,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Confirm password.
+        '''</summary>
+        Friend Shared ReadOnly Property userConfirmPwdProfileLabel() As String
+            Get
+                Return ResourceManager.GetString("userConfirmPwdProfileLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Confirm Password.
         '''</summary>
         Friend Shared ReadOnly Property userConfirmPwdProfileLabel2() As String
@@ -1690,6 +1735,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property userPhoneNumberProfileLabel2() As String
             Get
                 Return ResourceManager.GetString("userPhoneNumberProfileLabel2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Enter the new password.
+        '''</summary>
+        Friend Shared ReadOnly Property userPwdProfileLabel() As String
+            Get
+                Return ResourceManager.GetString("userPwdProfileLabel", resourceCulture)
             End Get
         End Property
         

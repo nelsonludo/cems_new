@@ -284,6 +284,9 @@ Public Class UserHomePage
         userPhoneNumberProfileInput.Text = userPhoneNumberProfile.Text
         userEmailProfileInput.Text = userEmailProfile.Text
 
+        userPwdProfileInput.Text = ""
+        userConfirmPwdProfileInput.Text = ""
+
         If isFrench Then
 
             profileTitle.Text = My.Resources.resourcesFrText.profileTitle_Update
@@ -311,26 +314,59 @@ Public Class UserHomePage
 
     Private Async Sub updateProfileValidateBtn_Click(sender As Object, e As EventArgs) Handles updateProfileValidationBtn.Click
 
-        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.emailtxt.Text, updateProfileErrorMsg, profileSubPanel2, Timer2)
+        'this function is called to update the user information in the database and do all the client side validations
+        User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, Form1.user_email, updateProfileErrorMsg, profileSubPanel2, Timer2)
+
+        'this variable store the value returned by the updateuser() function 
+        Dim userUpdateCall As Boolean = User.updateUser(isFrench, "users", "user", userNameProfileInput.Text, userPhoneNumberProfileInput.Text, userEmailProfileInput.Text, Form1.user_email, updateProfileErrorMsg, profileSubPanel2, Timer2)
+
+
         Await User.updateUserInformation("users", "user", Form1.user_email, userNameProfile, userEmailProfile, userPhoneNumberProfile, userTitleProfile)
 
-        profileSubPanel2.Visible = False
-        profileSubPanel1.Visible = True
 
+        'this checks if  the update was successful before doing anything else concerning the update 
+        If userUpdateCall Then
+            profileSubPanel2.Visible = False
+            profileSubPanel1.Visible = True
 
-        'confirm message
-        confirmMsgPr.Visible = True
+            'this changes the content of confirmMsg
+            confirmMsgPr.Visible = True
 
-        If isFrench Then
-            confirmMsgP.Text = My.Resources.resourcesFrText.confirmMsgPr
-        Else
-            confirmMsgP.Text = My.Resources.resourcesEnText.confirmMsgPr
+            If isFrench Then
+                confirmMsgPr.Text = My.Resources.resourcesFrText.confirmMsgPr
+            Else
+                confirmMsgPr.Text = My.Resources.resourcesEnText.confirmMsgPr
+
+            End If
+
+            'timer duration
+            Timer2.Interval = 3000
+            Timer2.Start()
+
+            If isFrench Then
+
+                profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+            Else
+
+                profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+            End If
+
+            User.showUserName(Form1.emailtxt, uName)
 
         End If
 
-        'timer interval 
-        Timer2.Interval = 3000
-        Timer2.Start()
+    End Sub
+
+    Private Sub changePwdBtn_Click(sender As Object, e As EventArgs) Handles changePwdBtn.Click
+        profileSubPanel3.Visible = True
+        profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = False
+
+    End Sub
+    Private Sub changePwdCancelBtn_Click(sender As Object, e As EventArgs) Handles changePwdCancelBtn.Click
+        profileSubPanel3.Visible = False
+        profileSubPanel2.Visible = False
+        profileSubPanel1.Visible = True
 
 
         If isFrench Then
@@ -340,10 +376,46 @@ Public Class UserHomePage
 
             profileTitle.Text = My.Resources.resourcesEnText.profileTitle
         End If
-
-        User.showUserName(Form1.emailtxt, uName)
     End Sub
 
+    Private Sub changePwdValidationBtn_Click(sender As Object, e As EventArgs) Handles changePwdValidationBtn.Click
+        User.updateUserPwd(isFrench, "users", "user", userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, changePwdErrorMsg, profileSubPanel3, Timer2)
+
+        Dim changePwdCall As Boolean = User.updateUserPwd(isFrench, "users", "user", userPwdProfileInput.Text, userConfirmPwdProfileInput.Text, Form1.user_email, changePwdErrorMsg, profileSubPanel3, Timer2)
+
+        If changePwdCall Then
+
+            profileSubPanel3.Visible = False
+            profileSubPanel2.Visible = False
+            profileSubPanel1.Visible = True
+
+
+            'this changes the content of confirmMsg
+            confirmMsgPr.Visible = True
+
+            If isFrench Then
+                confirmMsgPr.Text = My.Resources.resourcesFrText.PwdChanged
+            Else
+                confirmMsgPr.Text = My.Resources.resourcesEnText.PwdChanged
+
+            End If
+
+            'timer duration
+            Timer2.Interval = 3000
+            Timer2.Start()
+
+            If isFrench Then
+
+                profileTitle.Text = My.Resources.resourcesFrText.profileTitle
+            Else
+
+                profileTitle.Text = My.Resources.resourcesEnText.profileTitle
+            End If
+
+            User.showUserName(Form1.emailtxt, uName)
+
+        End If
+    End Sub
 
     'post buttons 
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click

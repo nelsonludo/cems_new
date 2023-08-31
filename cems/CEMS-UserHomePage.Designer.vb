@@ -54,6 +54,9 @@ Partial Class UserHomePage
         Me.uName = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.HomePagePanel = New System.Windows.Forms.Panel()
+        Me.repairMonitorNumber = New System.Windows.Forms.Label()
+        Me.repairIPNumber = New System.Windows.Forms.Label()
+        Me.repairCPUNumber = New System.Windows.Forms.Label()
         Me.CPUsBtn2 = New System.Windows.Forms.Button()
         Me.IPsBtn2 = New System.Windows.Forms.Button()
         Me.monitorsBtn2 = New System.Windows.Forms.Button()
@@ -71,12 +74,20 @@ Partial Class UserHomePage
         Me.CPUbuttoninactive = New System.Windows.Forms.Button()
         Me.dashboardTitle = New System.Windows.Forms.Label()
         Me.ProfilePanel = New System.Windows.Forms.Panel()
-        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
+        Me.profileSubPanel3 = New System.Windows.Forms.Panel()
         Me.userPwdProfileInput = New System.Windows.Forms.TextBox()
-        Me.updateProfileTitle = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
+        Me.changePwdTitle = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.userConfirmPwdProfileInput = New System.Windows.Forms.TextBox()
         Me.userConfirmPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.changePwdCancelBtn = New System.Windows.Forms.Button()
+        Me.changePwdErrorMsg = New System.Windows.Forms.Label()
+        Me.changePwdValidationBtn = New System.Windows.Forms.Button()
+        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
+        Me.profileSubPanel2 = New System.Windows.Forms.Panel()
+        Me.changePwdBtn = New System.Windows.Forms.Button()
+        Me.updateProfileTitle = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
         Me.updateProfileCancelBtn = New System.Windows.Forms.Button()
         Me.updateProfileErrorMsg = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileInput = New System.Windows.Forms.TextBox()
@@ -85,7 +96,6 @@ Partial Class UserHomePage
         Me.updateProfileValidationBtn = New System.Windows.Forms.Button()
         Me.userEmailProfileLabel2 = New System.Windows.Forms.Label()
         Me.userPhoneNumberProfileLabel2 = New System.Windows.Forms.Label()
-        Me.userPwdProfileLabel = New System.Windows.Forms.Label()
         Me.userNameProfileLabel2 = New System.Windows.Forms.Label()
         Me.profileSubPanel1 = New System.Windows.Forms.Panel()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -128,15 +138,13 @@ Partial Class UserHomePage
         Me.equipmentsearchpostidlabel = New System.Windows.Forms.Label()
         Me.userSearchBoxE = New System.Windows.Forms.ComboBox()
         Me.errorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.repairMonitorNumber = New System.Windows.Forms.Label()
-        Me.repairIPNumber = New System.Windows.Forms.Label()
-        Me.repairCPUNumber = New System.Windows.Forms.Label()
         Me.sideBar.SuspendLayout()
         Me.dropdown.SuspendLayout()
         Me.Header.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HomePagePanel.SuspendLayout()
         Me.ProfilePanel.SuspendLayout()
+        Me.profileSubPanel3.SuspendLayout()
         Me.profileSubPanel2.SuspendLayout()
         Me.profileSubPanel1.SuspendLayout()
         Me.PostPanel.SuspendLayout()
@@ -537,6 +545,48 @@ Partial Class UserHomePage
         Me.HomePagePanel.Size = New System.Drawing.Size(1577, 584)
         Me.HomePagePanel.TabIndex = 69
         '
+        'repairMonitorNumber
+        '
+        Me.repairMonitorNumber.AutoSize = True
+        Me.repairMonitorNumber.BackColor = System.Drawing.Color.MintCream
+        Me.repairMonitorNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
+        Me.repairMonitorNumber.ForeColor = System.Drawing.Color.DarkOrange
+        Me.repairMonitorNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.repairMonitorNumber.Location = New System.Drawing.Point(1220, 387)
+        Me.repairMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.repairMonitorNumber.Name = "repairMonitorNumber"
+        Me.repairMonitorNumber.Size = New System.Drawing.Size(35, 13)
+        Me.repairMonitorNumber.TabIndex = 50
+        Me.repairMonitorNumber.Text = "0000"
+        '
+        'repairIPNumber
+        '
+        Me.repairIPNumber.AutoSize = True
+        Me.repairIPNumber.BackColor = System.Drawing.Color.MintCream
+        Me.repairIPNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
+        Me.repairIPNumber.ForeColor = System.Drawing.Color.DarkOrange
+        Me.repairIPNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.repairIPNumber.Location = New System.Drawing.Point(880, 387)
+        Me.repairIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.repairIPNumber.Name = "repairIPNumber"
+        Me.repairIPNumber.Size = New System.Drawing.Size(35, 13)
+        Me.repairIPNumber.TabIndex = 49
+        Me.repairIPNumber.Text = "0000"
+        '
+        'repairCPUNumber
+        '
+        Me.repairCPUNumber.AutoSize = True
+        Me.repairCPUNumber.BackColor = System.Drawing.Color.Transparent
+        Me.repairCPUNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
+        Me.repairCPUNumber.ForeColor = System.Drawing.Color.DarkOrange
+        Me.repairCPUNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.repairCPUNumber.Location = New System.Drawing.Point(547, 388)
+        Me.repairCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.repairCPUNumber.Name = "repairCPUNumber"
+        Me.repairCPUNumber.Size = New System.Drawing.Size(35, 13)
+        Me.repairCPUNumber.TabIndex = 48
+        Me.repairCPUNumber.Text = "0000"
+        '
         'CPUsBtn2
         '
         Me.CPUsBtn2.AutoSize = True
@@ -796,6 +846,7 @@ Partial Class UserHomePage
         Me.ProfilePanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProfilePanel.Controls.Add(Me.profileSubPanel3)
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel2)
         Me.ProfilePanel.Controls.Add(Me.profileSubPanel1)
         Me.ProfilePanel.Controls.Add(Me.confirmMsgPr)
@@ -807,15 +858,165 @@ Partial Class UserHomePage
         Me.ProfilePanel.TabIndex = 70
         Me.ProfilePanel.Visible = False
         '
+        'profileSubPanel3
+        '
+        Me.profileSubPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.profileSubPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.profileSubPanel3.Controls.Add(Me.userPwdProfileInput)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdTitle)
+        Me.profileSubPanel3.Controls.Add(Me.Label2)
+        Me.profileSubPanel3.Controls.Add(Me.userConfirmPwdProfileInput)
+        Me.profileSubPanel3.Controls.Add(Me.userConfirmPwdProfileLabel)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdCancelBtn)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdErrorMsg)
+        Me.profileSubPanel3.Controls.Add(Me.changePwdValidationBtn)
+        Me.profileSubPanel3.Controls.Add(Me.userPwdProfileLabel)
+        Me.profileSubPanel3.Location = New System.Drawing.Point(582, 90)
+        Me.profileSubPanel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.profileSubPanel3.Name = "profileSubPanel3"
+        Me.profileSubPanel3.Size = New System.Drawing.Size(660, 500)
+        Me.profileSubPanel3.TabIndex = 44
+        Me.profileSubPanel3.Visible = False
+        '
+        'userPwdProfileInput
+        '
+        Me.userPwdProfileInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.userPwdProfileInput.Location = New System.Drawing.Point(70, 173)
+        Me.userPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userPwdProfileInput.Name = "userPwdProfileInput"
+        Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.userPwdProfileInput.Size = New System.Drawing.Size(532, 22)
+        Me.userPwdProfileInput.TabIndex = 18
+        Me.userPwdProfileInput.UseSystemPasswordChar = True
+        '
+        'changePwdTitle
+        '
+        Me.changePwdTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.changePwdTitle.AutoSize = True
+        Me.changePwdTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.changePwdTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.changePwdTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.changePwdTitle.Location = New System.Drawing.Point(70, 13)
+        Me.changePwdTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.changePwdTitle.Name = "changePwdTitle"
+        Me.changePwdTitle.Size = New System.Drawing.Size(138, 22)
+        Me.changePwdTitle.TabIndex = 52
+        Me.changePwdTitle.Text = "Update Profile"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Yellow
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(660, 45)
+        Me.Label2.TabIndex = 51
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'userConfirmPwdProfileInput
+        '
+        Me.userConfirmPwdProfileInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(70, 248)
+        Me.userConfirmPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
+        Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(532, 22)
+        Me.userConfirmPwdProfileInput.TabIndex = 22
+        Me.userConfirmPwdProfileInput.UseSystemPasswordChar = True
+        '
+        'userConfirmPwdProfileLabel
+        '
+        Me.userConfirmPwdProfileLabel.AutoSize = True
+        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userConfirmPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.userConfirmPwdProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(65, 213)
+        Me.userConfirmPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
+        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(161, 20)
+        Me.userConfirmPwdProfileLabel.TabIndex = 21
+        Me.userConfirmPwdProfileLabel.Text = "Confirm password"
+        '
+        'changePwdCancelBtn
+        '
+        Me.changePwdCancelBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.changePwdCancelBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.changePwdCancelBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.changePwdCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.changePwdCancelBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.changePwdCancelBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.changePwdCancelBtn.Location = New System.Drawing.Point(70, 417)
+        Me.changePwdCancelBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.changePwdCancelBtn.Name = "changePwdCancelBtn"
+        Me.changePwdCancelBtn.Size = New System.Drawing.Size(532, 35)
+        Me.changePwdCancelBtn.TabIndex = 20
+        Me.changePwdCancelBtn.Text = "Cancel"
+        Me.changePwdCancelBtn.UseVisualStyleBackColor = False
+        '
+        'changePwdErrorMsg
+        '
+        Me.changePwdErrorMsg.AutoSize = True
+        Me.changePwdErrorMsg.BackColor = System.Drawing.Color.MintCream
+        Me.changePwdErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
+        Me.changePwdErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.changePwdErrorMsg.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.changePwdErrorMsg.Location = New System.Drawing.Point(70, 470)
+        Me.changePwdErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.changePwdErrorMsg.Name = "changePwdErrorMsg"
+        Me.changePwdErrorMsg.Size = New System.Drawing.Size(0, 15)
+        Me.changePwdErrorMsg.TabIndex = 19
+        Me.changePwdErrorMsg.Visible = False
+        '
+        'changePwdValidationBtn
+        '
+        Me.changePwdValidationBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.changePwdValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.changePwdValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.changePwdValidationBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.changePwdValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.changePwdValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.changePwdValidationBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.changePwdValidationBtn.Location = New System.Drawing.Point(70, 376)
+        Me.changePwdValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.changePwdValidationBtn.Name = "changePwdValidationBtn"
+        Me.changePwdValidationBtn.Size = New System.Drawing.Size(532, 35)
+        Me.changePwdValidationBtn.TabIndex = 13
+        Me.changePwdValidationBtn.Text = "Done"
+        Me.changePwdValidationBtn.UseVisualStyleBackColor = False
+        '
+        'userPwdProfileLabel
+        '
+        Me.userPwdProfileLabel.AutoSize = True
+        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.userPwdProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 138)
+        Me.userPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
+        Me.userPwdProfileLabel.Size = New System.Drawing.Size(179, 20)
+        Me.userPwdProfileLabel.TabIndex = 9
+        Me.userPwdProfileLabel.Text = "Enter new password"
+        '
         'profileSubPanel2
         '
         Me.profileSubPanel2.BackColor = System.Drawing.Color.Transparent
         Me.profileSubPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileInput)
+        Me.profileSubPanel2.Controls.Add(Me.changePwdBtn)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileTitle)
         Me.profileSubPanel2.Controls.Add(Me.Label51)
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileInput)
-        Me.profileSubPanel2.Controls.Add(Me.userConfirmPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileCancelBtn)
         Me.profileSubPanel2.Controls.Add(Me.updateProfileErrorMsg)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileInput)
@@ -824,26 +1025,31 @@ Partial Class UserHomePage
         Me.profileSubPanel2.Controls.Add(Me.updateProfileValidationBtn)
         Me.profileSubPanel2.Controls.Add(Me.userEmailProfileLabel2)
         Me.profileSubPanel2.Controls.Add(Me.userPhoneNumberProfileLabel2)
-        Me.profileSubPanel2.Controls.Add(Me.userPwdProfileLabel)
         Me.profileSubPanel2.Controls.Add(Me.userNameProfileLabel2)
         Me.profileSubPanel2.Location = New System.Drawing.Point(582, 90)
         Me.profileSubPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.profileSubPanel2.Name = "profileSubPanel2"
-        Me.profileSubPanel2.Size = New System.Drawing.Size(660, 466)
+        Me.profileSubPanel2.Size = New System.Drawing.Size(660, 500)
         Me.profileSubPanel2.TabIndex = 35
         Me.profileSubPanel2.Visible = False
         '
-        'userPwdProfileInput
+        'changePwdBtn
         '
-        Me.userPwdProfileInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.userPwdProfileInput.Location = New System.Drawing.Point(70, 279)
-        Me.userPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userPwdProfileInput.Name = "userPwdProfileInput"
-        Me.userPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userPwdProfileInput.Size = New System.Drawing.Size(532, 22)
-        Me.userPwdProfileInput.TabIndex = 18
-        Me.userPwdProfileInput.UseSystemPasswordChar = True
+        Me.changePwdBtn.AutoSize = True
+        Me.changePwdBtn.BackColor = System.Drawing.Color.Transparent
+        Me.changePwdBtn.FlatAppearance.BorderSize = 0
+        Me.changePwdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.changePwdBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Underline)
+        Me.changePwdBtn.ForeColor = System.Drawing.Color.SeaGreen
+        Me.changePwdBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.changePwdBtn.Location = New System.Drawing.Point(69, 264)
+        Me.changePwdBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.changePwdBtn.Name = "changePwdBtn"
+        Me.changePwdBtn.Size = New System.Drawing.Size(200, 35)
+        Me.changePwdBtn.TabIndex = 54
+        Me.changePwdBtn.Text = "Change password "
+        Me.changePwdBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.changePwdBtn.UseVisualStyleBackColor = False
         '
         'updateProfileTitle
         '
@@ -852,7 +1058,7 @@ Partial Class UserHomePage
         Me.updateProfileTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.updateProfileTitle.ForeColor = System.Drawing.Color.MintCream
         Me.updateProfileTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.updateProfileTitle.Location = New System.Drawing.Point(55, 9)
+        Me.updateProfileTitle.Location = New System.Drawing.Point(70, 13)
         Me.updateProfileTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.updateProfileTitle.Name = "updateProfileTitle"
         Me.updateProfileTitle.Size = New System.Drawing.Size(122, 22)
@@ -873,31 +1079,6 @@ Partial Class UserHomePage
         Me.Label51.Size = New System.Drawing.Size(660, 45)
         Me.Label51.TabIndex = 51
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'userConfirmPwdProfileInput
-        '
-        Me.userConfirmPwdProfileInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.userConfirmPwdProfileInput.Location = New System.Drawing.Point(70, 339)
-        Me.userConfirmPwdProfileInput.Margin = New System.Windows.Forms.Padding(4)
-        Me.userConfirmPwdProfileInput.Name = "userConfirmPwdProfileInput"
-        Me.userConfirmPwdProfileInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userConfirmPwdProfileInput.Size = New System.Drawing.Size(532, 22)
-        Me.userConfirmPwdProfileInput.TabIndex = 22
-        Me.userConfirmPwdProfileInput.UseSystemPasswordChar = True
-        '
-        'userConfirmPwdProfileLabel
-        '
-        Me.userConfirmPwdProfileLabel.AutoSize = True
-        Me.userConfirmPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.userConfirmPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.userConfirmPwdProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userConfirmPwdProfileLabel.Location = New System.Drawing.Point(65, 309)
-        Me.userConfirmPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userConfirmPwdProfileLabel.Name = "userConfirmPwdProfileLabel"
-        Me.userConfirmPwdProfileLabel.Size = New System.Drawing.Size(161, 20)
-        Me.userConfirmPwdProfileLabel.TabIndex = 21
-        Me.userConfirmPwdProfileLabel.Text = "Confirm password"
         '
         'updateProfileCancelBtn
         '
@@ -925,7 +1106,7 @@ Partial Class UserHomePage
         Me.updateProfileErrorMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
         Me.updateProfileErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.updateProfileErrorMsg.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.updateProfileErrorMsg.Location = New System.Drawing.Point(70, 370)
+        Me.updateProfileErrorMsg.Location = New System.Drawing.Point(70, 470)
         Me.updateProfileErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.updateProfileErrorMsg.Name = "updateProfileErrorMsg"
         Me.updateProfileErrorMsg.Size = New System.Drawing.Size(0, 15)
@@ -1007,19 +1188,6 @@ Partial Class UserHomePage
         Me.userPhoneNumberProfileLabel2.Size = New System.Drawing.Size(205, 20)
         Me.userPhoneNumberProfileLabel2.TabIndex = 10
         Me.userPhoneNumberProfileLabel2.Text = "User telephone nunber "
-        '
-        'userPwdProfileLabel
-        '
-        Me.userPwdProfileLabel.AutoSize = True
-        Me.userPwdProfileLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.userPwdProfileLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.userPwdProfileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.userPwdProfileLabel.Location = New System.Drawing.Point(65, 249)
-        Me.userPwdProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.userPwdProfileLabel.Name = "userPwdProfileLabel"
-        Me.userPwdProfileLabel.Size = New System.Drawing.Size(179, 20)
-        Me.userPwdProfileLabel.TabIndex = 9
-        Me.userPwdProfileLabel.Text = "Enter new password"
         '
         'userNameProfileLabel2
         '
@@ -1722,48 +1890,6 @@ Partial Class UserHomePage
         '
         Me.errorProviderEmail.ContainerControl = Me
         '
-        'repairMonitorNumber
-        '
-        Me.repairMonitorNumber.AutoSize = True
-        Me.repairMonitorNumber.BackColor = System.Drawing.Color.MintCream
-        Me.repairMonitorNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
-        Me.repairMonitorNumber.ForeColor = System.Drawing.Color.DarkOrange
-        Me.repairMonitorNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.repairMonitorNumber.Location = New System.Drawing.Point(1220, 387)
-        Me.repairMonitorNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.repairMonitorNumber.Name = "repairMonitorNumber"
-        Me.repairMonitorNumber.Size = New System.Drawing.Size(35, 13)
-        Me.repairMonitorNumber.TabIndex = 50
-        Me.repairMonitorNumber.Text = "0000"
-        '
-        'repairIPNumber
-        '
-        Me.repairIPNumber.AutoSize = True
-        Me.repairIPNumber.BackColor = System.Drawing.Color.MintCream
-        Me.repairIPNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
-        Me.repairIPNumber.ForeColor = System.Drawing.Color.DarkOrange
-        Me.repairIPNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.repairIPNumber.Location = New System.Drawing.Point(880, 387)
-        Me.repairIPNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.repairIPNumber.Name = "repairIPNumber"
-        Me.repairIPNumber.Size = New System.Drawing.Size(35, 13)
-        Me.repairIPNumber.TabIndex = 49
-        Me.repairIPNumber.Text = "0000"
-        '
-        'repairCPUNumber
-        '
-        Me.repairCPUNumber.AutoSize = True
-        Me.repairCPUNumber.BackColor = System.Drawing.Color.Transparent
-        Me.repairCPUNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Bold)
-        Me.repairCPUNumber.ForeColor = System.Drawing.Color.DarkOrange
-        Me.repairCPUNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.repairCPUNumber.Location = New System.Drawing.Point(547, 388)
-        Me.repairCPUNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.repairCPUNumber.Name = "repairCPUNumber"
-        Me.repairCPUNumber.Size = New System.Drawing.Size(35, 13)
-        Me.repairCPUNumber.TabIndex = 48
-        Me.repairCPUNumber.Text = "0000"
-        '
         'UserHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1771,8 +1897,8 @@ Partial Class UserHomePage
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1924, 731)
-        Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.ProfilePanel)
+        Me.Controls.Add(Me.HomePagePanel)
         Me.Controls.Add(Me.EquipmentPanel)
         Me.Controls.Add(Me.PostPanel)
         Me.Controls.Add(Me.Header)
@@ -1797,6 +1923,8 @@ Partial Class UserHomePage
         Me.HomePagePanel.PerformLayout()
         Me.ProfilePanel.ResumeLayout(False)
         Me.ProfilePanel.PerformLayout()
+        Me.profileSubPanel3.ResumeLayout(False)
+        Me.profileSubPanel3.PerformLayout()
         Me.profileSubPanel2.ResumeLayout(False)
         Me.profileSubPanel2.PerformLayout()
         Me.profileSubPanel1.ResumeLayout(False)
@@ -1852,11 +1980,8 @@ Partial Class UserHomePage
     Friend WithEvents ProfilePanel As Panel
     Friend WithEvents confirmMsgPr As Label
     Friend WithEvents profileSubPanel2 As Panel
-    Friend WithEvents userPwdProfileInput As TextBox
     Friend WithEvents updateProfileTitle As Label
     Friend WithEvents Label51 As Label
-    Friend WithEvents userConfirmPwdProfileInput As TextBox
-    Friend WithEvents userConfirmPwdProfileLabel As Label
     Friend WithEvents updateProfileCancelBtn As Button
     Friend WithEvents updateProfileErrorMsg As Label
     Friend WithEvents userPhoneNumberProfileInput As TextBox
@@ -1865,7 +1990,6 @@ Partial Class UserHomePage
     Friend WithEvents updateProfileValidationBtn As Button
     Friend WithEvents userEmailProfileLabel2 As Label
     Friend WithEvents userPhoneNumberProfileLabel2 As Label
-    Friend WithEvents userPwdProfileLabel As Label
     Friend WithEvents userNameProfileLabel2 As Label
     Friend WithEvents profileSubPanel1 As Panel
     Friend WithEvents Label50 As Label
@@ -1912,4 +2036,15 @@ Partial Class UserHomePage
     Friend WithEvents repairMonitorNumber As Label
     Friend WithEvents repairIPNumber As Label
     Friend WithEvents repairCPUNumber As Label
+    Friend WithEvents profileSubPanel3 As Panel
+    Friend WithEvents userPwdProfileInput As TextBox
+    Friend WithEvents changePwdTitle As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents userConfirmPwdProfileInput As TextBox
+    Friend WithEvents userConfirmPwdProfileLabel As Label
+    Friend WithEvents changePwdCancelBtn As Button
+    Friend WithEvents changePwdErrorMsg As Label
+    Friend WithEvents changePwdValidationBtn As Button
+    Friend WithEvents userPwdProfileLabel As Label
+    Friend WithEvents changePwdBtn As Button
 End Class

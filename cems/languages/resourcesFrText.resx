@@ -217,6 +217,18 @@
   <data name="changepoststatelabel" xml:space="preserve">
     <value>État du poste</value>
   </data>
+  <data name="changePwdBtn" xml:space="preserve">
+    <value>Changer de mot de passe</value>
+  </data>
+  <data name="changePwdCancelBtn" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="changePwdTitle" xml:space="preserve">
+    <value>Changer le mot de passe</value>
+  </data>
+  <data name="changePwdValidationBtn" xml:space="preserve">
+    <value>Changer</value>
+  </data>
   <data name="confirmMsgE_add" xml:space="preserve">
     <value>équipement ajouté avec succès ✔</value>
   </data>
@@ -525,6 +537,9 @@
   </data>
   <data name="profileTitle_Update" xml:space="preserve">
     <value>Mêttre le profil à jour</value>
+  </data>
+  <data name="PwdChanged" xml:space="preserve">
+    <value>Mot de passe mise à jour avec succès ✔</value>
   </data>
   <data name="PwdNotMatch" xml:space="preserve">
     <value>Veuillez saisir le même mot de passe!</value>
