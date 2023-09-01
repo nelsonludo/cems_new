@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.loginPanel = New System.Windows.Forms.Panel()
         Me.loginUserEmailLabel = New System.Windows.Forms.Label()
         Me.loginUserPwdLabel = New System.Windows.Forms.Label()
         Me.loginTitle = New System.Windows.Forms.Label()
@@ -70,39 +70,38 @@ Partial Class Form1
         Me.englishBtn = New System.Windows.Forms.Button()
         Me.frenchBtn = New System.Windows.Forms.Button()
         Me.errorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Panel1.SuspendLayout()
+        Me.loginPanel.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
         CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'loginPanel
         '
-        Me.Panel1.BackColor = System.Drawing.Color.MintCream
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.loginUserEmailLabel)
-        Me.Panel1.Controls.Add(Me.loginUserPwdLabel)
-        Me.Panel1.Controls.Add(Me.loginTitle)
-        Me.Panel1.Controls.Add(Me.Label51)
-        Me.Panel1.Controls.Add(Me.forgotPasswordMessage)
-        Me.Panel1.Controls.Add(Me.forgotPwdBtn)
-        Me.Panel1.Controls.Add(Me.loginBtn)
-        Me.Panel1.Controls.Add(Me.passwordtxt)
-        Me.Panel1.Controls.Add(Me.emailtxt)
-        Me.Panel1.Location = New System.Drawing.Point(808, 300)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(548, 385)
-        Me.Panel1.TabIndex = 0
+        Me.loginPanel.BackColor = System.Drawing.Color.MintCream
+        Me.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.loginPanel.Controls.Add(Me.loginUserEmailLabel)
+        Me.loginPanel.Controls.Add(Me.loginUserPwdLabel)
+        Me.loginPanel.Controls.Add(Me.loginTitle)
+        Me.loginPanel.Controls.Add(Me.Label51)
+        Me.loginPanel.Controls.Add(Me.forgotPasswordMessage)
+        Me.loginPanel.Controls.Add(Me.forgotPwdBtn)
+        Me.loginPanel.Controls.Add(Me.loginBtn)
+        Me.loginPanel.Controls.Add(Me.passwordtxt)
+        Me.loginPanel.Controls.Add(Me.emailtxt)
+        Me.loginPanel.Location = New System.Drawing.Point(606, 244)
+        Me.loginPanel.Name = "loginPanel"
+        Me.loginPanel.Size = New System.Drawing.Size(412, 313)
+        Me.loginPanel.TabIndex = 0
+        Me.loginPanel.Visible = False
         '
         'loginUserEmailLabel
         '
         Me.loginUserEmailLabel.AutoSize = True
         Me.loginUserEmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.loginUserEmailLabel.Location = New System.Drawing.Point(55, 80)
-        Me.loginUserEmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.loginUserEmailLabel.Location = New System.Drawing.Point(41, 65)
         Me.loginUserEmailLabel.Name = "loginUserEmailLabel"
-        Me.loginUserEmailLabel.Size = New System.Drawing.Size(62, 20)
+        Me.loginUserEmailLabel.Size = New System.Drawing.Size(52, 17)
         Me.loginUserEmailLabel.TabIndex = 54
         Me.loginUserEmailLabel.Text = "Email "
         '
@@ -110,10 +109,9 @@ Partial Class Form1
         '
         Me.loginUserPwdLabel.AutoSize = True
         Me.loginUserPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.loginUserPwdLabel.Location = New System.Drawing.Point(55, 140)
-        Me.loginUserPwdLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.loginUserPwdLabel.Location = New System.Drawing.Point(41, 114)
         Me.loginUserPwdLabel.Name = "loginUserPwdLabel"
-        Me.loginUserPwdLabel.Size = New System.Drawing.Size(97, 20)
+        Me.loginUserPwdLabel.Size = New System.Drawing.Size(82, 17)
         Me.loginUserPwdLabel.TabIndex = 53
         Me.loginUserPwdLabel.Text = "Password "
         '
@@ -123,10 +121,9 @@ Partial Class Form1
         Me.loginTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.loginTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.loginTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.loginTitle.Location = New System.Drawing.Point(55, 9)
-        Me.loginTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.loginTitle.Location = New System.Drawing.Point(41, 7)
         Me.loginTitle.Name = "loginTitle"
-        Me.loginTitle.Size = New System.Drawing.Size(59, 22)
+        Me.loginTitle.Size = New System.Drawing.Size(48, 17)
         Me.loginTitle.TabIndex = 1
         Me.loginTitle.Text = "Login"
         '
@@ -136,9 +133,8 @@ Partial Class Form1
         Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label51.ForeColor = System.Drawing.Color.Yellow
         Me.Label51.Location = New System.Drawing.Point(0, 0)
-        Me.Label51.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(548, 45)
+        Me.Label51.Size = New System.Drawing.Size(411, 37)
         Me.Label51.TabIndex = 52
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -146,10 +142,9 @@ Partial Class Form1
         '
         Me.forgotPasswordMessage.AutoSize = True
         Me.forgotPasswordMessage.ForeColor = System.Drawing.Color.Red
-        Me.forgotPasswordMessage.Location = New System.Drawing.Point(10, 342)
-        Me.forgotPasswordMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.forgotPasswordMessage.Location = New System.Drawing.Point(8, 278)
         Me.forgotPasswordMessage.Name = "forgotPasswordMessage"
-        Me.forgotPasswordMessage.Size = New System.Drawing.Size(13, 16)
+        Me.forgotPasswordMessage.Size = New System.Drawing.Size(13, 13)
         Me.forgotPasswordMessage.TabIndex = 1
         Me.forgotPasswordMessage.Text = "  "
         '
@@ -161,10 +156,9 @@ Partial Class Form1
         Me.forgotPwdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.forgotPwdBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Underline)
         Me.forgotPwdBtn.ForeColor = System.Drawing.Color.SeaGreen
-        Me.forgotPwdBtn.Location = New System.Drawing.Point(182, 251)
-        Me.forgotPwdBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.forgotPwdBtn.Location = New System.Drawing.Point(136, 204)
         Me.forgotPwdBtn.Name = "forgotPwdBtn"
-        Me.forgotPwdBtn.Size = New System.Drawing.Size(200, 35)
+        Me.forgotPwdBtn.Size = New System.Drawing.Size(150, 28)
         Me.forgotPwdBtn.TabIndex = 6
         Me.forgotPwdBtn.Text = "Forgot password ?"
         Me.forgotPwdBtn.UseVisualStyleBackColor = False
@@ -176,30 +170,27 @@ Partial Class Form1
         Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.loginBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.loginBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.loginBtn.Location = New System.Drawing.Point(60, 210)
-        Me.loginBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.loginBtn.Location = New System.Drawing.Point(45, 171)
         Me.loginBtn.Name = "loginBtn"
-        Me.loginBtn.Size = New System.Drawing.Size(420, 35)
+        Me.loginBtn.Size = New System.Drawing.Size(315, 28)
         Me.loginBtn.TabIndex = 5
         Me.loginBtn.Text = "Login"
         Me.loginBtn.UseVisualStyleBackColor = False
         '
         'passwordtxt
         '
-        Me.passwordtxt.Location = New System.Drawing.Point(60, 166)
-        Me.passwordtxt.Margin = New System.Windows.Forms.Padding(4)
+        Me.passwordtxt.Location = New System.Drawing.Point(45, 135)
         Me.passwordtxt.Name = "passwordtxt"
         Me.passwordtxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.passwordtxt.Size = New System.Drawing.Size(420, 22)
+        Me.passwordtxt.Size = New System.Drawing.Size(316, 20)
         Me.passwordtxt.TabIndex = 3
         Me.passwordtxt.UseSystemPasswordChar = True
         '
         'emailtxt
         '
-        Me.emailtxt.Location = New System.Drawing.Point(60, 106)
-        Me.emailtxt.Margin = New System.Windows.Forms.Padding(4)
+        Me.emailtxt.Location = New System.Drawing.Point(45, 86)
         Me.emailtxt.Name = "emailtxt"
-        Me.emailtxt.Size = New System.Drawing.Size(420, 22)
+        Me.emailtxt.Size = New System.Drawing.Size(316, 20)
         Me.emailtxt.TabIndex = 2
         '
         'connexionStringPanel
@@ -218,11 +209,11 @@ Partial Class Form1
         Me.connexionStringPanel.Controls.Add(Me.connexionStringPwd)
         Me.connexionStringPanel.Controls.Add(Me.connexionStringUserName)
         Me.connexionStringPanel.Controls.Add(Me.Label9)
-        Me.connexionStringPanel.Location = New System.Drawing.Point(808, 300)
-        Me.connexionStringPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.connexionStringPanel.Location = New System.Drawing.Point(606, 244)
         Me.connexionStringPanel.Name = "connexionStringPanel"
-        Me.connexionStringPanel.Size = New System.Drawing.Size(552, 395)
+        Me.connexionStringPanel.Size = New System.Drawing.Size(414, 321)
         Me.connexionStringPanel.TabIndex = 8
+        Me.connexionStringPanel.Visible = False
         '
         'connexionTitle
         '
@@ -230,10 +221,9 @@ Partial Class Form1
         Me.connexionTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.connexionTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.connexionTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.connexionTitle.Location = New System.Drawing.Point(55, 9)
-        Me.connexionTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionTitle.Location = New System.Drawing.Point(41, 7)
         Me.connexionTitle.Name = "connexionTitle"
-        Me.connexionTitle.Size = New System.Drawing.Size(105, 22)
+        Me.connexionTitle.Size = New System.Drawing.Size(83, 17)
         Me.connexionTitle.TabIndex = 0
         Me.connexionTitle.Text = "Connexion"
         '
@@ -242,10 +232,9 @@ Partial Class Form1
         Me.connexionPwdLabel.AutoSize = True
         Me.connexionPwdLabel.BackColor = System.Drawing.Color.MintCream
         Me.connexionPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.connexionPwdLabel.Location = New System.Drawing.Point(55, 200)
-        Me.connexionPwdLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionPwdLabel.Location = New System.Drawing.Point(41, 162)
         Me.connexionPwdLabel.Name = "connexionPwdLabel"
-        Me.connexionPwdLabel.Size = New System.Drawing.Size(91, 20)
+        Me.connexionPwdLabel.Size = New System.Drawing.Size(77, 17)
         Me.connexionPwdLabel.TabIndex = 3
         Me.connexionPwdLabel.Text = "Password"
         '
@@ -254,10 +243,9 @@ Partial Class Form1
         Me.connexionServerLabel.AutoSize = True
         Me.connexionServerLabel.BackColor = System.Drawing.Color.MintCream
         Me.connexionServerLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.connexionServerLabel.Location = New System.Drawing.Point(55, 80)
-        Me.connexionServerLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionServerLabel.Location = New System.Drawing.Point(41, 65)
         Me.connexionServerLabel.Name = "connexionServerLabel"
-        Me.connexionServerLabel.Size = New System.Drawing.Size(70, 20)
+        Me.connexionServerLabel.Size = New System.Drawing.Size(61, 17)
         Me.connexionServerLabel.TabIndex = 1
         Me.connexionServerLabel.Text = "Server "
         '
@@ -266,10 +254,9 @@ Partial Class Form1
         Me.connexionDatabaseLabel.AutoSize = True
         Me.connexionDatabaseLabel.BackColor = System.Drawing.Color.MintCream
         Me.connexionDatabaseLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.connexionDatabaseLabel.Location = New System.Drawing.Point(55, 260)
-        Me.connexionDatabaseLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionDatabaseLabel.Location = New System.Drawing.Point(41, 211)
         Me.connexionDatabaseLabel.Name = "connexionDatabaseLabel"
-        Me.connexionDatabaseLabel.Size = New System.Drawing.Size(89, 20)
+        Me.connexionDatabaseLabel.Size = New System.Drawing.Size(77, 17)
         Me.connexionDatabaseLabel.TabIndex = 4
         Me.connexionDatabaseLabel.Text = "Database"
         '
@@ -278,36 +265,32 @@ Partial Class Form1
         Me.connexionUserNameLabel.AutoSize = True
         Me.connexionUserNameLabel.BackColor = System.Drawing.Color.MintCream
         Me.connexionUserNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.connexionUserNameLabel.Location = New System.Drawing.Point(55, 140)
-        Me.connexionUserNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionUserNameLabel.Location = New System.Drawing.Point(41, 114)
         Me.connexionUserNameLabel.Name = "connexionUserNameLabel"
-        Me.connexionUserNameLabel.Size = New System.Drawing.Size(100, 20)
+        Me.connexionUserNameLabel.Size = New System.Drawing.Size(86, 17)
         Me.connexionUserNameLabel.TabIndex = 2
         Me.connexionUserNameLabel.Text = "User name"
         '
         'connexionStringDatabase
         '
-        Me.connexionStringDatabase.Location = New System.Drawing.Point(60, 286)
-        Me.connexionStringDatabase.Margin = New System.Windows.Forms.Padding(4)
+        Me.connexionStringDatabase.Location = New System.Drawing.Point(45, 232)
         Me.connexionStringDatabase.Name = "connexionStringDatabase"
-        Me.connexionStringDatabase.Size = New System.Drawing.Size(420, 22)
+        Me.connexionStringDatabase.Size = New System.Drawing.Size(316, 20)
         Me.connexionStringDatabase.TabIndex = 8
         '
         'connexionStringServer
         '
-        Me.connexionStringServer.Location = New System.Drawing.Point(60, 106)
-        Me.connexionStringServer.Margin = New System.Windows.Forms.Padding(4)
+        Me.connexionStringServer.Location = New System.Drawing.Point(45, 86)
         Me.connexionStringServer.Name = "connexionStringServer"
-        Me.connexionStringServer.Size = New System.Drawing.Size(420, 22)
+        Me.connexionStringServer.Size = New System.Drawing.Size(316, 20)
         Me.connexionStringServer.TabIndex = 5
         '
         'connexionErrorMsg
         '
         Me.connexionErrorMsg.AutoSize = True
-        Me.connexionErrorMsg.Location = New System.Drawing.Point(60, 360)
-        Me.connexionErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.connexionErrorMsg.Location = New System.Drawing.Point(45, 292)
         Me.connexionErrorMsg.Name = "connexionErrorMsg"
-        Me.connexionErrorMsg.Size = New System.Drawing.Size(13, 16)
+        Me.connexionErrorMsg.Size = New System.Drawing.Size(13, 13)
         Me.connexionErrorMsg.TabIndex = 10
         Me.connexionErrorMsg.Text = "  "
         '
@@ -318,29 +301,26 @@ Partial Class Form1
         Me.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.connectBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.connectBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.connectBtn.Location = New System.Drawing.Point(60, 315)
-        Me.connectBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.connectBtn.Location = New System.Drawing.Point(45, 256)
         Me.connectBtn.Name = "connectBtn"
-        Me.connectBtn.Size = New System.Drawing.Size(420, 35)
+        Me.connectBtn.Size = New System.Drawing.Size(315, 28)
         Me.connectBtn.TabIndex = 9
         Me.connectBtn.Text = "Connect"
         Me.connectBtn.UseVisualStyleBackColor = False
         '
         'connexionStringPwd
         '
-        Me.connexionStringPwd.Location = New System.Drawing.Point(60, 226)
-        Me.connexionStringPwd.Margin = New System.Windows.Forms.Padding(4)
+        Me.connexionStringPwd.Location = New System.Drawing.Point(45, 184)
         Me.connexionStringPwd.Name = "connexionStringPwd"
-        Me.connexionStringPwd.Size = New System.Drawing.Size(420, 22)
+        Me.connexionStringPwd.Size = New System.Drawing.Size(316, 20)
         Me.connexionStringPwd.TabIndex = 7
         Me.connexionStringPwd.UseSystemPasswordChar = True
         '
         'connexionStringUserName
         '
-        Me.connexionStringUserName.Location = New System.Drawing.Point(60, 166)
-        Me.connexionStringUserName.Margin = New System.Windows.Forms.Padding(4)
+        Me.connexionStringUserName.Location = New System.Drawing.Point(45, 135)
         Me.connexionStringUserName.Name = "connexionStringUserName"
-        Me.connexionStringUserName.Size = New System.Drawing.Size(420, 22)
+        Me.connexionStringUserName.Size = New System.Drawing.Size(316, 20)
         Me.connexionStringUserName.TabIndex = 6
         '
         'Label9
@@ -349,9 +329,8 @@ Partial Class Form1
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Yellow
         Me.Label9.Location = New System.Drawing.Point(0, 0)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(550, 45)
+        Me.Label9.Size = New System.Drawing.Size(412, 37)
         Me.Label9.TabIndex = 53
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -378,12 +357,10 @@ Partial Class Form1
         Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
         Me.userAddPanel.Controls.Add(Me.adminNameLabel)
         Me.userAddPanel.Controls.Add(Me.Label10)
-        Me.userAddPanel.Location = New System.Drawing.Point(808, 300)
-        Me.userAddPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.userAddPanel.Location = New System.Drawing.Point(606, 244)
         Me.userAddPanel.Name = "userAddPanel"
-        Me.userAddPanel.Size = New System.Drawing.Size(552, 520)
+        Me.userAddPanel.Size = New System.Drawing.Size(414, 423)
         Me.userAddPanel.TabIndex = 11
-        Me.userAddPanel.Visible = False
         '
         'createAdminTitle
         '
@@ -391,10 +368,9 @@ Partial Class Form1
         Me.createAdminTitle.BackColor = System.Drawing.Color.SeaGreen
         Me.createAdminTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.createAdminTitle.ForeColor = System.Drawing.Color.MintCream
-        Me.createAdminTitle.Location = New System.Drawing.Point(55, 9)
-        Me.createAdminTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.createAdminTitle.Location = New System.Drawing.Point(41, 7)
         Me.createAdminTitle.Name = "createAdminTitle"
-        Me.createAdminTitle.Size = New System.Drawing.Size(129, 22)
+        Me.createAdminTitle.Size = New System.Drawing.Size(104, 17)
         Me.createAdminTitle.TabIndex = 59
         Me.createAdminTitle.Text = "Create admin"
         '
@@ -404,10 +380,9 @@ Partial Class Form1
         Me.addUserErrorMsg.BackColor = System.Drawing.SystemColors.ControlDark
         Me.addUserErrorMsg.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addUserErrorMsg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addUserErrorMsg.Location = New System.Drawing.Point(65, 486)
-        Me.addUserErrorMsg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.addUserErrorMsg.Location = New System.Drawing.Point(49, 395)
         Me.addUserErrorMsg.Name = "addUserErrorMsg"
-        Me.addUserErrorMsg.Size = New System.Drawing.Size(0, 19)
+        Me.addUserErrorMsg.Size = New System.Drawing.Size(0, 16)
         Me.addUserErrorMsg.TabIndex = 58
         Me.addUserErrorMsg.Visible = False
         '
@@ -415,19 +390,17 @@ Partial Class Form1
         '
         Me.userUserAddTitleInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.userUserAddTitleInput.FormattingEnabled = True
-        Me.userUserAddTitleInput.Location = New System.Drawing.Point(60, 286)
-        Me.userUserAddTitleInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddTitleInput.Location = New System.Drawing.Point(45, 232)
         Me.userUserAddTitleInput.Name = "userUserAddTitleInput"
-        Me.userUserAddTitleInput.Size = New System.Drawing.Size(420, 24)
+        Me.userUserAddTitleInput.Size = New System.Drawing.Size(316, 21)
         Me.userUserAddTitleInput.TabIndex = 3
         '
         'userUserAddConfirmPwdInput
         '
-        Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(60, 406)
-        Me.userUserAddConfirmPwdInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(45, 330)
         Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
         Me.userUserAddConfirmPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(420, 22)
+        Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddConfirmPwdInput.TabIndex = 5
         Me.userUserAddConfirmPwdInput.UseSystemPasswordChar = True
         '
@@ -436,20 +409,18 @@ Partial Class Form1
         Me.adminConfirmPwdLabel.AutoSize = True
         Me.adminConfirmPwdLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminConfirmPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminConfirmPwdLabel.Location = New System.Drawing.Point(55, 380)
-        Me.adminConfirmPwdLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminConfirmPwdLabel.Location = New System.Drawing.Point(41, 309)
         Me.adminConfirmPwdLabel.Name = "adminConfirmPwdLabel"
-        Me.adminConfirmPwdLabel.Size = New System.Drawing.Size(161, 20)
+        Me.adminConfirmPwdLabel.Size = New System.Drawing.Size(136, 17)
         Me.adminConfirmPwdLabel.TabIndex = 56
         Me.adminConfirmPwdLabel.Text = "Confirm password"
         '
         'userUserAddPwdInput
         '
-        Me.userUserAddPwdInput.Location = New System.Drawing.Point(60, 346)
-        Me.userUserAddPwdInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddPwdInput.Location = New System.Drawing.Point(45, 281)
         Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
         Me.userUserAddPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.userUserAddPwdInput.Size = New System.Drawing.Size(420, 22)
+        Me.userUserAddPwdInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddPwdInput.TabIndex = 4
         Me.userUserAddPwdInput.UseSystemPasswordChar = True
         '
@@ -458,10 +429,9 @@ Partial Class Form1
         Me.adminPwdLabel.AutoSize = True
         Me.adminPwdLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminPwdLabel.Location = New System.Drawing.Point(55, 320)
-        Me.adminPwdLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminPwdLabel.Location = New System.Drawing.Point(41, 260)
         Me.adminPwdLabel.Name = "adminPwdLabel"
-        Me.adminPwdLabel.Size = New System.Drawing.Size(147, 20)
+        Me.adminPwdLabel.Size = New System.Drawing.Size(125, 17)
         Me.adminPwdLabel.TabIndex = 54
         Me.adminPwdLabel.Text = "Admin password"
         '
@@ -470,19 +440,17 @@ Partial Class Form1
         Me.adminTitleLabel.AutoSize = True
         Me.adminTitleLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminTitleLabel.Location = New System.Drawing.Point(55, 260)
-        Me.adminTitleLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminTitleLabel.Location = New System.Drawing.Point(41, 211)
         Me.adminTitleLabel.Name = "adminTitleLabel"
-        Me.adminTitleLabel.Size = New System.Drawing.Size(99, 20)
+        Me.adminTitleLabel.Size = New System.Drawing.Size(84, 17)
         Me.adminTitleLabel.TabIndex = 52
         Me.adminTitleLabel.Text = "Admin title"
         '
         'userUserAddPhoneInput
         '
-        Me.userUserAddPhoneInput.Location = New System.Drawing.Point(60, 226)
-        Me.userUserAddPhoneInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddPhoneInput.Location = New System.Drawing.Point(45, 184)
         Me.userUserAddPhoneInput.Name = "userUserAddPhoneInput"
-        Me.userUserAddPhoneInput.Size = New System.Drawing.Size(420, 22)
+        Me.userUserAddPhoneInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddPhoneInput.TabIndex = 2
         '
         'adminPhoneNumberLabel
@@ -490,19 +458,17 @@ Partial Class Form1
         Me.adminPhoneNumberLabel.AutoSize = True
         Me.adminPhoneNumberLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminPhoneNumberLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminPhoneNumberLabel.Location = New System.Drawing.Point(55, 200)
-        Me.adminPhoneNumberLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminPhoneNumberLabel.Location = New System.Drawing.Point(41, 162)
         Me.adminPhoneNumberLabel.Name = "adminPhoneNumberLabel"
-        Me.adminPhoneNumberLabel.Size = New System.Drawing.Size(185, 20)
+        Me.adminPhoneNumberLabel.Size = New System.Drawing.Size(161, 17)
         Me.adminPhoneNumberLabel.TabIndex = 50
         Me.adminPhoneNumberLabel.Text = "Admin phone number"
         '
         'userUserAddEmailInput
         '
-        Me.userUserAddEmailInput.Location = New System.Drawing.Point(60, 166)
-        Me.userUserAddEmailInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddEmailInput.Location = New System.Drawing.Point(45, 135)
         Me.userUserAddEmailInput.Name = "userUserAddEmailInput"
-        Me.userUserAddEmailInput.Size = New System.Drawing.Size(420, 22)
+        Me.userUserAddEmailInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddEmailInput.TabIndex = 1
         '
         'adminEmailLabel
@@ -510,19 +476,17 @@ Partial Class Form1
         Me.adminEmailLabel.AutoSize = True
         Me.adminEmailLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminEmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminEmailLabel.Location = New System.Drawing.Point(55, 140)
-        Me.adminEmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminEmailLabel.Location = New System.Drawing.Point(41, 114)
         Me.adminEmailLabel.Name = "adminEmailLabel"
-        Me.adminEmailLabel.Size = New System.Drawing.Size(112, 20)
+        Me.adminEmailLabel.Size = New System.Drawing.Size(95, 17)
         Me.adminEmailLabel.TabIndex = 48
         Me.adminEmailLabel.Text = "Admin email"
         '
         'userUserAddNameInput
         '
-        Me.userUserAddNameInput.Location = New System.Drawing.Point(60, 106)
-        Me.userUserAddNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.userUserAddNameInput.Location = New System.Drawing.Point(45, 86)
         Me.userUserAddNameInput.Name = "userUserAddNameInput"
-        Me.userUserAddNameInput.Size = New System.Drawing.Size(420, 22)
+        Me.userUserAddNameInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddNameInput.TabIndex = 0
         '
         'userAddvalidationBtn
@@ -533,11 +497,11 @@ Partial Class Form1
         Me.userAddvalidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.userAddvalidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
         Me.userAddvalidationBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.userAddvalidationBtn.Location = New System.Drawing.Point(60, 436)
+        Me.userAddvalidationBtn.Location = New System.Drawing.Point(45, 354)
         Me.userAddvalidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.userAddvalidationBtn.MaximumSize = New System.Drawing.Size(500, 62)
+        Me.userAddvalidationBtn.MaximumSize = New System.Drawing.Size(375, 50)
         Me.userAddvalidationBtn.Name = "userAddvalidationBtn"
-        Me.userAddvalidationBtn.Size = New System.Drawing.Size(420, 35)
+        Me.userAddvalidationBtn.Size = New System.Drawing.Size(315, 28)
         Me.userAddvalidationBtn.TabIndex = 6
         Me.userAddvalidationBtn.Text = "Add"
         Me.userAddvalidationBtn.UseVisualStyleBackColor = False
@@ -547,10 +511,9 @@ Partial Class Form1
         Me.adminNameLabel.AutoSize = True
         Me.adminNameLabel.BackColor = System.Drawing.Color.MintCream
         Me.adminNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminNameLabel.Location = New System.Drawing.Point(55, 80)
-        Me.adminNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.adminNameLabel.Location = New System.Drawing.Point(41, 65)
         Me.adminNameLabel.Name = "adminNameLabel"
-        Me.adminNameLabel.Size = New System.Drawing.Size(112, 20)
+        Me.adminNameLabel.Size = New System.Drawing.Size(96, 17)
         Me.adminNameLabel.TabIndex = 11
         Me.adminNameLabel.Text = "Admin name"
         '
@@ -560,9 +523,8 @@ Partial Class Form1
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Yellow
         Me.Label10.Location = New System.Drawing.Point(0, 0)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(552, 45)
+        Me.Label10.Size = New System.Drawing.Size(414, 37)
         Me.Label10.TabIndex = 60
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -582,11 +544,11 @@ Partial Class Form1
         Me.englishBtn.Image = Global.cems.My.Resources.Resources.englishFlag
         Me.englishBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.englishBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.englishBtn.Location = New System.Drawing.Point(1157, 255)
+        Me.englishBtn.Location = New System.Drawing.Point(868, 207)
         Me.englishBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.englishBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.englishBtn.MaximumSize = New System.Drawing.Size(156, 50)
         Me.englishBtn.Name = "englishBtn"
-        Me.englishBtn.Size = New System.Drawing.Size(90, 36)
+        Me.englishBtn.Size = New System.Drawing.Size(68, 29)
         Me.englishBtn.TabIndex = 38
         Me.englishBtn.Text = "En"
         Me.englishBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -605,11 +567,11 @@ Partial Class Form1
         Me.frenchBtn.Image = Global.cems.My.Resources.Resources.frenchFlag
         Me.frenchBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.frenchBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.frenchBtn.Location = New System.Drawing.Point(1158, 255)
+        Me.frenchBtn.Location = New System.Drawing.Point(868, 207)
         Me.frenchBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.frenchBtn.MaximumSize = New System.Drawing.Size(208, 62)
+        Me.frenchBtn.MaximumSize = New System.Drawing.Size(156, 50)
         Me.frenchBtn.Name = "frenchBtn"
-        Me.frenchBtn.Size = New System.Drawing.Size(90, 36)
+        Me.frenchBtn.Size = New System.Drawing.Size(68, 29)
         Me.frenchBtn.TabIndex = 39
         Me.frenchBtn.Text = "Fr"
         Me.frenchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -622,24 +584,23 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.ClientSize = New System.Drawing.Size(1924, 859)
+        Me.ClientSize = New System.Drawing.Size(1443, 698)
         Me.Controls.Add(Me.englishBtn)
         Me.Controls.Add(Me.frenchBtn)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.loginPanel)
         Me.Controls.Add(Me.connexionStringPanel)
         Me.Controls.Add(Me.userAddPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CEMS-Login"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.loginPanel.ResumeLayout(False)
+        Me.loginPanel.PerformLayout()
         Me.connexionStringPanel.ResumeLayout(False)
         Me.connexionStringPanel.PerformLayout()
         Me.userAddPanel.ResumeLayout(False)
@@ -650,7 +611,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents loginPanel As Panel
     Friend WithEvents loginTitle As Label
     Friend WithEvents forgotPwdBtn As Button
     Friend WithEvents loginBtn As Button

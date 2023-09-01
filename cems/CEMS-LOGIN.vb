@@ -72,6 +72,7 @@ Public Class Form1
 
         Dim wrapper As New Simple3Des("")
 
+        Dim test As Boolean = False
 
         emailtxt.Text = ""
         passwordtxt.Text = ""
@@ -91,11 +92,265 @@ Public Class Form1
 
             FileClose(1)
             If server <> "" Or username <> "" Or database <> "" Then
-                connexionStringPanel.Visible = False
+
+                Try
+                    connect_db(server, username, password, database)
+
+                    sqlConn.Open()
+                    sqlConn.Close()
+                Catch ex As Exception
+                    'MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    test = True
+                End Try
+
+                If test Then
+
+
+                    If isFrench Then
+                        connexionErrorMsg.Text = My.Resources.resourcesEnText.InvalidConnectionString
+
+                    Else
+                        connexionErrorMsg.Text = My.Resources.resourcesFrText.InvalidConnectionString
+
+                    End If
+                    connexionErrorMsg.Visible = True
+                    Timer1.Interval = 3000
+                    Timer1.Start()
+
+                Else
+
+
+                    'creating first admin
+                    connect_db(server, username, password, database)
+
+                    Dim checkTables As Integer = 0
+
+                    Try
+                        sqlConn.Open()
+
+                        sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_users'"
+
+
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        While (sqlReader.Read())
+                            checkTables = sqlReader.Item("count(*)")
+                        End While
+                        sqlConn.Close()
+
+
+                        If checkTables > 0 Then
+                            connexionStringPanel.Visible = False
+                            userAddPanel.Visible = False
+                            loginPanel.Visible = True
+
+                            ' MessageBox.Show(checkTables)
+                        Else
+                            'create all tables
+
+                            ' MessageBox.Show(checkTables)
+
+
+                            Try
+                                sqlConn.Open()
+
+                                longestQuery()
+
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+
+                                sqlConn.Close()
+
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Finally
+                                sqlConn.Dispose()
+
+                            End Try
+
+                            'populating the title combobox
+
+                            userUserAddTitleInput.Items.Clear()
+
+
+                            Try
+                                sqlConn.Open()
+
+                                sqlQuery = "select * from  cems.cems_titles"
+
+
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+                                While (sqlReader.Read())
+                                    userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
+
+                                End While
+                                sqlConn.Close()
+
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Finally
+                                sqlConn.Dispose()
+
+                            End Try
+
+                            userAddPanel.Visible = True
+                            connexionStringPanel.Visible = False
+
+                        End If
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "MySql counting all the tables to see if there are any", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Finally
+                        sqlConn.Dispose()
+
+                    End Try
+
+                    userAddPanel.Visible = True
+                    connexionStringPanel.Visible = False
+
+                End If
+
             End If
         Else
+
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
+
+            'this shall be put in a users method because it is too damn long 
+
+            FileOpen(1, localPath, OpenMode.Input)
+
+            While Not EOF(1)
+                server = wrapper.DecryptData(LineInput(1))
+                username = wrapper.DecryptData(LineInput(1))
+                password = wrapper.DecryptData(LineInput(1))
+                database = wrapper.DecryptData(LineInput(1))
+            End While
+
+
+            FileClose(1)
+            If server <> "" Or username <> "" Or database <> "" Then
+
+                Try
+                    connect_db(server, username, password, database)
+
+                    sqlConn.Open()
+                    sqlConn.Close()
+                Catch ex As Exception
+                    'MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    test = True
+                End Try
+
+                If test Then
+
+
+                    If isFrench Then
+                        connexionErrorMsg.Text = My.Resources.resourcesEnText.InvalidConnectionString
+
+                    Else
+                        connexionErrorMsg.Text = My.Resources.resourcesFrText.InvalidConnectionString
+
+                    End If
+                    connexionErrorMsg.Visible = True
+                    Timer1.Interval = 3000
+                    Timer1.Start()
+
+                Else
+
+
+                    'creating first admin
+                    connect_db(server, username, password, database)
+
+                    Dim checkTables As Integer = 0
+
+                    Try
+                        sqlConn.Open()
+
+                        sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_users'"
+
+
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        While (sqlReader.Read())
+                            checkTables = sqlReader.Item("count(*)")
+                        End While
+                        sqlConn.Close()
+
+
+                        If checkTables > 0 Then
+                            connexionStringPanel.Visible = False
+                            userAddPanel.Visible = False
+                            loginPanel.Visible = True
+
+                            ' MessageBox.Show(checkTables)
+                        Else
+                            'create all tables
+
+                            ' MessageBox.Show(checkTables)
+
+
+                            Try
+                                sqlConn.Open()
+
+                                longestQuery()
+
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+
+                                sqlConn.Close()
+
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Finally
+                                sqlConn.Dispose()
+
+                            End Try
+
+                            'populating the title combobox
+
+                            userUserAddTitleInput.Items.Clear()
+
+
+                            Try
+                                sqlConn.Open()
+
+                                sqlQuery = "select * from  cems.cems_titles"
+
+
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+                                While (sqlReader.Read())
+                                    userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
+
+                                End While
+                                sqlConn.Close()
+
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Finally
+                                sqlConn.Dispose()
+
+                            End Try
+
+                            userAddPanel.Visible = True
+                            connexionStringPanel.Visible = False
+
+                        End If
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "MySql counting all the tables to see if there are any", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Finally
+                        sqlConn.Dispose()
+
+                    End Try
+
+                    userAddPanel.Visible = True
+                    connexionStringPanel.Visible = False
+
+                End If
+
+            End If
         End If
     End Sub
 
@@ -162,13 +417,14 @@ Public Class Form1
 
     Private Sub connectBtn_Click(sender As Object, e As EventArgs) Handles connectBtn.Click
 
-        Dim servercb As String = connexionStringServer.Text
-        Dim usernamecb As String = connexionStringUserName.Text
-        Dim passwordcb As String = connexionStringPwd.Text
-        Dim databasecb As String = connexionStringDatabase.Text
+        server = connexionStringServer.Text
+        username = connexionStringUserName.Text
+        password = connexionStringPwd.Text
+        database = connexionStringDatabase.Text
+
         Dim test As Boolean = False
 
-        If servercb = "" Or usernamecb = "" Or databasecb = "" Then
+        If server = "" Or username = "" Or database = "" Then
 
             If isFrench Then
                 connexionErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
@@ -184,12 +440,12 @@ Public Class Form1
         Else
 
             Try
-                connect_db(servercb, usernamecb, passwordcb, databasecb)
+                connect_db(server, username, password, database)
 
                 sqlConn.Open()
                 sqlConn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 test = True
             End Try
 
@@ -209,10 +465,10 @@ Public Class Form1
             Else
                 Dim wrapper As New Simple3Des("")
 
-                Dim serverEncr As String = wrapper.EncryptData(servercb)
-                Dim userNameEncr As String = wrapper.EncryptData(usernamecb)
-                Dim pwdEncr As String = wrapper.EncryptData(passwordcb)
-                Dim databaseEncr As String = wrapper.EncryptData(databasecb)
+                Dim serverEncr As String = wrapper.EncryptData(server)
+                Dim userNameEncr As String = wrapper.EncryptData(username)
+                Dim pwdEncr As String = wrapper.EncryptData(password)
+                Dim databaseEncr As String = wrapper.EncryptData(database)
 
                 Dim FILE_PATH As String = "C:\cems"
 
@@ -248,7 +504,7 @@ Public Class Form1
 
 
                 'creating first admin
-                connect_db(servercb, usernamecb, passwordcb, databasecb)
+                connect_db(server, username, password, database)
 
                 Dim checkTables As Integer = 0
 
@@ -269,9 +525,12 @@ Public Class Form1
                     If checkTables > 0 Then
                         connexionStringPanel.Visible = False
                         userAddPanel.Visible = False
+                        loginPanel.Visible = True
 
                     Else
                         'create all tables
+
+
 
                         Try
                             sqlConn.Open()
