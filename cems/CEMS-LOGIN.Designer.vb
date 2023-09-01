@@ -53,7 +53,7 @@ Partial Class Form1
         Me.addUserErrorMsg = New System.Windows.Forms.Label()
         Me.userUserAddTitleInput = New System.Windows.Forms.ComboBox()
         Me.userUserAddConfirmPwdInput = New System.Windows.Forms.TextBox()
-        Me.adminConfirmPwdLabel = New System.Windows.Forms.Label()
+        Me.userConfirmPwdLabel = New System.Windows.Forms.Label()
         Me.userUserAddPwdInput = New System.Windows.Forms.TextBox()
         Me.adminPwdLabel = New System.Windows.Forms.Label()
         Me.adminTitleLabel = New System.Windows.Forms.Label()
@@ -62,7 +62,7 @@ Partial Class Form1
         Me.userUserAddEmailInput = New System.Windows.Forms.TextBox()
         Me.adminEmailLabel = New System.Windows.Forms.Label()
         Me.userUserAddNameInput = New System.Windows.Forms.TextBox()
-        Me.userAddvalidationBtn = New System.Windows.Forms.Button()
+        Me.userAddValidationBtn = New System.Windows.Forms.Button()
         Me.adminNameLabel = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -213,7 +213,6 @@ Partial Class Form1
         Me.connexionStringPanel.Name = "connexionStringPanel"
         Me.connexionStringPanel.Size = New System.Drawing.Size(414, 321)
         Me.connexionStringPanel.TabIndex = 8
-        Me.connexionStringPanel.Visible = False
         '
         'connexionTitle
         '
@@ -345,7 +344,7 @@ Partial Class Form1
         Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
         Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
         Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
-        Me.userAddPanel.Controls.Add(Me.adminConfirmPwdLabel)
+        Me.userAddPanel.Controls.Add(Me.userConfirmPwdLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
         Me.userAddPanel.Controls.Add(Me.adminPwdLabel)
         Me.userAddPanel.Controls.Add(Me.adminTitleLabel)
@@ -354,13 +353,14 @@ Partial Class Form1
         Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
         Me.userAddPanel.Controls.Add(Me.adminEmailLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddNameInput)
-        Me.userAddPanel.Controls.Add(Me.userAddvalidationBtn)
+        Me.userAddPanel.Controls.Add(Me.userAddValidationBtn)
         Me.userAddPanel.Controls.Add(Me.adminNameLabel)
         Me.userAddPanel.Controls.Add(Me.Label10)
         Me.userAddPanel.Location = New System.Drawing.Point(606, 244)
         Me.userAddPanel.Name = "userAddPanel"
         Me.userAddPanel.Size = New System.Drawing.Size(414, 423)
         Me.userAddPanel.TabIndex = 11
+        Me.userAddPanel.Visible = False
         '
         'createAdminTitle
         '
@@ -404,16 +404,16 @@ Partial Class Form1
         Me.userUserAddConfirmPwdInput.TabIndex = 5
         Me.userUserAddConfirmPwdInput.UseSystemPasswordChar = True
         '
-        'adminConfirmPwdLabel
+        'userConfirmPwdLabel
         '
-        Me.adminConfirmPwdLabel.AutoSize = True
-        Me.adminConfirmPwdLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminConfirmPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminConfirmPwdLabel.Location = New System.Drawing.Point(41, 309)
-        Me.adminConfirmPwdLabel.Name = "adminConfirmPwdLabel"
-        Me.adminConfirmPwdLabel.Size = New System.Drawing.Size(136, 17)
-        Me.adminConfirmPwdLabel.TabIndex = 56
-        Me.adminConfirmPwdLabel.Text = "Confirm password"
+        Me.userConfirmPwdLabel.AutoSize = True
+        Me.userConfirmPwdLabel.BackColor = System.Drawing.Color.MintCream
+        Me.userConfirmPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.userConfirmPwdLabel.Location = New System.Drawing.Point(41, 309)
+        Me.userConfirmPwdLabel.Name = "userConfirmPwdLabel"
+        Me.userConfirmPwdLabel.Size = New System.Drawing.Size(136, 17)
+        Me.userConfirmPwdLabel.TabIndex = 56
+        Me.userConfirmPwdLabel.Text = "Confirm password"
         '
         'userUserAddPwdInput
         '
@@ -489,22 +489,22 @@ Partial Class Form1
         Me.userUserAddNameInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddNameInput.TabIndex = 0
         '
-        'userAddvalidationBtn
+        'userAddValidationBtn
         '
-        Me.userAddvalidationBtn.BackColor = System.Drawing.Color.SeaGreen
-        Me.userAddvalidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
-        Me.userAddvalidationBtn.FlatAppearance.BorderSize = 0
-        Me.userAddvalidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.userAddvalidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.userAddvalidationBtn.ForeColor = System.Drawing.Color.Yellow
-        Me.userAddvalidationBtn.Location = New System.Drawing.Point(45, 354)
-        Me.userAddvalidationBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.userAddvalidationBtn.MaximumSize = New System.Drawing.Size(375, 50)
-        Me.userAddvalidationBtn.Name = "userAddvalidationBtn"
-        Me.userAddvalidationBtn.Size = New System.Drawing.Size(315, 28)
-        Me.userAddvalidationBtn.TabIndex = 6
-        Me.userAddvalidationBtn.Text = "Add"
-        Me.userAddvalidationBtn.UseVisualStyleBackColor = False
+        Me.userAddValidationBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.userAddValidationBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.userAddValidationBtn.FlatAppearance.BorderSize = 0
+        Me.userAddValidationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.userAddValidationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.userAddValidationBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.userAddValidationBtn.Location = New System.Drawing.Point(45, 354)
+        Me.userAddValidationBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.userAddValidationBtn.MaximumSize = New System.Drawing.Size(375, 50)
+        Me.userAddValidationBtn.Name = "userAddValidationBtn"
+        Me.userAddValidationBtn.Size = New System.Drawing.Size(315, 28)
+        Me.userAddValidationBtn.TabIndex = 6
+        Me.userAddValidationBtn.Text = "Add"
+        Me.userAddValidationBtn.UseVisualStyleBackColor = False
         '
         'adminNameLabel
         '
@@ -636,7 +636,7 @@ Partial Class Form1
     Friend WithEvents addUserErrorMsg As Label
     Friend WithEvents userUserAddTitleInput As ComboBox
     Friend WithEvents userUserAddConfirmPwdInput As TextBox
-    Friend WithEvents adminConfirmPwdLabel As Label
+    Friend WithEvents userConfirmPwdLabel As Label
     Friend WithEvents userUserAddPwdInput As TextBox
     Friend WithEvents adminPwdLabel As Label
     Friend WithEvents adminTitleLabel As Label
@@ -645,7 +645,7 @@ Partial Class Form1
     Friend WithEvents userUserAddEmailInput As TextBox
     Friend WithEvents adminEmailLabel As Label
     Friend WithEvents userUserAddNameInput As TextBox
-    Friend WithEvents userAddvalidationBtn As Button
+    Friend WithEvents userAddValidationBtn As Button
     Friend WithEvents adminNameLabel As Label
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer

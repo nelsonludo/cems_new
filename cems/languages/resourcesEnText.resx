@@ -655,6 +655,9 @@
   <data name="userAddValidationBtn" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="userConfirmPwdLabel" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
   <data name="userConfirmPwdProfileLabel" xml:space="preserve">
     <value>Confirm password</value>
   </data>

@@ -59,7 +59,7 @@ Public Class Form1
         TranslateFormControlsFrench(Me)
 
 
-        Dim FILE_PATH As String = "C:\cems"
+        'Dim FILE_PATH As String = "C:\cems"
 
         Dim FILE_NAME As String = "connectionString.txt"
 
@@ -91,6 +91,8 @@ Public Class Form1
 
 
             FileClose(1)
+
+
             If server <> "" Or username <> "" Or database <> "" Then
 
                 Try
@@ -144,12 +146,11 @@ Public Class Form1
                             userAddPanel.Visible = False
                             loginPanel.Visible = True
 
-                            ' MessageBox.Show(checkTables)
                         Else
                             'create all tables
 
-                            ' MessageBox.Show(checkTables)
-
+                            userAddPanel.Visible = True
+                            connexionStringPanel.Visible = False
 
                             Try
                                 sqlConn.Open()
@@ -194,8 +195,6 @@ Public Class Form1
 
                             End Try
 
-                            userAddPanel.Visible = True
-                            connexionStringPanel.Visible = False
 
                         End If
 
@@ -217,140 +216,6 @@ Public Class Form1
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
 
-            'this shall be put in a users method because it is too damn long 
-
-            FileOpen(1, localPath, OpenMode.Input)
-
-            While Not EOF(1)
-                server = wrapper.DecryptData(LineInput(1))
-                username = wrapper.DecryptData(LineInput(1))
-                password = wrapper.DecryptData(LineInput(1))
-                database = wrapper.DecryptData(LineInput(1))
-            End While
-
-
-            FileClose(1)
-            If server <> "" Or username <> "" Or database <> "" Then
-
-                Try
-                    connect_db(server, username, password, database)
-
-                    sqlConn.Open()
-                    sqlConn.Close()
-                Catch ex As Exception
-                    'MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    test = True
-                End Try
-
-                If test Then
-
-
-                    If isFrench Then
-                        connexionErrorMsg.Text = My.Resources.resourcesEnText.InvalidConnectionString
-
-                    Else
-                        connexionErrorMsg.Text = My.Resources.resourcesFrText.InvalidConnectionString
-
-                    End If
-                    connexionErrorMsg.Visible = True
-                    Timer1.Interval = 3000
-                    Timer1.Start()
-
-                Else
-
-
-                    'creating first admin
-                    connect_db(server, username, password, database)
-
-                    Dim checkTables As Integer = 0
-
-                    Try
-                        sqlConn.Open()
-
-                        sqlQuery = "select count(*) from information_schema.tables where table_name = 'cems_users'"
-
-
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        While (sqlReader.Read())
-                            checkTables = sqlReader.Item("count(*)")
-                        End While
-                        sqlConn.Close()
-
-
-                        If checkTables > 0 Then
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = False
-                            loginPanel.Visible = True
-
-                            ' MessageBox.Show(checkTables)
-                        Else
-                            'create all tables
-
-                            ' MessageBox.Show(checkTables)
-
-
-                            Try
-                                sqlConn.Open()
-
-                                longestQuery()
-
-                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                                sqlReader = sqlCmd.ExecuteReader
-
-                                sqlConn.Close()
-
-                            Catch ex As Exception
-                                MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            Finally
-                                sqlConn.Dispose()
-
-                            End Try
-
-                            'populating the title combobox
-
-                            userUserAddTitleInput.Items.Clear()
-
-
-                            Try
-                                sqlConn.Open()
-
-                                sqlQuery = "select * from  cems.cems_titles"
-
-
-                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                                sqlReader = sqlCmd.ExecuteReader
-                                While (sqlReader.Read())
-                                    userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
-
-                                End While
-                                sqlConn.Close()
-
-                            Catch ex As Exception
-                                MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            Finally
-                                sqlConn.Dispose()
-
-                            End Try
-
-                            userAddPanel.Visible = True
-                            connexionStringPanel.Visible = False
-
-                        End If
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message, "MySql counting all the tables to see if there are any", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Finally
-                        sqlConn.Dispose()
-
-                    End Try
-
-                    userAddPanel.Visible = True
-                    connexionStringPanel.Visible = False
-
-                End If
-
-            End If
         End If
     End Sub
 
@@ -531,6 +396,9 @@ Public Class Form1
                         'create all tables
 
 
+                        userAddPanel.Visible = True
+                        connexionStringPanel.Visible = False
+
 
                         Try
                             sqlConn.Open()
@@ -575,9 +443,7 @@ Public Class Form1
 
                         End Try
 
-                        userAddPanel.Visible = True
                     End If
-                    connexionStringPanel.Visible = False
 
                 Catch ex As Exception
                     MessageBox.Show(ex.Message, "MySql counting all the tables to see if there are any", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -610,7 +476,7 @@ Public Class Form1
 
 
 
-    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddvalidationBtn.Click 'validate add
+    Private Sub userAddValidateBtn_Click(sender As Object, e As EventArgs) Handles userAddValidationBtn.Click 'validate add
 
         connect_db(server, username, password, database)
 
@@ -702,6 +568,7 @@ Public Class Form1
 
                     'this makes the add panel to disappear
                     userAddPanel.Visible = False
+                    loginPanel.Visible = True
 
                 Catch ex As Exception
                     MessageBox.Show(ex.Message, "MySql create first user", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -850,73 +717,6 @@ Public Class Form1
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cems_users`
--- 
-
-CREATE TABLE `cems_users` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(100) NOT NULL,
-  `user_phone_number` varchar(9) NOT NULL,
-  `user_email` varchar(50) NOT NULL,
-  `user_password` varchar(65) NOT NULL,
-  `title_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cems_users`
---
-
-INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
-(1, 'admin', '655483496', 'ict@ccousp.cm', 'admin', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cems_equipments`
---
-
-CREATE TABLE `cems_equipments` (
-  `equipment_id` int(11) NOT NULL,
-  `equipment_type` varchar(100) NOT NULL,
-  `equipment_state` varchar(100) NOT NULL,
-  `post_id` int(11) NOT NULL,
-  `hall_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cems_halls`
---
-
-CREATE TABLE `cems_halls` (
-  `hall_id` int(11) NOT NULL,
-  `hall_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-INSERT INTO `cems_halls` (`hall_id`, `hall_name`) VALUES
-(0, 'Hall 0');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cems_posts`
---
-
-CREATE TABLE `cems_posts` (
-  `post_id` int(11) NOT NULL,
-  `hall_id` int(11) NOT NULL,
-  `post_state` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
-(0, 0, good);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `cems_titles`
 --
 
@@ -935,8 +735,67 @@ INSERT INTO `cems_titles` (`title_id`, `title_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cems_users`
+-- 
+
+CREATE TABLE `cems_users` (
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_phone_number` varchar(9) NOT NULL,
+  `user_email` varchar(50) NOT NULL,
+  `user_password` varchar(65) NOT NULL,
+  `title_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cems_halls`
+--
+
+CREATE TABLE `cems_halls` (
+  `hall_id` int(11) NOT NULL,
+  `hall_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `cems_halls` (`hall_id`, `hall_name`) VALUES
+(1, 'Hall 0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cems_posts`
+--
+
+CREATE TABLE `cems_posts` (
+  `post_id` int(11) NOT NULL,
+  `hall_id` int(11) NOT NULL,
+  `post_state` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------
+
+--
 -- Indexes for dumped tables
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cems_equipments`
+--
+
+CREATE TABLE `cems_equipments` (
+  `equipment_id` int(11) NOT NULL,
+  `equipment_type` varchar(100) NOT NULL,
+  `equipment_state` varchar(100) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `hall_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Indexes for table `cems_equipments`
@@ -1023,6 +882,22 @@ ALTER TABLE `cems_posts`
 ALTER TABLE `cems_users`
   ADD CONSTRAINT `cems_users_ibfk_1` FOREIGN KEY (`title_id`) REFERENCES `cems_titles` (`title_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
+
+--
+--
+--
+
+INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
+(1, 1, 'good');
+
+--
+-- Dumping data for table `cems_users`
+--
+
+INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
+(1, 'admin', '655483496', 'ict@ccousp.cm', 'admin', 1);
+
+
 
                             "
     End Sub

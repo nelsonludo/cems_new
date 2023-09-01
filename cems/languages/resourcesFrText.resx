@@ -670,6 +670,9 @@
   <data name="userAddValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
+  <data name="userConfirmPwdLabel" xml:space="preserve">
+    <value>Confirmez le mot de passe</value>
+  </data>
   <data name="userConfirmPwdProfileLabel" xml:space="preserve">
     <value>Confirmez le mot de passe</value>
   </data>

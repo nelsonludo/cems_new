@@ -1723,6 +1723,15 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Confirmez le mot de passe.
         '''</summary>
+        Friend Shared ReadOnly Property userConfirmPwdLabel() As String
+            Get
+                Return ResourceManager.GetString("userConfirmPwdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Confirmez le mot de passe.
+        '''</summary>
         Friend Shared ReadOnly Property userConfirmPwdProfileLabel() As String
             Get
                 Return ResourceManager.GetString("userConfirmPwdProfileLabel", resourceCulture)

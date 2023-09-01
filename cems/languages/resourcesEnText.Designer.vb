@@ -1678,6 +1678,15 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Confirm password.
         '''</summary>
+        Friend Shared ReadOnly Property userConfirmPwdLabel() As String
+            Get
+                Return ResourceManager.GetString("userConfirmPwdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Confirm password.
+        '''</summary>
         Friend Shared ReadOnly Property userConfirmPwdProfileLabel() As String
             Get
                 Return ResourceManager.GetString("userConfirmPwdProfileLabel", resourceCulture)
