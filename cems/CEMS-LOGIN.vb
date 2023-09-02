@@ -512,7 +512,6 @@ Public Class Form1
                 End While
 
                 sqlConn.Close()
-                MessageBox.Show(title_id)
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
@@ -549,7 +548,6 @@ Public Class Form1
                     'this changes the content of confirmMsg
                     forgotPasswordMessage.ForeColor = Color.Green
 
-                    forgotPasswordMessage.Text = "login with the admin account information ✔"
 
                     If isFrench Then
                         forgotPasswordMessage.Text = My.Resources.resourcesEnText.LoginSuccess
@@ -584,6 +582,8 @@ Public Class Form1
     Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick 'this stops the timer and make the messages disappear
 
         addUserErrorMsg.Visible = False
+        forgotPasswordMessage.Visible = False
+
 
         Timer2.Stop()
     End Sub
@@ -886,7 +886,12 @@ COMMIT;
 --
 --
 --
+ALTER TABLE cems_users
+ADD CONSTRAINT atomic_email UNIQUE (user_email);
 
+--
+--
+--
 INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
 (1, 1, 'good');
 
@@ -894,8 +899,6 @@ INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
 -- Dumping data for table `cems_users`
 --
 
-INSERT INTO `cems_users` (`user_id`, `user_name`, `user_phone_number`, `user_email`, `user_password`, `title_id`) VALUES
-(1, 'admin', '655483496', 'ict@ccousp.cm', 'admin', 1);
 
 
 
