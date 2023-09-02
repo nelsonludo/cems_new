@@ -194,6 +194,8 @@ Public Class Form1
                                 sqlConn.Dispose()
 
                             End Try
+                            userAddPanel.Visible = True
+                            connexionStringPanel.Visible = False
 
 
                         End If
@@ -205,8 +207,6 @@ Public Class Form1
 
                     End Try
 
-                    userAddPanel.Visible = True
-                    connexionStringPanel.Visible = False
 
                 End If
 

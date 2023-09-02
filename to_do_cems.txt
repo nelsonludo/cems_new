@@ -1,13 +1,17 @@
 list of things to do in cems
 *CODE TODO
 -add a function that changes the location of titles based on the language
-*update profile
--redo the update profile function and make sure that the corresponding passwords are checked and that if a field is empty it is signaled
--put the update password seperately from the update user information
-
+*email
+-add a check to see if the email exists
+-complete all translations 
+-submit on enter on last fields of all forms 
+-fix the export function 
+-fix the refreshbtn it is not working 
+-fix the postes btn (remove the search error msg onclick) 
+-fix udpate profile email (when you enter and invalid email format you can't update the email unless you change something else )
 -fix the tab index
--add a check on admin roles so that he can't delete admin and user roles 
--remove add role btn
+-find out why when you logout and login again the dashboard does not appear (hint: it might be because when you're on other panels the visibility of the dashboard is changed to false and isn't changed back when you relogin)
+-dashboard view users button does not work find out why 
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
 -add a post number and equipment number in the show all halls datagrid view 
 
