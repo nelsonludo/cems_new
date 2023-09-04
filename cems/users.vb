@@ -814,23 +814,14 @@ Public Class users
     End Sub
 
     Public Sub export(grid As DataGridView, columnName As String)
-        'Dim DGVOriginalHeight As Integer = grid.Height
-        'grid.Height = (grid.RowCount * grid.RowTemplate.Height) + grid.ColumnHeadersHeight
-        'Using bitmap As Bitmap = New Bitmap(grid.Width, grid.Height)
-        '    grid.DrawToBitmap(bitmap, New Rectangle(Point.Empty, grid.Size))
-        '    Dim DesktopFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-        '    bitmap.Save(Path.Combine(DesktopFolder, "" & columnName & ".png"), Imaging.ImageFormat.Png)
-        'End Using
-        'grid.Height = DGVOriginalHeight
-        '
 
         ' Get your data table
 
 
         Try
-            Dim xlApp As Excel.Application
-            Dim xlWorkBook As Excel.Workbook
-            Dim xlWorkSheet As Excel.Worksheet
+            Dim xlApp As Excel.Application = Nothing
+            Dim xlWorkBook As Excel.Workbook = Nothing
+            Dim xlWorkSheet As Excel.Worksheet = Nothing
             Dim misValue As Object = System.Reflection.Missing.Value
 
 
@@ -843,7 +834,7 @@ Public Class users
             If grid.Rows.Count > 0 AndAlso grid.Columns.Count > 0 Then
 
                 ' Loop through the rows and columns of the data table
-                For i As Integer = 0 To grid.Rows.Count - 2
+                For i As Integer = 0 To grid.Rows.Count - 1
                     For j As Integer = 0 To grid.Columns.Count - 1
                         For k As Integer = 1 To grid.Columns.Count
                             'test that i and j are greater than the number of rows and columns 
@@ -879,6 +870,11 @@ Public Class users
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            'perform garbage collection 
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+
         End Try
 
 

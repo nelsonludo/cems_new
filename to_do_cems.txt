@@ -10,6 +10,8 @@ list of things to do in cems
 -fix the postes btn (remove the search error msg onclick) 
 -fix udpate profile email (when you enter and invalid email format you can't update the email unless you change something else )
 -fix the tab index
+-fix the connectionstring panel show condition 
+-call the count equipment functions on dashboard button.click
 -find out why when you logout and login again the dashboard does not appear (hint: it might be because when you're on other panels the visibility of the dashboard is changed to false and isn't changed back when you relogin)
 -dashboard view users button does not work find out why 
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead  
