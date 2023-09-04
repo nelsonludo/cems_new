@@ -5,10 +5,10 @@ list of things to do in cems
 -add a check to see if the email exists
 -complete all translations 
 -submit on enter on last fields of all forms 
--fix the export function 
 -fix the refreshbtn it is not working 
 -fix the postes btn (remove the search error msg onclick) 
 -fix udpate profile email (when you enter and invalid email format you can't update the email unless you change something else )
+-add a password to the connectionstring file
 -fix the tab index
 -fix the connectionstring panel show condition 
 -call the count equipment functions on dashboard button.click

@@ -3307,7 +3307,7 @@ Public Class homePage
     Private Sub exportBtnR_Click(sender As Object, e As EventArgs) Handles exportBtnR.Click 'Role 
 
 
-        User.export(roleDataGridView, "Roles")
+        User.export(roleDataGridView, "Roles", isFrench)
 
 
         sqlConn.Dispose()
@@ -3325,7 +3325,7 @@ Public Class homePage
 
 
 
-        User.export(hallDataGridView, "halls")
+        User.export(hallDataGridView, "halls", isFrench)
         sqlConn.Dispose()
 
         'this will make the message appear for three seconds
@@ -3347,7 +3347,7 @@ Public Class homePage
 
     Private Sub exportBtnu_Click(sender As Object, e As EventArgs) Handles exportBtnU.Click 'user 
 
-        User.export(userDataGridView, "users")
+        User.export(userDataGridView, "users", isFrench)
 
         sqlConn.Dispose()
 
@@ -3369,7 +3369,7 @@ Public Class homePage
     'post export
     Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
-        User.export(postDataGridView, "posts")
+        User.export(postDataGridView, "posts", isFrench)
         sqlConn.Dispose()
 
         confirmMsgP.Visible = True
@@ -3391,7 +3391,7 @@ Public Class homePage
 
         Try
 
-            User.export(equipmentDataGridView, "equipments")
+            User.export(equipmentDataGridView, "equipments", isFrench)
 
 
         Catch ex As Exception

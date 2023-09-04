@@ -334,6 +334,9 @@
   <data name="equipmentDeleteBtn" xml:space="preserve">
     <value>Supprimer</value>
   </data>
+  <data name="EquipmentExport" xml:space="preserve">
+    <value>Table d'equipements</value>
+  </data>
   <data name="equipmentsBtn" xml:space="preserve">
     <value>Équipements</value>
   </data>
@@ -408,6 +411,9 @@
   </data>
   <data name="hallDeleteBtn" xml:space="preserve">
     <value>Supprimer</value>
+  </data>
+  <data name="HallExport" xml:space="preserve">
+    <value>Table de salles </value>
   </data>
   <data name="hallsBtn" xml:space="preserve">
     <value>Salles</value>
@@ -487,6 +493,9 @@
   <data name="NameProfileLabel" xml:space="preserve">
     <value>Nom de l'utilisateur:</value>
   </data>
+  <data name="OtherExport" xml:space="preserve">
+    <value>Table</value>
+  </data>
   <data name="PhoneNumberProfileLabel" xml:space="preserve">
     <value>Numéro de téléphone de l'utilisateur:</value>
   </data>
@@ -507,6 +516,9 @@
   </data>
   <data name="postExist" xml:space="preserve">
     <value>Ce poste exist déjà éssayé d'en ajouter un autre!</value>
+  </data>
+  <data name="PostExport" xml:space="preserve">
+    <value>Table de postes</value>
   </data>
   <data name="postsBtn" xml:space="preserve">
     <value>Postes</value>
@@ -684,6 +696,9 @@
   </data>
   <data name="userExist" xml:space="preserve">
     <value>Cette utilisateur exist déjà!</value>
+  </data>
+  <data name="UserExport" xml:space="preserve">
+    <value>Table d'utilisateurs</value>
   </data>
   <data name="userNameProfileLabel2" xml:space="preserve">
     <value>Nom de l'utilisateur</value>

@@ -813,7 +813,7 @@ Public Class users
         End Try
     End Sub
 
-    Public Sub export(grid As DataGridView, columnName As String)
+    Public Sub export(grid As DataGridView, columnName As String, isFrench As Boolean)
 
         ' Get your data table
 
@@ -855,6 +855,41 @@ Public Class users
             ' Save the Excel workbook to a file
             Dim saveFileDialog As New SaveFileDialog()
             saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx"
+
+            ' Set the default filename
+
+            If Not isFrench Then
+                Select Case columnName
+                    Case "posts"
+                        saveFileDialog.FileName = My.Resources.resourcesEnText.PostExport
+                    Case "users"
+                        saveFileDialog.FileName = My.Resources.resourcesEnText.UserExport
+                    Case "halls"
+                        saveFileDialog.FileName = My.Resources.resourcesEnText.HallExport
+                    Case "equipments"
+                        saveFileDialog.FileName = My.Resources.resourcesEnText.EquipmentExport
+                    Case Else
+                        saveFileDialog.FileName = My.Resources.resourcesEnText.OtherExport
+                End Select
+
+            Else
+
+                Select Case columnName
+                    Case "posts"
+                        saveFileDialog.FileName = My.Resources.resourcesFrText.PostExport
+                    Case "users"
+                        saveFileDialog.FileName = My.Resources.resourcesFrText.UserExport
+                    Case "halls"
+                        saveFileDialog.FileName = My.Resources.resourcesFrText.HallExport
+                    Case "equipments"
+                        saveFileDialog.FileName = My.Resources.resourcesFrText.EquipmentExport
+                    Case Else
+                        saveFileDialog.FileName = My.Resources.resourcesFrText.OtherExport
+                End Select
+
+            End If
+
+
             If saveFileDialog.ShowDialog() = DialogResult.OK Then
                 xlWorkSheet.SaveAs(saveFileDialog.FileName)
             End If

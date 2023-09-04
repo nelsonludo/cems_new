@@ -969,7 +969,7 @@ Public Class UserHomePage
     Private Sub exportBtnP_Click(sender As Object, e As EventArgs) Handles exportBtnP.Click
 
 
-        User.export(postDataGridView, "posts")
+        User.export(postDataGridView, "posts", isFrench)
         sqlConn.Dispose()
 
         confirmMsgP.Visible = True
@@ -989,7 +989,7 @@ Public Class UserHomePage
     Private Sub exportBtnE_Click(sender As Object, e As EventArgs) Handles exportBtnE.Click
 
 
-        User.export(equipmentDataGridView, "equipments")
+        User.export(equipmentDataGridView, "equipments", isFrench)
         sqlConn.Dispose()
 
         'this will make the message appear for three seconds

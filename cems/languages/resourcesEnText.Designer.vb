@@ -677,6 +677,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Equipment table .
+        '''</summary>
+        Friend Shared ReadOnly Property EquipmentExport() As String
+            Get
+                Return ResourceManager.GetString("EquipmentExport", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Equipments.
         '''</summary>
         Friend Shared ReadOnly Property equipmentsBtn() As String
@@ -898,6 +907,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property hallDeleteBtn() As String
             Get
                 Return ResourceManager.GetString("hallDeleteBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Halls table.
+        '''</summary>
+        Friend Shared ReadOnly Property HallExport() As String
+            Get
+                Return ResourceManager.GetString("HallExport", resourceCulture)
             End Get
         End Property
         
@@ -1136,6 +1154,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Table.
+        '''</summary>
+        Friend Shared ReadOnly Property OtherExport() As String
+            Get
+                Return ResourceManager.GetString("OtherExport", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à User Phone number:.
         '''</summary>
         Friend Shared ReadOnly Property PhoneNumberProfileLabel() As String
@@ -1195,6 +1222,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property postExist() As String
             Get
                 Return ResourceManager.GetString("postExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Posts table.
+        '''</summary>
+        Friend Shared ReadOnly Property PostExport() As String
+            Get
+                Return ResourceManager.GetString("PostExport", resourceCulture)
             End Get
         End Property
         
@@ -1726,6 +1762,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property userExist() As String
             Get
                 Return ResourceManager.GetString("userExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Users table.
+        '''</summary>
+        Friend Shared ReadOnly Property UserExport() As String
+            Get
+                Return ResourceManager.GetString("UserExport", resourceCulture)
             End Get
         End Property
         
