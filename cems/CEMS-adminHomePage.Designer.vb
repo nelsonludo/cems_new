@@ -196,8 +196,6 @@ Partial Class homePage
         Me.postChangeBtn = New System.Windows.Forms.Button()
         Me.changeposthalllabel = New System.Windows.Forms.Label()
         Me.postChangeHallInput = New System.Windows.Forms.ComboBox()
-        Me.changepoststatelabel = New System.Windows.Forms.Label()
-        Me.postChangeStateInput = New System.Windows.Forms.ComboBox()
         Me.addPostBtn = New System.Windows.Forms.Button()
         Me.statesearchlabel = New System.Windows.Forms.Label()
         Me.hallsearchlabel = New System.Windows.Forms.Label()
@@ -1691,8 +1689,6 @@ Partial Class homePage
         Me.postChangeStatePanel.Controls.Add(Me.postChangeBtn)
         Me.postChangeStatePanel.Controls.Add(Me.changeposthalllabel)
         Me.postChangeStatePanel.Controls.Add(Me.postChangeHallInput)
-        Me.postChangeStatePanel.Controls.Add(Me.changepoststatelabel)
-        Me.postChangeStatePanel.Controls.Add(Me.postChangeStateInput)
         Me.postChangeStatePanel.Name = "postChangeStatePanel"
         '
         'updatePostTitle
@@ -1739,20 +1735,6 @@ Partial Class homePage
         Me.postChangeHallInput.FormattingEnabled = True
         resources.ApplyResources(Me.postChangeHallInput, "postChangeHallInput")
         Me.postChangeHallInput.Name = "postChangeHallInput"
-        '
-        'changepoststatelabel
-        '
-        resources.ApplyResources(Me.changepoststatelabel, "changepoststatelabel")
-        Me.changepoststatelabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.changepoststatelabel.Name = "changepoststatelabel"
-        '
-        'postChangeStateInput
-        '
-        Me.postChangeStateInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.postChangeStateInput.FormattingEnabled = True
-        Me.postChangeStateInput.Items.AddRange(New Object() {resources.GetString("postChangeStateInput.Items"), resources.GetString("postChangeStateInput.Items1"), resources.GetString("postChangeStateInput.Items2")})
-        resources.ApplyResources(Me.postChangeStateInput, "postChangeStateInput")
-        Me.postChangeStateInput.Name = "postChangeStateInput"
         '
         'addPostBtn
         '
@@ -2113,6 +2095,7 @@ Partial Class homePage
         Me.adminHallsPanel.Controls.Add(Me.hallTitle)
         Me.adminHallsPanel.Controls.Add(Me.hallDeleteBtn)
         Me.adminHallsPanel.Controls.Add(Me.hallSearchLabelH)
+        Me.adminHallsPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.adminHallsPanel.Name = "adminHallsPanel"
         '
         'hallUpdatePanel
@@ -2335,7 +2318,7 @@ Partial Class homePage
         DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle13.BackColor = System.Drawing.Color.MintCream
         DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.MintCream
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
         DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -2641,8 +2624,8 @@ Partial Class homePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminHomePagePanel)
@@ -2784,8 +2767,6 @@ Partial Class homePage
     Friend WithEvents postChangeStatePanel As Panel
     Friend WithEvents postDeleteBtn As Button
     Friend WithEvents postChangeBtn As Button
-    Friend WithEvents changepoststatelabel As Label
-    Friend WithEvents postChangeStateInput As ComboBox
     Friend WithEvents addPostBtn As Button
     Friend WithEvents statesearchlabel As Label
     Friend WithEvents hallsearchlabel As Label

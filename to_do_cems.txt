@@ -1,29 +1,16 @@
 list of things to do in cems
 *CODE TODO
--add a function that changes the location of titles based on the language
 -add a password to the connectionstring file
 -fix the tab index
 
 *need app stop
--fix hall datagridview (it's the same font problem)
 -submit on enter on last fields of all forms 
--restrict users from deleting and update the default post and hall
 *both
 -add a side panel to specify the number of posts and number equipment and make a combobox for equipment type selection
 
 
--fix udpate profile email (when you enter an invalid email format you can't update the email unless you change something else )
--fix the connectionstring panel show condition 
--remove change post state
 -reduce the number of queries by querying only once in the form.load() and storing the values in variables that are used instead 
  
-
-*DESIGN TODO
--responsive
--check if the design is appropriate for the disabled and color blind people(read on how to do that) 
-take note of the commit message !
-
-
 
 *GENERAL TODO
 

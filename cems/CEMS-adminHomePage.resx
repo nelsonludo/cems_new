@@ -1714,7 +1714,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -5576,69 +5576,6 @@
   <data name="&gt;&gt;postChangeHallInput.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="changepoststatelabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="changepoststatelabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="changepoststatelabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="changepoststatelabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 73</value>
-  </data>
-  <data name="changepoststatelabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
-  </data>
-  <data name="changepoststatelabel.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="changepoststatelabel.Text" xml:space="preserve">
-    <value>Post state:</value>
-  </data>
-  <data name="&gt;&gt;changepoststatelabel.Name" xml:space="preserve">
-    <value>changepoststatelabel</value>
-  </data>
-  <data name="&gt;&gt;changepoststatelabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;changepoststatelabel.Parent" xml:space="preserve">
-    <value>postChangeStatePanel</value>
-  </data>
-  <data name="&gt;&gt;changepoststatelabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="postChangeStateInput.Items" xml:space="preserve">
-    <value>Good</value>
-  </data>
-  <data name="postChangeStateInput.Items1" xml:space="preserve">
-    <value>Bad</value>
-  </data>
-  <data name="postChangeStateInput.Items2" xml:space="preserve">
-    <value>In reparation</value>
-  </data>
-  <data name="postChangeStateInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 95</value>
-  </data>
-  <data name="postChangeStateInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 21</value>
-  </data>
-  <data name="postChangeStateInput.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;postChangeStateInput.Name" xml:space="preserve">
-    <value>postChangeStateInput</value>
-  </data>
-  <data name="&gt;&gt;postChangeStateInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;postChangeStateInput.Parent" xml:space="preserve">
-    <value>postChangeStatePanel</value>
-  </data>
-  <data name="&gt;&gt;postChangeStateInput.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="postChangeStatePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>927, 108</value>
   </data>
@@ -5868,7 +5805,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminPostPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="adminProfilePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
