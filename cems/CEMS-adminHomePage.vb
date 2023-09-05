@@ -3566,6 +3566,10 @@ Public Class homePage
 
 
         admin.generalSearchH("halls", hallDataGridView, "hall_id", hall_id, searchErrorH, sqlDataTableCBH)
+
+        hallUpdateBtn.Visible = False
+        hallDeleteBtn.Visible = False
+
     End Sub
 
 
@@ -3573,6 +3577,9 @@ Public Class homePage
     Private Sub equipmentSearchBox_textChanged(sender As Object, e As EventArgs) Handles equipmentSearchBox.TextChanged
 
         User.search("equipments", equipmentDataGridView, "post_id", equipmentSearchBox.Text, searchErrorE, sqlDataTableE)
+
+
+        statePanel.Visible = False
 
     End Sub
 
@@ -3640,7 +3647,7 @@ Public Class homePage
 
         End If
 
-
+        statePanel.Visible = False
     End Sub
 
     'equipment search by state
@@ -3682,7 +3689,7 @@ Public Class homePage
             User.searchHallAndStateNohall("equipments", equipmentDataGridView, "equipment_state", userSearchBoxE.Text, searchErrorE, sqlDataTableCBHE)
         End If
 
-
+        statePanel.Visible = False
 
     End Sub
 
@@ -3691,6 +3698,10 @@ Public Class homePage
     Private Sub userSearchBox_textChanged(sender As Object, e As EventArgs) Handles userSearchBox.TextChanged
 
         User.searchU("users", userDataGridView, "user_name", userSearchBox.Text, searchErrorU, sqlDataTableU)
+
+        'make the modification buttons disappear
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
 
     End Sub
 
@@ -3730,6 +3741,9 @@ Public Class homePage
     Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
         User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+
+
+        postChangeStatePanel.Visible = False
 
     End Sub
 
@@ -3774,6 +3788,7 @@ Public Class homePage
         End If
 
 
+        postChangeStatePanel.Visible = False
 
     End Sub
 
@@ -3839,6 +3854,9 @@ Public Class homePage
 
             User.searchHallPNoState("posts", postDataGridView, "hall_id", hall_id, searchErrorP, sqlDataTableCBHP)
         End If
+
+
+        postChangeStatePanel.Visible = False
 
     End Sub
 
