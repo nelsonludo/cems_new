@@ -38,7 +38,7 @@ Public Class Form1
 
     Dim isFrench As Boolean = True
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
 
@@ -149,8 +149,6 @@ Public Class Form1
                         Else
                             'create all tables
 
-                            userAddPanel.Visible = True
-                            connexionStringPanel.Visible = False
 
                             Try
                                 sqlConn.Open()
@@ -211,6 +209,8 @@ Public Class Form1
                 End If
 
             End If
+
+
         Else
 
             System.IO.File.Create(localPath)

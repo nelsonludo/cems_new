@@ -737,26 +737,48 @@ Public Class users
                 timer.Start()
             Else
                 sqlConn.Open()
+                ' sqlQuery = "select * from cems_users where user_email = '" & email & "'"
+                ' 'Read through the response'
+                ' sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                ' sqlReader = sqlCmd.ExecuteReader
+                '
+                ' If (sqlReader.Read()) Then
+                '     errorMsg.Visible = True
+                '
+                '     If isFrench Then
+                '         errorMsg.Text = My.Resources.resourcesFrText.userExist
+                '     Else
+                '         errorMsg.Text = My.Resources.resourcesEnText.userExist
+                '
+                '     End If
+                '
+                '     timer.Interval = 3000
+                '     timer.Start()
+                '     sqlConn.Close()
+                ' Else
 
                 sqlCmd.Connection = sqlConn
 
-                With sqlCmd
+                    With sqlCmd
 
-                    .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
+                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                    .CommandType = CommandType.Text
+                        .CommandType = CommandType.Text
 
-                End With
+                    End With
 
-                sqlCmd.ExecuteNonQuery()
-                sqlConn.Close()
+                    sqlCmd.ExecuteNonQuery()
+                    sqlConn.Close()
 
-                panel.Visible = False
-                updateSuccess = True
+                    panel.Visible = False
+                    updateSuccess = True
+
+
+                    Form1.user_email = email
+                '  End If
 
             End If
 
-            Form1.user_email = email
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)

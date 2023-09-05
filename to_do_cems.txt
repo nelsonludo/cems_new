@@ -2,7 +2,6 @@ list of things to do in cems
 *CODE TODO
 -add a function that changes the location of titles based on the language
 *email
--add a check to see if the email exists
 -complete all translations 
 -submit on enter on last fields of all forms 
 -fix the refreshbtn it is not working 
@@ -11,6 +10,7 @@ list of things to do in cems
 -add a password to the connectionstring file
 -fix the tab index
 -fix the connectionstring panel show condition 
+-remove change post state
 -call the count equipment functions on dashboard button.click
 -find out why when you logout and login again the dashboard does not appear (hint: it might be because when you're on other panels the visibility of the dashboard is changed to false and isn't changed back when you relogin)
 -dashboard view users button does not work find out why 
@@ -28,8 +28,6 @@ take note of the commit message !
 
 
 *GENERAL TODO
--produce a testing check list
--create microsoft account 
 
 Important styles
 label51 size:548, 45; location:0,0
