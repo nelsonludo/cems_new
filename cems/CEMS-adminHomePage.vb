@@ -86,6 +86,9 @@ Public Class homePage
 
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+        adminHomePagePanel.Visible = True
+
         TranslateFormControlsFrench(Me)
 
 
@@ -465,6 +468,20 @@ Public Class homePage
         userSearchBox.Text = ""
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
+
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good", "CPU")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good", "IP_phone")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good", "monitor")
+
+
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
+        admin.activeCount(userNumber, "users")
+
+        User.activeCount(repairCPUNumber, "equipments", "equipment", "In reparation", "CPU")
+        User.activeCount(repairIPNumber, "equipments", "equipment", "In reparation", "IP_phone")
+        User.activeCount(repairMonitorNumber, "equipments", "equipment", "In reparation", "monitor")
 
     End Sub
 
@@ -867,11 +884,18 @@ Public Class homePage
 
     'delete post button
     Private Sub postdeleteBtn_Click(sender As Object, e As EventArgs) Handles postDeleteBtn.Click 'delete
+
+
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this post ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
 
-            admin.deletePost(postDataGridView, "posts", "post")
+            If admin.checkDefaultRecord(postDataGridView) Then
+                MessageBox.Show("It is not possible to delete the default post!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                admin.deleteRecord(postDataGridView, "posts", "post")
+
+            End If
         End If
 
         postChangeStatePanel.Visible = False
@@ -1423,8 +1447,12 @@ Public Class homePage
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this hall ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
+            If admin.checkDefaultRecord(postDataGridView) Then
+                MessageBox.Show("It is not possible to delete the default Hall!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
 
-            admin.deleteRecord(hallDataGridView, "halls", "hall")
+                admin.deleteRecord(hallDataGridView, "halls", "hall")
+            End If
 
         End If
 

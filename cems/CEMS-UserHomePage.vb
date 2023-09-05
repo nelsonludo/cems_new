@@ -50,6 +50,8 @@ Public Class UserHomePage
 
     Private Sub UserHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        HomePagePanel.Visible = True
+
         TranslateFormControlsFrench(Me)
 
 
@@ -243,6 +245,20 @@ Public Class UserHomePage
         hallSearchBoxE.Text = ""
         userSearchBoxE.Text = ""
         stateSearchBoxP.Text = ""
+
+        User.activeCount(activeCPUNumber, "equipments", "equipment", "good", "CPU")
+        User.activeCount(activeIPNumber, "equipments", "equipment", "good", "IP_phone")
+        User.activeCount(activeMonitorNumber, "equipments", "equipment", "good", "monitor")
+
+
+        User.activeCount(nonActiveCPUNumber, "equipments", "equipment", "bad", "CPU")
+        User.activeCount(nonActiveIPNumber, "equipments", "equipment", "bad", "IP_phone")
+        User.activeCount(nonActiveMonitorNumber, "equipments", "equipment", "bad", "monitor")
+
+        User.activeCount(repairCPUNumber, "equipments", "equipment", "In reparation", "CPU")
+        User.activeCount(repairIPNumber, "equipments", "equipment", "In reparation", "IP_phone")
+        User.activeCount(repairMonitorNumber, "equipments", "equipment", "In reparation", "monitor")
+
     End Sub
 
     'profile buttons
