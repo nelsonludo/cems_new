@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addequimentstatelabel" xml:space="preserve">
+    <value>État de l'équipement</value>
+  </data>
   <data name="addEquipmentBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
@@ -189,6 +192,9 @@
   <data name="addUserTitle" xml:space="preserve">
     <value>Titre de l'utilisateur</value>
   </data>
+  <data name="addUserTitleLabel" xml:space="preserve">
+    <value>Titre de l'utilisateur</value>
+  </data>
   <data name="adminConfirmPasswordLabel" xml:space="preserve">
     <value>Confirmez le mot de passe</value>
   </data>
@@ -208,7 +214,7 @@
   <data name="adminPwdLabel" xml:space="preserve">
     <value>Mot de passe administrateur</value>
   </data>
-  <data name="changeequipmentstatelabel" xml:space="preserve">
+  <data name="changeequipementstatelabel" xml:space="preserve">
     <value>État de l'équipement</value>
   </data>
   <data name="changeposthalllabel" xml:space="preserve">
@@ -351,6 +357,9 @@
   </data>
   <data name="equipmentTitle" xml:space="preserve">
     <value>Équipements</value>
+  </data>
+  <data name="equipmenttitlelabel" xml:space="preserve">
+    <value>Type de l'équipement</value>
   </data>
   <data name="EquipmentTitle_Add" xml:space="preserve">
     <value>Ajouter un equipement</value>

@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addequimentstatelabel" xml:space="preserve">
+    <value>Equipment State</value>
+  </data>
   <data name="addEquipmentBtn" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="addEquipmentCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="addequipmenthalllabel" xml:space="preserve">
     <value>Equipment hall </value>
@@ -134,6 +140,15 @@
   </data>
   <data name="addequipmenttitlelabel" xml:space="preserve">
     <value>Equipment title</value>
+  </data>
+  <data name="addEquipmentValidationBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="addHallNameLabel" xml:space="preserve">
+    <value>Hall Name</value>
+  </data>
+  <data name="addPostBtn" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="addPostHallLabel" xml:space="preserve">
     <value>Post Hall</value>
@@ -190,7 +205,7 @@
   <data name="adminPwdLabel" xml:space="preserve">
     <value>Admin password </value>
   </data>
-  <data name="changeequipmentstatelabel" xml:space="preserve">
+  <data name="changeequipementstatelabel" xml:space="preserve">
     <value>Equipment state</value>
   </data>
   <data name="changeposthalllabel" xml:space="preserve">
@@ -340,6 +355,9 @@
   <data name="equipmentTitle" xml:space="preserve">
     <value>Equipments</value>
   </data>
+  <data name="equipmenttitlelabel" xml:space="preserve">
+    <value>Equipment Type</value>
+  </data>
   <data name="EquipmentTitle_Add" xml:space="preserve">
     <value>Add Equipment</value>
   </data>
@@ -406,7 +424,7 @@
   <data name="hallsBtn" xml:space="preserve">
     <value>Halls</value>
   </data>
-  <data name="hallSearchLabel" xml:space="preserve">
+  <data name="hallsearchlabel" xml:space="preserve">
     <value>Hall</value>
   </data>
   <data name="hallSearchLabelE" xml:space="preserve">
@@ -610,6 +628,9 @@
   <data name="searchUserLabel" xml:space="preserve">
     <value>Search username</value>
   </data>
+  <data name="stateChangeBtn" xml:space="preserve">
+    <value>Change</value>
+  </data>
   <data name="statesearchlabel" xml:space="preserve">
     <value>State</value>
   </data>
@@ -618,6 +639,9 @@
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Update equipment</value>
+  </data>
+  <data name="updateHallNameLabel" xml:space="preserve">
+    <value>Hall Name</value>
   </data>
   <data name="updatePostTitle" xml:space="preserve">
     <value>Update post</value>

@@ -379,7 +379,7 @@ Public Class users
             sqlConn.Open()
             datatable.Rows.Clear()
 
-            sqlQuery = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where cems_halls." & searchColumn & " like '" & searchValue & "'"
+            sqlQuery = "select cems_" & table & " .equipment_id, cems_" & table & " .equipment_type, cems_" & table & " .equipment_state,cems_" & table & " .post_id,cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_equipments.hall_id = cems_halls.hall_id where cems_equipments." & searchColumn & " like '" & searchValue & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
 
             sqlReader = sqlCmd.ExecuteReader

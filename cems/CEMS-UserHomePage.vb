@@ -451,8 +451,21 @@ Public Class UserHomePage
 
     'refresh post button 
     Private Sub refreshBtnP_click(sender As Object, e As EventArgs) Handles refreshBtnP.Click
+        'empty the fields after validation
+        postSearchBox.Text = ""
+
+
+        hallSearchBoxP.SelectedIndex = -1
+
+        stateSearchBoxP.SelectedIndex = -1
+
+
+
+        'this updates the datagridview
         User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
+        searchErrorP.Visible = False
+        postDataGridView.Visible = True
     End Sub
 
     Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
@@ -498,7 +511,19 @@ Public Class UserHomePage
 
     'refresh equipment button 
     Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
+
+        equipmentSearchBox.Text = ""
+
+
+        hallSearchBoxE.SelectedIndex = -1
+
+        userSearchBoxE.SelectedIndex = -1
+
         User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+        searchErrorE.Visible = False
+        equipmentDataGridView.Visible = True
+
 
     End Sub
 

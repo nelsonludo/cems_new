@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à État de l&apos;équipement.
+        '''</summary>
+        Friend Shared ReadOnly Property addequimentstatelabel() As String
+            Get
+                Return ResourceManager.GetString("addequimentstatelabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Ajouter.
         '''</summary>
         Friend Shared ReadOnly Property addEquipmentBtn() As String
@@ -281,6 +290,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Titre de l&apos;utilisateur.
+        '''</summary>
+        Friend Shared ReadOnly Property addUserTitleLabel() As String
+            Get
+                Return ResourceManager.GetString("addUserTitleLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Confirmez le mot de passe.
         '''</summary>
         Friend Shared ReadOnly Property adminConfirmPasswordLabel() As String
@@ -337,9 +355,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à État de l&apos;équipement.
         '''</summary>
-        Friend Shared ReadOnly Property changeequipmentstatelabel() As String
+        Friend Shared ReadOnly Property changeequipementstatelabel() As String
             Get
-                Return ResourceManager.GetString("changeequipmentstatelabel", resourceCulture)
+                Return ResourceManager.GetString("changeequipementstatelabel", resourceCulture)
             End Get
         End Property
         
@@ -799,6 +817,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property EquipmentTitle_Monitor() As String
             Get
                 Return ResourceManager.GetString("EquipmentTitle_Monitor", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Type de l&apos;équipement.
+        '''</summary>
+        Friend Shared ReadOnly Property equipmenttitlelabel() As String
+            Get
+                Return ResourceManager.GetString("equipmenttitlelabel", resourceCulture)
             End Get
         End Property
         

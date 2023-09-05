@@ -488,6 +488,8 @@ Public Class homePage
     Private Sub postsBtn_Click(sender As Object, e As EventArgs) Handles postsBtn.Click
 
 
+
+
         adminEquipmentPanel.Visible = False
         adminPostPanel.Visible = True
         adminProfilePanel.Visible = False
@@ -514,19 +516,23 @@ Public Class homePage
         roleAddPanel.Visible = False
         refreshBtnP.Visible = True
 
+
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
         hallSearchBoxE.Text = ""
-        hallSearchBoxP.Text = ""
         userSearchBoxE.Text = ""
         userSearchBox.Text = ""
         postSearchBox.Text = ""
-        stateSearchBoxP.Text = ""
+
+        hallSearchBoxP.SelectedIndex = -1
+
+        stateSearchBoxP.SelectedIndex = -1
 
 
 
         User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
+        searchErrorP.Visible = False
         fillHalls(hallSearchBoxP)
 
         'this fills the halls in the change post hall combobox
@@ -554,18 +560,22 @@ Public Class homePage
 
     'refresh post button 
     Private Sub refreshBtnP_click(sender As Object, e As EventArgs) Handles refreshBtnP.Click
-        User.displayTableP("posts", postDataGridView, sqlDataTableP)  'this is a useless comment //you're the useless comment !
 
-        postChangeStatePanel.Visible = False
-
-        hallSearchBoxH.Text = ""
-        equipmentSearchBox.Text = ""
-        hallSearchBoxE.Text = ""
-        hallSearchBoxP.Text = ""
-        userSearchBoxE.Text = ""
-        userSearchBox.Text = ""
+        'empty the fields after validation
         postSearchBox.Text = ""
-        stateSearchBoxP.Text = ""
+
+
+        hallSearchBoxP.SelectedIndex = -1
+
+        stateSearchBoxP.SelectedIndex = -1
+
+
+
+        'this updates the datagridview
+        User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+        searchErrorP.Visible = False
+        postDataGridView.Visible = True
 
     End Sub
 
@@ -727,6 +737,7 @@ Public Class homePage
                             exportBtnP.Visible = True
                             refreshBtnP.Visible = True
                             'printBtnP.Visible = True
+                            searchErrorP.Visible = False
 
 
                         Catch ex As Exception
@@ -792,6 +803,7 @@ Public Class homePage
                             exportBtnP.Visible = True
                             refreshBtnP.Visible = True
                             'printBtnP.Visible = True
+                            searchErrorP.Visible = False
 
 
                         Catch ex As Exception
@@ -821,6 +833,12 @@ Public Class homePage
         addPostPanel.Visible = False
 
         postChangeStatePanel.Visible = False
+
+        'empty the fields after validation
+
+        hallSearchBoxP.Text = ""
+
+        stateSearchBoxP.Text = ""
 
         'empty the fields after validation
         postStateInput.Text = ""
@@ -891,38 +909,52 @@ Public Class homePage
 
         End Try
 
-        connect_db()
+        Try
+            connect_db()
 
-        sqlConn.Open()
+            sqlConn.Open()
 
-        sqlCmd.Connection = sqlConn
+            sqlCmd.Connection = sqlConn
 
-        With sqlCmd
-            'possible problem
-            .CommandText = "Update cems.cems_posts Set post_state ='" & postChangeStateInput.Text & "', hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
+            With sqlCmd
+                'possible problem
+                .CommandText = "Update cems.cems_posts Set post_state ='" & postChangeStateInput.Text & "', hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
 
-            .CommandType = CommandType.Text
+                .CommandType = CommandType.Text
 
-        End With
-        sqlCmd.ExecuteNonQuery()
-        sqlConn.Close()
+            End With
+            sqlCmd.ExecuteNonQuery()
+            sqlConn.Close()
 
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql update post hall and state", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
 
-        'this was to update the equipment state when the post state was changed. It was removed because we are changing the order of update state so that equipment state change changes post state
-        'sqlConn.Open()
-        '
-        'sqlCmd.Connection = sqlConn
-        '
-        'With sqlCmd
-        '
-        '    .CommandText = "Update cems.cems_equipments Set equipment_state ='" & postChangeStateInput.Text & "' where post_id = '" & post_id & "'"
-        '
-        '    .CommandType = CommandType.Text
-        '
-        'End With
-        'sqlCmd.ExecuteNonQuery()
-        'sqlConn.Close()
+        End Try
 
+        Try
+            'update the equipment hall aswell 
+
+            sqlConn.Open()
+
+            sqlCmd.Connection = sqlConn
+
+            With sqlCmd
+
+                .CommandText = "Update cems.cems_equipments Set hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
+
+                .CommandType = CommandType.Text
+
+            End With
+            sqlCmd.ExecuteNonQuery()
+            sqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql update equipment hall from post", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
 
         postChangeStatePanel.Visible = False
 
@@ -1155,6 +1187,8 @@ Public Class homePage
         hallUpdateBtn.Visible = False
         hallDeleteBtn.Visible = False
         refreshBtnH.Visible = False
+        searchErrorH.Visible = False
+
 
     End Sub
 
@@ -1213,25 +1247,25 @@ Public Class homePage
         hallSearchBoxH.Visible = True
         hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
+        searchErrorH.Visible = False
+
 
     End Sub
 
     'refresh hall button 
     Private Sub refreshBtnH_click(sender As Object, e As EventArgs) Handles refreshBtnH.Click
-        User.displayTable("halls", hallDataGridView, sqlDataTableH)
 
 
         hallUpdateBtn.Visible = False
         hallDeleteBtn.Visible = False
 
-        hallSearchBoxH.Text = ""
-        equipmentSearchBox.Text = ""
-        hallSearchBoxE.Text = ""
-        hallSearchBoxP.Text = ""
-        userSearchBoxE.Text = ""
-        userSearchBox.Text = ""
-        postSearchBox.Text = ""
-        stateSearchBoxP.Text = ""
+
+        hallSearchBoxH.SelectedIndex = -1
+
+        searchErrorH.Visible = False
+
+        User.displayTable("halls", hallDataGridView, sqlDataTableH)
+        hallDataGridView.Visible = True
     End Sub
 
     'hall add buttons
@@ -1254,6 +1288,8 @@ Public Class homePage
         hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
         refreshBtnH.Visible = True
+        searchErrorH.Visible = False
+
 
     End Sub
 
@@ -1334,6 +1370,8 @@ Public Class homePage
             hallSearchLabelH.Visible = True
             hallDataGridView.Visible = True
             refreshBtnH.Visible = True
+            searchErrorH.Visible = False
+
         End If
 
 
@@ -1376,6 +1414,8 @@ Public Class homePage
         hallUpdateBtn.Visible = False
         hallDeleteBtn.Visible = False
         refreshBtnH.Visible = False
+        searchErrorH.Visible = False
+
 
     End Sub
 
@@ -1417,6 +1457,8 @@ Public Class homePage
         hallSearchLabelH.Visible = True
         hallDataGridView.Visible = True
         refreshBtnH.Visible = True
+        searchErrorH.Visible = False
+
 
     End Sub
 
@@ -1504,6 +1546,8 @@ Public Class homePage
                 hallSearchLabelH.Visible = True
                 hallDataGridView.Visible = True
                 refreshBtnH.Visible = True
+                searchErrorH.Visible = False
+
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "mysql update role", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1570,6 +1614,8 @@ Public Class homePage
         'PrintBtnU.Visible = True
         userAddBtn.Visible = True
         searchuserlabel.Visible = True
+        searchErrorU.Visible = False
+
 
     End Sub
 
@@ -1577,17 +1623,13 @@ Public Class homePage
     Private Sub refreshBtnU_click(sender As Object, e As EventArgs) Handles refreshBtnU.Click
         User.displayTableU("users", userDataGridView, sqlDataTableU)
 
-        userUpdateBtn.Visible = True
-        userDeleteBtn.Visible = True
+        userUpdateBtn.Visible = False
+        userDeleteBtn.Visible = False
 
-        hallSearchBoxH.Text = ""
-        equipmentSearchBox.Text = ""
-        hallSearchBoxE.Text = ""
-        hallSearchBoxP.Text = ""
-        userSearchBoxE.Text = ""
+
         userSearchBox.Text = ""
-        postSearchBox.Text = ""
-        stateSearchBoxP.Text = ""
+        searchErrorU.Visible = False
+
     End Sub
 
     Private Sub usersBtn2_Click(sender As Object, e As EventArgs) Handles usersBtn2.Click
@@ -1596,6 +1638,7 @@ Public Class homePage
         adminProfilePanel.Visible = False
         adminHallsPanel.Visible = False
         adminRolePanel.Visible = False
+        adminHomePagePanel.Visible = False
         adminUsersPanel.Visible = True
         refreshBtnU.Visible = True
 
@@ -1755,6 +1798,8 @@ Public Class homePage
                         userUpdateBtn.Visible = False
                         userDeleteBtn.Visible = False
                         refreshBtnU.Visible = True
+                        searchErrorU.Visible = False
+
                     End If
 
                 End If
@@ -1863,6 +1908,8 @@ Public Class homePage
                     userUpdateBtn.Visible = False
                     userDeleteBtn.Visible = False
                     refreshBtnU.Visible = True
+                    searchErrorU.Visible = False
+
                 End If
 
             Catch ex As Exception
@@ -1896,6 +1943,8 @@ Public Class homePage
         'PrintBtnU.Visible = True
         searchuserlabel.Visible = True
         refreshBtnU.Visible = True
+        searchErrorU.Visible = False
+
 
     End Sub
 
@@ -1960,6 +2009,8 @@ Public Class homePage
         searchuserlabel.Visible = False
         userDataGridView.Visible = False
         refreshBtnU.Visible = False
+        searchErrorU.Visible = False
+
 
     End Sub
 
@@ -2268,6 +2319,8 @@ Public Class homePage
         userDeleteBtn.Visible = False
         userAddPanel.Visible = False
         refreshBtnR.Visible = True
+        searchErrorR.Visible = False
+
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -2300,6 +2353,8 @@ Public Class homePage
         User.displayTable("titles", roleDataGridView, sqlDataTableR)
 
         roleUpdateBtn.Visible = True
+        searchErrorR.Visible = False
+
 
 
     End Sub
@@ -2381,6 +2436,8 @@ Public Class homePage
                 exportBtnR.Visible = True
                 'PrintBtnR.Visible = True
                 refreshBtnR.Visible = True
+                searchErrorR.Visible = False
+
 
 
             Catch ex As Exception
@@ -2409,6 +2466,8 @@ Public Class homePage
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
         refreshBtnR.Visible = True
+        searchErrorR.Visible = False
+
     End Sub
 
     Private Sub DataGridView5_CellClick() Handles roleDataGridView.CellClick 'the cellclicked event
@@ -2443,6 +2502,8 @@ Public Class homePage
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
         refreshBtnR.Visible = False
+        searchErrorR.Visible = False
+
     End Sub
 
     Private Sub roleDeleteBtn_Click_1(sender As Object, e As EventArgs) Handles roleDeleteBtn.Click  'delete
@@ -2479,6 +2540,8 @@ Public Class homePage
         exportBtnR.Visible = False
         'PrintBtnR.Visible = False
         refreshBtnR.Visible = False
+        searchErrorR.Visible = False
+
     End Sub
     Private Sub roleAddValidationBtn_Click(sender As Object, e As EventArgs) Handles roleAddValidationBtn.Click 'validate add
 
@@ -2550,6 +2613,8 @@ Public Class homePage
             exportBtnR.Visible = True
             'PrintBtnR.Visible = True
             refreshBtnR.Visible = True
+            searchErrorR.Visible = False
+
         End If
     End Sub
 
@@ -2570,6 +2635,8 @@ Public Class homePage
         exportBtnR.Visible = True
         'PrintBtnR.Visible = True
         refreshBtnR.Visible = True
+        searchErrorR.Visible = False
+
     End Sub
 
     'equipment SECTION
@@ -2601,6 +2668,8 @@ Public Class homePage
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
         refreshBtnE.Visible = True
+        searchErrorE.Visible = False
+
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -2636,13 +2705,19 @@ Public Class homePage
 
     'refresh equipment button 
     Private Sub refreshBtnE_click(sender As Object, e As EventArgs) Handles refreshBtnE.Click
-        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
 
         statePanel.Visible = False
-        hallSearchBoxE.Text = ""
         equipmentSearchBox.Text = ""
-        userSearchBoxE.Text = ""
 
+
+        hallSearchBoxE.SelectedIndex = -1
+
+        userSearchBoxE.SelectedIndex = -1
+
+        User.displayTableE("equipments", equipmentDataGridView, sqlDataTableE)
+
+        searchErrorE.Visible = False
+        equipmentDataGridView.Visible = True
 
 
     End Sub
@@ -2663,7 +2738,7 @@ Public Class homePage
         postChangeStatePanel.Visible = False
         statePanel.Visible = False
         profileSubPanel2.Visible =
-                profileSubPanel3.Visible = False
+        profileSubPanel3.Visible = False
         hallUpdatePanel.Visible = False
         hallAddpanel.Visible = False
         userUpdatePanel.Visible = False
@@ -2673,6 +2748,8 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        searchErrorE.Visible = False
+
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -2713,6 +2790,8 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+        searchErrorE.Visible = False
+
 
         If isFrench Then
 
@@ -2756,6 +2835,8 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        searchErrorE.Visible = False
+
 
 
         hallSearchBoxH.Text = ""
@@ -2796,6 +2877,8 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+        searchErrorE.Visible = False
+
 
         addPostPanel.Visible = False
         refreshBtnE.Visible = True
@@ -2824,6 +2907,8 @@ Public Class homePage
         adminHallsPanel.Visible = False
         adminUsersPanel.Visible = False
         adminRolePanel.Visible = False
+        searchErrorE.Visible = False
+
 
         addPostPanel.Visible = False
         refreshBtnE.Visible = True
@@ -2869,6 +2954,8 @@ Public Class homePage
         roleUpdateBtn.Visible = False
         roleUpdatePanel.Visible = False
         roleAddPanel.Visible = False
+        searchErrorE.Visible = False
+
 
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
@@ -2920,6 +3007,8 @@ Public Class homePage
         exportBtnE.Visible = False
         'printBtnE.Visible = False
         refreshBtnE.Visible = False
+        searchErrorE.Visible = False
+
     End Sub
 
     Private Sub addEquipmentCancelBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentCancelBtn.Click
@@ -3040,6 +3129,8 @@ Public Class homePage
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
                     refreshBtnE.Visible = True
+                    searchErrorE.Visible = False
+
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -3096,6 +3187,8 @@ Public Class homePage
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
                     refreshBtnE.Visible = True
+                    searchErrorE.Visible = False
+
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -3153,6 +3246,8 @@ Public Class homePage
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
                     refreshBtnE.Visible = True
+                    searchErrorE.Visible = False
+
                     'printBtnE.Visible = True
 
                 Catch ex As Exception
@@ -3209,6 +3304,8 @@ Public Class homePage
                     addEquipmentBtn.Visible = True
                     exportBtnE.Visible = True
                     refreshBtnE.Visible = True
+                    searchErrorE.Visible = False
+
                     'printBtnE.Visible = True
 
                 Catch ex As Exception

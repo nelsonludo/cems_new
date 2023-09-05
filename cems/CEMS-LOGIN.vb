@@ -38,7 +38,7 @@ Public Class Form1
 
     Dim isFrench As Boolean = True
 
-    Private Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
 
