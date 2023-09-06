@@ -517,7 +517,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="refreshBtnU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -4803,7 +4803,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminEquipmentPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="refreshBtnE.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5140,15 +5140,6 @@
   </data>
   <data name="&gt;&gt;equipmentStateInput.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="equipmentTypeInput.Items" xml:space="preserve">
-    <value>IP_Phone</value>
-  </data>
-  <data name="equipmentTypeInput.Items1" xml:space="preserve">
-    <value>Monitor</value>
-  </data>
-  <data name="equipmentTypeInput.Items2" xml:space="preserve">
-    <value>CPU</value>
   </data>
   <data name="equipmentTypeInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>52, 89</value>
@@ -6300,7 +6291,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminPostPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="refreshBtnP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -9258,13 +9249,13 @@
     <value>7, 11</value>
   </data>
   <data name="hallCountTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 17</value>
+    <value>58, 17</value>
   </data>
   <data name="hallCountTitle.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
   <data name="hallCountTitle.Text" xml:space="preserve">
-    <value>Mettre a jour le poste</value>
+    <value>Counts</value>
   </data>
   <data name="&gt;&gt;hallCountTitle.Name" xml:space="preserve">
     <value>hallCountTitle</value>
@@ -9308,125 +9299,191 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="countEquipmentNumber.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="countEquipmentNumber.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="countEquipmentNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 241</value>
+  <data name="countEquipmentNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 149</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+  <data name="countEquipmentNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 22</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="countEquipmentNumber.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Post state:</value>
+  <data name="countEquipmentNumber.Text" xml:space="preserve">
+    <value>0000</value>
   </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="&gt;&gt;countEquipmentNumber.Name" xml:space="preserve">
+    <value>countEquipmentNumber</value>
   </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentNumber.Parent" xml:space="preserve">
     <value>hallCountPanel</value>
   </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentNumber.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="countEquipmentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="countEquipmentLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="countEquipmentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 145</value>
+  <data name="countEquipmentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 150</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+  <data name="countEquipmentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
   </data>
-  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="countEquipmentLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Post state:</value>
+  <data name="countEquipmentLabel.Text" xml:space="preserve">
+    <value>Equipments :</value>
   </data>
-  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
-    <value>Label5</value>
+  <data name="&gt;&gt;countEquipmentLabel.Name" xml:space="preserve">
+    <value>countEquipmentLabel</value>
   </data>
-  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentLabel.Parent" xml:space="preserve">
     <value>hallCountPanel</value>
   </data>
-  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;countEquipmentLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="countPostNumber.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="countPostNumber.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="countPostNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 70</value>
+  <data name="countPostNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 219</value>
   </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+  <data name="countPostNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 22</value>
   </data>
-  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="countPostNumber.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Post state:</value>
+  <data name="countPostNumber.Text" xml:space="preserve">
+    <value>0000</value>
   </data>
-  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
-    <value>Label4</value>
+  <data name="&gt;&gt;countPostNumber.Name" xml:space="preserve">
+    <value>countPostNumber</value>
   </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;countPostNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;countPostNumber.Parent" xml:space="preserve">
     <value>hallCountPanel</value>
   </data>
-  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;countPostNumber.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 101</value>
+  <data name="countPostLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 21</value>
+  <data name="countPostLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="ComboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
+  <data name="countPostLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Name" xml:space="preserve">
-    <value>ComboBox1</value>
+  <data name="countPostLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 220</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="countPostLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Parent" xml:space="preserve">
+  <data name="countPostLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="countPostLabel.Text" xml:space="preserve">
+    <value>Posts :</value>
+  </data>
+  <data name="&gt;&gt;countPostLabel.Name" xml:space="preserve">
+    <value>countPostLabel</value>
+  </data>
+  <data name="&gt;&gt;countPostLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countPostLabel.Parent" xml:space="preserve">
     <value>hallCountPanel</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;countPostLabel.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="countEquipmentTypeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="countEquipmentTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="countEquipmentTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="countEquipmentTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 70</value>
+  </data>
+  <data name="countEquipmentTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="countEquipmentTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="countEquipmentTypeLabel.Text" xml:space="preserve">
+    <value>type d'equipment</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeLabel.Name" xml:space="preserve">
+    <value>countEquipmentTypeLabel</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeLabel.Parent" xml:space="preserve">
+    <value>hallCountPanel</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="countEquipmentTypeCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 101</value>
+  </data>
+  <data name="countEquipmentTypeCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 21</value>
+  </data>
+  <data name="countEquipmentTypeCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeCombo.Name" xml:space="preserve">
+    <value>countEquipmentTypeCombo</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeCombo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeCombo.Parent" xml:space="preserve">
+    <value>hallCountPanel</value>
+  </data>
+  <data name="&gt;&gt;countEquipmentTypeCombo.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="hallCountPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>926, 108</value>
@@ -9436,9 +9493,6 @@
   </data>
   <data name="hallCountPanel.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
-  </data>
-  <data name="hallCountPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;hallCountPanel.Name" xml:space="preserve">
     <value>hallCountPanel</value>

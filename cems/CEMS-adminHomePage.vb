@@ -1262,6 +1262,10 @@ Public Class homePage
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
 
+
+        admin.activeCount(countPostNumber, "posts")
+        fillcombo(countEquipmentTypeCombo, "equipments", "equipment_type")
+
         fillHalls(hallSearchBoxH)
 
         'this is to translate the title of the panel 
@@ -3026,6 +3030,8 @@ Public Class homePage
     Private Sub addEquipmentBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentBtn.Click
         addEquipmentPanel.Visible = True
         fillcombo(postIdInput, "posts", "post_id")
+        fillcombo(equipmentTypeInput, "equipments", "equipment_type")
+
         fillHalls(hallInput)
 
         If isFrench Then
@@ -4115,8 +4121,10 @@ Public Class homePage
 
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles equipmentDataGridView.CellClick
 
+    Private Sub countEquipmentTypeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles countEquipmentTypeCombo.SelectedIndexChanged
+
+        admin.activeCount(countEquipmentNumber, "equipments")
     End Sub
 
 

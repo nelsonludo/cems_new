@@ -605,6 +605,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Équipement.
+        '''</summary>
+        Friend Shared ReadOnly Property countEquipmentLabel() As String
+            Get
+                Return ResourceManager.GetString("countEquipmentLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Type d&apos;équipements.
+        '''</summary>
+        Friend Shared ReadOnly Property countEquipmentTypeLabel() As String
+            Get
+                Return ResourceManager.GetString("countEquipmentTypeLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Postes.
+        '''</summary>
+        Friend Shared ReadOnly Property countPostLabel() As String
+            Get
+                Return ResourceManager.GetString("countPostLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Unités centrales.
         '''</summary>
         Friend Shared ReadOnly Property CPUsBtn() As String
@@ -961,6 +988,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property hallAddValidationBtn() As String
             Get
                 Return ResourceManager.GetString("hallAddValidationBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Comptes.
+        '''</summary>
+        Friend Shared ReadOnly Property hallCountTitle() As String
+            Get
+                Return ResourceManager.GetString("hallCountTitle", resourceCulture)
             End Get
         End Property
         

@@ -298,6 +298,15 @@
   <data name="connexionUserNameLabel" xml:space="preserve">
     <value>Nom de l'utitsateur</value>
   </data>
+  <data name="countEquipmentLabel" xml:space="preserve">
+    <value>Équipement</value>
+  </data>
+  <data name="countEquipmentTypeLabel" xml:space="preserve">
+    <value>Type d'équipements</value>
+  </data>
+  <data name="countPostLabel" xml:space="preserve">
+    <value>Postes</value>
+  </data>
   <data name="CPUsBtn" xml:space="preserve">
     <value>Unités centrales</value>
   </data>
@@ -417,6 +426,9 @@
   </data>
   <data name="hallAddValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
+  </data>
+  <data name="hallCountTitle" xml:space="preserve">
+    <value>Comptes</value>
   </data>
   <data name="hallDeleteBtn" xml:space="preserve">
     <value>Supprimer</value>
