@@ -4127,7 +4127,59 @@ Public Class homePage
         admin.activeCount(countEquipmentNumber, "equipments")
     End Sub
 
+    Private Sub adminupdateHallinput_TextChanged(sender As Object, e As KeyEventArgs) Handles adminUpdateHallNameInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            hallUpdateValidateBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
 
+        e.SuppressKeyPress = True
+
+    End Sub
+
+    Private Sub adminAddHallNameInput_TextChanged(sender As Object, e As KeyEventArgs) Handles adminAddHallNameInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            HallAddValidateBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
+
+    Private Sub userUserAddConfirmPwdInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userUserAddConfirmPwdInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            userAddValidateBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
+
+    Private Sub userConfirmPwdProfileInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userConfirmPwdProfileInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            changePwdValidationBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
+    Private Sub userPhoneNumberProfileInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userPhoneNumberProfileInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            updateProfileValidateBtn_ClickAsync(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
 
 
     'styles

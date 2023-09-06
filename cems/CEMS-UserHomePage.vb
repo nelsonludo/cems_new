@@ -1124,6 +1124,30 @@ Public Class UserHomePage
     End Function
 
 
+
+    Private Sub userConfirmPwdProfileInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userConfirmPwdProfileInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            changePwdValidationBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
+    Private Sub userPhoneNumberProfileInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userPhoneNumberProfileInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+        If e.KeyCode = Keys.Enter Then
+            updateProfileValidateBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+
+        e.SuppressKeyPress = True
+
+    End Sub
+
+
+
     'close all the servers when the app is closed
     Private Sub userHomePage_closing(sender As Object, e As EventArgs) Handles MyBase.Closing
         Form1.Close()
