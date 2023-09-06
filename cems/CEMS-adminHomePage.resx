@@ -1714,7 +1714,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminUsersPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
@@ -5796,7 +5796,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminPostPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="adminProfilePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -7068,7 +7068,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;adminProfilePanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="adminHallsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

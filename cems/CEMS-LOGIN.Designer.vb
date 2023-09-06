@@ -51,12 +51,10 @@ Partial Class Form1
         Me.userAddPanel = New System.Windows.Forms.Panel()
         Me.createAdminTitle = New System.Windows.Forms.Label()
         Me.addUserErrorMsg = New System.Windows.Forms.Label()
-        Me.userUserAddTitleInput = New System.Windows.Forms.ComboBox()
         Me.userUserAddConfirmPwdInput = New System.Windows.Forms.TextBox()
         Me.userConfirmPwdLabel = New System.Windows.Forms.Label()
         Me.userUserAddPwdInput = New System.Windows.Forms.TextBox()
         Me.adminPwdLabel = New System.Windows.Forms.Label()
-        Me.adminTitleLabel = New System.Windows.Forms.Label()
         Me.userUserAddPhoneInput = New System.Windows.Forms.TextBox()
         Me.adminPhoneNumberLabel = New System.Windows.Forms.Label()
         Me.userUserAddEmailInput = New System.Windows.Forms.TextBox()
@@ -342,12 +340,10 @@ Partial Class Form1
         Me.userAddPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.userAddPanel.Controls.Add(Me.createAdminTitle)
         Me.userAddPanel.Controls.Add(Me.addUserErrorMsg)
-        Me.userAddPanel.Controls.Add(Me.userUserAddTitleInput)
         Me.userAddPanel.Controls.Add(Me.userUserAddConfirmPwdInput)
         Me.userAddPanel.Controls.Add(Me.userConfirmPwdLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddPwdInput)
         Me.userAddPanel.Controls.Add(Me.adminPwdLabel)
-        Me.userAddPanel.Controls.Add(Me.adminTitleLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddPhoneInput)
         Me.userAddPanel.Controls.Add(Me.adminPhoneNumberLabel)
         Me.userAddPanel.Controls.Add(Me.userUserAddEmailInput)
@@ -386,18 +382,9 @@ Partial Class Form1
         Me.addUserErrorMsg.TabIndex = 58
         Me.addUserErrorMsg.Visible = False
         '
-        'userUserAddTitleInput
-        '
-        Me.userUserAddTitleInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.userUserAddTitleInput.FormattingEnabled = True
-        Me.userUserAddTitleInput.Location = New System.Drawing.Point(45, 232)
-        Me.userUserAddTitleInput.Name = "userUserAddTitleInput"
-        Me.userUserAddTitleInput.Size = New System.Drawing.Size(316, 21)
-        Me.userUserAddTitleInput.TabIndex = 3
-        '
         'userUserAddConfirmPwdInput
         '
-        Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(45, 330)
+        Me.userUserAddConfirmPwdInput.Location = New System.Drawing.Point(45, 295)
         Me.userUserAddConfirmPwdInput.Name = "userUserAddConfirmPwdInput"
         Me.userUserAddConfirmPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userUserAddConfirmPwdInput.Size = New System.Drawing.Size(316, 20)
@@ -408,16 +395,16 @@ Partial Class Form1
         '
         Me.userConfirmPwdLabel.AutoSize = True
         Me.userConfirmPwdLabel.BackColor = System.Drawing.Color.MintCream
-        Me.userConfirmPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.userConfirmPwdLabel.Location = New System.Drawing.Point(41, 309)
+        Me.userConfirmPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.userConfirmPwdLabel.Location = New System.Drawing.Point(41, 274)
         Me.userConfirmPwdLabel.Name = "userConfirmPwdLabel"
-        Me.userConfirmPwdLabel.Size = New System.Drawing.Size(136, 17)
+        Me.userConfirmPwdLabel.Size = New System.Drawing.Size(136, 20)
         Me.userConfirmPwdLabel.TabIndex = 56
         Me.userConfirmPwdLabel.Text = "Confirm password"
         '
         'userUserAddPwdInput
         '
-        Me.userUserAddPwdInput.Location = New System.Drawing.Point(45, 281)
+        Me.userUserAddPwdInput.Location = New System.Drawing.Point(45, 246)
         Me.userUserAddPwdInput.Name = "userUserAddPwdInput"
         Me.userUserAddPwdInput.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.userUserAddPwdInput.Size = New System.Drawing.Size(316, 20)
@@ -428,23 +415,12 @@ Partial Class Form1
         '
         Me.adminPwdLabel.AutoSize = True
         Me.adminPwdLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminPwdLabel.Location = New System.Drawing.Point(41, 260)
+        Me.adminPwdLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.adminPwdLabel.Location = New System.Drawing.Point(41, 225)
         Me.adminPwdLabel.Name = "adminPwdLabel"
-        Me.adminPwdLabel.Size = New System.Drawing.Size(125, 17)
+        Me.adminPwdLabel.Size = New System.Drawing.Size(126, 20)
         Me.adminPwdLabel.TabIndex = 54
         Me.adminPwdLabel.Text = "Admin password"
-        '
-        'adminTitleLabel
-        '
-        Me.adminTitleLabel.AutoSize = True
-        Me.adminTitleLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminTitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.adminTitleLabel.Location = New System.Drawing.Point(41, 211)
-        Me.adminTitleLabel.Name = "adminTitleLabel"
-        Me.adminTitleLabel.Size = New System.Drawing.Size(84, 17)
-        Me.adminTitleLabel.TabIndex = 52
-        Me.adminTitleLabel.Text = "Admin title"
         '
         'userUserAddPhoneInput
         '
@@ -457,10 +433,10 @@ Partial Class Form1
         '
         Me.adminPhoneNumberLabel.AutoSize = True
         Me.adminPhoneNumberLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminPhoneNumberLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.adminPhoneNumberLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.adminPhoneNumberLabel.Location = New System.Drawing.Point(41, 162)
         Me.adminPhoneNumberLabel.Name = "adminPhoneNumberLabel"
-        Me.adminPhoneNumberLabel.Size = New System.Drawing.Size(161, 17)
+        Me.adminPhoneNumberLabel.Size = New System.Drawing.Size(161, 20)
         Me.adminPhoneNumberLabel.TabIndex = 50
         Me.adminPhoneNumberLabel.Text = "Admin phone number"
         '
@@ -475,10 +451,10 @@ Partial Class Form1
         '
         Me.adminEmailLabel.AutoSize = True
         Me.adminEmailLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminEmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.adminEmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.adminEmailLabel.Location = New System.Drawing.Point(41, 114)
         Me.adminEmailLabel.Name = "adminEmailLabel"
-        Me.adminEmailLabel.Size = New System.Drawing.Size(95, 17)
+        Me.adminEmailLabel.Size = New System.Drawing.Size(95, 20)
         Me.adminEmailLabel.TabIndex = 48
         Me.adminEmailLabel.Text = "Admin email"
         '
@@ -510,10 +486,10 @@ Partial Class Form1
         '
         Me.adminNameLabel.AutoSize = True
         Me.adminNameLabel.BackColor = System.Drawing.Color.MintCream
-        Me.adminNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.adminNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.adminNameLabel.Location = New System.Drawing.Point(41, 65)
         Me.adminNameLabel.Name = "adminNameLabel"
-        Me.adminNameLabel.Size = New System.Drawing.Size(96, 17)
+        Me.adminNameLabel.Size = New System.Drawing.Size(98, 20)
         Me.adminNameLabel.TabIndex = 11
         Me.adminNameLabel.Text = "Admin name"
         '
@@ -588,11 +564,11 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1443, 698)
+        Me.Controls.Add(Me.userAddPanel)
         Me.Controls.Add(Me.englishBtn)
         Me.Controls.Add(Me.frenchBtn)
         Me.Controls.Add(Me.loginPanel)
         Me.Controls.Add(Me.connexionStringPanel)
-        Me.Controls.Add(Me.userAddPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -634,12 +610,10 @@ Partial Class Form1
     Friend WithEvents userAddPanel As Panel
     Friend WithEvents createAdminTitle As Label
     Friend WithEvents addUserErrorMsg As Label
-    Friend WithEvents userUserAddTitleInput As ComboBox
     Friend WithEvents userUserAddConfirmPwdInput As TextBox
     Friend WithEvents userConfirmPwdLabel As Label
     Friend WithEvents userUserAddPwdInput As TextBox
     Friend WithEvents adminPwdLabel As Label
-    Friend WithEvents adminTitleLabel As Label
     Friend WithEvents userUserAddPhoneInput As TextBox
     Friend WithEvents adminPhoneNumberLabel As Label
     Friend WithEvents userUserAddEmailInput As TextBox

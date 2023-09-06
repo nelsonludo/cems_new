@@ -164,6 +164,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Cancel.
+        '''</summary>
+        Friend Shared ReadOnly Property addPostCancelBtn() As String
+            Get
+                Return ResourceManager.GetString("addPostCancelBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Post Hall.
         '''</summary>
         Friend Shared ReadOnly Property addPostHallLabel() As String
@@ -196,6 +205,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property addPostTitle() As String
             Get
                 Return ResourceManager.GetString("addPostTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add.
+        '''</summary>
+        Friend Shared ReadOnly Property addPostValidationBtn() As String
+            Get
+                Return ResourceManager.GetString("addPostValidationBtn", resourceCulture)
             End Get
         End Property
         
@@ -259,6 +277,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property addUserPwdLabel() As String
             Get
                 Return ResourceManager.GetString("addUserPwdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Add user.
+        '''</summary>
+        Friend Shared ReadOnly Property addUserTitle() As String
+            Get
+                Return ResourceManager.GetString("addUserTitle", resourceCulture)
             End Get
         End Property
         

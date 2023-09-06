@@ -30,10 +30,11 @@ Public Class homePage
     Dim sqlDataAdaptor As New MySqlDataAdapter
     Dim sqlQuery As String
 
-    Public server As String = Form1.server
-    Public username As String = Form1.username
-    Public password As String = Form1.password
-    Public database As String = Form1.database
+
+    Public server As String = Nothing
+    Public username As String = Nothing
+    Public password As String = Nothing
+    Public database As String = Nothing
 
     Dim User As New users
     Dim admin As New admin
@@ -51,6 +52,12 @@ Public Class homePage
 
     'connection functoin
     Public Sub connect_db()
+
+        server = Form1.server
+        username = Form1.username
+        password = Form1.password
+        database = Form1.database
+
         sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
                + "password=" + password + ";" + "database =" + database
     End Sub
@@ -62,7 +69,7 @@ Public Class homePage
     '    Try
     '        sqlConn.Open()
     '        'username appear
-    '        sqlQuery = "select * from cems.cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
+    '        sqlQuery = "select * from " & database & ".cems_admin where admin_email = '" & Form1.emailtxt.Text & "'"
     '        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
     '        sqlReader = sqlCmd.ExecuteReader
     '        If (sqlReader.Read()) Then
@@ -87,7 +94,6 @@ Public Class homePage
     Private Sub adminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        adminHomePagePanel.Visible = True
 
         TranslateFormControlsFrench(Me)
 
@@ -124,7 +130,10 @@ Public Class homePage
 
     End Sub
 
+    Private Sub adminHomePage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
 
+        adminHomePagePanel.Visible = True
+    End Sub
 
     'this is like the media of css for the responsiveness
     Private Sub adminhomepage_resize(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Resize
@@ -156,7 +165,7 @@ Public Class homePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_halls"
+            sqlQuery = "select * from  " & database & ".cems_halls"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -182,7 +191,7 @@ Public Class homePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_" & table & ""
+            sqlQuery = "select * from  " & database & ".cems_" & table & ""
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -651,7 +660,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & postHallInput.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & postHallInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -697,7 +706,7 @@ Public Class homePage
                         Try
                             sqlConn.Close()
                             sqlConn.Open()
-                            sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "',1,'" & postStateInput.Text & "')"
+                            sqlQuery = "insert into " & database & ".cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "',1,'" & postStateInput.Text & "')"
                             'Read through the response'
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
@@ -706,7 +715,7 @@ Public Class homePage
                             Dim post_id As String = postPostIdInput.Text
 
                             sqlConn.Open()
-                            sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "',1);insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "',1);insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "',1)"
+                            sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "',1)"
                             'Read through the response'
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
@@ -737,8 +746,18 @@ Public Class homePage
                             addPostPanel.Visible = False
 
                             'empty the fields after validation
-                            postStateInput.Text = ""
-                            postHallInput.Text = ""
+                            postStateInput.SelectedIndex = -1
+                            postHallInput.SelectedIndex = -1
+                            postPostIdInput.Text = ""
+
+                            'empty the search fields after validation
+                            postSearchBox.Text = ""
+
+
+                            hallSearchBoxP.SelectedIndex = -1
+
+                            stateSearchBoxP.SelectedIndex = -1
+
 
                             If isFrench Then
 
@@ -766,7 +785,7 @@ Public Class homePage
                         Try
                             sqlConn.Close()
                             sqlConn.Open()
-                            sqlQuery = "insert into cems.cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
+                            sqlQuery = "insert into " & database & ".cems_posts(post_id,hall_id, post_state) values ('" & postPostIdInput.Text & "','" & hall_id & "','" & postStateInput.Text & "')"
                             'Read through the response'
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
@@ -775,7 +794,7 @@ Public Class homePage
                             Dim post_id As String = postPostIdInput.Text
 
                             sqlConn.Open()
-                            sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
+                            sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "');insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "','" & hall_id & "')"
                             'Read through the response'
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
@@ -803,8 +822,9 @@ Public Class homePage
                             addPostPanel.Visible = False
 
                             'empty the fields after validation
-                            postStateInput.Text = ""
-                            postHallInput.Text = ""
+                            postStateInput.SelectedIndex = -1
+                            postHallInput.SelectedIndex = -1
+                            postPostIdInput.Text = ""
 
                             If isFrench Then
 
@@ -851,15 +871,18 @@ Public Class homePage
 
         postChangeStatePanel.Visible = False
 
+        'empty the search fields after validation
+        postSearchBox.Text = ""
+
+
+        hallSearchBoxP.SelectedIndex = -1
+
+        stateSearchBoxP.SelectedIndex = -1
+
         'empty the fields after validation
-
-        hallSearchBoxP.Text = ""
-
-        stateSearchBoxP.Text = ""
-
-        'empty the fields after validation
-        postStateInput.Text = ""
-        postHallInput.Text = ""
+        postStateInput.SelectedIndex = -1
+        postHallInput.SelectedIndex = -1
+        postPostIdInput.Text = ""
 
         If isFrench Then
 
@@ -922,7 +945,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & postChangeHallInput.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & postChangeHallInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -949,7 +972,7 @@ Public Class homePage
 
                 With sqlCmd
                     'possible problem
-                    .CommandText = "Update cems.cems_posts Set hall_id ='" & hall_id & "' where post_id = '" & post_id & "'" 'post_state ='" & postChangeStateInput.Text & "',
+                    .CommandText = "Update " & database & ".cems_posts Set hall_id ='" & hall_id & "' where post_id = '" & post_id & "'" 'post_state ='" & postChangeStateInput.Text & "',
 
                     .CommandType = CommandType.Text
 
@@ -973,7 +996,7 @@ Public Class homePage
 
                 With sqlCmd
 
-                    .CommandText = "Update cems.cems_equipments Set hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
+                    .CommandText = "Update " & database & ".cems_equipments Set hall_id ='" & hall_id & "' where post_id = '" & post_id & "'"
 
                     .CommandType = CommandType.Text
 
@@ -1220,6 +1243,7 @@ Public Class homePage
         hallDeleteBtn.Visible = False
         refreshBtnH.Visible = False
         searchErrorH.Visible = False
+        hallCountPanel.Visible = False
 
 
     End Sub
@@ -1253,6 +1277,8 @@ Public Class homePage
         roleAddPanel.Visible = False
         refreshBtnH.Visible = True
 
+        hallCountPanel.Visible = True
+
         hallSearchBoxH.Text = ""
         equipmentSearchBox.Text = ""
         hallSearchBoxE.Text = ""
@@ -1261,6 +1287,8 @@ Public Class homePage
         userSearchBox.Text = ""
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
+        countEquipmentLabel.Text = "0000"
+        countEquipmentLabel.Text = "0000"
 
 
         admin.activeCount(countPostNumber, "posts")
@@ -1350,7 +1378,7 @@ Public Class homePage
         Else
             Try
                 sqlConn.Open()
-                sqlQuery = "insert into cems.cems_halls(hall_name) values ('" & adminAddHallNameInput.Text & "')"
+                sqlQuery = "insert into " & database & ".cems_halls(hall_name) values ('" & adminAddHallNameInput.Text & "')"
                 'Read through the response'
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
@@ -1408,6 +1436,8 @@ Public Class homePage
             refreshBtnH.Visible = True
             searchErrorH.Visible = False
 
+            hallCountPanel.Visible = True
+
         End If
 
 
@@ -1452,6 +1482,8 @@ Public Class homePage
         refreshBtnH.Visible = False
         searchErrorH.Visible = False
 
+        hallCountPanel.Visible = False
+
 
     End Sub
 
@@ -1459,7 +1491,7 @@ Public Class homePage
         Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this hall ?", "Comfirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
 
         If confirm = DialogResult.Yes Then
-            If admin.checkDefaultRecord(postDataGridView) Then
+            If admin.checkDefaultRecord(hallDataGridView) Then
                 MessageBox.Show("It is not possible to delete the default Hall!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
 
@@ -1535,7 +1567,7 @@ Public Class homePage
 
                 With sqlCmd
 
-                    .CommandText = "Update cems.cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
+                    .CommandText = "Update " & database & ".cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update " & database & ".cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
 
                     .CommandType = CommandType.Text
 
@@ -1587,6 +1619,8 @@ Public Class homePage
                 hallDataGridView.Visible = True
                 refreshBtnH.Visible = True
                 searchErrorH.Visible = False
+
+                hallCountPanel.Visible = True
 
 
             Catch ex As Exception
@@ -1724,7 +1758,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserTitleInput.Text & "'"
+                sqlQuery = "select title_id from  " & database & ".cems_titles where title_name = '" & userUserTitleInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -1775,6 +1809,7 @@ Public Class homePage
                         sqlConn.Close()
 
                     Else
+                        sqlConn.Close()
                         sqlConn.Open()
 
                         Dim user_id As String = userDataGridView.SelectedRows(0).Cells(0).Value.ToString
@@ -1785,7 +1820,7 @@ Public Class homePage
 
                         With sqlCmd
 
-                            .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "' where user_id = '" & user_id & "'"
+                            .CommandText = "Update " & database & ".cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "' where user_id = '" & user_id & "'"
 
                             .CommandType = CommandType.Text
 
@@ -1858,7 +1893,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserTitleInput.Text & "'"
+                sqlQuery = "select title_id from  " & database & ".cems_titles where title_name = '" & userUserTitleInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -1897,7 +1932,7 @@ Public Class homePage
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
+                        .CommandText = "Update " & database & ".cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "' where user_id = '" & user_id & "'"
 
                         .CommandType = CommandType.Text
 
@@ -2014,7 +2049,7 @@ Public Class homePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_titles"
+            sqlQuery = "select * from  " & database & ".cems_titles"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -2088,7 +2123,7 @@ Public Class homePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_titles"
+            sqlQuery = "select * from  " & database & ".cems_titles"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -2152,7 +2187,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
+                sqlQuery = "select title_id from  " & database & ".cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -2223,7 +2258,7 @@ Public Class homePage
                         Try
                             sqlConn.Close()
                             sqlConn.Open()
-                            sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
+                            sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
                             'Read through the response'
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
@@ -2431,7 +2466,7 @@ Public Class homePage
 
                 With sqlCmd
 
-                    .CommandText = "Update cems.cems_titles Set title_name ='" & titleNameInput.Text & "' where title_id = '" & role_id & "' "
+                    .CommandText = "Update " & database & ".cems_titles Set title_name ='" & titleNameInput.Text & "' where title_id = '" & role_id & "' "
 
                     .CommandType = CommandType.Text
 
@@ -2602,7 +2637,7 @@ Public Class homePage
         Else
             Try
                 sqlConn.Open()
-                sqlQuery = "insert into cems.cems_titles(title_name) values ('" & titleAddNameInput.Text & "')"
+                sqlQuery = "insert into " & database & ".cems_titles(title_name) values ('" & titleAddNameInput.Text & "')"
                 'Read through the response'
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
@@ -3099,7 +3134,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallInput.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallInput.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -3111,7 +3146,7 @@ Public Class homePage
 
                 sqlConn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql getting the hall id ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Finally
                 sqlConn.Dispose()
 
@@ -3122,7 +3157,7 @@ Public Class homePage
             If hallInput.Text = "" And postIdInput.Text = "" Then
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',0,0)"
+                    sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',1,1)"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -3183,7 +3218,7 @@ Public Class homePage
             ElseIf hallInput.Text = "" Then
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "',0)"
+                    sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "',0)"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -3242,7 +3277,7 @@ Public Class homePage
             ElseIf postIdInput.Text = "" Then
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',0,'" & hall_id & "')"
+                    sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "',0,'" & hall_id & "')"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -3300,7 +3335,7 @@ Public Class homePage
             Else
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "','" & hall_id & "')"
+                    sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('" & equipmentTypeInput.Text & "','" & equipmentStateInput.Text & "','" & post_id & "','" & hall_id & "')"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -3395,7 +3430,7 @@ Public Class homePage
 
         With sqlCmd
 
-            .CommandText = "Update cems.cems_equipments Set equipment_state ='" & equipmentState.Text & "' where equipment_id = '" & equipment_id & "'"
+            .CommandText = "Update " & database & ".cems_equipments Set equipment_state ='" & equipmentState.Text & "' where equipment_id = '" & equipment_id & "'"
 
             .CommandType = CommandType.Text
 
@@ -3410,7 +3445,7 @@ Public Class homePage
 
         With sqlCmd
             'possible problem
-            .CommandText = "Update cems.cems_posts Set post_state ='" & equipmentState.Text & "' where post_id = '" & post_id & "'"
+            .CommandText = "Update " & database & ".cems_posts Set post_state ='" & equipmentState.Text & "' where post_id = '" & post_id & "'"
 
             .CommandType = CommandType.Text
 
@@ -3588,7 +3623,7 @@ Public Class homePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxH.Text & "'"
+            sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxH.Text & "'"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -3639,7 +3674,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
@@ -3666,7 +3701,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
@@ -3706,7 +3741,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -3804,7 +3839,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -3849,7 +3884,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -3876,7 +3911,7 @@ Public Class homePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)

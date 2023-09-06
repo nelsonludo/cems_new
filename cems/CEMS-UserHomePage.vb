@@ -50,7 +50,6 @@ Public Class UserHomePage
 
     Private Sub UserHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        HomePagePanel.Visible = True
 
         TranslateFormControlsFrench(Me)
 
@@ -77,6 +76,10 @@ Public Class UserHomePage
 
     End Sub
 
+    Private Sub UserHomePage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        HomePagePanel.Visible = True
+
+    End Sub
 
     'to load the new user information in the profile panel
 
@@ -107,7 +110,7 @@ Public Class UserHomePage
         Try
             sqlConn.Open()
 
-            sqlQuery = "select * from  cems.cems_halls"
+            sqlQuery = "select * from  " & database & ".cems_halls"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -800,7 +803,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -827,7 +830,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -865,7 +868,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
@@ -892,7 +895,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
 
@@ -932,7 +935,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxE.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -977,7 +980,7 @@ Public Class UserHomePage
             Try
                 sqlConn.Open()
 
-                sqlQuery = "select hall_id from  cems.cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
+                sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & hallSearchBoxP.Text & "'"
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)

@@ -281,7 +281,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Titre de l&apos;utilisateur.
+        '''  Recherche une chaîne localisée semblable à Ajouter de l&apos;utilisateur.
         '''</summary>
         Friend Shared ReadOnly Property addUserTitle() As String
             Get

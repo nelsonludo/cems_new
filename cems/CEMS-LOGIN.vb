@@ -27,6 +27,7 @@ Public Class Form1
 
     Dim User As New users
     Dim admin As New admin
+
     Public user_email As String
     Public apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
 
@@ -126,6 +127,7 @@ Public Class Form1
                     connect_db(server, username, password, database)
 
                     Dim checkTables As Integer = 0
+                    Dim checkuser As Integer = 0
 
                     Try
                         sqlConn.Open()
@@ -142,9 +144,30 @@ Public Class Form1
 
 
                         If checkTables > 0 Then
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = False
-                            loginPanel.Visible = True
+                            sqlConn.Open()
+
+                            sqlQuery = "select count(*) from cems_users"
+
+
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            While (sqlReader.Read())
+                                checkUser = sqlReader.Item("count(*)")
+                            End While
+                            sqlConn.Close()
+
+                            If checkUser > 0 Then
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = False
+                                loginPanel.Visible = True
+                            Else
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = True
+
+
+                            End If
+
+
 
                         Else
                             'create all tables
@@ -167,31 +190,7 @@ Public Class Form1
 
                             End Try
 
-                            'populating the title combobox
 
-                            userUserAddTitleInput.Items.Clear()
-
-
-                            Try
-                                sqlConn.Open()
-
-                                sqlQuery = "select * from  cems.cems_titles"
-
-
-                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                                sqlReader = sqlCmd.ExecuteReader
-                                While (sqlReader.Read())
-                                    userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
-
-                                End While
-                                sqlConn.Close()
-
-                            Catch ex As Exception
-                                MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            Finally
-                                sqlConn.Dispose()
-
-                            End Try
                             userAddPanel.Visible = True
                             connexionStringPanel.Visible = False
 
@@ -287,6 +286,8 @@ Public Class Form1
         password = connexionStringPwd.Text
         database = connexionStringDatabase.Text
 
+        Dim defaultdatabase As String = "mysql"
+
         Dim test As Boolean = False
 
         If server = "" Or username = "" Or database = "" Then
@@ -305,12 +306,16 @@ Public Class Form1
         Else
 
             Try
-                connect_db(server, username, password, database)
+                connect_db(server, username, password, defaultdatabase)
 
-                sqlConn.Open()
+                sqlQuery = "create database " & database & ""
+
+
+                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                sqlReader = sqlCmd.ExecuteReader
                 sqlConn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show(ex.Message, "MySql create first database string", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 test = True
             End Try
 
@@ -372,6 +377,7 @@ Public Class Form1
                 connect_db(server, username, password, database)
 
                 Dim checkTables As Integer = 0
+                Dim checkUser As Integer = 0
 
                 Try
                     sqlConn.Open()
@@ -388,13 +394,30 @@ Public Class Form1
 
 
                     If checkTables > 0 Then
-                        connexionStringPanel.Visible = False
-                        userAddPanel.Visible = False
-                        loginPanel.Visible = True
+                        sqlConn.Open()
+
+                        sqlQuery = "select count(*) from cems_users"
+
+
+                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                        sqlReader = sqlCmd.ExecuteReader
+                        While (sqlReader.Read())
+                            checkUser = sqlReader.Item("count(*)")
+                        End While
+                        sqlConn.Close()
+
+                        If checkUser > 0 Then
+                            connexionStringPanel.Visible = False
+                            userAddPanel.Visible = False
+                            loginPanel.Visible = True
+                        Else
+                            connexionStringPanel.Visible = False
+                            userAddPanel.Visible = True
+                        End If
+
 
                     Else
                         'create all tables
-
 
                         userAddPanel.Visible = True
                         connexionStringPanel.Visible = False
@@ -417,31 +440,6 @@ Public Class Form1
 
                         End Try
 
-                        'populating the title combobox
-
-                        userUserAddTitleInput.Items.Clear()
-
-
-                        Try
-                            sqlConn.Open()
-
-                            sqlQuery = "select * from  cems.cems_titles"
-
-
-                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                            sqlReader = sqlCmd.ExecuteReader
-                            While (sqlReader.Read())
-                                userUserAddTitleInput.Items.Add(sqlReader.Item("title_name"))
-
-                            End While
-                            sqlConn.Close()
-
-                        Catch ex As Exception
-                            MessageBox.Show(ex.Message, "MySql populate the title combobox", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Finally
-                            sqlConn.Dispose()
-
-                        End Try
 
                     End If
 
@@ -480,7 +478,7 @@ Public Class Form1
 
         connect_db(server, username, password, database)
 
-        If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Or userUserAddTitleInput.Text = "" Then
+        If userUserAddNameInput.Text = "" Or userUserAddEmailInput.Text = "" Or userUserAddPhoneInput.Text = "" Or userUserAddConfirmPwdInput.Text = "" Then
 
             If isFrench Then
                 addUserErrorMsg.Text = My.Resources.resourcesEnText.EmptyField
@@ -495,29 +493,7 @@ Public Class Form1
             Timer2.Start()
         Else
 
-            Dim title_id As Integer
-            'SQL Connection'
 
-            Try
-                sqlConn.Open()
-
-                sqlQuery = "select title_id from  cems.cems_titles where title_name = '" & userUserAddTitleInput.Text & "'"
-
-
-                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                sqlReader = sqlCmd.ExecuteReader
-
-                While (sqlReader.Read())
-                    title_id = sqlReader.Item("title_id")
-                End While
-
-                sqlConn.Close()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Finally
-                sqlConn.Dispose()
-
-            End Try
 
 
             If userUserAddPwdInput.Text <> userUserAddConfirmPwdInput.Text Then
@@ -539,7 +515,7 @@ Public Class Form1
 
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into cems.cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','" & title_id & "')"
+                    sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','admin')"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -688,7 +664,7 @@ Public Class Form1
         Try
             sqlConn.Open()
             'check user info
-            sqlQuery = "select user_phone_number, user_email from cems.cems_users where title_id = '1'"
+            sqlQuery = "select user_phone_number, user_email from " & database & ".cems_users where title_id = '1'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
 
@@ -731,8 +707,12 @@ Public Class Form1
 
         sqlQuery = "
                             --
--- Database: `cems`
+-- Database: `" & database & "`
 --
+-- --------------------------------------------------------
+
+use " & database & ";
+
 
 -- --------------------------------------------------------
 

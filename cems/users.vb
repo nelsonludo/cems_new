@@ -28,9 +28,20 @@ Public Class users
     Protected errorMsg As Control
     Protected timer As Timer
 
+    Public username As String = Nothing
+    Public server As String = Nothing
+    Public database As String = Nothing
+    Public password As String = Nothing
+
     Public Sub connect_db()
-        sqlConn.ConnectionString = "server =" + homePage.server + ";" + "user id =" + homePage.username + ";" _
-           + "password=" + homePage.password + ";" + "database =" + homePage.database
+
+        username = Form1.username
+        server = Form1.server
+        database = Form1.database
+        password = Form1.password
+
+        sqlConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+           + "password=" + password + ";" + "database =" + database
     End Sub
 
     'the login function
@@ -40,7 +51,7 @@ Public Class users
         Try
             sqlConn.Open()
             'check user info
-            sqlQuery = "select * from cems.cems_users where user_email = '" & user_email & "'"
+            sqlQuery = "select * from " & database & ".cems_users where user_email = '" & user_email & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
 
@@ -102,7 +113,7 @@ Public Class users
         Try
             sqlConn.Open()
             'username appear
-            sqlQuery = "select * from cems.cems_users where user_email = '" & email.Text & "'"
+            sqlQuery = "select * from " & database & ".cems_users where user_email = '" & email.Text & "'"
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
             sqlReader = sqlCmd.ExecuteReader
             If (sqlReader.Read()) Then
@@ -157,7 +168,7 @@ Public Class users
             sqlConn.Open()
             datatable.Rows.Clear()
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "select * from cems.cems_" & table & " "
+            sqlCmd.CommandText = "select * from " & database & ".cems_" & table & " "
 
             sqlReader = sqlCmd.ExecuteReader
             datatable.Load(sqlReader)
@@ -689,7 +700,7 @@ Public Class users
 
             With sqlCmd
 
-                .CommandText = "Update cems.cems_" & table & " Set  " & column & "_password = '" & hashedPassword & "' where " & column & "_email = '" & previousEmail & "'"
+                .CommandText = "Update " & database & ".cems_" & table & " Set  " & column & "_password = '" & hashedPassword & "' where " & column & "_email = '" & previousEmail & "'"
 
                 .CommandType = CommandType.Text
 
@@ -761,9 +772,9 @@ Public Class users
 
                     With sqlCmd
 
-                        .CommandText = "Update cems.cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
+                    .CommandText = "Update " & database & ".cems_" & table & " Set " & column & "_name = '" & name & "', " & column & "_phone_number = '" & phone & "', " & column & "_email = '" & email & "'  where " & column & "_email = '" & previousEmail & "'"
 
-                        .CommandType = CommandType.Text
+                    .CommandType = CommandType.Text
 
                     End With
 
@@ -1009,4 +1020,4 @@ Public Class users
 
 End Class
 
-'                    .CommandText = "Update cems.cems_'" & table & "' Set user_name = '" & name & "', user_phone_number = '" & phone & "', user_email = '" & email & "'  where user_email = '" & Form1.emailtxt.Text & "'"
+'                    .CommandText = "Update " & database & ".cems_'" & table & "' Set user_name = '" & name & "', user_phone_number = '" & phone & "', user_email = '" & email & "'  where user_email = '" & Form1.emailtxt.Text & "'"

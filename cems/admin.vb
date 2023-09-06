@@ -92,7 +92,7 @@ Public Class admin
 
         With sqlCmd
 
-            .CommandText = "delete from cems.cems_" & table & "  where " & column & "_id = '" & id & "'"
+            .CommandText = "delete from " & database & ".cems_" & table & "  where " & column & "_id = '" & id & "'"
 
             .CommandType = CommandType.Text
 
@@ -144,7 +144,7 @@ Public Class admin
 
             With sqlCmd
 
-                .CommandText = "delete from cems.cems_" & table & "  where " & column & "_id = '" & id & "'"
+                .CommandText = "delete from " & database & ".cems_" & table & "  where " & column & "_id = '" & id & "'"
 
                 .CommandType = CommandType.Text
 
@@ -166,7 +166,7 @@ Public Class admin
 
             With sqlCmd
 
-                .CommandText = "delete from cems.cems_equipments  where post_id = '" & id & "'"
+                .CommandText = "delete from " & database & ".cems_equipments  where post_id = '" & id & "'"
 
                 .CommandType = CommandType.Text
 

@@ -190,7 +190,7 @@
     <value>Mot de passe de l'utilisateur</value>
   </data>
   <data name="addUserTitle" xml:space="preserve">
-    <value>Titre de l'utilisateur</value>
+    <value>Ajouter de l'utilisateur</value>
   </data>
   <data name="addUserTitleLabel" xml:space="preserve">
     <value>Titre de l'utilisateur</value>

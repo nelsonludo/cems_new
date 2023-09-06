@@ -2704,9 +2704,9 @@ Partial Class homePage
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
-        Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminUsersPanel)
         Me.Controls.Add(Me.adminPostPanel)
+        Me.Controls.Add(Me.adminProfilePanel)
         Me.Controls.Add(Me.adminEquipmentPanel)
         Me.Controls.Add(Me.adminHallsPanel)
         Me.Controls.Add(Me.adminHomePagePanel)

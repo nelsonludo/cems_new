@@ -150,6 +150,9 @@
   <data name="addPostBtn" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="addPostCancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="addPostHallLabel" xml:space="preserve">
     <value>Post Hall</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="addPostTitle" xml:space="preserve">
     <value>Add post</value>
+  </data>
+  <data name="addPostValidationBtn" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="addRoleNameLabel" xml:space="preserve">
     <value>Role name</value>
@@ -182,6 +188,9 @@
   </data>
   <data name="addUserPwdLabel" xml:space="preserve">
     <value>User Password</value>
+  </data>
+  <data name="addUserTitle" xml:space="preserve">
+    <value>Add user</value>
   </data>
   <data name="addUserTitleLabel" xml:space="preserve">
     <value>User Title</value>
