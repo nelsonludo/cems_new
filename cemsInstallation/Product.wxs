@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:ui="http://schemas.microsoft.com/wix/UIExtension">
+	<Product Id="*" Name="cemsInstallation" Language="1033" Version="1.0.0.0" Manufacturer="PHEOCC" UpgradeCode="9e6c033a-a081-4bea-87cb-a0556876fd60">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of cems is already installed." />
+		<MediaTemplate EmbedCab  = "yes" />
+		
+		
+        <Property Id="SERVER" Value="0" Secure="yes" />
+
+
+        <UI>
+          <UIRef Id="WixUI_InstallDir" />
+
+          <DialogRef Id="InstallDirDlg" />
+          <DialogRef Id="VerifyReadyDlg" />
+
+          <Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="ServerDlg" Order="2">NOT SERVER</Publish>
+          <Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg" Order="2">SERVER</Publish>
+        </UI>
+
+        <Feature Id="MainFeature" Title="Main Feature" Level="1">
+          <ComponentRef Id="MainExecutable" />
+        </Feature>
+	
+	    <Directory Id="TARGETDIR" Name="SourceDir">
+		    <Directory Id="ProgramFilesFolder">
+		    <Directory Id="INSTALLFOLDER" Name="cems">
+			    <Component Id="MySQLComponent" Guid="*">
+			        <File Id="MySQLInstaller" Source="mysql.exe" />
+			    </Component>
+			    <Component Id="MainExecutable" Guid="*">
+                    <File Id="CemsExe" Source="cems.exe" />
+                </Component>
+		    </Directory>
+		    </Directory>
+	    </Directory>
+
+	    <Feature Id="ProductFeature" Title="cemsInstallation" Level="1">
+		    <ComponentRef Id="MySQLComponent" />
+		    <ComponentRef Id="MainExecutable" />
+	    </Feature>
+	    <Property Id="LOGO_PATH" Value=".\Resources\cems.jpg" />
+    </Product>
+
+ 
+  <Fragment>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UI>
+      <Dialog Id="ServerDlg" Width="370" Height="270" Title="Server Configuration">
+        <Control Id="ServerLabel" Type="Text" X="15" Y="60" Width="330" Height="40" TabSkip="no" Text="Is the server and MySQL already installed on your machine?" />
+        <Control Id="ServerCombo" Type="ComboBox" X="15" Y="90" Width="330" Height="80" Property="SERVER">
+          <ComboBox Property="SERVER">
+            <ListItem Text="No, install server and MySQL" Value="0" />
+            <ListItem Text="Yes, skip server installation" Value="1" />
+          </ComboBox>
+        </Control>
+      </Dialog>
+    </UI>
+  </Fragment>
+</Wix>
