@@ -360,7 +360,11 @@
   <ItemGroup>
     <None Include="Resources\frenchFlag.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\WixToolset.VisualStudio.wixext.4.0.1\build\WixToolset.VisualStudio.wixext.targets" Condition="Exists('..\packages\WixToolset.VisualStudio.wixext.4.0.1\build\WixToolset.VisualStudio.wixext.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

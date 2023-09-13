@@ -11,6 +11,8 @@ Imports System.Globalization
 Imports System.Threading
 Imports System.Text
 Imports System.Text.RegularExpressions
+Imports System.Security.AccessControl
+Imports System.IO
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -71,6 +73,25 @@ Public Class Form1
         Dim uriPath As String = connexionStringDirectory
         Dim localPath As String = New Uri(uriPath).LocalPath
 
+
+        Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
+
+        ' Get the current user
+        Dim currentUser As String = Environment.UserName
+
+        ' Create a DirectoryInfo object for the application folder
+        Dim directoryInfo As New DirectoryInfo(applicationFolder)
+
+        ' Get the DirectorySecurity object for the application folder
+        Dim directorySecurity As DirectorySecurity = directoryInfo.GetAccessControl()
+
+        ' Add an access rule to grant full control to the current user
+        directorySecurity.AddAccessRule(New FileSystemAccessRule(currentUser, FileSystemRights.FullControl, InheritanceFlags.ContainerInherit Or InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow))
+
+        ' Apply the modified DirectorySecurity to the application folder
+        directoryInfo.SetAccessControl(directorySecurity)
+
+
         Dim wrapper As New Simple3Des("")
 
         Dim test As Boolean = False
@@ -79,7 +100,9 @@ Public Class Form1
         passwordtxt.Text = ""
 
 
+
         If System.IO.File.Exists(localPath) = True Then
+
 
             FileOpen(1, localPath, OpenMode.Input)
 
@@ -152,11 +175,11 @@ Public Class Form1
                             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                             sqlReader = sqlCmd.ExecuteReader
                             While (sqlReader.Read())
-                                checkUser = sqlReader.Item("count(*)")
+                                checkuser = sqlReader.Item("count(*)")
                             End While
                             sqlConn.Close()
 
-                            If checkUser > 0 Then
+                            If checkuser > 0 Then
                                 connexionStringPanel.Visible = False
                                 userAddPanel.Visible = False
                                 loginPanel.Visible = True
@@ -212,8 +235,10 @@ Public Class Form1
 
         Else
 
+
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
+
 
         End If
     End Sub
