@@ -114,6 +114,7 @@ Public Class Form1
             End While
 
 
+
             FileClose(1)
 
 
@@ -166,29 +167,36 @@ Public Class Form1
                         sqlConn.Close()
 
 
+
                         If checkTables > 0 Then
-                            sqlConn.Open()
 
-                            sqlQuery = "select count(*) from cems_users"
+                            Try
 
+                                sqlConn.Open()
 
-                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                            sqlReader = sqlCmd.ExecuteReader
-                            While (sqlReader.Read())
-                                checkuser = sqlReader.Item("count(*)")
-                            End While
-                            sqlConn.Close()
-
-                            If checkuser > 0 Then
-                                connexionStringPanel.Visible = False
-                                userAddPanel.Visible = False
-                                loginPanel.Visible = True
-                            Else
-                                connexionStringPanel.Visible = False
-                                userAddPanel.Visible = True
+                                sqlQuery = "select count(*) from cems_users"
 
 
-                            End If
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+                                While (sqlReader.Read())
+                                    checkuser = sqlReader.Item("count(*)")
+                                End While
+                                sqlConn.Close()
+
+                                If checkuser > 0 Then
+                                    connexionStringPanel.Visible = False
+                                    userAddPanel.Visible = False
+                                    loginPanel.Visible = True
+                                Else
+                                    connexionStringPanel.Visible = False
+                                    userAddPanel.Visible = True
+
+
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "counting existing users")
+                            End Try
 
 
 
@@ -332,8 +340,9 @@ Public Class Form1
 
             Try
                 connect_db(server, username, password, defaultdatabase)
+                sqlConn.Open()
 
-                sqlQuery = "create database " & database & ""
+                sqlQuery = "CREATE DATABASE IF NOT EXISTS " & database & ""
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -365,7 +374,7 @@ Public Class Form1
                 Dim pwdEncr As String = wrapper.EncryptData(password)
                 Dim databaseEncr As String = wrapper.EncryptData(database)
 
-                Dim FILE_PATH As String = "C:\cems"
+                'Dim FILE_PATH As String = "C:\cems"
 
                 Dim FILE_NAME As String = "connectionString.txt"
 
@@ -375,6 +384,10 @@ Public Class Form1
 
                 Dim uriPath As String = connexionStringDirectory
                 Dim localPath As String = New Uri(uriPath).LocalPath
+
+
+                Dim fileSize As Long = New FileInfo(localPath).Length
+
 
 
                 FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
@@ -419,26 +432,33 @@ Public Class Form1
 
 
                     If checkTables > 0 Then
-                        sqlConn.Open()
+                        Try
 
-                        sqlQuery = "select count(*) from cems_users"
+                            sqlConn.Open()
+
+                            sqlQuery = "select count(*) from cems_users"
 
 
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        While (sqlReader.Read())
-                            checkUser = sqlReader.Item("count(*)")
-                        End While
-                        sqlConn.Close()
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            While (sqlReader.Read())
+                                checkUser = sqlReader.Item("count(*)")
+                            End While
+                            sqlConn.Close()
 
-                        If checkUser > 0 Then
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = False
-                            loginPanel.Visible = True
-                        Else
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = True
-                        End If
+                            If checkUser > 0 Then
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = False
+                                loginPanel.Visible = True
+                            Else
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = True
+
+
+                            End If
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "counting existing users")
+                        End Try
 
 
                     Else
@@ -540,7 +560,7 @@ Public Class Form1
 
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','admin')"
+                    sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "',1)"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
