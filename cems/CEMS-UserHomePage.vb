@@ -1156,13 +1156,13 @@ Public Class UserHomePage
         Form1.Close()
 
         Try
-            ' stop apache
-            Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-            For Each apacheProcess As Process In apacheProcesses
-                If Not apacheProcess.CloseMainWindow() Then
-                    apacheProcess.Kill()
-                End If
-            Next
+            '' stop apache
+            'Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+            'For Each apacheProcess As Process In apacheProcesses
+            '    If Not apacheProcess.CloseMainWindow() Then
+            '        apacheProcess.Kill()
+            '    End If
+            'Next
 
             ' Stop MySQL
             Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")

@@ -4,9 +4,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.10</ProductVersion>
-    <ProjectGuid>a6ce4ef8-3f9f-43d3-9cd4-bb9fdb95585d</ProjectGuid>
+    <ProjectGuid>64ec71bc-c13b-4dad-a337-0f228daed955</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>cemsInstallation</OutputName>
+    <OutputName>cemsInstaller</OutputName>
     <OutputType>Package</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -22,47 +22,32 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="resources\" />
+    <Content Include="cemsInstaller.wax" />
+    <Content Include="resources\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\5070392.png" />
-    <Content Include="resources\cems.jpg" />
-    <Content Include="resources\add.png" />
-    <Content Include="resources\computer.png" />
-    <Content Include="resources\cpu.png" />
-    <Content Include="resources\cpu1.png" />
-    <Content Include="resources\drop-down-arrow.png" />
-    <Content Include="resources\drop-left-arrow.png" />
-    <Content Include="resources\drop-left-arrow1.png" />
-    <Content Include="resources\englishFlag.png" />
-    <Content Include="resources\equipmentScrew.png" />
-    <Content Include="resources\export.png" />
-    <Content Include="resources\frenchFlag.png" />
-    <Content Include="resources\Hall.png" />
-    <Content Include="resources\home.png" />
-    <Content Include="resources\landline.png" />
-    <Content Include="resources\logo-light.png" />
-    <Content Include="resources\menu.png" />
-    <Content Include="resources\monitor.png" />
-    <Content Include="resources\monitor1.png" />
-    <Content Include="resources\monitor2.png" />
-    <Content Include="resources\Phone.png" />
-    <Content Include="resources\plus.png" />
-    <Content Include="resources\posts.png" />
-    <Content Include="resources\print %281%29.png" />
-    <Content Include="resources\profile.png" />
-    <Content Include="resources\profile1.png" />
-    <Content Include="resources\roles.png" />
-    <Content Include="resources\thingForCPU.png" />
-    <Content Include="resources\unit.png" />
-    <Content Include="resources\user.png" />
-    <Content Include="resources\user1.png" />
-    <Content Include="resources\user2.png" />
-    <Content Include="resources\user3.png" />
+    <ProjectReference Include="..\cems\cems.vbproj">
+      <Name>cems</Name>
+      <Project>{e1ac9ba2-aa14-48e4-b6e6-69cfe0dee301}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
   </ItemGroup>
-<ItemGroup>
-  <WixExtension Include="WixUIExtension\WixUIExtension.dll" />
-</ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
   <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">

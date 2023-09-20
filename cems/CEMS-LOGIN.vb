@@ -11,6 +11,9 @@ Imports System.Globalization
 Imports System.Threading
 Imports System.Text
 Imports System.Text.RegularExpressions
+Imports System.Security.AccessControl
+Imports System.IO
+Imports System.Security.Principal
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -29,9 +32,12 @@ Public Class Form1
     Dim admin As New admin
 
     Public user_email As String
-    Public apacheProcess As New ProcessStartInfo("C:\xampp\apache\bin\httpd.exe")
 
-    Public mysqlProcess As New ProcessStartInfo("C:\xampp\mysql\bin\mysqld.exe")
+    Public mysqlProcess As New ProcessStartInfo("c:\xampp\mysql\bin\mysqld.exe") 'C:\Program Files\MySQL\MySQL Server 8.0\
+
+
+    Dim databaseInternallyInstalled As Boolean = False 'this is to know if the database was installed by cems or not 
+    Dim installedDatabaseExecutablepath As String = Nothing
 
 
     'the resourcemanager as it name says helps to manage the resources. In our case these are the translation files found in the language folder 
@@ -39,22 +45,117 @@ Public Class Form1
 
     Dim isFrench As Boolean = True
 
+    Private RegistryKeyPath As String = Application.UserAppDataRegistry.Name
+
+    Private Const FirstRunValueName As String = "FirstRun"
+
+
+    Private Function IsFirstRun() As Boolean
+        Using key As RegistryKey = Registry.CurrentUser.OpenSubKey(RegistryKeyPath, writable:=False)
+            Return key Is Nothing OrElse key.GetValue(FirstRunValueName) Is Nothing
+        End Using
+    End Function
+
+    Private Function IsElevated() As Boolean
+        Dim wi As WindowsIdentity = WindowsIdentity.GetCurrent()
+        Dim wp As WindowsPrincipal = New WindowsPrincipal(wi)
+        Return wp.IsInRole(WindowsBuiltInRole.Administrator)
+    End Function
+
+    Private Sub PromptForElevation()
+        Dim processInfo As New ProcessStartInfo()
+        processInfo.Verb = "runas"
+        processInfo.FileName = Application.ExecutablePath
+        Try
+            Process.Start(processInfo)
+            Application.Exit()
+        Catch ex As Exception
+            ' Handle the exception if elevation is canceled or fails
+            MessageBox.Show("Elevation failed or was canceled.", "Elevation Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub MarkFirstRunCompleted()
+        Using key As RegistryKey = Registry.CurrentUser.CreateSubKey(RegistryKeyPath)
+            key.SetValue(FirstRunValueName, 1, RegistryValueKind.DWord)
+        End Using
+    End Sub
+
+
+    'Private Function IsMySQLInstalled() As Boolean
+    '' Check if MySQL is installed by checking the Windows Registry
+    'Dim keyPath As String = "SOFTWARE\MySQL AB\MySQL Server"
+    '
+    '    Using key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(keyPath)
+    '        If key IsNot Nothing Then
+    '            Return True
+    '        End If
+    '    End Using
+    '
+    '    Return False
+    'End Function
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        '' Create a new process instance
+        'Dim process As New Process()
+        '
+        '' Set the process start info
+        'process.StartInfo.FileName = "cmd.exe"
+        '
+        'If databaseInternallyInstalled Then
+        '    process.StartInfo.Arguments = "/c ""C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql"" --version"
+        'Else
+        '    process.StartInfo.Arguments = "/c "" " & installedDatabaseExecutablepath & " "" --version"
+        'End If
+        '
+        'process.StartInfo.RedirectStandardOutput = True
+        'process.StartInfo.UseShellExecute = False
+        'process.StartInfo.CreateNoWindow = True
+        '
+        '' Start the process
+        'process.Start()
+        '
+        '' Read the output
+        'Dim output As String = process.StandardOutput.ReadToEnd()
+        '
+        '' Wait for the process to exit
+        'process.WaitForExit()
+        '
+        '' Display the output
+        'Console.WriteLine(output)
+        '
+        'Dim outputWord As String() = output.Trim().Split(" "c)
+        'Dim outputFirstWord As String = outputWord(0)
+        '
+        'If output <> "mysql" Then
+        '    databaseInstallPanel.Visible = True
+        '    connexionStringPanel.Visible = False
+        'Else
+        '    databaseInstallPanel.Visible = False
+        '    connexionStringPanel.Visible = True
+        'End If
 
+
+        ' Check if it's the first run
+        If IsFirstRun() Then
+            ' Prompt for elevation
+
+            If Not IsElevated() Then
+                PromptForElevation()
+            End If
+            ' Mark first run as completed
+            MarkFirstRunCompleted()
+        End If
 
         'this is to start apache server 
 
         'this is avoid that command line, which appears when the httpd.exe is run (just as in xampp)
-        apacheProcess.CreateNoWindow = True
-        apacheProcess.UseShellExecute = False
+        'apacheProcess.CreateNoWindow = True
+        'apacheProcess.UseShellExecute = False
+        '
+        'Process.Start(apacheProcess)
 
-        Process.Start(apacheProcess)
-
-        ' Start mysql
-        mysqlProcess.CreateNoWindow = True
-        mysqlProcess.UseShellExecute = False
-        Process.Start(mysqlProcess)
 
 
         TranslateFormControlsFrench(Me)
@@ -64,12 +165,32 @@ Public Class Form1
 
         Dim FILE_NAME As String = "connectionString.txt"
 
-        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+        Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) 'Application.StartupPath
 
         Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
 
         Dim uriPath As String = connexionStringDirectory
+
         Dim localPath As String = New Uri(uriPath).LocalPath
+
+
+        'Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
+        '
+        '' Get the current user
+        'Dim currentUser As String = Environment.UserName
+        '
+        '' Create a DirectoryInfo object for the application folder
+        'Dim directoryInfo As New DirectoryInfo(applicationFolder)
+        '
+        '' Get the DirectorySecurity object for the application folder
+        'Dim directorySecurity As DirectorySecurity = directoryInfo.GetAccessControl()
+        '
+        '' Add an access rule to grant full control to the current user
+        'directorySecurity.AddAccessRule(New FileSystemAccessRule(currentUser, FileSystemRights.FullControl, InheritanceFlags.ContainerInherit Or InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow))
+        '
+        '' Apply the modified DirectorySecurity to the application folder
+        'directoryInfo.SetAccessControl(directorySecurity)
+
 
         Dim wrapper As New Simple3Des("")
 
@@ -79,7 +200,16 @@ Public Class Form1
         passwordtxt.Text = ""
 
 
+
         If System.IO.File.Exists(localPath) = True Then
+
+            ' Close the file stream
+            Using fileStream As FileStream = File.OpenRead(localPath)
+                ' Perform operations on the file
+
+                ' Close the file stream
+                fileStream.Close()
+            End Using
 
             FileOpen(1, localPath, OpenMode.Input)
 
@@ -91,10 +221,16 @@ Public Class Form1
             End While
 
 
+
             FileClose(1)
 
 
             If server <> "" Or username <> "" Or database <> "" Then
+
+                ' Start mysql
+                mysqlProcess.CreateNoWindow = True
+                mysqlProcess.UseShellExecute = False
+                Process.Start(mysqlProcess)
 
                 Try
                     connect_db(server, username, password, database)
@@ -102,7 +238,7 @@ Public Class Form1
                     sqlConn.Open()
                     sqlConn.Close()
                 Catch ex As Exception
-                    'MessageBox.Show(ex.Message, "MySql connexion string", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                     test = True
                 End Try
 
@@ -116,6 +252,8 @@ Public Class Form1
                         connexionErrorMsg.Text = My.Resources.resourcesFrText.InvalidConnectionString
 
                     End If
+
+
                     connexionErrorMsg.Visible = True
                     Timer1.Interval = 3000
                     Timer1.Start()
@@ -143,29 +281,36 @@ Public Class Form1
                         sqlConn.Close()
 
 
+
                         If checkTables > 0 Then
-                            sqlConn.Open()
 
-                            sqlQuery = "select count(*) from cems_users"
+                            Try
 
+                                sqlConn.Open()
 
-                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                            sqlReader = sqlCmd.ExecuteReader
-                            While (sqlReader.Read())
-                                checkUser = sqlReader.Item("count(*)")
-                            End While
-                            sqlConn.Close()
-
-                            If checkUser > 0 Then
-                                connexionStringPanel.Visible = False
-                                userAddPanel.Visible = False
-                                loginPanel.Visible = True
-                            Else
-                                connexionStringPanel.Visible = False
-                                userAddPanel.Visible = True
+                                sqlQuery = "select count(*) from cems_users"
 
 
-                            End If
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+                                While (sqlReader.Read())
+                                    checkuser = sqlReader.Item("count(*)")
+                                End While
+                                sqlConn.Close()
+
+                                If checkuser > 0 Then
+                                    connexionStringPanel.Visible = False
+                                    userAddPanel.Visible = False
+                                    loginPanel.Visible = True
+                                Else
+                                    connexionStringPanel.Visible = False
+                                    userAddPanel.Visible = True
+
+
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "counting existing users")
+                            End Try
 
 
 
@@ -207,13 +352,23 @@ Public Class Form1
 
                 End If
 
+            Else
+                databaseInstallPanel.Visible = True
+                connexionStringPanel.Visible = False
+
+
             End If
 
 
         Else
 
+
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
+
+            databaseInstallPanel.Visible = True
+            connexionStringPanel.Visible = False
+
 
         End If
     End Sub
@@ -306,9 +461,12 @@ Public Class Form1
         Else
 
             Try
-                connect_db(server, username, password, defaultdatabase)
+                If sqlConn.State = ConnectionState.Closed Then
+                    connect_db(server, username, password, defaultdatabase)
+                    sqlConn.Open()
+                End If
 
-                sqlQuery = "create database " & database & ""
+                sqlQuery = "CREATE DATABASE IF NOT EXISTS " & database & ""
 
 
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -340,16 +498,18 @@ Public Class Form1
                 Dim pwdEncr As String = wrapper.EncryptData(password)
                 Dim databaseEncr As String = wrapper.EncryptData(database)
 
-                Dim FILE_PATH As String = "C:\cems"
+                'Dim FILE_PATH As String = "C:\cems"
 
                 Dim FILE_NAME As String = "connectionString.txt"
 
-                Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)
+                Dim appDir As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) 'Application.StartupPath
 
                 Dim connexionStringDirectory As String = appDir & "\" & FILE_NAME
 
                 Dim uriPath As String = connexionStringDirectory
                 Dim localPath As String = New Uri(uriPath).LocalPath
+
+
 
 
                 FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
@@ -394,26 +554,33 @@ Public Class Form1
 
 
                     If checkTables > 0 Then
-                        sqlConn.Open()
+                        Try
 
-                        sqlQuery = "select count(*) from cems_users"
+                            sqlConn.Open()
+
+                            sqlQuery = "select count(*) from cems_users"
 
 
-                        sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                        sqlReader = sqlCmd.ExecuteReader
-                        While (sqlReader.Read())
-                            checkUser = sqlReader.Item("count(*)")
-                        End While
-                        sqlConn.Close()
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+                            While (sqlReader.Read())
+                                checkUser = sqlReader.Item("count(*)")
+                            End While
+                            sqlConn.Close()
 
-                        If checkUser > 0 Then
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = False
-                            loginPanel.Visible = True
-                        Else
-                            connexionStringPanel.Visible = False
-                            userAddPanel.Visible = True
-                        End If
+                            If checkUser > 0 Then
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = False
+                                loginPanel.Visible = True
+                            Else
+                                connexionStringPanel.Visible = False
+                                userAddPanel.Visible = True
+
+
+                            End If
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message, "counting existing users")
+                        End Try
 
 
                     Else
@@ -515,7 +682,7 @@ Public Class Form1
 
                 Try
                     sqlConn.Open()
-                    sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "','admin')"
+                    sqlQuery = "insert into " & database & ".cems_users(user_name, user_email, user_phone_number, user_password, title_id) values ('" & userUserAddNameInput.Text & "','" & userUserAddEmailInput.Text & "','" & userUserAddPhoneInput.Text & "','" & hashedPassword & "',1)"
                     'Read through the response'
                     sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                     sqlReader = sqlCmd.ExecuteReader
@@ -570,23 +737,7 @@ Public Class Form1
     '        passwordtxt.Text = ""
     '    End If
     'End Sub
-    'Private Sub passwordtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles passwordtxt.LostFocus
-    '    If passwordtxt.Text = "" Then
-    '        passwordtxt.Text = "password"
-    '    End If
-    'End Sub
-    '
-    ''password placeholder
-    'Private Sub emailtxt_GotFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.GotFocus
-    '    If emailtxt.Text = "email" Then
-    '        emailtxt.Text = ""
-    '    End If
-    'End Sub
-    'Private Sub emailtxt_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles emailtxt.LostFocus
-    '    If emailtxt.Text = "" Then
-    '        emailtxt.Text = "email"
-    '    End If
-    'End Sub
+
 
 
     Private Sub login_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
@@ -627,7 +778,7 @@ Public Class Form1
 
     Private Sub userUserAddConfirmPwdInput_TextChanged(sender As Object, e As KeyEventArgs) Handles userUserAddConfirmPwdInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
         If e.KeyCode = Keys.Enter Then
-            login_Click(Nothing, Nothing)
+            userAddValidateBtn_Click(Nothing, Nothing)
         Else
             Exit Sub
         End If
@@ -637,7 +788,7 @@ Public Class Form1
     End Sub
     Private Sub connexionStringDatabase_TextChanged(sender As Object, e As KeyEventArgs) Handles connexionStringDatabase.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
         If e.KeyCode = Keys.Enter Then
-            login_Click(Nothing, Nothing)
+            connectBtn_Click(Nothing, Nothing)
         Else
             Exit Sub
         End If
@@ -899,6 +1050,8 @@ INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
 -- Dumping data for table `cems_users`
 --
 
+SET sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 
 
 
@@ -907,13 +1060,13 @@ INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
 
     'close all servers when closing the app
     Private Sub Form1_close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        ' Stop Apache
-        Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-        For Each apacheProcess As Process In apacheProcesses
-            If Not apacheProcess.CloseMainWindow() Then
-                apacheProcess.Kill()
-            End If
-        Next
+        '' Stop Apache
+        'Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+        'For Each apacheProcess As Process In apacheProcesses
+        '    If Not apacheProcess.CloseMainWindow() Then
+        '        apacheProcess.Kill()
+        '    End If
+        'Next
 
         ' Stop MySQL
         Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
@@ -951,5 +1104,59 @@ INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
         Return match.Success
     End Function
 
+    Private Sub installDatabaseBtn_Click(sender As Object, e As EventArgs) Handles installDatabaseBtn.Click
+        If installDatabaseYes.Checked Then
+            Try
 
+                ' Specify the path to the MySQL installer executable
+                Dim installerPath As String = Application.StartupPath & "\Resources\mysql-installer-community.msi"
+
+                ' Run the MySQL installer process
+                Dim installerProcess As Process = Process.Start(installerPath)
+
+                ' Wait for the installation process to complete
+                installerProcess.WaitForExit()
+
+                ' Check the exit code to determine the installation outcome
+                If installerProcess.ExitCode = 0 Then
+                    MessageBox.Show("MySQL installation completed successfully.")
+                Else
+                    MessageBox.Show("MySQL installation encountered an error.")
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "mysql installation problem ")
+            End Try
+
+
+        ElseIf installDatabaseNo.checked Then
+            installedDatabaseExecutablepath = installedDatabasePathTextBox.Text
+
+        End If
+
+        databaseInstallPanel.Visible = False
+        connexionStringPanel.Visible = True
+
+        databaseInternallyInstalled = True
+
+        ' Start mysql
+        mysqlProcess.CreateNoWindow = True
+        mysqlProcess.UseShellExecute = False
+        Process.Start(mysqlProcess)
+
+
+    End Sub
+
+    Private Sub installDatabaseNo_CheckedChanged(sender As Object, e As EventArgs) Handles installDatabaseNo.CheckedChanged
+        If installDatabaseNo.Checked Then
+            installDabasePathExample.Visible = True
+            installedDatabasePathLabel.Visible = True
+            installedDatabasePathTextBox.Visible = True
+        ElseIf Not installDatabaseNo.Checked Then
+            installDabasePathExample.Visible = False
+            installedDatabasePathLabel.Visible = False
+            installedDatabasePathTextBox.Visible = False
+
+        End If
+
+    End Sub
 End Class

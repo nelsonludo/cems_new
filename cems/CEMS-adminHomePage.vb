@@ -44,7 +44,7 @@ Public Class homePage
 
 
     'this is for the sidebar dropdown
-    Dim iscollapsed As Boolean = True
+    Dim iscollapsed As Boolean = False
 
     Dim isFrench As Boolean = True
 
@@ -101,8 +101,6 @@ Public Class homePage
         connect_db()
 
         User.showUserName(Form1.emailtxt, aName)
-
-        dropdown.Size = dropdown.MinimumSize
 
         adminEquipmentPanel.Visible = False
         adminPostPanel.Visible = False
@@ -192,6 +190,32 @@ Public Class homePage
             sqlConn.Open()
 
             sqlQuery = "select * from  " & database & ".cems_" & table & ""
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            While (sqlReader.Read())
+                search.Items.Add(sqlReader.Item("" & fillvalue & ""))
+
+            End While
+            sqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+    End Sub
+
+    Public Sub fillcomboEquipment(search As ComboBox, table As String, fillvalue As String)
+
+        search.Items.Clear()
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select equipment_type from  " & database & ".cems_" & table & " group by equipment_type"
 
 
             sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
@@ -1287,12 +1311,11 @@ Public Class homePage
         userSearchBox.Text = ""
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
-        countEquipmentLabel.Text = "0000"
-        countEquipmentLabel.Text = "0000"
+        countEquipmentNumber.Text = "0000"
 
 
         admin.activeCount(countPostNumber, "posts")
-        fillcombo(countEquipmentTypeCombo, "equipments", "equipment_type")
+        fillcomboEquipment(countEquipmentTypeCombo, "equipments", "equipment_type")
 
         fillHalls(hallSearchBoxH)
 
@@ -1325,6 +1348,9 @@ Public Class homePage
 
 
         hallSearchBoxH.SelectedIndex = -1
+        countEquipmentTypeCombo.SelectedIndex = -1
+
+        countEquipmentNumber.Text = "0000"
 
         searchErrorH.Visible = False
 
@@ -2717,6 +2743,7 @@ Public Class homePage
     'equipment SECTION
 
     Private Sub equipmentsBtn_Click(sender As Object, e As EventArgs) Handles equipmentsBtn.Click
+
         Timer1.Start()
 
 
@@ -3065,7 +3092,7 @@ Public Class homePage
     Private Sub addEquipmentBtn_Click(sender As Object, e As EventArgs) Handles addEquipmentBtn.Click
         addEquipmentPanel.Visible = True
         fillcombo(postIdInput, "posts", "post_id")
-        fillcombo(equipmentTypeInput, "equipments", "equipment_type")
+        fillcomboEquipment(equipmentTypeInput, "equipments", "equipment_type")
 
         fillHalls(hallInput)
 
@@ -4136,13 +4163,13 @@ Public Class homePage
 
         Try
 
-            Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-            For Each apacheProcess As Process In apacheProcesses
-                If Not apacheProcess.CloseMainWindow() Then
-                    apacheProcess.Kill()
-                End If
-            Next
-
+            'Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+            'For Each apacheProcess As Process In apacheProcesses
+            '    If Not apacheProcess.CloseMainWindow() Then
+            '        apacheProcess.Kill()
+            '    End If
+            'Next
+            '
             ' Stop MySQL
             Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
             For Each mysqlProcess As Process In mysqlProcesses

@@ -68,10 +68,23 @@ Partial Class Form1
         Me.englishBtn = New System.Windows.Forms.Button()
         Me.frenchBtn = New System.Windows.Forms.Button()
         Me.errorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.databaseInstallPanel = New System.Windows.Forms.Panel()
+        Me.installedDatabasePathTextBox = New System.Windows.Forms.TextBox()
+        Me.installDatabaseBtn = New System.Windows.Forms.Button()
+        Me.installDatabaseYes = New System.Windows.Forms.RadioButton()
+        Me.installDatabaseNo = New System.Windows.Forms.RadioButton()
+        Me.installDabasePathExample = New System.Windows.Forms.Label()
+        Me.installDatabaseWarning = New System.Windows.Forms.Label()
+        Me.installedDatabasePathLabel = New System.Windows.Forms.Label()
+        Me.installDatabaseLabel = New System.Windows.Forms.Label()
+        Me.databaseInstallTitle = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.loginPanel.SuspendLayout()
         Me.connexionStringPanel.SuspendLayout()
         Me.userAddPanel.SuspendLayout()
         CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.databaseInstallPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'loginPanel
@@ -425,6 +438,7 @@ Partial Class Form1
         'userUserAddPhoneInput
         '
         Me.userUserAddPhoneInput.Location = New System.Drawing.Point(45, 184)
+        Me.userUserAddPhoneInput.MaxLength = 9
         Me.userUserAddPhoneInput.Name = "userUserAddPhoneInput"
         Me.userUserAddPhoneInput.Size = New System.Drawing.Size(316, 20)
         Me.userUserAddPhoneInput.TabIndex = 2
@@ -558,12 +572,166 @@ Partial Class Form1
         '
         Me.errorProviderEmail.ContainerControl = Me
         '
+        'databaseInstallPanel
+        '
+        Me.databaseInstallPanel.BackColor = System.Drawing.Color.MintCream
+        Me.databaseInstallPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.databaseInstallPanel.Controls.Add(Me.installedDatabasePathTextBox)
+        Me.databaseInstallPanel.Controls.Add(Me.installDatabaseBtn)
+        Me.databaseInstallPanel.Controls.Add(Me.installDatabaseYes)
+        Me.databaseInstallPanel.Controls.Add(Me.installDatabaseNo)
+        Me.databaseInstallPanel.Controls.Add(Me.installDabasePathExample)
+        Me.databaseInstallPanel.Controls.Add(Me.installDatabaseWarning)
+        Me.databaseInstallPanel.Controls.Add(Me.installedDatabasePathLabel)
+        Me.databaseInstallPanel.Controls.Add(Me.installDatabaseLabel)
+        Me.databaseInstallPanel.Controls.Add(Me.databaseInstallTitle)
+        Me.databaseInstallPanel.Controls.Add(Me.Label4)
+        Me.databaseInstallPanel.Controls.Add(Me.Label5)
+        Me.databaseInstallPanel.Location = New System.Drawing.Point(606, 244)
+        Me.databaseInstallPanel.Name = "databaseInstallPanel"
+        Me.databaseInstallPanel.Size = New System.Drawing.Size(515, 313)
+        Me.databaseInstallPanel.TabIndex = 40
+        Me.databaseInstallPanel.Visible = False
+        '
+        'installedDatabasePathTextBox
+        '
+        Me.installedDatabasePathTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.installedDatabasePathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.installedDatabasePathTextBox.Location = New System.Drawing.Point(42, 208)
+        Me.installedDatabasePathTextBox.Name = "installedDatabasePathTextBox"
+        Me.installedDatabasePathTextBox.Size = New System.Drawing.Size(420, 20)
+        Me.installedDatabasePathTextBox.TabIndex = 57
+        Me.installedDatabasePathTextBox.Visible = False
+        '
+        'installDatabaseBtn
+        '
+        Me.installDatabaseBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.installDatabaseBtn.BackColor = System.Drawing.Color.SeaGreen
+        Me.installDatabaseBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray
+        Me.installDatabaseBtn.FlatAppearance.BorderSize = 0
+        Me.installDatabaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.installDatabaseBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.installDatabaseBtn.ForeColor = System.Drawing.Color.Yellow
+        Me.installDatabaseBtn.Location = New System.Drawing.Point(40, 242)
+        Me.installDatabaseBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.installDatabaseBtn.Name = "installDatabaseBtn"
+        Me.installDatabaseBtn.Size = New System.Drawing.Size(422, 28)
+        Me.installDatabaseBtn.TabIndex = 56
+        Me.installDatabaseBtn.Text = "Next"
+        Me.installDatabaseBtn.UseVisualStyleBackColor = False
+        '
+        'installDatabaseYes
+        '
+        Me.installDatabaseYes.AutoSize = True
+        Me.installDatabaseYes.Checked = True
+        Me.installDatabaseYes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.installDatabaseYes.Location = New System.Drawing.Point(62, 102)
+        Me.installDatabaseYes.Name = "installDatabaseYes"
+        Me.installDatabaseYes.Size = New System.Drawing.Size(49, 20)
+        Me.installDatabaseYes.TabIndex = 55
+        Me.installDatabaseYes.TabStop = True
+        Me.installDatabaseYes.Text = "Yes"
+        Me.installDatabaseYes.UseVisualStyleBackColor = True
+        '
+        'installDatabaseNo
+        '
+        Me.installDatabaseNo.AutoSize = True
+        Me.installDatabaseNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.installDatabaseNo.Location = New System.Drawing.Point(62, 133)
+        Me.installDatabaseNo.Name = "installDatabaseNo"
+        Me.installDatabaseNo.Size = New System.Drawing.Size(43, 20)
+        Me.installDatabaseNo.TabIndex = 55
+        Me.installDatabaseNo.Text = "No"
+        Me.installDatabaseNo.UseVisualStyleBackColor = True
+        '
+        'installDabasePathExample
+        '
+        Me.installDabasePathExample.AutoSize = True
+        Me.installDabasePathExample.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
+        Me.installDabasePathExample.ForeColor = System.Drawing.Color.SeaGreen
+        Me.installDabasePathExample.Location = New System.Drawing.Point(47, 189)
+        Me.installDabasePathExample.Name = "installDabasePathExample"
+        Me.installDabasePathExample.Size = New System.Drawing.Size(333, 12)
+        Me.installDabasePathExample.TabIndex = 54
+        Me.installDabasePathExample.Text = "Par exemple : c:\chemin\d'accès\à\l'exécutable\de\la\base\de\données\installée"
+        Me.installDabasePathExample.Visible = False
+        '
+        'installDatabaseWarning
+        '
+        Me.installDatabaseWarning.AutoSize = True
+        Me.installDatabaseWarning.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
+        Me.installDatabaseWarning.ForeColor = System.Drawing.Color.SeaGreen
+        Me.installDatabaseWarning.Location = New System.Drawing.Point(38, 284)
+        Me.installDatabaseWarning.Name = "installDatabaseWarning"
+        Me.installDatabaseWarning.Size = New System.Drawing.Size(331, 12)
+        Me.installDatabaseWarning.TabIndex = 54
+        Me.installDatabaseWarning.Text = "⚠️Only select ""no"" if you have an SQL database server installed in your machine"
+        '
+        'installedDatabasePathLabel
+        '
+        Me.installedDatabasePathLabel.AutoSize = True
+        Me.installedDatabasePathLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.installedDatabasePathLabel.Location = New System.Drawing.Point(44, 166)
+        Me.installedDatabasePathLabel.Name = "installedDatabasePathLabel"
+        Me.installedDatabasePathLabel.Size = New System.Drawing.Size(52, 17)
+        Me.installedDatabasePathLabel.TabIndex = 54
+        Me.installedDatabasePathLabel.Text = "Email "
+        Me.installedDatabasePathLabel.Visible = False
+        '
+        'installDatabaseLabel
+        '
+        Me.installDatabaseLabel.AutoSize = True
+        Me.installDatabaseLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.installDatabaseLabel.Location = New System.Drawing.Point(44, 67)
+        Me.installDatabaseLabel.Name = "installDatabaseLabel"
+        Me.installDatabaseLabel.Size = New System.Drawing.Size(52, 17)
+        Me.installDatabaseLabel.TabIndex = 54
+        Me.installDatabaseLabel.Text = "Email "
+        '
+        'databaseInstallTitle
+        '
+        Me.databaseInstallTitle.AutoSize = True
+        Me.databaseInstallTitle.BackColor = System.Drawing.Color.SeaGreen
+        Me.databaseInstallTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.databaseInstallTitle.ForeColor = System.Drawing.Color.MintCream
+        Me.databaseInstallTitle.Location = New System.Drawing.Point(41, 7)
+        Me.databaseInstallTitle.Name = "databaseInstallTitle"
+        Me.databaseInstallTitle.Size = New System.Drawing.Size(48, 17)
+        Me.databaseInstallTitle.TabIndex = 1
+        Me.databaseInstallTitle.Text = "Login"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.BackColor = System.Drawing.Color.SeaGreen
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Yellow
+        Me.Label4.Location = New System.Drawing.Point(0, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(514, 37)
+        Me.Label4.TabIndex = 52
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(8, 278)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(13, 13)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "  "
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(1443, 698)
+        Me.Controls.Add(Me.databaseInstallPanel)
         Me.Controls.Add(Me.userAddPanel)
         Me.Controls.Add(Me.englishBtn)
         Me.Controls.Add(Me.frenchBtn)
@@ -582,6 +750,8 @@ Partial Class Form1
         Me.userAddPanel.ResumeLayout(False)
         Me.userAddPanel.PerformLayout()
         CType(Me.errorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.databaseInstallPanel.ResumeLayout(False)
+        Me.databaseInstallPanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -631,4 +801,16 @@ Partial Class Form1
     Friend WithEvents englishBtn As Button
     Friend WithEvents frenchBtn As Button
     Friend WithEvents errorProviderEmail As ErrorProvider
+    Friend WithEvents databaseInstallPanel As Panel
+    Friend WithEvents installDatabaseLabel As Label
+    Friend WithEvents databaseInstallTitle As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents installDatabaseWarning As Label
+    Friend WithEvents installDatabaseYes As RadioButton
+    Friend WithEvents installDatabaseNo As RadioButton
+    Friend WithEvents installDatabaseBtn As Button
+    Friend WithEvents installedDatabasePathTextBox As TextBox
+    Friend WithEvents installedDatabasePathLabel As Label
+    Friend WithEvents installDabasePathExample As Label
 End Class

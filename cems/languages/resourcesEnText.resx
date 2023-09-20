@@ -337,6 +337,9 @@
   <data name="dashbooardUserLabel" xml:space="preserve">
     <value>Users</value>
   </data>
+  <data name="databaseInstallTitle" xml:space="preserve">
+    <value>Database Installation</value>
+  </data>
   <data name="EmailProfileLabel" xml:space="preserve">
     <value>User email:</value>
   </data>
@@ -480,6 +483,27 @@
   </data>
   <data name="hallUpdateValidationBtn" xml:space="preserve">
     <value>Update</value>
+  </data>
+  <data name="installDabasePathExample" xml:space="preserve">
+    <value>For example : "c:\path\to\installed\database\executable"</value>
+  </data>
+  <data name="installDatabaseBtn" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="installDatabaseLabel" xml:space="preserve">
+    <value>Should we install mysql database?</value>
+  </data>
+  <data name="installDatabaseNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="installDatabaseWarning" xml:space="preserve">
+    <value>⚠️Only select "no" if you have an SQL database server installed in your machine</value>
+  </data>
+  <data name="installDatabaseYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="installedDatabasePathLabel" xml:space="preserve">
+    <value>Enter the installation path of your database here </value>
   </data>
   <data name="InvalidConnectionString" xml:space="preserve">
     <value>your connexion string is not valid check your information!</value>
@@ -646,7 +670,7 @@
   <data name="searchErrorU" xml:space="preserve">
     <value>No result found</value>
   </data>
-  <data name="searchUserLabel" xml:space="preserve">
+  <data name="searchuserlabel" xml:space="preserve">
     <value>Search username</value>
   </data>
   <data name="stateChangeBtn" xml:space="preserve">

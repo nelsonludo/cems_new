@@ -722,6 +722,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Database Installation.
+        '''</summary>
+        Friend Shared ReadOnly Property databaseInstallTitle() As String
+            Get
+                Return ResourceManager.GetString("databaseInstallTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à User email:.
         '''</summary>
         Friend Shared ReadOnly Property EmailProfileLabel() As String
@@ -1150,6 +1159,69 @@ Namespace My.Resources
         Friend Shared ReadOnly Property hallUpdateValidationBtn() As String
             Get
                 Return ResourceManager.GetString("hallUpdateValidationBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à For example : &quot;c:\path\to\installed\database\executable&quot;.
+        '''</summary>
+        Friend Shared ReadOnly Property installDabasePathExample() As String
+            Get
+                Return ResourceManager.GetString("installDabasePathExample", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Next.
+        '''</summary>
+        Friend Shared ReadOnly Property installDatabaseBtn() As String
+            Get
+                Return ResourceManager.GetString("installDatabaseBtn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Should we install mysql database?.
+        '''</summary>
+        Friend Shared ReadOnly Property installDatabaseLabel() As String
+            Get
+                Return ResourceManager.GetString("installDatabaseLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à No.
+        '''</summary>
+        Friend Shared ReadOnly Property installDatabaseNo() As String
+            Get
+                Return ResourceManager.GetString("installDatabaseNo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à ⚠️Only select &quot;no&quot; if you have an SQL database server installed in your machine.
+        '''</summary>
+        Friend Shared ReadOnly Property installDatabaseWarning() As String
+            Get
+                Return ResourceManager.GetString("installDatabaseWarning", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Yes.
+        '''</summary>
+        Friend Shared ReadOnly Property installDatabaseYes() As String
+            Get
+                Return ResourceManager.GetString("installDatabaseYes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Enter the installation path of your database here .
+        '''</summary>
+        Friend Shared ReadOnly Property installedDatabasePathLabel() As String
+            Get
+                Return ResourceManager.GetString("installedDatabasePathLabel", resourceCulture)
             End Get
         End Property
         
@@ -1651,9 +1723,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une chaîne localisée semblable à Search username.
         '''</summary>
-        Friend Shared ReadOnly Property searchUserLabel() As String
+        Friend Shared ReadOnly Property searchuserlabel() As String
             Get
-                Return ResourceManager.GetString("searchUserLabel", resourceCulture)
+                Return ResourceManager.GetString("searchuserlabel", resourceCulture)
             End Get
         End Property
         

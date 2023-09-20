@@ -987,34 +987,28 @@ Public Class users
 
     'dropdown timer function
     Public Sub dropdownTimer(iscollapsed As Boolean, dropdown As Panel, timer1 As Timer)
-        If iscollapsed Then
-            'equipmentsBtn.Image = My.Resources.drop_down_arrow
-            dropdown.Height += 10
-            If dropdown.Size = dropdown.MaximumSize Then
-                timer1.Stop()
-                iscollapsed = False
-            End If
+        'If iscollapsed Then
+        '    dropdown.Size = dropdown.MaximumSize
+        '    If dropdown.Size = dropdown.MaximumSize Then
+        '        timer1.Stop()
+        '        iscollapsed = False
+        '    End If
+        'Else
+        '    dropdown.Size = dropdown.MinimumSize
+        '    If dropdown.Size = dropdown.MinimumSize Then
+        '        timer1.Stop()
+        '        iscollapsed = True
+        '    End If
+        'End If
+
+        If dropdown.Size = dropdown.MaximumSize Then
+            dropdown.Size = dropdown.MinimumSize
+            timer1.Stop()
         Else
-            'equipmentsBtn.Image = My.Resources.drop_left_arrow1
-            dropdown.Height -= 10
-            If dropdown.Size = dropdown.MinimumSize Then
-                timer1.Stop()
-                iscollapsed = True
-            End If
+            dropdown.Size = dropdown.MaximumSize
+            timer1.Stop()
         End If
-    End Sub
 
-
-    'button hovers styles
-    Public Sub sidebarBtnHover(button As Button, red As Integer, green As Integer, blue As Integer, alpha As Integer, icon As Label, label As Label)
-        button.BackColor = Color.FromArgb(red, green, blue, alpha)
-        icon.BackColor = Color.FromArgb(red, green, blue, alpha)
-        label.BackColor = Color.FromArgb(red, green, blue, alpha)
-    End Sub
-    Public Sub dashboardBtnHover(button As Button, red As Integer, green As Integer, blue As Integer, alpha As Integer, icon As PictureBox, label As Label)
-        button.BackColor = Color.FromArgb(red, green, blue, alpha)
-        icon.BackColor = Color.FromArgb(red, green, blue, alpha)
-        label.BackColor = Color.FromArgb(red, green, blue, alpha)
     End Sub
 
 

@@ -337,6 +337,9 @@
   <data name="dashbooardUserLabel" xml:space="preserve">
     <value>Utilisateurs</value>
   </data>
+  <data name="databaseInstallTitle" xml:space="preserve">
+    <value>Installation de la base de données</value>
+  </data>
   <data name="EmailProfileLabel" xml:space="preserve">
     <value>E-mail de l'utilisateur:</value>
   </data>
@@ -474,6 +477,27 @@
   </data>
   <data name="hallUpdateValidationBtn" xml:space="preserve">
     <value>mettre à jour</value>
+  </data>
+  <data name="installDabasePathExample" xml:space="preserve">
+    <value>Par exemple : "c:\chemin\d'accès\à\l'exécutable\de\la\base\de\données\installée"</value>
+  </data>
+  <data name="installDatabaseBtn" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="installDatabaseLabel" xml:space="preserve">
+    <value>Devons-nous installer la base de données MySQL ?</value>
+  </data>
+  <data name="installDatabaseNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="installDatabaseWarning" xml:space="preserve">
+    <value>⚠️Sélectionnez "non" uniquement si un serveur de base de données SQL est installé sur votre machine</value>
+  </data>
+  <data name="installDatabaseYes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="installedDatabasePathLabel" xml:space="preserve">
+    <value>Entrez ici le chemin d'installation de votre base de données</value>
   </data>
   <data name="InvalidConnectionString" xml:space="preserve">
     <value>Votre chaîne de connexion n'est pas valide vérifiez vos informations !</value>
