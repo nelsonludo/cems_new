@@ -939,7 +939,7 @@ CREATE TABLE `cems_users` (
 --
 
 CREATE TABLE `cems_halls` (
-  `hall_id` int(11) NOT NULL,
+  `hall_id` varchar(50) NOT NULL,
   `hall_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -955,7 +955,7 @@ INSERT INTO `cems_halls` (`hall_id`, `hall_name`) VALUES
 
 CREATE TABLE `cems_posts` (
   `post_id` int(11) NOT NULL,
-  `hall_id` int(11) NOT NULL,
+  `hall_id` varchar(50) NOT NULL,
   `post_state` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -977,7 +977,7 @@ CREATE TABLE `cems_equipments` (
   `equipment_type` varchar(100) NOT NULL,
   `equipment_state` varchar(100) NOT NULL,
   `post_id` int(11) NOT NULL,
-  `hall_id` int(11) NOT NULL
+  `hall_id` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -999,7 +999,7 @@ ALTER TABLE `cems_halls`
 -- Indexes for table `cems_posts`
 --
 ALTER TABLE `cems_posts`
-  ADD PRIMARY KEY (`post_id`),
+  ADD PRIMARY KEY (`post_id`, `hall_id`),
   ADD KEY `hall_id` (`hall_id`);
 
 --
@@ -1029,7 +1029,7 @@ ALTER TABLE `cems_equipments`
 -- AUTO_INCREMENT for table `cems_halls`
 --
 ALTER TABLE `cems_halls`
-  MODIFY `hall_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `hall_id` varchar(50) NOT NULL ;
 
 --
 -- AUTO_INCREMENT for table `cems_titles`

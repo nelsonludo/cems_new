@@ -7,13 +7,12 @@ list of things to do in cems
 
 *GENERAL TODO
 -find a way to keep the user in the table he searched when updating the equipments state (if im a on cpu and i update one, i want to remain on cpu when i am done and not go to all equipments table again) 
--fix the hall equipment count 
+-remove update hall id 
+-review add post validation
 
 *deployment 
--how do we know when to display the install database panel
--find a way to tell if mysql server is installed in a machine
 -export file exploror is different from machine file explorer 
--create and equipment type table
+-create an equipment type table
 
 
 

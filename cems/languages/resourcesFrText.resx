@@ -144,6 +144,9 @@
   <data name="addEquipmentValidationBtn" xml:space="preserve">
     <value>Ajouter</value>
   </data>
+  <data name="addHallIdLabel" xml:space="preserve">
+    <value>ID de la salle</value>
+  </data>
   <data name="addHallNameLabel" xml:space="preserve">
     <value>Nom de la salle</value>
   </data>
@@ -681,6 +684,9 @@
   </data>
   <data name="updateEquipmentTitle" xml:space="preserve">
     <value>Mettre l'équipement à jour</value>
+  </data>
+  <data name="updateHallIdLabel" xml:space="preserve">
+    <value>ID de la salle</value>
   </data>
   <data name="updateHallNameLabel" xml:space="preserve">
     <value>Nom de la salle</value>

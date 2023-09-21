@@ -146,6 +146,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à ID de la salle.
+        '''</summary>
+        Friend Shared ReadOnly Property addHallIdLabel() As String
+            Get
+                Return ResourceManager.GetString("addHallIdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Nom de la salle.
         '''</summary>
         Friend Shared ReadOnly Property addHallNameLabel() As String
@@ -1753,6 +1762,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property updateEquipmentTitle() As String
             Get
                 Return ResourceManager.GetString("updateEquipmentTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à ID de la salle.
+        '''</summary>
+        Friend Shared ReadOnly Property updateHallIdLabel() As String
+            Get
+                Return ResourceManager.GetString("updateHallIdLabel", resourceCulture)
             End Get
         End Property
         

@@ -221,15 +221,35 @@ Public Class users
             sqlConn.Open()
             datatable.Rows.Clear()
             sqlCmd.Connection = sqlConn
-            sqlCmd.CommandText = "select cems_" & table & " .post_id, cems_" & table & " .post_state, cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_posts.hall_id = cems_halls.hall_id"
+            sqlCmd.CommandText = "select cems_" & table & ".post_id, cems_" & table & ".post_state, cems_halls.hall_name from cems_" & table & "  inner join cems_halls on cems_posts.hall_id = cems_halls.hall_id"
             'i had to add a new method for displaying the post table . i use the join in this qeurry to display the hall name instead of the hall id .this is only for the user view'
 
             sqlReader = sqlCmd.ExecuteReader
-            datatable.Load(sqlReader)
+            'datatable.Load(sqlReader)
+
+            'i had to create a new datatable and load the content of the sqlreader in it so as to avoid the unique constraint on post_id field which form some odd reason was in the datatable
+
+            Dim newDataTable As New DataTable()
+
+            For i As Integer = 0 To sqlReader.FieldCount - 1
+                newDataTable.Columns.Add(sqlReader.GetName(i), sqlReader.GetFieldType(i))
+            Next
+            While sqlReader.Read()
+
+                Dim row As DataRow = newDataTable.NewRow()
+
+                For i As Integer = 0 To sqlReader.FieldCount - 1
+                    row(i) = sqlReader(i)
+                Next
+
+                newDataTable.Rows.Add(row)
+            End While
+
             sqlReader.Close()
             sqlConn.Close()
 
-            grid.DataSource = datatable
+            grid.DataSource = newDataTable
+
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MySql post display table", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -706,7 +706,7 @@ Public Class homePage
 
             Try
                 sqlConn.Open()
-                sqlQuery = "select * from cems_posts where post_id = '" & postPostIdInput.Text & "'"
+                sqlQuery = "select * from cems_posts where post_id = '" & postPostIdInput.Text & "' and hall_id = '" & hall_id & "'"
                 'Read through the response'
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
@@ -1407,7 +1407,7 @@ Public Class homePage
         Else
             Try
                 sqlConn.Open()
-                sqlQuery = "insert into " & database & ".cems_halls(hall_name) values ('" & adminAddHallNameInput.Text & "')"
+                sqlQuery = "insert into " & database & ".cems_halls(hall_id, hall_name) values ('" & adminAddHallIdInput.Text & "', '" & adminAddHallNameInput.Text & "')"
                 'Read through the response'
                 sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
                 sqlReader = sqlCmd.ExecuteReader
@@ -1596,7 +1596,7 @@ Public Class homePage
 
                 With sqlCmd
 
-                    .CommandText = "Update " & database & ".cems_halls Set hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update " & database & ".cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
+                    .CommandText = "Update " & database & ".cems_halls Set hall_id ='" & adminUpdateHallIdInput.Text & "', hall_name ='" & adminUpdateHallNameInput.Text & "' where hall_id = '" & hall_id & "' " 'Update " & database & ".cems_users set user_name ='" & userUserNameInput.Text & "', user_email = '" & userUserEmailInput.Text & "', user_phone_number = '" & userUserPhoneInput.Text & "', title_id = '" & title_id & "'"
 
                     .CommandType = CommandType.Text
 
@@ -4268,7 +4268,7 @@ Public Class homePage
     End Sub
 
 
-    Private Sub adminupdateHallinput_TextChanged(sender As Object, e As KeyEventArgs) Handles adminUpdateHallNameInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
+    Private Sub adminupdateHallinput_TextChanged(sender As Object, e As KeyEventArgs) Handles adminUpdateHallNameInput.KeyDown, adminUpdateHallIdInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
         If e.KeyCode = Keys.Enter Then
             hallUpdateValidateBtn_Click(Nothing, Nothing)
         Else
