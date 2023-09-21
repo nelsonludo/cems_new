@@ -36,7 +36,8 @@ Public Class Form1
 
     Public user_email As String
 
-    Public mysqlProcess As New ProcessStartInfo("c:\xampp\mysql\bin\mysqld.exe") 'C:\Program Files\MySQL\MySQL Server 8.0\
+    'if you are using mysql, replace the parameter of the processStartInfo below with the one commented on the right (be smart about this) 
+    Public mysqlProcess As New ProcessStartInfo("C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe") 'c:\xampp\mysql\
 
 
     Dim databaseInternallyInstalled As Boolean = False 'this is to know if the database was installed by cems or not 
