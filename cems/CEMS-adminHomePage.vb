@@ -3847,7 +3847,23 @@ Public Class homePage
 
     Private Sub postSearchBox_textChanged(sender As Object, e As EventArgs) Handles postSearchBox.TextChanged
 
-        User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+        hallSearchBoxP.SelectedIndex = -1
+        If postSearchBox.Text = "" And stateSearchBoxP.Text <> "" Then
+
+            User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+        ElseIf postSearchBox.Text = "" Then
+
+            User.displayTableP("posts", postDataGridView, sqlDataTableP)
+
+        ElseIf stateSearchBoxP.Text <> "" Then
+
+            User.searchPostAndStateP("posts", postDataGridView, "post_state", stateSearchBoxP.Text, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+
+        Else
+            User.searchP("posts", postDataGridView, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+
+        End If
 
 
         postChangeStatePanel.Visible = False
@@ -3857,12 +3873,12 @@ Public Class homePage
     'post search by state
     Private Sub stateSearchBoxP_textChanged(sender As Object, e As EventArgs) Handles stateSearchBoxP.TextChanged
 
-        postSearchBox.Text = ""
-
 
         Dim hall_id As Integer
 
         If hallSearchBoxP.Text <> "" Then
+
+            postSearchBox.Text = ""
             'SQL Connection'
             connect_db()
 
@@ -3889,6 +3905,11 @@ Public Class homePage
             End Try
 
             User.searchHallAndStateP("posts", postDataGridView, "hall_id", hall_id, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
+        ElseIf postSearchBox.Text <> "" Then
+            hallSearchBoxP.SelectedIndex = -1
+
+            User.searchPostAndStateP("posts", postDataGridView, "post_state", stateSearchBoxP.Text, "post_id", postSearchBox.Text, searchErrorP, sqlDataTableP)
+
         Else
 
             User.searchHallAndState("posts", postDataGridView, "post_state", stateSearchBoxP.Text, searchErrorP, sqlDataTableP)
@@ -3904,7 +3925,6 @@ Public Class homePage
     Private Sub hallSearchBoxP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles hallSearchBoxP.SelectedIndexChanged
         Dim hall_id As Integer
 
-        postSearchBox.Text = ""
 
         If stateSearchBoxP.Text <> "" Then
 
