@@ -304,6 +304,9 @@
   <data name="countEquipmentTypeLabel" xml:space="preserve">
     <value>Type d'équipements</value>
   </data>
+  <data name="countHallLabel" xml:space="preserve">
+    <value>Salle</value>
+  </data>
   <data name="countPostLabel" xml:space="preserve">
     <value>Postes</value>
   </data>

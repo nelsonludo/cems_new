@@ -36,12 +36,134 @@ Public Class admin
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "MySql Connector", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message, "MySql count all in a table", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             sqlConn.Dispose()
         End Try
 
     End Sub
+    Public Overloads Sub activeCount(countLabel As Label, table As String, type As String)
+
+        Dim count As Integer
+
+        connect_db()
+
+
+        Try
+            sqlConn.Open()
+            'count the number of good
+            sqlQuery = "select count(*) from cems_" & table & " where equipment_type = '" & type & "' " 'Form1.emailtxt.Text'
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            If (sqlReader.Read()) Then
+                count = sqlReader.Item("count(*)")
+
+            End If
+
+            sqlConn.Close()
+
+            If count < 10 Then
+                countLabel.Text = "000" & count & ""
+
+            ElseIf count < 100 Then
+
+                countLabel.Text = "00" & count & ""
+            ElseIf count < 1000 Then
+
+                countLabel.Text = "0" & count & ""
+            Else
+                countLabel.Text = count
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql count all in table equipment based on type", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+    Public Overloads Sub activeCount(countLabel As Label, table As String, type As String, hall As String)
+
+        Dim count As Integer
+
+        connect_db()
+
+
+        Try
+            sqlConn.Open()
+            'count the number of good
+            sqlQuery = "select count(*) from cems_" & table & " where equipment_type = '" & type & "' and hall_id = " & hall & " " 'Form1.emailtxt.Text'
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            If (sqlReader.Read()) Then
+                count = sqlReader.Item("count(*)")
+
+            End If
+
+            sqlConn.Close()
+
+            If count < 10 Then
+                countLabel.Text = "000" & count & ""
+
+            ElseIf count < 100 Then
+
+                countLabel.Text = "00" & count & ""
+            ElseIf count < 1000 Then
+
+                countLabel.Text = "0" & count & ""
+            Else
+                countLabel.Text = count
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql count all in equipement based on type and hall", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+
+    Public Overloads Sub activeCountHall(countLabel As Label, table As String, hall As String)
+
+        Dim count As Integer
+
+        connect_db()
+
+
+        Try
+            sqlConn.Open()
+            'count the number of good
+            sqlQuery = "select count(*) from cems_" & table & " where hall_id = " & hall & " " 'Form1.emailtxt.Text'
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+            If (sqlReader.Read()) Then
+                count = sqlReader.Item("count(*)")
+
+            End If
+
+            sqlConn.Close()
+
+            If count < 10 Then
+                countLabel.Text = "000" & count & ""
+
+            ElseIf count < 100 Then
+
+                countLabel.Text = "00" & count & ""
+            ElseIf count < 1000 Then
+
+                countLabel.Text = "0" & count & ""
+            Else
+                countLabel.Text = count
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql all based on hall", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+        End Try
+
+    End Sub
+
 
 
     Public Sub generalSearchH(table As String, grid As DataGridView, searchColumn As String, searchValue As String, searchErrorLabel As Control, datatable As DataTable) 'displays the correct table ... grid here is the datagridview and table is obviously the table 

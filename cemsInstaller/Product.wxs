@@ -2,10 +2,10 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define cems_TargetDir=$(var.cems.TargetDir)?>
 	<Product Id="c67a9b01-f941-4655-8747-9dac77939d62" Name="Computer Equipment Management System" Language="1033" Version="1.0.0.0" Manufacturer="Public Health Emergency Operations Coodination Center" UpgradeCode="67eed871-4049-4429-ae5b-e4183d36bdf3">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
-<<<<<<< HEAD
-=======
+ 
+ 
 		<UIRef Id="WixUI_Minimal" />
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of cems is already installed." />
 		<MediaTemplate EmbedCab="yes"/>
@@ -14,21 +14,21 @@
 			<ComponentGroupRef Id="ProductComponents" />
 			<ComponentRef Id="ApplicationShortcut" />
 			<ComponentRef Id="ApplicationShortcutDesktop" />
-<<<<<<< HEAD
+ 
 			<ComponentRef Id="RemoveStuff"/>
 			<ComponentGroupRef Id="ProgramFilesFolder_files" />
 			<ComponentRef Id="MySQLInstallerComponent"/>
 			
-=======
+ 
 			<ComponentGroupRef Id="ProgramFilesFolder_files" />
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
 		</Feature>
 		<Icon Id="icon.ico" SourceFile="$(var.ProjectDir)resources/Icon.ico" />
 		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
 
 		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)resources/license.rtf" />
 
-<<<<<<< HEAD
+ 
 		<UI>
 		  <UIRef Id="WixUI_Minimal" />
 		
@@ -54,10 +54,9 @@
 	
 	</Product>
 	
-=======
+ 
 
-	</Product>
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
 
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
@@ -66,13 +65,13 @@
 			</Directory>
 			<Directory Id="DesktopFolder" Name="Desktop" />
 			<Directory Id="ProgramFilesFolder">
-<<<<<<< HEAD
+ 
 				<Directory Id="INSTALLFOLDER" Name="cems">
 					<Directory Id ="InstallResources" Name ="Resources"/>
 				</Directory>
-=======
+ 
 				<Directory Id="INSTALLFOLDER" Name="cems" />
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
 			</Directory>
 		</Directory>
 	</Fragment>
@@ -92,7 +91,7 @@
 				<RegistryValue Root="HKCU" Key="Software\cems" Name="installed" Type="integer" Value="1" KeyPath="yes" />
 			</Component>
 		</DirectoryRef>
-<<<<<<< HEAD
+ 
 		<!--<DirectoryRef Id="INSTALLFOLDER">-->
 			<!--<Component Id="RemoveStuff" Guid="8eef8089-fa78-4b02-b318-abc026b933e8">-->
 				<!--<RemoveFolder Id="RemoveINSTALLFOLDER" Directory ="INSTALLFOLDER" On="uninstall" />-->
@@ -109,8 +108,8 @@
 			</Component>
 		</DirectoryRef>
 
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
+ 
 	</Fragment>
 
 	<Fragment>
@@ -164,11 +163,11 @@
 			<Component Id="BouncyCastle.Crypto.dll" Guid="cab4fad1-d769-4197-8740-2ae89df87523">
 			  <File Id="BouncyCastle.Crypto.dll" Name="BouncyCastle.Crypto.dll" Source="$(var.cems_TargetDir)BouncyCastle.Crypto.dll" />
 			</Component>
-<<<<<<< HEAD
+ 
 			
 	
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
+ 
 		</ComponentGroup>
 	</Fragment>
 	<Fragment>
@@ -178,7 +177,7 @@
 	    </Component>
 	  </ComponentGroup>
 	</Fragment>
-<<<<<<< HEAD
+ 
 
 	<Fragment>
 		<DirectoryRef Id="InstallResources">
@@ -188,6 +187,6 @@
 		</DirectoryRef>
 	</Fragment>
 	
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
+ 
 </Wix>

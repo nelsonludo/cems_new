@@ -1311,13 +1311,14 @@ Public Class homePage
         userSearchBox.Text = ""
         postSearchBox.Text = ""
         stateSearchBoxP.Text = ""
-        countEquipmentNumber.Text = "0000"
 
-
+        'counts
         admin.activeCount(countPostNumber, "posts")
+        admin.activeCount(countEquipmentNumber, "equipments")
         fillcomboEquipment(countEquipmentTypeCombo, "equipments", "equipment_type")
 
         fillHalls(hallSearchBoxH)
+        fillHalls(countHallCombo)
 
         'this is to translate the title of the panel 
         If isFrench Then
@@ -1349,8 +1350,10 @@ Public Class homePage
 
         hallSearchBoxH.SelectedIndex = -1
         countEquipmentTypeCombo.SelectedIndex = -1
+        countHallCombo.SelectedIndex = -1
 
         countEquipmentNumber.Text = "0000"
+        countPostNumber.Text = "0000"
 
         searchErrorH.Visible = False
 
@@ -4186,8 +4189,84 @@ Public Class homePage
 
     Private Sub countEquipmentTypeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles countEquipmentTypeCombo.SelectedIndexChanged
 
-        admin.activeCount(countEquipmentNumber, "equipments")
+        Dim hall_id As Integer
+        'SQL Connection'
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & countHallCombo.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql getting the hall id ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+        If countHallCombo.Text = "" Then
+            admin.activeCount(countEquipmentNumber, "equipments", countEquipmentTypeCombo.Text)
+            admin.activeCount(countEquipmentNumber, "posts")
+
+
+        Else
+            admin.activeCount(countEquipmentNumber, "equipments", countEquipmentTypeCombo.Text, hall_id)
+
+            admin.activeCountHall(countPostNumber, "posts", hall_id)
+
+        End If
+
     End Sub
+
+
+    Private Sub countHallCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles countHallCombo.SelectedIndexChanged
+        Dim hall_id As Integer
+        'SQL Connection'
+
+        Try
+            sqlConn.Open()
+
+            sqlQuery = "select hall_id from  " & database & ".cems_halls where hall_name = '" & countHallCombo.Text & "'"
+
+
+            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+            sqlReader = sqlCmd.ExecuteReader
+
+            While (sqlReader.Read())
+                hall_id = sqlReader.Item("hall_id")
+            End While
+
+            sqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "MySql getting the hall id ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            sqlConn.Dispose()
+
+        End Try
+
+        If countEquipmentTypeCombo.Text = "" Then
+            admin.activeCountHall(countEquipmentNumber, "equipments", hall_id)
+
+            admin.activeCountHall(countPostNumber, "posts", hall_id)
+
+        Else
+            admin.activeCount(countEquipmentNumber, "equipments", countEquipmentTypeCombo.Text, hall_id)
+
+            admin.activeCountHall(countPostNumber, "posts", hall_id)
+
+        End If
+
+    End Sub
+
 
     Private Sub adminupdateHallinput_TextChanged(sender As Object, e As KeyEventArgs) Handles adminUpdateHallNameInput.KeyDown 'the magical enter press trigger an event function (works on a particular inputbox)
         If e.KeyCode = Keys.Enter Then

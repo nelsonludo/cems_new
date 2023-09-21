@@ -623,6 +623,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Hall.
+        '''</summary>
+        Friend Shared ReadOnly Property countHallLabel() As String
+            Get
+                Return ResourceManager.GetString("countHallLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Posts.
         '''</summary>
         Friend Shared ReadOnly Property countPostLabel() As String

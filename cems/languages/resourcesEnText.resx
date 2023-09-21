@@ -304,6 +304,9 @@
   <data name="countEquipmentTypeLabel" xml:space="preserve">
     <value>Equipment type</value>
   </data>
+  <data name="countHallLabel" xml:space="preserve">
+    <value>Hall</value>
+  </data>
   <data name="countPostLabel" xml:space="preserve">
     <value>Posts</value>
   </data>

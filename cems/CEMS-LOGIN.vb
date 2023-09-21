@@ -13,10 +13,10 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 Imports System.Security.AccessControl
 Imports System.IO
-<<<<<<< HEAD
+
 Imports System.Security.Principal
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+
+
 
 Public Class Form1
     Dim sqlConn As New MySqlConnection
@@ -177,7 +177,7 @@ Public Class Form1
         Dim localPath As String = New Uri(uriPath).LocalPath
 
 
-<<<<<<< HEAD
+ 
         'Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
         '
         '' Get the current user
@@ -194,7 +194,7 @@ Public Class Form1
         '
         '' Apply the modified DirectorySecurity to the application folder
         'directoryInfo.SetAccessControl(directorySecurity)
-=======
+ 
         Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
 
         ' Get the current user
@@ -211,7 +211,7 @@ Public Class Form1
 
         ' Apply the modified DirectorySecurity to the application folder
         directoryInfo.SetAccessControl(directorySecurity)
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+
 
 
         Dim wrapper As New Simple3Des("")
@@ -225,7 +225,7 @@ Public Class Form1
 
         If System.IO.File.Exists(localPath) = True Then
 
-<<<<<<< HEAD
+ 
             ' Close the file stream
             Using fileStream As FileStream = File.OpenRead(localPath)
                 ' Perform operations on the file
@@ -233,8 +233,8 @@ Public Class Form1
                 ' Close the file stream
                 fileStream.Close()
             End Using
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+
+
 
             FileOpen(1, localPath, OpenMode.Input)
 
@@ -391,12 +391,12 @@ Public Class Form1
             System.IO.File.Create(localPath)
             System.IO.File.SetAttributes(localPath, System.IO.FileAttributes.Hidden) 'FILE_PATH, System.IO.FileAttributes.Hidden)
 
-<<<<<<< HEAD
+ 
             databaseInstallPanel.Visible = True
             connexionStringPanel.Visible = False
 
-=======
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
+ 
 
         End If
     End Sub
@@ -489,15 +489,10 @@ Public Class Form1
         Else
 
             Try
-<<<<<<< HEAD
                 If sqlConn.State = ConnectionState.Closed Then
                     connect_db(server, username, password, defaultdatabase)
                     sqlConn.Open()
                 End If
-=======
-                connect_db(server, username, password, defaultdatabase)
-                sqlConn.Open()
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
 
                 sqlQuery = "CREATE DATABASE IF NOT EXISTS " & database & ""
 
@@ -543,11 +538,11 @@ Public Class Form1
                 Dim localPath As String = New Uri(uriPath).LocalPath
 
 
-<<<<<<< HEAD
-=======
+ 
+ 
                 Dim fileSize As Long = New FileInfo(localPath).Length
 
->>>>>>> 60a187a8adf4596cfb186de3ada7e4a92bc58072
+ 
 
 
                 FileOpen(1, localPath, OpenMode.Append) 'FILE_PATH, OpenMode.append)
@@ -1186,9 +1181,9 @@ SET sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVIS
 
     Private Sub installDatabaseNo_CheckedChanged(sender As Object, e As EventArgs) Handles installDatabaseNo.CheckedChanged
         If installDatabaseNo.Checked Then
-            installDabasePathExample.Visible = True
-            installedDatabasePathLabel.Visible = True
-            installedDatabasePathTextBox.Visible = True
+            'installDabasePathExample.Visible = True
+            'installedDatabasePathLabel.Visible = True
+            'installedDatabasePathTextBox.Visible = True
         ElseIf Not installDatabaseNo.Checked Then
             installDabasePathExample.Visible = False
             installedDatabasePathLabel.Visible = False
