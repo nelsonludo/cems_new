@@ -523,6 +523,15 @@
   <data name="IPsBtn2" xml:space="preserve">
     <value>view</value>
   </data>
+  <data name="isDatabaseLocalLabel" xml:space="preserve">
+    <value>Is the Database loca ? </value>
+  </data>
+  <data name="isDatabaseLocalNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="isDatabaseLocalYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
   <data name="loginBtn" xml:space="preserve">
     <value>Login</value>
   </data>

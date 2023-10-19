@@ -1280,6 +1280,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Is the Database loca ? .
+        '''</summary>
+        Friend Shared ReadOnly Property isDatabaseLocalLabel() As String
+            Get
+                Return ResourceManager.GetString("isDatabaseLocalLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à No.
+        '''</summary>
+        Friend Shared ReadOnly Property isDatabaseLocalNo() As String
+            Get
+                Return ResourceManager.GetString("isDatabaseLocalNo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Yes.
+        '''</summary>
+        Friend Shared ReadOnly Property isDatabaseLocalYes() As String
+            Get
+                Return ResourceManager.GetString("isDatabaseLocalYes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Login.
         '''</summary>
         Friend Shared ReadOnly Property loginBtn() As String

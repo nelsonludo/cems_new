@@ -517,6 +517,15 @@
   <data name="IPsBtn2" xml:space="preserve">
     <value>Voir</value>
   </data>
+  <data name="isDatabaseLocalLabel" xml:space="preserve">
+    <value>La base de données est local ?</value>
+  </data>
+  <data name="isDatabaseLocalNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="isDatabaseLocalYes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
   <data name="loginBtn" xml:space="preserve">
     <value>Se connecter</value>
   </data>

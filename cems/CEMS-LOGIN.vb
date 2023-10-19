@@ -30,6 +30,7 @@ Public Class Form1
     Public username As String
     Public password As String
     Public database As String
+    Public isDatabaseLocal As Boolean = True
 
     Dim User As New users
     Dim admin As New admin
@@ -37,7 +38,7 @@ Public Class Form1
     Public user_email As String
 
     'if you are using mysql, replace the parameter of the processStartInfo below with the one commented on the right (be smart about this) 
-    Public mysqlProcess As New ProcessStartInfo("C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe") 'c:\xampp\mysql\
+    Public mysqlProcess As New ProcessStartInfo("C:\Program Files\MySQL\MySQL Server\bin\mysqld.exe") ' 8.0 c:\xampp\mysql
 
 
     Dim databaseInternallyInstalled As Boolean = False 'this is to know if the database was installed by cems or not 
@@ -101,45 +102,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        '' Create a new process instance
-        'Dim process As New Process()
-        '
-        '' Set the process start info
-        'process.StartInfo.FileName = "cmd.exe"
-        '
-        'If databaseInternallyInstalled Then
-        '    process.StartInfo.Arguments = "/c ""C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql"" --version"
-        'Else
-        '    process.StartInfo.Arguments = "/c "" " & installedDatabaseExecutablepath & " "" --version"
-        'End If
-        '
-        'process.StartInfo.RedirectStandardOutput = True
-        'process.StartInfo.UseShellExecute = False
-        'process.StartInfo.CreateNoWindow = True
-        '
-        '' Start the process
-        'process.Start()
-        '
-        '' Read the output
-        'Dim output As String = process.StandardOutput.ReadToEnd()
-        '
-        '' Wait for the process to exit
-        'process.WaitForExit()
-        '
-        '' Display the output
-        'Console.WriteLine(output)
-        '
-        'Dim outputWord As String() = output.Trim().Split(" "c)
-        'Dim outputFirstWord As String = outputWord(0)
-        '
-        'If output <> "mysql" Then
-        '    databaseInstallPanel.Visible = True
-        '    connexionStringPanel.Visible = False
-        'Else
-        '    databaseInstallPanel.Visible = False
-        '    connexionStringPanel.Visible = True
-        'End If
-
 
         ' Check if it's the first run
         If IsFirstRun() Then
@@ -152,20 +114,10 @@ Public Class Form1
             MarkFirstRunCompleted()
         End If
 
-        'this is to start apache server 
-
-        'this is avoid that command line, which appears when the httpd.exe is run (just as in xampp)
-        'apacheProcess.CreateNoWindow = True
-        'apacheProcess.UseShellExecute = False
-        '
-        'Process.Start(apacheProcess)
-
-
 
         TranslateFormControlsFrench(Me)
 
 
-        'Dim FILE_PATH As String = "C:\cems"
 
         Dim FILE_NAME As String = "connectionString.txt"
 
@@ -178,24 +130,6 @@ Public Class Form1
         Dim localPath As String = New Uri(uriPath).LocalPath
 
 
- 
-        'Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
-        '
-        '' Get the current user
-        'Dim currentUser As String = Environment.UserName
-        '
-        '' Create a DirectoryInfo object for the application folder
-        'Dim directoryInfo As New DirectoryInfo(applicationFolder)
-        '
-        '' Get the DirectorySecurity object for the application folder
-        'Dim directorySecurity As DirectorySecurity = directoryInfo.GetAccessControl()
-        '
-        '' Add an access rule to grant full control to the current user
-        'directorySecurity.AddAccessRule(New FileSystemAccessRule(currentUser, FileSystemRights.FullControl, InheritanceFlags.ContainerInherit Or InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow))
-        '
-        '' Apply the modified DirectorySecurity to the application folder
-        'directoryInfo.SetAccessControl(directorySecurity)
- 
         Dim applicationFolder As String = AppDomain.CurrentDomain.BaseDirectory
 
         ' Get the current user
@@ -256,7 +190,10 @@ Public Class Form1
                 ' Start mysql
                 mysqlProcess.CreateNoWindow = True
                 mysqlProcess.UseShellExecute = False
-                Process.Start(mysqlProcess)
+
+                If isDatabaseLocal Then
+                    Process.Start(mysqlProcess)
+                End If
 
                 Try
                     connect_db(server, username, password, database)
@@ -264,6 +201,8 @@ Public Class Form1
                     sqlConn.Open()
                     sqlConn.Close()
                 Catch ex As Exception
+
+                    MessageBox.Show(ex.Message, "MySql attempt connection", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                     test = True
                 End Try
@@ -354,7 +293,22 @@ Public Class Form1
 
                                 sqlConn.Close()
 
+                                userAddPanel.Visible = True
+                                connexionStringPanel.Visible = False
                             Catch ex As Exception
+                                'delete the created database if there is any error while populating it
+                                sqlConn.Open()
+
+                                sqlQuery = "DROP DATABASE " & database & ""
+
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+
+                                sqlConn.Close()
+
+                                userAddPanel.Visible = False
+                                connexionStringPanel.Visible = True
+
                                 MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             Finally
                                 sqlConn.Dispose()
@@ -362,8 +316,6 @@ Public Class Form1
                             End Try
 
 
-                            userAddPanel.Visible = True
-                            connexionStringPanel.Visible = False
 
 
                         End If
@@ -620,8 +572,6 @@ Public Class Form1
                     Else
                         'create all tables
 
-                        userAddPanel.Visible = True
-                        connexionStringPanel.Visible = False
 
 
                         Try
@@ -634,8 +584,25 @@ Public Class Form1
 
                             sqlConn.Close()
 
+                            userAddPanel.Visible = True
+                            connexionStringPanel.Visible = False
                         Catch ex As Exception
+
+                            'delete the created database if there is any error while populating it
+                            sqlConn.Open()
+
+                            sqlQuery = "DROP DATABASE " & database & ""
+
+                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                            sqlReader = sqlCmd.ExecuteReader
+
+                            sqlConn.Close()
+
+                            userAddPanel.Visible = False
+                            connexionStringPanel.Visible = True
+
                             MessageBox.Show(ex.Message, "MySql create all tables", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                         Finally
                             sqlConn.Dispose()
 
@@ -1042,7 +1009,7 @@ ALTER TABLE `cems_titles`
 -- AUTO_INCREMENT for table `cems_users`
 --
 ALTER TABLE `cems_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- Constraints for dumped tables
@@ -1060,6 +1027,11 @@ ALTER TABLE `cems_equipments`
 --
 ALTER TABLE `cems_posts`
   ADD CONSTRAINT `cems_posts_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `cems_halls` (`hall_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+--
+--
+--
+INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
+(1, 1, 'good');
 
 --
 -- Constraints for table `cems_users`
@@ -1074,11 +1046,6 @@ COMMIT;
 ALTER TABLE cems_users
 ADD CONSTRAINT atomic_email UNIQUE (user_email);
 
---
---
---
-INSERT INTO `cems_posts` (`post_id`, `hall_id`, `post_state`) VALUES
-(1, 1, 'good');
 
 --
 -- Dumping data for table `cems_users`
@@ -1093,24 +1060,24 @@ SET sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVIS
     End Sub
 
     'close all servers when closing the app
-    Private Sub Form1_close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        '' Stop Apache
-        'Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
-        'For Each apacheProcess As Process In apacheProcesses
-        '    If Not apacheProcess.CloseMainWindow() Then
-        '        apacheProcess.Kill()
-        '    End If
-        'Next
-
-        ' Stop MySQL
-        Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
-        For Each mysqlProcess As Process In mysqlProcesses
-            If Not mysqlProcess.CloseMainWindow() Then
-                mysqlProcess.Kill()
-            End If
-        Next
-
-    End Sub
+    'Private Sub Form1_close(sender As Object, e As EventArgs) Handles MyBase.Closed
+    '    '' Stop Apache
+    '    'Dim apacheProcesses() As Process = Process.GetProcessesByName("httpd")
+    '    'For Each apacheProcess As Process In apacheProcesses
+    '    '    If Not apacheProcess.CloseMainWindow() Then
+    '    '        apacheProcess.Kill()
+    '    '    End If
+    '    'Next
+    '
+    '    ' Stop MySQL
+    '    Dim mysqlProcesses() As Process = Process.GetProcessesByName("mysqld")
+    '    For Each mysqlProcess As Process In mysqlProcesses
+    '        If Not mysqlProcess.CloseMainWindow() Then
+    '            mysqlProcess.Kill()
+    '        End If
+    '    Next
+    '
+    'End Sub
 
     Private Sub emailtxt_TextChanged(sender As Object, e As EventArgs) Handles emailtxt.TextChanged
         textBoxEmail_Validating(emailtxt)
@@ -1162,8 +1129,17 @@ SET sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVIS
             End Try
 
 
-        ElseIf installDatabaseNo.checked Then
-            installedDatabaseExecutablepath = installedDatabasePathTextBox.Text
+
+        End If
+
+
+
+        'the database server process will only be started if the database server is local 
+        If isDatabaseLocalYes.Checked Then
+            isDatabaseLocal = True
+            Process.Start(mysqlProcess)
+        ElseIf isDatabaseLocalNo.Checked Then
+            isDatabaseLocal = False
 
         End If
 
@@ -1175,22 +1151,11 @@ SET sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVIS
         ' Start mysql
         mysqlProcess.CreateNoWindow = True
         mysqlProcess.UseShellExecute = False
-        Process.Start(mysqlProcess)
+
+
 
 
     End Sub
 
-    Private Sub installDatabaseNo_CheckedChanged(sender As Object, e As EventArgs) Handles installDatabaseNo.CheckedChanged
-        If installDatabaseNo.Checked Then
-            'installDabasePathExample.Visible = True
-            'installedDatabasePathLabel.Visible = True
-            'installedDatabasePathTextBox.Visible = True
-        ElseIf Not installDatabaseNo.Checked Then
-            installDabasePathExample.Visible = False
-            installedDatabasePathLabel.Visible = False
-            installedDatabasePathTextBox.Visible = False
 
-        End If
-
-    End Sub
 End Class
