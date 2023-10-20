@@ -35,6 +35,9 @@ Public Class homePage
     Public username As String = Nothing
     Public password As String = Nothing
     Public database As String = Nothing
+    Public loggedIn As Boolean = Form1.loggedIn
+
+
 
     Dim User As New users
     Dim admin As New admin
@@ -738,17 +741,20 @@ Public Class homePage
 
                             Dim post_id As String = postPostIdInput.Text
 
-                            sqlConn.Open()
-                            sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "',1)"
-                            'Read through the response'
-                            sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
-                            sqlReader = sqlCmd.ExecuteReader
-                            sqlConn.Close()
+                            If post_id <> 1 Then
+
+                                sqlConn.Open()
+                                sqlQuery = "insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('IP_Phone','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('CPU','" & postStateInput.Text & "','" & post_id & "',1);insert into " & database & ".cems_equipments(equipment_type, equipment_state, post_id, hall_id) values ('Monitor','" & postStateInput.Text & "','" & post_id & "',1)"
+                                'Read through the response'
+                                sqlCmd = New MySqlCommand(sqlQuery, sqlConn)
+                                sqlReader = sqlCmd.ExecuteReader
+                                sqlConn.Close()
 
 
-                            'this updates the datagridview
-                            User.displayTableP("posts", postDataGridView, sqlDataTableP)
+                                'this updates the datagridview
+                                User.displayTableP("posts", postDataGridView, sqlDataTableP)
 
+                            End If
                             'this changes the content of confirmMsg
 
                             If isFrench Then

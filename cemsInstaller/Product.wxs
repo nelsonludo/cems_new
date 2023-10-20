@@ -56,8 +56,6 @@
 	
  
 
- 
-
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramMenuFolder">
@@ -69,8 +67,6 @@
 				<Directory Id="INSTALLFOLDER" Name="cems">
 					<Directory Id ="InstallResources" Name ="Resources"/>
 				</Directory>
- 
-				<Directory Id="INSTALLFOLDER" Name="cems" />
  
 			</Directory>
 		</Directory>
@@ -182,11 +178,8 @@
 	<Fragment>
 		<DirectoryRef Id="InstallResources">
 			<Component Id="MySQLInstallerComponent" Guid="4f1f0698-7775-4fc6-80fe-e4fb5dac2ae5">
-				<File Source="$(var.cems_TargetDir)Resources\mysql-installer-community.msi" />
+				<File Source="$(var.ProjectDir)resources/mysql-installer-community.msi" />
 			</Component>
 		</DirectoryRef>
 	</Fragment>
-	
- 
- 
 </Wix>

@@ -31,6 +31,7 @@ Public Class Form1
     Public password As String
     Public database As String
     Public isDatabaseLocal As Boolean = True
+    Public loggedIn As Boolean = False
 
     Dim User As New users
     Dim admin As New admin
@@ -190,6 +191,12 @@ Public Class Form1
                 ' Start mysql
                 mysqlProcess.CreateNoWindow = True
                 mysqlProcess.UseShellExecute = False
+
+
+                If server <> "localhost" Then
+                    isDatabaseLocal = False
+                End If
+
 
                 If isDatabaseLocal Then
                     Process.Start(mysqlProcess)
@@ -539,7 +546,7 @@ Public Class Form1
                     sqlConn.Close()
 
 
-                    If checkTables > 0 Then
+                    If checkTables > 1 Then
                         Try
 
                             sqlConn.Open()
@@ -773,6 +780,7 @@ Public Class Form1
         If userLogin Then
             user_email = emailtxt.Text
         End If
+
 
 
     End Sub

@@ -69,8 +69,12 @@ Public Class users
                     If sqlReader.GetInt32(5) = 2 Then
 
                         UserHomePage.Show()
+                        UserHomePage.HomePagePanel.Visible = True
+
                     Else
                         homePage.Show()
+                        homePage.adminHomePagePanel.Visible = True
+
                     End If
                     permanentEmail = user_email 'this is the email that is going to be used throughout the application 
                     Form1.Visible = False
